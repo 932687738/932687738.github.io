@@ -81,3 +81,12 @@ deploy:
 ``` bash
 $ hexo d
 ```
+### Forth Step
+1. **追加图片**
+    - 把主页配置文件 **_config.yml** 里的 **post_asset_folder** 这个选项设置为true
+    - 手动生成文件，将图片放到文件同名文件夹下
+``` bash
+$ npm install hexo-asset-image --save # 安装图片的插件
+$ hexo n 文件名 # 生成文件前，通过该命令创建文件
+```
+    
