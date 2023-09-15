@@ -102,20 +102,76 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <p>这里是我的第一篇文章，介绍如何使用github托管自己的个人博客网站;这里参考了两个不同的链接<br><a target="_blank" rel="noopener" href="http://www.taodudu.cc/news/show-3087055.html?action=onClick">First</a>是本地创建自己的HEXO个人博客<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464">Second</a>是对第一个的补充操作，例如绑定GitHub,切换主题,使用自己的域名<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/codehome/p/8428738.htmlhttps://www.jianshu.com/p/f72aaad7b852">Third</a>是对第二个的补充操作，使用HEXO追加图片</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><img src="/2023/09/15/init/InitHexoStep1.png">
-
-<h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Precondition"><a href="#Precondition" class="headerlink" title="Precondition"></a>Precondition</h3><p>基础环境准备<br>1.需要注册自己的GitHub账号<br>2.电脑安装必须的组件<br>    - node<br>    - git</p>
+<h3 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h3><blockquote>
+<p>在github创建一个属于自己的仓库</p>
+<blockquote>
+<ul>
+<li>注意事项：<blockquote>
+<ul>
+<li>创建时repository的名字要与github的名字相同，否则可能出现找不到css文件的情况：<strong>userName.github.io</strong><img src="/2023/09/15/init/InitHexoStep1.png">
+<img src="/2023/09/15/init/InitHexoStep2.png">
+通过setting中page将repository设置为github管理，然后等待部署完成就可以看到对应的页面啦
+<img src="/2023/09/15/init/InitHexoStep3.png"></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+</blockquote>
+<h3 id="Second-Step"><a href="#Second-Step" class="headerlink" title="Second Step"></a>Second Step</h3><blockquote>
+<p>使用git将项目拉取到本地</p>
+<blockquote>
+<p>在本地创建一个目录：Github_blob<br>通过git命令将远程项目clone到本地</p>
+</blockquote>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/932687738/932687738.github.io.git</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>初始化博客项目</p>
+<blockquote>
+<p>在git项目中新增一个目录(初始化HEXO时文件夹必须为空)：hexo<br>通过npm命令安装 hexo.cli并初始化Hexo项目</p>
+</blockquote>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init &lt;替换为当前博客文件夹，例如上面创建的hexo目录的全路径&gt;</span><br><span class="line">$ <span class="built_in">cd</span> hexo <span class="comment">#cd到刚刚我们初始化的目录下</span></span><br><span class="line">$ npm install <span class="comment">#安装组件</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
+<p>初始化后的目录层级结构<br><img src="/2023/09/15/init/InitHexoCatalogue.png"></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>修改配置文件, <strong>_config.yml</strong></p>
+</blockquote>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">你博客的标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">显示在浏览器上搜索的时候显示的标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">描述</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">显示作者</span></span><br><span class="line"><span class="attr">email:</span> <span class="string">邮箱</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span>    <span class="comment">#语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span>   <span class="comment">#时区# URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://username.github.io</span>      <span class="comment">#这个就是填写你的博客地址</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
+<p>本地启动</p>
+<blockquote>
+<p><strong>Tips</strong>：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   <span class="comment"># 生成页面</span></span><br><span class="line">hexo s   <span class="comment"># 启动预览</span></span><br></pre></td></tr></table></figure>
+<h3 id="Third-Step"><a href="#Third-Step" class="headerlink" title="Third Step"></a>Third Step</h3><blockquote>
+<p>上传到github</p>
+<blockquote>
+<p>安装hexo-deployer-git</p>
+</blockquote>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
+<p>修改**_config.yml**配置文件</p>
+</blockquote>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/932687738/932687738.github.io.git</span> <span class="comment">#自己的github仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 要上传的分支名称,要与github-&gt;setting-&gt;page 中配置的部署分支一样</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<blockquote>
+<p>上传到GitHub(等待几分钟后部署完成就可以看到自己的效果了)</p>
+</blockquote>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 
       
     </div>
