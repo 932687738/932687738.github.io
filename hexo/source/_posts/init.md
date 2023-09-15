@@ -68,7 +68,7 @@ hexo s   # 启动预览
 ### Third Step
 1. **安装hexo-deployer-git**
 ``` bash
-$ npm install hexo-deployer-git --save
+$ npm install hexo-deployer-git --save # 自动化部署
 ```
 2. **修改 _config.yml 配置文件**
 ``` yml
