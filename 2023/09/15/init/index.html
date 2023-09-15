@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://932687738.github.io/2023/09/15/init/InitHexoStep3.png">
 <meta property="og:image" content="https://932687738.github.io/2023/09/15/init/InitHexoCatalogue.png">
 <meta property="article:published_time" content="2023-09-15T09:36:17.794Z">
-<meta property="article:modified_time" content="2023-09-15T09:38:58.621Z">
+<meta property="article:modified_time" content="2023-09-15T09:47:32.338Z">
 <meta property="article:author" content="YXY">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://932687738.github.io/2023/09/15/init/InitHexoStep1.png">
@@ -155,15 +155,22 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   <span class="comment"># 生成页面</span></span><br><span class="line">hexo s   <span class="comment"># 启动预览</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="Third-Step"><a href="#Third-Step" class="headerlink" title="Third Step"></a>Third Step</h3><ol>
-<li><strong>安装hexo-deployer-git</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li><strong>安装hexo-deployer-git</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save <span class="comment"># 自动化部署</span></span><br></pre></td></tr></table></figure></li>
 <li><strong>修改 _config.yml 配置文件</strong><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/932687738/932687738.github.io.git</span> <span class="comment">#自己的github仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 要上传的分支名称,要与github-&gt;setting-&gt;page 中配置的部署分支一样</span></span><br></pre></td></tr></table></figure></li>
 <li><strong>上传到GitHub</strong>(等待几分钟后部署完成就可以看到自己的效果了)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="Forth-Step"><a href="#Forth-Step" class="headerlink" title="Forth Step"></a>Forth Step</h3><ol>
+<li><strong>追加图片</strong><ul>
+<li>把主页配置文件 <strong>_config.yml</strong> 里的 <strong>post_asset_folder</strong> 这个选项设置为true</li>
+<li>手动生成文件，将图片放到文件同名文件夹下<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-asset-image --save <span class="comment"># 安装图片的插件</span></span><br><span class="line">$ hexo n 文件名 <span class="comment"># 生成文件前，通过该命令创建文件</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
 </ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://932687738.github.io/2023/09/15/init/" data-id="clmkerdgv000100ug2p0n44r2" data-title="初始化自己的个人博客" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
+      <a data-url="https://932687738.github.io/2023/09/15/init/" data-id="clmkf1ypn0001o4ug6ujpe64i" data-title="初始化自己的个人博客" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
       
       
       
