@@ -1,11 +1,16 @@
 ---
 title: 初始化自己的个人博客
+date: 2023-09-15 13:07:32
+categories: other
+tags:
+- init bolo
 ---
 这里是我的第一篇文章，介绍如何使用github托管自己的个人博客网站;这里参考了两个不同的链接
 [First](http://www.taodudu.cc/news/show-3087055.html?action=onClick)是本地创建自己的HEXO个人博客
 [Second](https://zhuanlan.zhihu.com/p/60578464)是对第一个的补充操作，例如绑定GitHub,切换主题,使用自己的域名
 [Third](https://www.cnblogs.com/codehome/p/8428738.htmlhttps://www.jianshu.com/p/f72aaad7b852)是对第二个的补充操作，使用HEXO追加图片
 
+<!-- more -->
 
 ## Quick Start
 
@@ -42,8 +47,8 @@ $ git clone https://github.com/932687738/932687738.github.io.git
 ``` bash
 $ npm install -g hexo-cli
 $ hexo init <替换为当前博客文件夹，例如上面创建的hexo目录的全路径>
-$ cd hexo #cd到刚刚我们初始化的目录下
-$ npm install #安装组件
+$ cd hexo # cd到刚刚我们初始化的目录下
+$ npm install # 安装组件
 ```
 3. **初始化后的目录层级结构**
 <img src="InitHexoCatalogue.png">
@@ -89,4 +94,18 @@ $ hexo d
 $ npm install hexo-asset-image --save # 安装图片的插件
 $ hexo n 文件名 # 生成文件前，通过该命令创建文件
 ```
+
+### Fifth Step
+1. **查询主题**
+    - 访问[HEXO THEME](https://hexo.io/themes/)找到一个自己喜欢的主题
+    <img src="InitHexoThemeTranquility.png">
+2. **下载主题**
+    - 通过 **Visit preview site** 可以预览主题效果
+    - 通过 **Tranquility** 进入github下载
+3. **设置主题**
+    - 将主题下载到自己博客项目的 **themes** 目录下并起一个别名(也可以用原名)
+    - 修改 **_config.yml** 下的配置 **theme** 为上面哪个文件夹的名字
+    - 有的主题到上面这一步就结束了，有的主题需要按照github的教程进行操作
+
+
     
