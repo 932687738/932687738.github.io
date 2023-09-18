@@ -207,7 +207,7 @@ timeline:
   enable: true
   order: false # 是否按时间正序展示，false 为倒序
   items:
-    - name: Other
+    - name: Jottings
       color: "#ee936c"
       icon: /images/icon/icon-article.svg
       checked: true
