@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
     <title>
       
-        init bolo | YXY NB
+        Java | YXY NB
       
     </title>
     <meta name="description" content="蓝瓶的，好喝的"/>
@@ -58,9 +58,7 @@
           href='/css/layout.css'/>
     
     
-  <link rel="stylesheet"
-        type="text/css"
-        href="/css/category.css" />
+  <link rel="stylesheet" type="text/css" href="/css/category.css" />
 
   <meta name="generator" content="Hexo 6.3.0"></head>
   <body>
@@ -89,28 +87,23 @@
     </div>
     <div class="body">
       
-  <div class="tag-page-title">#init bolo</div>
-  <div class="post-list">
-    
-  
-  <div class="post-card">
-    <div class="post__head">
-      <a href="/2023/09/15/init/" class="post-title hover-line">初始化自己的个人博客</a>
-      
-    </div>
-    <div class="post__body">
-      
-      <div class="post-excerpt"><p>这里是我的第一篇文章，介绍如何使用github托管自己的个人博客网站;这里参考了两个不同的链接<br><a target="_blank" rel="noopener" href="http://www.taodudu.cc/news/show-3087055.html?action=onClick">First</a>是本地创建自己的HEXO个人博客<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464">Second</a>是对第一个的补充操作，例如绑定GitHub,切换主题,使用自己的域名<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/codehome/p/8428738.htmlhttps://www.jianshu.com/p/f72aaad7b852">Third</a>是对第二个的补充操作，使用HEXO追加图片</p></div>
-    </div>
-    <div class="post__foot">
-      <div class="post-tags">
-  <a href="/tags/init-bolo/" class="post-tag">#init bolo</a>
-
-</div>
+  <div class="wall wall-category">
+    <div class="wall-main">
+      <div class="wall-category-title">
+        <div class="title-icon"
+             style="background-image: url(/images/icon/icon-code.svg)"></div>
+        Java
+      </div>
+      <div class="wall-category-description"></div>
+      <div class="wall-category-tags">
+        <div id="tags-outer"><canvas width="500" height="500" id="tagCanvas"><ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello-world/" rel="tag">hello world</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/init-bolo/" rel="tag">init bolo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li></ul><canvas></div>
+      </div>
     </div>
   </div>
-
-
+  <div class="post-list">
+    
+      DEBUG: 该子页分类下没有文章！在指定文章头部中添加 category: Java 字段，即可将该文章添加至此页。
+    
     
   </div>
 
@@ -206,5 +199,36 @@
     </div>
     
     
+  
+    <script type="text/javascript"
+            charset="utf-8"
+            src="/js/tagcanvas.min.js"></script>
+    <script type = "text/javascript">
+        window.onload = function() {
+            try {
+                TagCanvas.Start('tagCanvas', '', {
+                    outlineThickness: 1,
+                    maxSpeed: 0.03,
+                    // freezeActive: true,
+                    // freezeDecel: true,
+                    textColour: null,
+                    textColour: null,
+                    outlineColour: "#aaa",
+                    weight: true,
+                    padding: 4,
+                    // clickToFront: 200,
+                    fadIn: 200,
+                    // pinchZoom: true,
+                    wheelZoom: false,
+                    initial: [0.1, -0.03]
+                });
+            } catch (e) {
+                // something went wrong, hide the canvas container
+                document.getElementById('tags-outer').style.display = 'none';
+            }
+        };
+    </script>
+  
+
   </body>
 </html>

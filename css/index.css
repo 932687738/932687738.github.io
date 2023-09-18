@@ -172,7 +172,7 @@
   margin: auto;
 }
 .radio-skin,
-.radio-skin--other,
+.radio-skin--Other,
 .radio-skin--Java,
 .radio-skin--React,
 .radio-skin--Vue {
@@ -183,7 +183,7 @@
   transition: all 0.4s ease;
 }
 .radio-skin::after,
-.radio-skin--other::after,
+.radio-skin--Other::after,
 .radio-skin--Java::after,
 .radio-skin--React::after,
 .radio-skin--Vue::after {
@@ -201,22 +201,22 @@
   top: 22px;
   box-shadow: 1px 0 5px rgba(0,0,0,0.2);
 }
-.radio-skin--other::after {
+.radio-skin--Other::after {
   border-color: #ee936c;
 }
-#radio-other:checked+.radio-skin--other {
+#radio-Other:checked+.radio-skin--Other {
   background-color: #ee936c;
 }
-#radio-other:checked+.radio-skin--other::after {
+#radio-Other:checked+.radio-skin--Other::after {
   background-color: #ee936c;
   top: -2px;
 }
-.timeline-item-other .line-anchor::after,
-.timeline-item-other--hidden .line-anchor::after {
+.timeline-item-Other .line-anchor::after,
+.timeline-item-Other--hidden .line-anchor::after {
   background-color: #ee936c;
 }
-.timeline-item-other .line-date-tag,
-.timeline-item-other--hidden .line-date-tag {
+.timeline-item-Other .line-date-tag,
+.timeline-item-Other--hidden .line-date-tag {
   background-color: #ee936c;
 }
 /*
