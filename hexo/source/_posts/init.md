@@ -1,10 +1,10 @@
 ---
 title: 初始化自己的个人博客
 date: 2023-09-15 13:07:32
-categories: other
+categories: Other
 tags:
 - init bolo
-timeline: other
+timeline: Other
 ---
 这里是我的第一篇文章，介绍如何使用github托管自己的个人博客网站;这里参考了两个不同的链接
 [First](http://www.taodudu.cc/news/show-3087055.html?action=onClick)是本地创建自己的HEXO个人博客

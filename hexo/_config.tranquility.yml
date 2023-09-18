@@ -13,9 +13,24 @@ favicon: # 配置网页图标
 subpage: # 开启“子页”功能，详见 README
   enable: true
   pages:
-    - name: other # 文章的分类（category）名，如 developer
+    - name: Other # 文章的分类（category）名，如 developer
       path: # 若不设置则默认使用 name
       title: 杂项 # 菜单名，如 开发者
+      icon: /images/icon/icon-book.svg # 图标的路径
+      description: # 描述
+    - name: Java # 文章的分类（category）名，如 developer
+      path: # 若不设置则默认使用 name
+      title: Java # 菜单名，如 开发者
+      icon: /images/icon/icon-code.svg # 图标的路径
+      description: # 描述
+    - name: React # 文章的分类（category）名，如 developer
+      path: # 若不设置则默认使用 name
+      title: React # 菜单名，如 开发者
+      icon: /images/icon/icon-code.svg # 图标的路径
+      description: # 描述
+    - name: Vue # 文章的分类（category）名，如 developer
+      path: # 若不设置则默认使用 name
+      title: Vue # 菜单名，如 开发者
       icon: /images/icon/icon-code.svg # 图标的路径
       description: # 描述
 
@@ -58,18 +73,18 @@ social: # 账号
     url: 
 
 reward: # 赞赏
-  enable: false
-  face: # 头像图片
-  paycode: # 支付码图片
+  enable: true
+  face: /images/avatar.jpg
+  paycode: /images/avatar.jpg
   text: “请作者喝杯咖啡”
   btnText: 喜欢作者
 
 # see https://github.com/gitalk/gitalk
 gitalk: # gitalk 评论
   enable: false
-  owner: # MUST HAVE, Your Github Username
+  owner: 932687738 # MUST HAVE, Your Github Username
   admin:
-  repo: # MUST HAVE, The name of the repo you use to store Gitment comments
+  repo: https://github.com/932687738/yxy.github.io # MUST HAVE, The name of the repo you use to store Gitment comments
   clientID: # MUST HAVE, Github client id for the Gitment
   clientSecret: # EITHER this or proxy_gateway, Github access secret token for the Gitment
 
@@ -117,10 +132,10 @@ timeline:
   enable: true
   order: false # 是否按时间正序展示，false 为倒序
   items:
-    - name: other
+    - name: Other
       color: "#ee936c"
       icon: /images/icon/icon-article.svg
-      checked: false
+      checked: true
     - name: Java
       color: "#60a465"
       icon: /images/icon/icon-app.svg
@@ -128,11 +143,11 @@ timeline:
     - name: React
       color: "#568dc4"
       icon: /images/icon/icon-event.svg
-      checked: true
+      checked: false
     - name: Vue
       color: "#568dc4"
       icon: /images/icon/icon-event.svg
-      checked: true
+      checked: false
 
 # 标签云
 tagcloud:
