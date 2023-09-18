@@ -1,5 +1,5 @@
 slogan: “宁静致远”
-email: example@email.com
+email: 932687738@qq.com
 logo: "/images/logo.svg"
 
 mathjax: false # 加载 LateX 数学公式库
@@ -51,13 +51,13 @@ links: # 朋友
 social: # 账号
   - name: "github"
     icon: "/images/logo-github.svg"
-    url: https://github.com/
+    url: https://github.com/932687738/yxy.github.io
   - name: "微信公众号"
     icon: "/images/logo-wx.svg"
-    url: https://mp.weixin.qq.com/s?__biz=MzI3NzQ4NDkzNg==&mid=2247484469&idx=1&sn=8a442bb67397f52cce5c38c3f9b41e36&chksm=eb64c0d2dc1349c40d2e1bb55615ae28b3f2951be22f00717b9ade98c851082e42dc666ab45d#rd
+    url: 
   - name: "知乎"
     icon: "/images/logo-zh.svg"
-    url: https://www.zhihu.com/
+    url: 
 
 reward: # 赞赏
   enable: false

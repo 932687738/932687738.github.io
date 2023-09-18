@@ -1,5 +1,5 @@
-slogan: “宁静致远”
-email: example@email.com
+slogan: “古柯”
+email: 932687738@qq.com
 logo: "/images/logo.svg"
 
 mathjax: false # 加载 LateX 数学公式库
@@ -29,18 +29,18 @@ index: # 配置首页个性化内容
     - 朝如青丝暮成雪
   photo: /images/about.jpg
   about:
-    title: 关于
+    title: 断言
     text:
-      - 酒入豪肠,七分酿成了月光
+      - 宠辱不惊
+      - 闲看庭前花开花落
       -
-      - 余下的三分啸成剑气
-      -
-      - 绣口一吐就半个盛唐
+      - 去留无意
+      - 漫随天外云卷云舒
 
 foot:
   title:
-    - "海内存知己"
-    - "天涯若比邻"
+    - "长相知"
+    - "不相疑"
 
 links: # 朋友
   - name: "Theme Tranquility"
@@ -52,10 +52,10 @@ social: # 账号
     url: https://github.com/
   - name: "微信公众号"
     icon: "/images/logo-wx.svg"
-    url: https://mp.weixin.qq.com/s?__biz=MzI3NzQ4NDkzNg==&mid=2247484469&idx=1&sn=8a442bb67397f52cce5c38c3f9b41e36&chksm=eb64c0d2dc1349c40d2e1bb55615ae28b3f2951be22f00717b9ade98c851082e42dc666ab45d#rd
+    url: 
   - name: "知乎"
     icon: "/images/logo-zh.svg"
-    url: https://www.zhihu.com/
+    url: 
 
 reward: # 赞赏
   enable: false
@@ -117,15 +117,19 @@ timeline:
   enable: true
   order: false # 是否按时间正序展示，false 为倒序
   items:
-    - name: article
+    - name: other
       color: "#ee936c"
       icon: /images/icon/icon-article.svg
       checked: false
-    - name: app
+    - name: Java
       color: "#60a465"
       icon: /images/icon/icon-app.svg
       checked: false
-    - name: event
+    - name: React
+      color: "#568dc4"
+      icon: /images/icon/icon-event.svg
+      checked: true
+    - name: Vue
       color: "#568dc4"
       icon: /images/icon/icon-event.svg
       checked: true
