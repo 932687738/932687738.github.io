@@ -1,3 +1,4 @@
+# 参考配置 https://github.com/hooozen/hexo-theme-test/blob/main/_config.tranquility.yml
 slogan: “古柯”
 email: 932687738@qq.com
 logo: "/images/logo.svg"
@@ -13,9 +14,9 @@ favicon: # 配置网页图标
 subpage: # 开启“子页”功能，详见 README
   enable: true
   pages:
-    - name: Other # 文章的分类（category）名，如 developer
+    - name: Jottings # 文章的分类（category）名，如 developer
       path: # 若不设置则默认使用 name
-      title: 杂项 # 菜单名，如 开发者
+      title: 随笔 # 菜单名，如 开发者
       icon: /images/icon/icon-book.svg # 图标的路径
       description: # 描述
     - name: Java # 文章的分类（category）名，如 developer
@@ -36,6 +37,80 @@ subpage: # 开启“子页”功能，详见 README
 
 cv:
   enable: true
+  showInNav: true
+  iconPrefix: fas
+  keywords: 后端开发
+  description: YXY的简历
+  title: YXY的简历
+  content:
+    title: YXY
+    baseInfo:
+      - 2024 应届硕士
+      - JAVA,Vue,React
+    tel: 17865425326
+    email: 932687738@qq.com
+    github: 932687738
+    #blog: hozen.site
+    #blogHref: https://hozen.site
+    edu:
+      title: "教育背景"
+      content:
+        - 2015.9 至 2019.6，青岛大学，软件工程，学士学位
+    # chapters:
+    #   - title: "个人项目"
+    #     icon: person-digging
+    #     tips: 请点击项目名称查看项目详情
+    #     sections:
+    #       - title: picStitch
+    #         link: https://ps.hozen.site
+    #         description: 长图拼接 Web App
+    #         content:
+    #           - 2023/9 至今
+    #           - "技术栈: Vue3+ts+vite+pinia, 移动 Web, Canvas, PWA"
+    #           - 主要实现了 Web 端图片的编辑和保存、图片拖动排序等功能。在开发过程中实践了面向对象开发、移动端适配、Vue3 底层组件封装、HTML5 的 Canvas、Drag、SVG 等技术. 详情：hozen.site/archives/69/
+    #       - title: Tranquility
+    #         link: https://github.com/hooozen/hexo-theme-tranquility
+    #         description: 响应式博客网站
+    #         content:
+    #           - 2022/12 至今, 80+ stars
+    #           - "技术栈: Node, Web page"
+    #           - 主要实现了个人主页展示、博客编写和发布、网站 SEO、评论赞赏等博客系统。涉及 Node 开发、响应式页面设计及开发、页面性能优化及 SEO、字体提取压缩等技术。开发过程中调试了许多开源插件, 并贡献了部分文档和代码。
+    #       - title: 篮球裁判手势挑战
+    #         description: 微信答题挑战小程序
+    #         link: https://www.hozen.site/archives/59/
+    #         content:
+    #           - 2022/10 至今, 4k+ uv
+    #           - "技术栈: 微信小程序, Serverless"
+    #           - "主要实现小程序答题挑战的交互逻辑以及积分排名、题目难度自动学习更新等功能。涉及微信小程序开发、Serverless 应用、NoSQL 数据库、接口设计和封装、Token 管理等技术"
+    #       - title: 其他
+    #         link: https://steamcommunity.com/sharedfiles/filedetails/?id=2222111958
+    #         content:
+    #           - 基于 wallpaper engine 的桌面动态壁纸(18k订阅), 学术风博客系统, Web 你画我猜小游戏等。详情见 github.com/hooozen。
+    #   - title: 工作经验
+    #     icon: laptop-code
+    #     sections:
+    #       - title: 杭州税友软件集团有限公司
+    #         description: 2018.7 - 2019.3
+    #         content:
+    #           - 主要参与公司 B 端报税系统及员工薪税服务系统的客户端开发, 基于 CEF 和 VUE 技术栈.
+    #           - 作为主要成员参与了公司统一 UI 库的开发及文档和 Demo 开发, 基于 ElementUI 封装定制.
+    #           - 业务能力得到 leader 认可, 和同事相处愉快, 获得部门年度最佳新人奖.
+    #       - title: 兼职经验
+    #         description: 2021 - 2022
+    #         content:
+    #           - 考研结束的假期参与了若干外包项目，主要涉及 Vue 技术栈的后台管理系统以及物联网创业项目的小程序和商品配送管理系统的开发。线上和需求以及后台开发人员进行合作, 得到同事和客户认可.
+    #   - title: 奖项证书
+    #     icon: trophy
+    #     list: true
+    #     content:
+    #       - 第十八届中国研究生数学建模竞赛, 全国二等奖, 使用机器学习和神经网络解决 UWB 定位问题
+    #       - 招商银行第七届 FinTech 竞赛(数据赛道), 61/3000 名, 客户金融产品配置行为预测
+    #       - 全国计算机信息高新技术考试合格证书, 国家职业资格四级, 图形图像处理模块(Photoshop平台)
+    #   - title: 个人小结
+    #     icon: ranking-star
+    #     content:
+    #       - 软件工程和统计学交叉学科背景, 数学基础好, 学习能力强. 项目经验丰富, 善于中英文文献资料检索阅读, 解决问题的能力强. 热爱软件开发, 具备优秀的文档和制图能力, 喜欢知识分享和输出.
+    #       - 爱好阅读和学习, 积极的人生观和性格, 愿意为优秀的产品和团队付出热情和努力.
 
 index: # 配置首页个性化内容
   motto: "应无所住 而生其心"
