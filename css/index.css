@@ -172,7 +172,7 @@
   margin: auto;
 }
 .radio-skin,
-.radio-skin--Other,
+.radio-skin--Jottings,
 .radio-skin--Java,
 .radio-skin--React,
 .radio-skin--Vue {
@@ -183,7 +183,7 @@
   transition: all 0.4s ease;
 }
 .radio-skin::after,
-.radio-skin--Other::after,
+.radio-skin--Jottings::after,
 .radio-skin--Java::after,
 .radio-skin--React::after,
 .radio-skin--Vue::after {
@@ -201,22 +201,22 @@
   top: 22px;
   box-shadow: 1px 0 5px rgba(0,0,0,0.2);
 }
-.radio-skin--Other::after {
+.radio-skin--Jottings::after {
   border-color: #ee936c;
 }
-#radio-Other:checked+.radio-skin--Other {
+#radio-Jottings:checked+.radio-skin--Jottings {
   background-color: #ee936c;
 }
-#radio-Other:checked+.radio-skin--Other::after {
+#radio-Jottings:checked+.radio-skin--Jottings::after {
   background-color: #ee936c;
   top: -2px;
 }
-.timeline-item-Other .line-anchor::after,
-.timeline-item-Other--hidden .line-anchor::after {
+.timeline-item-Jottings .line-anchor::after,
+.timeline-item-Jottings--hidden .line-anchor::after {
   background-color: #ee936c;
 }
-.timeline-item-Other .line-date-tag,
-.timeline-item-Other--hidden .line-date-tag {
+.timeline-item-Jottings .line-date-tag,
+.timeline-item-Jottings--hidden .line-date-tag {
   background-color: #ee936c;
 }
 /*
