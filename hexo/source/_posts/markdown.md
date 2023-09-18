@@ -6,3 +6,6 @@ tags:
 - markdown
 timeline: Other
 ---
+
+初始化好自己的博客以后，就要学会怎么使用**markdown**来写一篇自己的文章
+这里学习语法参考[markdown](https://www.runoob.com/markdown/md-title.html)

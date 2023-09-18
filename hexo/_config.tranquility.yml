@@ -75,7 +75,7 @@ social: # 账号
 reward: # 赞赏
   enable: true
   face: /images/avatar.jpg
-  paycode: /images/avatar.jpg
+  paycode: /images/qr_code.png
   text: “请作者喝杯咖啡”
   btnText: 喜欢作者
 
