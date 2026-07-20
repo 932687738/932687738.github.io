@@ -10,14 +10,11 @@
 .wall-bg::before {
   z-index: 2;
   content: ' ';
-  background-color: rgba(255,255,255,0.95);
+  background-color: rgba(255,255,255,0.72);
   transition: background-color 200ms ease-in;
 }
 .wall-main:hover+.wall-bg::before {
-  background-color: rgba(255,255,255,0.8);
-}
-.wall-main:hover+.wall-bg .cursor {
-  animation: spark 1s ease infinite;
+  background-color: rgba(255,255,255,0.65);
 }
 .wall-main {
   cursor: pointer;
@@ -43,31 +40,129 @@
   font-family: sourceHanSerif;
   letter-spacing: 0.2em;
 }
-#heart-curve {
+#heart-curve,
+#ai-network {
   position: absolute;
   right: 0;
   top: 50%;
   margin-top: -200px;
 }
-.hello-world {
+.ai-terminal {
   position: absolute;
-  top: calc(50% - 80px);
-  right: calc(50% + 230px);
-  font-size: 30px;
+  top: calc(50% - 110px);
+  right: calc(50% + 180px);
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(91,141,239,0.18);
+  box-shadow: 0 8px 32px rgba(91,141,239,0.08);
+  font-family: 'Consolas', 'SF Mono', 'PingFang SC', monospace;
+  opacity: 1;
+}
+.ai-terminal-bar {
   display: flex;
-  align-items: flex-end;
-  width: 220px;
+  gap: 6px;
+  padding: 8px 12px;
+  background: linear-gradient(90deg, rgba(91,141,239,0.08), rgba(0,201,167,0.06));
 }
-.hello-world .cursor {
-  height: 2px;
-  width: 20px;
-  background-color: #555;
+.ai-terminal-bar span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(91,141,239,0.35);
 }
-.normal-eqt {
+.ai-terminal-bar span:nth-child(2) {
+  background: rgba(0,201,167,0.35);
+}
+.ai-terminal-bar span:nth-child(3) {
+  background: rgba(150,150,150,0.3);
+}
+.ai-terminal-body {
+  padding: 12px 14px 14px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(60,60,60,0.9);
+}
+.ai-terminal-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-height: 22px;
+}
+.ai-terminal-line + .ai-terminal-line {
+  margin-top: 8px;
+}
+.ai-terminal-tag {
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  letter-spacing: 0.02em;
+}
+.ai-terminal-tag.user {
+  color: #5b8def;
+  background: rgba(91,141,239,0.12);
+}
+.ai-terminal-tag.ai {
+  color: #00a88a;
+  background: rgba(0,201,167,0.12);
+}
+.ai-terminal-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 14px;
+  margin-left: 2px;
+  background-color: #00c9a7;
+  vertical-align: middle;
+  animation: spark 1s ease infinite;
+}
+.ai-formula {
   position: absolute;
-  top: calc(50% + 100px);
-  right: 50%;
-  opacity: 0.8;
+  top: calc(50% + 90px);
+  right: calc(50% - 20px);
+  padding: 14px 20px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(0,201,167,0.15);
+  box-shadow: 0 8px 32px rgba(0,201,167,0.06);
+  text-align: center;
+  opacity: 1;
+}
+.ai-formula-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(91,141,239,0.7);
+  margin-bottom: 6px;
+}
+.ai-formula-main {
+  font-family: 'Cambria Math', 'Times New Roman', 'Georgia', serif;
+  font-size: 32px;
+  font-style: italic;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #5b8def 0%, #00c9a7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.ai-formula-fn {
+  font-weight: 700;
+  font-size: 36px;
+}
+.ai-formula-var {
+  font-weight: 600;
+}
+.ai-formula-arg {
+  opacity: 0.75;
+}
+.ai-formula-desc {
+  margin-top: 6px;
+  font-size: 12px;
+  color: rgba(100,100,100,0.65);
+  letter-spacing: 0.08em;
 }
 .motto {
   font-size: 28px;
@@ -75,7 +170,7 @@
   right: 0;
   bottom: calc(50% - 200px);
   position: absolute;
-  opacity: 0.3;
+  opacity: 0.55;
 }
 .poem {
   font-size: 18px;
@@ -83,7 +178,7 @@
   font-family: sourceHanSerif;
   left: 50%;
   top: calc(50% + 80px);
-  opacity: 0.2;
+  opacity: 0.45;
 }
 .about {
   max-width: 900px;
@@ -175,7 +270,10 @@
 .radio-skin--Jottings,
 .radio-skin--Java,
 .radio-skin--React,
-.radio-skin--Vue {
+.radio-skin--Vue,
+.radio-skin--AI,
+.radio-skin--Spring Alibaba AI,
+.radio-skin--Code Graph {
   height: 100%;
   width: 2px;
   border-radius: 1px;
@@ -186,7 +284,10 @@
 .radio-skin--Jottings::after,
 .radio-skin--Java::after,
 .radio-skin--React::after,
-.radio-skin--Vue::after {
+.radio-skin--Vue::after,
+.radio-skin--AI::after,
+.radio-skin--Spring Alibaba AI::after,
+.radio-skin--Code Graph::after {
   transition: all 0.4s ease;
   display: block;
   height: 20px;
@@ -287,6 +388,75 @@
 .timeline-item-Vue .line-date-tag,
 .timeline-item-Vue--hidden .line-date-tag {
   background-color: #568dc4;
+}
+/*
+  .timeline-item-app, .timeline-item-event {
+    font-weight: bold;
+  }
+  */
+.radio-skin--AI::after {
+  border-color: #9b59b6;
+}
+#radio-AI:checked+.radio-skin--AI {
+  background-color: #9b59b6;
+}
+#radio-AI:checked+.radio-skin--AI::after {
+  background-color: #9b59b6;
+  top: -2px;
+}
+.timeline-item-AI .line-anchor::after,
+.timeline-item-AI--hidden .line-anchor::after {
+  background-color: #9b59b6;
+}
+.timeline-item-AI .line-date-tag,
+.timeline-item-AI--hidden .line-date-tag {
+  background-color: #9b59b6;
+}
+/*
+  .timeline-item-app, .timeline-item-event {
+    font-weight: bold;
+  }
+  */
+.radio-skin--Spring Alibaba AI::after {
+  border-color: #e67e22;
+}
+#radio-Spring Alibaba AI:checked+.radio-skin--Spring Alibaba AI {
+  background-color: #e67e22;
+}
+#radio-Spring Alibaba AI:checked+.radio-skin--Spring Alibaba AI::after {
+  background-color: #e67e22;
+  top: -2px;
+}
+.timeline-item-Spring Alibaba AI .line-anchor::after,
+.timeline-item-Spring Alibaba AI--hidden .line-anchor::after {
+  background-color: #e67e22;
+}
+.timeline-item-Spring Alibaba AI .line-date-tag,
+.timeline-item-Spring Alibaba AI--hidden .line-date-tag {
+  background-color: #e67e22;
+}
+/*
+  .timeline-item-app, .timeline-item-event {
+    font-weight: bold;
+  }
+  */
+.radio-skin--Code Graph::after {
+  border-color: #1abc9c;
+}
+#radio-Code Graph:checked+.radio-skin--Code Graph {
+  background-color: #1abc9c;
+}
+#radio-Code Graph:checked+.radio-skin--Code Graph::after {
+  background-color: #1abc9c;
+  top: -2px;
+}
+.timeline-item-Code Graph .line-anchor::after,
+.timeline-item-Code Graph--hidden .line-anchor::after {
+  background-color: #1abc9c;
+}
+.timeline-item-Code Graph .line-date-tag,
+.timeline-item-Code Graph--hidden .line-date-tag {
+  background-color: #1abc9c;
 }
 /*
   .timeline-item-app, .timeline-item-event {

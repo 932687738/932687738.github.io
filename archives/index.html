@@ -82,6 +82,12 @@
             
               <a class="nav-menu-item" href="/Vue">Vue</a>
             
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
           
           
             <a class="nav-menu-item" href='/cv/'>简历</a>
@@ -100,21 +106,44 @@
     </div>
     <div class="wall-bg">
       <div class="wall-bg-index">
-        <div class="hello-world">
-          <div>> Hello world</div>
-          <div class="cursor"></div>
+        <div class="ai-terminal">
+          <div class="ai-terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="ai-terminal-body">
+            <div class="ai-terminal-line">
+              <span class="ai-terminal-tag user">You</span>
+              <span>探索 AI 的边界</span>
+            </div>
+            <div class="ai-terminal-line">
+              <span class="ai-terminal-tag ai">AI</span>
+              <span id="ai-typing-text"></span>
+              <span class="ai-terminal-cursor"></span>
+            </div>
+          </div>
         </div>
-        <div class="normal-eqt">
-          <img alt="normal" width="300px" height="" src="/images/normal.svg"/>
+        <div class="ai-formula">
+          <div class="ai-formula-tag">Neural Network</div>
+          <div class="ai-formula-main">
+            <span class="ai-formula-fn">σ</span>
+            <span class="ai-formula-arg">(</span>
+            <span class="ai-formula-var">W</span>
+            <span class="ai-formula-arg">·</span>
+            <span class="ai-formula-var">x</span>
+            <span class="ai-formula-arg"> + </span>
+            <span class="ai-formula-var">b</span>
+            <span class="ai-formula-arg">)</span>
+          </div>
+          <div class="ai-formula-desc">前向传播 · Forward Pass</div>
         </div>
-        <canvas width="400" height="400" id="heart-curve"></canvas>
-        <div class="motto">应无所住 而生其心</div>
+        <canvas width="400" height="400" id="ai-network"></canvas>
+        <div class="motto">智能涌现 连接未来</div>
         <div class="poem">
           
-            君不见高堂明镜悲白发
+            神经网络层叠深
             <br/>
           
-            朝如青丝暮成雪
+            算法迭代见真章
             <br/>
           
         </div>
@@ -195,6 +224,27 @@
                      type="checkbox"
                      />
               <label class="radio-skin--Vue" for="radio-Vue"></label>
+            </div>
+          
+            <div class="radio">
+              <input id="radio-AI"
+                     type="checkbox"
+                     />
+              <label class="radio-skin--AI" for="radio-AI"></label>
+            </div>
+          
+            <div class="radio">
+              <input id="radio-Spring Alibaba AI"
+                     type="checkbox"
+                     />
+              <label class="radio-skin--Spring Alibaba AI" for="radio-Spring Alibaba AI"></label>
+            </div>
+          
+            <div class="radio">
+              <input id="radio-Code Graph"
+                     type="checkbox"
+                     />
+              <label class="radio-skin--Code Graph" for="radio-Code Graph"></label>
             </div>
           
         </div>
@@ -304,137 +354,175 @@
     
     
   <script type="text/javascript">
-  function HeartCurve(w, h) {
+  function AINetwork(w, h) {
     this.w = w;
     this.h = h;
-    this.a = undefined;
-    this.ctx = undefined;
-    this.deg = 0;
-    this.speed = 0.4;
+    this.layers = [4, 6, 5, 3];
+    this.nodes = [];
+    this.links = [];
+    this.pulses = [];
+    this.ctx = null;
+    this.id = null;
     this.isPause = false;
     this.init();
   }
-  HeartCurve.prototype.init = function () {
-    const {
-      w,
-      h
-    } = this;
-    const canvas = document.querySelector('#heart-curve');
-    if (!canvas) throw Error('no canvas element!');
 
+  AINetwork.prototype.init = function () {
+    const canvas = document.querySelector('#ai-network');
+    if (!canvas) throw Error('no canvas element!');
     this.ctx = canvas.getContext('2d');
-    this.ctx.translate(2 * w / 3, h / 2);
-    this.ctx.lineJoin = 'round';
-    this.a = w / 6.2;
-    this.id = null;
+    this._buildGraph();
+    this._spawnPulse();
     return this;
   };
-  HeartCurve.prototype._drawAxis = function () {
-    const {
-      ctx,
-      w,
-      h
-    } = this;
-    ctx.lineWidth = 1;
-    ctx.strokeStyle = "#999";
-    ctx.beginPath();
-    ctx.moveTo(-w * 2 / 3, 0);
-    ctx.lineTo(w / 3, 0);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(0, -h * 0.48);
-    ctx.lineTo(0, h * 0.48);
-    ctx.stroke();
-  };
-  HeartCurve.prototype._drawCure = function () {
-    const {
-      ctx,
-      a
-    } = this;
-    ctx.beginPath();
-    let x, y, deg = 0;
-    ctx.moveTo(0, 0);
-    ctx.strokeStyle = "#ff0000";
-    while (deg <= 360) {
-      const theta = deg / 180 * Math.PI;
-      r = 2 * a * (1 - Math.cos(theta));
-      x = r * Math.cos(theta);
-      y = r * Math.sin(theta);
-      ctx.lineTo(x, y);
-      deg++;
+
+  AINetwork.prototype._buildGraph = function () {
+    const { w, h, layers } = this;
+    const marginX = 48;
+    const gapX = (w - marginX * 2) / (layers.length - 1);
+
+    layers.forEach((count, layerIndex) => {
+      const gapY = h / (count + 1);
+      for (let i = 0; i < count; i++) {
+        this.nodes.push({
+          x: marginX + layerIndex * gapX,
+          y: gapY * (i + 1),
+          layer: layerIndex,
+          index: i,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+    });
+
+    for (let i = 0; i < this.nodes.length; i++) {
+      for (let j = 0; j < this.nodes.length; j++) {
+        if (this.nodes[j].layer === this.nodes[i].layer + 1) {
+          this.links.push({ from: i, to: j, weight: 0.15 + Math.random() * 0.55 });
+        }
+      }
     }
-    ctx.stroke();
   };
-  HeartCurve.prototype.spin = function () {
-    let {
-      a,
-      w,
-      h,
-      deg,
-      ctx
-    } = this;
-    if (deg >= 360) deg = 0;
 
-    ctx.clearRect(-w / 3 * 2, -h / 2, w, h);
-    const theta = deg / 180 * Math.PI;
-    this._drawAxis();
-    ctx.lineWidth = 2;
-    this._drawCure();
-    ctx.strokeStyle = "#000";
-    ctx.beginPath();
-    ctx.arc(-a, 0, a, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.arc(2 * a * Math.cos(theta) - a, 2 * a * Math.sin(theta), a, 0, 2 * Math.PI);
-    ctx.stroke();
-    ctx.beginPath();
-    let r = 2 * a * (1 - Math.cos(theta));
-    let x = r * Math.cos(theta);
-    let y = r * Math.sin(theta);
-    ctx.arc(x, y, 3, 0, 2 * Math.PI);
-    ctx.fill();
+  AINetwork.prototype._spawnPulse = function () {
+    if (this.links.length === 0) return;
+    const link = this.links[Math.floor(Math.random() * this.links.length)];
+    this.pulses.push({ link, t: 0, speed: 0.012 + Math.random() * 0.018 });
+    if (this.pulses.length > 14) this.pulses.shift();
+  };
+
+  AINetwork.prototype._draw = function () {
+    const { ctx, w, h, nodes, links, pulses } = this;
+    ctx.clearRect(0, 0, w, h);
+
+    links.forEach((link) => {
+      const from = nodes[link.from];
+      const to = nodes[link.to];
+      ctx.beginPath();
+      ctx.moveTo(from.x, from.y);
+      ctx.lineTo(to.x, to.y);
+      ctx.strokeStyle = 'rgba(91, 141, 239, ' + (0.18 + link.weight * 0.35) + ')';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+
+    pulses.forEach((pulse) => {
+      pulse.t += pulse.speed;
+      if (pulse.t >= 1) return;
+      const from = nodes[pulse.link.from];
+      const to = nodes[pulse.link.to];
+      const x = from.x + (to.x - from.x) * pulse.t;
+      const y = from.y + (to.y - from.y) * pulse.t;
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, Math.PI * 2);
+      ctx.fillStyle = '#00c9a7';
+      ctx.fill();
+    });
+    this.pulses = pulses.filter((pulse) => pulse.t < 1);
+
+    nodes.forEach((node) => {
+      node.phase += 0.03;
+      const glow = 0.55 + Math.sin(node.phase) * 0.2;
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, 7, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(91, 141, 239, ' + glow + ')';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+    });
+  };
+
+  AINetwork.prototype.spin = function () {
+    this._draw();
+    if (Math.random() < 0.12) this._spawnPulse();
     if (this.isPause) return;
-
-    this.deg = deg + this.speed;
     this.id = window.requestAnimationFrame(this.spin.bind(this));
   };
-  HeartCurve.prototype.pause = function () {
+
+  AINetwork.prototype.pause = function () {
     this.isPause = true;
-    if (window.cancelAnimationFrame) {
-      window.cancelAnimationFrame(this.id);
-    }
+    if (window.cancelAnimationFrame) window.cancelAnimationFrame(this.id);
   };
-  HeartCurve.prototype.resume = function () {
+
+  AINetwork.prototype.resume = function () {
     this.isPause = false;
     this.spin();
   };
 
   (function () {
-    const heartCurve = new HeartCurve(400, 400);
-    heartCurve.spin();
-    mobileAdjust(window.matchMedia("(hover:none"));
-    window.matchMedia("(hover:none)").addListener(mobileAdjust);
-
-    function mobileAdjust(media) {
-      const wallEl = document.querySelector('#wall-main')
-      if (!media.matches) {
-        heartCurve.pause();
-        wallEl.addEventListener('mouseenter', () => {
-          console.log('resume');
-          heartCurve.resume();
-        });
-        wallEl.addEventListener('mouseleave', () => {
-          console.log('pause');
-          heartCurve.pause();
-        });
-      }
-    }
+    const aiNetwork = new AINetwork(400, 400);
+    aiNetwork.spin();
   })();
 </script>
+
+  <script type="text/javascript">
+  (function () {
+    var phrases = [
+      '理解上下文，生成有温度的回答',
+      '从数据中涌现智能',
+      '推理 · 生成 · 持续进化'
+    ];
+    var el = document.querySelector('#ai-typing-text');
+    if (!el) return;
+
+    var phraseIndex = 0;
+    var charIndex = 0;
+    var deleting = false;
+
+    function tick() {
+      var current = phrases[phraseIndex];
+      if (!deleting) {
+        el.textContent = current.slice(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(tick, 1800);
+          return;
+        }
+        setTimeout(tick, 70);
+        return;
+      }
+
+      el.textContent = current.slice(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(tick, 400);
+        return;
+      }
+      setTimeout(tick, 35);
+    }
+
+    tick();
+  })();
+</script>
+
   
   
   <script type="text/javascript">
-    const timelineData = {"types":["Jottings","Java","React","Vue"],"posts":[{"title":"常用的 markdown 语法","path":"/2023/09/16/markdown/","icon":"/images/icon/icon-article.svg","type":"Jottings","date":"2023-09-16"},{"title":"初始化自己的个人博客","path":"/2023/09/15/init/","icon":"/images/icon/icon-article.svg","type":"Jottings","date":"2023-09-15"}]}
+    const timelineData = {"types":["Jottings","Java","React","Vue","AI","Spring Alibaba AI","Code Graph"],"posts":[{"title":"Hello World","path":"/2026/07/20/hello-world/","icon":"/images/icon/icon-article.svg","type":"Jottings","date":"2026-07-20"},{"title":"常用的 markdown 语法","path":"/2023/09/16/markdown/","icon":"/images/icon/icon-article.svg","type":"Jottings","date":"2023-09-16"},{"title":"初始化自己的个人博客","path":"/2023/09/15/init/","icon":"/images/icon/icon-article.svg","type":"Jottings","date":"2023-09-15"}]}
     const {types, posts} = timelineData
     listEl = document.querySelector("#timeline-list");
 
