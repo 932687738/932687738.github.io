@@ -3,18 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: YXY NB
-subtitle: 小葵花妈妈课堂开课了
-description: 蓝瓶的，好喝的
+title: YXY的私教课
+subtitle: 生活与工作并重
+description: 生命不息，运动不止
 keywords:
-author: YXY
+author: yxy
 email: 932687738@qq.com
 language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
+## GitHub User Pages：仓库名必须为 932687738.github.io，站点挂在域名根路径
 url: https://932687738.github.io
+root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -98,13 +99,11 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-# theme: landscape
 theme: tranquility
-
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: git
   repository: https://github.com/932687738/932687738.github.io.git
-  branch: main
+  branch: master

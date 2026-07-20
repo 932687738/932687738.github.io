@@ -159,7 +159,7 @@ gitalk: # gitalk 评论
   enable: false
   owner: 932687738 # MUST HAVE, Your Github Username
   admin:
-  repo: https://github.com/932687738/yxy.github.io # MUST HAVE, The name of the repo you use to store Gitment comments
+  repo: 932687738.github.io # MUST HAVE, The name of the repo you use to store Gitment comments
   clientID: # MUST HAVE, Github client id for the Gitment
   clientSecret: # EITHER this or proxy_gateway, Github access secret token for the Gitment
 

@@ -25,14 +25,14 @@ timeline: Jottings
 1. **在github创建一个属于自己的仓库**
     - 注意事项：
         - 创建时repository的名字要与github的名字相同，否则可能出现找不到css文件的情况：**userName.github.io**
-<img src="InitHexoStep1.png">
+<img src="/images/init/InitHexoStep1.png">
 
 ***
 
-<img src="InitHexoStep2.png">
+<img src="/images/init/InitHexoStep2.png">
 
 2. **通过setting中page将repository设置为github管理，然后等待部署完成就可以看到对应的页面啦**
-<img src="InitHexoStep3.png">
+<img src="/images/init/InitHexoStep3.png">
 
 ### Second Step
 1. **使用git将项目拉取到本地**
@@ -51,7 +51,7 @@ $ cd hexo # cd到刚刚我们初始化的目录下
 $ npm install # 安装组件
 ```
 3. **初始化后的目录层级结构**
-<img src="InitHexoCatalogue.png">
+<img src="/images/init/InitHexoCatalogue.png">
 
 4. **修改配置文件：_config.yml**
 ``` yml
@@ -98,7 +98,7 @@ $ hexo n 文件名 # 生成文件前，通过该命令创建文件
 ### Fifth Step
 1. **查询主题**
     - 访问[HEXO THEME](https://hexo.io/themes/)找到一个自己喜欢的主题
-    <img src="InitHexoThemeTranquility.png">
+    <img src="/images/init/InitHexoThemeTranquility.png">
 2. **下载主题**
     - 通过 **Visit preview site** 可以预览主题效果
     - 通过 **Tranquility** 进入github下载
