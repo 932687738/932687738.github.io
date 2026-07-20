@@ -107,4 +107,4 @@ theme: tranquility
 deploy:
   type: git
   repository: https://github.com/932687738/932687738.github.io.git
-  branch: master
+  branch: main
