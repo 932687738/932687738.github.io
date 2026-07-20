@@ -1,5 +1,16 @@
 <div class="related-post">
-  <div class="related__head">{{ partial("_partials/macros/tags.njk", {tags: page.tags}) }}</div>
+  <div class="related__head">
+    {% set postCategoryPath = null %}
+    {% if page.categories and page.categories.length %}
+      {% set catName = page.categories.toArray()[0].name %}
+      {% for nav in theme.subpage.pages %}
+        {% if nav.name == catName %}
+          {% set postCategoryPath = nav.path or nav.name %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {{ partial("_partials/macros/tags.njk", {tags: page.tags, categoryPath: postCategoryPath}) }}
+  </div>
   <div class="realated__body">
     {% if not popular_posts_json %}
       DEBUG: 请安装插件 <a href="https://github.com/tea3/hexo-related-popular-posts">hexo-related-popular-posts</a> 或关闭 related_post 配置!

@@ -71,6 +71,9 @@ index_generator:
 default_category: uncategorized
 category_map:
 tag_map:
+# 关闭 Hexo 默认全站标签归档，标签仅在各模块子页内展示
+tag_generator:
+  enable: false
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta

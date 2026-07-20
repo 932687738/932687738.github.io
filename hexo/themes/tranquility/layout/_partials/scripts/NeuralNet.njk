@@ -1,0 +1,122 @@
+<script type="text/javascript">
+  function AINetwork(w, h) {
+    this.w = w;
+    this.h = h;
+    this.layers = [4, 6, 5, 3];
+    this.nodes = [];
+    this.links = [];
+    this.pulses = [];
+    this.ctx = null;
+    this.id = null;
+    this.isPause = false;
+    this.init();
+  }
+
+  AINetwork.prototype.init = function () {
+    const canvas = document.querySelector('#ai-network');
+    if (!canvas) throw Error('no canvas element!');
+    this.ctx = canvas.getContext('2d');
+    this._buildGraph();
+    this._spawnPulse();
+    return this;
+  };
+
+  AINetwork.prototype._buildGraph = function () {
+    const { w, h, layers } = this;
+    const marginX = 48;
+    const gapX = (w - marginX * 2) / (layers.length - 1);
+
+    layers.forEach((count, layerIndex) => {
+      const gapY = h / (count + 1);
+      for (let i = 0; i < count; i++) {
+        this.nodes.push({
+          x: marginX + layerIndex * gapX,
+          y: gapY * (i + 1),
+          layer: layerIndex,
+          index: i,
+          phase: Math.random() * Math.PI * 2
+        });
+      }
+    });
+
+    for (let i = 0; i < this.nodes.length; i++) {
+      for (let j = 0; j < this.nodes.length; j++) {
+        if (this.nodes[j].layer === this.nodes[i].layer + 1) {
+          this.links.push({ from: i, to: j, weight: 0.15 + Math.random() * 0.55 });
+        }
+      }
+    }
+  };
+
+  AINetwork.prototype._spawnPulse = function () {
+    if (this.links.length === 0) return;
+    const link = this.links[Math.floor(Math.random() * this.links.length)];
+    this.pulses.push({ link, t: 0, speed: 0.012 + Math.random() * 0.018 });
+    if (this.pulses.length > 14) this.pulses.shift();
+  };
+
+  AINetwork.prototype._draw = function () {
+    const { ctx, w, h, nodes, links, pulses } = this;
+    ctx.clearRect(0, 0, w, h);
+
+    links.forEach((link) => {
+      const from = nodes[link.from];
+      const to = nodes[link.to];
+      ctx.beginPath();
+      ctx.moveTo(from.x, from.y);
+      ctx.lineTo(to.x, to.y);
+      ctx.strokeStyle = 'rgba(91, 141, 239, ' + (0.18 + link.weight * 0.35) + ')';
+      ctx.lineWidth = 1;
+      ctx.stroke();
+    });
+
+    pulses.forEach((pulse) => {
+      pulse.t += pulse.speed;
+      if (pulse.t >= 1) return;
+      const from = nodes[pulse.link.from];
+      const to = nodes[pulse.link.to];
+      const x = from.x + (to.x - from.x) * pulse.t;
+      const y = from.y + (to.y - from.y) * pulse.t;
+      ctx.beginPath();
+      ctx.arc(x, y, 3, 0, Math.PI * 2);
+      ctx.fillStyle = '#00c9a7';
+      ctx.fill();
+    });
+    this.pulses = pulses.filter((pulse) => pulse.t < 1);
+
+    nodes.forEach((node) => {
+      node.phase += 0.03;
+      const glow = 0.55 + Math.sin(node.phase) * 0.2;
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, 7, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(91, 141, 239, ' + glow + ')';
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(node.x, node.y, 3.5, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+    });
+  };
+
+  AINetwork.prototype.spin = function () {
+    this._draw();
+    if (Math.random() < 0.12) this._spawnPulse();
+    if (this.isPause) return;
+    this.id = window.requestAnimationFrame(this.spin.bind(this));
+  };
+
+  AINetwork.prototype.pause = function () {
+    this.isPause = true;
+    if (window.cancelAnimationFrame) window.cancelAnimationFrame(this.id);
+  };
+
+  AINetwork.prototype.resume = function () {
+    this.isPause = false;
+    this.spin();
+  };
+
+  (function () {
+    const aiNetwork = new AINetwork(400, 400);
+    aiNetwork.spin();
+  })();
+</script>

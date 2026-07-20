@@ -1,3 +1,9 @@
 {% if tags %}
-  {% for tag in tags.toArray() %}<a href="{{ url_for(tag.path) }}" class="post-tag">#{{ tag.name }}</a>{% endfor %}
+  {% for tag in tags.toArray() %}
+    {% if categoryPath %}
+      <a href="{{ module_tag_url(categoryPath, tag) }}" class="post-tag">#{{ tag.name }}</a>
+    {% else %}
+      <span class="post-tag">#{{ tag.name }}</span>
+    {% endif %}
+  {% endfor %}
 {% endif %}

@@ -1,0 +1,42 @@
+<script type="text/javascript">
+  (function () {
+    var phrases = [
+      '理解上下文，生成有温度的回答',
+      '从数据中涌现智能',
+      '推理 · 生成 · 持续进化'
+    ];
+    var el = document.querySelector('#ai-typing-text');
+    if (!el) return;
+
+    var phraseIndex = 0;
+    var charIndex = 0;
+    var deleting = false;
+
+    function tick() {
+      var current = phrases[phraseIndex];
+      if (!deleting) {
+        el.textContent = current.slice(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(tick, 1800);
+          return;
+        }
+        setTimeout(tick, 70);
+        return;
+      }
+
+      el.textContent = current.slice(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        setTimeout(tick, 400);
+        return;
+      }
+      setTimeout(tick, 35);
+    }
+
+    tick();
+  })();
+</script>

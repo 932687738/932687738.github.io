@@ -14,6 +14,10 @@ module.exports = hexo => {
       types,
       posts: hexo.locals.get('posts').sort(order)
         .filter(post => types.includes(post.timeline))
+        .filter(post => {
+          const categories = post.categories ? post.categories.toArray() : [];
+          return categories.some(category => category.name === post.timeline);
+        })
         .map(p => ({
           title: p.title,
           path: url_for(p.path),

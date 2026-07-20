@@ -9,7 +9,16 @@
       <div class="post-content__head">
         <div class="post-title">{{ page.title or "未命名" }}</div>
         <div class="post-info">
-          {{ partial("_partials/macros/tags.njk", {tags: page.tags}) }}
+          {% set postCategoryPath = null %}
+          {% if page.categories and page.categories.length %}
+            {% set catName = page.categories.toArray()[0].name %}
+            {% for nav in theme.subpage.pages %}
+              {% if nav.name == catName %}
+                {% set postCategoryPath = nav.path or nav.name %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+          {{ partial("_partials/macros/tags.njk", {tags: page.tags, categoryPath: page.module_path or postCategoryPath}) }}
           <span class="post-date">{{ date(page.date) }}</span>
         </div>
       </div>

@@ -17,14 +17,37 @@
     </div>
     <div class="wall-bg">
       <div class="wall-bg-index">
-        <div class="hello-world">
-          <div>> Hello world</div>
-          <div class="cursor"></div>
+        <div class="ai-terminal">
+          <div class="ai-terminal-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="ai-terminal-body">
+            <div class="ai-terminal-line">
+              <span class="ai-terminal-tag user">You</span>
+              <span>探索 AI 的边界</span>
+            </div>
+            <div class="ai-terminal-line">
+              <span class="ai-terminal-tag ai">AI</span>
+              <span id="ai-typing-text"></span>
+              <span class="ai-terminal-cursor"></span>
+            </div>
+          </div>
         </div>
-        <div class="normal-eqt">
-          <img alt="normal" width="300px" height="" src="{{ url_for("/images/normal.svg") }}"/>
+        <div class="ai-formula">
+          <div class="ai-formula-tag">Neural Network</div>
+          <div class="ai-formula-main">
+            <span class="ai-formula-fn">σ</span>
+            <span class="ai-formula-arg">(</span>
+            <span class="ai-formula-var">W</span>
+            <span class="ai-formula-arg">·</span>
+            <span class="ai-formula-var">x</span>
+            <span class="ai-formula-arg"> + </span>
+            <span class="ai-formula-var">b</span>
+            <span class="ai-formula-arg">)</span>
+          </div>
+          <div class="ai-formula-desc">前向传播 · Forward Pass</div>
         </div>
-        <canvas width="400" height="400" id="heart-curve"></canvas>
+        <canvas width="400" height="400" id="ai-network"></canvas>
         <div class="motto">{{ theme.index.motto }}</div>
         <div class="poem">
           {% for line in theme.index.poem %}
@@ -86,7 +109,8 @@
   {% endif %}
 {% endblock body %}
 {% block script %}
-  {% include "_partials/scripts/HeartCurve.njk" %}
+  {% include "_partials/scripts/NeuralNet.njk" %}
+  {% include "_partials/scripts/AiTerminal.njk" %}
   {% from "_partials/scripts/Timeline.njk" import timeline %}
   {% if theme.timeline and theme.timeline.enable %}{{ timeline(site.timelineData) }}
   {% endif %}

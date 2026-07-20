@@ -4,6 +4,10 @@
 
 const pagination = require('hexo-pagination');
 
+function getModulePath(page) {
+  return (page.path || page.name || '').replace(/\\/g, '/').replace(/\/$/, '');
+}
+
 
 
 module.exports = ctx => {
@@ -57,6 +61,8 @@ function subpage_generator(locals) {
         layout: ['category', 'archive', 'index'],
         data: {
           ...page,
+          module_path: getModulePath(page),
+          tags: []
         }
       }]);
     }
@@ -74,6 +80,7 @@ function subpage_generator(locals) {
       format: paginationDir + '/%d/',
       data: {
         ...page,
+        module_path: getModulePath(page),
         tags
       }
     });

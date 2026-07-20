@@ -34,6 +34,21 @@ subpage: # 开启“子页”功能，详见 README
       title: Vue # 菜单名，如 开发者
       icon: /images/icon/icon-code.svg # 图标的路径
       description: # 描述
+    - name: AI
+      path: AI
+      title: AI
+      icon: /images/icon/icon-app.svg
+      description: 人工智能与大模型
+    - name: Spring Alibaba AI
+      path: Spring-Alibaba-AI
+      title: Spring Alibaba AI
+      icon: /images/icon/icon-code.svg
+      description: Spring AI 与 Alibaba 生态
+    - name: Code Graph
+      path: Code-Graph
+      title: Code Graph
+      icon: /images/icon/icon-pi.svg
+      description: 代码图谱与程序分析
 
 cv:
   enable: true
@@ -113,10 +128,10 @@ cv:
     #       - 爱好阅读和学习, 积极的人生观和性格, 愿意为优秀的产品和团队付出热情和努力.
 
 index: # 配置首页个性化内容
-  motto: "应无所住 而生其心"
+  motto: "智能涌现 连接未来"
   poem:
-    - 君不见高堂明镜悲白发
-    - 朝如青丝暮成雪
+    - 神经网络层叠深
+    - 算法迭代见真章
   photo: /images/about.jpg
   about:
     title: 断言
@@ -222,6 +237,18 @@ timeline:
     - name: Vue
       color: "#568dc4"
       icon: /images/icon/icon-event.svg
+      checked: false
+    - name: AI
+      color: "#9b59b6"
+      icon: /images/icon/icon-app.svg
+      checked: false
+    - name: Spring Alibaba AI
+      color: "#e67e22"
+      icon: /images/icon/icon-code.svg
+      checked: false
+    - name: Code Graph
+      color: "#1abc9c"
+      icon: /images/icon/icon-pi.svg
       checked: false
 
 # 标签云

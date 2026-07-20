@@ -1,0 +1,24 @@
+{% extends "_partials/layout.njk" %}
+{% block link %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for("/css/category.css") }}" />
+{% endblock link %}
+{% block body %}
+  <div class="wall wall-category wall-category--plain">
+    <div class="wall-main">
+      <div class="wall-category-title">
+        <div class="title-icon"
+             style="background-image: url({{ url_for(page.icon) }})"></div>
+        <a class="module-tag-back" href="{{ url_for(page.module_path or page.path or page.name) }}">{{ page.title or page.name }}</a>
+        <span class="module-tag-sep">/</span>
+        <span>#{{ page.tag }}</span>
+      </div>
+    </div>
+  </div>
+  <div class="post-list">
+    {% if not page.posts or not page.posts.length %}
+      该标签下暂无文章。
+    {% else %}
+      {{ partial("_partials/macros/post-list.njk", {posts: page.posts}) }}
+    {% endif %}
+  </div>
+{% endblock body %}

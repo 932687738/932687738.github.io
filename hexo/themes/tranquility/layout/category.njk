@@ -12,9 +12,11 @@
         {{ page.title or page.name }}
       </div>
       <div class="wall-category-description">{{ page.description }}</div>
+      {% if page.tags and page.tags.length %}
       <div class="wall-category-tags">
-        <div id="tags-outer">{{ trqlt_tagcloud(page.tags, theme.tagcloud) }}</div>
+        <div id="tags-outer">{{ trqlt_tagcloud(page.tags, theme.tagcloud, page.module_path or page.name or page.path) }}</div>
       </div>
+      {% endif %}
     </div>
   </div>
   <div class="post-list">
@@ -27,7 +29,7 @@
   </div>
 {% endblock body %}
 {% block script %}
-  {% if fancy %}
+  {% if fancy and page.tags and page.tags.length %}
     <script type="text/javascript"
             charset="utf-8"
             src="{{ url_for('/js/tagcanvas.min.js') }}"></script>
