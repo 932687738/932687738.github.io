@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-16T16:45:00+08:00",
+  "title": "Design System: YXY的私教课",
+  "extensions": {
+    "colorMeta": {
+      "nong-mo": {
+        "role": "primary",
+        "displayName": "浓墨",
+        "canonical": "#000000",
+        "tonalRamp": ["#141414", "#2e2e2e", "#474747", "#616161", "#7a7a7a", "#949494", "#bdbdbd", "#e8e8e8"]
+      },
+      "dan-mo": {
+        "role": "primary",
+        "displayName": "淡墨",
+        "canonical": "#555555",
+        "tonalRamp": ["#1c1c1c", "#333333", "#555555", "#6e6e6e", "#888888", "#a3a3a3", "#c4c4c4", "#e6e6e6"]
+      },
+      "mo-deep": {
+        "role": "primary",
+        "displayName": "深墨",
+        "canonical": "#222222",
+        "tonalRamp": ["#111111", "#222222", "#3a3a3a", "#555555", "#777777", "#999999", "#c2c2c2", "#e4e4e4"]
+      },
+      "excerpt": {
+        "role": "neutral",
+        "displayName": "摘录灰",
+        "canonical": "#666666",
+        "tonalRamp": ["#222222", "#3d3d3d", "#666666", "#808080", "#9a9a9a", "#b3b3b3", "#d0d0d0", "#eeeeee"]
+      },
+      "foot-ash": {
+        "role": "neutral",
+        "displayName": "封底灰",
+        "canonical": "#aaaaaa",
+        "tonalRamp": ["#2a2a2a", "#444444", "#666666", "#888888", "#aaaaaa", "#c4c4c4", "#dedede", "#f3f3f3"]
+      },
+      "xuan-paper": {
+        "role": "neutral",
+        "displayName": "宣纸",
+        "canonical": "#fcfcfb",
+        "tonalRamp": ["#2c2a26", "#4a463f", "#6b655c", "#8c857a", "#b3aba0", "#d4cdc4", "#ebe6e0", "#fcfcfb"]
+      },
+      "page": {
+        "role": "neutral",
+        "displayName": "页白",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#1a1a1a", "#333333", "#555555", "#777777", "#999999", "#bbbbbb", "#dddddd", "#ffffff"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "发丝",
+        "canonical": "#dddddd",
+        "tonalRamp": ["#2e2e2e", "#4a4a4a", "#666666", "#888888", "#aaaaaa", "#c4c4c4", "#dddddd", "#f4f4f4"]
+      },
+      "rule": {
+        "role": "neutral",
+        "displayName": "界格",
+        "canonical": "#eeeeee",
+        "tonalRamp": ["#333333", "#555555", "#777777", "#999999", "#bbbbbb", "#d4d4d4", "#eeeeee", "#fafafa"]
+      },
+      "seal": {
+        "role": "secondary",
+        "displayName": "朱印",
+        "canonical": "#ee4242",
+        "tonalRamp": ["#4a0d0d", "#7a1616", "#a61f1f", "#d32f2f", "#ee4242", "#f47a7a", "#f8b4b4", "#fde8e8"]
+      },
+      "tag": {
+        "role": "tertiary",
+        "displayName": "标签蓝",
+        "canonical": "#2c5fa5",
+        "tonalRamp": ["#0d2244", "#16386e", "#1f4e96", "#2c5fa5", "#4d7fbe", "#7aa3d4", "#b3cce8", "#e7f0f8"]
+      },
+      "tag-hover": {
+        "role": "tertiary",
+        "displayName": "标签蓝悬停",
+        "canonical": "#2472e7",
+        "tonalRamp": ["#0c274f", "#143a78", "#1c54b0", "#2472e7", "#5b94ec", "#8eb4f2", "#c5d9f8", "#eaf1fd"]
+      },
+      "index-blue": {
+        "role": "tertiary",
+        "displayName": "首页信号蓝",
+        "canonical": "#5b8def",
+        "tonalRamp": ["#13284d", "#1e407a", "#2f5eae", "#5b8def", "#7aa4f2", "#a4c2f7", "#d0e0fb", "#eef3fd"]
+      },
+      "index-teal": {
+        "role": "tertiary",
+        "displayName": "首页潮青",
+        "canonical": "#00c9a7",
+        "tonalRamp": ["#04382f", "#066857", "#08987e", "#00c9a7", "#3dd6ba", "#7ee6d2", "#c2f5eb", "#e8fcf8"]
+      },
+      "code-paper": {
+        "role": "neutral",
+        "displayName": "代码纸",
+        "canonical": "#f7f7f7",
+        "tonalRamp": ["#2a2a2a", "#444444", "#666666", "#888888", "#aaaaaa", "#cccccc", "#e4e4e4", "#f7f7f7"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "首页主标题。只在第一屏使用。" },
+      "headline": { "displayName": "Headline", "purpose": "首页副题与页脚诗句。" },
+      "title": { "displayName": "Title", "purpose": "文章列表标题。" },
+      "body": { "displayName": "Body", "purpose": "文章与摘要。两端对齐。" },
+      "label": { "displayName": "Label", "purpose": "导航项。字距 0.1em。" }
+    },
+    "shadows": [
+      { "name": "code-sheet", "value": "0 4px 30px rgba(0, 0, 0, 0.15)", "purpose": "代码块，像搁在纸上的一张纸片。" },
+      { "name": "resume-sheet", "value": "0 0 10px 3px rgba(0, 0, 0, 0.2)", "purpose": "屏幕上的简历页。" },
+      { "name": "index-glass-blue", "value": "0 8px 32px rgba(91, 141, 239, 0.08)", "purpose": "仅首页终端卡片。" },
+      { "name": "index-glass-teal", "value": "0 8px 32px rgba(0, 201, 167, 0.06)", "purpose": "仅首页公式卡片。" }
+    ],
+    "motion": [
+      { "name": "ink-fade", "value": "200ms ease-out", "purpose": "导航、标签、田字格的颜色或透明度变化。" },
+      { "name": "seal", "value": "300ms ease-in", "purpose": "赞赏按钮。" },
+      { "name": "wall-enter", "value": "500ms ease-out", "purpose": "首页主标题进入。" }
+    ],
+    "breakpoints": [
+      { "name": "nav", "value": "1023px" },
+      { "name": "article", "value": "760px" },
+      { "name": "tight", "value": "415px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Nav link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "加粗文字导航，悬停只加深墨色。",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">随笔</a>",
+      "css": ".ds-nav-link { color: #555555; font-family: sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-decoration: none; } .ds-nav-link:hover { color: #222222; } .ds-nav-link:focus-visible { outline: 1px solid #333333; outline-offset: 4px; }"
+    },
+    {
+      "name": "Like button",
+      "kind": "button",
+      "refersTo": "like-button",
+      "description": "全站唯一的常驻按钮，朱红描边，没有填充。",
+      "html": "<button class=\"ds-like\" type=\"button\">喜欢作者</button>",
+      "css": ".ds-like { background: transparent; color: #ee4242; border: 1px solid #ee4242; border-radius: 10px; padding: 6px 30px; font-family: sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0.1em; line-height: 2em; cursor: pointer; filter: saturate(40%); transition: filter 300ms ease-in; } .ds-like:hover, .ds-like:focus-visible { filter: saturate(100%); outline: 1px solid #333333; outline-offset: 3px; }"
+    },
+    {
+      "name": "Post card",
+      "kind": "card",
+      "refersTo": "post-title",
+      "description": "直角、无阴影的文章条目。置顶时铺宣纸底。",
+      "html": "<article class=\"ds-post\"><a class=\"ds-post-title\" href=\"#\">GitHub 全局 Star 榜快照</a><p class=\"ds-post-excerpt\">2026-10-16 的全局累计 Star 快照。</p></article>",
+      "css": ".ds-post { background: transparent; border-radius: 0; padding: 20px; max-width: 900px; } .ds-post-title { color: #555555; font-family: sans-serif; font-size: 24px; font-weight: 700; line-height: 1.3; text-decoration: none; } .ds-post-title:hover { color: #222222; } .ds-post-title:focus-visible { outline: 1px solid #333333; outline-offset: 3px; } .ds-post-excerpt { color: #666666; font-family: sans-serif; font-size: 18px; font-weight: 400; line-height: 1.75; margin: 10px 0 0; } .ds-post.is-sticky { background: #fcfcfb; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "文章下的文字标签，没有底和边。",
+      "html": "<a class=\"ds-tag\" href=\"#\">#快照</a>",
+      "css": ".ds-tag { color: #2c5fa5; font-family: sans-serif; font-size: 16px; font-weight: 400; text-decoration: none; letter-spacing: normal; } .ds-tag:hover { color: #2472e7; } .ds-tag:focus-visible { outline: 1px solid #2c5fa5; outline-offset: 3px; }"
+    },
+    {
+      "name": "Footer",
+      "kind": "custom",
+      "refersTo": "footer",
+      "description": "浓墨封底，诗句用宋体落在封底灰上。",
+      "html": "<footer class=\"ds-foot\"><div class=\"ds-foot-poem\">长相知</div></footer>",
+      "css": ".ds-foot { background: #000000; color: #aaaaaa; padding: 40px 20px 10px; } .ds-foot-poem { font-family: sourceHanSerif, serif; font-size: 36px; font-weight: 700; line-height: 1.2; letter-spacing: normal; }"
+    },
+    {
+      "name": "Matts",
+      "kind": "custom",
+      "refersTo": "footer",
+      "description": "田字格里的一个字，悬停只降低透明度。",
+      "html": "<span class=\"ds-matts\"><svg viewBox=\"0 0 64 64\" aria-hidden=\"true\"><path d=\"M4 4h56v56H4z M32 4v56 M4 32h56\" fill=\"none\" stroke=\"#333333\" stroke-width=\"1\"/></svg>长</span>",
+      "css": ".ds-matts { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 48px; height: 48px; font-family: sourceHanSerif, serif; font-size: 24px; font-weight: 700; color: #aaaaaa; } .ds-matts svg { position: absolute; inset: 0; width: 100%; height: 100%; } .ds-matts:hover { opacity: 0.8; }"
+    },
+    {
+      "name": "Code sheet",
+      "kind": "custom",
+      "description": "搁在纸上的代码块，圆角 5px，有一片阴影。",
+      "html": "<pre class=\"ds-code\"><code>hexo server</code></pre>",
+      "css": ".ds-code { background: #f7f7f7; color: #555555; border-radius: 5px; padding: 16px; margin: 0; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); font-family: Consolas, Menlo, monospace; font-size: 15.75px; line-height: 1.6; }"
+    },
+    {
+      "name": "Index glass",
+      "kind": "card",
+      "description": "只用于首页的半透明卡片，不拿到别的页面。",
+      "html": "<div class=\"ds-glass\"><span class=\"ds-glass-tag\">Neural Network</span><div class=\"ds-glass-main\">σ(W·x + b)</div></div>",
+      "css": ".ds-glass { background: rgba(255, 255, 255, 0.72); border-radius: 10px; padding: 14px 20px; box-shadow: 0 8px 32px rgba(0, 201, 167, 0.06); max-width: 280px; } .ds-glass-tag { display: inline-block; color: #555555; font-family: sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; } .ds-glass-main { margin-top: 8px; font-family: Cambria, Georgia, serif; font-size: 32px; font-weight: 400; background: linear-gradient(135deg, #5b8def 0%, #00c9a7 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "宣纸档案",
+    "overview": "这套界面把个人笔记站做成一份能翻的档案，而不是产品首页。页面停在宣纸色上，层次靠墨色深浅和字距分开。页脚是一整块浓墨，诗句落在上面，像档案合上之后的封底。\n\n密度偏低。导航是一排加粗、字距拉开的文字，没有按钮底。文章在一条窄栏里自上而下排开，卡片默认贴在纸上。宋体只给需要被读成题辞的句子：首页描述、栏目说明、页脚诗句、赞赏旁的字。正文是无衬线，颜色是淡墨。\n\n控件克制，像印刷品。悬停只换墨色，不把界面变成可按的仪表。首页终端里的蓝和青绿只属于那一块。朱红只出现在赞赏上，像偶尔盖上的一枚印。",
+    "keyCharacteristics": [
+      "平贴的宣纸底，浓墨页脚",
+      "宋体题辞，无衬线正文",
+      "字距拉开的文字导航",
+      "阴影只留给搁在纸上的纸片",
+      "蓝绿留在首页，朱红只做赞赏"
+    ],
+    "rules": [
+      { "name": "The Ink Field Rule", "body": "大面积只允许纸色和浓墨。不要用蓝、青或红铺满一块区域。", "section": "colors" },
+      { "name": "The Local Signal Rule", "body": "`index-blue` 与 `index-teal` 不得离开首页那一块终端与公式。", "section": "colors" },
+      { "name": "The Seal Rule", "body": "`seal` 只用于赞赏按钮。", "section": "colors" },
+      { "name": "The Serif Ration Rule", "body": "sourceHanSerif 只用于题辞：首页描述、栏目说明、页脚诗句、赞赏旁的句子。正文、导航、文章标题保持无衬线。", "section": "typography" },
+      { "name": "The Single Column Rule", "body": "文章和列表走一条居中窄栏。不要为了填满 1200px 把正文排成多栏。", "section": "layout" },
+      { "name": "The Flat-By-Default Rule", "body": "文章卡片、导航、页脚在静止时没有阴影。投影不能变成通用的卡片样式。", "section": "elevation" },
+      { "name": "The Square Paper Rule", "body": "新的文章容器保持直角。10px 圆角只沿用在已经像「纸片」或「玻璃片」的控件上。", "section": "shapes" }
+    ],
+    "dos": [
+      "Do 让正文停在淡墨、18px 无衬线上，题辞才用 sourceHanSerif。",
+      "Do 用浓墨铺满页脚，页脚上的字用封底灰。",
+      "Do 让文章列表保持单栏、直角、无阴影；只有置顶卡片铺宣纸底。",
+      "Do 把 `index-blue` 和 `index-teal` 限制在首页终端与公式。",
+      "Do 把朱红限制在赞赏按钮。"
+    ],
+    "donts": [
+      "Don't 把站点做成 SaaS 后台、仪表盘或带侧边栏的应用壳。",
+      "Don't 把站点做成课程落地页或招生页。",
+      "Don't 用高饱和色块做营销头图。站名不是课程承诺。",
+      "Don't 给普通文章卡片加阴影或 10px 圆角。",
+      "Don't 把标签蓝或首页信号色当成全站主色去铺导航和按钮。"
+    ]
+  }
+}

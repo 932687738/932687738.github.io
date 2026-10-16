@@ -173,7 +173,223 @@
   margin: 40px 0;
 }
 
+.post-content ::selection {
+  background: $gainsboro;
+  color: $black-deep;
+}
+
+.post-content .post-title {
+  font-family: sourceHanSerif, serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  color: $black-deep;
+  text-wrap: balance;
+}
+
+.post-content .post-info {
+  color: $black-light;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.post-content__body {
+  overflow-x: auto;
+  scrollbar-color: $grey-light transparent;
+
+  p {
+    text-align: start;
+    max-width: 38em;
+    line-height: 1.8;
+    color: $black-dim;
+  }
+
+  p a {
+    color: $black-deep;
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+    text-decoration-thickness: 1px;
+    text-decoration-color: $grey-light;
+  }
+
+  p a:hover {
+    text-decoration-color: $black-deep;
+  }
+
+  table {
+    width: 100%;
+    min-width: 40rem;
+    margin: 28px 0 40px;
+    border-collapse: collapse;
+    background: $white-blue-lightest;
+    box-shadow: 0 12px 32px rgba(34, 34, 34, 0.07);
+    font-size: 15px;
+    line-height: 1.55;
+    font-variant-numeric: tabular-nums;
+    text-align: left;
+  }
+
+  tbody tr:nth-of-type(odd) {
+    background: transparent;
+  }
+
+  caption,
+  th,
+  td {
+    border: 0;
+    border-bottom: 1px solid $gainsboro;
+    padding: 16px 18px;
+    vertical-align: top;
+    background: transparent;
+  }
+
+  th {
+    padding-top: 18px;
+    padding-bottom: 12px;
+    border-bottom-color: $black-dim;
+    color: $black-dim;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    white-space: nowrap;
+  }
+
+  th[align="right"],
+  td[align="right"] {
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  td[align="right"] {
+    color: $black-deep;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  td:first-child {
+    width: 3em;
+    color: $black-light;
+    white-space: nowrap;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: 0;
+  }
+
+  tbody tr:hover td {
+    background: #fff;
+  }
+
+  td a {
+    color: $black-deep;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+    text-decoration-color: $grey;
+  }
+
+  td a:hover {
+    color: $black;
+    text-decoration-color: $black;
+  }
+
+  td code,
+  td a code {
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font-family: Consolas, Menlo, monospace;
+    font-size: 0.92em;
+    font-weight: 400;
+    letter-spacing: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  td small {
+    display: block;
+    margin-top: 6px;
+    color: $black-light;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.45;
+  }
+
+  a:focus-visible {
+    outline: 1px solid $black-dim;
+    outline-offset: 3px;
+  }
+}
+
+.post-content--rank .post-content__body {
+  > p:not(:last-of-type) {
+    max-width: none;
+    margin: 0;
+    background: $white-blue-lightest;
+    box-shadow: 0 12px 32px rgba(34, 34, 34, 0.07);
+    clip-path: inset(-48px -48px 0 -48px);
+  }
+
+  > p:first-of-type {
+    margin-top: 28px;
+    padding: 20px 18px 6px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: $black-dim;
+  }
+
+  > p:nth-of-type(2) {
+    padding: 0 18px 14px;
+    font-size: 13px;
+    line-height: 1.45;
+    letter-spacing: 0.01em;
+    color: $black-light;
+  }
+
+  > p:nth-of-type(2) a {
+    color: $black-light;
+    font-weight: 400;
+    text-decoration-color: $grey;
+    overflow-wrap: anywhere;
+  }
+
+  > table {
+    margin-top: 0;
+    margin-bottom: 0;
+    clip-path: inset(0 -48px -48px -48px);
+  }
+
+  > p:last-of-type {
+    margin-top: 28px;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+    clip-path: none;
+    max-width: 38em;
+    font-size: 15px;
+    line-height: 1.7;
+    color: $black-dim;
+  }
+}
+
 @media screen and (max-width: 760px) {
+  .post-content .post-title {
+    font-size: 32px;
+  }
+
+  .post-content__body {
+    th,
+    td {
+      padding: 12px 10px;
+    }
+  }
+
   .post-inner--toc {
     padding: 0;
 

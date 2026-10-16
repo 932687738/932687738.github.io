@@ -4,7 +4,7 @@
   {% if theme.gitalk.enable %}<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />{% endif %}
 {% endblock link %}
 {% block body %}
-  <article class="post-content">
+  <article class="post-content{% if page.categories and page.categories.length and page.categories.toArray()[0].name == 'GitHub' %} post-content--rank{% endif %}">
     <div class="post-inner{{ '--toc' if page.toc else '' }}">
       <div class="post-content__head">
         <div class="post-title">{{ page.title or "未命名" }}</div>

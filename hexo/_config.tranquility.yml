@@ -19,6 +19,11 @@ subpage: # 开启“子页”功能，详见 README
       title: 随笔 # 菜单名，如 开发者
       icon: /images/icon/icon-book.svg # 图标的路径
       description: # 描述
+    - name: GitHub
+      path: GitHub
+      title: GitHub
+      icon: /images/logo-github.svg
+      description: GitHub 开源与协作
     - name: Java # 文章的分类（category）名，如 developer
       path: # 若不设置则默认使用 name
       title: Java # 菜单名，如 开发者
@@ -226,6 +231,10 @@ timeline:
       color: "#ee936c"
       icon: /images/icon/icon-article.svg
       checked: true
+    - name: GitHub
+      color: "#222222"
+      icon: /images/logo-github.svg
+      checked: false
     - name: Java
       color: "#60a465"
       icon: /images/icon/icon-app.svg

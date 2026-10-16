@@ -1,0 +1,6 @@
+{
+  "files": ["hexo/themes/tranquility/layout/_partials/layout.njk"],
+  "insertBefore": "</body>",
+  "commentSyntax": "html",
+  "cspChecked": true
+}
