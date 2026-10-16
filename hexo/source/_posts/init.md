@@ -2,110 +2,154 @@
 title: 初始化自己的个人博客
 date: 2023-09-15 13:07:32
 categories: Jottings
-tags: init bolo
+tags:
+  - init
+  - bolo
 timeline: Jottings
 ---
-这里是我的第一篇文章，介绍如何使用github托管自己的个人博客网站;这里参考了两个不同的链接
-[First](http://www.taodudu.cc/news/show-3087055.html?action=onClick)是本地创建自己的HEXO个人博客
-[Second](https://zhuanlan.zhihu.com/p/60578464)是对第一个的补充操作，例如绑定GitHub,切换主题,使用自己的域名
-[Third](https://www.cnblogs.com/codehome/p/8428738.htmlhttps://www.jianshu.com/p/f72aaad7b852)是对第二个的补充操作，使用HEXO追加图片
+
+这里是我的第一篇文章，介绍如何用 GitHub 托管自己的 Hexo 博客。
 
 <!-- more -->
 
-## Quick Start
+下面三处资料分别补了本地建站、绑定 GitHub，以及在文章里放图片。第三处原文把两个地址粘在了一起，这里拆开。
 
-### Precondition
-**基础环境准备**
-1. 需要注册自己的GitHub账号
-2. 电脑安装必须的组件
+- [本地创建 Hexo 博客](http://www.taodudu.cc/news/show-3087055.html?action=onClick)
+- [绑定 GitHub、切换主题、使用自己的域名](https://zhuanlan.zhihu.com/p/60578464)
+- [在文章里追加图片](https://www.cnblogs.com/codehome/p/8428738.html)
+- [在文章里追加图片（另一篇）](https://www.jianshu.com/p/f72aaad7b852)
+
+## 开始
+
+### 准备
+
+**基础环境**
+
+1. 注册自己的 GitHub 账号
+2. 电脑上安装：
     - node
     - git
 
-### First Step
-1. **在github创建一个属于自己的仓库**
-    - 注意事项：
-        - 创建时repository的名字要与github的名字相同，否则可能出现找不到css文件的情况：**userName.github.io**
-<img src="/images/init/InitHexoStep1.png">
+### 第一步
+
+1. **在 GitHub 创建一个属于自己的仓库**
+    - 注意事项：仓库名必须和 GitHub 用户名相同，否则可能找不到 CSS。形式是 **userName.github.io**
+
+<img src="/images/init/InitHexoStep1.png" alt="创建 GitHub 仓库">
 
 ***
 
-<img src="/images/init/InitHexoStep2.png">
+<img src="/images/init/InitHexoStep2.png" alt="仓库名称与用户名一致">
 
-2. **通过setting中page将repository设置为github管理，然后等待部署完成就可以看到对应的页面啦**
-<img src="/images/init/InitHexoStep3.png">
+2. **在仓库的 Settings 里打开 GitHub Pages，等部署完成就可以看到页面**
 
-### Second Step
-1. **使用git将项目拉取到本地**
-    - 在本地创建一个目录：Github_blob
-    - 通过git命令将远程项目clone到本地
+<img src="/images/init/InitHexoStep3.png" alt="打开 GitHub Pages">
+
+### 第二步
+
+1. **用 git 把项目拉到本地**
+    - 在本地建一个目录，例如 Github_blob
+    - 把远程仓库 clone 下来
+
 ``` bash
 $ git clone https://github.com/932687738/932687738.github.io.git
 ```
+
 2. **初始化博客项目**
-    - 在git项目中新增一个目录(初始化HEXO时文件夹必须为空)：hexo
-    - 通过npm命令安装 hexo.cli并初始化Hexo项目
+    - 在仓库里新建一个目录。初始化 Hexo 时，这个文件夹必须是空的，例如 hexo
+    - 安装 hexo-cli，再初始化项目
+
 ``` bash
 $ npm install -g hexo-cli
-$ hexo init <替换为当前博客文件夹，例如上面创建的hexo目录的全路径>
-$ cd hexo # cd到刚刚我们初始化的目录下
-$ npm install # 安装组件
+$ hexo init <替换为当前博客文件夹，例如上面创建的 hexo 目录的全路径>
+$ cd hexo
+$ npm install
 ```
-3. **初始化后的目录层级结构**
-<img src="/images/init/InitHexoCatalogue.png">
 
-4. **修改配置文件：_config.yml**
+3. **初始化后的目录**
+
+```text
+hexo/
+├── _config.yml     # 网站的配置信息
+├── package.json    # 应用程序的信息
+├── scaffolds       # 模版文件夹
+├── source          # 存放用户资源，Markdown 文档
+│   ├── _drafts
+│   └── _posts
+├── themes          # 主题文件夹
+└── public          # 网站文件
+```
+
+4. **修改 `_config.yml`**
+
 ``` yml
 title: 你博客的标题
 subtitle: 显示在浏览器上搜索的时候显示的标题
 description: 描述
 author: 显示作者
 email: 邮箱
-language: zh-Hans    #语言
-timezone: Asia/Shanghai   #时区# URL
-url: https://username.github.io      #这个就是填写你的博客地址
+language: zh-Hans
+timezone: Asia/Shanghai
+url: https://username.github.io
 ```
+
 5. **本地启动**
-**Tips**：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。
+
+如果页面打不开，多半是端口被占用了。Ctrl+C 关掉服务器，再用 `hexo server -p 5000` 换一个端口。
+
 ``` bash
-hexo g   # 生成页面
-hexo s   # 启动预览
+hexo g
+hexo s
 ```
-### Third Step
-1. **安装hexo-deployer-git**
+
+### 第三步
+
+1. **安装 hexo-deployer-git**
+
 ``` bash
-$ npm install hexo-deployer-git --save # 自动化部署
+$ npm install hexo-deployer-git --save
 ```
-2. **修改 _config.yml 配置文件**
+
+2. **修改 `_config.yml`**
+
 ``` yml
 deploy:
   type: git
-  repository: https://github.com/932687738/932687738.github.io.git #自己的github仓库地址
-  branch: master # 要上传的分支名称,要与github->setting->page 中配置的部署分支一样
+  repository: https://github.com/932687738/932687738.github.io.git
+  branch: master
 ```
-3. **上传到GitHub**(等待几分钟后部署完成就可以看到自己的效果了)
+
+`branch` 要和 GitHub 仓库 Settings 里 Pages 使用的分支一致。
+
+3. **上传到 GitHub。** 等几分钟，部署完成就能看到效果。
+
 ``` bash
 $ hexo d
 ```
-### Forth Step
+
+### 第四步
+
 1. **追加图片**
-    - 把主页配置文件 **_config.yml** 里的 **post_asset_folder** 这个选项设置为true
-    - 手动生成文件，将图片放到文件同名文件夹下
+    - 把 `_config.yml` 里的 `post_asset_folder` 设为 true
+    - 生成文章后，把图片放到与文章同名的文件夹里
+
 ``` bash
-$ npm install hexo-asset-image --save # 安装图片的插件
-$ hexo n 文件名 # 生成文件前，通过该命令创建文件
+$ npm install hexo-asset-image --save
+$ hexo n 文件名
 ```
 
-### Fifth Step
-1. **查询主题**
-    - 访问[HEXO THEME](https://hexo.io/themes/)找到一个自己喜欢的主题
-    <img src="/images/init/InitHexoThemeTranquility.png">
+### 第五步
+
+1. **找一个主题**
+    - 打开 [Hexo 主题列表](https://hexo.io/themes/)，挑一个喜欢的
+
+<img src="/images/init/InitHexoThemeTranquility.png" alt="Tranquility 主题">
+
 2. **下载主题**
-    - 通过 **Visit preview site** 可以预览主题效果
-    - 通过 **Tranquility** 进入github下载
-3. **设置主题**
-    - 将主题下载到自己博客项目的 **themes** 目录下并起一个别名(也可以用原名)
-    - 修改 **_config.yml** 下的配置 **theme** 为上面哪个文件夹的名字
-    - 有的主题到上面这一步就结束了，有的主题需要按照github的教程进行操作
+    - 用 Visit preview site 可以先看效果
+    - 从 Tranquility 的 GitHub 仓库下载
 
-
-    
+3. **启用主题**
+    - 放到博客项目的 `themes` 目录，可以改名，也可以沿用原名
+    - 把 `_config.yml` 里的 `theme` 改成这个文件夹的名字
+    - 有的主题到这里就结束了，有的还要按它自己的说明再配一次
