@@ -74,6 +74,8 @@
             
               <a class="nav-menu-item" href="/Jottings">随笔</a>
             
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
               <a class="nav-menu-item" href="/Java">Java</a>
             
               <a class="nav-menu-item" href="/React">React</a>
@@ -121,11 +123,17 @@
             
               
             
+              
+            
           
           
   
     
-      <a href="/Jottings/tag/init-bolo/" class="post-tag">#init bolo</a>
+      <a href="/Jottings/tag/init/" class="post-tag">#init</a>
+    
+  
+    
+      <a href="/Jottings/tag/bolo/" class="post-tag">#bolo</a>
     
   
 
@@ -140,82 +148,120 @@
             
           </div>
         
-        <p>这里是我的第一篇文章，介绍如何使用github托管自己的个人博客网站;这里参考了两个不同的链接<br><a target="_blank" rel="noopener" href="http://www.taodudu.cc/news/show-3087055.html?action=onClick">First</a>是本地创建自己的HEXO个人博客<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464">Second</a>是对第一个的补充操作，例如绑定GitHub,切换主题,使用自己的域名<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/codehome/p/8428738.htmlhttps://www.jianshu.com/p/f72aaad7b852">Third</a>是对第二个的补充操作，使用HEXO追加图片</p>
+        <p>这里是我的第一篇文章，介绍如何用 GitHub 托管自己的 Hexo 博客。</p>
 <span id="more"></span>
 
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Precondition"><a href="#Precondition" class="headerlink" title="Precondition"></a>Precondition</h3><p><strong>基础环境准备</strong></p>
+<p>下面三处资料分别补了本地建站、绑定 GitHub，以及在文章里放图片。第三处原文把两个地址粘在了一起，这里拆开。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.taodudu.cc/news/show-3087055.html?action=onClick">本地创建 Hexo 博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464">绑定 GitHub、切换主题、使用自己的域名</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/codehome/p/8428738.html">在文章里追加图片</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f72aaad7b852">在文章里追加图片（另一篇）</a></li>
+</ul>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p><strong>基础环境</strong></p>
 <ol>
-<li>需要注册自己的GitHub账号</li>
-<li>电脑安装必须的组件<ul>
+<li>注册自己的 GitHub 账号</li>
+<li>电脑上安装：<ul>
 <li>node</li>
 <li>git</li>
 </ul>
 </li>
 </ol>
-<h3 id="First-Step"><a href="#First-Step" class="headerlink" title="First Step"></a>First Step</h3><ol>
-<li><strong>在github创建一个属于自己的仓库</strong><ul>
-<li>注意事项：<ul>
-<li>创建时repository的名字要与github的名字相同，否则可能出现找不到css文件的情况：<strong>userName.github.io</strong></li>
-</ul>
-</li>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><ol>
+<li><strong>在 GitHub 创建一个属于自己的仓库</strong><ul>
+<li>注意事项：仓库名必须和 GitHub 用户名相同，否则可能找不到 CSS。形式是 <strong>userName.github.io</strong></li>
 </ul>
 </li>
 </ol>
-<img src="/images/init/InitHexoStep1.png">
+<img src="/images/init/InitHexoStep1.png" alt="创建 GitHub 仓库">
 
 <hr>
-<img src="/images/init/InitHexoStep2.png">
+<img src="/images/init/InitHexoStep2.png" alt="仓库名称与用户名一致">
 
 <ol start="2">
-<li><strong>通过setting中page将repository设置为github管理，然后等待部署完成就可以看到对应的页面啦</strong><img src="/images/init/InitHexoStep3.png"></li>
+<li><strong>在仓库的 Settings 里打开 GitHub Pages，等部署完成就可以看到页面</strong></li>
 </ol>
-<h3 id="Second-Step"><a href="#Second-Step" class="headerlink" title="Second Step"></a>Second Step</h3><ol>
-<li><p><strong>使用git将项目拉取到本地</strong></p>
-<ul>
-<li>在本地创建一个目录：Github_blob</li>
-<li>通过git命令将远程项目clone到本地<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/932687738/932687738.github.io.git</span><br></pre></td></tr></table></figure></li>
+<img src="/images/init/InitHexoStep3.png" alt="打开 GitHub Pages">
+
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><ol>
+<li><strong>用 git 把项目拉到本地</strong><ul>
+<li>在本地建一个目录，例如 Github_blob</li>
+<li>把远程仓库 clone 下来</li>
 </ul>
 </li>
-<li><p><strong>初始化博客项目</strong></p>
-<ul>
-<li>在git项目中新增一个目录(初始化HEXO时文件夹必须为空)：hexo</li>
-<li>通过npm命令安装 hexo.cli并初始化Hexo项目<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init &lt;替换为当前博客文件夹，例如上面创建的hexo目录的全路径&gt;</span><br><span class="line">$ <span class="built_in">cd</span> hexo <span class="comment"># cd到刚刚我们初始化的目录下</span></span><br><span class="line">$ npm install <span class="comment"># 安装组件</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/932687738/932687738.github.io.git</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>初始化博客项目</strong><ul>
+<li>在仓库里新建一个目录。初始化 Hexo 时，这个文件夹必须是空的，例如 hexo</li>
+<li>安装 hexo-cli，再初始化项目</li>
 </ul>
 </li>
-<li><p><strong>初始化后的目录层级结构</strong></p>
-<img src="/images/init/InitHexoCatalogue.png">
-</li>
-<li><p><strong>修改配置文件：_config.yml</strong></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">你博客的标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">显示在浏览器上搜索的时候显示的标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">描述</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">显示作者</span></span><br><span class="line"><span class="attr">email:</span> <span class="string">邮箱</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span>    <span class="comment">#语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span>   <span class="comment">#时区# URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://username.github.io</span>      <span class="comment">#这个就是填写你的博客地址</span></span><br></pre></td></tr></table></figure></li>
-<li><p><strong>本地启动</strong><br><strong>Tips</strong>：如果出现页面加载不出来，可能是端口被占用了。Ctrl+C 关闭服务器，运行 hexo server -p 5000 更改端口号后重试。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g   <span class="comment"># 生成页面</span></span><br><span class="line">hexo s   <span class="comment"># 启动预览</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h3 id="Third-Step"><a href="#Third-Step" class="headerlink" title="Third Step"></a>Third Step</h3><ol>
-<li><strong>安装hexo-deployer-git</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save <span class="comment"># 自动化部署</span></span><br></pre></td></tr></table></figure></li>
-<li><strong>修改 _config.yml 配置文件</strong><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/932687738/932687738.github.io.git</span> <span class="comment">#自己的github仓库地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span> <span class="comment"># 要上传的分支名称,要与github-&gt;setting-&gt;page 中配置的部署分支一样</span></span><br></pre></td></tr></table></figure></li>
-<li><strong>上传到GitHub</strong>(等待几分钟后部署完成就可以看到自己的效果了)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init &lt;替换为当前博客文件夹，例如上面创建的 hexo 目录的全路径&gt;</span><br><span class="line">$ <span class="built_in">cd</span> hexo</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>初始化后的目录</strong></li>
 </ol>
-<h3 id="Forth-Step"><a href="#Forth-Step" class="headerlink" title="Forth Step"></a>Forth Step</h3><ol>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo/</span><br><span class="line">├── _config.yml     # 网站的配置信息</span><br><span class="line">├── package.json    # 应用程序的信息</span><br><span class="line">├── scaffolds       # 模版文件夹</span><br><span class="line">├── source          # 存放用户资源，Markdown 文档</span><br><span class="line">│   ├── _drafts</span><br><span class="line">│   └── _posts</span><br><span class="line">├── themes          # 主题文件夹</span><br><span class="line">└── public          # 网站文件</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong>修改 <code>_config.yml</code></strong></li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">你博客的标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">显示在浏览器上搜索的时候显示的标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">描述</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">显示作者</span></span><br><span class="line"><span class="attr">email:</span> <span class="string">邮箱</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://username.github.io</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><strong>本地启动</strong></li>
+</ol>
+<p>如果页面打不开，多半是端口被占用了。Ctrl+C 关掉服务器，再用 <code>hexo server -p 5000</code> 换一个端口。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><ol>
+<li><strong>安装 hexo-deployer-git</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>修改 <code>_config.yml</code></strong></li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/932687738/932687738.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<p><code>branch</code> 要和 GitHub 仓库 Settings 里 Pages 使用的分支一致。</p>
+<ol start="3">
+<li><strong>上传到 GitHub。</strong> 等几分钟，部署完成就能看到效果。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><ol>
 <li><strong>追加图片</strong><ul>
-<li>把主页配置文件 <strong>_config.yml</strong> 里的 <strong>post_asset_folder</strong> 这个选项设置为true</li>
-<li>手动生成文件，将图片放到文件同名文件夹下<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-asset-image --save <span class="comment"># 安装图片的插件</span></span><br><span class="line">$ hexo n 文件名 <span class="comment"># 生成文件前，通过该命令创建文件</span></span><br></pre></td></tr></table></figure></li>
+<li>把 <code>_config.yml</code> 里的 <code>post_asset_folder</code> 设为 true</li>
+<li>生成文章后，把图片放到与文章同名的文件夹里</li>
 </ul>
 </li>
 </ol>
-<h3 id="Fifth-Step"><a href="#Fifth-Step" class="headerlink" title="Fifth Step"></a>Fifth Step</h3><ol>
-<li><strong>查询主题</strong><ul>
-<li>访问<a target="_blank" rel="noopener" href="https://hexo.io/themes/">HEXO THEME</a>找到一个自己喜欢的主题 <img src="/images/init/InitHexoThemeTranquility.png"></li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-asset-image --save</span><br><span class="line">$ hexo n 文件名</span><br></pre></td></tr></table></figure>
+
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><ol>
+<li><strong>找一个主题</strong><ul>
+<li>打开 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo 主题列表</a>，挑一个喜欢的</li>
 </ul>
 </li>
-<li><strong>下载主题</strong><ul>
-<li>通过 <strong>Visit preview site</strong> 可以预览主题效果</li>
-<li>通过 <strong>Tranquility</strong> 进入github下载</li>
+</ol>
+<img src="/images/init/InitHexoThemeTranquility.png" alt="Tranquility 主题">
+
+<ol start="2">
+<li><p><strong>下载主题</strong></p>
+<ul>
+<li>用 Visit preview site 可以先看效果</li>
+<li>从 Tranquility 的 GitHub 仓库下载</li>
 </ul>
 </li>
-<li><strong>设置主题</strong><ul>
-<li>将主题下载到自己博客项目的 <strong>themes</strong> 目录下并起一个别名(也可以用原名)</li>
-<li>修改 <strong>_config.yml</strong> 下的配置 <strong>theme</strong> 为上面哪个文件夹的名字</li>
-<li>有的主题到上面这一步就结束了，有的主题需要按照github的教程进行操作</li>
+<li><p><strong>启用主题</strong></p>
+<ul>
+<li>放到博客项目的 <code>themes</code> 目录，可以改名，也可以沿用原名</li>
+<li>把 <code>_config.yml</code> 里的 <code>theme</code> 改成这个文件夹的名字</li>
+<li>有的主题到这里就结束了，有的还要按它自己的说明再配一次</li>
 </ul>
 </li>
 </ol>
