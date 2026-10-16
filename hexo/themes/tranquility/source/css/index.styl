@@ -21,6 +21,7 @@ for item in hexo-config('timeline.items') {
 .wall.wall-index {
   max-width: none;
   width: 100%;
+  overflow: visible;
   background: $white-blue-lightest;
   user-select: text;
   -webkit-user-select: text;
@@ -32,7 +33,8 @@ for item in hexo-config('timeline.items') {
 }
 
 .wall-sheet {
-  width: min(100%, 38em);
+  width: 100%;
+  max-width: 38em;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
@@ -75,7 +77,10 @@ for item in hexo-config('timeline.items') {
 }
 
 .wall-sign {
-  margin: 40px 0 0;
+  margin: 28px 0 0;
+  font-size: 0;
+  line-height: 0;
+  text-align: center;
 }
 
 .wall-sign img {
@@ -84,6 +89,7 @@ for item in hexo-config('timeline.items') {
   max-width: 100%;
   height: auto;
   margin: 0 auto;
+  background: transparent;
 }
 
 .about {
