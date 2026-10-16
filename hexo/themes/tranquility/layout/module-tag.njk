@@ -3,6 +3,7 @@
   <link rel="stylesheet" type="text/css" href="{{ url_for("/css/category.css") }}" />
 {% endblock link %}
 {% block body %}
+  <div class="module-tag-page">
   <div class="wall wall-category wall-category--plain">
     <div class="wall-main">
       <div class="wall-category-title">
@@ -20,5 +21,6 @@
     {% else %}
       {{ partial("_partials/macros/post-list.njk", {posts: page.posts}) }}
     {% endif %}
+  </div>
   </div>
 {% endblock body %}

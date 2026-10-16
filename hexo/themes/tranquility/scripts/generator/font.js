@@ -59,7 +59,7 @@ function getSubText(hexo) {
     .concat(config.subpage.pages.map(p => p.description))
     .concat(hexo.locals.get('tags').map(tag => tag.name))
     .concat(config.index.about.text)
-    .concat(config.index.poem)
+    .concat(config.index.poem || [])
     .concat(config.foot.title);
 
   if (config.cv) text = text.concat(getObjValues(config.cv));

@@ -134,9 +134,6 @@ cv:
 
 index: # 配置首页个性化内容
   motto: "智能涌现 连接未来"
-  poem:
-    - 神经网络层叠深
-    - 算法迭代见真章
   photo: /images/about.jpg
   about:
     title: 断言
