@@ -433,6 +433,7 @@
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.45;
+  white-space: nowrap;
 }
 .post-content__body a:focus-visible {
   outline: 1px solid #333;
