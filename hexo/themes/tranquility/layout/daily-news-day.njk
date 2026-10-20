@@ -1,0 +1,22 @@
+{% extends "_partials/layout.njk" %}
+{% block link %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for("/css/post.css") }}" />
+{% endblock link %}
+{% block body %}
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">{{ page.title }}</div>
+        <div class="post-info">
+          <a class="post-tag" href="{{ url_for('/Daily-News/') }}">每日新闻</a>
+          <a class="post-tag" href="{{ url_for('/Daily-News/' + page.source + '/') }}">{{ page.sourceTitle }}</a>
+          <a class="post-tag" href="{{ url_for(page.monthUrl) }}">{{ page.monthLabel }}</a>
+          <span class="post-date">{{ page.dateLabel }}</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        {{ page.content | safe }}
+      </div>
+    </div>
+  </article>
+{% endblock body %}

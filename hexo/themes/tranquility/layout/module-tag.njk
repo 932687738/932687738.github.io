@@ -11,7 +11,7 @@
              style="background-image: url({{ url_for(page.icon) }})"></div>
         <a class="module-tag-back" href="{{ url_for(page.module_path or page.path or page.name) }}">{{ page.title or page.name }}</a>
         <span class="module-tag-sep">/</span>
-        <span>#{{ page.tag }}</span>
+        <span>{{ page.tag }}</span>
       </div>
     </div>
   </div>

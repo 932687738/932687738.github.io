@@ -66,7 +66,7 @@ function renderTagcloud(tags, options, categoryPath) {
     const size = min + ((max - min) * ratio);
     const style = `font-size: ${parseFloat(size.toFixed(2))}${unit};`;
     const attr = className ? ` class="${className}-${Math.round(ratio * level)}"` : '';
-    const label = `#${tag.name}`;
+    const label = tag.name;
     const href = categoryPath ? moduleTagHref.call(this, categoryPath, tag) : null;
     if (href) {
       result.push(`<a href="${href}" style="${style}"${attr}>${label}</a>`);

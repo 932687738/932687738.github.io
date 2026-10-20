@@ -1,4 +1,5 @@
 require("./generator/subpage")(hexo);
+require("./generator/daily-news")(hexo);
 require("./generator/module-tag")(hexo);
 require("./generator/font")(hexo);
 require("./generator/cv")(hexo);

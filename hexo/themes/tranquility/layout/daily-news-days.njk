@@ -1,0 +1,32 @@
+{% extends "_partials/layout.njk" %}
+{% block link %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for("/css/category.css") }}" />
+{% endblock link %}
+{% block body %}
+  <div class="module-tag-page">
+    <div class="wall wall-category wall-category--plain">
+      <div class="wall-main">
+        <div class="wall-category-title">
+          <div class="title-icon" style="background-image: url({{ url_for(page.icon) }})"></div>
+          <a class="module-tag-back" href="{{ url_for('/Daily-News/') }}">每日新闻</a>
+          <span class="module-tag-sep">/</span>
+          <a class="module-tag-back" href="{{ url_for('/Daily-News/' + page.source + '/') }}">{{ page.sourceTitle }}</a>
+          <span class="module-tag-sep">/</span>
+          <span>{{ page.monthLabel }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="daily-news-list">
+      {% if not page.days or not page.days.length %}
+        <p>该月暂无日期。</p>
+      {% else %}
+        {% for day in page.days %}
+          <a class="daily-news-day" href="{{ url_for(day.url) }}">
+            <span class="daily-news-date">{{ day.date }}</span>
+            {% if day.brief %}<span class="daily-news-brief">{{ day.brief }}</span>{% endif %}
+          </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock body %}

@@ -1,0 +1,46 @@
+{% extends "_partials/layout.njk" %}
+{% block link %}
+  <link rel="stylesheet" type="text/css" href="{{ url_for("/css/category.css") }}" />
+{% endblock link %}
+{% block body %}
+  <div class="wall wall-category">
+    <div class="wall-main">
+      <div class="wall-category-title">
+        <div class="title-icon"
+             style="background-image: url({{ url_for(page.icon) }})"></div>
+        {{ page.title }}
+      </div>
+      {% if page.sources and page.sources.length %}
+      <div class="wall-category-tags">
+        <div id="tags-outer"><canvas width="500" height="500" id="tagCanvas">{% for source in page.sources %}<a href="{{ url_for(source.url) }}" style="font-size: {{ source.fontSize }}px;">{{ source.title }}</a> {% endfor %}<canvas></div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock body %}
+{% block script %}
+  {% if page.sources and page.sources.length %}
+    <script type="text/javascript"
+            charset="utf-8"
+            src="{{ url_for('/js/tagcanvas.min.js') }}"></script>
+    <script type="text/javascript">
+        window.onload = function() {
+            try {
+                TagCanvas.Start('tagCanvas', '', {
+                    outlineThickness: 1,
+                    maxSpeed: 0.03,
+                    textColour: null,
+                    outlineColour: "#aaa",
+                    weight: true,
+                    padding: 4,
+                    fadIn: 200,
+                    wheelZoom: false,
+                    initial: [0.1, -0.03]
+                });
+            } catch (e) {
+                document.getElementById('tags-outer').style.display = 'none';
+            }
+        };
+    </script>
+  {% endif %}
+{% endblock script %}

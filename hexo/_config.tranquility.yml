@@ -19,6 +19,12 @@ subpage: # 开启“子页”功能，详见 README
       title: 随笔 # 菜单名，如 开发者
       icon: /images/icon/icon-book.svg # 图标的路径
       description: # 描述
+    - name: DailyNews
+      path: Daily-News
+      title: 每日新闻
+      icon: /images/icon/icon-book.svg
+      description: AI 日报、掘金热榜与知识库
+      dailyNews: true
     - name: GitHub
       path: GitHub
       title: GitHub

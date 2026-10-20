@@ -51,6 +51,9 @@ function subpage_generator(locals) {
   const orderBy = config.subpage_generator.order_by || '-date';
 
   return ctx.theme.config.subpage.pages.reduce((result, page) => {
+    if (page.dailyNews) {
+      return result;
+    }
     const category = locals.categories.findOne({ name: page.name });
     let path = page.path || page.name;
     path = path.endsWith('/') ? path : path + '/';
