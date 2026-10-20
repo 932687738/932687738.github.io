@@ -44,6 +44,19 @@ npm run clean
 npm run server
 ```
 
+## 每日新闻拉取
+
+在本仓库对话里说「拉取」「拉取日报」「拉取AI新闻」「拉取知识库」或「拉取掘金热榜」（不是 Git `pull`）时，按 `.cursor/rules/dual-digest-on-pull.mdc` 写入本仓库：
+
+| 内容 | 路径 |
+|------|------|
+| AI 日报 | `hexo/daily-news/ai-daily-news/` |
+| 知识库摘要 | `hexo/daily-news/knowledge-base-news/` |
+| 掘金热榜 | `hexo/daily-news/juejin-hot-news/` |
+| GitHub 榜单文章 | `hexo/source/_posts/github/` |
+
+写入结束后会提交并推送源码，再在 `hexo/` 执行 `npm run deploy` 发布到线上。学习仓库 `ai_for_learing/dailyReport/` 不再接收新内容。
+
 ## 常用命令
 
 在 `hexo/` 目录下执行：

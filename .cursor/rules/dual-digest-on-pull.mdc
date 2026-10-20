@@ -1,0 +1,34 @@
+---
+description: 用户说「拉取」时在本仓库执行 AI 日报、知识库摘要与掘金热榜，完成后推送并发布
+alwaysApply: true
+---
+
+# 三 Digest：「拉取」统一触发
+
+当用户在本仓库中的消息**主要意图**是拉取/更新**日报类汇总**（例如：`拉取`、`拉取一下`、`帮我拉取`、`拉取日报`、`拉取 AI 和知识库` 等），且**不是** Git / 版本控制场景（未以 `git pull`、合并远程分支、`remote`/`rebase` 等为主意图）时：
+
+1. **必须先 Read** 以下三个文件全文，并**严格按其步骤执行**（不得只执行其中一部分）：
+   - `.cursor/skills/ai-daily-digest/SKILL.md`
+   - `.cursor/skills/knowledge-base-digest/SKILL.md`
+   - `.cursor/skills/juejin-hot-digest/SKILL.md`
+2. **同一轮对话内顺序完成三件事**：完成 **AI Daily News Digest**（`ai-daily-digest`）规定流程 → 再完成 **Knowledge Base Digest**（`knowledge-base-digest`）规定流程 → 再完成 **Juejin Hot Digest**（`juejin-hot-digest`）规定流程（若检索量大，可先并行收集再分三节写入；掘金热榜必须以 `python tools/juejin_hot_fetch.py` 抓取列表与正文后再归纳）。
+3. **日期与 force**：用户未写明 `force=true`、也未带 `1`/`2`/具体日时，三个 skill 都要求先选方式——**只向用户提问一次**：「请选择拉取方式：1 增量 … 2 指定 YYYY-MM-DD …（可选 force=true）」；用户回复后 **三个 skill 共用同一选择**（同一 `force`、同一增量区间或同一指定日）。对掘金热榜：方式 `1`/`2`/`force` 的语义以 `juejin-hot-digest` SKILL 为准（快照日/章节日 + `seen_urls` 去重），不得另开一套日期问答。
+4. **写入位置**都在本仓库，不要再写学习仓库 `ai_for_learing/dailyReport/`：
+   - AI 日报：`hexo/daily-news/ai-daily-news/YYYYMM.md`、滚动入口 `hexo/daily-news/ai-daily-news/ai-daily-digest.md`、`ai-daily-state.json`
+   - 知识库：`hexo/daily-news/knowledge-base-news/YYYYMM.md`、滚动入口 `knowledge-base-digest.md`、`knowledge-base-state.json`；GitHub 榜单由 `python tools/update_github_topz.py` 写入 `hexo/source/_posts/github/` 的 `stars-snapshot.md`、`trending-daily.md`、`trending-weekly.md`、`trending-monthly.md`
+   - 掘金热榜：`hexo/daily-news/juejin-hot-news/YYYYMM.md`、滚动入口 `juejin-hot-digest.md`、`juejin-hot-state.json`
+5. **收尾说明**须分别交代三路的处理日期、写入路径，以及掘金本轮列表条数、新 URL 数、跳过已见数、详情失败数。
+6. 若用户**仅**在搞 Git（例如明确 `git pull`、同步分支），**忽略**本条，不按 digest 流程执行。
+7. 若用户**明确只拉其中一路**（例如仅 `拉取AI新闻`、仅 `拉取知识库`、仅 `拉取掘金热榜`），则只执行对应单个 skill，**不要**因本条强行跑满三路。
+
+## 拉取后发布
+
+三路都写完，或用户只拉的那一路写完之后，**立刻**把本仓库推送并发布，不要再询问：
+
+1. 在仓库根目录查看 `git status`、`git diff`、`git log -5 --oneline`。
+2. 只暂存本次日报、状态文件、滚动入口和 GitHub 四篇文章。不要暂存密钥、`_staging_latest.json`。
+3. 没有改动就不提交。
+4. 有改动则提交，信息使用 `docs(daily-news): 更新 YYYY-MM-DD 日报`（日期取本次实际处理日；多日时写区间）。
+5. `git push origin HEAD`。
+6. 在 `hexo/` 执行 `npm run deploy`，把静态站推到 `master`。
+7. 向用户说明源码提交和 `master` 发布区间。发布失败时说明原因，不要假装已经上线。
