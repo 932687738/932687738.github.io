@@ -55,7 +55,7 @@ function compress(text, params) {
 function getSubText(hexo) {
   const config = hexo.theme.config;
 
-  let text = [config.slogan, config.index.about.title]
+  let text = [hexo.config.title, hexo.config.subtitle, config.slogan, config.index.about.title]
     .concat(config.subpage.pages.map(p => p.description))
     .concat(hexo.locals.get('tags').map(tag => tag.name))
     .concat(config.index.about.text)

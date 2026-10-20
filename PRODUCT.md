@@ -18,7 +18,7 @@ web
 
 ## Positioning
 
-站名是「YXY的私教课」，但这不是辅导班或课程目录。它是作者自己的栏目化档案（随笔、GitHub、Java、React、Vue、AI、Spring Alibaba AI、Code Graph）加上简历。换一个博客模板复制不了这些笔记和这份履历。
+站名是「烟火与诗」。它是作者自己的栏目化档案（随笔、GitHub、Java、React、Vue、AI、Spring Alibaba AI、Code Graph）加上简历。换一个博客模板复制不了这些笔记和这份履历。
 
 ## Operating Context
 
@@ -38,7 +38,7 @@ web
 
 ## Brand Commitments
 
-- 站名：YXY的私教课。作者名：yxy。
+- 站名：烟火与诗。作者名：yxy。
 - 已发布文案保持为内容事实：副标题「生活与工作并重」，描述「生命不息，运动不止」，slogan「古柯」，首页 motto「智能涌现 连接未来」，以及首页「断言」一节的诗句。
 - 简历事实以 `hexo/_config.tranquility.yml` 的 `cv` 为准：后端开发；2024 应届硕士；Java、Vue、React；2015.9–2019.6 青岛大学软件工程学士；邮箱 932687738@qq.com；GitHub 用户 932687738；电话 17865425326。
 - Tranquility 的现有外观是当前实现，不是必须守住的视觉系统。
