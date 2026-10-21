@@ -7,7 +7,7 @@
     "build:landscape": "node tools/use-theme.js landscape && hexo generate",
     "build:tranquility": "node tools/use-theme.js tranquility && hexo generate",
     "clean": "hexo clean",
-    "deploy": "hexo deploy",
+    "deploy": "hexo deploy --generate",
     "server": "hexo server",
     "server:landscape": "node tools/use-theme.js landscape && hexo clean && hexo server",
     "server:tranquility": "node tools/use-theme.js tranquility && hexo clean && hexo server",
