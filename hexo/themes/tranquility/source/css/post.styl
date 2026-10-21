@@ -9,7 +9,7 @@
 
 .post-inner {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: $max-width;
 
   &--toc {
     @extend .post-inner;
@@ -126,7 +126,7 @@
 }
 
 .post__foot {
-  max-width: 900px;
+  max-width: $max-width;
   margin: 100px auto;
 }
 
@@ -200,9 +200,17 @@
 
   p {
     text-align: start;
-    max-width: 38em;
-    line-height: 1.8;
+    max-width: none;
+    margin: 0 0 1.15em;
+    line-height: 1.9;
     color: $black-dim;
+  }
+
+  p.story-close {
+    margin: 2.6em 0 0.2em;
+    text-align: center;
+    letter-spacing: 0.28em;
+    color: $black-light;
   }
 
   p a {
@@ -218,8 +226,10 @@
   }
 
   h2 {
-    max-width: 38em;
-    margin: 48px 0 16px;
+    max-width: none;
+    margin: 64px 0 16px;
+    padding-top: 24px;
+    border-top: 1px solid $gainsboro;
     font-family: sourceHanSerif, serif;
     font-size: 28px;
     font-weight: 700;
@@ -229,28 +239,34 @@
     text-wrap: balance;
   }
 
+  h2:first-child {
+    margin-top: 8px;
+    padding-top: 0;
+    border-top: 0;
+  }
+
   h3 {
-    max-width: 38em;
-    margin: 36px 0 12px;
+    max-width: none;
+    margin: 36px 0 10px;
     font-family: sans-serif;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.4;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.02em;
     color: $black-deep;
   }
 
   ul,
   ol {
-    max-width: 38em;
-    margin: 0 0 16px;
-    padding-left: 1.4em;
+    max-width: none;
+    margin: 0 0 1.15em;
+    padding-left: 1.25em;
     color: $black-dim;
-    line-height: 1.7;
+    line-height: 1.85;
   }
 
   li {
-    margin: 8px 0;
+    margin: 0 0 0.85em;
   }
 
   li > ul,
@@ -267,7 +283,7 @@
     border: 0;
     border-top: 1px solid $gainsboro;
     margin: 28px 0;
-    max-width: 38em;
+    max-width: none;
   }
 
   img {
@@ -546,7 +562,7 @@
     background: transparent;
     box-shadow: none;
     clip-path: none;
-    max-width: 38em;
+    max-width: none;
     font-size: 15px;
     line-height: 1.7;
     color: $black-dim;

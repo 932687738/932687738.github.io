@@ -57,7 +57,10 @@ function getSubText(hexo) {
 
   let text = [hexo.config.title, hexo.config.subtitle, config.slogan, config.index.about.title]
     .concat(config.subpage.pages.map(p => p.description))
+    .concat(config.subpage.pages.map(p => p.title))
     .concat(hexo.locals.get('tags').map(tag => tag.name))
+    .concat(hexo.locals.get('posts').map(post => post.title))
+    .concat(['概念解释', '隐喻对应'])
     .concat(config.index.about.text)
     .concat(config.index.poem || [])
     .concat(config.foot.title);

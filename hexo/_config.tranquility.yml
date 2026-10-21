@@ -18,6 +18,11 @@ subpage: # 开启“子页”功能，详见 README
       title: 随笔 # 菜单名，如 开发者
       icon: /images/icon/icon-book.svg # 图标的路径
       description: # 描述
+    - name: Stories
+      path: Stories
+      title: 故事
+      icon: /images/icon/icon-book.svg
+      description: 用寓言理解智能、认知与复杂系统
     - name: DailyNews
       path: Daily-News
       title: 每日新闻
@@ -223,6 +228,10 @@ timeline:
       color: "#ee936c"
       icon: /images/icon/icon-article.svg
       checked: true
+    - name: Stories
+      color: "#a67c52"
+      icon: /images/icon/icon-book.svg
+      checked: false
     - name: GitHub
       color: "#222222"
       icon: /images/logo-github.svg
