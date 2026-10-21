@@ -152,6 +152,7 @@
 }
 .radio-skin,
 .radio-skin--Jottings,
+.radio-skin--Stories,
 .radio-skin--GitHub,
 .radio-skin--Java,
 .radio-skin--React,
@@ -167,6 +168,7 @@
 }
 .radio-skin::after,
 .radio-skin--Jottings::after,
+.radio-skin--Stories::after,
 .radio-skin--GitHub::after,
 .radio-skin--Java::after,
 .radio-skin--React::after,
@@ -205,6 +207,29 @@
 .timeline-item-Jottings .line-date-tag,
 .timeline-item-Jottings--hidden .line-date-tag {
   background-color: #ee936c;
+}
+/*
+  .timeline-item-app, .timeline-item-event {
+    font-weight: bold;
+  }
+  */
+.radio-skin--Stories::after {
+  border-color: #a67c52;
+}
+#radio-Stories:checked+.radio-skin--Stories {
+  background-color: #a67c52;
+}
+#radio-Stories:checked+.radio-skin--Stories::after {
+  background-color: #a67c52;
+  top: -2px;
+}
+.timeline-item-Stories .line-anchor::after,
+.timeline-item-Stories--hidden .line-anchor::after {
+  background-color: #a67c52;
+}
+.timeline-item-Stories .line-date-tag,
+.timeline-item-Stories--hidden .line-date-tag {
+  background-color: #a67c52;
 }
 /*
   .timeline-item-app, .timeline-item-event {
