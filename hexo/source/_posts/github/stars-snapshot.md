@@ -1,6 +1,6 @@
 ---
 title: GitHub 全局 Star 榜快照
-date: 2026-10-21 09:27:09
+date: 2026-10-21 09:46:54
 categories: GitHub
 tags:
   - 快照
@@ -12,21 +12,21 @@ timeline: GitHub
 
 <!-- more -->
 
-最近一次更新时间（Asia/Shanghai）：2026-10-21 09:33:09。
+最近一次更新时间（Asia/Shanghai）：2026-10-21 09:52:54。
 
 | 序号 | 仓库 | Stars | 简介 |
 | ---: | --- | ---: | --- |
-| 1 | [`codecrafters-io/build-your-own-x`](https://github.com/codecrafters-io/build-your-own-x) | 554863 | 通过从零重写各类代表性技术来学习编程与设计，加深对底层原理的理解。 |
-| 2 | [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | 521960 | 围绕多种主题整理的「Awesome」精品清单合集。 |
-| 3 | [`public-apis/public-apis`](https://github.com/public-apis/public-apis) | 490887 | 免费可用的公共 API 资源汇总清单。 |
-| 4 | [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | 457589 | freeCodeCamp 官网开源代码与学习课程：可免费学习编程、数学与计算机科学。 |
-| 5 | [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | 399684 | 可免费获取的编程与计算机类书籍书单汇总。 |
-| 6 | [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | 392686 | 可在多系统运行的个人 AI 助手（吉祥物为龙虾图标）。 |
-| 7 | [`donnemartin/system-design-primer`](https://github.com/donnemartin/system-design-primer) | 374931 | 大厂级系统设计学习与面试备战材料（含 Anki 卡片范例）。 |
+| 1 | [`codecrafters-io/build-your-own-x`](https://github.com/codecrafters-io/build-your-own-x) | 554867 | 通过从零重写各类代表性技术来学习编程与设计，加深对底层原理的理解。 |
+| 2 | [`sindresorhus/awesome`](https://github.com/sindresorhus/awesome) | 521961 | 围绕多种主题整理的「Awesome」精品清单合集。 |
+| 3 | [`public-apis/public-apis`](https://github.com/public-apis/public-apis) | 490889 | 免费可用的公共 API 资源汇总清单。 |
+| 4 | [`freeCodeCamp/freeCodeCamp`](https://github.com/freeCodeCamp/freeCodeCamp) | 457590 | freeCodeCamp 官网开源代码与学习课程：可免费学习编程、数学与计算机科学。 |
+| 5 | [`EbookFoundation/free-programming-books`](https://github.com/EbookFoundation/free-programming-books) | 399685 | 可免费获取的编程与计算机类书籍书单汇总。 |
+| 6 | [`openclaw/openclaw`](https://github.com/openclaw/openclaw) | 392688 | 可在多系统运行的个人 AI 助手（吉祥物为龙虾图标）。 |
+| 7 | [`donnemartin/system-design-primer`](https://github.com/donnemartin/system-design-primer) | 374932 | 大厂级系统设计学习与面试备战材料（含 Anki 卡片范例）。 |
 | 8 | [`nilbuild/developer-roadmap`](https://github.com/nilbuild/developer-roadmap) | 369992 | 交互式开发者路线图、入门与进阶教程等学习资料合集。 |
 | 9 | [`jwasham/coding-interview-university`](https://github.com/jwasham/coding-interview-university) | 363175 | 面向软件工程师岗位的系统化计算机科学与面试自学路线图。 |
 | 10 | [`re4/LibreCode`](https://github.com/re4/LibreCode) | 361048 | 类似 Cursor 的本地编码助手，可对接 Ollama。 |
-| 11 | [`morluto/rea`](https://github.com/morluto/rea) | 348330 | 使用代理对任何内容进行反向工程，从应用行为到本机二进制文件。 |
+| 11 | [`morluto/rea`](https://github.com/morluto/rea) | 348491 | 使用代理对任何内容进行反向工程，从应用行为到本机二进制文件。 |
 | 12 | [`vinta/awesome-python`](https://github.com/vinta/awesome-python) | 328498 | 带选型倾向的 Python 框架、库、工具与学习资源。 |
 | 13 | [`awesome-selfhosted/awesome-selfhosted`](https://github.com/awesome-selfhosted/awesome-selfhosted) | 326814 | 可自行部署的自由软件网络服务与 Web 应用清单。 |
 | 14 | [`996icu/996.ICU`](https://github.com/996icu/996.ICU) | 276361 | 关注 996 工作制的开发者社区仓库。 |
