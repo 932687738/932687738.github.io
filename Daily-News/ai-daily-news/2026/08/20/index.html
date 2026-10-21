@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-20 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-20</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-20</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：8 月 20 日主线是 <strong>腾讯朱雀对 DeepSeek Harness 的间接注入评测</strong> 与 <strong>Claude Code 上午小版本</strong>：A.I.G 在 14,560 次真实运行里测出文件通道隐藏 Unicode 最高 25.5% 攻击成功率；Claude Code <code>v2.1.237</code> 补上 Concise 输出样式与网关 prompt cache。OpenAI 减速仍是周二官方口径，安全媒体继续二次传播。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、安全治理、Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes、Spring AI&#x2F;Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、skills、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）Harness 安全从「装插件」转到「不可信内容与敏感工具之间要有控制层」；2）编程 CLI 继续修缓存&#x2F;输出风格，无新模型；3）OpenAI Astra&#x2F;RL 暂停进入安全媒体复述</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>文件通道 <code>unicode_hidden</code> 25.5%、文本伪造完成 17.0%、skills 通道 16.0%；输出服从 ≠ 工具落点成功（sink-required 仅约 2.5%）；<code>/config</code> 里的 Concise</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：<code>v2.1.237</code>（Published 2026-08-20T00:54:41Z，中国时间 08:54）；<code>v2.1.236</code> 已在 8&#x2F;19 章标注。Codex 当日仅见 <code>0.149.0-alpha.*</code> 预发布流水，无 GA。OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills：未发现可核验的 8&#x2F;20 重大官方更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent 安全</td>
+<td><a target="_blank" rel="noopener" href="https://matrix.tencent.com/en/2026/08/20/deepseek-harness-agent-injection-risk">A.I.G Red Team’s DeepSeek Harness test: 14,560 runs</a></td>
+<td>2026-08-20</td>
+<td>腾讯朱雀实验室</td>
+<td>真实 DSH TypeScript runtime；16 条间接内容通道、12 种攻击；最高 25.5%&#x2F;17.0%&#x2F;16.0%；代码在 <a target="_blank" rel="noopener" href="https://github.com/Tencent/AI-Infra-Guard/tree/main/Research/deepseek-harness-security-assessment">AI-Infra-Guard</a></td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.16393">Evaluating DeepSeek Harness with A.I.G</a></td>
+<td>2026-08-20（朱雀博文窗口；论文与评估同批）</td>
+<td>arXiv</td>
+<td>RuleJudge &#x2F; LLMJudge 双裁判；输出-only 目标成功率远高于必须打到 sink 的目标；结论是控制层应夹在不可信内容与敏感动作之间</td>
+</tr>
+<tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.237">Claude Code v2.1.237</a></td>
+<td>2026-08-20（UTC 00:54，中国时间上午）</td>
+<td>开源发布</td>
+<td>内置 Concise：先给结果、少铺垫；修 LLM gateway &#x2F; 自定义 base URL 下 prompt cache 失效</td>
+</tr>
+<tr>
+<td>安全治理</td>
+<td><a target="_blank" rel="noopener" href="https://www.securityweek.com/openai-overhauls-model-security-with-sandboxing-30-minute-alerts-and-training-pauses/">OpenAI Overhauls Model Security With Sandboxing, 30-Minute Alerts</a></td>
+<td>2026-08-20（报道；宣布属 8&#x2F;18）</td>
+<td>技术媒体</td>
+<td>把周二 pacing 写成沙箱 + 30 分钟告警 SLA + 约 20% 监控算力税；数字须回官方博文，勿当新宣布</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Harness 注入评测</td>
+<td><a target="_blank" rel="noopener" href="https://matrix.tencent.com/en/2026/08/20/deepseek-harness-agent-injection-risk">腾讯朱雀 &#x2F; A.I.G × DSH</a></td>
+<td>源到汇轨迹；文本&#x2F;文件载体；skills 也是攻击面；fixture sink 无外泄</td>
+<td>要上 DSH &#x2F; 自研 Agent 运行时安全的人</td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.16393">arXiv:2608.16393</a></td>
+<td>14,560 次受控执行；双裁判；partial compliance 7.3% vs 2.0%</td>
+<td>要复现矩阵或对照数字的人</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.237">v2.1.237 release</a></td>
+<td>Concise 输出样式；网关场景 cache</td>
+<td>走自建网关 &#x2F; 觉得回复太啰嗦的人</td>
+</tr>
+<tr>
+<td>训练期监控</td>
+<td><a target="_blank" rel="noopener" href="https://www.securityweek.com/openai-overhauls-model-security-with-sandboxing-30-minute-alerts-and-training-pauses/">SecurityWeek &#x2F; 30-min alerts</a></td>
+<td>高优告警 30 分钟无法证伪则暂停；Sol+ 带工具 RL 强制监控</td>
+<td>安全&#x2F;评测归属，须回 openai.com</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：框架侧无新 GA；可落地增量在「Harness 需要运行时控制层」的公开评测，以及 Claude Code 输出&#x2F;缓存小修。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DSH 间接注入</td>
+<td>腾讯朱雀 14,560 次实测，文件隐藏 Unicode 最高 25.5%</td>
+<td>工具返回、附加上下文、skills 都要当不可信输入；提示词挡不住 tool-call</td>
+</tr>
+<tr>
+<td>裁判方法</td>
+<td>RuleJudge 与 LLMJudge 会给出不同成功率</td>
+<td>只看模型「答应了」不够，要看是否打到敏感 sink</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>v2.1.237 Concise + gateway cache</td>
+<td>自定义 base URL 的团队应升级后再看 cache 命中</td>
+</tr>
+<tr>
+<td>OpenAI 减速</td>
+<td>安全媒体 8&#x2F;20 复述沙箱与 30 分钟 SLA</td>
+<td>不是新政策，是 8&#x2F;18 宣布的二次传播</td>
+</tr>
+<tr>
+<td>Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; Langfuse &#x2F; LangGraph &#x2F; Code Graph &#x2F; Loop &#x2F; Spring AI</td>
+<td>未发现 8&#x2F;20 可核验重大更新</td>
+<td>Codex 稳定版 <code>0.148.0</code> 的 GitHub 时间落在 UTC 晚间（中国时间为 8&#x2F;21），不记入本日</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://matrix.tencent.com/en/2026/08/20/deepseek-harness-agent-injection-risk">腾讯朱雀 &#x2F; A.I.G × DSH</a></td>
+<td>当日唯一可核验的大厂 Agent 运行时安全评测，带轨迹与通道拆分</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.16393">arXiv:2608.16393</a></td>
+<td>数字、矩阵、代码仓库齐全，可对照媒体转述</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.237">Claude Code v2.1.237</a></td>
+<td>当日编程 Agent 唯一可核验的完整 changelog</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.securityweek.com/openai-overhauls-model-security-with-sandboxing-30-minute-alerts-and-training-pauses/">SecurityWeek &#x2F; sandboxing</a></td>
+<td>把 8&#x2F;18 官方减速落到运维 SLA，须回 openai.com</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-20 00:00:00 到 2026-08-20 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：matrix.tencent.com, arxiv.org, github.com, securityweek.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>实验室博文</td>
+<td>A.I.G Red Team DeepSeek Harness test</td>
+<td>2026-08-20</td>
+<td><a target="_blank" rel="noopener" href="https://matrix.tencent.com/en/2026/08/20/deepseek-harness-agent-injection-risk">https://matrix.tencent.com/en/2026/08/20/deepseek-harness-agent-injection-risk</a></td>
+</tr>
+<tr>
+<td>论文</td>
+<td>Evaluating DeepSeek Harness with A.I.G</td>
+<td>2026-08-20（与朱雀博文同批）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.16393">https://arxiv.org/abs/2608.16393</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.237</td>
+<td>2026-08-20</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.237">https://github.com/anthropics/claude-code/releases/tag/v2.1.237</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenAI sandboxing &#x2F; 30-minute alerts</td>
+<td>2026-08-20（报道；宣布属 8&#x2F;18）</td>
+<td><a target="_blank" rel="noopener" href="https://www.securityweek.com/openai-overhauls-model-security-with-sandboxing-30-minute-alerts-and-training-pauses/">https://www.securityweek.com/openai-overhauls-model-security-with-sandboxing-30-minute-alerts-and-training-pauses/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

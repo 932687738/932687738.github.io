@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-02 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-02</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-02</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 2 日主线是 <strong>Claude Code 把 Fable 5.1 设为默认 Fable 模型（<code>v2.1.257</code>+<code>v2.1.258</code>）</strong>、<strong>OpenClaw <code>2026.8.2</code>（Linux 桌面伴侣 + 升级回滚）</strong>，以及 <strong>Codex <code>0.152.1</code>（Guardian 尊重 Node REPL 策略）</strong>；官方模型博文落在 9&#x2F;1，按中国时间窗口与 CLI 默认切换记本日。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、开源 release、Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes、Spring AI&#x2F;Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、skills、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）编程 CLI 的默认模型切换比官方发博晚一个中国时间窗口；2）个人 runtime 补 Linux 桌面与失败升级恢复；3）可观测&#x2F;编排框架无新 GA</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Fable 5.1 缓存读 $0.25&#x2F;Mtok；<code>CLAUDE_CODE_SUBAGENT_MODEL_FORCE</code>；OpenClaw Linux companion；不要把 <code>v2.1.259</code> 记进本日</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：<code>v2.1.257</code>（2026-09-01T17:53:52Z，中国 9&#x2F;2 01:53）+ <code>v2.1.258</code>（2026-09-01T22:33 UTC，中国 9&#x2F;2 06:33）。Codex：<code>rust-v0.152.1</code>（2026-09-01T22:33:02Z，中国 9&#x2F;2 06:33）。OpenClaw：<code>v2026.8.2</code>（2026-09-01T16:00:56Z，中国 9&#x2F;2 00:00）。Langfuse：无 9&#x2F;2 的 v4 tag（<code>v3.225.7</code> 为 v3 维护线）。Hermes 仍停在 <code>v0.21.0</code>。Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills：未发现可核验的 9&#x2F;2 重大稳定版更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型&#x2F;编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.257">Claude Code v2.1.257</a></td>
+<td>2026-09-02（UTC 9&#x2F;1 17:53）</td>
+<td>开源发布</td>
+<td>默认 Fable 换成 <code>claude-fable-5-1</code>（1M 上下文，$10&#x2F;$50，缓存读 $0.25）；<code>timeFormat</code>&#x2F;<code>timeZone</code>；auto 模式 Containment Escape；<code>CLAUDE_CODE_SUBAGENT_MODEL_FORCE</code>；<code>/effort s</code> 只改本会话；工作目录外首次读文件一次性确认；大量 Remote Control &#x2F; MCP &#x2F; 插件 symlink 逃逸修复</td>
+</tr>
+<tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.258">Claude Code v2.1.258</a></td>
+<td>2026-09-02（UTC 9&#x2F;1 22:33）</td>
+<td>开源发布</td>
+<td>修 2.1.255 引入的 macOS 12 启动失败；修远程&#x2F;定时会话在权限审批重发后报 empty content</td>
+</tr>
+<tr>
+<td>模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Introducing Claude Fable 5.1 and Claude Mythos 5.1</a></td>
+<td>相邻日期&#x2F;中国时间窗口传播（官方 9&#x2F;1）</td>
+<td>官方发布</td>
+<td>同一权重两套护栏：Fable 公开，Mythos 仅可信访问。缓存读降 75%；Agent 任务官方估最高省约 45%。System Card 同日</td>
+</tr>
+<tr>
+<td>Agent runtime</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.2">OpenClaw 2026.8.2</a></td>
+<td>2026-09-02（UTC 9&#x2F;1 16:00）</td>
+<td>开源发布</td>
+<td>Linux <code>.deb</code>&#x2F;AppImage 桌面伴侣；Home 侧栏不停页；后台会话就地开；升级失败可停半截迁移并恢复 Gateway；浏览器扩展可无 Gateway 唤醒本地 relay</td>
+</tr>
+<tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.152.1">Codex 0.152.1</a></td>
+<td>2026-09-02（UTC 9&#x2F;1 22:33）</td>
+<td>开源发布</td>
+<td>Guardian 审批尊重模型元数据里的 Node REPL 策略。补丁级，无新功能面</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认模型切换</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.257">v2.1.257</a> + <a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-fable-and-mythos-5-1">官方博文</a></td>
+<td>网关未配 5.1 时 <code>fable</code>&#x2F;<code>best</code> 仍解析到 Fable 5；要 5.1 用 <code>/model</code></td>
+<td>刚升级 CLI、账单突然变的人</td>
+</tr>
+<tr>
+<td>升级恢复</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.2">OpenClaw 2026.8.2</a></td>
+<td>半截 SQLite 迁移要能停；<code>openclaw update cleanup --dry-run</code></td>
+<td>8&#x2F;31 刚升 2.0 的 Gateway 运维</td>
+</tr>
+<tr>
+<td>护栏分层</td>
+<td><a target="_blank" rel="noopener" href="https://www-cdn.anthropic.com/0339e6a7c5c7b87f5c07798616dc32c215d14235/Claude%20Fable%205.1%20%26%20Claude%20Mythos%205.1%20System%20Card.pdf">System Card</a></td>
+<td>Fable 可做源码漏洞识别，仍挡渗透&#x2F;利用生成&#x2F;二进制扫描</td>
+<td>安全与合规评审</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：本日工程增量在「默认模型 + 子 Agent 强制同模型 + 无值守权限」和「个人 runtime 的桌面&#x2F;升级闭环」。Loop 相关：<code>/schedule</code> 与远程会话在 2.1.258 修了空 content；OpenClaw 让后台会话和 Home 停在同一页。编排框架与 Langfuse v4 无新 GA。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td>Fable 5.1 默认 + 子 Agent 强制模型</td>
+<td>多模型团队用 <code>SUBAGENT_MODEL_FORCE</code>，避免 spawn 偷偷换贵模型</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>Linux 伴侣 + 升级回滚</td>
+<td>2.0 之后第一刀是「升坏了能回来」，不是再堆 skill</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>0.152.1 Guardian&#x2F;REPL</td>
+<td>审批策略要跟模型元数据走，不要写死</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; LangChain &#x2F; Hermes &#x2F; Spring* &#x2F; Code Graph &#x2F; skills</td>
+<td>无 9&#x2F;2 重大稳定更新</td>
+<td>自托管仍以 9&#x2F;1 的 v4.27.0 为准</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.257">Claude Code v2.1.257</a></td>
+<td>中国时间窗口内把 Fable 5.1 变成默认，并收一批安全&#x2F;远程修复</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-fable-and-mythos-5-1">Fable 5.1 &#x2F; Mythos 5.1</a></td>
+<td>官方定价与护栏分层，按传播窗口补记</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.2">OpenClaw 2026.8.2</a></td>
+<td>2.0 后的第一包稳定补丁，Linux 桌面可用</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.258">v2.1.258</a></td>
+<td>还在 Monterey 上跑 CLI 的人先升这一刀</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-02 00:00:00 到 2026-09-02 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, anthropic.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.257</td>
+<td>2026-09-02（UTC 9&#x2F;1 17:53）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.257">https://github.com/anthropics/claude-code/releases/tag/v2.1.257</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.258</td>
+<td>2026-09-02（UTC 9&#x2F;1 22:33）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.258">https://github.com/anthropics/claude-code/releases/tag/v2.1.258</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Introducing Claude Fable 5.1 and Claude Mythos 5.1</td>
+<td>相邻日期&#x2F;中国时间窗口传播（官方 9&#x2F;1）</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-fable-and-mythos-5-1">https://www.anthropic.com/claude-fable-and-mythos-5-1</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw 2026.8.2</td>
+<td>2026-09-02（UTC 9&#x2F;1 16:00）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.2">https://github.com/openclaw/openclaw/releases/tag/v2026.8.2</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex 0.152.1</td>
+<td>2026-09-02（UTC 9&#x2F;1 22:33）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.152.1">https://github.com/openai/codex/releases/tag/rust-v0.152.1</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

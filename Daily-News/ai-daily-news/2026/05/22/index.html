@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-22 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-22</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-22</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-05-22</code>（Asia&#x2F;Shanghai）主线是 <strong>Anthropic Project Glasswing 首月进展披露</strong>（Mythos Preview 与约 50 家伙伴累计发现 <strong>1 万+</strong> 高&#x2F;严重漏洞，瓶颈转向 <strong>验证—披露—补丁</strong>）与 <strong>Codex 桌面 Agent 能力再升级</strong>（<strong>Appshots &#x2F; Goal mode GA &#x2F; Locked computer use</strong> 在 <strong><code>2026-05-22</code></strong> 媒体窗口集中发酵）并行；Coding Agent 侧 <strong>Claude Code <code>v2.1.148</code></strong> 热修复 Bash 回归，<strong>LangChain 生态</strong> 在跨日窗口发布 <strong><code>langchain-openai==1.2.2</code></strong> 与 **<code>langchain@1.4.2</code>**。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic&#x2F;OpenAI 官方与 GitHub Release；TechCrunch&#x2F;The Verge；Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;skills 专项；arXiv 论文；EU&#x2F;US 政策；中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>AI 网络安全从「找洞」转向「披露与补丁产能」</strong>；<strong>Coding Agent 向「屏幕上下文 + 锁屏远程操控 + 跨日 Goal」收敛</strong>；<strong>平台侧 AI 内容生成（Spotify&#x2F;Meta）与监管&#x2F;伦理争议同步升温</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>跟进 <strong>Glasswing 开源漏洞 Dashboard</strong> 与 <strong>Claude Security &#x2F; Mythos 工具申请</strong>；评估 <strong>Codex Appshots + Locked computer use</strong> 的企业安全边界；升级 <strong>Claude Code v2.1.148</strong> 修复 Bash 127 回归</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：**<code>v2.1.148</code>** <strong><code>Published: 2026-05-22T01:16:52Z</code> → <code>2026-05-22 09:16:52（Asia/Shanghai）</code><strong>；</strong>Codex</strong>：官方 Changelog <strong><code>2026-05-21</code></strong> 发布 <strong>Appshots&#x2F;Goal mode</strong>（**<code>2026-05-22</code>** 媒体硬对齐）；**<code>rust-v0.134.0-alpha.1</code>** <strong><code>Published: 2026-05-22T19:03:43Z</code> → <code>2026-05-23 03:03:43（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong>；<strong>OpenClaw</strong>：未发现 <strong><code>2026-05-22</code></strong> 新 tag（最近 <strong><code>v2026.5.20</code></strong> 为 <strong><code>2026-05-21</code><strong>）；</strong>Hermes</strong>：未发现 <strong><code>2026-05-22</code></strong> 新 tag；<strong>Spring AI</strong>：未发现 <strong><code>2026-05-22</code></strong> 硬对齐 release&#x2F;博文；<strong>skills&#x2F;Cursor Skills</strong>：未发现 <strong><code>2026-05-22</code></strong> 官方 Changelog（Anthropic 在 Glasswing 更新中提及向合格客户开放 <strong>Mythos 配套 skills</strong>）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AI 安全 &#x2F; Mythos</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/glasswing-initial-update">Project Glasswing: An initial update</a></td>
+<td><strong>官方稿：<code>May 22, 2026</code></strong></td>
+<td>官方发布</td>
+<td>首月 <strong>1 万+</strong> 高&#x2F;严重漏洞；开源扫描 <strong>6,202</strong> 估高&#x2F;严重（<strong>23,019</strong> 总量）；<strong>530</strong> 已披露高&#x2F;严重、<strong>75</strong> 已补丁；发布 <a target="_blank" rel="noopener" href="https://red.anthropic.com/2026/cvd/">开源漏洞 Dashboard</a>——瓶颈从 <strong>发现</strong> 转向 <strong>triaging&#x2F;patching</strong></td>
+</tr>
+<tr>
+<td>AI 安全（媒体）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/936637/anthropic-is-making-the-security-tools-its-used-with-claude-mythos-preview-just-a-bit-more-available">Anthropic is making the security tools… just a bit more available</a></td>
+<td><strong><code>May 22, 2026 10:55 PM UTC</code> → <code>2026-05-23 06:55（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>技术媒体</td>
+<td>合格客户可申请 <strong>skills、harness、threat model builder</strong>；与官方 Glasswing 稿交叉验证</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/codex/changelog">Appshots, goal mode, and more（Codex Changelog）</a></td>
+<td><strong>Changelog：<code>2026-05-21</code>；媒体硬对齐：<code>May 22, 2026</code></strong></td>
+<td>官方发布</td>
+<td><strong>Appshots</strong>（双 Command 发送前台窗口截图+文本）；<strong>Goal mode GA</strong>；<strong>Locked computer use</strong>（锁屏&#x2F;息屏仍可从手机驱动 Mac 应用，含 safeguards；<strong>EEA&#x2F;UK&#x2F;CH 不可用</strong>）</td>
+</tr>
+<tr>
+<td>Codex（媒体）</td>
+<td><a target="_blank" rel="noopener" href="https://www.macrumors.com/2026/05/22/codex-use-mac-apps-when-locked/">OpenAI’s Codex Can Now Use Your Mac Even When It’s Locked</a></td>
+<td><strong><code>Friday May 22, 2026 4:28 am PDT</code> → <code>2026-05-22 19:28（Asia/Shanghai）</code></strong></td>
+<td>技术媒体</td>
+<td>需 <strong>Computer Use 插件 + 屏幕录制&#x2F;辅助功能</strong> 权限；每 app 授权或 <strong>Always allow</strong>——企业需评估 ** unattended automation** 风险</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.148">anthropics&#x2F;claude-code <code>v2.1.148</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-22T01:16:52Z</code> → <code>2026-05-22 09:16:52（Asia/Shanghai）</code></strong></td>
+<td>开源发布</td>
+<td>修复 <strong><code>v2.1.147</code></strong> 引入的 <strong>Bash tool 全量 exit code 127</strong> 回归</td>
+</tr>
+<tr>
+<td>Codex CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.1">openai&#x2F;codex <code>rust-v0.134.0-alpha.1</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-22T19:03:43Z</code> → <code>2026-05-23 03:03:43（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>开源预发布</td>
+<td>当日 <strong>alpha 预发布</strong> 线更新（含 <code>codex-app-server</code>&#x2F;<code>argument-comment-lint</code> 等资产）——跟踪下一稳定 tag</td>
+</tr>
+<tr>
+<td>LangChain</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.2.2">langchain-openai&#x3D;&#x3D;1.2.2</a></td>
+<td>GitHub <strong><code>Published: 2026-05-21T22:08:45Z</code> → <code>2026-05-22 06:08:45（Asia/Shanghai）</code></strong></td>
+<td>开源发布</td>
+<td><strong>ContextOverflowError</strong> 条件放宽、<strong>LLM context size</strong> 取自 model profiles、<strong>httpx finalizers</strong> guard</td>
+</tr>
+<tr>
+<td>LangChain JS</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.4.2">langchain@1.4.2</a></td>
+<td>GitHub <strong><code>Published: 2026-05-21T22:00:57Z</code> → <code>2026-05-22 06:00:57（Asia/Shanghai）</code></strong></td>
+<td>开源发布</td>
+<td>Agent stream <strong>unwrap tool message outputs</strong>；<strong>todoListMiddleware</strong> ToolMessage <code>name</code> 修复</td>
+</tr>
+<tr>
+<td>AI 安全 &#x2F; 社会</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/">AI is being used to resurrect the voices of dead pilots</a></td>
+<td><strong><code>May 22, 2026 4:03 PM PDT</code> → <code>2026-05-23 07:03（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>技术媒体</td>
+<td>NTSB 因 <strong>spectrogram + AI（含 Codex）</strong> 重建遇难飞行员 CVR 音频暂时限制 docket；<strong>42</strong> 调查待复核——AI 滥用与 <strong>敏感数据公开</strong> 治理案例</td>
+</tr>
+<tr>
+<td>消费 AI &#x2F; 内容</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/22/spotifys-ai-bet-more-of-everything-less-of-what-you-want/">Spotify’s AI bet: more of everything, less of what you want</a></td>
+<td><strong><code>May 22, 2026 9:18 AM PDT</code> → <code>2026-05-22 21:18（Asia/Shanghai）</code></strong></td>
+<td>技术媒体</td>
+<td>Investor Day 后 <strong>Personal podcasts &#x2F; 日历邮件音频简报 &#x2F; 实验桌面 app</strong> 等 <strong>生成式内容</strong> 堆叠；<strong>Huxe</strong> 同日关停——「功能商品化」挤压独立应用</td>
+</tr>
+<tr>
+<td>消费 AI &#x2F; 社交</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/22/meta-quietly-launches-a-new-reddit-like-app-called-forum/">Meta quietly launches a new Reddit-like app called Forum</a></td>
+<td><strong><code>May 22, 2026 7:24 AM PDT</code> → <code>2026-05-22 22:24（Asia/Shanghai）</code></strong></td>
+<td>产品发布</td>
+<td><strong>Ask</strong> 标签页跨 Groups 聚合 AI 答案 + <strong>Admin AI assistant</strong>  moderation——对照 Google <strong>Search Agents</strong> 多入口策略</td>
+</tr>
+<tr>
+<td>搜索 &#x2F; AI 产品</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/936176/google-ai-overviews-search-disregard">Google’s AI search is so broken it can ‘disregard’ what you’re looking for</a></td>
+<td><strong><code>May 22, 2026 4:01 PM UTC</code> → <code>2026-05-23 00:01（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>技术媒体</td>
+<td>搜索词 <strong><code>disregard</code>&#x2F;<code>ignore</code>&#x2F;<code>skip</code></strong> 触发 AI Overview <strong>聊天式误回复</strong>——I&#x2F;O 后 <strong>Gemini 3.5 Flash 默认化</strong> 的可靠性警示</td>
+</tr>
+<tr>
+<td>AI 硬件</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/">We tried Google’s AI glasses and they’re almost there</a></td>
+<td><strong><code>May 22, 2026 8:37 AM PDT</code> → <code>2026-05-22 23:37（Asia/Shanghai）</code></strong></td>
+<td>技术媒体</td>
+<td><strong>Android XR 镜片显示版</strong> 仍处 Trusted Tester；<strong>2026 秋音频版</strong> 先出货——与 Meta&#x2F;Snap 竞争节奏</td>
+</tr>
+<tr>
+<td>论文 &#x2F; Agent 治理</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/html/2605.22634v1">Contractual Skills: A GovernSpec Design Framework for Enterprise AI Agents</a></td>
+<td><strong>arXiv 列表：<code>May 22, 2026</code></strong></td>
+<td>论文原文</td>
+<td>将 <strong>SKILL.md</strong> 组织为 <strong>task contract</strong>（goal&#x2F;permissions&#x2F;human gates&#x2F;verification）——企业 Agent <strong>可审计 Skill</strong> 设计参考</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mythos &#x2F; 漏洞披露</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/glasswing-initial-update">Glasswing initial update</a> + <a target="_blank" rel="noopener" href="https://red.anthropic.com/2026/cvd/">CVD Dashboard</a></td>
+<td>90 天 CVD、maintainer capacity、triaging 漏斗</td>
+<td>安全工程 &#x2F; 开源维护者</td>
+</tr>
+<tr>
+<td>Codex 桌面 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/codex/changelog">Codex Changelog：Appshots &amp; Goal mode</a></td>
+<td>Appshots、Goal mode、Locked computer use safeguards</td>
+<td>macOS Codex 用户 &#x2F; 安全评审</td>
+</tr>
+<tr>
+<td>Claude Code 热修复</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.148">Claude Code v2.1.148</a></td>
+<td>Bash 127 回归修复</td>
+<td>已升级 <strong>v2.1.147</strong> 的用户</td>
+</tr>
+<tr>
+<td>LangChain MCP</td>
+<td><a target="_blank" rel="noopener" href="https://docs.langchain.com/oss/python/langchain/mcp">LangChain MCP Docs</a></td>
+<td><code>MultiServerMCPClient</code>、tool interceptors、stateful sessions</td>
+<td>Python Agent 工程师</td>
+</tr>
+<tr>
+<td>企业 Skill 契约</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/html/2605.22634v1">Contractual Skills（GovernSpec）</a></td>
+<td>SKILL.md 作为 <strong>task contract</strong></td>
+<td>Agent 平台 &#x2F; 合规架构</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：<strong>Agent 工程焦点从「能调用工具」转向「治理闭环」</strong>——Glasswing 强调 <strong>verify-gated disclosure</strong>，论文侧同步出现 <strong>Contractual Skills &#x2F; Guardrails as Infrastructure &#x2F; Verify-Gated Completion</strong>；Coding Agent 则在 <strong>屏幕上下文（Appshots）与锁屏自动化</strong> 上继续扩展 <strong>Computer Use</strong> 边界。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>漏洞披露产能</td>
+<td>Glasswing：<strong>发现 &gt;&gt; 补丁</strong></td>
+<td>引入 <strong>AI 扫描 + 人工 triage SLA</strong>；跟踪 <a target="_blank" rel="noopener" href="https://red.anthropic.com/2026/cvd/">CVD Dashboard</a> 漏斗</td>
+</tr>
+<tr>
+<td>Skill 即契约</td>
+<td>GovernSpec <strong>Contractual Skills</strong></td>
+<td>SKILL.md 应含 <strong>permissions &#x2F; human gates &#x2F; verification</strong>，而非仅 prompt</td>
+</tr>
+<tr>
+<td>MCP 工程化</td>
+<td>LangChain <strong>tool interceptors</strong></td>
+<td>在 MCP 层注入 <strong>auth&#x2F;header&#x2F;retry</strong>，弥补 server 进程隔离</td>
+</tr>
+<tr>
+<td>跨 turn 目标</td>
+<td>Codex <strong>Goal mode GA</strong></td>
+<td>与 <strong>Claude Code <code>/code-review</code></strong> 形成「长任务 + 审查」双轨</td>
+</tr>
+<tr>
+<td>锁屏自动化</td>
+<td>Codex <strong>Locked computer use</strong></td>
+<td>必须 <strong>短授权 + 本地输入重锁 + 区域限制</strong>——纳入企业 MDM 策略</td>
+</tr>
+<tr>
+<td>LangChain 补丁</td>
+<td><strong>langchain-openai 1.2.2</strong></td>
+<td>升级以修复 <strong>ContextOverflowError</strong> 误判与 context size 来源</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Anthropic：Project Glasswing initial update</strong></td>
+<td>当日 <strong>最硬对齐官方稿</strong>，定义 AI 时代 <strong>漏洞披露瓶颈</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Codex Changelog：Appshots &#x2F; Goal mode &#x2F; Locked use</strong></td>
+<td><strong>Coding Agent 产品化</strong> 与 <strong>安全边界</strong> 同日交汇</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Claude Code v2.1.148</strong> Release</td>
+<td>小版本但影响 <strong>Bash 全失败</strong> 的生产事故</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td>arXiv：<strong>Contractual Skills（GovernSpec）</strong></td>
+<td>把 <strong>Agent Skills</strong> 上升到 <strong>企业可审计契约</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td>The Verge：<strong>Google AI Overviews disregard bug</strong></td>
+<td>I&#x2F;O 后 <strong>Search Agent 默认化</strong> 的 <strong>可靠性&#x2F;提示注入</strong> 风险样本</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-22 00:00:00 到 2026-05-22 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, developers.openai.com, github.com, techcrunch.com, theverge.com, macrumors.com, arxiv.org, docs.langchain.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Project Glasswing: An initial update</td>
+<td>2026-05-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/glasswing-initial-update">https://www.anthropic.com/research/glasswing-initial-update</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Codex Changelog：Appshots, goal mode, and more</td>
+<td>2026-05-21（2026-05-22 媒体窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/codex/changelog">https://developers.openai.com/codex/changelog</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.148</td>
+<td>2026-05-22</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.148">https://github.com/anthropics/claude-code/releases/tag/v2.1.148</a></td>
+</tr>
+<tr>
+<td>开源预发布</td>
+<td>Codex rust-v0.134.0-alpha.1</td>
+<td>2026-05-22（相邻日期&#x2F;跨时区发布）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.1">https://github.com/openai/codex/releases/tag/rust-v0.134.0-alpha.1</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langchain-openai&#x3D;&#x3D;1.2.2</td>
+<td>2026-05-22（跨日窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.2.2">https://github.com/langchain-ai/langchain/releases/tag/langchain-openai%3D%3D1.2.2</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td><a href="mailto:&#x6c;&#x61;&#110;&#x67;&#x63;&#104;&#x61;&#105;&#110;&#64;&#49;&#x2e;&#52;&#46;&#x32;">&#x6c;&#x61;&#110;&#x67;&#x63;&#104;&#x61;&#105;&#110;&#64;&#49;&#x2e;&#52;&#46;&#x32;</a></td>
+<td>2026-05-22（跨日窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.4.2">https://github.com/langchain-ai/langchainjs/releases/tag/langchain%401.4.2</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>NTSB &#x2F; AI 重建飞行员语音</td>
+<td>2026-05-22（相邻日期&#x2F;跨时区）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/">https://techcrunch.com/2026/05/22/ai-is-being-used-to-resurrect-the-voices-of-dead-pilots/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Spotify AI 内容堆叠</td>
+<td>2026-05-22</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/22/spotifys-ai-bet-more-of-everything-less-of-what-you-want/">https://techcrunch.com/2026/05/22/spotifys-ai-bet-more-of-everything-less-of-what-you-want/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Meta Forum + AI Ask</td>
+<td>2026-05-22</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/22/meta-quietly-launches-a-new-reddit-like-app-called-forum/">https://techcrunch.com/2026/05/22/meta-quietly-launches-a-new-reddit-like-app-called-forum/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google AI Overviews disregard bug</td>
+<td>2026-05-22（相邻日期&#x2F;跨时区）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/936176/google-ai-overviews-search-disregard">https://www.theverge.com/tech/936176/google-ai-overviews-search-disregard</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Anthropic Glasswing 工具开放（Verge）</td>
+<td>2026-05-22（相邻日期&#x2F;跨时区）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/936637/anthropic-is-making-the-security-tools-its-used-with-claude-mythos-preview-just-a-bit-more-available">https://www.theverge.com/ai-artificial-intelligence/936637/anthropic-is-making-the-security-tools-its-used-with-claude-mythos-preview-just-a-bit-more-available</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google AI 眼镜上手</td>
+<td>2026-05-22</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/">https://techcrunch.com/2026/05/22/we-tried-googles-ai-glasses-and-theyre-almost-there/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Contractual Skills: GovernSpec</td>
+<td>2026-05-22</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/html/2605.22634v1">https://arxiv.org/html/2605.22634v1</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

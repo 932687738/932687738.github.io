@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-28 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-28</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-28</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：8 月 28 日主线是 <strong>Claude Code <code>v2.1.248</code>（<code>--restricted</code> 只读文件、禁 bash&#x2F;WebFetch）</strong> 与 <strong>Langfuse <code>v4.23.0</code>（稳定评测 API、时间线只留 compact）</strong>；<code>v2.1.250</code> 仅 bugfix。<code>v2.1.251</code> 与 OpenClaw <code>2026.9.1-beta.1</code> 的 UTC 落在中国时间 8&#x2F;29，不记本日。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、安全治理、Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes、Spring AI&#x2F;Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、skills、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）受限模式把「能跑命令」从默认能力里拿掉；2）Langfuse 评测 API 稳定化；3）无新模型</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><code>--restricted</code> &#x2F; <code>CLAUDE_CODE_RESTRICTED=1</code>；评测 REST 稳定端点；<code>/loop</code> 在 Bedrock&#x2F;Vertex 也开放自步调</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：<code>v2.1.248</code>（Published 2026-08-27T22:12Z，中国时间 8&#x2F;28 06:12）、<code>v2.1.250</code>（28 Aug 00:49Z &#x2F; 08:49，仅 bugfix）。<code>v2.1.251</code>（28 Aug 18:19Z &#x3D; 中国时间 8&#x2F;29 02:19）记到 8&#x2F;29。Langfuse：<code>v4.23.0</code>（11:52Z &#x2F; 19:52）、<code>v4.24.0</code>（13:16Z &#x2F; 21:16，<code>LANGFUSE_AI_PROVIDER</code> 必填）。Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills：未发现可核验的 8&#x2F;28 重大稳定版更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases">Claude Code v2.1.248</a></td>
+<td>2026-08-28（UTC 8&#x2F;27 22:12）</td>
+<td>开源发布</td>
+<td><code>--restricted</code>：去掉命令&#x2F;代码执行与 WebFetch（除非 <code>--tools</code> 点名）、文件工具不出工作区、拒绝 bypassPermissions、忽略用户&#x2F;项目&#x2F;本地 settings；<code>experimental.cacheTtl</code>；<code>/loop</code> 自步调与无 prompt 自治在 Bedrock&#x2F;Vertex&#x2F;Foundry 也可用；Workflow 描述从约 5.7k 压到 1k token</td>
+</tr>
+<tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases">Claude Code v2.1.250</a></td>
+<td>2026-08-28</td>
+<td>开源发布</td>
+<td>仅 Bug fixes and reliability improvements</td>
+</tr>
+<tr>
+<td>LLM 可观测性</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases">Langfuse v4.23.0</a></td>
+<td>2026-08-28</td>
+<td>开源发布</td>
+<td>稳定 evaluator&#x2F;evaluation rule API；MCP 暴露 v4 迁移数据；dashboard&#x2F;widget 进核心 S3 导出；compact timeline 成为唯一时间线</td>
+</tr>
+<tr>
+<td>LLM 可观测性</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases">Langfuse v4.24.0</a></td>
+<td>2026-08-28</td>
+<td>开源发布</td>
+<td>破坏性：内部 AI 功能必须设 <code>LANGFUSE_AI_PROVIDER</code>，不再默认 Bedrock</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>受限执行</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases">v2.1.248 <code>--restricted</code></a></td>
+<td>只留工作区内文件工具；settings 文件全部忽略</td>
+<td>要在不可信仓跑 agent 的人</td>
+</tr>
+<tr>
+<td>评测 API</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases">Langfuse v4.23.0</a></td>
+<td>稳定 REST 替代不稳定 evaluator 端点</td>
+<td>要脚本化评测的自托管</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：当日工程增量在受限 CLI 与 Langfuse API 稳定化；编排框架无新 GA。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><code>--restricted</code>、<code>/loop</code> 供应商对齐</td>
+<td>不可信输入先关 bash，再谈技能</td>
+</tr>
+<tr>
+<td>Loop Engineering</td>
+<td><code>/loop</code> 在云厂商也开自步调</td>
+<td>终止条件仍要独立 verifier</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td>v4.23&#x2F;v4.24</td>
+<td>升 4.24 前先配 AI Provider</td>
+</tr>
+<tr>
+<td>其余专项</td>
+<td>Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring* &#x2F; Code Graph &#x2F; LangChain &#x2F; skills</td>
+<td>未发现 8&#x2F;28 重大稳定更新</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases">Claude Code v2.1.248</a></td>
+<td>受限模式是新的默认安全档</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases">Langfuse v4.23.0</a></td>
+<td>评测 API 稳定后才能写死客户端</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-28 00:00:00 到 2026-08-28 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.248</td>
+<td>2026-08-28（UTC 8&#x2F;27 22:12）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases">https://github.com/anthropics/claude-code/releases</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.250</td>
+<td>2026-08-28</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases">https://github.com/anthropics/claude-code/releases</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.23.0</td>
+<td>2026-08-28</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases">https://github.com/langfuse/langfuse/releases</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.24.0</td>
+<td>2026-08-28</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases">https://github.com/langfuse/langfuse/releases</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

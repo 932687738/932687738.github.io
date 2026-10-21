@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-14 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-14</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-14</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 14 日主线是 <strong>OpenAI 用 Perplexity 客户故事把 Astra 写成「可少盯的端到端系统」</strong>，以及 <strong>Google 官宣 DevFest 2026「Agentic Era」主题季</strong>；HF 日刊把 <strong>Skill 进化 &#x2F; 多样化路由</strong> 推到头条。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、企业落地、开发者活动、HF 日刊、专项主题、政策监管</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）厂商叙事从「模型更强」转到「客户敢把测试&#x2F;改系统&#x2F;盯生产交给模型」；2）Google 用社区活动把 Gemini&#x2F;Antigravity&#x2F;Web MCP 绑成 agent 栈；3）论文侧 Skill 不再静态检索，而是 bandit 进化 + diversity-aware routing</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Perplexity 用 Astra 生成测试替身做端到端联调；DevFest 10&#x2F;1–12&#x2F;31 agent-athon；COBRA-Skills &#x2F; Beyond Top-k Skill Retrieval</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：未见可核验 9&#x2F;14 新稳定 tag（2.1.270 为 9&#x2F;12，不回填）。Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain·LangGraph &#x2F; Code Graph：未发现 9&#x2F;14 新稳定 release。Loop Engineering &#x2F; skills：HF《COBRA-Skills》《Beyond Top-k Skill Retrieval》与 skill 路由&#x2F;进化同构。Safety Fellowship 项目周期含 9&#x2F;14，但公告是 4 月，不当成当日新发布</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>企业落地</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/perplexity-improving-accuracy-with-astra/">Perplexity trusts GPT-6 Astra with end-to-end systems</a></td>
+<td>2026-09-14</td>
+<td>官方发布</td>
+<td>Perplexity 用 Astra 写通讯、改软件、盯生产；并让模型生成「替身服务」做端到端测试。客户故事，不是新模型发布</td>
+</tr>
+<tr>
+<td>开发者生态</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/">DevFest 2026</a></td>
+<td>2026-09-14</td>
+<td>官方发布</td>
+<td>10&#x2F;1–12&#x2F;31，主题 Build&#x2F;Secure&#x2F;Scale in the Agentic Era；现场覆盖 Gemini、AI Studio、Antigravity、Firebase、Web MCP、agent-athon</td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-14">HF Daily Papers 2026-09-14</a></td>
+<td>2026-09-14</td>
+<td>论文原文</td>
+<td>Benchmark Radar（活体评测库）、COBRA-Skills（bandit 进化 skill）、Beyond Top-k Skill Retrieval、TRACE（GUI agent 准入）</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent 测试</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/perplexity-improving-accuracy-with-astra/">Perplexity × Astra</a></td>
+<td>模型生成假下游响应，把联调从人手测改成 agent 自测</td>
+<td>缺测试环境的平台团队</td>
+</tr>
+<tr>
+<td>Skill 路由</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-14">HF Daily Papers 9&#x2F;14</a></td>
+<td>不要只 top-k 召回 skill；要 diversity + 在线进化</td>
+<td>做 skill marketplace &#x2F; 路由的人</td>
+</tr>
+<tr>
+<td>社区活动</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/">DevFest 2026</a></td>
+<td>把 MCP &#x2F; Antigravity 放进线下实验</td>
+<td>想跟 Google agent 栈动手的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程增量不在框架发版，而在 <strong>「客户敢少盯生产」</strong> 和 <strong>「Skill 要可进化、不要只检索」</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>端到端测试</td>
+<td>Perplexity 让模型当下游替身</td>
+<td>缺沙箱时，先用模型模拟 connector，再上真实系统</td>
+</tr>
+<tr>
+<td>Loop &#x2F; skills</td>
+<td>COBRA-Skills、diversity-aware skill routing</td>
+<td>skill 库会膨胀，路由要带探索，不能永远点同一批</td>
+</tr>
+<tr>
+<td>评测基础设施</td>
+<td>Benchmark Radar</td>
+<td>评测集本身需要可检索的活库，而不是静态表格</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; LangChain &#x2F; Spring &#x2F; Code Graph &#x2F; Claude Code</td>
+<td>无 9&#x2F;14 稳定更新</td>
+<td>专项记空</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/perplexity-improving-accuracy-with-astra/">Perplexity × Astra</a></td>
+<td>短客户故事，把「信任」写成可观察的盯人频率下降</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-14">HF Daily Papers 2026-09-14</a></td>
+<td>一天内同时出现 skill 进化、skill 路由和评测检索</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/">DevFest 2026</a></td>
+<td>看 Google 把哪些产品点名进 agent 主题季</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-14 00:00:00 到 2026-09-14 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, blog.google, huggingface.co</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Perplexity trusts GPT-6 Astra with end-to-end systems</td>
+<td>2026-09-14</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/perplexity-improving-accuracy-with-astra/">https://openai.com/index/perplexity-improving-accuracy-with-astra/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>DevFest 2026</td>
+<td>2026-09-14</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/">https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Hugging Face Daily Papers</td>
+<td>2026-09-14</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-14">https://huggingface.co/papers/date/2026-09-14</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

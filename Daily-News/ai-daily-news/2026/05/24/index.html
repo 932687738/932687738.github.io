@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-24 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-24</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-24</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-05-24</code>（Asia&#x2F;Shanghai）主线是 <strong>AI 安全从「人力防御」转向「Agentic Defense + 平台责任」</strong>（Google Cloud COO 呼吁 <strong>fully agentic defense</strong>、NYT 报道 <strong>Q1 网络安全岗位 +11%<strong>）与 <strong>OpenClaw <code>v2026.5.22</code> stable 发布</strong>（Codex app-server&#x2F;harness 可靠性收口）并行；</strong>Claude Code 被用于 AutoTTS 自动发现 test-time scaling 控制器</strong>（约 <strong>$40&#x2F;160min</strong>、**~70% token 节省<strong>）与 <strong>Agent-BRACE 论文</strong>（</strong>2026-05-24 arXiv 提交<strong>）共同指向 <strong>「人类设计搜索空间，Agent 写策略&#x2F;信念状态」</strong> 范式；</strong>Skills 生态** 出现 <strong>69k+ SKILL.md 开放目录</strong>（claudskills.com）但 <strong>Claude Code&#x2F;Codex&#x2F;Hermes&#x2F;Spring AI 当日无新官方 release</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenClaw GitHub；TechCrunch&#x2F;NYT&#x2F;The Decoder&#x2F;The Register；Agent-BRACE&#x2F;AutoTTS 论文与媒体；Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;skills 专项；EU&#x2F;US 政策窗口；中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>AI 安全「机器速度 vs 机器速度」</strong>（攻击 handoff <strong>8h→22s</strong>、Agent 漫游发现遗留 SharePoint）；<strong>TTS&#x2F;Agent 策略自动化</strong>（Claude Code 写 controller、信念状态 WEP 标注）；<strong>个人 Agent 平台 stable 线晋升</strong>（OpenClaw <strong>v2026.5.22</strong>）；<strong>Skills 供应链治理</strong>（69k 目录 + 内容评分 admission）</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 <strong>OpenClaw v2026.5.22</strong> 的 Codex migration&#x2F;插件绑定修复；阅读 <strong>AutoTTS</strong> 离线 replay 环境设计；跟踪 <strong>Google API key 撤销 23 分钟窗口</strong> 与 <strong>自动 tier 升级</strong> 风险；用 <strong>Agent-BRACE</strong> 的 <strong>WEP 信念状态</strong> 改造长时程 Agent</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：未发现 <strong><code>2026-05-24</code></strong> 新 tag（最近 <strong><code>v2.1.148</code></strong> 为 <strong><code>2026-05-22</code><strong>）；</strong>AutoTTS</strong> 使用 <strong>Claude Code</strong> 作 explorer（<strong>THE DECODER <code>May 24, 2026</code></strong> 解读）；<strong>Codex</strong>：未发现 <strong><code>2026-05-24</code></strong> 新 release（最近 <strong><code>rust-v0.134.0-alpha.1</code></strong> 为 <strong><code>2026-05-22</code><strong>）；</strong>OpenClaw</strong>：**<code>v2026.5.22</code>** <strong><code>Published: 2026-05-24T01:12:56Z</code> → <code>2026-05-24 09:12:56（Asia/Shanghai）</code><strong>；</strong>Hermes</strong>：未发现 <strong><code>2026-05-24</code></strong> 新 tag（最近 <strong><code>v2026.5.16</code></strong> 为 <strong><code>2026-05-16</code><strong>，仓库 <strong><code>Last push: 2026-05-24</code><strong>）；</strong>Spring AI</strong>：未发现 <strong><code>2026-05-24</code></strong> 硬对齐 release；</strong>skills&#x2F;Cursor Skills</strong>：<strong>claudskills.com</strong> 跨 <strong>69,369</strong> SKILL.md（DEV 工程文 <strong><code>2026-05-24</code> 窗口</strong>），<strong>SKILL.md 格式向 cursor-rules&#x2F;aider-skills 泄漏</strong></td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.22">openclaw&#x2F;openclaw <code>v2026.5.22</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-24T01:12:56Z</code> → <code>2026-05-24 09:12:56（Asia/Shanghai）</code></strong></td>
+<td>开源发布</td>
+<td><strong>beta→stable</strong> 线：Codex app-server <strong><code>/codex detach</code></strong> 插件绑定逃逸、<strong>prompt timeout 竞态</strong> 修复、<strong>Codex&#x2F;OpenClaw code-mode 边界</strong> 文档澄清、QA-Lab 媒体工具超时修复</td>
+</tr>
+<tr>
+<td>AI 安全 &#x2F; 平台</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/">Everyone is navigating AI security in real time — even Google</a></td>
+<td><strong><code>May 24, 2026 2:39 PM PDT</code> → <code>2026-05-25 05:39（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>技术媒体</td>
+<td>Google Cloud COO <strong>Francis de Souza</strong>：<strong>shadow AI</strong>、<strong>AI-native fully agentic defense</strong>、攻击 <strong>handoff 22 秒</strong>；并引用 <strong>Google API key 泄露账单</strong> 与 <strong>删除后 23 分钟仍可用</strong> 争议</td>
+</tr>
+<tr>
+<td>AI 安全 &#x2F; 就业</td>
+<td><a target="_blank" rel="noopener" href="https://www.straitstimes.com/business/economy/one-job-growing-in-the-ai-era-cybersecurity-experts-to-deal-with-the-bug-pocalypse">One job growing in the AI era? Cybersecurity experts（NYT 转引）</a></td>
+<td><strong><code>May 24, 2026</code>（NYT&#x2F;Techmeme 窗口）</strong></td>
+<td>技术媒体</td>
+<td>Glassdoor：<strong>Q1 网络安全岗位发布 +11% YoY</strong>；AI 生成代码引入漏洞 + <strong>Mythos 类模型</strong> 加速找洞——「<strong>bug-pocalypse</strong>」人力缺口</td>
+</tr>
+<tr>
+<td>Claude Code &#x2F; TTS</td>
+<td><a target="_blank" rel="noopener" href="https://the-decoder.com/researchers-let-claude-code-discover-ai-scaling-algorithms-that-humans-probably-wouldnt-have-designed/">Researchers let Claude Code discover AI scaling algorithms…</a></td>
+<td><strong><code>May 24, 2026</code></strong></td>
+<td>技术媒体</td>
+<td><strong>AutoTTS</strong>：Claude Code 在离线 replay 环境迭代 <strong>Confidence Momentum Controller</strong>；**<del>70% token 节省**、发现成本 **</del>$40&#x2F;160min**——人类设计 <strong>environment</strong>，Agent 写 <strong>controller 代码</strong></td>
+</tr>
+<tr>
+<td>论文 &#x2F; Agent</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.11436">Agent-BRACE: Decoupling Beliefs from Actions…</a></td>
+<td><strong>arXiv 提交：<code>2026-05-24</code></strong></td>
+<td>论文原文</td>
+<td>将 LLM Agent 拆为 <strong>belief state model + policy model</strong>；用 <strong>WEP  verbalized certainty</strong> 标注原子 claim；Quest 上 <strong>+14.5%&#x2F;+5.3%</strong> 绝对提升且 <strong>context 近常数</strong></td>
+</tr>
+<tr>
+<td>Skills 生态</td>
+<td><a target="_blank" rel="noopener" href="https://dev.to/adamlankamer/how-i-indexed-69000-claude-code-skills-and-what-i-learned-doing-it-76f">How I indexed 69,000 Claude Code skills…</a></td>
+<td><strong><code>2026-05-24</code>（DEV 发布窗口）</strong></td>
+<td>社区工程</td>
+<td><strong>claudskills.com</strong> 开放目录&#x2F;API&#x2F;Parquet 数据集；<strong>24 源 nightly miner</strong>、<strong>内容 admission 评分</strong>（反 popularity 排序）；<strong>SKILL.md → cursor-rules&#x2F;aider-skills</strong> 跨 Agent 标准泄漏</td>
+</tr>
+<tr>
+<td>AI 安全 &#x2F; Google</td>
+<td><a target="_blank" rel="noopener" href="https://www.theregister.com/devops/2026/05/21/threat-hunters-find-google-api-keys-still-usable-23-minutes-after-deletion/5244504">Threat hunters find Google API keys still usable 23 minutes after deletion</a></td>
+<td><strong><code>May 21, 2026</code>（<code>2026-05-24</code> TechCrunch 交叉引用）</strong></td>
+<td>技术媒体</td>
+<td><strong>Aikido</strong>：legacy <strong>Google API key</strong> 删除后 <strong>最长 23 分钟</strong> 仍可用；<strong>Gemini AQ key ~1min</strong>、<strong>service account ~5s</strong>——平台 revoke SLA 不一致</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; Mythos</td>
+<td><a target="_blank" rel="noopener" href="http://www.techtimes.com/articles/317076/20260524/anthropic-moves-closer-public-claude-mythos-release-10000-critical-bugs-found-first.htm">Anthropic Moves Closer to Public Claude Mythos Release…</a></td>
+<td><strong><code>May 24, 2026</code></strong></td>
+<td>技术媒体</td>
+<td>跟进 <strong>5&#x2F;22 Glasswing 更新</strong>：<strong>Mythos Preview 仍 gated</strong>；<strong>Claude Security beta</strong> 三周 <strong>2100+</strong> 漏洞补丁——披露产能 vs 补丁产能张力延续</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AutoTTS</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/zhengkid/AutoTTS">AutoTTS GitHub + 项目页</a></td>
+<td>离线 <strong>replay environment</strong>、<strong>beta parameterization</strong>、Claude Code <strong>explorer loop</strong></td>
+<td>Agent 推理成本优化 &#x2F; TTS 研究者</td>
+</tr>
+<tr>
+<td>Agent 信念状态</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/joykirat18/Agent-BRACE">Agent-BRACE 论文 + 代码</a></td>
+<td><strong>WEP 标注</strong>、belief&#x2F;policy <strong>PPO 联合训练</strong>、长时程 <strong>POMDP</strong></td>
+<td>具身&#x2F;文本世界 Agent 工程师</td>
+</tr>
+<tr>
+<td>OpenClaw 升级</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.22">OpenClaw v2026.5.22 Release Notes</a></td>
+<td>Codex <strong>plugin-owned conversation binding</strong>、<strong>migrate plan codex</strong></td>
+<td>自托管个人 Agent 运维</td>
+</tr>
+<tr>
+<td>Skills 目录</td>
+<td><a target="_blank" rel="noopener" href="https://claudskills.com/api/v1/openapi.json">claudskills.com API OpenAPI</a></td>
+<td><strong>CC BY 4.0 数据集</strong>、<strong>admission scoring</strong>、跨 Agent <strong>SKILL.md</strong> 互操作</td>
+<td>Skills 平台&#x2F;治理团队</td>
+</tr>
+<tr>
+<td>MCP 企业运行时</td>
+<td><a target="_blank" rel="noopener" href="https://dev.to/arcade/should-you-build-or-buy-an-mcp-runtime-for-enterprise-ai-agents-in-2026-36jg">Should you build or buy an MCP runtime…（DEV）</a></td>
+<td><strong>OAuth&#x2F;审计&#x2F;策略</strong> vs 自建 LangChain&#x2F;Mastra 适配</td>
+<td>企业 Agent 架构师</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：Agent 工程继续从 <strong>「手写 heuristics」</strong> 迁移到 <strong>「可搜索&#x2F;可进化的控制面」</strong>——<strong>AutoTTS</strong> 让 Claude Code 写 <strong>TTS controller</strong>，<strong>Agent-BRACE</strong> 让 RL 学 <strong>结构化信念状态</strong>；平台侧 <strong>OpenClaw stable</strong> 收口 Codex harness 可靠性；安全侧 <strong>Agent 既是攻击面也是防御面</strong>（漫游数据资产 + agentic defense）。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TTS 自动化</td>
+<td>AutoTTS + Claude Code</td>
+<td>投资 <strong>offline replay + trace feedback</strong>，而非手工调 branch&#x2F;prune 阈值</td>
+</tr>
+<tr>
+<td>长时程 POMDP</td>
+<td>Agent-BRACE <strong>WEP claims</strong></td>
+<td>用 <strong>显式 verbalized uncertainty</strong> 替代 raw history 或单点 summary</td>
+</tr>
+<tr>
+<td>个人 Agent stable</td>
+<td>OpenClaw <strong>v2026.5.22</strong></td>
+<td>跟踪 <strong>Codex code-mode 边界</strong> 与 <strong>plugin detach</strong> 行为再评估生产策略</td>
+</tr>
+<tr>
+<td>Skills 供应链</td>
+<td>69k 开放目录</td>
+<td>引入 <strong>内容 admission + 来源审计</strong>；勿仅按 stars&#x2F;installs 安装</td>
+</tr>
+<tr>
+<td>MCP 安全</td>
+<td>Agent framework RCE&#x2F;CVE 清单（社区）</td>
+<td><strong>STDIO MCP</strong> 需 <strong>allowlist&#x2F;sandbox</strong>；生产优先 <strong>Streamable HTTP + runtime 层</strong></td>
+</tr>
+<tr>
+<td>Agentic Defense</td>
+<td>Google Cloud COO 观点</td>
+<td>安全架构需覆盖 <strong>models&#x2F;data pipelines&#x2F;agents&#x2F;prompts</strong> 全栈，而非 perimeter-only</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>OpenClaw v2026.5.22 GitHub Release</strong></td>
+<td>当日 <strong>唯一硬对齐官方开源 Agent 平台 stable 发布</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>THE DECODER：Claude Code × AutoTTS</strong></td>
+<td><strong>Agent 写算法</strong> 的可复现样本（$40 级 discovery 成本）</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Agent-BRACE（2026-05-24 arXiv）</strong></td>
+<td>长时程 Agent <strong>信念状态 + 不确定性</strong> 的结构化做法</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch：Google Cloud AI 安全访谈</strong></td>
+<td><strong>Agentic defense</strong> 与 <strong>平台 revoke&#x2F;计费</strong> 现实差距的对照</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>claudskills 69k 目录工程文</strong></td>
+<td>Skills <strong>发现&#x2F;治理&#x2F;跨 Agent 标准</strong> 的一手数据</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-24 00:00:00 到 2026-05-24 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, techcrunch.com, the-decoder.com, arxiv.org, dev.to, theregister.com, straitstimes.com, techtimes.com, zhengkid.github.io</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>OpenClaw v2026.5.22</td>
+<td>2026-05-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.22">https://github.com/openclaw/openclaw/releases/tag/v2026.5.22</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google Cloud AI security（TechCrunch）</td>
+<td>2026-05-24（PDT，Asia&#x2F;Shanghai 跨至 05-25）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/">https://techcrunch.com/2026/05/24/everyone-is-navigating-ai-security-in-real-time-even-google/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Cybersecurity jobs +11%（NYT 转引）</td>
+<td>2026-05-24</td>
+<td><a target="_blank" rel="noopener" href="https://www.straitstimes.com/business/economy/one-job-growing-in-the-ai-era-cybersecurity-experts-to-deal-with-the-bug-pocalypse">https://www.straitstimes.com/business/economy/one-job-growing-in-the-ai-era-cybersecurity-experts-to-deal-with-the-bug-pocalypse</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Claude Code AutoTTS（THE DECODER）</td>
+<td>2026-05-24</td>
+<td><a target="_blank" rel="noopener" href="https://the-decoder.com/researchers-let-claude-code-discover-ai-scaling-algorithms-that-humans-probably-wouldnt-have-designed/">https://the-decoder.com/researchers-let-claude-code-discover-ai-scaling-algorithms-that-humans-probably-wouldnt-have-designed/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Agent-BRACE</td>
+<td>2026-05-24</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.11436">https://arxiv.org/abs/2605.11436</a></td>
+</tr>
+<tr>
+<td>社区工程</td>
+<td>69k Claude Code skills catalog</td>
+<td>2026-05-24</td>
+<td><a target="_blank" rel="noopener" href="https://dev.to/adamlankamer/how-i-indexed-69000-claude-code-skills-and-what-i-learned-doing-it-76f">https://dev.to/adamlankamer/how-i-indexed-69000-claude-code-skills-and-what-i-learned-doing-it-76f</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google API key 23min revoke gap</td>
+<td>2026-05-21（05-24 交叉引用）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theregister.com/devops/2026/05/21/threat-hunters-find-google-api-keys-still-usable-23-minutes-after-deletion/5244504">https://www.theregister.com/devops/2026/05/21/threat-hunters-find-google-api-keys-still-usable-23-minutes-after-deletion/5244504</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Anthropic Mythos 跟进</td>
+<td>2026-05-24</td>
+<td><a target="_blank" rel="noopener" href="http://www.techtimes.com/articles/317076/20260524/anthropic-moves-closer-public-claude-mythos-release-10000-critical-bugs-found-first.htm">http://www.techtimes.com/articles/317076/20260524/anthropic-moves-closer-public-claude-mythos-release-10000-critical-bugs-found-first.htm</a></td>
+</tr>
+<tr>
+<td>教程</td>
+<td>MCP runtime build vs buy</td>
+<td>2026-05-24 窗口</td>
+<td><a target="_blank" rel="noopener" href="https://dev.to/arcade/should-you-build-or-buy-an-mcp-runtime-for-enterprise-ai-agents-in-2026-36jg">https://dev.to/arcade/should-you-build-or-buy-an-mcp-runtime-for-enterprise-ai-agents-in-2026-36jg</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>OpenAI&#x2F;Anthropic&#x2F;Spring AI</td>
+<td>未发现 2026-05-24 硬对齐新 release</td>
+<td>-</td>
+</tr>
+<tr>
+<td>中文补充</td>
+<td>机器之心&#x2F;量子位</td>
+<td>未发现 2026-05-24 硬对齐 AI 要闻</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

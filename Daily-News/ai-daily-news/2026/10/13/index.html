@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-13 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-13</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-13</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：可观测性和 Agent 运行时在补正确性与鉴权，GitHub 把 Anthropic 密钥纳入默认推送保护；Gemini 4 Argon 的官方发布时间落在北京时间 10-14，本日记入边界，不展开。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方博客、GitHub Releases、GitHub Changelog、Langfuse &#x2F; LangChain &#x2F; LangGraph &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; Code Graph</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>Langfuse 4.57&#x2F;4.58 连续补 FIPS、API Key 与 OTEL 媒体；LangGraph 1.2.15 修 DeltaChannel 与中断；OpenClaw 2026.10.3 继续清升级阻塞</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Langfuse API Key 过期与停用新 Key 的 bcrypt；LangChain <code>SummarizationMiddleware</code> 可注入 summarizer；密钥扫描默认拦截 Anthropic service&#x2F;user key</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code &#x2F; Codex 稳定版无新 tag（0.163 alpha 无说明，不展开）。OpenClaw 见 2026.10.3。Hermes 无新 tag。Spring AI、Spring Alibaba AI、Code Graph 无核验 release。Langfuse、LangChain&#x2F;LangGraph 见下表。Loop Engineering 无独立新文。skills 仅 Langfuse 补 CLI 安装说明。Gemini 4 Argon 博客 Published <code>2026-10-13T16:00:00Z</code>（北京时间 10-14 00:00），Copilot 条目 Published <code>2026-10-13T18:39:56Z</code>（北京时间 10-14 02:39），留待下一窗口</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.57.0">v4.57.0</a></td>
+<td>2026-10-13（Published 10-12 17:20Z，北京时间 10-13 01:20）</td>
+<td>开源发布</td>
+<td>FIPS 拒绝会算 MD5 的存储、密码改 PBKDF2；API Key 可过期且新 Key 不再算 bcrypt；决策模型评估器转正；从原始 OTEL 抽内联媒体</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.58.0">v4.58.0</a></td>
+<td>2026-10-13（Published 07:05Z，北京时间 15:05）</td>
+<td>开源发布</td>
+<td>重置密码邮件强制 Turnstile；OTEL 媒体先于 TypeScript 解析并加上传并发&#x2F;字节上限；Topics 改走项目自己的 LLM 连接；Ask AI 换 Haiku 5.5</td>
+</tr>
+<tr>
+<td>LangChain</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain==1.4.5">langchain 1.4.5</a></td>
+<td>2026-10-13（Published 10-12 19:28Z，北京时间 10-13 03:28）</td>
+<td>开源发布</td>
+<td><code>SummarizationMiddleware</code> 接受自定义 <code>summarizer</code>，摘要步骤可以换模型或换实现</td>
+</tr>
+<tr>
+<td>LangGraph</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.15">langgraph 1.2.15</a></td>
+<td>2026-10-13（Published 10-12 22:38Z，北京时间 10-13 06:38）</td>
+<td>开源发布</td>
+<td>写入 messages DeltaChannel 的消息补 id；<code>interrupt_before</code> 在 drain 前仍会停下；失败的 Delta 写入不再落检查点</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.10.3">2026.10.3</a></td>
+<td>2026-10-13（Published 13:49Z，北京时间 21:49）</td>
+<td>开源发布</td>
+<td>清掉会挡住下一次升级的残留记录；受影响的 Doctor 修复保留登录态和记忆文件；压缩或供应商回复中断后对话还能续上</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/">Secret scanning 默认拦截 Anthropic 密钥</a></td>
+<td>2026-10-13</td>
+<td>官方发布</td>
+<td>新增 <code>anthropic_service_api_key</code> 与 <code>anthropic_user_api_key</code>，推送保护默认开启；Salesforce、Cloudsmith 进入检测</td>
+</tr>
+<tr>
+<td>OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/higgsfield-longer-videos-voice/">Higgsfield 把 AI 视频从约 1 分钟拉到 10 分钟以上</a></td>
+<td>2026-10-13</td>
+<td>企业案例</td>
+<td>客户故事，不是新模型发布；说明长视频生成已有可对外讲述的生产用法</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LLM 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.57.0">Langfuse v4.57.0</a></td>
+<td>FIPS 存储约束、API Key 生命周期、OTEL 媒体提取</td>
+<td>自建 Langfuse 或接 Spring&#x2F;OTel 的团队</td>
+</tr>
+<tr>
+<td>Agent 检查点</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.15">langgraph 1.2.15</a></td>
+<td>DeltaChannel、interrupt、fork 后的检查点归属</td>
+<td>用 LangGraph 做长任务和人机中断的人</td>
+</tr>
+<tr>
+<td>密钥治理</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/">Anthropic key push protection</a></td>
+<td>服务密钥与用户密钥分开检测，公开仓库默认阻断</td>
+<td>把 Claude API Key 放进 CI 的仓库管理员</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：这一天的工程增量在「摘要可替换、检查点不写脏、密钥默认拦住」，没有新的框架大版本。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>摘要中间件</td>
+<td>langchain 1.4.5 允许注入 summarizer</td>
+<td>长对话压缩不要绑死默认摘要模型，方便按成本换小模型</td>
+</tr>
+<tr>
+<td>检查点</td>
+<td>1.2.15 把中断、fork、失败写入和消息 id 收拢</td>
+<td>恢复运行前先确认检查点没有跨过失败写入</td>
+</tr>
+<tr>
+<td>可观测</td>
+<td>4.58 的 Topics 使用项目自己的 LLM 连接</td>
+<td>主题聚类的密钥和配额跟业务项目走，不要共用一把全局 Key</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>2026.10.3 以升级恢复为主</td>
+<td>从 10.1&#x2F;10.2 升上来仍要先看 Doctor，不要跳过残留收据</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.57.0">Langfuse v4.57.0</a></td>
+<td>API Key 与 FIPS 两项会改变自建部署的存储和鉴权假设</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.15">langgraph 1.2.15</a></td>
+<td>中断和 DeltaChannel 的修复清单适合对照自己的恢复测试</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/higgsfield-longer-videos-voice/">Higgsfield 客户故事</a></td>
+<td>看长视频产品怎么讲效果，不把它当成模型规格</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-13 00:00:00 到 2026-10-13 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, github.blog, openai.com</li>
+<li>同日 GitHub Changelog 索引里还有 App 最小权限、Code Quality 驳回审计、企业托管设置启动拉取、Dependabot 撤回告警、预算搜索、AI Scan 指标；条目页未逐篇打开，见 <a target="_blank" rel="noopener" href="https://github.blog/changelog/month/10-2026/">10 月索引</a></li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Langfuse v4.57.0</td>
+<td>2026-10-13（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.57.0">https://github.com/langfuse/langfuse/releases/tag/v4.57.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.58.0</td>
+<td>2026-10-13</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.58.0">https://github.com/langfuse/langfuse/releases/tag/v4.58.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langchain 1.4.5</td>
+<td>2026-10-13（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain==1.4.5">https://github.com/langchain-ai/langchain/releases/tag/langchain==1.4.5</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langgraph 1.2.15</td>
+<td>2026-10-13（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.15">https://github.com/langchain-ai/langgraph/releases/tag/1.2.15</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw 2026.10.3</td>
+<td>2026-10-13</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.10.3">https://github.com/openclaw/openclaw/releases/tag/v2026.10.3</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Secret scanning blocks Anthropic keys</td>
+<td>2026-10-13</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/">https://github.blog/changelog/2026-10-13-secret-scanning-blocks-anthropic-keys-by-default-adds-salesforce/</a></td>
+</tr>
+<tr>
+<td>企业案例</td>
+<td>Higgsfield longer videos</td>
+<td>2026-10-13</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/higgsfield-longer-videos-voice/">https://openai.com/index/higgsfield-longer-videos-voice/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

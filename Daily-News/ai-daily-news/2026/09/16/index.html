@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-16 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-16</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-16</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 16 日主线是 <strong>OpenAI 把广告做成「点广告后进 Sponsored Agent」</strong>，以及 <strong>GitHub 把 AI Scan &#x2F; Copilot 额度审批做成组织级开关</strong>；HF 日刊继续堆 <strong>harness &#x2F; RSI &#x2F; skill 路由</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、广告&#x2F;经济研究、GitHub changelog、HF 日刊、专项主题、政策监管</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）对话广告从横幅变成可点进的商家 Agent；2）安全扫描不再绑死 CodeQL default setup；3）论文侧把 harness 自改进和 native skill routing 写进同一天</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Sponsored Agents（美国部分广告主测试）；GitHub AI Scan 解绑 CodeQL；ScienceBuddy &#x2F; ModularRSI &#x2F; The Router Within</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：第三方 changelog 记 2.1.273 为 9&#x2F;15，不回填。Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain changelog &#x2F; Code Graph：未见 9&#x2F;16 新稳定发布。Loop &#x2F; skills：HF《ModularRSI》《The Router Within》《Generalized Agent Iteration》。Anthropic：当日为 AWS 上 Claude 三路径 webinar，不是新模型。政策：未见可核验官方新公告</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>广告 &#x2F; Agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/reimagining-advertising-with-ai/">Reimagining advertising with AI</a></td>
+<td>2026-09-16</td>
+<td>官方发布</td>
+<td>点 ChatGPT 广告后可进商家 Sponsored Agent；Ads Manager 用自然语言改投放；HubSpot &#x2F; Shopify 接入。美国测试，对话与独立回答隔离</td>
+</tr>
+<tr>
+<td>劳动研究</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/unlocking-new-ways-of-working/">How workers are unlocking new ways of working</a></td>
+<td>2026-09-16</td>
+<td>官方研究</td>
+<td>150 万条工作消息：跨职业任务从 13.1% 升到 25.9%。岗位扩张先于改职称</td>
+</tr>
+<tr>
+<td>代码安全</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup/">Code scanning AI Scan no longer requires CodeQL default setup</a></td>
+<td>2026-09-16</td>
+<td>官方发布</td>
+<td>PR AI Scan 不再要求仓库开 CodeQL default setup；仍须组织级开启。GHES 不支持</td>
+</tr>
+<tr>
+<td>Copilot 治理</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available/">Copilot budget increase requests are generally available</a></td>
+<td>2026-09-16</td>
+<td>官方发布</td>
+<td>额度用尽可当场申请加预算，审批后立刻恢复。Business &#x2F; Enterprise 按量计费</td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-16">HF Daily Papers 2026-09-16</a></td>
+<td>2026-09-16</td>
+<td>论文原文</td>
+<td>ScienceBuddy、HarnessVLN、ModularRSI、The Router Within、Generalized Agent Iteration、StepAudio 3</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>对话广告</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/reimagining-advertising-with-ai/">Sponsored Agents</a></td>
+<td>商家 Agent 必须与 ChatGPT 独立回答分开；用户主动点进</td>
+<td>做增长&#x2F;广告接入的人</td>
+</tr>
+<tr>
+<td>PR 安全</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup/">AI Scan changelog</a></td>
+<td>组织开了 AI Scan，仓库没 CodeQL 也能扫 PR</td>
+<td>管 GHAS 的安全同学</td>
+</tr>
+<tr>
+<td>harness &#x2F; RSI</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-16">HF Daily Papers 9&#x2F;16</a></td>
+<td>冻结模型上挖 native skill routing；harness 模块化自改进</td>
+<td>做 skill marketplace 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程增量在 <strong>「广告也是一条受控 Agent 会话」</strong> 和 <strong>「组织级额度&#x2F;扫描开关」</strong>，不在框架发版。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>商家 Agent</td>
+<td>Sponsored Agents 与主对话隔离</td>
+<td>任何「代言式 Agent」都要显式标注赞助，并禁止污染原会话</td>
+</tr>
+<tr>
+<td>Copilot 预算</td>
+<td>成员自助申请加额度</td>
+<td>用量闸门应允许当场申诉，而不是静默 429</td>
+</tr>
+<tr>
+<td>Loop &#x2F; skills</td>
+<td>ModularRSI、The Router Within</td>
+<td>skill 路由最好从冻结模型里挖，而不是永远外挂分类器</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; LangChain changelog &#x2F; Spring &#x2F; Code Graph &#x2F; Claude Code</td>
+<td>无 9&#x2F;16 稳定更新</td>
+<td>专项记空</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/reimagining-advertising-with-ai/">Reimagining advertising with AI</a></td>
+<td>短官方文，把广告从展示改成可点进的 Agent</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-16">HF Daily Papers 2026-09-16</a></td>
+<td>一天内同时出现 harness RSI 和 native skill routing</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/unlocking-new-ways-of-working/">Work at the Frontier</a></td>
+<td>用复发率看哪些跨岗任务会变成日常</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-16 00:00:00 到 2026-09-16 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, github.blog, huggingface.co</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Reimagining advertising with AI</td>
+<td>2026-09-16</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/reimagining-advertising-with-ai/">https://openai.com/index/reimagining-advertising-with-ai/</a></td>
+</tr>
+<tr>
+<td>官方研究</td>
+<td>How workers are unlocking new ways of working</td>
+<td>2026-09-16</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/unlocking-new-ways-of-working/">https://openai.com/index/unlocking-new-ways-of-working/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Code scanning AI Scan no longer requires CodeQL default setup</td>
+<td>2026-09-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup/">https://github.blog/changelog/2026-09-16-code-scanning-ai-scan-no-longer-requires-codeql-default-setup/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot budget increase requests are generally available</td>
+<td>2026-09-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available/">https://github.blog/changelog/2026-09-16-copilot-budget-increase-requests-are-generally-available/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Hugging Face Daily Papers</td>
+<td>2026-09-16</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-16">https://huggingface.co/papers/date/2026-09-16</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

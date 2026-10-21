@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        初始化自己的个人博客 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">初始化自己的个人博客</div>
+        <div class="post-info">
+          
+          
+            
+            
+              
+                
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          
+          
+  
+    
+      <a href="/Jottings/tag/init/" class="post-tag">init</a>
+    
+  
+    
+      <a href="/Jottings/tag/bolo/" class="post-tag">bolo</a>
+    
+  
+
+
+          <span class="post-date">2023-09-15</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p>这里是我的第一篇文章，介绍如何用 GitHub 托管自己的 Hexo 博客。</p>
+<span id="more"></span>
+
+<p>下面三处资料分别补了本地建站、绑定 GitHub，以及在文章里放图片。第三处原文把两个地址粘在了一起，这里拆开。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="http://www.taodudu.cc/news/show-3087055.html?action=onClick">本地创建 Hexo 博客</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60578464">绑定 GitHub、切换主题、使用自己的域名</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/codehome/p/8428738.html">在文章里追加图片</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/f72aaad7b852">在文章里追加图片（另一篇）</a></li>
+</ul>
+<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p><strong>基础环境</strong></p>
+<ol>
+<li>注册自己的 GitHub 账号</li>
+<li>电脑上安装：<ul>
+<li>node</li>
+<li>git</li>
+</ul>
+</li>
+</ol>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><ol>
+<li><strong>在 GitHub 创建一个属于自己的仓库</strong><ul>
+<li>注意事项：仓库名必须和 GitHub 用户名相同，否则可能找不到 CSS。形式是 <strong>userName.github.io</strong></li>
+</ul>
+</li>
+</ol>
+<img src="/images/init/InitHexoStep1.png" alt="创建 GitHub 仓库">
+
+<hr>
+<img src="/images/init/InitHexoStep2.png" alt="仓库名称与用户名一致">
+
+<ol start="2">
+<li><strong>在仓库的 Settings 里打开 GitHub Pages，等部署完成就可以看到页面</strong></li>
+</ol>
+<img src="/images/init/InitHexoStep3.png" alt="打开 GitHub Pages">
+
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><ol>
+<li><strong>用 git 把项目拉到本地</strong><ul>
+<li>在本地建一个目录，例如 Github_blob</li>
+<li>把远程仓库 clone 下来</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/932687738/932687738.github.io.git</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>初始化博客项目</strong><ul>
+<li>在仓库里新建一个目录。初始化 Hexo 时，这个文件夹必须是空的，例如 hexo</li>
+<li>安装 hexo-cli，再初始化项目</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br><span class="line">$ hexo init &lt;替换为当前博客文件夹，例如上面创建的 hexo 目录的全路径&gt;</span><br><span class="line">$ <span class="built_in">cd</span> hexo</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>初始化后的目录</strong></li>
+</ol>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">hexo/</span><br><span class="line">├── _config.yml     # 网站的配置信息</span><br><span class="line">├── package.json    # 应用程序的信息</span><br><span class="line">├── scaffolds       # 模版文件夹</span><br><span class="line">├── source          # 存放用户资源，Markdown 文档</span><br><span class="line">│   ├── _drafts</span><br><span class="line">│   └── _posts</span><br><span class="line">├── themes          # 主题文件夹</span><br><span class="line">└── public          # 网站文件</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong>修改 <code>_config.yml</code></strong></li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">你博客的标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">显示在浏览器上搜索的时候显示的标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">描述</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">显示作者</span></span><br><span class="line"><span class="attr">email:</span> <span class="string">邮箱</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">Asia/Shanghai</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://username.github.io</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li><strong>本地启动</strong></li>
+</ol>
+<p>如果页面打不开，多半是端口被占用了。Ctrl+C 关掉服务器，再用 <code>hexo server -p 5000</code> 换一个端口。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><ol>
+<li><strong>安装 hexo-deployer-git</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>修改 <code>_config.yml</code></strong></li>
+</ol>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repository:</span> <span class="string">https://github.com/932687738/932687738.github.io.git</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+
+<p><code>branch</code> 要和 GitHub 仓库 Settings 里 Pages 使用的分支一致。</p>
+<ol start="3">
+<li><strong>上传到 GitHub。</strong> 等几分钟，部署完成就能看到效果。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<h3 id="第四步"><a href="#第四步" class="headerlink" title="第四步"></a>第四步</h3><ol>
+<li><strong>追加图片</strong><ul>
+<li>把 <code>_config.yml</code> 里的 <code>post_asset_folder</code> 设为 true</li>
+<li>生成文章后，把图片放到与文章同名的文件夹里</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-asset-image --save</span><br><span class="line">$ hexo n 文件名</span><br></pre></td></tr></table></figure>
+
+<h3 id="第五步"><a href="#第五步" class="headerlink" title="第五步"></a>第五步</h3><ol>
+<li><strong>找一个主题</strong><ul>
+<li>打开 <a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo 主题列表</a>，挑一个喜欢的</li>
+</ul>
+</li>
+</ol>
+<img src="/images/init/InitHexoThemeTranquility.png" alt="Tranquility 主题">
+
+<ol start="2">
+<li><p><strong>下载主题</strong></p>
+<ul>
+<li>用 Visit preview site 可以先看效果</li>
+<li>从 Tranquility 的 GitHub 仓库下载</li>
+</ul>
+</li>
+<li><p><strong>启用主题</strong></p>
+<ul>
+<li>放到博客项目的 <code>themes</code> 目录，可以改名，也可以沿用原名</li>
+<li>把 <code>_config.yml</code> 里的 <code>theme</code> 改成这个文件夹的名字</li>
+<li>有的主题到这里就结束了，有的还要按它自己的说明再配一次</li>
+</ul>
+</li>
+</ol>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/images/avatar.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/images/qr_code.png" />
+  </div>
+  <div class="like-text">“请作者喝杯咖啡”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    喜欢作者
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2023/09/16/markdown/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">上一篇</span>
+      </div>
+      <div>常用的 markdown 语法</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <div class="post-nav-item-right"></div>
+  
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>

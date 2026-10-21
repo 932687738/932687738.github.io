@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-06-09 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-06-09</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/06/">2026-06</a>
+          <span class="post-date">2026-06-09</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-06-09</code> 是 <strong>「Mythos 首次公众化（Fable 5）+ WWDC 次日 Apple×Google 联合声明 + 前沿模型安全与成本双线」</strong>——Anthropic 发布 <strong>Claude Fable 5 &#x2F; Mythos 5</strong>（Mythos-class 首次 GA，含 cyber&#x2F;bio 护栏与 <strong>Opus 4.8 fallback</strong>）；Apple 与 Google 发布 <strong>Gemini 驱动的 AFM 下一代</strong> 联合声明，并因 <strong>DMA</strong> 宣布 <strong>欧盟 iOS&#x2F;iPadOS 暂不提供 Siri AI</strong>；产业侧 <strong>SpaceX AI1 卫星 + 6&#x2F;12 IPO</strong>、<strong>Miasma 蠕虫</strong> 持续发酵、<strong>Apify MCP Connectors</strong> 上线。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic 官方；Apple&#x2F;Google 官方；TechCrunch&#x2F;Axios&#x2F;CNBC；arXiv 6&#x2F;9；Apify；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Mythos 产品化</strong>：Fable 5 <strong>$10&#x2F;$50 per Mtok</strong>、<strong>6&#x2F;22 前</strong> 订阅含免费窗口；<strong>端侧 Agent 监管分化</strong>：Siri AI 在 <strong>EU&#x2F;中国</strong> 受阻；<strong>Agent 供应链安全</strong>：Miasma 针对 <strong>Claude Code&#x2F;Gemini CLI&#x2F;Cursor</strong> 配置触发</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 <strong>claude-fable-5</strong> API 与 <strong>30 天 retention</strong> 企业条款；EU&#x2F;中国产品路线对照 <strong>Private Cloud Compute + Gemini</strong> 架构；CI 扫描 <strong><code>.claude/settings.json</code> + <code>[skip ci]</code></strong> 恶意 commit</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>6&#x2F;9</strong> 新版本（Fable 5 驱动 API&#x2F;CLI 后端升级）；<strong>Codex</strong>：无 <strong>6&#x2F;9</strong> 新 release；<strong>OpenClaw</strong>：无 <strong>6&#x2F;9</strong> 官方 release（<strong>2026.6.5 MCP hardening 为 6&#x2F;6</strong>）；<strong>Hermes</strong>：无 <strong>6&#x2F;9</strong> 官方 release；<strong>Spring AI</strong>：无 <strong>6&#x2F;9</strong> 官方 release；<strong>skills</strong>：无 <strong>6&#x2F;9</strong> marketplace 新公告（Fable 5 能力外溢至 <strong>Agent&#x2F;Deep Research</strong> 场景）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Claude Fable 5 and Claude Mythos 5</a></td>
+<td><strong>2026-06-09</strong></td>
+<td>官方发布</td>
+<td><strong>Mythos-class 首次 GA</strong>；cyber&#x2F;bio&#x2F;chemistry&#x2F;distillation 高风险查询 <strong>fallback Opus 4.8</strong>（&lt;5% sessions）；<strong>Mythos 5</strong> 限 Glasswing&#x2F;可信访问</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 定价</td>
+<td><a target="_blank" rel="noopener" href="https://docs.anthropic.com/en/docs/about-claude/pricing">Claude API Pricing — Fable 5</a></td>
+<td><strong>2026-06-09</strong></td>
+<td>开发者文档</td>
+<td><strong>$10&#x2F;$50 per Mtok</strong>（Opus 4.8 的 2×）；<strong>6&#x2F;22 前</strong> Pro&#x2F;Max&#x2F;Team&#x2F;Enterprise 含 Fable 5</td>
+</tr>
+<tr>
+<td>媒体 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/">Anthropic’s Claude Fable 5（TechCrunch）</a></td>
+<td><strong>2026-06-09</strong></td>
+<td>技术媒体</td>
+<td>披露 <strong>30 天 traffic retention</strong> 防 jailbreak；<strong>6&#x2F;23</strong> 起需 usage credits</td>
+</tr>
+<tr>
+<td>Apple &#x2F; Google</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/">Joint statement from Google and Apple</a></td>
+<td><strong>2026-06-09</strong>（WWDC 期间传播）</td>
+<td>官方声明</td>
+<td><strong>AFM 下一代基于 Gemini</strong>；仍跑 <strong>Apple 设备 + Private Cloud Compute</strong></td>
+</tr>
+<tr>
+<td>Apple &#x2F; 监管</td>
+<td><a target="_blank" rel="noopener" href="https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/">Due to DMA, Siri AI delayed in EU</a></td>
+<td><strong>2026-06-09</strong></td>
+<td>政策&#x2F;产品</td>
+<td><strong>欧盟 iOS&#x2F;iPadOS&#x2F;watchOS</strong> 暂无 Siri AI；<strong>macOS&#x2F;visionOS</strong> 仍可用</td>
+</tr>
+<tr>
+<td>算力 &#x2F; IPO</td>
+<td><a target="_blank" rel="noopener" href="https://www.tradingkey.com/analysis/stocks/us-stocks/261954234-elonmusk-spacex-ipo-ai1-tradingkey">SpaceX AI1 satellite + IPO（TradingKey）</a></td>
+<td><strong>2026-06-09</strong></td>
+<td>基础设施</td>
+<td><strong>AI1</strong> 轨道数据中心设计；<strong>6&#x2F;12</strong> 目标 IPO <strong>~$1.77T</strong></td>
+</tr>
+<tr>
+<td>Agent 安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents">Microsoft repos disabled — Miasma worm（StepSecurity）</a></td>
+<td><strong>2026-06-05</strong>（攻击）&#x2F; <strong>6&#x2F;9</strong>（持续报道）</td>
+<td>安全事件</td>
+<td><strong>73 仓库</strong> 被禁；<strong>Claude Code&#x2F;Gemini CLI&#x2F;Cursor&#x2F;VS Code</strong> 配置触发凭证收割</td>
+</tr>
+<tr>
+<td>MCP &#x2F; 工具</td>
+<td><a target="_blank" rel="noopener" href="https://uat.apnews.com/press-release/ein-presswire-newsmatics/press-release-b667f2f5cefd4818b3a5785a0e38855c">Apify announces MCP connectors（AP News）</a></td>
+<td><strong>2026-06-09</strong></td>
+<td>开源&#x2F;平台</td>
+<td>Actor 经 <strong>MCP</strong> 连接 Notion&#x2F;GitHub&#x2F;Slack；用户 OAuth、Actor 不见凭证</td>
+</tr>
+<tr>
+<td>成本治理</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/">Can tech companies learn to love cheaper models?（TechCrunch）</a></td>
+<td><strong>2026-06-09</strong></td>
+<td>行业分析</td>
+<td>Harvey×Fireworks <strong>3× 推理成本下降</strong> 案例；大&#x2F;小模型路由成 FinOps 焦点</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mythos 产品化</td>
+<td><strong>Anthropic Fable 5 公告</strong></td>
+<td>护栏+fallback、Glasswing&#x2F;Mythos 5、定价窗口</td>
+<td>平台&#x2F;安全&#x2F;研发</td>
+</tr>
+<tr>
+<td>端侧 AI 监管</td>
+<td><strong>Apple DMA 说明</strong></td>
+<td>Trusted System Agent 提案被拒；EU 功能缺口</td>
+<td>移动端&#x2F;合规</td>
+</tr>
+<tr>
+<td>Agent 供应链</td>
+<td><strong>StepSecurity Miasma 分析</strong></td>
+<td><code>.github/setup.js</code>、多 IDE 配置触发</td>
+<td>DevSecOps</td>
+</tr>
+<tr>
+<td>MCP 集成</td>
+<td><strong>Apify MCP Connectors 文档</strong></td>
+<td>用户 OAuth、工具级 ACL</td>
+<td>Agent 平台工程师</td>
+</tr>
+<tr>
+<td>模型路由</td>
+<td><strong>TechCrunch：cheaper models</strong></td>
+<td>Opus+GLM 混合、mini 模型替代</td>
+<td>FinOps&#x2F;架构</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：6&#x2F;9 呈现 <strong>「最强 cyber-capable 模型 cautiously GA + OS 级 Agent 地缘&#x2F;regulatory 分叉 + coding agent 供应链攻击常态化」</strong>——Fable 5 把 Mythos 能力带入订阅&#x2F;API，但用 <strong>fallback + retention</strong> 换安全；Apple&#x2F;Google 联合声明确立 <strong>Gemini×Private Cloud Compute</strong> 模板；Miasma 则证明 <strong>Agent IDE 配置即攻击面</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mythos GA</td>
+<td><strong>Fable 5 &#x2F; Mythos 5</strong></td>
+<td>高风险域应 <strong>模型路由+fallback</strong> 而非单一 frontier</td>
+</tr>
+<tr>
+<td>端侧 Agent</td>
+<td><strong>Siri AI EU 延迟</strong></td>
+<td>全球产品需 <strong>regional feature matrix</strong> 与 <strong>DMA&#x2F;本地化</strong> 预案</td>
+</tr>
+<tr>
+<td>MCP 生态</td>
+<td><strong>Apify Connectors</strong></td>
+<td>第三方 Actor + 用户 OAuth &#x3D; 新 <strong>工具链 ACL</strong> 模式</td>
+</tr>
+<tr>
+<td>Agent 安全</td>
+<td><strong>Miasma</strong></td>
+<td>仓库打开即执行：<strong>CI 强制扫描 agent 配置变更</strong></td>
+</tr>
+<tr>
+<td>成本</td>
+<td><strong>小模型路由</strong></td>
+<td>长任务应用 <strong>effort tier + 模型 cascade</strong> 降 bill</td>
+</tr>
+<tr>
+<td>专项空窗</td>
+<td>Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;skills 无 6&#x2F;9 release</td>
+<td>跟进 <strong>6&#x2F;6 OpenClaw MCP fix</strong> 与 <strong>6&#x2F;2 dynamic workflows</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Anthropic Fable 5 官方文</strong></td>
+<td>2026 <strong>Mythos-class 公众化</strong> 的护栏&#x2F;定价&#x2F;访问分层样板</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Apple DMA + Siri AI 公告</strong></td>
+<td>理解 <strong>OS Agent 在欧盟为何停摆</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Google×Apple 联合声明</strong></td>
+<td><strong>Gemini AFM</strong> 官方口径与隐私边界</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Miasma 供应链分析</strong></td>
+<td><strong>AI coding agent</strong> 时代的新型 worm 模式</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>DuMate-DeepResearch 论文</strong></td>
+<td>可审计 <strong>multi-agent deep research</strong> 工程框架</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-06-09 00:00:00 到 2026-06-09 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, docs.anthropic.com, techcrunch.com, blog.google, apple.com, tradingkey.com, stepsecurity.io, apnews.com, arxiv.org, axios.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Claude Fable 5 and Mythos 5</td>
+<td>2026-06-09</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-fable-5-mythos-5">https://www.anthropic.com/news/claude-fable-5-mythos-5</a></td>
+</tr>
+<tr>
+<td>开发者文档</td>
+<td>Claude Fable 5 pricing</td>
+<td>2026-06-09</td>
+<td><a target="_blank" rel="noopener" href="https://docs.anthropic.com/en/docs/about-claude/pricing">https://docs.anthropic.com/en/docs/about-claude/pricing</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>TechCrunch Fable 5</td>
+<td>2026-06-09</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/">https://techcrunch.com/2026/06/09/anthropics-claude-fable-5-is-a-version-of-mythos-the-public-can-access-today/</a></td>
+</tr>
+<tr>
+<td>官方声明</td>
+<td>Google×Apple joint statement</td>
+<td>2026-06-09</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/">https://blog.google/company-news/inside-google/company-announcements/joint-statement-google-apple/</a></td>
+</tr>
+<tr>
+<td>政策&#x2F;产品</td>
+<td>Apple DMA Siri delay</td>
+<td>2026-06-09</td>
+<td><a target="_blank" rel="noopener" href="https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/">https://www.apple.com/newsroom/2026/06/due-to-dma-siri-ai-delayed-in-eu-for-ios-27-and-ipados-27/</a></td>
+</tr>
+<tr>
+<td>基础设施</td>
+<td>SpaceX AI1 &#x2F; IPO</td>
+<td>2026-06-09</td>
+<td><a target="_blank" rel="noopener" href="https://www.tradingkey.com/analysis/stocks/us-stocks/261954234-elonmusk-spacex-ipo-ai1-tradingkey">https://www.tradingkey.com/analysis/stocks/us-stocks/261954234-elonmusk-spacex-ipo-ai1-tradingkey</a></td>
+</tr>
+<tr>
+<td>安全事件</td>
+<td>Miasma worm</td>
+<td>2026-06-05&#x2F;6&#x2F;9 传播</td>
+<td><a target="_blank" rel="noopener" href="https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents">https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents</a></td>
+</tr>
+<tr>
+<td>开源&#x2F;平台</td>
+<td>Apify MCP connectors</td>
+<td>2026-06-09</td>
+<td><a target="_blank" rel="noopener" href="https://uat.apnews.com/press-release/ein-presswire-newsmatics/press-release-b667f2f5cefd4818b3a5785a0e38855c">https://uat.apnews.com/press-release/ein-presswire-newsmatics/press-release-b667f2f5cefd4818b3a5785a0e38855c</a></td>
+</tr>
+<tr>
+<td>行业分析</td>
+<td>Cheaper models</td>
+<td>2026-06-09</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/">https://techcrunch.com/2026/06/09/can-tech-companies-learn-to-love-cheaper-models/</a></td>
+</tr>
+<tr>
+<td>论文</td>
+<td>DuMate-DeepResearch</td>
+<td>2026-06（arXiv）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/html/2606.07299v1">https://arxiv.org/html/2606.07299v1</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-06-05 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-06-05</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/06/">2026-06</a>
+          <span class="post-date">2026-06-05</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-06-05</code> 是 <strong>「端侧 Gemma 4 QAT 落地 + 前沿 AI 协调暂停倡议 + Token 经济学危机显性化」</strong>——Google 发布 <strong>Gemma 4 QAT</strong> 将 E2B 压至 <strong>1GB</strong> 级端侧内存；Anthropic 呼吁行业建立 <strong>可验证协调暂停</strong> 机制并披露 <strong>Claude 已写 80%+ 合并代码</strong>；产业侧 <strong>Google×SpaceX 9.2 亿美元&#x2F;月算力桥接</strong>、<strong>Tokenomics Foundation</strong> 与 <strong>Uber&#x2F;Cursor 预算失控</strong> 报道同日密集出现；工程侧 <strong>GPT-5.2 Thinking 退役</strong>、<strong>Claude Code Workflows 预览</strong> 与 <strong>Agent Memory 系统表征论文</strong> 形成对照。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Google 官方；Anthropic API&#x2F;治理；OpenAI 退役&#x2F;运维；TechCrunch&#x2F;The Next Web；arXiv 6&#x2F;5；NVIDIA 相邻；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>端侧效率</strong>：QAT 把 Gemma 4 推向手机&#x2F;笔电本地推理；<strong>治理前置</strong>：递归自改进触发下的行业级刹车讨论升温；<strong>Token 账单</strong>：订阅→按量后企业 FinOps&#x2F;Tokenomics 标准化需求爆发</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 <strong>Gemma 4 QAT</strong>（Q4_0 + mobile schema）在 llama.cpp&#x2F;Ollama&#x2F;LiteRT-LM 的部署路径；长周期 Agent 对照 <strong>Agent Memory</strong> 论文的 write&#x2F;read 成本拆分；企业侧启动 <strong>token 可观测 + 路由&#x2F;配额</strong> 治理</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>Workflows 研究预览</strong>、<strong>Auto mode</strong> 扩面、<strong>Opus 4.1 弃用公告</strong>（API 文档 <strong>2026-06-05</strong> 条目）；<strong>Codex</strong>：<strong>rusty-v8-v149.2.0</strong> 预发布（<strong>Published 2026-06-05</strong>），社区反馈 <strong>指令遵循退化&#x2F;不安全 patch</strong>；<strong>OpenClaw&#x2F;Hermes</strong>：无 <strong>6&#x2F;5</strong> 官方 release（生态讨论延续）；<strong>Spring AI</strong>：无 <strong>6&#x2F;5</strong> 官方 release（最近 <strong>2.0.0-M8 为 2026-05-27</strong>）；<strong>skills</strong>：无 <strong>6&#x2F;5</strong> 官方 marketplace 新公告，<strong>Agent Skills 安全实证</strong>（arXiv:2602.06547）持续被引用</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Google &#x2F; 端侧</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/">Gemma 4 QAT models: Optimizing model compression for mobile and laptop efficiency</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>官方发布</td>
+<td><strong>QAT</strong> 训练内嵌量化；<strong>E2B 文本版 &lt;1GB</strong>；Q4_0 + mobile 专用 schema；Hugging Face&#x2F;llama.cpp&#x2F;Ollama&#x2F;LiteRT-LM 生态同步</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 治理</td>
+<td><a target="_blank" rel="noopener" href="https://thenextweb.com/news/anthropic-urges-a-coordinated-verifiable-pause-for-frontier-ai">Anthropic urges a coordinated, verifiable pause for frontier AI（The Next Web）</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>政策&#x2F;治理</td>
+<td>针对 <strong>递归自改进</strong> 提出 <strong>多实验室可验证暂停</strong>；披露 <strong>5 月 Claude 写 80%+ 合并代码</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 企业</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/webinars/securing-governing-claude-the-compliance-api-and-security-integrations">Securing &amp; Governing Claude: Compliance API webinar</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>官方活动</td>
+<td><strong>Compliance API</strong> 暴露活动&#x2F;聊天&#x2F;文件&#x2F;项目用量，对接企业安全栈</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; API</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">Claude Platform Release Notes — Opus 4.1 deprecation</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>开发者文档</td>
+<td><strong>claude-opus-4-1-20250805</strong> 将于 <strong>2026-08-05</strong> 退役；建议迁移 <strong>Opus 4.8</strong></td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">Claude Code — Workflows research preview（API release notes）</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>产品&#x2F;工程</td>
+<td><strong>Workflows</strong> 多步 agentic 计划；<strong>Auto mode</strong> 扩面长任务；Max 默认 <strong>Opus 4.8 fast mode</strong></td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-5-4/">Introducing GPT-5.4 — GPT-5.2 Thinking retirement note</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>产品生命周期</td>
+<td><strong>GPT-5.2 Thinking</strong> 在模型选择器中 <strong>2026-06-05 退役</strong>（付费用户 Legacy 区保留 3 个月）</td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 运维</td>
+<td><a target="_blank" rel="noopener" href="https://status.openai.com/incidents/01KTBZDS20E3PZ53DH2SCKXN49">Some users may experience issues accessing OpenAI accounts（Status）</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>运维事件</td>
+<td>部分账号被 <strong>误封&#x2F;暂停</strong>，团队恢复访问并处理订阅&#x2F;额度</td>
+</tr>
+<tr>
+<td>算力 &#x2F; 云</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/">Google will pay SpaceX $920M per month for compute（TechCrunch）</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>基础设施</td>
+<td><strong>2026-10 至 2029-06</strong> 桥接容量；约 <strong>11 万 NVIDIA GPU</strong>；满足 <strong>Gemini Enterprise</strong> 超预期需求</td>
+</tr>
+<tr>
+<td>成本治理</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/">The token bill comes due（TechCrunch）</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>行业分析</td>
+<td><strong>Uber 4 月烧完全年 AI 预算</strong>；<strong>Cursor 续费 4–5×</strong>；Linux Foundation <strong>Tokenomics Foundation</strong> 7 月启动</td>
+</tr>
+<tr>
+<td>基建 &#x2F; 区域</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/airtrunk-commits-30b-to-build-5gw-of-ai-data-centers-in-india/">AirTrunk commits $30B to build 5GW of AI data centers in India（TechCrunch）</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>基础设施</td>
+<td><strong>2030 年前 5GW</strong> 印度 AI DC；Maharashtra <strong>3GW</strong> 意向</td>
+</tr>
+<tr>
+<td>安全 &#x2F; 政策</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/nsa-said-to-be-readying-anthropics-mythos-for-use-in-cyber-operations/">NSA said to be readying Anthropic’s Mythos for cyber operations（TechCrunch）</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>政策&#x2F;安全</td>
+<td>报道称 NSA 部署工程师协助使用 <strong>Mythos</strong>；与联邦 <strong>供应链风险</strong> 禁令背景交织</td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.06448">Agent Memory: Characterization and System Implications（arXiv:2606.06448）</a></td>
+<td><strong>2026-06</strong>（arXiv 编号）</td>
+<td>论文原文</td>
+<td>首次 <strong>Agent Memory 系统级表征</strong>；write&#x2F;read 成本不对称；10 条部署建议</td>
+</tr>
+<tr>
+<td>Codex &#x2F; 发布</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rusty-v8-v149.2.0">Codex rusty-v8-v149.2.0（prerelease）</a></td>
+<td><strong>2026-06-05</strong></td>
+<td>开源预发布</td>
+<td>V8 绑定层更新；非应用层 feature release</td>
+</tr>
+<tr>
+<td>生命科学（传播）</td>
+<td><a target="_blank" rel="noopener" href="https://cfotech.co.uk/story/openai-updates-gpt-rosalind-for-life-sciences-research">OpenAI updates GPT-Rosalind（媒体报道）</a></td>
+<td><strong>2026-06-03</strong>（官方）&#x2F; <strong>2026-06-05</strong>（传播）</td>
+<td>相邻日期&#x2F;中国时间窗口传播</td>
+<td><strong>GeneBench</strong> 等评测 <strong>31% 更少 token</strong>；全球 <strong>trusted-access</strong> 扩展</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>端侧推理</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/">Gemma 4 QAT 官方文</a></td>
+<td>QAT vs PTQ、mobile 2-bit 策略、MTP QAT 权重</td>
+<td>边缘&#x2F;本地 Agent 研发</td>
+</tr>
+<tr>
+<td>Agent 记忆系统</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.06448">Agent Memory 论文</a></td>
+<td>四轴分类、construction&#x2F;retrieval&#x2F;generation 成本归因</td>
+<td>平台&#x2F;infra 工程师</td>
+</tr>
+<tr>
+<td>企业治理</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/webinars/securing-governing-claude-the-compliance-api-and-security-integrations">Anthropic Compliance API 研讨会</a></td>
+<td>程序化审计、活动事件导出</td>
+<td>安全&#x2F;合规团队</td>
+</tr>
+<tr>
+<td>Token 经济学</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/">TechCrunch：Token bill comes due</a></td>
+<td>cost-per-intelligence、模型路由、配额分层</td>
+<td>FinOps&#x2F;工程管理者</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：6&#x2F;5 呈现 <strong>「端侧模型压缩成熟 + Agent 记忆系统工程化 + 企业 Token 治理刚需」</strong> 三线并进——Gemma 4 QAT 让本地 Agent 更接近消费硬件；Agent Memory 论文把 RAG 之后的 <strong>可变状态层</strong> 成本模型化；产业报道则把 <strong>agentic 多步&#x2F;多子 Agent</strong> 的账单问题推到台前。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>端侧 Agent</td>
+<td><strong>Gemma 4 QAT</strong> E2B <strong>&lt;1GB</strong></td>
+<td>本地助手应优先评估 <strong>QAT + 模态裁剪</strong>（去 audio&#x2F;vision encoder）</td>
+</tr>
+<tr>
+<td>记忆架构</td>
+<td><strong>Agent Memory</strong> 系统表征</td>
+<td>区分 <strong>construction-heavy</strong> vs <strong>query-heavy</strong> 设计；异步写入带来 <strong>staleness</strong></td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><strong>Workflows</strong> 研究预览</td>
+<td>多步计划应版本化并可审计，避免与 <strong>ultracode</strong> 触发词混淆</td>
+</tr>
+<tr>
+<td>Token 治理</td>
+<td><strong>Tokenomics Foundation</strong></td>
+<td>尽快建立 <strong>per-team token budget + model router + 审计对账</strong></td>
+</tr>
+<tr>
+<td>专项空窗</td>
+<td>OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;MCP 无 6&#x2F;5 官方 release</td>
+<td>跟进 <strong>5 月 OpenRouter 排行</strong> 与 <strong>6&#x2F;2 Build&#x2F;COMPUTEX</strong> 发布即可</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Gemma 4 QAT 官方发布</strong></td>
+<td>2026 端侧开源模型的 <strong>量化训练</strong> 官方配方与工具链</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Agent Memory（2606.06448）</strong></td>
+<td>长周期 Agent <strong>记忆层</strong> 的首个系统级成本画像</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Anthropic 协调暂停倡议</strong></td>
+<td>理解 <strong>递归自改进</strong> 触发下的行业协调难题</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch：Token bill</strong></td>
+<td>企业 <strong>Agent 规模化</strong> 后的 FinOps 范式转移</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>Google×SpaceX 算力桥接</strong></td>
+<td>超大规模 <strong>推理容量</strong> 的短期合约与风险条款</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-06-05 00:00:00 到 2026-06-05 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：blog.google, thenextweb.com, anthropic.com, platform.claude.com, openai.com, status.openai.com, techcrunch.com, arxiv.org, github.com, cfotech.co.uk, developer.nvidia.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Gemma 4 QAT</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/">https://blog.google/innovation-and-ai/technology/developers-tools/quantization-aware-training-gemma-4/</a></td>
+</tr>
+<tr>
+<td>政策&#x2F;治理</td>
+<td>Anthropic coordinated pause</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://thenextweb.com/news/anthropic-urges-a-coordinated-verifiable-pause-for-frontier-ai">https://thenextweb.com/news/anthropic-urges-a-coordinated-verifiable-pause-for-frontier-ai</a></td>
+</tr>
+<tr>
+<td>官方活动</td>
+<td>Compliance API webinar</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/webinars/securing-governing-claude-the-compliance-api-and-security-integrations">https://www.anthropic.com/webinars/securing-governing-claude-the-compliance-api-and-security-integrations</a></td>
+</tr>
+<tr>
+<td>开发者文档</td>
+<td>Claude API Jun 5 notes</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">https://platform.claude.com/docs/en/release-notes/overview</a></td>
+</tr>
+<tr>
+<td>产品生命周期</td>
+<td>GPT-5.2 Thinking retirement</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-5-4/">https://openai.com/index/introducing-gpt-5-4/</a></td>
+</tr>
+<tr>
+<td>运维</td>
+<td>OpenAI account access incident</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://status.openai.com/incidents/01KTBZDS20E3PZ53DH2SCKXN49">https://status.openai.com/incidents/01KTBZDS20E3PZ53DH2SCKXN49</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google SpaceX compute deal</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/">https://techcrunch.com/2026/06/05/google-will-pay-spacex-920m-per-month-for-compute/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Token bill comes due</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/">https://techcrunch.com/2026/06/05/the-token-bill-comes-due-inside-the-industry-scramble-to-manage-ais-runaway-costs/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>AirTrunk India 5GW</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/airtrunk-commits-30b-to-build-5gw-of-ai-data-centers-in-india/">https://techcrunch.com/2026/06/05/airtrunk-commits-30b-to-build-5gw-of-ai-data-centers-in-india/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>NSA Mythos report</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/05/nsa-said-to-be-readying-anthropics-mythos-for-use-in-cyber-operations/">https://techcrunch.com/2026/06/05/nsa-said-to-be-readying-anthropics-mythos-for-use-in-cyber-operations/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Agent Memory characterization</td>
+<td>2026-06（arXiv 编号）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.06448">https://arxiv.org/abs/2606.06448</a></td>
+</tr>
+<tr>
+<td>开源预发布</td>
+<td>Codex rusty-v8-v149.2.0</td>
+<td>2026-06-05</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rusty-v8-v149.2.0">https://github.com/openai/codex/releases/tag/rusty-v8-v149.2.0</a></td>
+</tr>
+<tr>
+<td>相邻传播</td>
+<td>GPT-Rosalind update coverage</td>
+<td>2026-06-03（官方）&#x2F; 2026-06-05（传播）</td>
+<td><a target="_blank" rel="noopener" href="https://cfotech.co.uk/story/openai-updates-gpt-rosalind-for-life-sciences-research">https://cfotech.co.uk/story/openai-updates-gpt-rosalind-for-life-sciences-research</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-30 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-30</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-30</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-05-30</code>（Asia&#x2F;Shanghai）主线是 <strong>「云端常驻 Agent 产品化 + 开源 Agent 栈加固 + Copilot 计费范式切换」</strong>——<strong>Google Gemini Spark</strong> 在美向 <strong>AI Ultra</strong> 用户开放 <strong>24&#x2F;7 云端 Agent</strong>（<strong>Gemini 3.5 Flash + Antigravity</strong>）；<strong>OpenClaw <code>v2026.5.28</code></strong> 同日发布并强化 <strong>Codex&#x2F;Copilot Agent 运行时</strong>；<strong>Claude Code <code>v2.1.158</code></strong> 把 <strong>Auto mode</strong> 带到 <strong>Bedrock&#x2F;Vertex&#x2F;Foundry</strong>；<strong>GitHub Copilot</strong> 因 <strong>6 月 1 日 token 计费</strong> 引发开发者强烈反弹；<strong>Anthropic $65B &#x2F; $965B 估值</strong> 与 <strong>戴尔 AI 服务器 +757%</strong> 在当日媒体窗口持续发酵。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Google&#x2F;DeepMind；OpenClaw&#x2F;Claude Code GitHub；GitHub Copilot 官方博客；TechCrunch&#x2F;VentureBeat；arXiv&#x2F;HF；Spring AI&#x2F;spring.io 核验；Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;skills 专项；中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>云端 VM Agent</strong>（Spark）与 <strong>本地 Gateway Agent</strong>（OpenClaw）形成对照——前者强调 <strong>Workspace 原生 + 关盖继续跑</strong>；<strong>Copilot 从 PRU 切到 AI Credits&#x2F;token</strong> 标志 coding agent 进入 <strong>按量付费</strong> 阶段；<strong>OpenClaw 大版本</strong> 集中修复 <strong>Codex session&#x2F;lock&#x2F;compaction</strong> 可靠性</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 <strong>Gemini Spark Skills&#x2F;Schedules</strong> 能否替代部分 <strong>Cron + MCP</strong> 办公自动化；Windows&#x2F;macOS <strong>OpenClaw 2026.5.28</strong> 升级验证 <strong>Codex Supervisor + Copilot agent runtime</strong>；<strong>Copilot 用户</strong> 在 <strong>6&#x2F;1 前</strong> 用 Billing Preview 估算 token 账单；<strong>Claude Code 多云</strong> 团队启用 <strong><code>CLAUDE_CODE_ENABLE_AUTO_MODE=1</code></strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：**<code>v2.1.158</code>** <strong><code>Published: 2026-05-30T02:42:16Z</code> → <code>2026-05-30 10:42:16（Asia/Shanghai）</code><strong>——Bedrock&#x2F;Vertex&#x2F;Foundry <strong>Auto mode</strong>（Opus 4.7&#x2F;4.8）；</strong>Codex</strong>：<strong>无 2026-05-30 新 release</strong>（桌面 <strong>v26.527</strong> 为 <strong><code>2026-05-29</code><strong>）；</strong>OpenClaw</strong>：**<code>v2026.5.28</code>** <strong><code>Published: 2026-05-30T20:06:10Z</code> → <code>2026-05-31 04:06:10（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong> + 同日 <strong><code>2026.5.30-beta.1</code><strong>；</strong>Hermes</strong>：<strong>无 2026-05-30 新 release</strong>（最近 <strong><code>v2026.5.29.2</code> 为 <code>2026-05-29</code><strong>）；</strong>Spring AI</strong>：<strong>未见 2026-05-30 官方博文&#x2F;release</strong>（spring.io 最近仍为 <strong>1.1.1 &#x2F; 2.0.0-M8 预发布</strong>）；<strong>skills</strong>：<strong>无独立 marketplace 发布</strong>；Spark 文档已出现 <strong>Skills&#x2F;Schedules</strong> 工作流概念</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Google &#x2F; Agent 产品</td>
+<td><a target="_blank" rel="noopener" href="https://support.google.com/gemini/answer/17094196?hl=en">Gemini Spark 正式可用（PCMag &#x2F; Google 支持文档）</a></td>
+<td><strong>2026-05-30</strong>（PCMag <strong>Updated May 30, 2026</strong>；I&#x2F;O 后 <strong>5&#x2F;29 起</strong> 向 AI Ultra 美区 rollout）</td>
+<td>产品发布</td>
+<td><strong>24&#x2F;7 云端 VM Agent</strong>：Gmail&#x2F;Calendar&#x2F;Docs&#x2F;Sheets&#x2F;Slides + Connected Apps + 远程浏览器；<strong>Gemini 3.5 Flash + Antigravity</strong>；需 <strong>Google AI Ultra（$100&#x2F;月档）</strong> 与美区 18+</td>
+</tr>
+<tr>
+<td>Google &#x2F; 产品评测</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/30/i-put-googles-24-7-ai-assistant-gemini-spark-to-work-and-its-actually-pretty-useful/">TechCrunch：Gemini Spark 实测</a></td>
+<td><strong><code>May 30, 2026 8:30 AM PDT</code> → <code>2026-05-30 23:30（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>技术媒体</td>
+<td>对比 <strong>OpenClaw 需保持设备唤醒</strong>；指出 <strong>Keep 未集成、iPhone 无法直达 Spark</strong> 等产品缺口</td>
+</tr>
+<tr>
+<td>OpenClaw &#x2F; 开源</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.28">openclaw&#x2F;openclaw <code>v2026.5.28</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-30T20:06:10Z</code> → <code>2026-05-31 04:06:10（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>开源发布</td>
+<td><strong>Codex&#x2F;Copilot agent runtime</strong>、<strong>Codex Supervisor plugin</strong>、<strong>Claude Opus 4.8</strong> 支持；大量 <strong>session lock &#x2F; compaction &#x2F; hook relay</strong> 修复</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.158">anthropics&#x2F;claude-code <code>v2.1.158</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-30T02:42:16Z</code> → <code>2026-05-30 10:42:16（Asia/Shanghai）</code></strong></td>
+<td>开源发布</td>
+<td><strong><code>CLAUDE_CODE_ENABLE_AUTO_MODE=1</code></strong> 在 <strong>Bedrock&#x2F;Vertex&#x2F;Foundry</strong> 启用 <strong>Auto mode</strong>（Opus 4.7&#x2F;4.8）</td>
+</tr>
+<tr>
+<td>GitHub Copilot &#x2F; 计费</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">GitHub Copilot is moving to usage-based billing</a></td>
+<td>官方 <strong>2026-04-27</strong> 宣布；<strong>2026-05-30</strong> 媒体集中讨论 <strong>6&#x2F;1 生效</strong></td>
+<td>官方政策</td>
+<td><strong>PRU → GitHub AI Credits</strong>；按 <strong>input&#x2F;output&#x2F;cached tokens</strong> 计费；<strong>Pro $10 &#x2F; Pro+ $39</strong> 含等额 credits；<strong>Business&#x2F;Enterprise 6–8 月促销 credits</strong></td>
+</tr>
+<tr>
+<td>GitHub Copilot &#x2F; 社区</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/">TechCrunch：Copilot token 计费引开发者不满</a></td>
+<td><strong><code>May 30, 2026 9:30 AM PDT</code> → <code>2026-05-30 00:30（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>技术媒体</td>
+<td>社区担心 <strong>长时 agent 会话</strong> 账单暴涨；反映 <strong>「鼓励重度 agent 使用 → 按 token 收费」</strong> 张力</td>
+</tr>
+<tr>
+<td>Meta &#x2F; 硬件</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/30/meta-is-reportedly-developing-an-ai-pendant/">Meta is reportedly developing an AI pendant（TechCrunch）</a></td>
+<td><strong><code>May 30, 2026 8:59 AM PDT</code> → <code>2026-05-30 23:59（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>技术媒体</td>
+<td>基于 <strong>Limitless 收购</strong> 的 <strong>AI 吊坠</strong> 内测计划；同步 <strong>Wearables for Work</strong> 订阅与 AI 眼镜扩展</td>
+</tr>
+<tr>
+<td>基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/">SoftBank €75B 法国数据中心（TechCrunch）</a></td>
+<td><strong><code>May 30, 2026 2:45 PM PDT</code> → <code>2026-05-31 05:45（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>技术媒体</td>
+<td>规划 <strong>5GW</strong> 容量、<strong>2031 年前 3.1GW</strong> 落地 Hauts-de-France；SoftBank 称 <strong>欧洲最大 AI 基建投资</strong></td>
+</tr>
+<tr>
+<td>资本 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/series-h">Anthropic Series H $65B @ $965B（官方）</a></td>
+<td>官方 <strong><code>2026-05-28</code><strong>；</strong>2026-05-30</strong> 全球媒体持续报道</td>
+<td>官方发布&#x2F;资本</td>
+<td><strong>Samsung&#x2F;SK Hynix&#x2F;Micron</strong> 等 <strong>存储巨头</strong> 入局；<strong>ARR &gt;$47B</strong>；估值 <strong>首超 OpenAI（$852B）</strong></td>
+</tr>
+<tr>
+<td>硬件 &#x2F; 财报</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1738694">戴尔 AI 服务器收入 +757%（5&#x2F;29 财报，5&#x2F;30 报道）</a></td>
+<td>财报 <strong>2026-05-29</strong>；中文社区 <strong>2026-05-30</strong> 转述</td>
+<td>财报&#x2F;媒体</td>
+<td>**AI 服务器 $16.1B&#x2F;季、同比 +757%**；FY 指引 <strong>$500B→$600B</strong>；印证 <strong>推理&#x2F;训练采购</strong> 仍在爆发</td>
+</tr>
+<tr>
+<td>产业 &#x2F; 中国</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1738694">2026 世界智能产业博览会天津（5&#x2F;28–31，5&#x2F;30 报道）</a></td>
+<td>展会 <strong>2026-05-28 至 2026-05-31</strong>；<strong>2026-05-30</strong> 中文简报</td>
+<td>产业活动</td>
+<td><strong>40+ 大模型、740+ 机构</strong> 展示 <strong>制造&#x2F;物流&#x2F;座舱&#x2F;鉴别</strong> 等落地</td>
+</tr>
+<tr>
+<td>论文 &#x2F; RAG</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.25480">LLM-Wiki: Retrieval as Reasoning（arXiv:2605.25480）</a></td>
+<td>arXiv <strong>2605.25480</strong>（相邻日期&#x2F;中国时间窗口传播）</td>
+<td>论文原文</td>
+<td><strong>腾讯 WeChat</strong> 提出 <strong>Wiki 编译 + Error Book 自校正</strong> 的 <strong>Agent-native RAG</strong>；HotpotQA&#x2F;MuSiQue 等 <strong>+2.0–8.1 F1</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gemini Spark</td>
+<td><a target="_blank" rel="noopener" href="https://support.google.com/gemini/answer/17094196?hl=en">Find &amp; manage Gemini Spark tasks</a></td>
+<td>Tasks&#x2F;Schedules&#x2F;Skills、Workspace 集成、Activity 删除策略</td>
+<td>评估 <strong>云端常驻办公 Agent</strong> 的团队</td>
+</tr>
+<tr>
+<td>OpenClaw 升级</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.28">OpenClaw v2026.5.28 Release Notes</a></td>
+<td>Codex Supervisor、Copilot agent runtime、session lock 修复</td>
+<td>自托管 <strong>OpenClaw + Codex</strong> 运维</td>
+</tr>
+<tr>
+<td>Claude Code 多云</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.158">Claude Code v2.1.158</a></td>
+<td><strong><code>CLAUDE_CODE_ENABLE_AUTO_MODE=1</code></strong> on Bedrock&#x2F;Vertex&#x2F;Foundry</td>
+<td>企业 <strong>Claude Code 多云</strong> 部署</td>
+</tr>
+<tr>
+<td>Copilot 计费迁移</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">Usage-based billing 官方说明</a></td>
+<td>AI Credits、token 计价、annual plan 过渡</td>
+<td>Copilot <strong>Pro&#x2F;Business</strong> 管理员</td>
+</tr>
+<tr>
+<td>Agent-native RAG</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.25480">LLM-Wiki 论文</a></td>
+<td>Wiki 编译、link-following tools、Error Book</td>
+<td>RAG&#x2F;Agent 架构师</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：Agent 工程在 <strong>「云端编排（Spark） vs 本地 Gateway（OpenClaw）」</strong> 两线并进——Google 把 <strong>Skills + Schedules + Workspace</strong> 打包成 <strong>Ultra 订阅卖点</strong>；OpenClaw 则通过 <strong><code>2026.5.28</code></strong> 把 <strong>Codex&#x2F;Copilot runtime 可靠性</strong> 推到生产级；与此同时 <strong>Copilot token 计费</strong> 迫使团队重新评估 <strong>长时 agent 任务</strong> 的 <strong>成本模型</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>云端常驻 Agent</td>
+<td><strong>Gemini Spark GA（美区 Ultra）</strong></td>
+<td><strong>VM 后台执行</strong> 可替代部分 <strong>Cron + 本地 OpenClaw</strong> 场景，但 <strong>vendor lock-in</strong> 更高</td>
+</tr>
+<tr>
+<td>Gateway 可靠性</td>
+<td><strong>OpenClaw 2026.5.28</strong></td>
+<td><strong>session lock &#x2F; compaction &#x2F; hook relay</strong> 是 <strong>multi-agent + Codex</strong> 生产化的真正门槛</td>
+</tr>
+<tr>
+<td>Coding Agent 计费</td>
+<td><strong>Copilot 6&#x2F;1 token 计费</strong></td>
+<td>团队应为 <strong>agent 会话</strong> 设 <strong>budget guard + model tier</strong>；Completions&#x2F;Next Edit 仍 <strong>不扣 credits</strong></td>
+</tr>
+<tr>
+<td>Agent-native RAG</td>
+<td><strong>LLM-Wiki 论文</strong></td>
+<td>把 KB <strong>编译为可遍历 Wiki</strong> 比 <strong>flat chunk + embedding</strong> 更适配 <strong>ReAct 工具环</strong></td>
+</tr>
+<tr>
+<td>MCP 生态</td>
+<td><strong>Langfuse MCP 5&#x2F;29 更新</strong>（相邻日期）</td>
+<td>观测&#x2F;评分&#x2F;评论进 MCP——<strong>Agent 可观测性</strong> 继续 MCP 化</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>OpenClaw v2026.5.28 Release Notes</strong></td>
+<td>当前 <strong>Codex + Copilot agent runtime</strong> 最完整的变更清单</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>GitHub Copilot usage-based billing 官方文</strong></td>
+<td><strong>6&#x2F;1 前</strong> 必须理解的 <strong>AI Credits&#x2F;token</strong> 规则</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Gemini Spark Google 支持文档 + TechCrunch 实测</strong></td>
+<td>理解 <strong>云端 Agent</strong> 的能力边界与 <strong>Workspace 集成深度</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>LLM-Wiki arXiv 论文</strong></td>
+<td><strong>Retrieval-as-Reasoning</strong> 的可复现架构参考</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>SoftBank 法国 5GW 数据中心公告</strong></td>
+<td><strong>欧洲 AI 算力</strong> 地缘布局与 <strong>能源&#x2F;电网</strong> 约束</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-30 00:00:00 到 2026-05-30 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：support.google.com, techcrunch.com, github.com, github.blog, anthropic.com, arxiv.org, developer.aliyun.com, pcmag.com, thenextweb.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布&#x2F;产品</td>
+<td>Gemini Spark Tasks 管理文档</td>
+<td>2026-05-30（文档随 rollout 更新）</td>
+<td><a target="_blank" rel="noopener" href="https://support.google.com/gemini/answer/17094196">https://support.google.com/gemini/answer/17094196</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw v2026.5.28</td>
+<td>2026-05-30（GitHub UTC，Asia&#x2F;Shanghai 跨日）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.28">https://github.com/openclaw/openclaw/releases/tag/v2026.5.28</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.158</td>
+<td>2026-05-30</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.158">https://github.com/anthropics/claude-code/releases/tag/v2.1.158</a></td>
+</tr>
+<tr>
+<td>官方政策</td>
+<td>GitHub Copilot usage-based billing</td>
+<td>2026-04-27（5&#x2F;30 媒体窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>TechCrunch Gemini Spark 实测</td>
+<td>2026-05-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/30/i-put-googles-24-7-ai-assistant-gemini-spark-to-work-and-its-actually-pretty-useful/">https://techcrunch.com/2026/05/30/i-put-googles-24-7-ai-assistant-gemini-spark-to-work-and-its-actually-pretty-useful/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>TechCrunch Copilot token 计费争议</td>
+<td>2026-05-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/">https://techcrunch.com/2026/05/30/what-a-joke-github-copilots-new-token-based-billing-spurs-consternation-among-devs/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>TechCrunch Meta AI pendant</td>
+<td>2026-05-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/30/meta-is-reportedly-developing-an-ai-pendant/">https://techcrunch.com/2026/05/30/meta-is-reportedly-developing-an-ai-pendant/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>TechCrunch SoftBank 法国数据中心</td>
+<td>2026-05-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/">https://techcrunch.com/2026/05/30/softbank-says-it-will-invest-up-to-e75-billion-to-build-french-data-centers/</a></td>
+</tr>
+<tr>
+<td>官方发布&#x2F;资本</td>
+<td>Anthropic Series H</td>
+<td>2026-05-28（5&#x2F;30 传播）</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/series-h">https://www.anthropic.com/news/series-h</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>LLM-Wiki arXiv:2605.25480</td>
+<td>相邻日期&#x2F;中国时间窗口传播</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.25480">https://arxiv.org/abs/2605.25480</a></td>
+</tr>
+<tr>
+<td>中文补充</td>
+<td>阿里云社区 5&#x2F;30 AI 简报</td>
+<td>2026-05-30</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1738694">https://developer.aliyun.com/article/1738694</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

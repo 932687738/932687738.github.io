@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-06-23 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-06-23</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/06/">2026-06</a>
+          <span class="post-date">2026-06-23</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-06-23</code> 是 <strong>「Anthropic 企业 Agent 进 Slack + Claude Code 安全&#x2F;治理加固 + GPT-5.6 传闻落空 + AI 检测&#x2F;营销 Agent M&amp;A」</strong>——Anthropic 发布 <strong>Claude Tag</strong>（Slack <strong>常驻 AI 同事</strong>，含 <strong>ambient 主动介入</strong>）；<strong>Claude Code v2.1.187</strong> 强化 <strong>sandbox.credentials</strong>、<strong>组织模型限制</strong> 与 <strong>MCP 超时</strong>；<strong>Fable 5 订阅免费窗口已过期</strong> 但 <strong>模型仍因出口管制离线</strong>；<strong>GPT-5.6 未官宣</strong>（市场传闻 <strong>推迟至 7 月中旬</strong>）；产业侧 <strong>Superhuman 收购 GPTZero</strong>、<strong>MoEngage 收购 Aampe</strong>、<strong>Menlo $3B 基金</strong>（<strong>Anthropic 持股 ~$14B</strong>）；<strong>OpenClaw</strong> 延续 <strong>Check Point 6&#x2F;22 安全报告</strong> 传播窗口。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic Claude Tag；TechCrunch；GitHub claude-code releases；arXiv agent 论文；OpenClaw 安全；中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Slack-native 企业 Agent</strong>：从 <strong>@mention 工具</strong> 到 <strong>跨频道记忆 + ambient 协作</strong>；<strong>Coding Agent 治理</strong>：sandbox&#x2F;组织策略&#x2F;MCP 超时进入 <strong>默认配置</strong>；<strong>GPT-5.6 空窗</strong>：Polymarket&#x2F;媒体窗口 <strong>未兑现</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 <strong>Claude Tag</strong> 与 <strong>Microsoft Graph&#x2F;Copilot</strong> 的 <strong>权限边界</strong> 设计；升级 <strong>Claude Code v2.1.187</strong> 并审计 <strong>MCP&#x2F;StructuredOutput</strong> 行为；<strong>Fable 5 offline</strong> 下的 <strong>Opus 4.8 降级</strong> 与 FinOps</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.187</strong>（<strong>2026-06-23</strong> GitHub release）；<strong>Codex</strong>：无 <strong>6&#x2F;23</strong> 新 tag（<strong>Daybreak&#x2F;Patch the Planet 主线为 6&#x2F;22</strong>）；<strong>OpenClaw</strong>：无 <strong>6&#x2F;23</strong> 新 release（<strong>ClawHub 恶意 skills&#x2F;Check Point 报告为 6&#x2F;22–23 传播</strong>）；<strong>Hermes</strong>：无 <strong>6&#x2F;23</strong> 新 tag（<strong>v2026.6.19 为 6&#x2F;19</strong>）；<strong>Spring AI</strong>：无 <strong>6&#x2F;23</strong> release（<strong>2.0.0 GA 为 6&#x2F;12</strong>）；<strong>skills</strong>：<strong>agentskills.io 网络安全 skills 包</strong> 在 GitHub Trending 二次传播（<strong>6&#x2F;23</strong>）；<strong>GPT-5.6</strong>：<strong>OpenAI 未发布</strong>；传闻 <strong>推迟至 ~7 月中旬</strong></td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; 企业 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/">Claude Tag in Slack（TechCrunch）</a></td>
+<td><strong>2026-06-23</strong></td>
+<td>产品&#x2F;研究预览</td>
+<td><strong>Enterprise&#x2F;Team</strong> Slack <strong>常驻 Claude</strong>；<strong>跨频道记忆</strong>、<strong>ambient 主动跟进</strong>；管理员 <strong>工具&#x2F;频道 scope</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 产品（里程碑）</td>
+<td><a target="_blank" rel="noopener" href="https://explainx.ai/blog/is-fable-5-back-2026">Fable 5 still offline after June 22 pricing deadline（explainx.ai）</a></td>
+<td><strong>2026-06-23</strong></td>
+<td>产品&#x2F;合规</td>
+<td><strong>6&#x2F;22 免费窗口截止</strong> 后 <strong>Fable&#x2F;Mythos 仍全球 offline</strong>；<strong>Opus 4.8</strong> 为 Claude Code&#x2F;API 默认回退</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.187">Claude Code v2.1.187（GitHub）</a></td>
+<td><strong>2026-06-23</strong></td>
+<td>开源发布</td>
+<td><strong>sandbox.credentials</strong>；<strong>org 模型限制</strong>；<strong>MCP idle timeout</strong>；<strong>StructuredOutput</strong> 无限重试修复</td>
+</tr>
+<tr>
+<td>M&amp;A &#x2F; AI 检测</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/23/superhuman-acquires-ai-detection-startup-gptzero/">Superhuman acquires GPTZero（TechCrunch）</a></td>
+<td><strong>2026-06-23</strong></td>
+<td>并购</td>
+<td><strong>19M 用户&#x2F;$30M ARR</strong> AI 检测并入 <strong>Grammarly&#x2F;Superhuman</strong>；<strong>双检测器</strong> 策略</td>
+</tr>
+<tr>
+<td>M&amp;A &#x2F; 营销 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/">MoEngage acquires Aampe（TechCrunch）</a></td>
+<td><strong>2026-06-23</strong></td>
+<td>并购</td>
+<td><strong>每客户独立 AI Agent</strong> 个性化营销；对标 <strong>Salesforce&#x2F;Adobe</strong></td>
+</tr>
+<tr>
+<td>资本</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/23/after-betting-the-firm-on-anthropic-menlo-ventures-raises-victorious-3b-fund/">Menlo Ventures $3B fund, Anthropic stake ~$14B（TechCrunch）</a></td>
+<td><strong>2026-06-23</strong></td>
+<td>资本</td>
+<td><strong>2024 $750M Anthropic SPV</strong> 回报驱动史上最大募资；<strong>Anthology</strong> 基金 ~<strong>$250M</strong> 已部署</td>
+</tr>
+<tr>
+<td>模型（未证实）</td>
+<td><a target="_blank" rel="noopener" href="https://digg.com/tech/6hp5va4b">GPT-5.6 delay to mid-July rumors（Digg&#x2F;社区）</a></td>
+<td><strong>2026-06-23</strong>（传闻）</td>
+<td>市场传闻</td>
+<td><strong>OpenAI 未官宣</strong>；<strong>Polymarket 6&#x2F;22–28 窗口未兑现</strong>；<strong>勿当作已发布</strong></td>
+</tr>
+<tr>
+<td>Agent 安全（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://aitoolsrecap.com/Blog/openclaw-ai-agent-security-risks-2026">OpenClaw security risks: Check Point June 22（AIToolsRecap）</a></td>
+<td><strong>2026-06-22–23</strong></td>
+<td>安全研究</td>
+<td><strong>ClawHub ~11% 恶意 skills</strong>；<strong>CVE-2026-32922</strong> 等；<strong>prompt injection→RCE</strong> 链</td>
+</tr>
+<tr>
+<td>论文（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.23525v1">Self-Compacting Language Model Agents（arXiv:2606.23525）</a></td>
+<td><strong>2026-06-22</strong></td>
+<td>论文原文</td>
+<td><strong>SelfCompact</strong>：模型自主决定 <strong>何时&#x2F;如何 compact</strong> 上下文</td>
+</tr>
+<tr>
+<td>论文（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.23321v1">Tmax: terminal agents RL recipe（arXiv:2606.23321）</a></td>
+<td><strong>2026-06-22</strong></td>
+<td>论文原文</td>
+<td><strong>9B</strong> 在 <strong>Terminal-Bench 2.0</strong> **27%**；开源 <strong>terminal agent</strong> RL 基线</td>
+</tr>
+<tr>
+<td>OpenAI（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/">Patch the Planet open source security（TechCrunch）</a></td>
+<td><strong>2026-06-22</strong></td>
+<td>官方&#x2F;生态</td>
+<td><strong>6&#x2F;23 中国时间</strong> 持续传播；与 <strong>GPT-5.5-Cyber GA</strong> 同日叙事</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>企业 Slack Agent</td>
+<td><strong>Claude Tag 发布解读（TechCrunch）</strong></td>
+<td>ambient mode、跨频道 memory、admin scope</td>
+<td>企业 AI&#x2F;协作平台</td>
+</tr>
+<tr>
+<td>Claude Code 安全</td>
+<td><strong>v2.1.187 release notes</strong></td>
+<td>sandbox.credentials、org model restrictions</td>
+<td>平台&#x2F;SRE</td>
+</tr>
+<tr>
+<td>MCP 可靠性</td>
+<td><strong>CLAUDE_CODE_MCP_TOOL_IDLE_TIMEOUT</strong></td>
+<td>远程 MCP <strong>5min hang→abort</strong></td>
+<td>Agent 工程师</td>
+</tr>
+<tr>
+<td>Agent 上下文</td>
+<td><strong>SelfCompact 论文</strong></td>
+<td>compaction tool + rubric</td>
+<td>长时 Agent 架构</td>
+</tr>
+<tr>
+<td>Terminal Agent</td>
+<td><strong>Tmax 开源配方</strong></td>
+<td>RL on terminal environments</td>
+<td>Agent 训练&#x2F;评测</td>
+</tr>
+<tr>
+<td>OpenClaw 安全</td>
+<td><strong>Check Point + ClawHub 审计</strong></td>
+<td>恶意 skills、indirect injection</td>
+<td>安全&#x2F;平台</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：6&#x2F;23 呈现 <strong>「协作入口 Agent 化 + Coding Agent 治理默认化 + 传闻模型空窗」</strong>——Anthropic 用 <strong>Claude Tag</strong> 把 <strong>Slack</strong> 变成 <strong>持久 Agent 运行时</strong>；Claude Code <strong>v2.1.187</strong> 把 <strong>凭证隔离&#x2F;MCP 超时&#x2F;结构化输出</strong> 当作 <strong>生产默认</strong>；工程侧应在 <strong>GPT-5.6 未发布</strong> 窗口继续 <strong>Opus 4.8 + GPT-5.5</strong> 混部并跟踪 <strong>Fable 恢复</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>企业 Agent</td>
+<td><strong>Claude Tag</strong> research preview</td>
+<td>设计 <strong>channel-scoped memory</strong> 与 <strong>ambient 介入</strong> 的 <strong>审计&#x2F;回滚</strong></td>
+</tr>
+<tr>
+<td>Coding Agent</td>
+<td><strong>v2.1.187</strong></td>
+<td>启用 <strong>sandbox.credentials</strong>；为 org 配置 <strong>model allowlist</strong></td>
+</tr>
+<tr>
+<td>MCP</td>
+<td><strong>idle timeout 默认 abort</strong></td>
+<td>远程 MCP 需 <strong>SLO + 重试</strong>；可覆写 <strong>CLAUDE_CODE_MCP_TOOL_IDLE_TIMEOUT</strong></td>
+</tr>
+<tr>
+<td>上下文管理</td>
+<td><strong>SelfCompact</strong></td>
+<td>用 <strong>模型自触发 compact</strong> 替代固定 token 阈值</td>
+</tr>
+<tr>
+<td>Terminal RL</td>
+<td><strong>Tmax</strong></td>
+<td>终端 Agent benchmark 可复现 <strong>open RL recipe</strong></td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><strong>安全报告传播</strong></td>
+<td><strong>ClawHub skills 供应链</strong> 需 <strong>签名&#x2F;沙箱&#x2F;白名单</strong></td>
+</tr>
+<tr>
+<td>Fable 里程碑</td>
+<td><strong>6&#x2F;23 credits 日但 offline</strong></td>
+<td>FinOps 按 <strong>Opus 4.8</strong> 计费；勿假设 <strong>Fable API</strong> 可用</td>
+</tr>
+<tr>
+<td>GPT-5.6</td>
+<td><strong>未发布</strong></td>
+<td>生产路由勿硬编码 <strong>gpt-5.6</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>TechCrunch：Claude Tag</strong></td>
+<td><strong>6&#x2F;23 最可核验 Anthropic 产品发布</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.187</strong></td>
+<td><strong>MCP&#x2F;StructuredOutput&#x2F;sandbox</strong> 生产级修复</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>SelfCompact 论文</strong></td>
+<td><strong>长 Agent trace</strong> 的 <strong>自适应 compact</strong> 范式</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Tmax 论文 + HuggingFace 合集</strong></td>
+<td><strong>Terminal-Bench</strong> 开源 RL 基线</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>OpenClaw Check Point 报告</strong></td>
+<td><strong>Agent marketplace 供应链</strong> 风险样本</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>Menlo $3B &#x2F; Anthropic 回报</strong></td>
+<td><strong>模型 maker 资本飞轮</strong> 对生态影响</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-06-23 00:00:00 到 2026-06-23 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：techcrunch.com, github.com, explainx.ai, digg.com, aitoolsrecap.com, arxiv.org, thenextweb.com, openai.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>产品发布</td>
+<td>Anthropic Claude Tag</td>
+<td>2026-06-23</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/">https://techcrunch.com/2026/06/23/anthropics-claude-tag-is-learning-your-company-one-slack-message-at-a-time/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.187</td>
+<td>2026-06-23</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.187">https://github.com/anthropics/claude-code/releases/tag/v2.1.187</a></td>
+</tr>
+<tr>
+<td>产品状态</td>
+<td>Fable 5 offline status</td>
+<td>2026-06-23</td>
+<td><a target="_blank" rel="noopener" href="https://explainx.ai/blog/is-fable-5-back-2026">https://explainx.ai/blog/is-fable-5-back-2026</a></td>
+</tr>
+<tr>
+<td>并购</td>
+<td>Superhuman×GPTZero</td>
+<td>2026-06-23</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/23/superhuman-acquires-ai-detection-startup-gptzero/">https://techcrunch.com/2026/06/23/superhuman-acquires-ai-detection-startup-gptzero/</a></td>
+</tr>
+<tr>
+<td>并购</td>
+<td>MoEngage×Aampe</td>
+<td>2026-06-23</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/">https://techcrunch.com/2026/06/23/indias-moengage-bets-marketings-future-on-millions-of-ai-agents/</a></td>
+</tr>
+<tr>
+<td>资本</td>
+<td>Menlo $3B fund</td>
+<td>2026-06-23</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/23/after-betting-the-firm-on-anthropic-menlo-ventures-raises-victorious-3b-fund/">https://techcrunch.com/2026/06/23/after-betting-the-firm-on-anthropic-menlo-ventures-raises-victorious-3b-fund/</a></td>
+</tr>
+<tr>
+<td>市场传闻</td>
+<td>GPT-5.6 delay</td>
+<td>2026-06-23</td>
+<td><a target="_blank" rel="noopener" href="https://digg.com/tech/6hp5va4b">https://digg.com/tech/6hp5va4b</a></td>
+</tr>
+<tr>
+<td>安全研究</td>
+<td>OpenClaw Check Point</td>
+<td>2026-06-22–23</td>
+<td><a target="_blank" rel="noopener" href="https://aitoolsrecap.com/Blog/openclaw-ai-agent-security-risks-2026">https://aitoolsrecap.com/Blog/openclaw-ai-agent-security-risks-2026</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>SelfCompact</td>
+<td>2026-06-22</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.23525v1">https://arxiv.org/abs/2606.23525v1</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Tmax</td>
+<td>2026-06-22</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.23321v1">https://arxiv.org/abs/2606.23321v1</a></td>
+</tr>
+<tr>
+<td>相邻日期&#x2F;中国时间窗口传播</td>
+<td>Patch the Planet</td>
+<td>2026-06-22</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/">https://techcrunch.com/2026/06/22/openai-launches-new-initiative-to-help-find-and-patch-open-source-bugs/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

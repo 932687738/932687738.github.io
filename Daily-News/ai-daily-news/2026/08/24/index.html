@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-24 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-24</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-24</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：8 月 24 日主线是 <strong>Langfuse <code>v4.17.0</code> 把 8&#x2F;22 评测改版落到发行版</strong>，以及 <strong>Codex <code>0.149.1</code> 补丁</strong>：前者从 trace&#x2F;event 表建标注队列、评测 UX 进主线，Assistant（OSS）接上 Anthropic Messages；后者无独立 What’s New，只给 compare。Claude Code 当日中国时间窗口无新 tag（<code>v2.1.243</code> 落在 UTC 晚间，中国时间为 8&#x2F;25）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、安全治理、Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes、Spring AI&#x2F;Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、skills、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）可观测性从「改 changelog」变成「可升级的 v4 发行」；2）编程 CLI 进入补丁日；3）无新模型</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>标注队列可从 trace&#x2F;event 表一键建；evaluator 可按模型过滤；Claude Code <code>/usage</code> Loops 拆解记到 8&#x2F;25</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Langfuse：<code>v4.17.0</code>（Published 2026-08-24T13:14:03Z，中国时间 21:14）。Codex：<code>0.149.1</code>（Published 2026-08-24T00:28:28Z，中国时间 08:28）。Claude Code &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills：未发现可核验的 8&#x2F;24 重大官方更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LLM 可观测性</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.17.0">Langfuse v4.17.0</a></td>
+<td>2026-08-24</td>
+<td>开源发布</td>
+<td>新 evaluation UX 合入主线；从 trace&#x2F;event 表建 annotation queue；evaluator 可展示&#x2F;过滤模型；Assistant（OSS）支持 Anthropic Messages；v4 双写默认露出迁移 UI</td>
+</tr>
+<tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.149.1">Codex 0.149.1</a></td>
+<td>2026-08-24</td>
+<td>开源发布</td>
+<td>补丁发布，页面无功能条目，变更见 <a target="_blank" rel="noopener" href="https://github.com/openai/codex/compare/rust-v0.149.0...rust-v0.149.1">0.149.0…0.149.1</a></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>评测上线</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.17.0">Langfuse v4.17.0</a></td>
+<td>8&#x2F;22 changelog 的 evaluator&#x2F;rule 体验进发行版；code evaluator 与 score 关联修复</td>
+<td>自托管 &#x2F; 要升 v4 的人</td>
+</tr>
+<tr>
+<td>Codex 补丁</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/compare/rust-v0.149.0...rust-v0.149.1">0.149.1 compare</a></td>
+<td>无独立 release notes，以 diff 为准</td>
+<td>已跟 0.149.0、要锁补丁的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：框架侧当日 GA 在 Langfuse 发行版；编排框架无新 release。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Langfuse</td>
+<td>v4.17.0：评测 UX + 标注队列 + Anthropic Messages</td>
+<td>从线上 trace 直接建队列，少复制粘贴到评测集</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>0.149.1 补丁</td>
+<td>功能仍以 0.149.0 的 agents&#x2F;queue 为准</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>中国时间窗口无新 tag</td>
+<td><code>v2.1.243</code>（UTC 8&#x2F;24 23:40）记到 8&#x2F;25：<code>/usage</code> Loops、<code>modelPicker</code>、<code>promptCacheTtl</code></td>
+</tr>
+<tr>
+<td>其余专项</td>
+<td>未发现 8&#x2F;24 可核验重大更新</td>
+<td>继续消化 8&#x2F;22 评测改版</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.17.0">Langfuse v4.17.0</a></td>
+<td>当日唯一带完整功能列表的框架发行</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.149.1">Codex 0.149.1</a></td>
+<td>确认补丁日、对照 compare</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-24 00:00:00 到 2026-08-24 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Langfuse v4.17.0</td>
+<td>2026-08-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.17.0">https://github.com/langfuse/langfuse/releases/tag/v4.17.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex 0.149.1</td>
+<td>2026-08-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.149.1">https://github.com/openai/codex/releases/tag/rust-v0.149.1</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

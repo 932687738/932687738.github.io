@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-19 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-19</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-19</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：OpenAI 用自建评测说明新模型在 COBOL 等少样本语言上明显变强；GitHub 当天停用一批旧 Copilot 模型，并开放模型策略 API。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI、Anthropic、GitHub Changelog、Microsoft、Hugging Face、Claude Code、Codex、OpenClaw、LangGraph、Langfuse、Spring</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>少样本语言的迁移能力被写成可复现评测；企业开始用 API 管模型可用性，并用「监护代理」看内部 Agent</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>COBOL 迁移评测的通过标准是输出逐字节一致；Copilot 旧模型已下线；LangGraph CLI 默认部署改成 serverless</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>OpenClaw 2026.10.5 的 Skill Workshop 带版本和撤销。Claude Code v2.1.303 只有「缺陷修复」，不展开。Codex 0.164 alpha.4&#x2F;alpha.5 无说明。LangGraph CLI 0.4.37 见下表。Langfuse、Hermes、Spring AI、Spring Alibaba AI、Code Graph 无本日正式发布。Loop Engineering 无独立新文</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/low-resource-programming-languages/">少样本编程语言上的编码能力</a></td>
+<td>2026-10-19</td>
+<td>官方发布</td>
+<td>官方自报：MultiLangBench 上 GPT-6 Astra 二十种语言平均通过率 87.4%，上一对照 GPT-5.6 Sol 为 26.8%；COBOL 从 10.9% 到 72.1%。COBOL 迁到 C++&#x2F;Java&#x2F;Kotlin&#x2F;Python&#x2F;Rust 时，GPT-6.1 Sol 低推理 86.6%、高推理 97.9%，通过标准是隐藏测试上的输出逐字节一致。生产迁移仍要人工验收</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/">Copilot 一批模型于今天停用</a></td>
+<td>2026-10-19</td>
+<td>官方发布</td>
+<td>Gemini 3.7 Flash、GPT-5.5、GPT-5.4、GPT-5.4 mini、GPT-5 mini、Grok 4.5 在聊天、补全和 Agent 模式停用。替代分别指向 Gemini 3.8 Flash、GPT-6.1 Sol、GPT-6 Luna、Grok 4.7。管理员要在模型策略里打开替代模型</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/">模型策略 REST API 正式可用</a></td>
+<td>2026-10-19</td>
+<td>官方发布</td>
+<td>企业、企业团队、企业应用和组织都可以 GET&#x2F;PATCH <code>/copilot/model-policies</code>。企业可以把模型开关下放到组织，或在企业团队模式下放到团队和应用</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication/">部分 HTTPS 克隆可能临时要求登录</a></td>
+<td>2026-10-19</td>
+<td>官方发布</td>
+<td>异常流量期间，未登录的公开仓库 HTTPS 克隆和拉取可能失败。已登录的 HTTPS、SSH 和推送不受影响。CI 优先用 Actions 的 <code>GITHUB_TOKEN</code> 或 GitHub App 安装令牌</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.10.5">2026.10.5</a></td>
+<td>2026-10-19（Published 10-18 21:47Z，北京时间 10-19 05:47）</td>
+<td>开源发布</td>
+<td>侧边栏可搜索和置顶，子代理与进程面板贴在父会话旁边。Skill Workshop 保存最多十个版本，可以撤销。公开会话链接不登录也能读，之后的新消息也会出现在同一链接里；关闭分享收不回已经保存的副本</td>
+</tr>
+<tr>
+<td>LangGraph</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.37">cli 0.4.37</a></td>
+<td>2026-10-19（Published 14:06Z，北京时间 22:06）</td>
+<td>开源发布</td>
+<td>默认部署目标改成 serverless。verbose 输出不再打印子进程的标准输入</td>
+</tr>
+<tr>
+<td>Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/responsible-scaling-policy/roadmap">前沿安全路线图 10 月 19 日更新</a></td>
+<td>2026-10-19</td>
+<td>政策标准</td>
+<td>内部红队目标提前完成：自动系统在 24 组「题目 × 分类器」上匹配或超过最佳人类提交。宪法对齐这条目标按现有写法退役。新增两项政策目标，截止日期分别是 2026-12-15 和 2027-01-15。推理校验原型给内部 token 流量加了签名</td>
+</tr>
+<tr>
+<td>Microsoft</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/">把企业内部 Agent 当成内部人来管</a></td>
+<td>2026-10-19</td>
+<td>官方发布</td>
+<td>论点是自建 Agent 往往权限过大，不能因为是自己部署的就默认信任。建议用持续运行的 Guardian Agent，在动作发生前按风险收紧权限</td>
+</tr>
+<tr>
+<td>Hugging Face</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/hf-torchneuron">TorchNeuron：PyTorch 原生跑 Trainium</a></td>
+<td>2026-10-19</td>
+<td>开源发布</td>
+<td><code>neuron</code> 成为 PyTorch 设备，支持 eager、<code>torch.compile</code>、FSDP 和张量并行。公开测试版从 10 月 20 日起可用 <code>pip install torch-neuronx</code>。文中称前一百个常用文本生成架构的开箱支持从 46% 提到 89%</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>遗留语言</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/low-resource-programming-languages/">少样本语言评测</a></td>
+<td>从零写 SQLite 兼容引擎；迁移必须保住舍入和缺记录行为</td>
+<td>还在维护 COBOL、Fortran、Visual Basic 的团队</td>
+</tr>
+<tr>
+<td>模型治理</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/">Copilot 模型策略 API</a></td>
+<td>四级策略的读取和更新</td>
+<td>管企业 Copilot 模型开关的人</td>
+</tr>
+<tr>
+<td>技能版本</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.10.5">OpenClaw 2026.10.5</a></td>
+<td>学习到的流程可撤销；后台学习可关；三十天未用技能的清理对 Codex 关闭</td>
+<td>已经打开自动学习的人</td>
+</tr>
+<tr>
+<td>构建追踪</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-codeql-changes-for-macos-27-xcode-27-and-swift-6-4/">CodeQL 与 macOS 27</a></td>
+<td>Xcode 27 上追踪式扫描不可用，Swift 6.4 暂不支持；Intel Mac 支持将于 2026 年 12 月中旬弃用</td>
+<td>在苹果新系统上跑 CodeQL 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：可复用的工程变化是技能可回滚、部署默认值改变，以及企业内部 Agent 要单独的身份和权限。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>技能</td>
+<td>Workshop 保留 Auto，旧的「先提案」模式迁到关闭</td>
+<td>升级后核对学习开关，不要假设还要人工批准才会写入</td>
+</tr>
+<tr>
+<td>分享</td>
+<td>公开链接覆盖已有和未来的用户消息与最终回复</td>
+<td>发布前先看会话里有没有密钥和内部链接</td>
+</tr>
+<tr>
+<td>CLI</td>
+<td>0.4.37 默认 serverless，verbose 不再泄露子进程输入</td>
+<td>依赖旧默认部署目标的脚本要显式写目标</td>
+</tr>
+<tr>
+<td>预发布</td>
+<td>OpenClaw <code>2026.10.10-beta.2</code> 在改文件前拒绝上下文对不上的多文件补丁</td>
+<td>稳定线仍是 2026.10.5；beta 只给已经跟 10.10 预览的人</td>
+</tr>
+<tr>
+<td>研究</td>
+<td><a target="_blank" rel="noopener" href="https://alignment.anthropic.com/2026/graft/">GRAFT</a> 把被发现的奖励作弊更新限制在事后可删的参数上</td>
+<td>实验限于小模型和简单监视器，不是 Claude 产品变更</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/low-resource-programming-languages/">少样本编程语言</a></td>
+<td>通过标准写的是行为保持，不是「能编译」</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/">Copilot 模型停用</a></td>
+<td>今天起旧模型名会直接不可用</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.10.5">OpenClaw 2026.10.5</a></td>
+<td>技能版本和公开链接都会改变现有数据的可见范围</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/responsible-scaling-policy/roadmap">前沿安全路线图更新</a></td>
+<td>看哪些安全目标被宣布完成、哪些被改写</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-19 00:00:00 到 2026-10-19 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, github.blog, github.com, anthropic.com, blogs.microsoft.com, huggingface.co, alignment.anthropic.com, docs.openclaw.ai</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Advancing coding in low-resource programming languages</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/low-resource-programming-languages/">https://openai.com/index/low-resource-programming-languages/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot models deprecated</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/">https://github.blog/changelog/2026-10-19-github-copilot-models-deprecated-on-october-19-2026/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot model policy API</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/">https://github.blog/changelog/2026-10-19-copilot-model-policy-api-for-enterprise-orgs-and-teams/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Git over HTTPS may require authentication</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication/">https://github.blog/changelog/2026-10-19-some-git-over-https-may-temporarily-require-authentication/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>CodeQL, macOS 27, Swift 6.4</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-19-codeql-changes-for-macos-27-xcode-27-and-swift-6-4/">https://github.blog/changelog/2026-10-19-codeql-changes-for-macos-27-xcode-27-and-swift-6-4/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw 2026.10.5</td>
+<td>2026-10-19（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.10.5">https://github.com/openclaw/openclaw/releases/tag/v2026.10.5</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.303</td>
+<td>2026-10-19（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.303">https://github.com/anthropics/claude-code/releases/tag/v2.1.303</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langgraph cli 0.4.37</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.37">https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.37</a></td>
+</tr>
+<tr>
+<td>政策标准</td>
+<td>Frontier Safety Roadmap</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/responsible-scaling-policy/roadmap">https://www.anthropic.com/responsible-scaling-policy/roadmap</a></td>
+</tr>
+<tr>
+<td>研究</td>
+<td>GRAFT</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://alignment.anthropic.com/2026/graft/">https://alignment.anthropic.com/2026/graft/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Securing the agentic insider</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/">https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>TorchNeuron</td>
+<td>2026-10-19</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/hf-torchneuron">https://huggingface.co/blog/hf-torchneuron</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

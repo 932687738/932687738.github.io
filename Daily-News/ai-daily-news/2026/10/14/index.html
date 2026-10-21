@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-14 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-14</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-14</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：Gemini 4 Argon 在北京时间零点开放，GitHub Copilot 随即跟上；同一天 Claude Code 用空闲压缩保住提示缓存，Hermes 发布跟 tag 走的 0.22.0。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Google &#x2F; GitHub 官方、Claude Code、Hermes、Langfuse、LangChain、LangGraph、Codex、Spring、Code Graph、政策源</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>前沿模型进入 API 与 Copilot；编码代理开始在缓存过期前主动压缩；Actions 用锁文件钉住 action 的提交</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><code>gemini-4-argon</code> 的 1M 统一窗口和试用价；Copilot 里的 Argon 与 HydraFusion Max；Claude Code 空闲压缩；Hermes 首次启动向导</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code v2.1.299、Hermes v0.22.0、Langfuse v4.59.0、LangGraph CLI 0.4.34、langchain-openai 1.7.2 见下表。Codex 只有 0.163 alpha，无说明，不展开。OpenClaw、Spring AI、Spring Alibaba AI、Code Graph 无落在本日北京时间的正式发布。Loop Engineering 无独立新文，空闲压缩属于 Claude Code 的上下文策略。skills：v2.1.299 让 mod 的 <code>skill.prompt</code> 钩子拿到 frontmatter、来源和路径</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Gemini</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">Gemini 4 Argon 面向所有人开放</a></td>
+<td>2026-10-14（Published 10-13 16:00Z，北京时间 10-14 00:00；页面写 Oct 13）</td>
+<td>官方发布</td>
+<td>模型 ID <code>gemini-4-argon</code>。API 上输入、思考、输出共用 1M token。试用价到 2026-11-30：输入每百万 2 美元、输出（含思考）10 美元，隐式缓存 0.10 美元；12 月 1 日起改为 4 &#x2F; 20 美元。API 不在免费层。开发者走付费 API；Antigravity 需要 Google AI Ultra；Gemini 应用和搜索 AI Mode 面向 Ultra 与 Pro</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/">Copilot 提供 Gemini 4 Argon</a></td>
+<td>2026-10-14（Published 10-13 18:39Z，北京时间 10-14 02:39；页面写 Oct 13）</td>
+<td>官方发布</td>
+<td>Pro+、Max、Business、Enterprise 可在 VS Code、Visual Studio、CLI、coding agent、Copilot app、JetBrains、Xcode、Eclipse 里选。按供应商标价、用量计费，灰度开放。企业用模型策略管控，新模型默认开启除非管理员关掉</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option/">HydraFusion 更新并增加 Max</a></td>
+<td>2026-10-14</td>
+<td>官方发布</td>
+<td>仍是研究预览。模型池含 Claude Opus 5.5、GPT-6 Astra、GPT-6.1 Sol、GPT-6 Luna。Max 用同一套编排，但在更难的任务上提高推理力度。VS Code、Copilot app、CLI 都可用，需打开实验功能并受组织模型策略约束</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/">Actions 工作流锁文件公开预览</a></td>
+<td>2026-10-14（Published 13:49Z，北京时间 21:49）</td>
+<td>官方发布</td>
+<td>用 <code>gh actions-lock</code> 生成 <code>.github/workflows/actions.lock</code>，把 action 及其传递依赖钉到提交。已接入的工作流即使用 tag，也跑锁定的提交。Require lockfile 策略可按企业、组织或仓库要求启用。公告范围是 GitHub Enterprise Cloud（含数据驻留）</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.299">v2.1.299</a></td>
+<td>2026-10-14（Published 02:49Z，北京时间 10:49）</td>
+<td>开源发布</td>
+<td>终端里约 20 万 token 以上的会话闲置约 54 分钟会先压缩，避免一小时提示缓存过期后整段重算。<code>idleCompaction: false</code> 可关。<code>CLAUDE_CODE_DISABLE_FILE_MENTIONS</code> 让 <code>@</code> 文件只给路径、不塞正文。agent 视图可用 <code>/effort</code>、<code>/fast</code>。<code>claude plugin eval</code> 可用 <code>--disallow-tools</code> 排除 Agent 等内置工具</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0">v0.22.0</a></td>
+<td>2026-10-14（Published 03:21Z，北京时间 11:21；说明写 Release Date 10-13）</td>
+<td>开源发布</td>
+<td>新装桌面端先走引导对话，试用模型 <code>nous/welcome</code> 不需要自己的 Key。本地可一键起 llama.cpp。安装默认跟经过测试的 SemVer tag。这一版把 v0.21.1 到 v0.21.7 的补丁收成正式说明</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.59.0">v4.59.0</a></td>
+<td>2026-10-14（Published 09:20Z，北京时间 17:20）</td>
+<td>开源发布</td>
+<td>修正 Claude Sonnet 5.5 的缓存读价格；会话视图默认用新设计；Topics 可过滤和搜索；迟到的 trace 按分片就绪重放；OTEL 媒体上传并发有上限</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型 API</td>
+<td><a target="_blank" rel="noopener" href="https://ai.google.dev/gemini-api/docs/latest-model">Gemini 4 Argon 开发者说明</a></td>
+<td>1M 统一窗口、思考档 <code>low</code>&#x2F;<code>medium</code>&#x2F;<code>high</code>、长输出可超过 64K</td>
+<td>要迁到 <code>gemini-4-argon</code> 的人</td>
+</tr>
+<tr>
+<td>编码代理</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.299">Claude Code v2.1.299</a></td>
+<td>空闲压缩与缓存过期的关系</td>
+<td>长会话、在意缓存费用的人</td>
+</tr>
+<tr>
+<td>CI 供应链</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/">Actions lockfiles</a></td>
+<td>tag 可以移动，锁文件钉提交</td>
+<td>管 GitHub Actions 的人</td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.59.0">Langfuse v4.59.0</a></td>
+<td>价格表、会话视图、迟到 trace</td>
+<td>自建或云上 Langfuse 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：框架没有大版本，增量是 OpenAI 流式块的修正、LangGraph CLI 的 JSON 输出，以及各家代理把缓存和安装通道收紧。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>空闲压缩</td>
+<td>会话闲置接近一小时缓存寿命时先压缩</td>
+<td>长任务中间停下来，不一定要等用户回来才付整段重算的费用</td>
+</tr>
+<tr>
+<td>流式</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai==1.7.2">langchain-openai 1.7.2</a>（北京时间 21:51）在 <code>output_index</code> 漂移时仍把 Responses 流项目放在同一块</td>
+<td>解析流时不要假设 index 单调就拆块</td>
+</tr>
+<tr>
+<td>CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.34">langgraph cli 0.4.34</a>（北京时间 05:18）给 <code>deploy listeners list</code> 加了 <code>--json</code></td>
+<td>部署检查可以进脚本</td>
+</tr>
+<tr>
+<td>安装</td>
+<td>Hermes 0.22.0 把「跟 tag」写成稳定通道，并补上 0.21.x 的正式说明</td>
+<td>昨天若还停在 0.21.7 的补丁说明，今天看 0.22.0 即可</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><code>rust-v0.163.0-alpha.10</code> &#x2F; <code>alpha.11</code> 落在本日，发布页没有说明</td>
+<td>不把 alpha 当成可升级的稳定行为</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">Gemini 4 Argon</a></td>
+<td>价格、窗口和谁能用 API 是这天最需要核对的规格</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.299">Claude Code v2.1.299</a></td>
+<td>空闲压缩会在你不打字时改会话，升级前要知道怎么关</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option/">HydraFusion Max</a></td>
+<td>看编排池里现在有哪些模型，避免把它当成单模型</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0">Hermes v0.22.0</a></td>
+<td>体积大，先读 Highlights 里的安装通道和本地 llama.cpp</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-14 00:00:00 到 2026-10-14 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：blog.google, ai.google.dev, github.blog, github.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Gemini 4 Argon</td>
+<td>2026-10-14（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/</a></td>
+</tr>
+<tr>
+<td>技术文档</td>
+<td>Gemini 4 Argon latest model</td>
+<td>2026-10-13 UTC 文档更新，对应北京时间 10-14 开放</td>
+<td><a target="_blank" rel="noopener" href="https://ai.google.dev/gemini-api/docs/latest-model">https://ai.google.dev/gemini-api/docs/latest-model</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Gemini 4 Argon in GitHub Copilot</td>
+<td>2026-10-14（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/">https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>HydraFusion Max</td>
+<td>2026-10-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option/">https://github.blog/changelog/2026-10-14-hydrafusion-updates-and-new-max-option/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Actions workflow lockfiles</td>
+<td>2026-10-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/">https://github.blog/changelog/2026-10-14-github-actions-workflow-lockfiles-in-public-preview/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.299</td>
+<td>2026-10-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.299">https://github.com/anthropics/claude-code/releases/tag/v2.1.299</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Hermes Agent v0.22.0</td>
+<td>2026-10-14（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0">https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.59.0</td>
+<td>2026-10-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.59.0">https://github.com/langfuse/langfuse/releases/tag/v4.59.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langchain-openai 1.7.2</td>
+<td>2026-10-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai==1.7.2">https://github.com/langchain-ai/langchain/releases/tag/langchain-openai==1.7.2</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langgraph cli 0.4.34</td>
+<td>2026-10-14（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.34">https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.34</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

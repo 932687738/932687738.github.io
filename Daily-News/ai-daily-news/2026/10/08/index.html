@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-08 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-08</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-08</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：10 月 8 日主线是 <strong>Claude Code 在北京时间落地 Haiku 5.5 默认模型，并当天补上钩子放行漏洞</strong>；Langfuse 同时加上零漏洞镜像和技能包导入，ChatGPT 的免费档开始切到 GPT-6 Luna。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic &#x2F; OpenAI &#x2F; GitHub &#x2F; NVIDIA、Claude Code、Langfuse，以及五个工程专项、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）轻量模型进入编码代理的默认档，钩子指令却能把该拦的命令放行；2）观测平台开始收技能包并出 FIPS 镜像；3）免费 ChatGPT 按 10&#x2F;7 博客的「次日」切换</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.294">Claude Code v2.1.294</a>；<a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.55.0">Langfuse v4.55.0</a>；<a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/">Copilot 代码评审计费</a></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：v2.1.293 列表时间 10&#x2F;7 18:10，按 UTC 口径为北京时间 10&#x2F;8 02:10，把 <code>claude-haiku-5-5</code> 设为 API 默认 Haiku。v2.1.294 在 10&#x2F;8 13:03（北京时间）修钩子。<strong>Langfuse</strong>：v4.55.0，Published 13:36 UTC，北京时间 21:36。<strong>skills</strong>：Langfuse 可从本地文件和 ZIP 导入技能，不是 Claude&#x2F;Cursor Skills 规范更新。<strong>Codex</strong>：0.162.0 的发布时间落在北京时间 10&#x2F;9。<strong>Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; OpenClaw &#x2F; Hermes &#x2F; Loop Engineering</strong>：无本日官方 release。v2.1.294 修的是指令式钩子，不是 <code>/loop</code> 命令本身</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.293">v2.1.293</a></td>
+<td>2026-10-08（列表 10&#x2F;7 18:10，按 UTC 口径换算）</td>
+<td>开源发布</td>
+<td>Haiku 5.5 成为 Anthropic API 上的默认 Haiku：1M 上下文，100K 以内提示约 $0.10 &#x2F; $0.50 每百万 token，超过 100K 为 $0.50 &#x2F; $2.50。模型公告本身在 10&#x2F;7，见 <a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-haiku-5-5">Haiku 5.5</a></td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.294">v2.1.294</a></td>
+<td>2026-10-08（Published 05:03 UTC）</td>
+<td>开源发布</td>
+<td>写成「Block commands that…」这类说明的 prompt&#x2F;agent 钩子，之前会放行本该拦住的命令。Stop 上的「构建坏了就继续」也不容易过早停</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.55.0">v4.55.0</a></td>
+<td>2026-10-08（Published 13:36 UTC）</td>
+<td>开源发布</td>
+<td>零漏洞基础镜像和 FIPS 模式；trace 主题一次总结全部分面；技能可从本地文件和 ZIP 导入；评测支持 OpenAI 决策模型；导出可到 Google Cloud Storage；价格表加入 Haiku 5.5</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/gpt-6-for-everyone/">GPT-6 免费档开始切换</a></td>
+<td>2026-10-08（博客发布于 10&#x2F;7，写明次日扩到 Free 与 Go）</td>
+<td>官方发布</td>
+<td>Plus&#x2F;Pro&#x2F;Business&#x2F;Enterprise 在 10&#x2F;7 用 GPT-6 Sol。Free 与 Go 从 10&#x2F;8 起用 GPT-6 Luna。Work 和 Codex 的模型不在这次更换里</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/">代码评审的组织计费</a></td>
+<td>2026-10-08</td>
+<td>官方发布</td>
+<td>组织可以把成员发起的评审记到组织成本中心，而不是扣成员额度。也可限制只有本组织许可证才能发起评审</td>
+</tr>
+<tr>
+<td>算力</td>
+<td><a target="_blank" rel="noopener" href="https://www.globenewswire.com/news-release/2026/10/08/3377484/0/en/nvidia-commits-1-billion-to-advance-us-science-over-the-next-five-years.html">NVIDIA 五年 10 亿美元科研承诺</a></td>
+<td>2026-10-08（10:31 ET）</td>
+<td>官方发布</td>
+<td>面向美国科研、量子、医疗和能源的五年承诺，新闻稿口径，不是新的推理芯片发布</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>钩子安全</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.294">v2.1.294</a></td>
+<td>指令式钩子不再放行该拦的命令</td>
+<td>用自然语言写门禁的人</td>
+</tr>
+<tr>
+<td>默认小模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-haiku-5-5">Haiku 5.5</a></td>
+<td>价目、子代理、缓存读取降价</td>
+<td>把小模型当子代理的人</td>
+</tr>
+<tr>
+<td>观测部署</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.55.0">v4.55.0</a></td>
+<td>FIPS 镜像、技能导入、GCS 导出</td>
+<td>自建 Langfuse 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：没有 LangGraph 或 Spring 发布。当天要处理的是「默认小模型已经换了」和「用自然语言写的钩子曾经形同虚设」。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>钩子</td>
+<td>v2.1.294 堵住指令式放行</td>
+<td>门禁要用可执行规则核对，不要只写一句 Block</td>
+</tr>
+<tr>
+<td>模型</td>
+<td>Claude Code 默认 Haiku 换成 5.5；免费 ChatGPT 换成 Luna</td>
+<td>子代理和免费入口的价目、上下文要分开记账</td>
+</tr>
+<tr>
+<td>技能</td>
+<td>Langfuse 可导入 ZIP 技能</td>
+<td>这是观测产品里的技能草稿，不是编码代理的 Skills 市场</td>
+</tr>
+<tr>
+<td>评审计费</td>
+<td>组织可改记到成本中心</td>
+<td>代码评审的额度归属要在放开代理评审前定好</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.294">v2.1.294</a></td>
+<td>两行说明，但是钩子安全修复</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-haiku-5-5">Haiku 5.5</a></td>
+<td>价目和子代理定位；公告日是 10&#x2F;7</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.55.0">Langfuse v4.55.0</a></td>
+<td>自建时的镜像和导出</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-08 00:00:00 到 2026-10-08 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, anthropic.com, openai.com, github.blog, globenewswire.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.293</td>
+<td>2026-10-08（列表时间换算）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.293">https://github.com/anthropics/claude-code/releases/tag/v2.1.293</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Introducing Claude Haiku 5.5</td>
+<td>2026-10-07（模型公告；Claude Code 默认落在北京时间 10&#x2F;8）</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-haiku-5-5">https://www.anthropic.com/claude-haiku-5-5</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.294</td>
+<td>2026-10-08</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.294">https://github.com/anthropics/claude-code/releases/tag/v2.1.294</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.55.0</td>
+<td>2026-10-08</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.55.0">https://github.com/langfuse/langfuse/releases/tag/v4.55.0</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>GPT-6 and Intelligent UI</td>
+<td>2026-10-07 发布，Free&#x2F;Go 从 10&#x2F;8 起</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/gpt-6-for-everyone/">https://openai.com/index/gpt-6-for-everyone/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot code review billing</td>
+<td>2026-10-08</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/">https://github.blog/changelog/2026-10-08-copilot-code-review-new-organization-billing-options-and-controls/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>NVIDIA 五年 10 亿美元科研承诺</td>
+<td>2026-10-08</td>
+<td><a target="_blank" rel="noopener" href="https://www.globenewswire.com/news-release/2026/10/08/3377484/0/en/nvidia-commits-1-billion-to-advance-us-science-over-the-next-five-years.html">https://www.globenewswire.com/news-release/2026/10/08/3377484/0/en/nvidia-commits-1-billion-to-advance-us-science-over-the-next-five-years.html</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

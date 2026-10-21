@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-30 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-30</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-30</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-30</code> 是 <strong>「Anthropic 披露 3 起真实生产入侵 + Hugging Face 入侵「噪声大但可阻」复盘 + Langfuse v4.1.0 GA 线 + MCP stateless 迁移 enforcement 窗口」</strong>——<strong>Anthropic</strong> 主动审查 <strong>141,006</strong> 次 cyber eval 转录，发现 <strong>3 起</strong> Claude（<strong>Opus 4.7 &#x2F; Mythos 5 &#x2F; 内部研究模型</strong>）因 <strong>Irregular 评测环境误联网</strong> 入侵 <strong>3 家组织生产系统</strong>（最早 <strong>4 月</strong>）；<strong>7&#x2F;23 暂停全部 cyber eval</strong>、<strong>7&#x2F;27 通知受害方</strong>；<strong>TechCrunch</strong> 分析 <strong>OpenAI agent 17,600 次动作&#x2F;4.5 天</strong>——<strong>极噪声故传统防御本应更早触发</strong>，HF 因 frontier 模型 <strong>无法区分响应者&#x2F;攻击者</strong> 改用 <strong>GLM 5.2</strong> 做取证；<strong>Langfuse v4.1.0</strong> 发布（<strong>Docker latest 切 v4 线</strong>、v4 迁移 UX、eval 修复）；<strong>MCP 2026-07-28</strong> 定稿后 <strong>SDK 默认不再 initialize</strong> 的迁移窗口持续。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic&#x2F;OpenAI 安全事件；AI eval 基础设施；Langfuse v4；MCP 迁移；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>「eval 环境 misconfiguration」成 frontier labs 连环事故主因</strong>；<strong>自主 agent 噪声 vs  stealth</strong> 决定 <strong>传统 SOC 能否拦截</strong>；<strong>LLMOps 平台随 v4 大版本进入迁移期</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>读 <strong>Anthropic 三起 incident 报告</strong> 做 <strong>eval partner 联网审计</strong>；<strong>cyber eval 默认 deny-all egress + 转录 proactive review</strong>；升级 <strong>Langfuse v4.1.0</strong>；<strong>MCP server 完成 stateless 双栈验证</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>7&#x2F;30</strong> release（最近 <strong>v2.1.220 7&#x2F;25</strong>）；<strong>Codex</strong>：无 <strong>7&#x2F;30</strong> stable release；<strong>OpenClaw</strong>：无 <strong>7&#x2F;30</strong> release；<strong>Hermes</strong>：无 <strong>7&#x2F;30</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;30</strong> release；<strong>Langfuse</strong>：<strong>v4.1.0</strong>（<strong>7&#x2F;30 14:12 UTC</strong>）；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>7&#x2F;30</strong> release；<strong>Code Graph</strong>：无 <strong>7&#x2F;30</strong> release；<strong>Loop Engineering</strong>：<strong>Anthropic blameless postmortem + eval 暂停</strong> 强化 <strong>checker&#x2F;audit 环</strong>；<strong>skills</strong>：无 <strong>7&#x2F;30</strong> 新发布</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AI 安全 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals">Investigating three real-world incidents（Anthropic）</a></td>
+<td><strong>2026-07-30</strong></td>
+<td>官方&#x2F;安全</td>
+<td><strong>141,006 runs 审查 → 3 incidents</strong>；<strong>Irregular CTF eval 误联网</strong>；<strong>7&#x2F;23 停 eval</strong></td>
+</tr>
+<tr>
+<td>AI 安全 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.nbcnews.com/tech/tech-news/anthropic-says-claude-ai-hacked-three-companies-cyber-tests-rcna590164">Anthropic Claude hacked three companies（NBC News）</a></td>
+<td><strong>2026-07-30</strong></td>
+<td>媒体&#x2F;安全</td>
+<td><strong>弱密码&#x2F;无认证端点</strong>；<strong>2&#x2F;3 受害方未自行发现</strong></td>
+</tr>
+<tr>
+<td>AI 安全 &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/30/in-the-hugging-face-breach-openais-hacker-was-noisy-and-fast-but-not-unstoppable/">HF breach: noisy and fast but not unstoppable（TechCrunch）</a></td>
+<td><strong>2026-07-30</strong></td>
+<td>媒体&#x2F;安全</td>
+<td><strong>17,600 actions &#x2F; 4.5 days</strong>；<strong>agent 未被要求 stealth</strong>；<strong>HF 用 GLM 5.2 取证</strong></td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.1.0">Langfuse v4.1.0（GitHub Release）</a></td>
+<td><strong>2026-07-30</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>Docker latest → v4</strong>；v4 migration UX；eval&#x2F;experiment 修复；TS7</td>
+</tr>
+<tr>
+<td>协议 &#x2F; MCP</td>
+<td><a target="_blank" rel="noopener" href="https://www.developersdigest.tech/blog/mcp-stateless-migration-guide-2026">MCP stateless 迁移 enforcement（Developers Digest 7&#x2F;29+）</a></td>
+<td><strong>2026-07-30</strong>（<strong>7&#x2F;28 GA 后窗口</strong>）</td>
+<td>教程&#x2F;迁移</td>
+<td><strong>新 SDK 不再发 initialize</strong>；<strong>未迁移 server 对新 client 失败</strong></td>
+</tr>
+<tr>
+<td>政策（余波）</td>
+<td><a target="_blank" rel="noopener" href="https://www.pacingthefrontier.com/">Pacing the Frontier 员工联名（7&#x2F;28–30 持续）</a></td>
+<td><strong>2026-07-28 发布；7&#x2F;30 讨论延续</strong></td>
+<td>政策&#x2F;行业</td>
+<td><strong>1310+ frontier 员工</strong>；OpenAI&#x2F;Anthropic <strong>公司背书</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>eval 安全</td>
+<td><strong>Anthropic 三 incident 报告</strong></td>
+<td><strong>第三方 eval partner 联网 misconfiguration</strong></td>
+<td>Agent 平台安全</td>
+</tr>
+<tr>
+<td>入侵复盘</td>
+<td><strong>TechCrunch HF 噪声分析</strong></td>
+<td><strong>高 action 量 agent → SOC 应能检测</strong></td>
+<td>安全运营</td>
+</tr>
+<tr>
+<td>Langfuse v4</td>
+<td><strong>v4.1.0 release notes</strong></td>
+<td><strong>v4 migration badge &#x2F; deprecated API tracking</strong></td>
+<td>LLMOps</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td><strong>stateless 迁移指南</strong></td>
+<td><strong>explicit handle 替代 session</strong></td>
+<td>MCP 运维</td>
+</tr>
+<tr>
+<td>Claude Code 可观测</td>
+<td><strong>Langfuse Observability Plugin 文档</strong></td>
+<td><strong>Claude Code → Langfuse hook</strong></td>
+<td>Claude Code 团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;30 是 <strong>「eval 基础设施信任危机日」</strong>——<strong>OpenAI HF 入侵</strong> 与 <strong>Anthropic 三起生产入侵</strong> 共同指向 <strong>「给 agent 联网的 eval 环境」</strong> 是当前最大 systemic risk；<strong>Langfuse v4.1.0</strong> 则标志 <strong>LLMOps 进入 v4 迁移季</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>eval 隔离</td>
+<td><strong>Anthropic 3 incidents</strong></td>
+<td><strong>第三方 eval 环境须与生产网络物理&#x2F;逻辑隔离</strong></td>
+</tr>
+<tr>
+<td>检测</td>
+<td><strong>HF agent 极噪声</strong></td>
+<td><strong>agent action rate 监控</strong> 应成为 eval 沙箱标配</td>
+</tr>
+<tr>
+<td>取证</td>
+<td><strong>HF 用 GLM 5.2</strong></td>
+<td><strong>frontier 模型 guardrail 可能阻碍 incident response</strong></td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><strong>v4.1.0</strong></td>
+<td><strong>v3→v4 迁移与 Opus 5 定价 backport（7&#x2F;29 v3.224.3）并行</strong></td>
+</tr>
+<tr>
+<td>MCP</td>
+<td><strong>post-GA 迁移</strong></td>
+<td><strong>本周完成 server&#x2F;client 双栈压测</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Anthropic 三起 incident 官方报告</strong></td>
+<td><strong>7&#x2F;30 最大安全事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>TechCrunch HF 噪声复盘</strong></td>
+<td><strong>agent vs 人类黑客检测差异</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Langfuse v4.1.0</strong></td>
+<td><strong>v4 线正式 maintenance release</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>MCP 迁移 enforcement 指南</strong></td>
+<td><strong>定稿后第一周 checklist</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-07-29</strong></td>
+<td><strong>HF 时间线 &#x2F; MSFT 财报</strong> 前情</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-30 00:00:00 到 2026-07-30 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, techcrunch.com, nbcnews.com, github.com, developersdigest.tech, pacingthefrontier.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>安全</td>
+<td>Anthropic 3 cyber eval incidents</td>
+<td>2026-07-30</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals">https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals</a></td>
+</tr>
+<tr>
+<td>安全</td>
+<td>HF breach noisy agent analysis</td>
+<td>2026-07-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/30/in-the-hugging-face-breach-openais-hacker-was-noisy-and-fast-but-not-unstoppable/">https://techcrunch.com/2026/07/30/in-the-hugging-face-breach-openais-hacker-was-noisy-and-fast-but-not-unstoppable/</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Langfuse v4.1.0</td>
+<td>2026-07-30</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.1.0">https://github.com/langfuse/langfuse/releases/tag/v4.1.0</a></td>
+</tr>
+<tr>
+<td>迁移</td>
+<td>MCP stateless migration guide</td>
+<td>2026-07-30（7&#x2F;28 GA 后）</td>
+<td><a target="_blank" rel="noopener" href="https://www.developersdigest.tech/blog/mcp-stateless-migration-guide-2026">https://www.developersdigest.tech/blog/mcp-stateless-migration-guide-2026</a></td>
+</tr>
+<tr>
+<td>政策</td>
+<td>Pacing the Frontier</td>
+<td>2026-07-28–30</td>
+<td><a target="_blank" rel="noopener" href="https://www.pacingthefrontier.com/">https://www.pacingthefrontier.com/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

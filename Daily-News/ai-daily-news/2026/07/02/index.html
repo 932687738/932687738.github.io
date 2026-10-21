@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-02 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-02</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-02</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-02</code> 是 <strong>「企业 AI 部署军备竞赛 + 芯片&#x2F;基建叙事 + 平台侧冷静信号」</strong>——Microsoft 宣布 <strong>Frontier Company（$2.5B + 6000 人）</strong> 对标 AWS&#x2F;OpenAI&#x2F;Anthropic FDE；Anthropic 与 <strong>Samsung</strong> 洽谈自研芯片；<strong>Langfuse v3.203.2</strong> 与 <strong>OpenClaw 2026.7.1-beta.1</strong> 同日发布；Meta 内部称 <strong>Agent 进展慢于预期</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>TechCrunch 7&#x2F;2 产业线；GitHub release；政策&#x2F;监管相邻传播；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>FDE&#x2F;部署组织常态化</strong>：云厂与模型厂竞相组建「驻场工程军团」；<strong>定制芯片</strong> 成为算力自主叙事；<strong>Agent 落地</strong> 出现「资本开支↑、产品体感未兑现」张力</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 <strong>Microsoft Frontier Company</strong> 与既有 Azure&#x2F;OpenAI 栈的交付边界；Java&#x2F;Agent 栈跟踪 <strong>Langfuse agent skills</strong>；自托管 Agent 试用 <strong>OpenClaw 7.1-beta</strong>（GPT-5.6、<code>openclaw attach</code>）</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>7&#x2F;2</strong> 新 GitHub release；<strong>Dynamic Workflows</strong> 官方 GA 为 <strong>5&#x2F;28</strong>，<strong>7&#x2F;2 技术媒体</strong>续传 <strong>Pro 档可 <code>/config</code> 开启</strong>；<strong>Codex</strong>：无 <strong>7&#x2F;2</strong> release；<strong>OpenClaw</strong>：<strong>2026.7.1-beta.1</strong>（<strong>Published 2026-07-02</strong>）— <strong>GPT-5.6</strong>、<code>attach</code> 外部 harness、Telegram Codex；<strong>Hermes</strong>：无 <strong>7&#x2F;2</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;2</strong> release；<strong>Langfuse</strong>：<strong>v3.203.2</strong>（<strong>Published 2026-07-02T15:35:24Z</strong>）— <strong>Langfuse skills</strong>、assistant 自动重命名；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>7&#x2F;2</strong> release（<strong>1.2.7</strong> 为 <strong>6&#x2F;30</strong> 相邻）；<strong>Code Graph</strong>：无 <strong>7&#x2F;2</strong> release；<strong>skills</strong>：Langfuse <strong>agent skills</strong> 功能入库</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Microsoft &#x2F; 企业落地</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/">Microsoft Frontier Company（$2.5B）</a></td>
+<td><strong>2026-07-02</strong></td>
+<td>产业&#x2F;组织</td>
+<td><strong>6000 专家</strong> 驻场交付企业 AI；对标 <strong>AWS $1B FDE</strong>、OpenAI&#x2F;Anthropic 合资部署实体</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/">Anthropic × Samsung 定制芯片洽谈（TechCrunch）</a></td>
+<td><strong>2026-07-02</strong></td>
+<td>产业&#x2F;基建</td>
+<td>多元化算力栈叙事；与 OpenAI×Broadcom <strong>Jalapeño</strong> 对照</td>
+</tr>
+<tr>
+<td>Meta &#x2F; Agent</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/">Zuckerberg：Agent 进展慢于预期（TechCrunch）</a></td>
+<td><strong>2026-07-02</strong></td>
+<td>产业&#x2F;组织</td>
+<td><strong>$145B</strong> AI 基建 vs <strong>Agent Transformation</strong> 未兑现；裁员&#x2F;重组余波</td>
+</tr>
+<tr>
+<td>Meta &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/">Meta Pocket vibe-coded 游戏 App（TechCrunch）</a></td>
+<td><strong>2026-07-02</strong></td>
+<td>产品</td>
+<td><strong>Gizmo 收购</strong> 团队产物；prompt 生成交互 <strong>gizmos</strong> feed（<strong>6&#x2F;29</strong> 上架，<strong>7&#x2F;2</strong> 报道）</td>
+</tr>
+<tr>
+<td>可持续 &#x2F; 基建</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/a-warning-sign-about-ais-real-cost-courtesy-of-google-and-amazon/">Google&#x2F;Amazon 可持续报告：AI 碳排预警（TechCrunch）</a></td>
+<td><strong>2026-07-02</strong></td>
+<td>政策&#x2F;ESG</td>
+<td>Google 排放 <strong>+25% YoY</strong>、Amazon <strong>+16%<strong>；</strong>net-zero</strong> 与 AI 扩张张力</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 发布</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.203.2">Langfuse v3.203.2</a></td>
+<td><strong>2026-07-02</strong></td>
+<td>开源发布</td>
+<td><strong>Langfuse agent skills</strong>、对话自动重命名、trace UI&#x2F;MCP 文档修复</td>
+</tr>
+<tr>
+<td>OpenClaw &#x2F; 发布</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-beta.1">openclaw 2026.7.1-beta.1</a></td>
+<td><strong>2026-07-02</strong></td>
+<td>开源预发布</td>
+<td><strong>GPT-5.6</strong> 模型族、<code>openclaw attach</code>、Telegram <strong>Codex</strong> 配对&#x2F;steering、<strong>on-exit cron</strong></td>
+</tr>
+<tr>
+<td>Claude Code &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="http://www.techtimes.com/articles/319532/20260702/claude-code-dynamic-workflows-go-ga-pro-users-can-now-spawn-1000-parallel-agents.htm">Dynamic Workflows Pro 扩面（TechTimes）</a></td>
+<td><strong>2026-07-02</strong></td>
+<td>技术媒体</td>
+<td><strong>Pro</strong> 可通过 <code>/config</code> 开启；官方 GA 见 <strong>5&#x2F;28</strong> Anthropic 博文</td>
+</tr>
+<tr>
+<td>政策 &#x2F; 监管</td>
+<td><a target="_blank" rel="noopener" href="https://www.techcrunch.com/2026/07/01/neocloud-together-ai-raises-800m-leaps-to-8-3b-valuation/">出口管制 × frontier 发布（相邻传播）</a></td>
+<td><strong>2026-06-26~07-02</strong>（相邻日期&#x2F;中国时间窗口传播）</td>
+<td>政策监管</td>
+<td><strong>GPT-5.6</strong> 仍限 <strong>~20 伙伴</strong>；<strong>Fable 5</strong> 已 <strong>7&#x2F;1</strong> 全球恢复</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>企业部署</td>
+<td><strong>Microsoft Frontier Company 公告</strong></td>
+<td>FDE vs 传统 SI；Fortune 500 既有工程师基础</td>
+<td>企业 AI 交付负责人</td>
+</tr>
+<tr>
+<td>Claude Code Workflows</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/workflows">Dynamic workflows 官方文档</a></td>
+<td><code>/config</code>、<code>ultracode</code>、<code>/workflows</code>；<strong>v2.1.154+</strong></td>
+<td>多 Agent 编排研发</td>
+</tr>
+<tr>
+<td>Langfuse Agent</td>
+<td><strong>v3.203.2 release</strong></td>
+<td><strong>agent skills</strong>、MCP trace 拉取文档、v4 trace UI</td>
+<td>LLMOps&#x2F;Agent 运维</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><strong>2026.7.1-beta.1 release notes</strong></td>
+<td><code>openclaw attach</code>、GPT-5.6 catalog、Telegram Codex</td>
+<td>自托管 Gateway 用户</td>
+</tr>
+<tr>
+<td>定制芯片</td>
+<td><strong>Anthropic×Samsung 报道</strong></td>
+<td>推理&#x2F;训练芯片分工；与 <strong>TPU&#x2F;GPU</strong> 多云策略</td>
+<td>基础设施架构</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;2 呈现 <strong>「部署军团 + 可观测性&#x2F;agent skills 工具链 + 自托管 Agent 追新模型」</strong>——产业侧重金买交付能力，工程侧 <strong>Langfuse&#x2F;OpenClaw</strong> 继续把 <strong>trace、MCP、多通道 Agent</strong> 做厚；Meta 一线反馈提醒 <strong>Agent ROI</strong> 仍难兑现。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>企业 FDE</td>
+<td><strong>Microsoft $2.5B Frontier Company</strong></td>
+<td>大客 AI 项目将标配 <strong>驻场工程 + 成果对赌</strong>；内部团队需准备 <strong>可观测&#x2F;合规</strong> 交付包</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><strong>v3.203.2</strong> agent skills + MCP 文档</td>
+<td>观测平台开始吸收 <strong>Skills</strong> 语义；与 Claude&#x2F;Cursor skills 生态对齐</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><strong>7.1-beta.1</strong> GPT-5.6 + attach + Telegram Codex</td>
+<td>自托管栈需 <strong>快速跟进 frontier 模型 catalog</strong>；多通道应统一 <strong>harness 附加</strong> 模式</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><strong>Dynamic Workflows</strong> Pro 扩面（媒体 <strong>7&#x2F;2</strong>）</td>
+<td><strong>千级 subagent</strong> 编排适合审计&#x2F;迁移；注意 <strong>token 账单</strong> 与 <strong>ultracode</strong> 误触</td>
+</tr>
+<tr>
+<td>Code Graph &#x2F; Spring Alibaba</td>
+<td>无 <strong>7&#x2F;2</strong> 信号</td>
+<td>继续跟踪 <strong>CodeGraph npm</strong> 与 <strong>java2ai</strong> 文档</td>
+</tr>
+<tr>
+<td>Agent 预期管理</td>
+<td><strong>Meta town hall</strong> 降温</td>
+<td>企业应设 <strong>Agent 里程碑</strong> 与 <strong>人力替代</strong> 解耦 KPI</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Microsoft Frontier Company</strong></td>
+<td>2026 <strong>云厂 FDE 军备</strong> 的标杆动作</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Langfuse v3.203.2</strong></td>
+<td><strong>agent skills</strong> 进入观测平台的主线信号</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>OpenClaw 2026.7.1-beta.1</strong></td>
+<td><strong>GPT-5.6 + attach + Telegram Codex</strong> 三合一 beta</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Meta Agent 进展慢于预期</strong></td>
+<td><strong>高 capex &#x2F; 低 Agent 体感</strong> 的产业对照</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>Google&#x2F;Amazon 可持续报告解读</strong></td>
+<td>AI 数据中心 <strong>碳排</strong> 将进入采购&#x2F;合规 checklist</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-02 00:00:00 到 2026-07-02 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：techcrunch.com, github.com, code.claude.com, techtimes.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>技术媒体</td>
+<td>Microsoft Frontier Company</td>
+<td>2026-07-02</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/">https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Anthropic Samsung chip talks</td>
+<td>2026-07-02</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/">https://techcrunch.com/2026/07/02/anthropic-is-discussing-a-new-custom-chip-with-samsung/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Zuckerberg on AI agents</td>
+<td>2026-07-02</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/">https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Meta Pocket app</td>
+<td>2026-07-02</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/">https://techcrunch.com/2026/07/02/meta-quietly-launches-vibe-coded-gaming-app-pocket/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google Amazon sustainability</td>
+<td>2026-07-02</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/02/a-warning-sign-about-ais-real-cost-courtesy-of-google-and-amazon/">https://techcrunch.com/2026/07/02/a-warning-sign-about-ais-real-cost-courtesy-of-google-and-amazon/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v3.203.2</td>
+<td>2026-07-02</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.203.2">https://github.com/langfuse/langfuse/releases/tag/v3.203.2</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>openclaw 2026.7.1-beta.1</td>
+<td>2026-07-02</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-beta.1">https://github.com/openclaw/openclaw/releases/tag/v2026.7.1-beta.1</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Claude Code Dynamic Workflows Pro</td>
+<td>2026-07-02</td>
+<td><a target="_blank" rel="noopener" href="http://www.techtimes.com/articles/319532/20260702/claude-code-dynamic-workflows-go-ga-pro-users-can-now-spawn-1000-parallel-agents.htm">http://www.techtimes.com/articles/319532/20260702/claude-code-dynamic-workflows-go-ga-pro-users-can-now-spawn-1000-parallel-agents.htm</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>Claude Code workflows</td>
+<td>参考文档</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/workflows">https://code.claude.com/docs/en/workflows</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

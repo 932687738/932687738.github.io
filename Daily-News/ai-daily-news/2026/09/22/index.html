@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-22 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-22</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-22</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 22 日是 <strong>定价与效率同日对撞的 frontier 发布日</strong>——Anthropic 推出 <strong>Claude Opus 5.5</strong>（约 Fable 5.1 水准、比 Opus 5 便宜约 40%），OpenAI 随即放出 <strong>GPT-6 Sol &#x2F; Luna</strong>（相对 GPT-5.6 促销价 API 腰斩并进 Codex&#x2F;Copilot）；GitHub 同日把两家新模型与 <strong>C++ 全库索引</strong> 推进 Copilot。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方 changelog、厂商公告、可信媒体、政策监管、专项主题、中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）5.5&#x2F;GPT-6 中档模型以「更少 token、更低价」抢 agentic coding 份额；2）Copilot 模型池同日扩容 + C++ 符号索引；3）美联邦 M-25-21 高影响 AI 合规截止与州级框架并行</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-opus-5-5">Claude Opus 5.5</a>；<a target="_blank" rel="noopener" href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">GPT-6 Sol&#x2F;Luna（TechCrunch）</a>；<a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-luna-now-available/">Copilot 上的 Sol&#x2F;Luna</a>；<a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/">Copilot 上的 Opus 5.5</a></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 9&#x2F;22 stable tag（最近 v2.1.278 为 9&#x2F;19）。<strong>Codex</strong>：产品层接入 Sol&#x2F;Luna，无 9&#x2F;22 CLI GitHub tag。<strong>OpenClaw</strong>：v2026.9.5 发布于 9&#x2F;19，非当日。<strong>Hermes</strong>：v2026.9.21 为 9&#x2F;21。<strong>Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills</strong>：未发现可核验的 9&#x2F;22 官方 changelog</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-opus-5-5">Introducing Claude Opus 5.5</a></td>
+<td>2026-09-22</td>
+<td>官方发布</td>
+<td>5.5 家族首模；默认约 $4&#x2F;$20；cache read $0.20；thinking 不可关、强制 tool 报错等 API 破坏性变更</td>
+</tr>
+<tr>
+<td>模型</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">OpenAI launches GPT-6 Sol and Luna</a></td>
+<td>2026-09-22</td>
+<td>技术媒体（交叉：Verge&#x2F;社区）</td>
+<td>Sol 面向复杂编码与 agent；Luna 面向高吞吐；相对 5.6 促销价 API 降 50%；晚于 Opus 5.5 约 90 分钟</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-luna-now-available/">GPT-6 Sol and Luna now available</a></td>
+<td>2026-09-22</td>
+<td>官方发布</td>
+<td>Sol：Pro+&#x2F;Max&#x2F;Biz&#x2F;Ent；Luna：另含 Pro；按 usage billing；admin model policy 可控</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/">Claude Opus 5.5 in GitHub Copilot</a></td>
+<td>2026-09-22</td>
+<td>官方发布</td>
+<td>Pro+&#x2F;Max&#x2F;Biz&#x2F;Ent；早期测试称步数&#x2F;token 更少；输出带文本水印</td>
+</tr>
+<tr>
+<td>代码智能</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing/">Faster C++ code intelligence with WCI</a></td>
+<td>2026-09-22</td>
+<td>官方发布</td>
+<td>Copilot CLI 默认开全库符号索引；<code>/lsp logs</code> 看进度；大仓首编会抬内存</td>
+</tr>
+<tr>
+<td>Workspace</td>
+<td><a target="_blank" rel="noopener" href="https://workspaceupdates.googleblog.com/2026/09/study-notebooks-in-gemini-are-now-available-for-Google-Workspace-accounts.html">Study notebooks in Gemini for Workspace</a></td>
+<td>2026-09-22</td>
+<td>官方发布</td>
+<td>学校&#x2F;工作账号可用；需管理员同时打开 Gemini app 与 Gemini Notebook；EEA 延后</td>
+</tr>
+<tr>
+<td>政策</td>
+<td><a target="_blank" rel="noopener" href="https://forkast.news/the-federal-ai-compliance-deadline-is-here-the-memo-behind-it-has-vanished/">Federal AI compliance deadline; memo page 404</a></td>
+<td>2026-09-22</td>
+<td>技术媒体</td>
+<td>OMB M-25-21 高影响 AI 最低风控汇报截止；白宫原文页据称 404</td>
+</tr>
+<tr>
+<td>政策</td>
+<td><a target="_blank" rel="noopener" href="https://cyberscoop.com/trump-hands-off-ai-regulation-china-race/">Trump doubles down on hands-off AI regulation</a></td>
+<td>2026-09-22</td>
+<td>技术媒体</td>
+<td>以对华竞争为由维持宽松；对照近日 agent 越狱&#x2F;误连事件</td>
+</tr>
+<tr>
+<td>政策</td>
+<td><a target="_blank" rel="noopener" href="https://governor.maryland.gov/news/press-releases/governor-moore-outlines-ai-framework-protect-marylanders">Maryland AI framework</a></td>
+<td>2026-09-22</td>
+<td>政策标准</td>
+<td>州级评测、审计、劳工与 24h 事件报告原则</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude API</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/models/opus-5-5/overview">Opus 5.5 overview</a></td>
+<td><code>claude-opus-5-5</code>；thinking 不可关；<code>computer_20251124</code> 不再接受；工具间文本进 thinking 块</td>
+<td>已接 Opus 5 的 Agent&#x2F;工具链</td>
+</tr>
+<tr>
+<td>OpenAI API</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/models/gpt-6-sol">GPT-6 Sol</a> &#x2F; <a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/models/gpt-6-luna">Luna</a></td>
+<td><code>gpt-6-sol</code> &#x2F; <code>gpt-6-luna</code>；约 1.05M 上下文</td>
+<td>要换中档 GPT-6 的 Codex&#x2F;API 团队</td>
+</tr>
+<tr>
+<td>Copilot 治理</td>
+<td>Sol&#x2F;Luna 与 Opus 5.5 changelog</td>
+<td>默认启用新模型；Enterprise 用 model policy 关</td>
+<td>Copilot admin</td>
+</tr>
+<tr>
+<td>C++ Agent</td>
+<td>WCI changelog</td>
+<td>持久符号索引 vs 每次重解析</td>
+<td>Copilot CLI + 大 C++ 仓</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程增量在 <strong>模型单价&#x2F;步数</strong> 与 <strong>IDE 模型池</strong>，不在 LangChain&#x2F;Langfuse&#x2F;Spring 框架发布。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Opus 5.5</td>
+<td>官方称默认 effort 下 FrontierCode 成本约为 Astra 的约 1&#x2F;5；GitHub 称 VS Code 终端任务步数约为 Opus 5 的一半</td>
+<td>长任务先比「每任务美元」不要只看榜分；升级前读破坏性变更</td>
+</tr>
+<tr>
+<td>GPT-6 Sol&#x2F;Luna</td>
+<td>进 Codex、ChatGPT Work 与 Copilot；Luna 对 Free&#x2F;Go 桌面可用</td>
+<td>路由：Astra&#x2F;Opus 扛长程，Sol 日常 agent，Luna 抽数&#x2F;摘要</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td>两家同日进 picker；C++ WCI 默认开</td>
+<td>大仓先看索引内存；Business 检查 default model enablement</td>
+</tr>
+<tr>
+<td>Claude Code &#x2F; Codex CLI</td>
+<td>无 9&#x2F;22 tag</td>
+<td>模型换了，harness 版本未动</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; LangChain &#x2F; Spring &#x2F; Code Graph &#x2F; Loop &#x2F; skills</td>
+<td>无 9&#x2F;22 官方更新</td>
+<td>专项记空</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-opus-5-5">Claude Opus 5.5</a></td>
+<td>当日最完整的官方评测、价格、安全与「pace the frontier」后首发</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">TechCrunch: GPT-6 Sol and Luna</a></td>
+<td>交叉核验 OpenAI 价格&#x2F;可用性与同日对撞时间线</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-luna-now-available/">Copilot Sol&#x2F;Luna</a></td>
+<td>研发侧真正能点到的模型入口与套餐边界</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/models/opus-5-5/overview">Opus 5.5 API overview</a></td>
+<td>升级会炸的四处破坏性变更</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://governor.maryland.gov/news/press-releases/governor-moore-outlines-ai-framework-protect-marylanders">Maryland AI framework</a></td>
+<td>联邦放松时州级护栏如何补位</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-22 00:00:00 到 2026-09-22 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, platform.claude.com, techcrunch.com, theverge.com, community.openai.com, developers.openai.com, github.blog, workspaceupdates.googleblog.com, forkast.news, cyberscoop.com, governor.maryland.gov, thenewstack.io</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Introducing Claude Opus 5.5</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/claude-opus-5-5">https://www.anthropic.com/claude-opus-5-5</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>Claude Opus 5.5 overview</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/models/opus-5-5/overview">https://platform.claude.com/docs/en/models/opus-5-5/overview</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenAI launches GPT-6 Sol and Luna</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/">https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenAI launches GPT-6 Sol and Luna</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/998997/openai-launches-faster-and-more-efficient-gpt-6-sol-and-luna-models">https://www.theverge.com/ai-artificial-intelligence/998997/openai-launches-faster-and-more-efficient-gpt-6-sol-and-luna-models</a></td>
+</tr>
+<tr>
+<td>社区公告</td>
+<td>Announcing GPT-6 Sol and Luna</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://community.openai.com/t/announcing-gpt-6-sol-and-gpt-6-luna-in-the-api-codex-and-chatgpt/1399925">https://community.openai.com/t/announcing-gpt-6-sol-and-gpt-6-luna-in-the-api-codex-and-chatgpt/1399925</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>GPT-6 Sol model</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/models/gpt-6-sol">https://developers.openai.com/api/docs/models/gpt-6-sol</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>GPT-6 Sol and Luna in Copilot</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-luna-now-available/">https://github.blog/changelog/2026-09-22-openais-gpt-6-sol-and-luna-now-available/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Claude Opus 5.5 in Copilot</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/">https://github.blog/changelog/2026-09-22-claude-opus-5-5-is-now-available-in-github-copilot/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>C++ whole codebase indexing</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing/">https://github.blog/changelog/2026-09-22-faster-c-code-intelligence-with-whole-codebase-indexing/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Study notebooks in Gemini for Workspace</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://workspaceupdates.googleblog.com/2026/09/study-notebooks-in-gemini-are-now-available-for-Google-Workspace-accounts.html">https://workspaceupdates.googleblog.com/2026/09/study-notebooks-in-gemini-are-now-available-for-Google-Workspace-accounts.html</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Federal AI compliance deadline</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://forkast.news/the-federal-ai-compliance-deadline-is-here-the-memo-behind-it-has-vanished/">https://forkast.news/the-federal-ai-compliance-deadline-is-here-the-memo-behind-it-has-vanished/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Trump hands-off AI regulation</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://cyberscoop.com/trump-hands-off-ai-regulation-china-race/">https://cyberscoop.com/trump-hands-off-ai-regulation-china-race/</a></td>
+</tr>
+<tr>
+<td>政策标准</td>
+<td>Maryland AI framework</td>
+<td>2026-09-22</td>
+<td><a target="_blank" rel="noopener" href="https://governor.maryland.gov/news/press-releases/governor-moore-outlines-ai-framework-protect-marylanders">https://governor.maryland.gov/news/press-releases/governor-moore-outlines-ai-framework-protect-marylanders</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

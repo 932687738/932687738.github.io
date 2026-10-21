@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-01 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-01</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-01</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 1 日主线是 <strong>Hermes Agent <code>v0.21.0</code>（Bot Mode &#x2F; cron 记忆 &#x2F; 子 Agent 中途转向）</strong>、<strong>Codex <code>0.152.0</code>（MCP 包名、每工具输出上限、update_plan 改 opt-in）</strong>、<strong>Claude Code <code>v2.1.252</code>（Mac Bash swap &#x2F; Remote Control 卡住）</strong>，以及 <strong>Langfuse <code>v4.26.0</code>+<code>v4.27.0</code>（eval trace 串联、in-app agent 多模态）</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、开源 release、Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes、Spring AI&#x2F;Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、skills、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）编程 Agent 把「多 bot 社会 + 定时任务有记忆」做成产品默认；2）Codex 收紧默认工具面（planning 改 opt-in）同时放宽 MCP 命名；3）可观测平台补 eval↔trace 与站内 agent</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Hermes Bot Mode&#x2F;<code>hermes peer</code>；Codex <code>tools.update_plan.enabled</code>；Langfuse evaluator execution traces；不要把 <code>v2.1.257</code>&#x2F;<code>OpenClaw 2026.8.2</code> 记进本日</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Hermes：<code>v0.21.0</code>&#x2F;<code>v2026.8.31</code>（Published 2026-08-31T19:29:49Z，中国时间 9&#x2F;1 03:29）。Claude Code：<code>v2.1.252</code>（2026-08-31T19:46:55Z，中国时间 9&#x2F;1 03:46）。Codex：<code>rust-v0.152.0</code>（2026-09-01T01:58:32Z，中国时间 09:58）。Langfuse：<code>v4.26.0</code>（UTC 8&#x2F;31 17:53 → 中国 9&#x2F;1 01:53）+ <code>v4.27.0</code>（2026-09-01T10:55:03Z，中国时间 18:55）。OpenClaw：<code>2026.8.2</code> Published 2026-09-01T16:00:56Z &#x3D; 中国 9&#x2F;2 00:00，<strong>不记本日</strong>。Claude Code <code>v2.1.257</code>&#x2F;<code>v2.1.258</code> 同理落在 9&#x2F;2。Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; skills：未发现可核验的 9&#x2F;1 重大稳定版更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent runtime</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31">Hermes Agent v0.21.0 (v2026.8.31)</a></td>
+<td>2026-09-01（UTC 8&#x2F;31 19:29）</td>
+<td>开源发布</td>
+<td>Bot Mode 内置：命名 bot、群聊、<code>hermes peer</code> 跨 profile DM；cron 带 persistent memory&#x2F;<code>continuity</code>；<code>delegate_task</code> 可中途 steer&#x2F;停；MCP 桌面变成健康检查+用量看板；保护 AGENTS.md&#x2F;skills 写审批。官方自称 Pantheon Release</td>
+</tr>
+<tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.152.0">Codex 0.152.0</a></td>
+<td>2026-09-01</td>
+<td>开源发布</td>
+<td>Vim <code>/</code> <code>?</code> 搜索草稿；限流横幅可跳转用量&#x2F;套餐；MCP 名允许 <code>:</code> <code>@</code> <code>/</code> <code>.</code>；每工具 <code>output_token_limit</code>；<code>thread/shellCommand</code> 超时可超 1h；**<code>update_plan</code> 默认关闭**（<code>tools.update_plan.enabled = true</code>）；修 Guardian 压缩丢授权、Windows Store PowerShell 沙箱、云任务拒绝不信任 URL</td>
+</tr>
+<tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.252">Claude Code v2.1.252</a></td>
+<td>2026-09-01（UTC 8&#x2F;31 19:46）</td>
+<td>开源发布</td>
+<td>修部分 Mac「task output swap refused」；无 <code>.claude/settings.local.json</code> 时 always-allow 不落盘；Remote Control 在 claude.ai 降级时工具结束后卡数分钟；超大失败输出把会话撑爆 API 上限</td>
+</tr>
+<tr>
+<td>LLM 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.26.0">Langfuse v4.26.0</a></td>
+<td>2026-09-01（UTC 8&#x2F;31 17:53）</td>
+<td>开源发布</td>
+<td>evaluator execution traces 可回链；PR 可预览 API spec；修 eval structured output 与 reasoning 碰撞、OTel prompt version 当整数解析、in-app-agent OpenAI Responses 保持无状态</td>
+</tr>
+<tr>
+<td>LLM 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.27.0">Langfuse v4.27.0</a></td>
+<td>2026-09-01</td>
+<td>开源发布</td>
+<td>in-app-agent 支持多模态输入与 prompt cache；OpenAI Responses 网关；修输出 token 截断空白轮、Claude id 强制 reasoning、S3 multipart 等分片</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多 Agent 产品化</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31">Hermes v0.21.0</a></td>
+<td>Bot 社会、cron 连续性、子 Agent 直播转向、MCP 指挥中心</td>
+<td>要把「一堆 profile」变成可协作团队的人</td>
+</tr>
+<tr>
+<td>默认工具面</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.152.0">Codex 0.152.0</a></td>
+<td>planning 改 opt-in；MCP 输出按工具截断</td>
+<td>升级后发现 update_plan 没了的人</td>
+</tr>
+<tr>
+<td>eval 可追溯</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.26.0">Langfuse v4.26.0</a></td>
+<td>评分运行留下 execution trace</td>
+<td>要解释「这条 score 怎么来的」的评测同学</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：Loop Engineering 当日信号在 Hermes：定时任务必须带记忆与连续性，子 Agent 必须可中途纠偏，且保护指令文件写入。Codex 把 planning 从默认能力改成显式开关，和「少给默认工具」同一方向。OpenClaw <code>2026.8.2</code>、Claude Code <code>v2.1.257</code>（含 Fable 5.1 默认）落在中国时间 9&#x2F;2，不记本日。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hermes &#x2F; Loop</td>
+<td>Bot Mode + cron memory + live steer</td>
+<td>定时 loop 没有昨天的输出就不能去重；子 Agent 不能 fire-and-pray</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>MCP 包名 + 每工具截断 + plan opt-in</td>
+<td>默认工具越少越好；截断策略按工具而不是全局一刀</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>v2.1.252 稳定性</td>
+<td>Remote Control 与超大失败日志会直接打爆上下文，先修通道再谈新模型</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td>v4.26–4.27 eval 链 + 站内 agent</td>
+<td>评分必须能点回原始 span；站内 agent 也要走同一套 OTel</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>8.2 落在 9&#x2F;2</td>
+<td>8&#x2F;31 的 2.0 仍是当前应读版本</td>
+</tr>
+<tr>
+<td>其余专项</td>
+<td>Spring* &#x2F; LangChain &#x2F; Code Graph &#x2F; skills</td>
+<td>未发现 9&#x2F;1 重大稳定更新</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31">Hermes v0.21.0</a></td>
+<td>本窗口最大 Agent 产品变更，按中国时间记本日</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.152.0">Codex 0.152.0</a></td>
+<td>默认工具面收紧 + MCP 工程补丁</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.27.0">Langfuse v4.27.0</a></td>
+<td>站内 agent 多模态与 cache，和 v4.26 一起升</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.252">Claude Code v2.1.252</a></td>
+<td>中国时间窗口内的稳定补丁；Fable 5.1 等 9&#x2F;2</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-01 00:00:00 到 2026-09-01 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Hermes Agent v0.21.0</td>
+<td>2026-09-01（UTC 8&#x2F;31 19:29）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.8.31</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex 0.152.0</td>
+<td>2026-09-01</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.152.0">https://github.com/openai/codex/releases/tag/rust-v0.152.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.252</td>
+<td>2026-09-01（UTC 8&#x2F;31 19:46）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.252">https://github.com/anthropics/claude-code/releases/tag/v2.1.252</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.26.0</td>
+<td>2026-09-01（UTC 8&#x2F;31 17:53）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.26.0">https://github.com/langfuse/langfuse/releases/tag/v4.26.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.27.0</td>
+<td>2026-09-01</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.27.0">https://github.com/langfuse/langfuse/releases/tag/v4.27.0</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-16 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-16</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-16</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-16</code> 是 <strong>「Langfuse 三连发 + Google Search 连接应用 + Gemini 3.5 Pro 第三次延期 + WAIC 2026 开幕前夜 + Loop npm 1.2&#x2F;1.1」</strong>——Langfuse <strong>v3.215.0→v3.217.0</strong> 一日三版（<strong>Agent sandbox &#x2F; Dashboard MCP &#x2F; trace I&#x2F;O 性能</strong>）；Google <strong>Search AI Mode</strong> 接入 <strong>Instacart&#x2F;Canva&#x2F;YouTube Music</strong>；<strong>Gemini 3.5 Pro</strong> 再传 <strong>第三次延期</strong>（<strong>编码能力未达内部目标</strong>，<strong>Bloomberg&#x2F;9to5Google 7&#x2F;16</strong>）；<strong>WAIC 2026</strong> 媒体预展（<strong>7&#x2F;17 正式开幕</strong>）；<strong>loop-context 1.2.0 + loop-worktree 1.1.0</strong> npm 发布（<strong>Discussion #294</strong>）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Google&#x2F;Langfuse&#x2F;LangChain&#x2F;WAIC&#x2F;Loop Engineering；Gemini 传闻；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Agent 连接外部世界 + 可观测平台加速迭代</strong>；Search <strong>connected apps</strong> 把 <strong>MCP&#x2F;工具调用</strong> 推向 <strong>消费级入口</strong>；<strong>Gemini 3.5 Pro</strong> 从 <strong>传闻 GA</strong> 转向 <strong>可靠性&#x2F;编码再打磨</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Langfuse 升级至 <strong>≥ v3.217.0</strong> 修复 <strong>大 trace I&#x2F;O 卡顿</strong>；评估 <strong>Search connected apps</strong> 对 <strong>Agent 产品入口</strong> 的启示；<strong>loop-context&#x2F;worktree npm</strong> 落地 <strong>日预算 + 路径锁</strong>；<strong>WAIC 7&#x2F;17–20</strong> 跟踪 <strong>阶跃 Agent OS &#x2F; MiniMax M3 &#x2F; 国产智算</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>7&#x2F;16</strong> 新 release（<strong>v2.1.211 为 7&#x2F;15</strong>；<strong>v2.1.212 为 7&#x2F;17 08:26 CST</strong>）；<strong>Codex</strong>：<strong>rust-v0.145.0-alpha.16</strong>（<strong>7&#x2F;16</strong> prerelease）；<strong>OpenClaw</strong>：无 <strong>7&#x2F;16</strong> 新 tag（<strong>2026.7.1 为 7&#x2F;13</strong>）；<strong>Hermes</strong>：无 <strong>7&#x2F;16</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;16</strong> release；<strong>Langfuse</strong>：<strong>v3.215.0 + v3.216.0 + v3.217.0</strong>（<strong>7&#x2F;16</strong>）；<strong>LangChain&#x2F;LangGraph</strong>：<strong>langchain&#x3D;&#x3D;1.3.14</strong>（<strong>7&#x2F;16</strong>）；<strong>LangGraph</strong> 无 <strong>7&#x2F;16</strong> release（<strong>1.2.9 为 7&#x2F;10</strong>）；<strong>Code Graph</strong>：无 <strong>7&#x2F;16</strong> release；<strong>Loop Engineering</strong>：<strong>npm loop-context 1.2.0 + loop-worktree 1.1.0</strong>（<strong>Discussion #294，7&#x2F;16</strong>）；<strong>Hermes PR Babysitter 示例 #247</strong> 等 <strong>7&#x2F;13–16 窗口</strong> merge</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Google &#x2F; Search</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/products-and-platforms/products/search/connected-apps/">Connect more of your apps to Search（官方博客）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>官方&#x2F;产品</td>
+<td><strong>AI Mode</strong> 连接 <strong>Instacart&#x2F;Canva&#x2F;YouTube Music</strong>；<strong>规划→结账&#x2F;设计&#x2F;播放</strong> 一站式</td>
+</tr>
+<tr>
+<td>Google &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://9to5google.com/2026/07/16/gemini-3-5-pro-delays/">Gemini 3.5 Pro delays due to coding performance（9to5Google）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>技术媒体</td>
+<td><strong>6 月 deadline 已过</strong>；Google 称 <strong>正测试 3.5 Pro + upgraded Flash</strong>；<strong>编码训练结果 disappointing</strong></td>
+</tr>
+<tr>
+<td>Google &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.techtimes.com/articles/320736/20260716/rebuilt-gemini-35-pro-misses-third-deadline-google-eyes-stopgap-release.htm">Gemini 3.5 Pro misses third deadline（TechTimes 7&#x2F;16）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>技术媒体</td>
+<td><strong>7&#x2F;17 传闻 GA 极可能再滑</strong>；<strong>幻觉&#x2F;可靠性</strong> 为新瓶颈；<strong>API 仍无 gemini-3.5-pro GA</strong></td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.215.0">Langfuse v3.215.0（GitHub Release）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>facet 搜索建议</strong>、<strong>Agent sandbox</strong>、<strong>Sentry error ID</strong></td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.216.0">Langfuse v3.216.0（GitHub Release）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>v4 sessions metadata 过滤</strong>、<strong>Dashboard&#x2F;Widget CRUD MCP（unstable）</strong></td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.217.0">Langfuse v3.217.0（GitHub Release）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>PR preview GitHub deployments</strong>、<strong>blob export SSRF 自动禁用</strong>、<strong>trace 大 I&#x2F;O 性能修复</strong></td>
+</tr>
+<tr>
+<td>LangChain &#x2F; 框架</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.14">langchain&#x3D;&#x3D;1.3.14（GitHub Release）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong><code>ToolErrorMiddleware</code><strong>、</strong><code>ToolRetryMiddleware</code> 仅重试可重试异常</strong></td>
+</tr>
+<tr>
+<td>Loop Engineering &#x2F; 工具链</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/cobusgreyling/loop-engineering/discussions/294">npm update — loop-context 1.2.0 + loop-worktree 1.1.0（#294）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>社区&#x2F;announce</td>
+<td><strong>日 token 预算 <code>--daily-budget-from-pattern</code><strong>、</strong><code>--on-exceed</code> hook</strong>、<strong>advisory path lock</strong></td>
+</tr>
+<tr>
+<td>Codex &#x2F; CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.16">Codex rust-v0.145.0-alpha.16（GitHub Release）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>开源&#x2F;prerelease</td>
+<td><strong>7&#x2F;16 alpha</strong> 预发布；无 <strong>stable tag</strong></td>
+</tr>
+<tr>
+<td>产业 &#x2F; 活动</td>
+<td><a target="_blank" rel="noopener" href="https://www.citynewsservice.cn/articles/china-biz-buzz/tech/china-tech-giants-push-computing-limits-as-waic-2026-opens-in-shanghai-znxeqvpm">WAIC 2026 media preview（City News Service 7&#x2F;16）</a></td>
+<td><strong>2026-07-16</strong></td>
+<td>产业&#x2F;活动</td>
+<td><strong>7&#x2F;17 开幕</strong>；<strong>华为 Atlas 950 SuperPod</strong>、<strong>曙光 8000 万卡集群</strong> 预展；<strong>300+ 全球首发</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent 入口</td>
+<td><strong>Google Search connected apps 博客</strong></td>
+<td><strong>AI Mode + 第三方 app OAuth</strong>、<strong>Personal Intelligence</strong></td>
+<td>产品&#x2F;Agent 架构</td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><strong>Langfuse v3.215–217 changelog</strong></td>
+<td><strong>Agent sandbox</strong>、<strong>Dashboard MCP</strong>、<strong>trace I&#x2F;O size-gate</strong></td>
+<td>Langfuse&#x2F;SRE</td>
+</tr>
+<tr>
+<td>Agent 中间件</td>
+<td><strong>langchain 1.3.14 release</strong></td>
+<td><strong>ToolErrorMiddleware</strong>、<strong>retry 可重试异常过滤</strong></td>
+<td>LangChain 工程师</td>
+</tr>
+<tr>
+<td>Loop 工具链</td>
+<td><strong>loop-engineering Discussion #294</strong></td>
+<td><strong>npm 1.2&#x2F;1.1</strong>、<strong>loop-cost 1.1 多 agent 成本</strong></td>
+<td>多 loop 运维</td>
+</tr>
+<tr>
+<td>Frontier 路由</td>
+<td><strong>9to5Google Gemini 3.5 Pro 7&#x2F;16</strong></td>
+<td><strong>Flash 升级 vs Pro 延期</strong> 分桶</td>
+<td>架构&#x2F;采购</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;16 呈现 <strong>「消费级 Agent 连接应用 + 工程平台三连 patch + Frontier 模型档期再滑」</strong>——Google 把 <strong>Gemini 式 connected apps</strong> 搬进 <strong>Search AI Mode</strong>；Langfuse <strong>一日三版</strong> 强化 <strong>Agent sandbox 与 trace 大 payload</strong>；<strong>Gemini 3.5 Pro</strong> 在 <strong>7&#x2F;17 前夜</strong> 仍无 <strong>官方 GA</strong>，产业焦点转向 <strong>WAIC 国产智算&#x2F;Agent OS</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连接应用</td>
+<td><strong>Search AI Mode × Instacart&#x2F;Canva&#x2F;YT Music</strong></td>
+<td><strong>Agent 产品</strong> 应预留 <strong>OAuth 连接层</strong>，而非仅 <strong>chat 窗口</strong></td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><strong>Langfuse 7&#x2F;16 三连发</strong></td>
+<td><strong>大 trace</strong> 必须 <strong>size-gate I&#x2F;O</strong>；<strong>Dashboard MCP</strong> 进入 <strong>unstable API</strong></td>
+</tr>
+<tr>
+<td>工具中间件</td>
+<td><strong>LangChain ToolErrorMiddleware</strong></td>
+<td><strong>Agent 工具失败</strong> 应用 <strong>middleware 统一降级</strong>，而非 <strong>裸 retry</strong></td>
+</tr>
+<tr>
+<td>Loop npm</td>
+<td><strong>loop-context 1.2 + worktree 1.1</strong></td>
+<td><strong>L2 loop</strong> 标配 <strong>日预算 + path lock</strong>；对照 <strong>#247 Hermes PR Babysitter</strong></td>
+</tr>
+<tr>
+<td>Frontier</td>
+<td><strong>Gemini 3.5 Pro 第三次延期</strong></td>
+<td><strong>7&#x2F;17 生产切换</strong> 仍须 <strong>等 API model card</strong>；<strong>Flash 升级版</strong> 或为 <strong>stopgap</strong></td>
+</tr>
+<tr>
+<td>WAIC</td>
+<td><strong>7&#x2F;16 预展 &#x2F; 7&#x2F;17 开幕</strong></td>
+<td><strong>阶跃 Agent OS &#x2F; MiniMax M3 &#x2F; Atlas 950</strong> 为 <strong>中文 Agent+智算</strong> 对照样本</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Langfuse v3.215–217 release notes</strong></td>
+<td><strong>7&#x2F;16 最密集</strong> 可观测增量</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Google Search connected apps 官方文</strong></td>
+<td><strong>消费级 Agent 连接范式</strong> 一手来源</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>loop-engineering Discussion #294</strong></td>
+<td><strong>npm 级 loop 治理</strong> 可复现命令</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>9to5Google Gemini 3.5 Pro 7&#x2F;16</strong></td>
+<td><strong>7&#x2F;17 前</strong> 模型路由 <strong>风险样本</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-07-15</strong></td>
+<td><strong>Claude Code v2.1.211 &#x2F; loop #273+#274</strong></td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-16 00:00:00 到 2026-07-16 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：blog.google, github.com, langfuse.com, 9to5google.com, techtimes.com, citynewsservice.cn</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方</td>
+<td>Google Search connected apps</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/products-and-platforms/products/search/connected-apps/">https://blog.google/products-and-platforms/products/search/connected-apps/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Gemini 3.5 Pro delays 9to5Google</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://9to5google.com/2026/07/16/gemini-3-5-pro-delays/">https://9to5google.com/2026/07/16/gemini-3-5-pro-delays/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Gemini 3.5 Pro third deadline TechTimes</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://www.techtimes.com/articles/320736/20260716/rebuilt-gemini-35-pro-misses-third-deadline-google-eyes-stopgap-release.htm">https://www.techtimes.com/articles/320736/20260716/rebuilt-gemini-35-pro-misses-third-deadline-google-eyes-stopgap-release.htm</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Langfuse v3.215.0</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.215.0">https://github.com/langfuse/langfuse/releases/tag/v3.215.0</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Langfuse v3.216.0</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.216.0">https://github.com/langfuse/langfuse/releases/tag/v3.216.0</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Langfuse v3.217.0</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.217.0">https://github.com/langfuse/langfuse/releases/tag/v3.217.0</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>langchain&#x3D;&#x3D;1.3.14</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.14">https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.3.14</a></td>
+</tr>
+<tr>
+<td>社区</td>
+<td>loop-engineering npm #294</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/cobusgreyling/loop-engineering/discussions/294">https://github.com/cobusgreyling/loop-engineering/discussions/294</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Codex v0.145.0-alpha.16</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.16">https://github.com/openai/codex/releases/tag/rust-v0.145.0-alpha.16</a></td>
+</tr>
+<tr>
+<td>产业</td>
+<td>WAIC 2026 preview CNS</td>
+<td>2026-07-16</td>
+<td><a target="_blank" rel="noopener" href="https://www.citynewsservice.cn/articles/china-biz-buzz/tech/china-tech-giants-push-computing-limits-as-waic-2026-opens-in-shanghai-znxeqvpm">https://www.citynewsservice.cn/articles/china-biz-buzz/tech/china-tech-giants-push-computing-limits-as-waic-2026-opens-in-shanghai-znxeqvpm</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

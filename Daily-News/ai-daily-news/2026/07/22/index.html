@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-22 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-22</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-22</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-22</code> 是 <strong>「Genesis Mission 超 $50 亿联邦落地 + Claude Code v2.1.218 review&#x2F;MCP 工程化 + MCP 7&#x2F;28 定稿前最后 6 天」</strong>——白宫 <strong>OSTP&#x2F;DOE</strong> 宣布 <strong>Genesis Mission</strong> 累计 <strong>超 $50 亿</strong> 联邦投入，<strong>15+ 机构</strong> 参与 <strong>National Science and Technology Challenges</strong>，<strong>NIH Bio Genesis Mission</strong> 目标 <strong>10 年内把发现到临床时间减半</strong>；<strong>DOE</strong> 公布 <strong>首批 278 个项目</strong> 与 <strong>$293M</strong> 挑战资金；<strong>Claude Code v2.1.218（21:24 UTC）</strong> 把 <strong><code>/code-review</code> 改为后台 subagent</strong>、强化 <strong>MCP 连接诊断</strong> 与 <strong>Windows <code>\u</code> 路径修复</strong>；<strong>MCP 2026-07-28</strong> 距定稿 <strong>6 天</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>美国联邦 AI-for-Science；Anthropic CLI；MCP 定稿倒计时；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>AI 从消费&#x2F;编码工具上升为国家级科学基础设施</strong>（Genesis + American Science and Security Platform）；<strong>CLI 侧</strong> 继续 <strong>subagent 治理 + MCP 可观测性</strong> 双轨演进</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>跟踪 <strong>Genesis Mission Summit</strong> 与 <strong>Bio Genesis 挑战</strong>（慢病根因&#x2F;儿科肿瘤&#x2F;药物发现）；升级 <strong>Claude Code ≥ v2.1.218</strong> 调整 <strong>review 工作流</strong>（后台 subagent）；<strong>7&#x2F;28 前完成 MCP stateless 迁移</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.218</strong>（<strong>7&#x2F;22 21:24 UTC</strong>）；<strong>Codex</strong>：无 <strong>7&#x2F;22</strong> stable release；<strong>OpenClaw</strong>：无 <strong>7&#x2F;22</strong> release；<strong>Hermes</strong>：无 <strong>7&#x2F;22</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;22</strong> release；<strong>Langfuse</strong>：无 <strong>7&#x2F;22</strong> release；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>7&#x2F;22</strong> release；<strong>Code Graph</strong>：无 <strong>7&#x2F;22</strong> release；<strong>Loop Engineering</strong>：<strong>Claude v2.1.218 <code>/code-review</code> 后台化</strong> 强化 <strong>review 与主会话分离</strong>；<strong>skills</strong>：**<code>context: fork</code> skills 默认后台运行**</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>政策 &#x2F; 科学</td>
+<td><a target="_blank" rel="noopener" href="https://www.whitehouse.gov/releases/2026/07/45502/">Genesis Mission 超 $50 亿联邦投入（White House）</a></td>
+<td><strong>2026-07-22</strong></td>
+<td>官方&#x2F;政策</td>
+<td><strong>15+ 联邦机构</strong>、<strong>American Science and Security Platform</strong>、<strong>National Science and Technology Challenges</strong></td>
+</tr>
+<tr>
+<td>生物医学</td>
+<td><a target="_blank" rel="noopener" href="https://www.nih.gov/about-nih/nih-director/statements/statement-launch-bio-genesis-mission-nihs-component-national-genesis-mission">Bio Genesis Mission 启动（NIH）</a></td>
+<td><strong>2026-07-22</strong></td>
+<td>官方&#x2F;科研</td>
+<td><strong>AI + 先进计算</strong> 加速 <strong>癌症&#x2F;慢病&#x2F;罕见病</strong>；<strong>FY26–27 已对齐 $1.2B+</strong></td>
+</tr>
+<tr>
+<td>能源 &#x2F; DOE</td>
+<td><a target="_blank" rel="noopener" href="https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission">Genesis Mission 首批项目（DOE）</a></td>
+<td><strong>2026-07-22</strong></td>
+<td>官方&#x2F;科研</td>
+<td><strong>278 个首批项目</strong>、**$293M 挑战资金<strong>、</strong>美日 $1B 合作**</td>
+</tr>
+<tr>
+<td>产业</td>
+<td><a target="_blank" rel="noopener" href="https://www.engadget.com/2221309/us-outlines-its-5-billion-genesis-mission-to-boost-science-with-ai/">Genesis Mission 解读（Engadget）</a></td>
+<td><strong>2026-07-22</strong></td>
+<td>媒体&#x2F;政策</td>
+<td><strong>电网&#x2F;微电子&#x2F;生物威胁&#x2F;量子</strong> 等挑战矩阵；<strong>Microsoft SPARK</strong> 等企业伙伴</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.218">Claude Code v2.1.218（GitHub Release）</a></td>
+<td><strong>2026-07-22</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong><code>/code-review</code> 后台 subagent</strong>；<strong>MCP 连接 HTTP 状态&#x2F;空白字符告警</strong>；<strong>Windows <code>\u</code> 路径 CJK 乱码修复</strong></td>
+</tr>
+<tr>
+<td>协议 &#x2F; MCP</td>
+<td><a target="_blank" rel="noopener" href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">MCP 2026-07-28 RC（MCP Blog）</a></td>
+<td><strong>2026-07-22</strong>（<strong>7&#x2F;28 定稿；6 天倒计时</strong>）</td>
+<td>标准&#x2F;协议</td>
+<td><strong>stateless core</strong>、<strong>去掉 initialize&#x2F;Mcp-Session-Id</strong>、<strong>explicit handle 模式</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AI-for-Science</td>
+<td><strong>White House Genesis 发布稿</strong></td>
+<td><strong>American Science and Security Platform</strong>、跨机构 <strong>挑战清单</strong></td>
+<td>科研平台&#x2F;政策研究者</td>
+</tr>
+<tr>
+<td>生物医学 AI</td>
+<td><strong>NIH Bio Genesis 声明</strong></td>
+<td><strong>发现→临床时间减半</strong>、<strong>FY26–27 资金对齐</strong></td>
+<td>生物医药 AI 工程师</td>
+</tr>
+<tr>
+<td>CLI review</td>
+<td><strong>Claude v2.1.218 changelog</strong></td>
+<td><strong>后台 <code>/code-review</code><strong>、</strong><code>/ultrareview</code> 非交互 cloud review</strong></td>
+<td>Claude Code &#x2F; CI 维护者</td>
+</tr>
+<tr>
+<td>MCP 迁移</td>
+<td><strong>MCP RC + Microsoft App Service 博文</strong></td>
+<td><strong>无 sticky routing</strong>、**_meta 每请求携带**</td>
+<td>MCP Server 运维</td>
+</tr>
+<tr>
+<td>Loop 分离</td>
+<td><strong>Claude v2.1.217 cap + v2.1.218 review 后台</strong></td>
+<td><strong>subagent 并发治理 + review 会话隔离</strong></td>
+<td>Loop Engineering 实践者</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;22 是 <strong>「国家级 AI-for-Science 资本化日 + CLI subagent&#x2F;review 工程化日」</strong>——<strong>Genesis Mission</strong> 把 <strong>联邦数据&#x2F;算力&#x2F;AI 工具</strong> 绑成 <strong>可编排平台</strong>；<strong>Claude Code</strong> 同日把 <strong>code review</strong> 从 <strong>主会话占用</strong> 改为 <strong>后台 subagent</strong>，与 <strong>7&#x2F;21 subagent 并发 cap</strong> 形成 <strong>治理组合拳</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>国家级平台</td>
+<td><strong>Genesis $5B+</strong></td>
+<td><strong>科学 AI</strong> 需要 <strong>共享平台 + 挑战驱动</strong>，而非单点模型发布</td>
+</tr>
+<tr>
+<td>生物医学</td>
+<td><strong>Bio Genesis</strong></td>
+<td><strong>慢病根因&#x2F;药物发现</strong> 是 <strong>垂直 foundation model + 数据集</strong> 主战场</td>
+</tr>
+<tr>
+<td>CLI review</td>
+<td><strong>v2.1.218 后台 review</strong></td>
+<td><strong>长 review 不应阻塞 maker 会话</strong>——与 <strong>loop checker 分离</strong> 一致</td>
+</tr>
+<tr>
+<td>MCP 运维</td>
+<td><strong>list 连接诊断 + 空白字符告警</strong></td>
+<td><strong>MCP 生产故障</strong> 应 <strong>可观测、可自助排查</strong></td>
+</tr>
+<tr>
+<td>Skills</td>
+<td><strong>fork skills 默认后台</strong></td>
+<td><strong>长技能执行</strong> 应 <strong>默认异步</strong>，避免 <strong>阻塞主 agent</strong></td>
+</tr>
+<tr>
+<td>MCP 定稿</td>
+<td><strong>6 天倒计时</strong></td>
+<td><strong>7&#x2F;28 前</strong> 完成 <strong>stateless 迁移</strong> 与 <strong>explicit handle 设计</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>White House Genesis $5B 发布稿</strong></td>
+<td><strong>7&#x2F;22 最大政策&#x2F;资金事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.218 release</strong></td>
+<td><strong>review&#x2F;MCP&#x2F;Windows 三类生产修复</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>NIH Bio Genesis 声明</strong></td>
+<td><strong>生物医学 AI 国家路线</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>DOE Genesis 项目页</strong></td>
+<td><strong>278 首批项目</strong> 与 <strong>挑战资金</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>MCP 2026-07-28 RC</strong></td>
+<td><strong>定稿前最后架构清单</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-07-21</strong></td>
+<td><strong>Gemini 3.6 &#x2F; OSTP 黄金时代 &#x2F; subagent cap</strong> 前情</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-22 00:00:00 到 2026-07-22 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：whitehouse.gov, nih.gov, energy.gov, github.com, engadget.com, blog.modelcontextprotocol.io, techcommunity.microsoft.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>政策</td>
+<td>Genesis Mission $5B+ White House</td>
+<td>2026-07-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.whitehouse.gov/releases/2026/07/45502/">https://www.whitehouse.gov/releases/2026/07/45502/</a></td>
+</tr>
+<tr>
+<td>科研</td>
+<td>NIH Bio Genesis Mission</td>
+<td>2026-07-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.nih.gov/about-nih/nih-director/statements/statement-launch-bio-genesis-mission-nihs-component-national-genesis-mission">https://www.nih.gov/about-nih/nih-director/statements/statement-launch-bio-genesis-mission-nihs-component-national-genesis-mission</a></td>
+</tr>
+<tr>
+<td>能源</td>
+<td>DOE Genesis Mission</td>
+<td>2026-07-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission">https://www.energy.gov/undersecretaryforscience/genesis-mission/genesis-mission</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Claude Code v2.1.218</td>
+<td>2026-07-22</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.218">https://github.com/anthropics/claude-code/releases/tag/v2.1.218</a></td>
+</tr>
+<tr>
+<td>标准</td>
+<td>MCP 2026-07-28 RC</td>
+<td>2026-07-22（7&#x2F;28 定稿窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/">https://blog.modelcontextprotocol.io/posts/2026-07-28-release-candidate/</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>Engadget Genesis 解读</td>
+<td>2026-07-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.engadget.com/2221309/us-outlines-its-5-billion-genesis-mission-to-boost-science-with-ai/">https://www.engadget.com/2221309/us-outlines-its-5-billion-genesis-mission-to-boost-science-with-ai/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-06-16 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-06-16</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/06/">2026-06</a>
+          <span class="post-date">2026-06-16</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-06-16</code> 是 <strong>「Stanford DeLM + OpenClaw v2026.6.8 + OpenAI Deployment Simulation 首发」</strong>——Stanford 发布 <strong>DeLM（Decentralized LLM）</strong> 论文（<strong>arXiv 2606.10662</strong>，VentureBeat <strong>6&#x2F;16</strong> 解读）；<strong>OpenClaw</strong> 发布 <strong>v2026.6.8</strong>（<strong>MCP hardening</strong> 与 <strong>Hermes 互操作</strong> 修复）；<strong>MarkTechPost</strong> 报道 <strong>OpenAI Deployment Simulation</strong> 框架，讨论 <strong>frontier 模型部署前测试</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>arXiv&#x2F;VentureBeat；GitHub openclaw；MarkTechPost；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>去中心化 LLM 研究</strong>（DeLM）与 <strong>Agent runtime 安全补丁</strong>（OpenClaw）同日；<strong>部署模拟</strong> 成为 <strong>frontier GA</strong> 前置步骤叙事</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>阅读 <strong>DeLM</strong> 评估 <strong>边缘&#x2F;联邦推理</strong> 可行性；升级 <strong>OpenClaw v2026.6.8</strong> 并跑 <strong>MCP 回归</strong>；设计 <strong>pre-deploy simulation</strong> checklist</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>6&#x2F;16</strong> 新 release（<strong>v2.1.178 为 6&#x2F;15</strong>）；<strong>Codex</strong>：无 <strong>6&#x2F;16</strong> 新 release；<strong>OpenClaw</strong>：<strong>v2026.6.8</strong>（<strong>2026-06-16</strong> GitHub release）；<strong>Hermes</strong>：无 <strong>6&#x2F;16</strong> 新 release（<strong>v0.17.0 为 6&#x2F;19</strong>）；<strong>Spring AI</strong>：无 <strong>6&#x2F;16</strong> release；<strong>skills</strong>：<strong>OpenClaw MCP skills</strong> 安全更新（<strong>6&#x2F;16</strong>）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>研究 &#x2F; Stanford</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/ai/stanford-delm-decentralized-llm-training-inference/">DeLM: Decentralized LLM（VentureBeat）</a></td>
+<td><strong>2026-06-16</strong></td>
+<td>技术媒体</td>
+<td><strong>去中心化训练&#x2F;推理</strong> 降低 <strong>单点算力</strong> 依赖；<strong>arXiv 2606.10662</strong></td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.10662">DeLM arXiv 2606.10662</a></td>
+<td><strong>2026-06-16</strong></td>
+<td>论文原文</td>
+<td><strong>P2P 协调</strong>、<strong>sharded weights</strong>、<strong>incentive</strong> 机制</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.6.8">openclaw v2026.6.8</a></td>
+<td><strong>2026-06-16</strong></td>
+<td>开源发布</td>
+<td><strong>MCP connector hardening</strong>；<strong>状态投毒</strong> 缓解；<strong>Hermes migrate</strong> 兼容</td>
+</tr>
+<tr>
+<td>OpenAI（报道）</td>
+<td><a target="_blank" rel="noopener" href="https://www.marktechpost.com/2026/06/16/openai-deployment-simulation-frontier-model-testing/">OpenAI Deployment Simulation（MarkTechPost）</a></td>
+<td><strong>2026-06-16</strong></td>
+<td>技术媒体</td>
+<td><strong>frontier 模型</strong> 上线前 <strong>multi-scenario 模拟</strong>；红队与 <strong>failover</strong> 测试</td>
+</tr>
+<tr>
+<td>Fable（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/15/anthropic-fable-export-ban-cyber-researchers/">Cyber open letter &#x2F; Fable ban discourse</a></td>
+<td><strong>2026-06-15</strong> &#x2F; <strong>6&#x2F;16</strong> 传播</td>
+<td>政策&#x2F;安全</td>
+<td><strong>出口管制</strong> 与 <strong>cyber 研究</strong> 边界持续发酵</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>去中心化 LLM</td>
+<td><strong>DeLM 论文 + VentureBeat</strong></td>
+<td>P2P、sharding、incentive</td>
+<td>分布式 ML</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><strong>v2026.6.8 release notes</strong></td>
+<td>MCP 安全、migrate</td>
+<td>Agent runtime 工程师</td>
+</tr>
+<tr>
+<td>部署模拟</td>
+<td><strong>MarkTechPost Deployment Simulation</strong></td>
+<td>pre-deploy eval</td>
+<td>平台&#x2F;SRE</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：6&#x2F;16 <strong>OpenClaw 安全补丁</strong> 与 <strong>DeLM 算力叙事</strong> 形成 <strong>「runtime 安全 + 训练拓扑」</strong> 双线——Agent 侧加固 <strong>MCP</strong>，模型侧探索 <strong>去中心化</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenClaw</td>
+<td><strong>v2026.6.8 MCP hardening</strong></td>
+<td><strong>持久状态</strong> 与 <strong>MCP OAuth</strong> 需 <strong>定期 audit</strong></td>
+</tr>
+<tr>
+<td>DeLM</td>
+<td><strong>Stanford 论文 GA 讨论</strong></td>
+<td>边缘节点 <strong>推理 sharding</strong> 或进入 PoC</td>
+</tr>
+<tr>
+<td>部署模拟</td>
+<td><strong>MarkTechPost 首发</strong></td>
+<td><strong>GA 前</strong> 跑 <strong>synthetic load + red team</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>DeLM arXiv 2606.10662</strong></td>
+<td>2026 <strong>去中心化 LLM</strong> 一手论文</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>OpenClaw v2026.6.8 release</strong></td>
+<td><strong>MCP 安全</strong> 补丁细节</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>MarkTechPost Deployment Simulation</strong></td>
+<td><strong>frontier 部署前测试</strong> 框架语境</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-06-16 00:00:00 到 2026-06-16 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：arxiv.org, venturebeat.com, github.com, marktechpost.com, techcrunch.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>论文</td>
+<td>DeLM arXiv 2606.10662</td>
+<td>2026-06-16</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.10662">https://arxiv.org/abs/2606.10662</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>VentureBeat DeLM</td>
+<td>2026-06-16</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/ai/stanford-delm-decentralized-llm-training-inference/">https://venturebeat.com/ai/stanford-delm-decentralized-llm-training-inference/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw v2026.6.8</td>
+<td>2026-06-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.6.8">https://github.com/openclaw/openclaw/releases/tag/v2026.6.8</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>MarkTechPost Deployment Simulation</td>
+<td>2026-06-16</td>
+<td><a target="_blank" rel="noopener" href="https://www.marktechpost.com/2026/06/16/openai-deployment-simulation-frontier-model-testing/">https://www.marktechpost.com/2026/06/16/openai-deployment-simulation-frontier-model-testing/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

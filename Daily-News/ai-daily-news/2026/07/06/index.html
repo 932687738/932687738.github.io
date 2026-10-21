@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-06 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-06</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-06</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-06</code> 是 <strong>「Claude J-space 全局工作区可解释性突破 + 伊利诺伊州 frontier 第三方审计立法 + 平台侧 LLM 攻防与数据治理」</strong>——Anthropic 发布 <strong>Global Workspace in Language Models</strong>（<strong>J-lens</strong>、<strong>Neuronpedia demo</strong>）；<strong>伊利诺伊 SB 315</strong> 成法要求 <strong>年度独立安全审计</strong>；<strong>Google</strong> 默认用搜索媒体训练 AI（可 opt-out）；<strong>Reddit</strong> 用 <strong>LLM 反 LLM 垃圾</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic 官方研究；TechCrunch&#x2F;The Verge&#x2F;Chicago Sun-Times；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>可解释性进认知层</strong>：<strong>verbalizable representations &#x2F; J-space</strong> 可读写干预；<strong>州法 frontier 审计</strong>：伊利诺伊 <strong>SB 315</strong> 接棒 NY RAISE&#x2F;CA SB 53；<strong>平台治理</strong>：用户数据默认入模 + <strong>LLM 反垃圾</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>研读 <strong>transformer-circuits.pub&#x2F;workspace</strong> 与 <strong>anthropics&#x2F;jacobian-lens</strong>；合规团队跟踪 <strong>SB 315</strong>（<strong>2027-01-01</strong> 生效）；检查 <strong>Google Search Services History</strong> 设置</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>7&#x2F;6</strong> 新 release（**#73829** 嵌套 background agent 问题 <strong>7&#x2F;6</strong> 更新）；<strong>Codex</strong>：无 <strong>7&#x2F;6</strong> release；<strong>OpenClaw</strong>：无 <strong>7&#x2F;6</strong> 新 tag（<strong>7.1-beta.2 为 7&#x2F;5</strong>）；<strong>Hermes</strong>：<strong>MoA 2.0</strong> <strong>7&#x2F;5~7&#x2F;6</strong> 媒体续传（官方 <strong>6&#x2F;26</strong> 宣布）；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;6</strong> release；<strong>Langfuse</strong>：无 <strong>7&#x2F;6</strong> release；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>7&#x2F;6</strong> release；<strong>Code Graph</strong>：无 <strong>7&#x2F;6</strong> release；<strong>skills</strong>：Claude Science <strong>60+ skills</strong>（<strong>6&#x2F;30</strong> 相邻）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; 研究</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/global-workspace">A global workspace in language models（官方）</a></td>
+<td><strong>2026-07-06</strong></td>
+<td>官方研究</td>
+<td><strong>J-space</strong> 特权可言语表征；<strong>Jacobian lens</strong> 读写；<strong>Neuronpedia</strong> 交互 demo</td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://transformer-circuits.pub/2026/workspace/index.html">Verbalizable Representations Form a Global Workspace（TCA）</a></td>
+<td><strong>2026-07-06</strong></td>
+<td>论文原文</td>
+<td><strong>access consciousness</strong> 功能类比；silent reasoning &#x2F; concept composition 实验</td>
+</tr>
+<tr>
+<td>开源</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/jacobian-lens">anthropics&#x2F;jacobian-lens（GitHub）</a></td>
+<td><strong>2026-07-06</strong></td>
+<td>开源代码</td>
+<td>核心方法开源实现</td>
+</tr>
+<tr>
+<td>政策 &#x2F; 监管</td>
+<td><a target="_blank" rel="noopener" href="https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law">Illinois SB 315 AI Safety Measures Act 签署（官方）</a></td>
+<td><strong>2026-07-06</strong></td>
+<td>政策监管</td>
+<td><strong>首个州法要求年度第三方安全审计</strong>；**$500M+ revenue frontier** 开发者</td>
+</tr>
+<tr>
+<td>政策 &#x2F; 监管</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/961781/illinoiss-ai-safety-bill-is-now-law">Illinois AI safety bill is now law（The Verge）</a></td>
+<td><strong>2026-07-06</strong></td>
+<td>政策监管</td>
+<td>接棒 <strong>NY RAISE &#x2F; CA SB 53</strong>；**~40% 美国市场** 将受三州标准覆盖</td>
+</tr>
+<tr>
+<td>隐私 &#x2F; 数据</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/">Google Search 默认用媒体训练 AI（TechCrunch）</a></td>
+<td><strong>2026-07-06</strong></td>
+<td>产品&#x2F;治理</td>
+<td><strong>Search Services History</strong> 默认开启；媒体用于 <strong>AI 模型与安全</strong>；与 <strong>Web &amp; App Activity</strong> 分离</td>
+</tr>
+<tr>
+<td>平台 &#x2F; 治理</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/">Reddit 用 LLM 反 LLM 垃圾（TechCrunch）</a></td>
+<td><strong>2026-07-06</strong></td>
+<td>产业&#x2F;安全</td>
+<td><strong>2300 万 spam views&#x2F;日</strong>；<strong>LLM 抓协调假行为</strong>；曝光 spam **-20%**（1–3 月）</td>
+</tr>
+<tr>
+<td>基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/">SK Hynix 美国 IPO（TechCrunch）</a></td>
+<td><strong>2026-07-06</strong></td>
+<td>产业&#x2F;基建</td>
+<td><strong>~$28B</strong> 募资叙事；<strong>RAMageddon</strong> HBM&#x2F;DRAM 短缺；Q1 收入 <strong>+200% YoY</strong></td>
+</tr>
+<tr>
+<td>Hermes &#x2F; Agent</td>
+<td><a target="_blank" rel="noopener" href="https://www.techtimes.com/articles/319754/20260705/hermes-moa-20-combines-gpt-claude-deepseek-outscore-any-one-model.htm">Hermes MoA 2.0 媒体解读（TechTimes 7&#x2F;5）</a></td>
+<td><strong>2026-07-05~06</strong>（相邻日期&#x2F;中国时间窗口传播）</td>
+<td>开源&#x2F;Agent</td>
+<td><strong>虚拟 model provider</strong> ensemble；HermesBench <strong>+11% vs GPT-5.5</strong> 叙事</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>J-space 可解释性</td>
+<td><strong>Anthropic 官方 + TCA 论文</strong></td>
+<td><strong>Jacobian lens</strong>、verbalizable reps、干预实验</td>
+<td>对齐&#x2F;可解释性研发</td>
+</tr>
+<tr>
+<td>开源复现</td>
+<td><strong>jacobian-lens repo</strong></td>
+<td>核心方法实现</td>
+<td>机制可解释性工程师</td>
+</tr>
+<tr>
+<td>Illinois 合规</td>
+<td><strong>SB 315 签署文 + Verge</strong></td>
+<td>第三方审计、灾难性风险框架</td>
+<td>合规&#x2F;平台治理</td>
+</tr>
+<tr>
+<td>Google 隐私</td>
+<td><strong>TechCrunch opt-out 指南</strong></td>
+<td>Search Services History vs Web &amp; App Activity</td>
+<td>个人&#x2F;企业数据治理</td>
+</tr>
+<tr>
+<td>Hermes MoA</td>
+<td><strong>hermes-agent MoA 文档</strong></td>
+<td>虚拟 provider、aggregator&#x2F;reference 模型</td>
+<td>多模型编排</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;6 呈现 <strong>「模型内部认知工作区可观测 + 州法审计制度化 + 平台 LLM 攻防常态化」</strong>——J-space 研究把 <strong>silent reasoning</strong> 变成可干预对象；伊利诺伊法把 <strong>frontier 安全</strong> 从自愿送审推向 <strong>强制审计</strong>；Reddit 案例说明 <strong>Agent&#x2F;LLM 既是攻击面也是防御工具</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>可解释性</td>
+<td><strong>Anthropic Global Workspace</strong></td>
+<td><strong>J-lens</strong> 或可用于 <strong>审计 hidden reasoning</strong>、检测 <strong>misalignment</strong></td>
+</tr>
+<tr>
+<td>多模型 Agent</td>
+<td><strong>Hermes MoA 2.0</strong> 媒体续传</td>
+<td><strong>虚拟 model</strong> ensemble 是 <strong>受限 frontier</strong> 的替代路由；注意 <strong>token 倍增成本</strong></td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><strong>#73829</strong> 嵌套 background agent（<strong>7&#x2F;6 更新</strong>）</td>
+<td><strong>PreToolUse hook</strong> 阻止子 agent 再 spawn background；防 <strong>orphan billing</strong></td>
+</tr>
+<tr>
+<td>平台治理</td>
+<td><strong>Reddit LLM 反垃圾</strong></td>
+<td>内容平台需 <strong>LLM-native abuse detection</strong> + 人工复核</td>
+</tr>
+<tr>
+<td>数据合规</td>
+<td><strong>Google 默认训练</strong></td>
+<td>RAG&#x2F;搜索 Agent 需重新评估 <strong>用户上传媒体</strong> 许可链</td>
+</tr>
+<tr>
+<td>Codex&#x2F;OpenClaw&#x2F;Langfuse&#x2F;Spring</td>
+<td>无 <strong>7&#x2F;6</strong> release</td>
+<td>无变更</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Anthropic Global Workspace + TCA 论文</strong></td>
+<td><strong>7&#x2F;6 最可核验重大研究</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Illinois SB 315 签署</strong></td>
+<td><strong>首个州法第三方 AI 审计</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch：Google AI 训练 opt-out</strong></td>
+<td>默认入模对 <strong>企业&#x2F;个人</strong> 数据策略的冲击</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch：Reddit LLM 反垃圾</strong></td>
+<td><strong>LLM 攻防</strong> 平台实践样本</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>SK Hynix IPO &#x2F; RAMageddon</strong></td>
+<td><strong>Agent 推理</strong> 背后的 <strong>HBM 供给</strong> 约束</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-06 00:00:00 到 2026-07-06 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, transformer-circuits.pub, github.com, techcrunch.com, theverge.com, gov-pritzker-newsroom.prezly.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方研究</td>
+<td>A global workspace in language models</td>
+<td>2026-07-06</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/global-workspace">https://www.anthropic.com/research/global-workspace</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Verbalizable Representations Global Workspace</td>
+<td>2026-07-06</td>
+<td><a target="_blank" rel="noopener" href="https://transformer-circuits.pub/2026/workspace/index.html">https://transformer-circuits.pub/2026/workspace/index.html</a></td>
+</tr>
+<tr>
+<td>开源代码</td>
+<td>anthropics&#x2F;jacobian-lens</td>
+<td>2026-07-06</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/jacobian-lens">https://github.com/anthropics/jacobian-lens</a></td>
+</tr>
+<tr>
+<td>政策监管</td>
+<td>Illinois SB 315 signed</td>
+<td>2026-07-06</td>
+<td><a target="_blank" rel="noopener" href="https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law">https://gov-pritzker-newsroom.prezly.com/gov-pritzker-signs-nation-leading-artificial-intelligence-safety-law</a></td>
+</tr>
+<tr>
+<td>政策监管</td>
+<td>Illinois AI safety law Verge</td>
+<td>2026-07-06</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/961781/illinoiss-ai-safety-bill-is-now-law">https://www.theverge.com/ai-artificial-intelligence/961781/illinoiss-ai-safety-bill-is-now-law</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google training AI opt-out</td>
+<td>2026-07-06</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/">https://techcrunch.com/2026/07/06/if-you-use-google-youre-training-its-ai-heres-how-to-opt-out/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Reddit LLM anti-spam</td>
+<td>2026-07-06</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/">https://techcrunch.com/2026/07/06/reddit-is-using-llms-to-solve-a-problem-llms-largely-created/</a></td>
+</tr>
+<tr>
+<td>产业</td>
+<td>SK Hynix US IPO</td>
+<td>2026-07-06</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/">https://techcrunch.com/2026/07/06/us-investors-will-soon-get-access-to-sk-hynix-another-memory-maker-riding-the-ai-boom/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Hermes MoA 2.0 TechTimes</td>
+<td>2026-07-05（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://www.techtimes.com/articles/319754/20260705/hermes-moa-20-combines-gpt-claude-deepseek-outscore-any-one-model.htm">https://www.techtimes.com/articles/319754/20260705/hermes-moa-20-combines-gpt-claude-deepseek-outscore-any-one-model.htm</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-06-30 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-06-30</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/06/">2026-06</a>
+          <span class="post-date">2026-06-30</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-06-30</code> 是 <strong>「Claude Sonnet 5 默认化 + Claude Science 垂直工作台 + OpenClaw 移动端 + 企业 Agent 落地成本拐点」</strong>——Anthropic 发布 <strong>Claude Sonnet 5</strong>（<strong>1M context</strong>、**$2&#x2F;$10 促销至 8&#x2F;31<strong>）并设为 <strong>Free&#x2F;Pro 默认</strong>；</strong>Claude Code v2.1.197** 同步切换默认模型；<strong>Claude Science</strong> &#x2F;workbench 面向科研 workflow；<strong>OpenClaw</strong> 正式上架 <strong>iOS&#x2F;Android</strong>；<strong>Microsoft</strong> 在财年截止日取消 <strong>Experiences &amp; Devices 部门 Claude Code 许可</strong> 转向 <strong>Copilot CLI</strong>；<strong>AWS $1B FDE</strong> 组织跟进 OpenAI&#x2F;Anthropic。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Claude Sonnet 5&#x2F;Science；OpenClaw mobile；AWS FDE；Microsoft CC 成本；Etched 芯片；Google Nano Banana 2 Lite；Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;skills 专项</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Agent 能力 mid-tier 化</strong>：Sonnet 5 以 <strong>接近 Opus 4.8 的 agentic 表现 + 更低单价</strong> 成为新默认；<strong>垂直 workflow 产品化</strong>（Claude Science vs GPT-Rosalind vs Gemini for Science）；<strong>企业 token 账单</strong> 驱动 <strong>工具链统一</strong>（Microsoft→Copilot CLI）</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>升级 <strong>Claude Code ≥2.1.197</strong> 并评估 <strong>Sonnet 5 tokenizer 1.0–1.35× token 膨胀</strong>；科研团队试用 <strong>Claude Science beta</strong>；自托管 Agent 评估 <strong>OpenClaw Gateway 移动端配对</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.197（2026-06-30T17:56:37Z）</strong> 引入 <strong>Sonnet 5 默认 + 1M context</strong>；<strong>Codex</strong>：无 <strong>6&#x2F;30</strong> 新 GitHub release&#x2F;官方 changelog；<strong>OpenClaw</strong>：<strong>iOS&#x2F;Android 官方 App（6&#x2F;30 TechCrunch）</strong> 经 <strong>Gateway 配对</strong>；<strong>Hermes</strong>：无 <strong>6&#x2F;30</strong> release；<strong>Spring AI</strong>：无 <strong>6&#x2F;30</strong> release；<strong>skills</strong>：无 <strong>6&#x2F;30</strong> 官方新标准</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-sonnet-5">Introducing Claude Sonnet 5（官方）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>官方发布</td>
+<td><strong>1M token context</strong>；**$2&#x2F;$10 至 8&#x2F;31** 后 <strong>$3&#x2F;$15</strong>；<strong>Free&#x2F;Pro 默认</strong>；<strong>cyber safeguards 默认开启</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/">Claude Sonnet 5 cheaper agents（TechCrunch）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>技术媒体</td>
+<td><strong>agentic coding 63.2%</strong> vs <strong>Opus 4.8 69.2%<strong>；</strong>knowledge work 略超 Opus 4.8</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 垂直</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/">Claude Science workflow workbench（TechCrunch）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>产品</td>
+<td><strong>60+ 科学数据库</strong>、<strong>子助手&#x2F;专家助手</strong>、<strong>fact-checker</strong>；<strong>非新模型</strong>（跑 <strong>Opus 4.8 等</strong>）</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.197">Claude Code v2.1.197（GitHub）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>开源发布</td>
+<td><strong>Sonnet 5 成为 CC 默认</strong>；需 <strong>≥2.1.197</strong></td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/">OpenClaw on Android and iOS（TechCrunch）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>产品&#x2F;开源</td>
+<td><strong>手机配对 OpenClaw Gateway</strong>；<strong>agents&#x2F;skills 口袋端运行</strong></td>
+</tr>
+<tr>
+<td>企业落地</td>
+<td><a target="_blank" rel="noopener" href="https://thenextweb.com/news/microsoft-claude-code-retreat-ai-cost">Microsoft cancels Claude Code licenses（The Next Web）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>产业</td>
+<td><strong>Experiences &amp; Devices</strong> 部门 <strong>6&#x2F;30 财年截止</strong> 停用 <strong>Claude Code</strong>；改 <strong>Copilot CLI</strong>；<strong>token 成本</strong> 为主因</td>
+</tr>
+<tr>
+<td>云 &#x2F; FDE</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/">AWS $1B FDE org（TechCrunch）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>产业</td>
+<td><strong>forward-deployed engineers</strong> 嵌入客户部署 <strong>purpose-built agents</strong></td>
+</tr>
+<tr>
+<td>基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/">Etched $5B valuation $1B orders（TechCrunch）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>产业</td>
+<td><strong>Transformer 专用芯片</strong> TSMC 量产；**$1B 合同订单**</td>
+</tr>
+<tr>
+<td>Google &#x2F; 多模态</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/google-introduces-a-faster-cheaper-image-generator-with-nano-banana-2-lite/">Nano Banana 2 Lite（TechCrunch）</a></td>
+<td><strong>2026-06-30</strong></td>
+<td>产品</td>
+<td><strong>更快更便宜</strong> 图像生成变体（接 <strong>6&#x2F;29 Personal Intelligence 免费</strong> 主线）</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sonnet 5</td>
+<td><strong>Anthropic 官方 + System Card</strong></td>
+<td><strong>effort level</strong>、<strong>tokenizer 变更</strong>、<strong>cyber safeguards</strong></td>
+<td>API&#x2F;Agent 工程师</td>
+</tr>
+<tr>
+<td>Claude Science</td>
+<td><strong>TechCrunch + Anthropic Science 页</strong></td>
+<td><strong>workflow 非新模型</strong>、<strong>可复现 figure+code</strong></td>
+<td>科研&#x2F;生物信息</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><strong>v2.1.197 release</strong></td>
+<td><strong>Sonnet 5 默认</strong>、<strong>1M context</strong></td>
+<td>日常 CC 用户</td>
+</tr>
+<tr>
+<td>OpenClaw Mobile</td>
+<td><strong>TechCrunch OpenClaw app</strong></td>
+<td><strong>Gateway 配对</strong>、<strong>skills 远程调用</strong></td>
+<td>自托管 Agent</td>
+</tr>
+<tr>
+<td>企业成本</td>
+<td><strong>TNW Microsoft CC 撤退</strong></td>
+<td><strong>uncapped token billing</strong>、<strong>Copilot CLI 统一</strong></td>
+<td>工程管理层</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：6&#x2F;30 是 <strong>「mid-tier Agent 模型换代 + 垂直 workflow 产品 + 移动端 Gateway + 企业成本倒逼工具统一」</strong> 的集中日——Sonnet 5 把 <strong>agentic baseline</strong> 下放到 <strong>Sonnet 价位</strong>；Claude Science 复制 <strong>Claude Code 行业 OS</strong> 路径到 <strong>科研</strong>；OpenClaw <strong>移动端</strong> 扩展 <strong>24&#x2F;7 agent</strong> 触达；Microsoft 案例说明 <strong>Agent token  economics</strong> 已进入 <strong>CFO 审批</strong> 阶段。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Mid-tier Agent</td>
+<td><strong>Claude Sonnet 5 默认化</strong></td>
+<td><strong>Sonnet 5 vs Opus 4.8 effort 旋钮</strong> 做 <strong>成本&#x2F;质量</strong> 路由</td>
+</tr>
+<tr>
+<td>垂直 OS</td>
+<td><strong>Claude Science workbench</strong></td>
+<td><strong>workflow+子助手+fact-check</strong> 比 <strong>专用模型</strong> 更易 <strong>宽订阅</strong> 分发</td>
+</tr>
+<tr>
+<td>Coding Agent</td>
+<td><strong>CC v2.1.197 + Sonnet 5</strong></td>
+<td>升级 CC；注意 <strong>tokenizer 1.0–1.35×</strong> 影响 <strong>成本估算</strong></td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><strong>iOS&#x2F;Android App</strong></td>
+<td><strong>Gateway 远程</strong> 是 <strong>mobile control plane</strong>；skills 仍跑 <strong>home server</strong></td>
+</tr>
+<tr>
+<td>企业采购</td>
+<td><strong>Microsoft 停用 Claude Code</strong></td>
+<td><strong>per-seat + uncapped API</strong> 不可持续；需 <strong>hard spend cap</strong></td>
+</tr>
+<tr>
+<td>FDE 模式</td>
+<td><strong>AWS $1B FDE org</strong></td>
+<td><strong>OpenAI&#x2F;Anthropic FDE JV</strong> 后 <strong>云厂商</strong> 复制 <strong>嵌入交付</strong></td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><strong>无 6&#x2F;30 release</strong></td>
+<td>无变更</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td><strong>无 6&#x2F;30 release</strong></td>
+<td>无变更</td>
+</tr>
+<tr>
+<td>Spring AI</td>
+<td><strong>无 6&#x2F;30 release</strong></td>
+<td>无变更</td>
+</tr>
+<tr>
+<td>skills</td>
+<td><strong>无 6&#x2F;30 官方新标准</strong></td>
+<td>OpenClaw <strong>Gateway+skills</strong> 移动端延续 <strong>agentskills.io</strong> 生态</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Anthropic：Claude Sonnet 5 官方</strong></td>
+<td><strong>6&#x2F;30 最可核验重大模型&#x2F;定价事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.197</strong></td>
+<td><strong>Sonnet 5 默认</strong> 生产切换点</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>TechCrunch：Claude Science</strong></td>
+<td><strong>垂直 workflow vs 专用模型</strong> 战略样本</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch：OpenClaw mobile</strong></td>
+<td><strong>Gateway 移动端</strong> 架构</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TNW：Microsoft Claude Code 撤退</strong></td>
+<td><strong>企业 Agent 成本</strong> 拐点案例</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>TechCrunch：Etched 芯片</strong></td>
+<td><strong>Transformer 专用 ASIC</strong> 供给</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-06-30 00:00:00 到 2026-06-30 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, github.com, techcrunch.com, thenextweb.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Introducing Claude Sonnet 5</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-sonnet-5">https://www.anthropic.com/news/claude-sonnet-5</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Claude Sonnet 5 cheaper agents</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/">https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Claude Science workflow</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/">https://techcrunch.com/2026/06/30/anthropics-claude-science-bets-on-workflow-not-a-new-model-to-win-over-scientists/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.197</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.197">https://github.com/anthropics/claude-code/releases/tag/v2.1.197</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenClaw iOS&#x2F;Android</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/">https://techcrunch.com/2026/06/30/openclaw-is-finally-available-on-android-and-ios/</a></td>
+</tr>
+<tr>
+<td>产业</td>
+<td>Microsoft Claude Code retreat</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://thenextweb.com/news/microsoft-claude-code-retreat-ai-cost">https://thenextweb.com/news/microsoft-claude-code-retreat-ai-cost</a></td>
+</tr>
+<tr>
+<td>产业</td>
+<td>AWS $1B FDE org</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/">https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/</a></td>
+</tr>
+<tr>
+<td>产业</td>
+<td>Etched $5B $1B orders</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/">https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/</a></td>
+</tr>
+<tr>
+<td>产品</td>
+<td>Google Nano Banana 2 Lite</td>
+<td>2026-06-30</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/30/google-introduces-a-faster-cheaper-image-generator-with-nano-banana-2-lite/">https://techcrunch.com/2026/06/30/google-introduces-a-faster-cheaper-image-generator-with-nano-banana-2-lite/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-24 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-24</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-24</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-24</code> 是 <strong>「Claude Opus 5 发布 + Claude Code v2.1.219 默认 Opus 5 + 行业联名反对 open-weights 过早限制」</strong>——<strong>Anthropic</strong> 发布 <strong>Claude Opus 5</strong>（**$5&#x2F;$25 per M<strong>、</strong>1M context<strong>、</strong>Fast mode 2.5×<strong>），称 <strong>接近 Fable 5 能力半价</strong>；</strong>Claude Code v2.1.219（17:14 UTC）** 设 <strong>Opus 5 为默认 Opus</strong>、新增 <strong><code>sandbox.network.strictAllowlist</code><strong>、</strong>嵌套 subagent depth 3</strong>；<strong>Meta&#x2F;Microsoft&#x2F;Nvidia&#x2F;Hugging Face&#x2F;Mistral</strong> 等联名信反对 <strong>对 open-weights 的过早广泛限制</strong>；<strong>Washington</strong> 正权衡 <strong>对华 open-weights 回应</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic 模型&#x2F;CLI；AI 政策 open-weights；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>AI 竞争从 frontier 能力转向 everyday economics</strong>（Opus 5 日常化）；<strong>open-weights 地缘政治</strong> 引发 <strong>行业分裂</strong>（OpenAI 签信 &#x2F; Anthropic 未签）</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>API 切换 **<code>claude-opus-5</code>**；升级 <strong>Claude Code ≥ v2.1.219</strong> 启用 <strong>strictAllowlist</strong>；读 <strong>open-weights 联名信</strong> 理解政策风险</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.219</strong>（<strong>7&#x2F;24 17:14 UTC</strong>）；<strong>Codex</strong>：无 <strong>7&#x2F;24</strong> stable release；<strong>OpenClaw</strong>：无 <strong>7&#x2F;24</strong> release；<strong>Hermes</strong>：无 <strong>7&#x2F;24</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;24</strong> release；<strong>Langfuse</strong>：无 <strong>7&#x2F;24</strong> release；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>7&#x2F;24</strong> release；<strong>Code Graph</strong>：无 <strong>7&#x2F;24</strong> release；<strong>Loop Engineering</strong>：<strong>nested subagent depth 3</strong> + <strong>strictAllowlist</strong> 强化 <strong>maker 子树隔离</strong>；<strong>skills</strong>：<strong>claude-api skill 默认 Opus 5</strong></td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-opus-5">Introducing Claude Opus 5（Anthropic）</a></td>
+<td><strong>2026-07-24</strong></td>
+<td>官方&#x2F;模型</td>
+<td><strong>Frontier-Bench 43.3%<strong>；</strong>effort dial</strong>；<strong>Fast mode</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.219">Claude Code v2.1.219（GitHub Release）</a></td>
+<td><strong>2026-07-24</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>Opus 5 默认</strong>；<strong>strictAllowlist</strong>；<strong>DirectoryAdded hook</strong>；<strong>subagent depth 3</strong></td>
+</tr>
+<tr>
+<td>产业</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/orchestration/anthropic-launches-claude-opus-5-a-cheaper-ai-model-for-coding-agents-and-enterprise-workflows">Opus 5 解读（VentureBeat）</a></td>
+<td><strong>2026-07-24</strong></td>
+<td>媒体&#x2F;模型</td>
+<td><strong>OSWorld 2.0 超 Fable 5 成本 1&#x2F;3</strong></td>
+</tr>
+<tr>
+<td>政策</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/">Industry urges against broad open-weight restrictions（TechCrunch）</a></td>
+<td><strong>2026-07-24</strong></td>
+<td>媒体&#x2F;政策</td>
+<td><strong>Meta&#x2F;Nvidia&#x2F;HF&#x2F;Microsoft&#x2F;Mistral 联名</strong>；<strong>OpenAI 后签 &#x2F; Anthropic 未签</strong></td>
+</tr>
+<tr>
+<td>产业</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release">Opus 5（The Verge）</a></td>
+<td><strong>2026-07-24</strong></td>
+<td>媒体&#x2F;模型</td>
+<td><strong>alignment 强化</strong>；<strong>OpenAI 安全事件后发布窗口</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Opus 5 API</td>
+<td><strong>Anthropic 发布稿</strong></td>
+<td><strong><code>claude-opus-5</code><strong>、</strong>effort dial</strong>、<strong>mid-conversation model switch</strong></td>
+<td>Agent 开发者</td>
+</tr>
+<tr>
+<td>CLI 安全</td>
+<td><strong>v2.1.219 strictAllowlist</strong></td>
+<td><strong>fail-closed sandbox 网络</strong></td>
+<td>Claude Code 安全维护者</td>
+</tr>
+<tr>
+<td>subagent</td>
+<td><strong>v2.1.219 nested depth 3</strong></td>
+<td><strong><code>CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH</code></strong></td>
+<td>多 agent 编排</td>
+</tr>
+<tr>
+<td>政策</td>
+<td><strong>open-weights 联名信（TechCrunch 报道）</strong></td>
+<td><strong>蒸馏 vs 开源</strong> 政策边界</td>
+<td>平台架构师</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;24 是 <strong>「Anthropic 双响（Opus 5 + CLI 219）+ open-weights 行业分裂日」</strong>——<strong>日常 Opus</strong> 与 <strong>frontier Fable</strong> 分层更清晰；<strong>strictAllowlist</strong> 直接回应 <strong>OpenAI sandbox 入侵</strong> 教训。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型分层</td>
+<td><strong>Opus 5 everyday &#x2F; Fable 5 long-horizon</strong></td>
+<td><strong>agent 路由按任务复杂度选模型</strong></td>
+</tr>
+<tr>
+<td>CLI 安全</td>
+<td><strong>strictAllowlist</strong></td>
+<td><strong>sandbox egress 默认 deny</strong></td>
+</tr>
+<tr>
+<td>subagent</td>
+<td><strong>depth 3 默认</strong></td>
+<td><strong>嵌套 agent 需 cap + 预算</strong></td>
+</tr>
+<tr>
+<td>政策</td>
+<td><strong>open-weights 分裂</strong></td>
+<td><strong>供应链选模型需跟踪出口&#x2F;蒸馏政策</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Anthropic Opus 5 发布稿</strong></td>
+<td><strong>7&#x2F;24 最大模型事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.219</strong></td>
+<td><strong>Opus 5 默认 + 安全 sandbox</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>open-weights 联名信报道</strong></td>
+<td><strong>行业政策分歧</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-07-23</strong></td>
+<td><strong>ChatGPT Health 全美开放</strong> 前情</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-24 00:00:00 到 2026-07-24 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, github.com, venturebeat.com, techcrunch.com, theverge.com, axios.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型</td>
+<td>Introducing Claude Opus 5</td>
+<td>2026-07-24</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-opus-5">https://www.anthropic.com/news/claude-opus-5</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Claude Code v2.1.219</td>
+<td>2026-07-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.219">https://github.com/anthropics/claude-code/releases/tag/v2.1.219</a></td>
+</tr>
+<tr>
+<td>政策</td>
+<td>open-weights industry letter</td>
+<td>2026-07-24</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/">https://techcrunch.com/2026/07/24/as-us-weighs-response-to-chinese-ai-industry-urges-against-broad-open-weight-restrictions/</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>VentureBeat Opus 5</td>
+<td>2026-07-24</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/orchestration/anthropic-launches-claude-opus-5-a-cheaper-ai-model-for-coding-agents-and-enterprise-workflows">https://venturebeat.com/orchestration/anthropic-launches-claude-opus-5-a-cheaper-ai-model-for-coding-agents-and-enterprise-workflows</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

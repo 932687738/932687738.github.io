@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-15 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-15</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-15</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：GitHub 把代码扫描的自动修复和 PR 上的 AI Scan 做成正式功能，并预告 11 月 16 日下线三款 Copilot 模型；LangChain 给人工介入加了按次中断。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>GitHub Changelog、Claude Code、Hermes、Langfuse、LangChain、LangGraph、OpenClaw、Codex、Spring、Code Graph</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>安全告警可以交给 Copilot 跨仓库改完再开草稿 PR；人机中断从整段对话下到单次调用；Hermes 0.22.1 打错提交，要用 0.22.2</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>代码扫描 Assign to Copilot；AI Scan 不阻断合并；HITL 按次中断；Langfuse 组织级模型连接和出站白名单</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code v2.1.300、Hermes v0.22.1&#x2F;0.22.2、Langfuse v4.60.0、langchain 1.4.6、LangGraph CLI 0.4.35 与 checkpoint-postgres 3.2.0 见下表。OpenClaw 本日是 9 月延长稳定线 2026.9.33，不是替代 2026.10.3。Codex 只有无说明的 alpha。Spring AI、Spring Alibaba AI、Code Graph 无正式发布。Loop Engineering 无独立新文，按次中断属于 HITL。skills：Langfuse 补了 CLI 导入说明，并追踪 skill 是否可用、资源是否被加载</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/">代码扫描的 Agentic autofix 正式可用</a></td>
+<td>2026-10-15</td>
+<td>官方发布</td>
+<td>面向 GitHub Code Security &#x2F; Advanced Security 的 Enterprise Cloud（含数据驻留）。把默认分支上的告警派给 Copilot 后，它会翻相关文件、改代码、再跑 CodeQL，通过后开草稿 PR。一次最多 25 条。只在 PR 或其他分支上出现的告警不能派</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/">PR 上的 AI Scan 正式可用</a></td>
+<td>2026-10-15</td>
+<td>官方发布</td>
+<td>补 CodeQL 还没覆盖的 PHP、Shell、Terraform、Dockerfile、JSP、Blazor 等。发现标成 AI，可带解释和建议修复。发现不让代码扫描检查失败，也不能靠规则集挡住合并。fork 和 Dependabot 的 PR 不跑。公开仓库可用；私有和内部仓库需要 Code Security 或 Advanced Security，不要求 Copilot 许可证，消耗 Code Security AI Credits</td>
+</tr>
+<tr>
+<td>GitHub</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/">11 月 16 日下线部分 Copilot 模型</a></td>
+<td>2026-10-15</td>
+<td>官方发布</td>
+<td>下线 Claude Opus 4.8、Claude Opus 5、GPT-5.6 Terra。建议换成 Opus 5.5，或 GPT-6.1 Sol &#x2F; GPT-6 Luna。年付个人订阅仍保留 Opus 4.8。企业若关了「新模型默认开启」，要自己打开替代模型</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.300">v2.1.300</a></td>
+<td>2026-10-15（Published 10-14 18:24Z，北京时间 10-15 02:24）</td>
+<td>开源发布</td>
+<td>OpenTelemetry 把缓存写入拆成 5 分钟和 1 小时。trace 补上 GenAI 语义属性。AWS 上的 Claude Platform 增加 <code>/advisor</code>，不选就不跑。mod 的 <code>agent.spawn</code> 可以改工作流代理的 prompt 和 model，不再只能拒绝</td>
+</tr>
+<tr>
+<td>LangChain</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain==1.4.6">langchain 1.4.6</a></td>
+<td>2026-10-15（Published 10-14 17:28Z，北京时间 10-15 01:28）</td>
+<td>开源发布</td>
+<td>HITL 中间件增加可选的按次中断，不必整段对话都停下来等人</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.60.0">v4.60.0</a></td>
+<td>2026-10-15（Published 10:26Z，北京时间 18:26）</td>
+<td>开源发布</td>
+<td>模型连接可以挂在组织上；计费单位写入只追加的 ClickHouse 账本；追踪页显示提示缓存命中率；自建实例可配置出站主机白名单；API 可选返回 skill 文件内容</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2">v0.22.2</a></td>
+<td>2026-10-15（Published 08:21Z，北京时间 16:21）</td>
+<td>开源发布</td>
+<td>0.22.1（北京时间 07:59，说明写 10-14）打错提交，带上了未发布的网关改动，微软商店可能停在 Connecting。0.22.2 才是预期补丁：重启后不再把无关 PID 当成网关；本地长回合在笔记本休眠后不再误判超时。已知问题：0.22.1 网关上跑过的会话，在 0.22.2 里删不掉</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.33">2026.9.33</a></td>
+<td>2026-10-15（Published 10:39Z，北京时间 18:39）</td>
+<td>开源发布</td>
+<td>这是 9 月线的延长稳定版，说明写明当时最新仍是 2026.10.3。本版补安全与升级可靠性，并支持 Meta Muse Wonder 和 MiniMax M3.1 的思考力度</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>代码安全</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/">Agentic autofix</a></td>
+<td>派给 Copilot、重跑 CodeQL、草稿 PR</td>
+<td>管 Advanced Security 的人</td>
+</tr>
+<tr>
+<td>人机中断</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain==1.4.6">langchain 1.4.6</a></td>
+<td>按次 interrupt，而不是整段 HITL</td>
+<td>用 LangChain HITL 中间件的人</td>
+</tr>
+<tr>
+<td>检查点</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/checkpointpostgres==3.2.0">checkpoint-postgres 3.2.0</a></td>
+<td><code>PostgresSaver</code> &#x2F; <code>AsyncPostgresSaver</code> 增加 prune（北京时间 03:54）</td>
+<td>检查点表已经很大的人</td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.60.0">Langfuse v4.60.0</a></td>
+<td>组织级连接、出站白名单、缓存命中率</td>
+<td>自建 Langfuse 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：本日的工程增量是「人可以在单次工具调用上打断」和「安全修复先自己验证再交 PR」，不是新模型日。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HITL</td>
+<td>langchain 1.4.6 的按次中断是显式打开的</td>
+<td>默认不要让每一次调用都停，只在有副作用的那次停</td>
+</tr>
+<tr>
+<td>检查点</td>
+<td>Postgres saver 可以 prune；CLI 0.4.35 支持私有镜像拉取密钥，并保留失败构建日志</td>
+<td>清历史和部署失败要分开处理，日志别跟着失败部署一起丢</td>
+</tr>
+<tr>
+<td>prebuilt</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/prebuilt==1.1.1">prebuilt 1.1.1</a>（北京时间 12:32）的说明主要是把已发布的 langgraph 1.2.15 和 checkpoint 收进依赖</td>
+<td>不要把 10-13 已经写过的 ToolNode 修复再当成今天的新行为</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td>先看 tag 是不是打在预期提交上</td>
+<td>0.22.1 不要留在生产；升到 0.22.2 后旧网关会话可能删不掉</td>
+</tr>
+<tr>
+<td>遥测</td>
+<td>Claude Code 把 5 分钟和 1 小时缓存写入分开计数</td>
+<td>对账时不要再把两种缓存写混成一个数</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/">Agentic autofix</a></td>
+<td>它会改默认分支上的告警并开 PR，范围和许可证要先确认</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/">Copilot 模型下线</a></td>
+<td>11 月 16 日前要改工作流里写死的模型名</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2">Hermes v0.22.2</a></td>
+<td>说明 0.22.1 为什么不能当正式补丁</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.33">OpenClaw 2026.9.33</a></td>
+<td>只在还停在 9 月延长稳定线时需要</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-15 00:00:00 到 2026-10-15 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.blog, github.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Agentic autofix GA</td>
+<td>2026-10-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/">https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>AI Scan for pull requests GA</td>
+<td>2026-10-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/">https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot model deprecation</td>
+<td>2026-10-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/">https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.300</td>
+<td>2026-10-15（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.300">https://github.com/anthropics/claude-code/releases/tag/v2.1.300</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langchain 1.4.6</td>
+<td>2026-10-15（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain==1.4.6">https://github.com/langchain-ai/langchain/releases/tag/langchain==1.4.6</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.60.0</td>
+<td>2026-10-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.60.0">https://github.com/langfuse/langfuse/releases/tag/v4.60.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Hermes v0.22.2</td>
+<td>2026-10-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2">https://github.com/NousResearch/hermes-agent/releases/tag/v0.22.2</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw 2026.9.33</td>
+<td>2026-10-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.33">https://github.com/openclaw/openclaw/releases/tag/v2026.9.33</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langgraph cli 0.4.35</td>
+<td>2026-10-15（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.35">https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.35</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>checkpoint-postgres 3.2.0</td>
+<td>2026-10-15（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/checkpointpostgres==3.2.0">https://github.com/langchain-ai/langgraph/releases/tag/checkpointpostgres==3.2.0</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

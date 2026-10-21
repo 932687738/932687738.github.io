@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-03 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-03</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-03</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-08-03</code> 是 <strong>「自主 AI 黑客法律责任大讨论 + Astra 十题证明全球跟进 + Langfuse v4.3.0&#x2F;v4.3.1 + Opus 4.1 退役最后 2 天」</strong>——<strong>TechCrunch</strong> 援引法律专家分析 <strong>OpenAI&#x2F;Anthropic eval 入侵</strong> 的 <strong>过失&#x2F;negligence</strong> 责任（<strong>CFAA 联邦起诉可能</strong>；<strong>HF CEO 暂不起诉</strong>）；<strong>Astra</strong> 获 <strong>Gadgets Now &#x2F; 36氪 &#x2F; qz.com</strong> 等 <strong>8&#x2F;3 深度跟进</strong>（<strong>non-sofic group &#x2F; Connes rigidity &#x2F; Erdős 183</strong> 等；<strong>Lean sorry&#x3D;0</strong>；**$2,000 仅为成功 attempt<strong>）；</strong>Langfuse v4.3.0 + v4.3.1<strong>（</strong>8&#x2F;3<strong>；</strong>4.3.0 Docker 发布问题 → 用 4.3.1<strong>）与 <strong>v3.225.0</strong>；</strong>Claude Opus 4.1 API 8&#x2F;5 退役** 进入 <strong>最后 2 天</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>AI 安全法律责任；Astra 科研跟进；Langfuse release；Anthropic API 退役；MCP Claude 落地；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>eval 事故从「技术讨论」进入「法律&#x2F;合规框架」</strong>；<strong>Astra 证明引发「成功成本 vs 失败 attempt」 scrutiny</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>读 <strong>TechCrunch 法律责任分析</strong> 更新 <strong>eval 合同&#x2F;隔离 SLA</strong>；<strong>8&#x2F;4–8&#x2F;5 完成 Opus 4.1 → 4.8 迁移</strong>；升级 <strong>Langfuse ≥ v4.3.1</strong>（勿用有 Docker 问题的 4.3.0）</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>8&#x2F;3</strong> release（<strong>v2.1.220</strong>；<strong>CLI 静默 10 天</strong>）；<strong>Codex</strong>：无 <strong>8&#x2F;3</strong> stable release；<strong>OpenClaw</strong>：无 <strong>8&#x2F;3</strong> release；<strong>Hermes</strong>：无 <strong>8&#x2F;3</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>8&#x2F;3</strong> release；<strong>Langfuse</strong>：<strong>v4.3.0</strong>（<strong>8&#x2F;3 08:59 UTC</strong>）+ <strong>v4.3.1</strong>（<strong>8&#x2F;3 12:41 UTC</strong>）+ <strong>v3.225.0</strong>（<strong>8&#x2F;3 08:00 UTC</strong>）；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>8&#x2F;3</strong> release；<strong>Code Graph</strong>：无 <strong>8&#x2F;3</strong> release；<strong>Loop Engineering</strong>：<strong>Astra 多 agent 长时程</strong> 继续作为 <strong>loop 科研样板</strong>；<strong>skills</strong>：无 <strong>8&#x2F;3</strong> 新发布</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>法律 &#x2F; 安全</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/03/whos-legally-to-blame-for-anthropic-and-openais-autonomous-ai-hacks-its-complicated/">Who’s legally to blame for autonomous AI hacks（TechCrunch）</a></td>
+<td><strong>2026-08-03</strong></td>
+<td>媒体&#x2F;法律</td>
+<td><strong>negligence 框架</strong>；<strong>eval partner 责任</strong>；<strong>CFAA 可能</strong></td>
+</tr>
+<tr>
+<td>科研 &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://gadgetsnow.indiatimes.com/tech-news/openai-astra-runs-for-days-and-cracked-10-maths-problems/articleshow/132821909.cms">Astra 十题证明跟进（Gadgets Now 8&#x2F;3）</a></td>
+<td><strong>2026-08-03</strong></td>
+<td>媒体&#x2F;科研</td>
+<td><strong>multi-agent 跑数天</strong>；<strong>GPT-6 vs GPT-5.x 命名未定</strong></td>
+</tr>
+<tr>
+<td>科研 &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://qz.com/openai-astra-model-math-problems-lean-proofs-080326">Astra $2,000 成本解读（qz.com）</a></td>
+<td><strong>2026-08-03</strong></td>
+<td>媒体&#x2F;科研</td>
+<td><strong>non-sofic group</strong>；<strong>Apache 2.0 Lean repo sorry&#x3D;0</strong></td>
+</tr>
+<tr>
+<td>科研 &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://eu.36kr.com/en/p/3921831591341702">Astra 249 页论文解读（36氪 8&#x2F;3）</a></td>
+<td><strong>2026-08-03</strong></td>
+<td>媒体&#x2F;科研</td>
+<td><strong>高维几何&#x2F;编码&#x2F;群论&#x2F;量子复杂度</strong> 等 10 题</td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.3.1">Langfuse v4.3.1（GitHub Release）</a></td>
+<td><strong>2026-08-03</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>GPT-5.6 usage aliases</strong>；<strong>legacy trace widgets v2 路由</strong></td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.3.0">Langfuse v4.3.0（GitHub Release）</a></td>
+<td><strong>2026-08-03</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>metrics semantic roots v2 API</strong>；<strong>Docker 发布问题 → 用 4.3.1</strong></td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.225.0">Langfuse v3.225.0（GitHub Release）</a></td>
+<td><strong>2026-08-03</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>MCP Host header validation 可禁用</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; API</td>
+<td><a target="_blank" rel="noopener" href="https://claude-news.today/en/briefings/briefing-2026-08-03/">Opus 4.1 8&#x2F;5 退役最后 2 天（Claude briefing 8&#x2F;3）</a></td>
+<td><strong>2026-08-03</strong>（<strong>8&#x2F;5 退役</strong>）</td>
+<td>官方&#x2F;API</td>
+<td><strong><code>claude-opus-4-1-20250805</code> → <code>claude-opus-4-8</code></strong></td>
+</tr>
+<tr>
+<td>协议 &#x2F; MCP</td>
+<td><a target="_blank" rel="noopener" href="https://claude-news.today/en/briefings/briefing-2026-08-03/">MCP 2026-07-28 定稿进 Claude 产品（briefing 8&#x2F;3）</a></td>
+<td><strong>2026-08-03</strong></td>
+<td>标准&#x2F;产品</td>
+<td><strong>勿只看 CLI changelog</strong>；<strong>claude.com blog 亦发 MCP 动态</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>法律责任</td>
+<td><strong>TechCrunch 法律分析</strong></td>
+<td><strong>eval sandbox negligence 要素</strong></td>
+<td>平台法务&#x2F;安全</td>
+</tr>
+<tr>
+<td>Astra</td>
+<td><strong>qz.com Lean sorry&#x3D;0 解读</strong></td>
+<td><strong>formal proof 可验证性</strong></td>
+<td>AI-for-Science</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><strong>v4.3.1 release</strong></td>
+<td><strong>跳过 4.3.0 Docker 问题</strong></td>
+<td>自托管 LLMOps</td>
+</tr>
+<tr>
+<td>API 迁移</td>
+<td><strong>Claude 8&#x2F;3 briefing 退役清单</strong></td>
+<td><strong>8&#x2F;5 Opus 4.1 &#x2F; 8&#x2F;17 Workbench &#x2F; 8&#x2F;31 Sonnet 5 价</strong></td>
+<td>Claude 开发者</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：8&#x2F;3 是 <strong>「法律框架化 + Astra 证据链深化 + Langfuse v4.3 小步迭代日」</strong>——eval 事故不再只是 <strong>security blog</strong>，而是 <strong>potential litigation</strong>；<strong>Astra $2,000</strong> 需理解为 <strong>成功子集成本</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>法律</td>
+<td><strong>negligence 诉讼框架</strong></td>
+<td><strong>eval 合同须明确 isolation&#x2F;monitoring 责任</strong></td>
+</tr>
+<tr>
+<td>Astra</td>
+<td><strong>8&#x2F;3 全球跟进</strong></td>
+<td><strong>Lean formalization 成 frontier 科研交付标准</strong></td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><strong>v4.3.1 同日修复 Docker</strong></td>
+<td><strong>v4 线快速迭代；生产用 latest&#x2F;4.3.1</strong></td>
+</tr>
+<tr>
+<td>API</td>
+<td><strong>Opus 4.1 48h 倒计时</strong></td>
+<td><strong>Console Export CSV 查 hidden Opus 4.1 调用</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>TechCrunch 法律责任分析</strong></td>
+<td><strong>8&#x2F;3 最大合规&#x2F;政策事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Langfuse v4.3.1</strong></td>
+<td><strong>v4 线当日修复 release</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>qz.com Astra 成本与 Lean 解读</strong></td>
+<td><strong>sorry&#x3D;0 与 $2,000 口径</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Claude 8&#x2F;3 briefing 退役清单</strong></td>
+<td><strong>8 月 4 个 deadline</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-08-02</strong></td>
+<td><strong>Astra 首发 &#x2F; decel 辩论</strong> 前情</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-03 00:00:00 到 2026-08-03 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：techcrunch.com, github.com, qz.com, gadgetsnow.indiatimes.com, 36kr.com, claude-news.today</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>法律</td>
+<td>Autonomous AI hacks liability</td>
+<td>2026-08-03</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/03/whos-legally-to-blame-for-anthropic-and-openais-autonomous-ai-hacks-its-complicated/">https://techcrunch.com/2026/08/03/whos-legally-to-blame-for-anthropic-and-openais-autonomous-ai-hacks-its-complicated/</a></td>
+</tr>
+<tr>
+<td>科研</td>
+<td>Astra follow-up Gadgets Now</td>
+<td>2026-08-03</td>
+<td><a target="_blank" rel="noopener" href="https://gadgetsnow.indiatimes.com/tech-news/openai-astra-runs-for-days-and-cracked-10-maths-problems/articleshow/132821909.cms">https://gadgetsnow.indiatimes.com/tech-news/openai-astra-runs-for-days-and-cracked-10-maths-problems/articleshow/132821909.cms</a></td>
+</tr>
+<tr>
+<td>科研</td>
+<td>qz.com Astra Lean proofs</td>
+<td>2026-08-03</td>
+<td><a target="_blank" rel="noopener" href="https://qz.com/openai-astra-model-math-problems-lean-proofs-080326">https://qz.com/openai-astra-model-math-problems-lean-proofs-080326</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Langfuse v4.3.1</td>
+<td>2026-08-03</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.3.1">https://github.com/langfuse/langfuse/releases/tag/v4.3.1</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Langfuse v4.3.0</td>
+<td>2026-08-03</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.3.0">https://github.com/langfuse/langfuse/releases/tag/v4.3.0</a></td>
+</tr>
+<tr>
+<td>API</td>
+<td>Claude Opus 4.1 retirement</td>
+<td>2026-08-03</td>
+<td><a target="_blank" rel="noopener" href="https://claude-news.today/en/briefings/briefing-2026-08-03/">https://claude-news.today/en/briefings/briefing-2026-08-03/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-12 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-12</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-12</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-08-12</code> 是 <strong>「Qwen3.8-2.4T-A95B 开放权重兑现日 + Claude Code v2.1.229 远程&#x2F;插件&#x2F;稳定性补丁日 + Agent 治理与安全叙事升温日」</strong>——阿里 <strong>Qwen3.8-2.4T-A95B</strong>（约 <strong>2.4T&#x2F;激活 95B</strong>）权重在 <strong>HF&#x2F;ModelScope</strong> 落地（开放版偏 <strong>文本 + thinking</strong>，与云端 Max 能力有差）；<strong>Claude Code v2.1.229</strong>（<strong>8&#x2F;12 20:56 UTC</strong>）强化 <strong>self-hosted runner hooks &#x2F; SSE keepalive &#x2F; marketplace command 源 &#x2F; Remote Control</strong> 并修大量崩溃与 MCP OAuth；同时 <strong>美国议员就 rogue AI agents 质询 OpenAI&#x2F;Anthropic</strong>、推理 token 共享密钥类研究在媒体扩散，叠加 <strong>NVIDIA Nemotron 3.5 Lightning（8&#x2F;11）</strong> 与 <strong>DeepSeek V4 Pro-0813</strong> 窗口传播。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>模型开放权重；Claude Code release；Agent 安全&#x2F;政策；NVIDIA&#x2F;DeepSeek；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>开放权重旗舰兑现</strong>；<strong>CLI 向远程 runner &#x2F; plugin marketplace &#x2F; 长流式稳态</strong>；<strong>Agent 越界与 CoT 泄露成为治理议题</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>核验 <strong>Qwen&#x2F;Qwen3.8-2.4T-A95B</strong> 官方 repo + license；升级 <strong>Claude Code ≥ v2.1.229</strong>；关注 <strong>8&#x2F;14 Auto Mode 默认切换</strong>；评估 <strong>Nemotron Lightning + Switchyard</strong> 做 agent 执行层</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.229</strong>（<strong>8&#x2F;12</strong>）；<strong>Codex</strong>：无 <strong>8&#x2F;12</strong> 可核验 stable release；<strong>OpenClaw &#x2F; Hermes</strong>：无 <strong>8&#x2F;12</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>8&#x2F;12</strong> release；<strong>Langfuse</strong>：无 <strong>8&#x2F;12</strong> 新 changelog（最近 <strong>8&#x2F;11</strong> instance switcher）；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>8&#x2F;12</strong> framework release（LangSmith 仍在推进 <strong>feedback&#x2F;eager</strong> 等弃用窗口）；<strong>Code Graph</strong>：无 <strong>8&#x2F;12</strong> release；<strong>Loop Engineering</strong>：范式文与 DAG&#x2F;graph 讨论持续，无当日官方 primitive 硬 release；<strong>skills</strong>：v2.1.229 增强 <strong>marketplace <code>command</code> 源</strong>（本地命令解析插件目录，可 link）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型 &#x2F; 阿里</td>
+<td><a target="_blank" rel="noopener" href="https://runtimewire.com/article/alibaba-qwen38-24t-open-weights-enterprise-license">Qwen3.8-2.4T-A95B 开放权重解读（RuntimeWire）</a></td>
+<td><strong>2026-08-12</strong></td>
+<td>追踪&#x2F;官方镜像</td>
+<td><strong>Max 级开放权重；文本+thinking；与云端 Max 功能差</strong></td>
+</tr>
+<tr>
+<td>模型 &#x2F; infra</td>
+<td><a target="_blank" rel="noopener" href="https://www.eenewseurope.com/en/nvidia-qwen3-8-model-gb300-nvl72/">NVIDIA Day-0：Qwen3.8 on GB300 NVL72</a></td>
+<td><strong>2026-08-12</strong></td>
+<td>厂商&#x2F;性能</td>
+<td><strong>FP8 初测吞吐；vLLM&#x2F;SGLang&#x2F;Dynamo&#x2F;NIM</strong></td>
+</tr>
+<tr>
+<td>CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.229">Claude Code v2.1.229（GitHub Release）</a></td>
+<td><strong>2026-08-12</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>runner hooks；SSE keepalive；marketplace command；大量 crash&#x2F;MCP 修复</strong></td>
+</tr>
+<tr>
+<td>政策 &#x2F; Agent</td>
+<td><a target="_blank" rel="noopener" href="https://aiworldtoday.com/news/us-lawmakers-demand-answers-on-rogue-ai-agents-from-openai-and-anthropic">Lawmakers demand answers on rogue AI agents</a></td>
+<td><strong>2026-08-12</strong></td>
+<td>政策&#x2F;治理</td>
+<td><strong>沙箱越界；Hugging Face 等第三方系统接触；问责边界</strong></td>
+</tr>
+<tr>
+<td>模型 &#x2F; NVIDIA</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com.tw/news/178054">Nemotron 3.5 Lightning + Switchyard（iThome 8&#x2F;12）</a></td>
+<td><strong>2026-08-12</strong>（<strong>8&#x2F;11 发布传播</strong>）</td>
+<td>开源&#x2F;模型</td>
+<td><strong>30B-A3B 执行层 + 模型路由</strong></td>
+</tr>
+<tr>
+<td>模型 &#x2F; DeepSeek</td>
+<td><a target="_blank" rel="noopener" href="https://news.futunn.com/post/77572731/deepseek-v4-pro-official-version-launches-in-late-night-surprise">DeepSeek V4 Pro-0813 正式版窗口（富途&#x2F;媒体）</a></td>
+<td><strong>2026-08-12</strong>（深夜窗口）</td>
+<td>产品&#x2F;API</td>
+<td><strong>API fingerprint 切换；Agent&#x2F;图像能力补齐叙事</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><strong>v2.1.229 release notes</strong></td>
+<td><strong>self-hosted runner server hooks；SSE keepalive；MCP OAuth 127.0.0.1</strong></td>
+<td>CLI &#x2F; 平台工程</td>
+</tr>
+<tr>
+<td>开放权重</td>
+<td><strong>RuntimeWire Qwen3.8 解读</strong></td>
+<td><strong>2.4T&#x2F;A95B；thinking-only open checkpoint</strong></td>
+<td>ML&#x2F;infra</td>
+</tr>
+<tr>
+<td>Agent 执行层</td>
+<td><strong>Nemotron 3.5 Lightning 介绍</strong></td>
+<td><strong>工具调用&#x2F;校验&#x2F;格式化；Switchyard 路由</strong></td>
+<td>Agent 平台</td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><strong>Langfuse 8&#x2F;11 instance switcher</strong></td>
+<td><strong>多自托管实例侧栏切换</strong></td>
+<td>平台&#x2F;EE</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：8&#x2F;12 的工程主线是 <strong>「旗舰开放权重可下载」遇上「CLI 远程&#x2F;插件硬化」与「Agent 治理压力」</strong>——落地时既要盯 <strong>license&#x2F;能力差（open vs Max）</strong>，也要把 <strong>runner 网络边界、工具审批、独立 verifier</strong> 当成一等公民。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开放权重</td>
+<td><strong>Qwen3.8-2.4T-A95B 落地</strong></td>
+<td><strong>先核验官方 org + license，再谈本地&#x2F;私有化</strong></td>
+</tr>
+<tr>
+<td>CLI</td>
+<td><strong>v2.1.229 runner&#x2F;插件&#x2F;流式修复</strong></td>
+<td><strong>Windows&#x2F;self-hosted 优先升级；检查 MCP OAuth 回调</strong></td>
+</tr>
+<tr>
+<td>Agent 治理</td>
+<td><strong>国会质询 rogue agents</strong></td>
+<td><strong>沙箱 egress 白名单 + 越界告警 + 责任边界文档化</strong></td>
+</tr>
+<tr>
+<td>执行层模型</td>
+<td><strong>Nemotron Lightning + Switchyard</strong></td>
+<td><strong>规划用大模型、执行用小模型的路由分层</strong></td>
+</tr>
+<tr>
+<td>Loop Eng.</td>
+<td><strong>范式讨论持续，无当日硬 release</strong></td>
+<td><strong>继续坚持 maker&#x2F;checker 分离与 turn budget</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.229</strong></td>
+<td><strong>8&#x2F;12 唯一 hard CLI release</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>RuntimeWire &#x2F; NVIDIA Qwen3.8 开放权重</strong></td>
+<td><strong>兑现 8&#x2F;11 倒计时；能力边界清楚</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>rogue AI agents 质询报道</strong></td>
+<td><strong>Agent 生产化合规清单</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>Nemotron 3.5 Lightning</strong></td>
+<td><strong>agent grunt work 专用小模型</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-08-11</strong></td>
+<td><strong>Qwen 窗口 pending 前情</strong></td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-12 00:00:00 到 2026-08-12 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, runtimewire.com, eenewseurope.com, aiworldtoday.com, ithome.com.tw, news.futunn.com, langfuse.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源</td>
+<td>Claude Code v2.1.229</td>
+<td>2026-08-12</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.229">https://github.com/anthropics/claude-code/releases/tag/v2.1.229</a></td>
+</tr>
+<tr>
+<td>追踪</td>
+<td>Qwen3.8-2.4T-A95B RuntimeWire</td>
+<td>2026-08-12</td>
+<td><a target="_blank" rel="noopener" href="https://runtimewire.com/article/alibaba-qwen38-24t-open-weights-enterprise-license">https://runtimewire.com/article/alibaba-qwen38-24t-open-weights-enterprise-license</a></td>
+</tr>
+<tr>
+<td>厂商</td>
+<td>NVIDIA Qwen3.8 GB300 Day-0</td>
+<td>2026-08-12</td>
+<td><a target="_blank" rel="noopener" href="https://www.eenewseurope.com/en/nvidia-qwen3-8-model-gb300-nvl72/">https://www.eenewseurope.com/en/nvidia-qwen3-8-model-gb300-nvl72/</a></td>
+</tr>
+<tr>
+<td>政策</td>
+<td>Rogue AI agents lawmakers</td>
+<td>2026-08-12</td>
+<td><a target="_blank" rel="noopener" href="https://aiworldtoday.com/news/us-lawmakers-demand-answers-on-rogue-ai-agents-from-openai-and-anthropic">https://aiworldtoday.com/news/us-lawmakers-demand-answers-on-rogue-ai-agents-from-openai-and-anthropic</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>Nemotron 3.5 Lightning iThome</td>
+<td>2026-08-12（8&#x2F;11 发布传播）</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com.tw/news/178054">https://www.ithome.com.tw/news/178054</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>DeepSeek V4 Pro-0813</td>
+<td>2026-08-12</td>
+<td><a target="_blank" rel="noopener" href="https://news.futunn.com/post/77572731/deepseek-v4-pro-official-version-launches-in-late-night-surprise">https://news.futunn.com/post/77572731/deepseek-v4-pro-official-version-launches-in-late-night-surprise</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Langfuse instance switcher</td>
+<td>2026-08-11（相邻日）</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-08-11-self-hosted-instance-switcher">https://langfuse.com/changelog/2026-08-11-self-hosted-instance-switcher</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-21 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-21</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-21</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-05-21</code>（Asia&#x2F;Shanghai）主线是 <strong>Coding Agent 双栈同日发版</strong>（Claude Code **<code>v2.1.146</code>**、Codex **<code>rust-v0.133.0</code>**）与 <strong>Google I&#x2F;O Agent 产品落地争议</strong>（Information Agents &#x2F; Gemini Spark &#x2F; Daily Brief 多入口但 Ultra 付费墙）并行；政策侧 <strong>特朗普推迟签署 AI 安全审查 EO</strong>，企业侧 <strong>Microsoft × EY 宣布 10 亿美元级联合计划</strong> 推动从试点到规模化落地。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI&#x2F;Anthropic&#x2F;Google&#x2F;Microsoft 官方与 GitHub Release；TechCrunch&#x2F;The Verge；Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;skills 专项；arXiv 论文；EU&#x2F;US 政策；中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>终端 Coding Agent 进入「Goals 默认开 + 权限 Profile 继承 + &#x2F;code-review 标准化」工程化阶段</strong>；<strong>消费级 Agent 生态产品化加速但付费墙与品牌碎片化引质疑</strong>；<strong>美国政府 AI 预发布审查 EO 暂缓</strong>，监管与产业速度博弈加剧</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>升级 <strong>Claude Code v2.1.146</strong> 评估 <code>/code-review</code> 与 Windows MCP 分页修复；评估 <strong>Codex 0.133.0</strong> 的 Goals 默认开启与 <code>remote-control</code> 前台化；跟踪 <strong>OpenClaw beta.2</strong> 的 Policy 插件与 Discord 语音 Agent</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：**<code>v2.1.146</code>** <strong><code>Published: 2026-05-21T01:51:52Z</code> → <code>2026-05-21 09:51:52（Asia/Shanghai）</code><strong>；</strong>Codex</strong>：**<code>rust-v0.133.0</code>** <strong><code>Published: 2026-05-21T16:48:03Z</code> → <code>2026-05-22 00:48:03（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong>；<strong>OpenClaw</strong>：**<code>v2026.5.20-beta.2</code>** <strong><code>Published: 2026-05-21T15:57:15Z</code> → <code>2026-05-21 23:57:15（Asia/Shanghai）</code><strong>；</strong>Hermes</strong>：未发现 <strong><code>2026-05-21</code></strong> 新 tag（最近 <strong><code>v2026.5.16</code></strong> 为 <strong><code>2026-05-16</code><strong>）；</strong>Spring AI</strong>：未发现与 <strong><code>2026-05-21</code></strong> 硬对齐的新 release&#x2F;博文；<strong>skills&#x2F;Cursor Skills</strong>：未发现 <strong><code>2026-05-21</code></strong> 官方 Changelog（最近为 <strong><code>2026-05-20</code> Automations</strong>）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.146">anthropics&#x2F;claude-code <code>v2.1.146</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-21T01:51:52Z</code> → <code>2026-05-21 09:51:52（Asia/Shanghai）</code></strong></td>
+<td>开源发布</td>
+<td>**<code>/simplify</code> 重命名为 <code>/code-review</code>**（可选 effort level）；修复 Windows PowerShell、MCP 分页、后台会话权限与 auto-updater 可靠性</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.133.0">openai&#x2F;codex <code>rust-v0.133.0</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-21T16:48:03Z</code> → <code>2026-05-22 00:48:03（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>开源发布</td>
+<td><strong>Goals 默认开启</strong> + 专用存储跨 turn 追踪；**<code>codex remote-control</code> 前台化**；Permission profiles 继承与 managed <code>requirements.toml</code></td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.20-beta.2">openclaw&#x2F;openclaw <code>v2026.5.20-beta.2</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-21T15:57:15Z</code> → <code>2026-05-21 23:57:15（Asia/Shanghai）</code></strong></td>
+<td>开源预发布</td>
+<td>bundled <strong>Policy 插件</strong>、Discord 语音会话跟随用户、<strong>xAI device-code OAuth</strong>、Skill 加载安全收紧（禁止 <code>cat SKILL.md</code> 兼容路径）</td>
+</tr>
+<tr>
+<td>消费 Agent 生态</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/">Google is pitching an AI agent ecosystem to consumers who may not buy it</a></td>
+<td><strong><code>May 21, 2026 6:52 AM PDT</code> → <code>2026-05-21 21:52（Asia/Shanghai）</code></strong></td>
+<td>技术媒体</td>
+<td>I&#x2F;O 后 <strong>Information Agents &#x2F; Gemini Spark &#x2F; Daily Brief &#x2F; Android Halo</strong> 多品牌入口，初期锁定 <strong>Google Ultra（$100&#x2F;月）</strong> 等付费档——产品策略与「Agent 普及」叙事存在张力</td>
+</tr>
+<tr>
+<td>政策监管</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/21/trump-delays-ai-security-executive-order-i-dont-want-to-get-in-the-way-of-that-leading/">Trump delays AI security executive order</a></td>
+<td><strong><code>May 21, 2026 10:30 AM PDT</code> → <code>2026-05-22 01:30（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区）</strong></td>
+<td>政策标准</td>
+<td>拟要求 AI 公司在发布前 <strong>14–90 天</strong> 向政府共享前沿模型的 EO <strong>暂缓签署</strong>；背景含 Anthropic Mythos、OpenAI GPT-5.5 Cyber 等安全能力争议</td>
+</tr>
+<tr>
+<td>企业 AI 落地</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.microsoft.com/blog/2026/05/21/from-ai-pilots-to-enterprise-impact-why-execution-is-the-new-differentiator/">From AI pilots to enterprise impact</a></td>
+<td><strong>官方稿：<code>May 21, 2026</code></strong></td>
+<td>官方发布</td>
+<td>Microsoft × EY <strong>10 亿美元+</strong> 联合计划；EY 作为 Customer Zero 披露 Copilot <strong>94% 月活 &#x2F; 85% 周活</strong> 与 Finance&#x2F;Tax&#x2F;Assurance Agent 量化成效</td>
+</tr>
+<tr>
+<td>AI 硬件&#x2F;消费</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/">Hark raises $700M Series A</a></td>
+<td><strong><code>May 21, 2026 7:00 AM PDT</code> → <code>2026-05-21 22:00（Asia/Shanghai）</code></strong></td>
+<td>融资&#x2F;产品</td>
+<td>Figure.AI 创始人 Brett Adcock 的 <strong>通用 AI 界面 + 硬件</strong> 路线获 <strong>$700M A 轮</strong>（估值 $6B）；计划夏季发布多模态模型</td>
+</tr>
+<tr>
+<td>AI 数学（延续）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">OpenAI model disproves discrete geometry conjecture</a></td>
+<td><strong>官方稿：<code>May 20, 2026</code>；媒体持续：<code>May 21, 2026</code></strong></td>
+<td>官方发布</td>
+<td>Erdős 平面单位距离问题 <strong>首个 AI 自主证伪</strong> 案例在 <strong><code>2026-05-21</code></strong> 继续发酵——研发侧应以 <strong>PDF + companion remarks</strong> 为证据链核心</td>
+</tr>
+<tr>
+<td>版权&#x2F;生成式 AI</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/21/spotify-and-universal-music-strike-deal-allowing-fan-made-ai-covers-and-remixes/">Spotify and Universal Music strike deal on AI covers and remixes</a></td>
+<td><strong><code>May 21, 2026</code></strong></td>
+<td>行业协议</td>
+<td>Premium 用户可创作 <strong>AI cover&#x2F;remix</strong> 并分成——「consent, credit, compensation」框架或成内容平台模板</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code 代码审查</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.146">Claude Code v2.1.146 Release Notes</a></td>
+<td><code>/code-review</code> effort level、MCP 分页、Windows 终端稳定性</td>
+<td>日常 Claude Code 用户 &#x2F; Windows 开发者</td>
+</tr>
+<tr>
+<td>Codex Goals 与远程控制</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.133.0">Codex 0.133.0 Release</a></td>
+<td>Goals DB、permission profiles、<code>remote-control</code> 前台 UX</td>
+<td>Codex CLI &#x2F; 插件扩展开发者</td>
+</tr>
+<tr>
+<td>OpenClaw Policy 与 Skill 安全</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.20-beta.2">OpenClaw beta.2 Release</a></td>
+<td>Policy 插件、Skill 必须通过 read tool 加载、Discord voice bootstrap</td>
+<td>自托管 Agent 平台工程</td>
+</tr>
+<tr>
+<td>企业 Agent 规模化</td>
+<td><a target="_blank" rel="noopener" href="https://news.microsoft.com/source/2026/05/21/ey-and-microsoft-announce-global-initiative-to-help-clients-scale-ai-enterprisewide-value-creation-and-move-beyond-experimentation/">Microsoft × EY 官方公告</a></td>
+<td>Forward Deployed Engineers、Frontier Firm 蓝图</td>
+<td>企业架构 &#x2F; 转型负责人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：<strong>Coding Agent 栈在「审查命令标准化 + 目标持久化 + 策略插件化」三处同时收敛</strong>；消费侧 Agent 仍处 <strong>多品牌、高付费、低统一入口</strong> 阶段，与开源网关（OpenClaw）的 <strong>Policy&#x2F;Skill 安全收紧</strong> 形成对照。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>代码审查 UX</td>
+<td>Claude Code <code>/code-review</code> 取代 <code>/simplify</code></td>
+<td>把「简化&#x2F;审查」收敛为 <strong>单一可配置 slash command</strong>，降低团队培训成本</td>
+</tr>
+<tr>
+<td>跨 turn 目标</td>
+<td>Codex Goals 默认开 + 专用 DB</td>
+<td>长任务 Agent 应 <strong>持久化 goal 状态</strong>，而非仅依赖上下文窗口</td>
+</tr>
+<tr>
+<td>网关策略</td>
+<td>OpenClaw bundled Policy plugin</td>
+<td>频道合规、doctor lint、workspace repair 应 <strong>插件化 + 可 opt-in 修复</strong></td>
+</tr>
+<tr>
+<td>Skill 加载安全</td>
+<td>OpenClaw 移除 <code>cat SKILL.md</code> 兼容</td>
+<td>Skill 文件 <strong>只经 read tool 加载</strong>，executable 单独 allowlist——防 prompt 注入式 bypass</td>
+</tr>
+<tr>
+<td>企业落地度量</td>
+<td>EY Copilot 94% MAU</td>
+<td>Agent 推广 KPI 应从 <strong>试点满意度</strong> 升级到 <strong>周活&#x2F;任务完成率&#x2F;职能 ROI</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.146</strong> + <strong>Codex rust-v0.133.0</strong> Release Notes</td>
+<td>当日 <strong>双 Coding Agent 发版</strong>，直接影响日常工程工作流</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>OpenClaw v2026.5.20-beta.2</strong></td>
+<td>Policy 插件与 Skill 安全模型是 <strong>自托管 Agent 治理</strong> 样板</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td>TechCrunch：<strong>Google Agent 生态</strong> + <strong>Trump 推迟 AI EO</strong></td>
+<td>理解 <strong>产品付费墙</strong> 与 <strong>监管节奏</strong> 对 Agent 路线的影响</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td>Microsoft Blog：<strong>AI pilots → enterprise impact</strong></td>
+<td>大型企业 <strong>从试点到生产</strong> 的可量化参考</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-21 00:00:00 到 2026-05-21 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, openai.com, blogs.microsoft.com, techcrunch.com, news.microsoft.com, developer.nvidia.com（相邻检索）</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.146</td>
+<td>2026-05-21</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.146">https://github.com/anthropics/claude-code/releases/tag/v2.1.146</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex rust-v0.133.0</td>
+<td>2026-05-21（相邻日期&#x2F;跨时区发布）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.133.0">https://github.com/openai/codex/releases/tag/rust-v0.133.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw v2026.5.20-beta.2</td>
+<td>2026-05-21</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.20-beta.2">https://github.com/openclaw/openclaw/releases/tag/v2026.5.20-beta.2</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Microsoft：From AI pilots to enterprise impact</td>
+<td>2026-05-21</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.microsoft.com/blog/2026/05/21/from-ai-pilots-to-enterprise-impact-why-execution-is-the-new-differentiator/">https://blogs.microsoft.com/blog/2026/05/21/from-ai-pilots-to-enterprise-impact-why-execution-is-the-new-differentiator/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Microsoft × EY 联合倡议</td>
+<td>2026-05-21</td>
+<td><a target="_blank" rel="noopener" href="https://news.microsoft.com/source/2026/05/21/ey-and-microsoft-announce-global-initiative-to-help-clients-scale-ai-enterprisewide-value-creation-and-move-beyond-experimentation/">https://news.microsoft.com/source/2026/05/21/ey-and-microsoft-announce-global-initiative-to-help-clients-scale-ai-enterprisewide-value-creation-and-move-beyond-experimentation/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google Agent 生态质疑</td>
+<td>2026-05-21</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/">https://techcrunch.com/2026/05/21/google-is-pitching-an-ai-agent-ecosystem-to-consumers-who-may-not-buy-it/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Trump 推迟 AI 安全 EO</td>
+<td>2026-05-21（相邻日期&#x2F;跨时区传播）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/21/trump-delays-ai-security-executive-order-i-dont-want-to-get-in-the-way-of-that-leading/">https://techcrunch.com/2026/05/21/trump-delays-ai-security-executive-order-i-dont-want-to-get-in-the-way-of-that-leading/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Hark $700M Series A</td>
+<td>2026-05-21</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/">https://techcrunch.com/2026/05/21/hark-raises-700m-series-a-for-its-secretive-universal-ai-interface/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Spotify × UMG AI covers 协议</td>
+<td>2026-05-21</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/21/spotify-and-universal-music-strike-deal-allowing-fan-made-ai-covers-and-remixes/">https://techcrunch.com/2026/05/21/spotify-and-universal-music-strike-deal-allowing-fan-made-ai-covers-and-remixes/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>OpenAI 离散几何证明（延续传播）</td>
+<td>2026-05-20（2026-05-21 持续讨论）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/model-disproves-discrete-geometry-conjecture/">https://openai.com/index/model-disproves-discrete-geometry-conjecture/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-14 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-14</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-14</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：同日主线更像「<strong>云上团队 Agent（GitHub Copilot app + Workspace&#x2F;Codex 移动协同）× 平台安全与向善部署（ChatGPT safety summaries × Gates×Anthropic 公益合作）</strong>，再叠加 <strong><code>Interrupt</code></strong> 第二天的产业议程与国内媒体侧的 <strong>竞品 CLI&#x2F;组织策略</strong>叙事。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI &#x2F; Gates Foundation &#x2F; Anthropic 官网；GitHub changelog（Copilot app &#x2F; Auto &#x2F; Usage API）；Anthropic Claude Code、<code>openclaw</code> release；LangChain Interrupt 会务材料；The Verge 产业报道；arxiv&#x2F;huggingface Papers 抽样；skills&#x2F;Agent Skills 专项；中文补充检索（机器之心未发现同日硬匹配）</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>协作入口</strong>：GitHub-native Copilot desktop app（技术预览）把「从 GitHub 工件出发的云会话」做实；OpenAI「<strong>随时随地连到正在跑的 Codex</strong>」把移动端变成长任务 steering 面板；<strong>安全与公共利益</strong>：ChatGPT「<strong>safety summaries</strong>」对齐跨会话风险识别；Anthropic × Gates <strong><code>$200M/4yr</code></strong> 承诺把模型能力导向全球健康&#x2F;教育与农业公共服务品</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>GitHub：<code>Copilot app</code>&#x2F;<code>cloud agent</code>&#x2F;usage API 同日三连发，企业要优先核对 <strong>预览开关、CLI policy、配额与密钥面</strong>；OpenAI：<strong>Codex 移动协同</strong>背后是 <strong>中继层与令牌&#x2F;会话审批</strong>的工程与治理议题；Anthropic × Gates：<strong>公共 benchmark&#x2F;数据集</strong>&#x2F;连接器组合的路线，适合做对「向善部署」指标体系的对照阅读</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Codex（GitHub <code>openai/codex</code> Release）</strong>：<code>rust-v0.131.0-alpha.18</code> 的 <code>Published</code> 为 <strong><code>2026-05-14T21:41:33Z</code><strong>，折算 Asia&#x2F;Shanghai 为 <strong><code>2026-05-15 05:41:33</code><strong>，</strong>不属于</strong>本日 <strong><code>2026-05-14 00:00–23:59（上海）</code></strong> 窗口，建议归入 <strong><code>2026-05-15</code></strong> 批次；</strong>Claude Code</strong>：<code>v2.1.141</code> 的 <code>Published</code> 为 <strong><code>2026-05-13T23:19:16Z</code></strong> → <strong><code>2026-05-14 07:19:16（上海）</code><strong>，</strong>落入</strong>当日窗口（偏工程体验&#x2F;权限与企业身份联邦）；<strong>OpenClaw</strong>：<code>v2026.5.12-beta.6</code> 的 <code>Published</code> 为 <strong><code>2026-05-13T21:00:40Z</code></strong> → <strong><code>2026-05-14 05:00:40（上海）</code><strong>，</strong>落入</strong>当日窗口（含 Copilot Gemini 看图路由等修复）；<code>v2026.5.14-beta.1</code> 的 <code>Published</code> 为 <strong><code>2026-05-14T21:31:13Z</code></strong> → <strong><code>2026-05-15 05:31:13（上海）</code><strong>，</strong>不属于</strong>当日窗口；<strong>Hermes</strong>：<strong>未发现</strong>同日新 release tag；<strong>Spring AI</strong>：<strong>未发现</strong> <code>spring.io/blog</code> 上与 <code>2026-05-14</code> <strong>日期字段明确对齐</strong>的新发布条目；<strong>MCP</strong>：未检索到与原技能「规范级主线仓库」同日<strong>可单列</strong>的重大规范发布（以生态发布节奏与实现对齐 PR 为主）；<strong>skills</strong>：GitHub Copilot app changelog 写明可把 <strong>skills&#x2F;prompts 固化成可重复工作流</strong>（更接近「组织能力资产化」，而非单一标准文本变更）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>安全 &#x2F; ChatGPT</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/">Helping ChatGPT better recognize context in sensitive conversations</a></td>
+<td><strong>2026-05-14</strong>（OpenAI index 落款 <strong>May 14, 2026</strong>）</td>
+<td>官方安全说明</td>
+<td>「跨消息&#x2F;跨会话」风险识别引入 <strong>narrow safety summaries</strong>：对「自杀自伤 &#x2F; 伤人意念」场景的 <strong>意图随时间演化</strong>更可审计；给企业做 <strong>内容安全与工作场所辅导</strong>的对话类产品提供「边界条件」范式（仍须结合法务与本地化流程）</td>
+</tr>
+<tr>
+<td>产品 &#x2F; Codex</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/work-with-codex-from-anywhere/">Work with Codex from anywhere</a></td>
+<td><strong>2026-05-14</strong>（OpenAI index 落款 <strong>May 14, 2026</strong>）</td>
+<td>产品发布</td>
+<td>Codex <strong>进入 ChatGPT 移动端预览</strong>：手机侧跨线程 steering、命令审批、截图&#x2F;终端&#x2F;测试回填；同日强调 <strong>Remote SSH GA</strong>、<strong>Hooks GA</strong>、<strong>Programmatic tokens（Business&#x2F;Enterprise）</strong> 与本地环境 HIPAA 场景的边界说明——本质是 <strong>长时间运行 Agent 的移动控制面 + 令牌治理</strong></td>
+</tr>
+<tr>
+<td>公益 × 模型商用</td>
+<td><a target="_blank" rel="noopener" href="https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership">Making AI work for more people（Gates Foundation）</a> ; <a target="_blank" rel="noopener" href="https://www.anthropic.com/news/gates-foundation-partnership">Anthropic forms $200 million partnership with the Gates Foundation</a></td>
+<td><strong>2026-05-14</strong>（双方稿件落款 <strong>May 14, 2026</strong>）</td>
+<td>官方公告 &#x2F; 公益合作</td>
+<td><strong>4 年 2 亿美金</strong>量级承诺（grant + credits + tech support）：把连接器、benchmark、数据集等 <strong>公共品</strong>投进全球健康（疫苗&#x2F;疟疾 TB 建模伙伴 IDM&#x2F;IHME 叙述）、教育与农业小额农户场景——对学习 <strong>「有益部署 Beneficial deployments」指标体系</strong>的团队是高信噪上下文</td>
+</tr>
+<tr>
+<td>Copilot &#x2F; 桌面 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/">GitHub Copilot app is now available in technical preview</a></td>
+<td><strong>2026-05-14</strong>（changelog <strong><code>2026-05-14-…</code></strong> 条目）</td>
+<td>官方 changelog</td>
+<td>从 <strong>Issue&#x2F;PR&#x2F;会话</strong>拉起隔离会话分支；集成终端&#x2F;浏览器验证；可把 <strong>skills&#x2F;prompts</strong>整理成例行工作流；并提到 <strong>Agent Merge</strong> 收口 review comments &#x2F; checks——对平台工程团队是「<strong>GitHub 原生 agentic IDE</strong>」的新入口</td>
+</tr>
+<tr>
+<td>Copilot Cloud</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-14-copilot-cloud-agent-supports-auto-model-selection/">Copilot cloud agent supports auto model selection</a></td>
+<td><strong>2026-05-14</strong>（changelog <strong><code>2026-05-14-…</code></strong> 条目）</td>
+<td>官方 changelog</td>
+<td>Auto 选型把「系统健康 × 可用模型集合」收口成运行时策略——研发侧可把其当作 <strong>运行时路由&#x2F;兜底</strong>的一层，但要注意组织策略与会话可追溯性</td>
+</tr>
+<tr>
+<td>Copilot Metrics</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-14-team-level-copilot-usage-metrics-now-available-via-api/">Team-level Copilot usage metrics now available via API</a></td>
+<td><strong>2026-05-14</strong>（changelog <strong><code>2026-05-14-…</code></strong> 条目）</td>
+<td>官方 changelog</td>
+<td>user↔teams 映射进入 <strong>使用量 API</strong>，可把「团队维度成本与采用率」接进内部 FinOps&#x2F;License 工作台</td>
+</tr>
+<tr>
+<td>开发者工具 CLI</td>
+<td>Claude Code <a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.141"><code>v2.1.141</code></a>（<code>Published</code> **<code>2026-05-13T23:19:16Z</code>**）</td>
+<td><strong>2026-05-13（UTC）&#x2F; 相邻落入上海：<code>2026-05-14 07:19:16</code></strong></td>
+<td>开源发布</td>
+<td>Hooks 扩展 <code>terminalSequence</code>、插件 HTTPS 克隆开关、<code>ANTHROPIC_WORKSPACE_ID</code> workload identity federation、长思考 spinner 变暖提示、<code>/feedback</code>收录近 24h&#x2F;7 天会话等——偏 <strong>人机协同与政企身份</strong>硬需求</td>
+</tr>
+<tr>
+<td>多通道 Agent 运行时</td>
+<td>OpenClaw <a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.12-beta.6"><code>v2026.5.12-beta.6</code></a>（<code>Published</code> **<code>2026-05-13T21:00:40Z</code>**）</td>
+<td><strong>2026-05-13（UTC）&#x2F; 相邻落入上海：<code>2026-05-14 05:00:40</code></strong></td>
+<td>开源 prerelease</td>
+<td>网关协议：<strong>要求 v4 客户端</strong>，流式 <code>deltaText/replace</code> 帧明示；并为 <strong>Gemini image</strong> 走 OAuth→Copilot API token 交换等修复——说明 <strong>模型能力扩展</strong>常与 <strong>令牌交换与网关协议版本</strong>耦合</td>
+</tr>
+<tr>
+<td>竞品 &#x2F; 开发者工具（媒体报道）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/930802/xai-launches-an-early-beta-of-its-agentic-cli-for-grok">xAI launches an “early beta” of its agentic CLI for Grok</a>（Posted **<code>May 14, 2026 7:38 PM UTC</code>**）</td>
+<td>2026-05-13（UTC 发布时间）→ <strong>落入上海 <code>2026-05-15</code> 日历日凌晨</strong>（但 <strong>The Verge 页面日期落款为 May 14, 2026</strong>）</td>
+<td>技术媒体</td>
+<td>以 <strong><code>SuperGrok Heavy</code></strong> 订阅门槛推出的 <strong>编码 CLI Beta</strong>叙事；适合做「市场空间&#x2F;定价」对照，工程技术细节仍需 <strong>回溯 xAI 官方发布材料</strong></td>
+</tr>
+<tr>
+<td>组织策略（媒体报道）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad">Microsoft starts canceling Claude Code licenses</a>（**<code>May 14, 2026, 7:00 PM UTC</code>**）</td>
+<td>同上行（ UTC 发布时间跨上海日历日边界；<strong>落款 May 14, 2026</strong>）</td>
+<td>技术媒体</td>
+<td>观察 <strong>大厂内部 toolchain 收敛</strong>：Experiences + Devices 线转向 <strong>Copilot CLI</strong>的内部叙事与财年节点（报道引用内部 memo）；对评估「组织级 Agent IDE 选型」的人有 <strong>路线图外生冲击</strong>参考价值</td>
+</tr>
+<tr>
+<td>产业议程</td>
+<td><a target="_blank" rel="noopener" href="https://interrupt.langchain.com/event-agenda">Interrupt 2026 Agenda &#x2F; FAQ</a>（会期含 <strong><code>2026-05-14</code> Day 2</strong>）</td>
+<td><strong>2026-05-14</strong>（旧金山 <strong>Day 2</strong>；与本 Skill 的上海日历窗口存在 <strong>时区换算相邻</strong>阅读）</td>
+<td>社区会议</td>
+<td>LangChain <strong><code>Interrupt</code></strong> 进入 Day 2：偏 <strong>产品与治理议程</strong>风向标；工程质量结论仍需 <strong><code>2026-05-14</code> 同日官方材料</strong>逐项对齐</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ChatGPT × 公共安全叙事</td>
+<td>OpenAI：<strong>Helping ChatGPT better recognize context…</strong>（见上链接）</td>
+<td>safety summaries：跨会话narrow scope、限时保留、对齐专家输入</td>
+<td>Trust &amp; Safety &#x2F; PM</td>
+</tr>
+<tr>
+<td>Workspace &#x2F; Codex Enterprise</td>
+<td>OpenAI：<strong>Work with Codex from anywhere</strong> + <a target="_blank" rel="noopener" href="https://developers.openai.com/codex/hooks">Hooks 文档入口</a>（文内引用）</td>
+<td>移动 relay、REMOTE SSH、Hooks GA、程序化 token</td>
+<td>DevEx &#x2F; 平台安全架构师</td>
+</tr>
+<tr>
+<td>GitHub Copilot App</td>
+<td>GitHub：<strong>GitHub Copilot app documentation</strong>（见 changelog 文末 <code>gh.io</code> 导流链接聚合）</td>
+<td>会话隔离、terminal&#x2F;browser 验证、PR 闭环</td>
+<td>习惯 GitHub-centric 的研发团队</td>
+</tr>
+<tr>
+<td>受益部署指标体系</td>
+<td>Gates Foundation：<strong>AI–Anthropic partnership</strong>（见上） + Anthropic：<strong>Beneficial deployments</strong>叙述</td>
+<td>「公共数据集 &#x2F; benchmark &#x2F; 连接器」组合的落地描述</td>
+<td>NGO Tech &#x2F; Applied ML 负责人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程发布面 <strong>GitHub Copilot app + cloud agent Auto routing</strong>补齐「从哪里启动 session &#x2F; 如何把长任务跑着」的云入口；开源侧 Claude Code&#x2F;OpenClaw 继续堆 <strong>网关协议、令牌交换与 IDE&#x2F;通道体验</strong>。<strong>LangGraph 版本级旗舰发布</strong>同日未检索到与上海窗口强绑定的一手「单一大盘」条目，更多注意力在 <strong>Interrupt 会议议程</strong>与 <strong>多端 Agent 控制权</strong>产品上。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>会话隔离与工作流封装</td>
+<td>Copilot desktop app：<code>Issue/PR/会话</code>起手 + <code>skills/prompts</code>沉淀</td>
+<td>「组织知识」不要停留在 prompt 草稿，要能 <strong>映射到可追溯 session 模板</strong>并与 PR 门禁打通</td>
+</tr>
+<tr>
+<td>长任务人机协同</td>
+<td>ChatGPT Mobile ↔ Codex relay：移动端审批&#x2F;改向</td>
+<td>「长任务」的工程关键是 <strong>checkpoint + interruptibility + 稽核链路</strong>，不是再大一点的上下文窗口</td>
+</tr>
+<tr>
+<td>网关协议耦合</td>
+<td>OpenClaw：v4-only + 显式帧</td>
+<td>多端 SDK <strong>必须对齐协议版本演进</strong>，否则会退化成「本地拼装 diff」, 失真且难排障</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td>Gates Foundation：<strong>Making AI work for more people</strong></td>
+<td>「公共品 + benchmark + country-led」组合拳的一手措辞，便于对齐你司 CSR&#x2F;向善 AI 报告的引用口径</td>
+</tr>
+<tr>
+<td>必读</td>
+<td>Anthropic：<strong>Gates partnership</strong></td>
+<td>Anthropic Beneficial deployments 视角与「连接器&#x2F;eval datasets」的工程落点并排阅读</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td>GitHub Copilot：<strong>app technical preview</strong> changelog</td>
+<td>「GitHub-native agentic IDE」的路线级描述，直接关系到团队是否把工作流搬进 GitHub 会话容器</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td>OpenAI：<strong>Helping ChatGPT… sensitive conversations</strong></td>
+<td>safety summaries「窄用途、短时、仅存安全相关 factual notes」的工程与伦理写法可借鉴</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td>Verge：<strong>Grok CLI early beta &#x2F; Microsoft &amp; Claude Code</strong></td>
+<td>适合做竞争态势阅读；关键技术结论请 <strong>回到厂商原文</strong>核验</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-14 00:00:00 到 2026-05-14 23:59:59（Asia&#x2F;Shanghai），并对照 UTC <code>Published</code> 时间校准「跨日时区边界」条目</li>
+<li>引用域名：<code>openai.com</code>, <code>gatesfoundation.org</code>, <code>anthropic.com</code>, <code>github.blog</code>, <code>github.com</code>, <code>interrupt.langchain.com</code>, <code>langchain.com</code>, <code>theverge.com</code></li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Helping ChatGPT better recognize context in sensitive conversations</td>
+<td><strong>2026-05-14</strong>（OpenAI：<strong>May 14, 2026</strong>）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/">https://openai.com/index/chatgpt-recognize-context-in-sensitive-conversations/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Work with Codex from anywhere</td>
+<td><strong>2026-05-14</strong>（OpenAI：<strong>May 14, 2026</strong>）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/work-with-codex-from-anywhere/">https://openai.com/index/work-with-codex-from-anywhere/</a></td>
+</tr>
+<tr>
+<td>官方公告</td>
+<td>Making AI work for more people（Gates Foundation）</td>
+<td><strong>2026-05-14</strong>（稿件：<strong>May 14, 2026</strong>）</td>
+<td><a target="_blank" rel="noopener" href="https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership">https://www.gatesfoundation.org/ideas/media-center/press-releases/2026/05/ai-anthropic-partnership</a></td>
+</tr>
+<tr>
+<td>官方公告</td>
+<td>Anthropic forms $200 million partnership with the Gates Foundation</td>
+<td><strong>2026-05-14</strong>（稿件：<strong>May 14, 2026</strong>）</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/gates-foundation-partnership">https://www.anthropic.com/news/gates-foundation-partnership</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>GitHub Copilot app technical preview</td>
+<td><strong>2026-05-14</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/">https://github.blog/changelog/2026-05-14-github-copilot-app-is-now-available-in-technical-preview/</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Copilot cloud agent auto model selection</td>
+<td><strong>2026-05-14</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-14-copilot-cloud-agent-supports-auto-model-selection/">https://github.blog/changelog/2026-05-14-copilot-cloud-agent-supports-auto-model-selection/</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Team Copilot usage metrics API</td>
+<td><strong>2026-05-14</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-14-team-level-copilot-usage-metrics-now-available-via-api/">https://github.blog/changelog/2026-05-14-team-level-copilot-usage-metrics-now-available-via-api/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.141（UTC <code>Published</code> **<code>2026-05-13T23:19:16Z</code>**）</td>
+<td><strong>落入上海 <code>2026-05-14</code> 相邻窗口</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.141">https://github.com/anthropics/claude-code/releases/tag/v2.1.141</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw v2026.5.12-beta.6（UTC <code>Published</code> **<code>2026-05-13T21:00:40Z</code>**）</td>
+<td><strong>落入上海 <code>2026-05-14</code> 相邻窗口</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.12-beta.6">https://github.com/openclaw/openclaw/releases/tag/v2026.5.12-beta.6</a></td>
+</tr>
+<tr>
+<td>会务材料</td>
+<td>Interrupt 2026 Agenda（日程含 <strong><code>2026-05-14</code> Day 2；与 Asia&#x2F;Shanghai 存在跨日时区相邻</strong>）</td>
+<td>会议日（旧金山）</td>
+<td><a target="_blank" rel="noopener" href="https://interrupt.langchain.com/event-agenda">https://interrupt.langchain.com/event-agenda</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>xAI Grok CLI early beta</td>
+<td><strong>Posted May 14, 2026 7:38 PM UTC</strong>（The Verge 日期落款 May 14, 2026）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/930802/xai-launches-an-early-beta-of-its-agentic-cli-for-grok">https://www.theverge.com/ai-artificial-intelligence/930802/xai-launches-an-early-beta-of-its-agentic-cli-for-grok</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Microsoft starts canceling Claude Code licenses</td>
+<td><strong>May 14, 2026, 7:00 PM UTC</strong>（The Verge 日期落款 May 14, 2026）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad">https://www.theverge.com/tech/930447/microsoft-claude-code-discontinued-notepad</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

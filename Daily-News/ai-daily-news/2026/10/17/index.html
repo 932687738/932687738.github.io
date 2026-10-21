@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-17 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-17</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-17</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：Claude Code 把空闲压缩的开关放进配置，并预告 Claude Design 将在 12 月 14 日关闭；LangGraph 修复恢复运行时把别的任务一起打停的问题。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Claude Code、LangGraph、LangChain、Anthropic 研究、Codex alpha、GitHub Changelog</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>代理的压缩和恢复路径在收口；密码学旧谜题被解释为时间戳随机数，不是曲线后门</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><code>/config</code> 里的 Idle compaction；镜像读取超过 128MB 会被拒绝；无效 resume 不再拖垮其他任务</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code v2.1.302、langgraph 1.2.16、langchain-core 1.6.12、LangGraph CLI 0.4.36 见下表。Codex 0.164 alpha 无说明，不展开。Langfuse 的 4.61–4.63 落在 10-16。OpenClaw、Hermes、Spring AI、Spring Alibaba AI、Code Graph 无本日正式发布。Loop Engineering 无独立新文。skills 无独立更新</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.302">v2.1.302</a></td>
+<td>2026-10-17（Published 10-16 20:53Z，北京时间 10-17 04:53）</td>
+<td>开源发布</td>
+<td><code>/config</code> 可以开关空闲压缩。独立的 Claude Design（claude.ai&#x2F;design）将于 2026-12-14 关闭。Read 不再把超过 128MB 的图片或伪装成图片的设备整段读进内存。会话中途通过 ToolSearch 或压缩后再次加载的工具，不再打穿提示缓存</td>
+</tr>
+<tr>
+<td>LangGraph</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.16">langgraph 1.2.16</a></td>
+<td>2026-10-17（Published 10-16 22:11Z，北京时间 10-17 06:11）</td>
+<td>开源发布</td>
+<td>恢复值无效时其他任务可以跑完；子图恢复时不再重跑已经完成的任务；恢复得到的 Command 更新只应用一次</td>
+</tr>
+<tr>
+<td>LangChain</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core==1.6.12">langchain-core 1.6.12</a></td>
+<td>2026-10-17（Published 10-16 19:28Z，北京时间 10-17 03:28）</td>
+<td>开源发布</td>
+<td><code>content-block-start</code> 事件会带上 extras，流式解析不要在块开始时把附加字段丢掉</td>
+</tr>
+<tr>
+<td>Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/ecdsa-curve-origins">Claude 解释 ECDSA 曲线种子的来源</a></td>
+<td>2026-10-17（Published 10-16 17:02Z，北京时间 10-17 01:02；页面写 Oct 16）</td>
+<td>研究</td>
+<td>NIST P-192 到 P-521 的种子来自 C 库 <code>lrand48</code>，用 Unix 时间戳做种子，不是哈希口令，也不是新的攻击。官方写明不需要更换曲线</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编码代理</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.302">Claude Code v2.1.302</a></td>
+<td>空闲压缩开关、超大图片拒绝、中途加工具与缓存</td>
+<td>已打开 2.1.299 空闲压缩的人</td>
+</tr>
+<tr>
+<td>恢复运行</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.16">langgraph 1.2.16</a></td>
+<td>无效 resume、子图已完成任务、Command 更新只写一次</td>
+<td>做人机中断和子图的人</td>
+</tr>
+<tr>
+<td>密码学背景</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/ecdsa-curve-origins">ECDSA curve origins</a></td>
+<td>种子是时间戳随机数，不是后门证据</td>
+<td>想知道要不要因此换曲线的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：恢复语义比新功能更重要：无效输入不应中断无关任务，压缩开关要让用户找得到。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>恢复</td>
+<td>1.2.16 让无效 resume 只影响自己的那条路径</td>
+<td>测试时故意传入坏的 resume，确认其他分支还在</td>
+</tr>
+<tr>
+<td>缓存</td>
+<td>中途加载的工具不再造成缓存失效</td>
+<td>升级后用同一条长会话对照缓存命中，而不是只看功能列表</td>
+</tr>
+<tr>
+<td>CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.36">langgraph cli 0.4.36</a>（北京时间 00:39）接受 serverless &#x2F; dedicated 别名，并按当前 Docker context 推送</td>
+<td>部署命令不要假设只有一套镜像名</td>
+</tr>
+<tr>
+<td>设计工具</td>
+<td>Claude Design 独立站 12 月 14 日关闭</td>
+<td>还把设计稿流程指到 claude.ai&#x2F;design 的，要改入口</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.302">Claude Code v2.1.302</a></td>
+<td>空闲压缩从环境变量变成配置项，升级后行为会变</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.16">langgraph 1.2.16</a></td>
+<td>恢复相关的四条修复适合加进回归测试</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/ecdsa-curve-origins">ECDSA 种子</a></td>
+<td>用来停掉「NIST 曲线有隐藏种子后门」的旧猜测</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-17 00:00:00 到 2026-10-17 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, anthropic.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.302</td>
+<td>2026-10-17（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.302">https://github.com/anthropics/claude-code/releases/tag/v2.1.302</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langgraph 1.2.16</td>
+<td>2026-10-17（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.16">https://github.com/langchain-ai/langgraph/releases/tag/1.2.16</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langchain-core 1.6.12</td>
+<td>2026-10-17（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core==1.6.12">https://github.com/langchain-ai/langchain/releases/tag/langchain-core==1.6.12</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langgraph cli 0.4.36</td>
+<td>2026-10-17（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.36">https://github.com/langchain-ai/langgraph/releases/tag/cli==0.4.36</a></td>
+</tr>
+<tr>
+<td>研究</td>
+<td>Claude reveals ECDSA curve origins</td>
+<td>2026-10-17（北京时间）</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/ecdsa-curve-origins">https://www.anthropic.com/research/ecdsa-curve-origins</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

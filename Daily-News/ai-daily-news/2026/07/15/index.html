@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-15 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-15</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-15</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-15</code> 是 <strong>「Claude Code v2.1.211 + Langfuse v3.214.0 + Loop Engineering 工具链迭代 + Gemini 3.5 Pro 7&#x2F;17 倒计时」</strong>——Anthropic 发布 <strong>v2.1.211</strong>（<strong>subagent stream-json &#x2F; 权限预览防注入 &#x2F; Bedrock prompt caching 回归修复</strong>）；<strong>Langfuse v3.214.0</strong> 默认 <strong>Root Observations 过滤</strong>；<strong>cobusgreyling&#x2F;loop-engineering（7&#x2F;15）</strong> 合并 <strong>loop-worktree 路径锁</strong> 与 <strong>loop-context 日 token 预算&#x2F;<code>--on-exceed</code> hook</strong>；<strong>Pragmatic Engineer 7&#x2F;15 播客</strong> 深度讨论 <strong>loop&#x2F;harness engineering</strong>；<strong>Gemini 3.5 Pro</strong> 距 <strong>7&#x2F;17 传闻 GA</strong> 仅 <strong>2 天</strong>（<strong>Google 仍未官方确认</strong>）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic&#x2F;GitHub&#x2F;Langfuse&#x2F;Google&#x2F;OpenAI；Loop Engineering 生态；Releasebot&#x2F;DDS；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Agent 控制面 + loop 基础设施双轨</strong>：Claude Code <strong>权限&#x2F;多会话</strong> patch；<strong>loop-worktree&#x2F;loop-context</strong> 解决 <strong>多 loop 碰撞与 token 失控</strong>；Langfuse <strong>观测默认视图</strong> 对齐 <strong>SDK app roots</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>升级 <strong>Claude Code ≥ v2.1.211</strong>；多 loop 并行时启用 <strong>loop-worktree advisory lock</strong>；配置 <strong>loop-context <code>--on-exceed</code></strong> 防 token 爆表；Langfuse 用户留意 <strong>Observations 默认 root 过滤</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.211</strong>（<strong>7&#x2F;15</strong>）；<strong>Codex</strong>：无 <strong>7&#x2F;15</strong> 新 release（<strong>Projects&#x2F;sidebar 回归仍 open</strong>）；<strong>OpenClaw</strong>：无 <strong>7&#x2F;15</strong> 新 tag（最新 <strong>2026.7.1</strong> 为 <strong>7&#x2F;13</strong>）；<strong>Hermes</strong>：无 <strong>7&#x2F;15</strong> release（<strong>Loop Engineering 指南为 6&#x2F;20</strong>）；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;15</strong> release；<strong>Langfuse</strong>：<strong>v3.214.0 + 7&#x2F;15 changelog Root Observations</strong>；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>7&#x2F;15</strong> release（<strong>1.2.9</strong> 为 <strong>7&#x2F;10</strong>）；<strong>Code Graph</strong>：无 <strong>7&#x2F;15</strong> release；<strong>Loop Engineering</strong>：<strong>cobusgreyling&#x2F;loop-engineering 7&#x2F;15 六连 merge</strong>（**#273 loop-context、#274 loop-worktree<strong>）；</strong>Pragmatic Engineer 7&#x2F;15 播客<strong>（</strong>Dex Horthy：slow loops &#x2F; harness**）；无 <strong>7&#x2F;15</strong> 新 <strong><code>/goal</code>&#x2F;<code>/loop</code> CLI 命令</strong> release</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.211">Claude Code v2.1.211（GitHub Release）</a></td>
+<td><strong>2026-07-15</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong><code>--forward-subagent-text</code><strong>、</strong>权限预览 bidirectional-override 防护</strong>、<strong>Bedrock prompt caching 回归修复</strong>、<strong>background agent 结果报告改进</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 平台</td>
+<td><a target="_blank" rel="noopener" href="https://releasebot.io/updates/anthropic/claude-developer-platform">Claude Enterprise Admin API beta（Releasebot）</a></td>
+<td><strong>2026-07-15</strong></td>
+<td>官方&#x2F;API</td>
+<td><strong>成员&#x2F;组&#x2F;邀请&#x2F;角色</strong> 管理；**<code>ce-user-management-2026-07-13</code>** beta header；**<code>read:org_audit</code>** 可读 GET</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.214.0">Langfuse v3.214.0（GitHub Release）</a></td>
+<td><strong>2026-07-15</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>Root obs 默认过滤</strong>、<strong>Monitors listMonitors&#x2F;getMonitor MCP</strong>、<strong>OTel int64 序列化修复</strong>、<strong>AI SDK sole completion runtime</strong></td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-07-15-root-observations-default">Root Observations 默认视图（Changelog）</a></td>
+<td><strong>2026-07-15</strong></td>
+<td>产品&#x2F;changelog</td>
+<td><strong>Python SDK v4.7+ &#x2F; JS v5.4+ app roots</strong>；<strong>Is Root Observation&#x3D;true</strong> 为默认入口</td>
+</tr>
+<tr>
+<td>Loop Engineering &#x2F; 工具链</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/cobusgreyling/loop-engineering/commit/1ceeaf7a0381a250c89da862a8632176249bce96">loop-context：日 token 追踪 + <code>--on-exceed</code> hook（#273）</a></td>
+<td><strong>2026-07-15</strong></td>
+<td>开源&#x2F;merge</td>
+<td><strong>跨 run 日 token 累计</strong>；<strong>超预算 hook</strong> 可中断&#x2F;告警 loop</td>
+</tr>
+<tr>
+<td>Loop Engineering &#x2F; 工具链</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/cobusgreyling/loop-engineering/commit/6327550bb418832d5e619d1ad2c804099cd06e87">loop-worktree：advisory path locking（#274）</a></td>
+<td><strong>2026-07-15</strong></td>
+<td>开源&#x2F;merge</td>
+<td><strong>多 loop 并行</strong> 时 <strong>worktree 路径碰撞</strong> 防护；与 <strong>PR babysitter&#x2F;CI sweeper</strong> 模式配套</td>
+</tr>
+<tr>
+<td>Loop Engineering &#x2F; 媒体</td>
+<td><a target="_blank" rel="noopener" href="https://newsletter.pragmaticengineer.com/p/context-engineering-with-dex-horthy">Context engineering with Dex Horthy（Pragmatic Engineer 播客）</a></td>
+<td><strong>2026-07-15</strong></td>
+<td>播客&#x2F;深度</td>
+<td><strong>context vs harness vs loop engineering</strong> 边界；<strong>slow loops</strong>（夜间 agent 开 PR、晨间人工 merge）实践</td>
+</tr>
+<tr>
+<td>Google &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://byteiota.com/gemini-3-5-pro-july-17-developer-routing-guide/">Gemini 3.5 Pro 7&#x2F;17 路由指南（ByteIota）</a></td>
+<td><strong>2026-07-15</strong>（<strong>7&#x2F;8 首发；7&#x2F;15 传播</strong>）</td>
+<td>技术媒体&#x2F;工程</td>
+<td><strong>2M context &#x2F; Deep Think</strong> 适用 <strong>&gt;500K</strong> 任务；<strong>Flash&#x2F;Fable 5</strong> 仍为 <strong>agent&#x2F;coding 默认</strong></td>
+</tr>
+<tr>
+<td>产业 &#x2F; 政策</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html">OpenAI 提议政府 5% 股权（FT&#x2F;CNBC 7&#x2F;2；7&#x2F;15 传播）</a></td>
+<td><strong>2026-07-15</strong>（<strong>FT 7&#x2F;2</strong>；<strong>BYOBot&#x2F;DDS 7&#x2F;14–7&#x2F;15 窗口</strong>）</td>
+<td>产业&#x2F;政策</td>
+<td><strong>~$42.6B @ $852B 估值</strong>；<strong>概念阶段</strong>、或需 <strong>国会立法</strong></td>
+</tr>
+<tr>
+<td>产业 &#x2F; 活动</td>
+<td><a target="_blank" rel="noopener" href="https://ddsboston.com/blogs/vibe-code-academy/ai-news-for-vibe-coders-daily-2026-07-15">WAIC 2026 与 Gemini 3.5 Pro 时间线（DDS 7&#x2F;15）</a></td>
+<td><strong>2026-07-15</strong></td>
+<td>周报&#x2F;产业</td>
+<td><strong>7&#x2F;17</strong> 与 <strong>上海 WAIC</strong> 同日叠加；<strong>Gemini 3.5 Pro</strong> 仍为 <strong>leak 口径</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent CLI</td>
+<td><strong>Claude Code v2.1.211 changelog</strong></td>
+<td><strong>subagent text 转发</strong>、<strong>always-allow 存 repo root</strong>、<strong>prompt caching 回归</strong></td>
+<td>Claude Code&#x2F;多云用户</td>
+</tr>
+<tr>
+<td>Loop 基础设施</td>
+<td><strong>cobusgreyling&#x2F;loop-engineering #273&#x2F;#274</strong></td>
+<td><strong>日 token 预算</strong>、<strong>worktree path lock</strong>、<strong>maker&#x2F;checker 分离</strong></td>
+<td>多 loop 并行团队</td>
+</tr>
+<tr>
+<td>Loop 范式</td>
+<td><strong>Pragmatic Engineer × Dex Horthy 7&#x2F;15</strong></td>
+<td><strong>slow loops</strong>、<strong>harness vs loop</strong>、<strong>trajectory poisoning 识别</strong></td>
+<td>Agent 平台&#x2F;TL</td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><strong>Langfuse Root Observations changelog</strong></td>
+<td><strong>app root vs outer root</strong>、<strong>OTel 过滤后子树</strong></td>
+<td>Langfuse&#x2F;SRE</td>
+</tr>
+<tr>
+<td>Enterprise 治理</td>
+<td><strong>Admin API User management docs</strong></td>
+<td><strong>成员&#x2F;组 CRUD</strong>、<strong>audit scope</strong></td>
+<td>Claude Enterprise 管理员</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;15 呈现 <strong>「Agent 运行时 patch + Loop 工具链硬化 + 可观测默认视图调整」</strong>——<strong>Claude Code v2.1.211</strong> 加固 <strong>subagent&#x2F;background loop</strong> 链路；<strong>loop-context&#x2F;loop-worktree</strong> 补齐 <strong>生产级 loop 治理</strong>（预算与隔离）；<strong>Dex Horthy 播客</strong> 把 <strong>loop engineering</strong> 从 <strong>社区术语</strong> 拉回 <strong>责任边界与 slow loop 运维</strong> 讨论。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CLI 稳定性</td>
+<td><strong>v2.1.211 多会话&#x2F;background 修复</strong></td>
+<td><strong>并行 Claude Code 会话</strong> 升级后验证 <strong>credential store 登出</strong> 是否消失</td>
+</tr>
+<tr>
+<td>Loop 治理</td>
+<td><strong>loop-context 日 token + on-exceed</strong></td>
+<td><strong>长 run loop</strong> 必须设 <strong>turn&#x2F;budget 上限</strong>；超支 <strong>hook 中断</strong> 而非 silent burn</td>
+</tr>
+<tr>
+<td>Loop 隔离</td>
+<td><strong>loop-worktree advisory lock</strong></td>
+<td><strong>PR babysitter + CI sweeper</strong> 并行时 <strong>路径锁</strong> 防 worktree 踩踏</td>
+</tr>
+<tr>
+<td>Loop 文化</td>
+<td><strong>Pragmatic Engineer slow loops</strong></td>
+<td><strong>夜间 agent 开 PR、晨间人工读码 merge</strong> 是 <strong>可落地 L1→L2</strong> 路径</td>
+</tr>
+<tr>
+<td>可观测 UX</td>
+<td><strong>Langfuse 默认 root filter</strong></td>
+<td><strong>Observations 表</strong> 若空则 <strong>自动放宽</strong>；自定义 view 不受影响</td>
+</tr>
+<tr>
+<td>Enterprise</td>
+<td><strong>Admin API beta</strong></td>
+<td><strong>成员&#x2F;组自动化</strong> 可替代 <strong>Console 手工运维</strong></td>
+</tr>
+<tr>
+<td>Frontier 倒计时</td>
+<td><strong>Gemini 3.5 Pro 7&#x2F;17 leak</strong></td>
+<td><strong>生产切换</strong> 以 <strong><code>gemini-3.5-pro</code> API 上架</strong> 为准</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.211 release notes</strong></td>
+<td><strong>7&#x2F;15 最完整</strong> 的安全&#x2F;稳定性&#x2F;计费修复清单</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>loop-engineering #273 + #274 commits</strong></td>
+<td><strong>7&#x2F;15 Loop 专项</strong> 最硬 <strong>工程增量</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Langfuse v3.214.0 + Root Observations changelog</strong></td>
+<td><strong>默认观测视图</strong> 行为变化直接影响 <strong>日常排障</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Pragmatic Engineer × Dex Horthy（7&#x2F;15）</strong></td>
+<td><strong>loop&#x2F;harness&#x2F;context</strong> 三者边界与 <strong>slow loop</strong> 样本</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>cobusgreyling&#x2F;loop-engineering README Help wanted</strong></td>
+<td><strong>Hermes PR Babysitter (#225)</strong> 等 <strong>下一批 loop 模式</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-06-10 掘金 Loop Engineering</strong></td>
+<td><strong>固定来源中文 loop 范式</strong> 对照 <strong>7&#x2F;15 全球工具链</strong></td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-15 00:00:00 到 2026-07-15 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, langfuse.com, releasebot.io, newsletter.pragmaticengineer.com, byteiota.com, ddsboston.com, cnbc.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源</td>
+<td>Claude Code v2.1.211</td>
+<td>2026-07-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.211">https://github.com/anthropics/claude-code/releases/tag/v2.1.211</a></td>
+</tr>
+<tr>
+<td>官方&#x2F;API</td>
+<td>Claude Enterprise Admin API</td>
+<td>2026-07-15</td>
+<td><a target="_blank" rel="noopener" href="https://releasebot.io/updates/anthropic/claude-developer-platform">https://releasebot.io/updates/anthropic/claude-developer-platform</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Langfuse v3.214.0</td>
+<td>2026-07-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.214.0">https://github.com/langfuse/langfuse/releases/tag/v3.214.0</a></td>
+</tr>
+<tr>
+<td>Changelog</td>
+<td>Langfuse Root Observations</td>
+<td>2026-07-15</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-07-15-root-observations-default">https://langfuse.com/changelog/2026-07-15-root-observations-default</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>loop-context #273</td>
+<td>2026-07-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/cobusgreyling/loop-engineering/commit/1ceeaf7a0381a250c89da862a8632176249bce96">https://github.com/cobusgreyling/loop-engineering/commit/1ceeaf7a0381a250c89da862a8632176249bce96</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>loop-worktree #274</td>
+<td>2026-07-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/cobusgreyling/loop-engineering/commit/6327550bb418832d5e619d1ad2c804099cd06e87">https://github.com/cobusgreyling/loop-engineering/commit/6327550bb418832d5e619d1ad2c804099cd06e87</a></td>
+</tr>
+<tr>
+<td>播客</td>
+<td>Pragmatic Engineer × Dex Horthy</td>
+<td>2026-07-15</td>
+<td><a target="_blank" rel="noopener" href="https://newsletter.pragmaticengineer.com/p/context-engineering-with-dex-horthy">https://newsletter.pragmaticengineer.com/p/context-engineering-with-dex-horthy</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Gemini 3.5 Pro 路由 ByteIota</td>
+<td>2026-07-15（首发 7&#x2F;8）</td>
+<td><a target="_blank" rel="noopener" href="https://byteiota.com/gemini-3-5-pro-july-17-developer-routing-guide/">https://byteiota.com/gemini-3-5-pro-july-17-developer-routing-guide/</a></td>
+</tr>
+<tr>
+<td>产业</td>
+<td>OpenAI 5% 政府股权 CNBC</td>
+<td>2026-07-15（FT 7&#x2F;2）</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html">https://www.cnbc.com/2026/07/02/openai-proposes-us-government-own-5percent-stake-to-address-political-blowback.html</a></td>
+</tr>
+<tr>
+<td>日报</td>
+<td>DDS Vibe Coders 7&#x2F;15</td>
+<td>2026-07-15</td>
+<td><a target="_blank" rel="noopener" href="https://ddsboston.com/blogs/vibe-code-academy/ai-news-for-vibe-coders-daily-2026-07-15">https://ddsboston.com/blogs/vibe-code-academy/ai-news-for-vibe-coders-daily-2026-07-15</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

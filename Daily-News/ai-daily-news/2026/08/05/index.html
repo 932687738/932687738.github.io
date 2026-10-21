@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-05 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-05</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-05</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-08-05</code> 是 <strong>「Google AI 权力结构地震 + Opus 4.1 正式退役 + Inference Hooks 企业 beta + Qwen3.8-Max 官方博客跟进」</strong>——<strong>Jeff Dean</strong> 离任 Google <strong>27 年后</strong> 联合 <strong>Ghemawat &#x2F; Quoc Le &#x2F; Vinyals</strong> 创立 <strong>Discovery Loop</strong>（<strong>PBC；自动化科学实验 loop + RSI</strong>；<strong>Alphabet 投资</strong>）；<strong>Demis Hassabis</strong> 转 <strong>DeepMind 董事长 + Alphabet 首席科学家</strong>，<strong>Koray Kavukcuoglu</strong> 接 <strong>DeepMind 日常运营</strong>；<strong>Anthropic</strong> 官方 <strong>退役 <code>claude-opus-4-1-20250805</code><strong>（</strong>请求 hard fail → 迁移 Opus 5</strong>）并发布 <strong>Inference Hooks Enterprise beta</strong>；<strong>阿里云官方博客 8&#x2F;5</strong> 跟进 <strong>Qwen3.8-Max</strong>（<strong>权重仍约 8&#x2F;10 开放</strong>）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Google AI 组织架构；Discovery Loop；Anthropic API 退役；Inference Hooks；Qwen3.8-Max；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>顶级研究员「出大厂做 discovery&#x2F;RSI」与「大厂内部 AGI 治理重组」同日发生</strong>；<strong>Opus 4.1 deadline 兑现</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><strong>立即审计所有 <code>claude-opus-4-1-20250805</code> 引用并切 Opus 5&#x2F;4.8</strong>；<strong>移除 temperature&#x2F;top_p</strong>；Enterprise 评估 <strong>Inference Hooks</strong>；<strong>8&#x2F;10 前准备 Qwen3.8 自托管 sizing</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>8&#x2F;5</strong> release（<strong>v2.1.222</strong> 仍为最新）；<strong>Codex</strong>：无 <strong>8&#x2F;5</strong> stable release；<strong>OpenClaw</strong>：无 <strong>8&#x2F;5</strong> release；<strong>Hermes</strong>：无 <strong>8&#x2F;5</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>8&#x2F;5</strong> release；<strong>Langfuse</strong>：无 <strong>8&#x2F;5</strong> release；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>8&#x2F;5</strong> release；<strong>Code Graph</strong>：无 <strong>8&#x2F;5</strong> release；<strong>Loop Engineering</strong>：<strong>Discovery Loop 自动化实验 loop</strong> + <strong>Qwen 16 天 coding run（相邻传播）</strong>；<strong>skills</strong>：无 <strong>8&#x2F;5</strong> 新发布</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>人事 &#x2F; Google</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/">Jeff Dean 等创立 Discovery Loop（TechCrunch 8&#x2F;5）</a></td>
+<td><strong>2026-08-05</strong></td>
+<td>创业&#x2F;科研</td>
+<td><strong>PBC；并行实验 loop；RSI</strong>；<strong>Radical&#x2F;Khosla 领投</strong></td>
+</tr>
+<tr>
+<td>人事 &#x2F; Google</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html">Google AI 架构重组（CNBC 8&#x2F;5）</a></td>
+<td><strong>2026-08-05</strong></td>
+<td>官方&#x2F;组织</td>
+<td><strong>Hassabis → 董事长+Alphabet CSO</strong>；<strong>Kavukcuoglu → DeepMind SVP</strong></td>
+</tr>
+<tr>
+<td>人事 &#x2F; Google</td>
+<td><a target="_blank" rel="noopener" href="https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/">Hassabis 卸任 DeepMind CEO（Fortune 8&#x2F;5）</a></td>
+<td><strong>2026-08-05</strong></td>
+<td>媒体&#x2F;组织</td>
+<td><strong>聚焦 AGI 战略与 Isomorphic Labs</strong></td>
+</tr>
+<tr>
+<td>API &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">Opus 4.1 正式退役（Claude API Release Notes 8&#x2F;5）</a></td>
+<td><strong>2026-08-05</strong></td>
+<td>官方&#x2F;API</td>
+<td><strong><code>claude-opus-4-1-20250805</code> hard fail</strong>；<strong>→ Opus 5</strong></td>
+</tr>
+<tr>
+<td>企业 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">Inference Hooks Enterprise beta（Claude API 8&#x2F;5）</a></td>
+<td><strong>2026-08-05</strong></td>
+<td>官方&#x2F;产品</td>
+<td><strong>prompt 推理前 hold；allow&#x2F;deny 签名请求</strong></td>
+</tr>
+<tr>
+<td>模型 &#x2F; 阿里</td>
+<td><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/blog/qwen3-8-max-a-new-bar-for-coding-and-cowork_603421">Qwen3.8-Max 官方博客（Alibaba Cloud 8&#x2F;5）</a></td>
+<td><strong>2026-08-05</strong></td>
+<td>官方&#x2F;blog</td>
+<td><strong>2.4T MoE；首个 Max 级开放权重承诺；API 已 GA</strong></td>
+</tr>
+<tr>
+<td>模型 &#x2F; 阿里</td>
+<td><a target="_blank" rel="noopener" href="https://economictimes.indiatimes.com/tech/technology/googles-jeff-dean-launches-ai-startup-discovery-loop/articleshow/132955389.cms">Discovery Loop 与 Qwen 权重窗口（相邻传播）</a></td>
+<td><strong>2026-08-05</strong></td>
+<td>媒体</td>
+<td><strong>权重 ~8&#x2F;10；27B 为 realistic 自托管路径</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>API 迁移</td>
+<td><strong>Anthropic model deprecations</strong></td>
+<td><strong>Opus 4.1 Retired 状态确认</strong></td>
+<td>Claude API 用户</td>
+</tr>
+<tr>
+<td>企业安全</td>
+<td><strong>Inference Hooks 文档</strong></td>
+<td><strong>推理前 governance server 裁决</strong></td>
+<td>Enterprise 安全&#x2F;合规</td>
+</tr>
+<tr>
+<td>Discovery</td>
+<td><strong>Discovery Loop 官网&#x2F;press</strong></td>
+<td><strong>hypothesis → experiment → iterate loop</strong></td>
+<td>AI-for-Science</td>
+</tr>
+<tr>
+<td>Qwen</td>
+<td><strong>Alibaba Cloud Qwen3.8-Max blog</strong></td>
+<td><strong>OpenAI-compatible API 集成</strong></td>
+<td>成本&#x2F;自托管团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：8&#x2F;5 是 <strong>「人才与组织重组日 + API 硬 deadline 兑现日」</strong>——<strong>Discovery Loop</strong> 把 <strong>DeepMind RSI 叙事</strong> 从 <strong>hyperscaler capex 演讲</strong> 推进到 <strong>独立 PBC 产品化</strong>；<strong>Inference Hooks</strong> 把 <strong>agent governance</strong> 从 <strong>post-hoc audit</strong> 前移到 <strong>pre-inference gate</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>组织</td>
+<td><strong>Dean&#x2F;Hassabis 双线变动</strong></td>
+<td><strong>Gemini 路线 vs 独立 discovery startup 分化</strong></td>
+</tr>
+<tr>
+<td>API</td>
+<td><strong>Opus 4.1 hard fail</strong></td>
+<td><strong>hidden serverless&#x2F;CI model ID 全面审计</strong></td>
+</tr>
+<tr>
+<td>治理</td>
+<td><strong>Inference Hooks beta</strong></td>
+<td><strong>Enterprise 可插 AI security server</strong></td>
+</tr>
+<tr>
+<td>Loop</td>
+<td><strong>Discovery Loop PBC</strong></td>
+<td><strong>automated experimental loop 成创业品类</strong></td>
+</tr>
+<tr>
+<td>开放权重</td>
+<td><strong>Qwen Max 权重仍 pending</strong></td>
+<td><strong>8&#x2F;10 为 first hard checkpoint</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>CNBC Google AI 重组 + Dean 离职</strong></td>
+<td><strong>8&#x2F;5 最大组织事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Anthropic Opus 4.1 退役 release notes</strong></td>
+<td><strong>deadline 已兑现；迁移 Opus 5</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch Discovery Loop</strong></td>
+<td><strong>RSI + 科学发现自动化</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Inference Hooks 文档</strong></td>
+<td><strong>Enterprise 推理前治理新 primitive</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-08-04</strong></td>
+<td><strong>白宫框架 &#x2F; Qwen 首发 &#x2F; Claude Code v2.1.222</strong> 前情</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-05 00:00:00 到 2026-08-05 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：techcrunch.com, cnbc.com, fortune.com, platform.claude.com, alibabacloud.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>创业</td>
+<td>Discovery Loop Jeff Dean</td>
+<td>2026-08-05</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/">https://techcrunch.com/2026/08/05/jeff-dean-and-other-top-ai-researchers-are-leaving-google-to-launch-their-own-startup/</a></td>
+</tr>
+<tr>
+<td>组织</td>
+<td>Google AI reshuffle CNBC</td>
+<td>2026-08-05</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html">https://www.cnbc.com/2026/08/05/google-chief-scientist-jeff-dean-leaving-company-after-27-years.html</a></td>
+</tr>
+<tr>
+<td>组织</td>
+<td>Hassabis steps down Fortune</td>
+<td>2026-08-05</td>
+<td><a target="_blank" rel="noopener" href="https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/">https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Opus 4.1 retired + Inference Hooks</td>
+<td>2026-08-05</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">https://platform.claude.com/docs/en/release-notes/overview</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Qwen3.8-Max Alibaba Cloud blog</td>
+<td>2026-08-05</td>
+<td><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/blog/qwen3-8-max-a-new-bar-for-coding-and-cowork_603421">https://www.alibabacloud.com/blog/qwen3-8-max-a-new-bar-for-coding-and-cowork_603421</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

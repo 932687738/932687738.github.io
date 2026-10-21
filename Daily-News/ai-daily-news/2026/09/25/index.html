@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-25 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-25</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-25</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 25 日主线是 <strong>Spring AI 2.1.0-M1 接入 OpenAI Responses API，并给向量库加上预计算 embedding 的 upsert</strong>；Claude Code v2.1.282 与 Langfuse 的 skill 管理落在同一北京日。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Spring AI release、Claude Code、Langfuse、Copilot 周报、专项主题</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）Spring AI 仍是 Milestone，不是 GA；2）Langfuse 开始有基础 skill 管理；3）Copilot 周报把本周新模型收成一张清单</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0-M1">Spring AI 2.1.0-M1</a>；<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/2.1/upgrade-notes.html#upgrading-to-2-1-0">升级说明</a>；<a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.46.0">Langfuse v4.46.0</a></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Spring AI</strong>：2.1.0-M1，北京时间 9&#x2F;25 15:28。<strong>Spring Alibaba AI</strong>：无本日 release。<strong>Claude Code</strong>：v2.1.282，北京时间 9&#x2F;25 02:38。<strong>Langfuse</strong>：v4.46.0，含 basic skill management。<strong>Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; LangGraph &#x2F; Code Graph &#x2F; Loop Engineering</strong>：无本日 release</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Spring AI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0-M1">2.1.0-M1</a></td>
+<td>2026-09-25</td>
+<td>开源发布</td>
+<td>OpenAI Responses API、<code>VectorStore.upsert</code> 写入已算好的向量、<code>AbstractMessage</code> 引入 <code>MessagePart</code>。从 2.0.1 升级先看官方 upgrade notes</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.46.0">v4.46.0</a></td>
+<td>2026-09-25</td>
+<td>开源发布</td>
+<td>实验并排对比、数据集条目的格式化 JSON、基础 skill 管理；移除 trace playback</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.282">v2.1.282</a></td>
+<td>2026-09-25（Published 2026-09-24 18:38 UTC）</td>
+<td>开源发布</td>
+<td><code>maxProseWidth</code> 限制正文宽度但不压表格和代码；续聊时修正思考块丢失与无法解密的 web search 历史导致的 400；压缩失败会换备用模型重试</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/">Weekly releases — September 21</a></td>
+<td>2026-09-25</td>
+<td>官方发布</td>
+<td>周报列入 Opus 5.5、GPT-6 Sol、GPT-6 Luna、Grok 4.7 的套餐范围，以及 VS Code 1.139 在 SSH&#x2F;Tunnel&#x2F;WSL 的 Dev Container 里跑 Agent。本地沙箱已在 9&#x2F;23 日报记录，此处不重复展开</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Java AI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0-M1">2.1.0-M1</a></td>
+<td>Responses API、预计算向量 upsert、消息分片</td>
+<td>跟 Spring AI 2.x 的 Java 服务</td>
+</tr>
+<tr>
+<td>升级</td>
+<td><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/2.1/upgrade-notes.html#upgrading-to-2-1-0">Upgrade notes</a></td>
+<td>2.0.1 到 2.1.0-M1</td>
+<td>准备升 Milestone 的人</td>
+</tr>
+<tr>
+<td>Skills</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.46.0">Langfuse v4.46.0</a></td>
+<td>skill 管理进产品，而不只是仓库文件</td>
+<td>把 prompt&#x2F;skill 放在 Langfuse 的团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：Java 侧 Milestone 比 Python 框架本日更值得看；skill 开始进入 Langfuse，而不是只留在 CLI。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Responses API</td>
+<td>Spring AI 增加官方客户端路径</td>
+<td>工具调用和多段消息不要只绑 Chat Completions</td>
+</tr>
+<tr>
+<td>upsert</td>
+<td>向量可以在库外算好再写入</td>
+<td>嵌入作业和在线检索可以拆开</td>
+</tr>
+<tr>
+<td>MessagePart</td>
+<td>消息不再是单段字符串</td>
+<td>多模态与工具结果要按 part 建模</td>
+</tr>
+<tr>
+<td>Langfuse skills</td>
+<td>基础管理能力</td>
+<td>和 Claude&#x2F;Codex 的文件型 skill 对一下谁是源</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0-M1">Spring AI 2.1.0-M1</a></td>
+<td>本次窗口里唯一的 Spring 官方 AI 里程碑</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/2.1/upgrade-notes.html#upgrading-to-2-1-0">Upgrade notes</a></td>
+<td>Milestone 升级不要只看 release 三条功能</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.46.0">Langfuse v4.46.0</a></td>
+<td>skill 管理的第一版范围</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-25 00:00:00 到 2026-09-25 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, docs.spring.io, github.blog</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Spring AI v2.1.0-M1</td>
+<td>2026-09-25</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0-M1">https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0-M1</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>Upgrading to 2.1.0</td>
+<td>2026-09-25（随 Milestone 发布）</td>
+<td><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-ai/reference/2.1/upgrade-notes.html#upgrading-to-2-1-0">https://docs.spring.io/spring-ai/reference/2.1/upgrade-notes.html#upgrading-to-2-1-0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.46.0</td>
+<td>2026-09-25</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.46.0">https://github.com/langfuse/langfuse/releases/tag/v4.46.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.282</td>
+<td>2026-09-25（Published 2026-09-24 18:38 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.282">https://github.com/anthropics/claude-code/releases/tag/v2.1.282</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot weekly releases — September 21</td>
+<td>2026-09-25</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/">https://github.blog/changelog/2026-09-25-github-copilot-weekly-releases-september-21/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

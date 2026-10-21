@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-09 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-09</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-09</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<strong>coding agent 三线同日迭代</strong>（Codex <strong>alpha</strong>、Claude Code <strong>补丁</strong>、OpenClaw <strong>巨型 beta</strong>），叠加 <strong>国产基础模型与语音多模态</strong> 的高密度发布，形成「工具链 + 模型供给侧」同频共振。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI Codex releases；Anthropic Claude Code releases；OpenClaw releases；Hermes &#x2F; Spring AI &#x2F; LangChain &#x2F; MCP &#x2F; arXiv；量子位</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Agent 运行时工程化</strong>：日志脱敏、模型目录动态发现、Discord 语音实时模式、Bedrock <code>serviceTier</code> 等把「能跑」推向「能运维」；<strong>国产模型性价比叙事</strong>再强化</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>OpenClaw <strong>Node 22.16+</strong> 与 <strong>tini</strong> 变更对部署流水线的影响；Codex <strong>0.131.0-alpha.1</strong> 与上游 lockfile 联动</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Codex</strong>：<a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.1"><code>rust-v0.131.0-alpha.1</code></a> <strong>Published 2026-05-09T00:30:24Z</strong>；<strong>Claude Code</strong>：<a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.137"><code>v2.1.137</code></a> <strong>2026-05-09T00:11:04Z</strong>（Windows 插件激活修复）；<strong>OpenClaw</strong>：<a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.9-beta.1"><code>v2026.5.9-beta.1</code></a> <strong>2026-05-09T13:32:02Z</strong>（<strong>Prerelease</strong>）；<strong>Hermes</strong>：当日 <strong>无</strong> 新 GitHub Release（最近 <strong>2026-05-07</strong>）；<strong>Spring AI</strong>：<strong>未发现</strong>当日官方博客；<strong>skills</strong>：OpenClaw 对 <strong>Windows 插件 skills 目录 junction</strong> 等工程修复，偏 <strong>实现层</strong></td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源 coding agent</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.1">OpenAI Codex <code>0.131.0-alpha.1</code>（Prerelease）</a></td>
+<td>2026-05-09</td>
+<td>开源 pre-release</td>
+<td>跟进 <strong>alpha</strong> 与 stable 通道差异；校验 CI 产物与 <strong>sigstore</strong> 资产</td>
+</tr>
+<tr>
+<td>开源 coding agent</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.137">Claude Code <code>v2.1.137</code></a></td>
+<td>2026-05-09</td>
+<td>开源 patch</td>
+<td><strong>VS Code 扩展在 Windows 上无法激活</strong> 一类「环境耦合 bug」对团队桌面标准化敏感</td>
+</tr>
+<tr>
+<td>开源 personal agent</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.9-beta.1">OpenClaw <code>v2026.5.9-beta.1</code>（Prerelease）</a></td>
+<td>2026-05-09</td>
+<td>开源 pre-release</td>
+<td>覆盖 <strong>模型目录运行时拉取</strong>、<strong>日志脱敏</strong>、<strong>Discord 实时语音模式</strong>、<strong>Bedrock serviceTier</strong>、<strong>Node 22.16+ floor</strong> 等一长串运维向变更</td>
+</tr>
+<tr>
+<td>基础模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/414496.html">百度发布文心 5.1：搜索能力登顶国内…</a></td>
+<td>2026-05-09</td>
+<td>中文媒体 &#x2F; 产业</td>
+<td>「多维弹性预训练 → <strong>约 6% 预训练成本</strong>」叙事，适合与 <strong>官方技术博客</strong> 交叉验证</td>
+</tr>
+<tr>
+<td>语音多模态</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/415023.html">阶跃最新语音模型位列 Artificial Analysis 评测榜中国第一</a></td>
+<td>2026-05-09</td>
+<td>中文媒体 &#x2F; 产品</td>
+<td><strong>Speech Arena</strong> 盲测 Elo 机制对 <strong>TTS 选型</strong>有参考意义</td>
+</tr>
+<tr>
+<td>具身智能</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/414826.html">空间智能的“具身化”跃迁，高德 ABot 体系模型夺冠 AGIBot 全球挑战赛</a></td>
+<td>2026-05-09</td>
+<td>中文媒体 &#x2F; 竞赛</td>
+<td><strong>世界模型 + 物理一致性</strong> 指标（Visual Quality &#x2F; Action Following）对机器人数据管线有启发</td>
+</tr>
+<tr>
+<td>政策（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/415019.html">两项 AI 政策发布…</a></td>
+<td><strong>2026-05-08</strong>（正文「5 月 8 日」；量子位 <strong>2026-05-09</strong> 传播）</td>
+<td>中文媒体 &#x2F; 政策解读</td>
+<td>「算电协同 + 智能体规范应用」双文件的行业化解读</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenClaw 运维</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.9-beta.1">OpenClaw <code>v2026.5.9-beta.1</code> Release Notes</a></td>
+<td><code>tini</code>、HTTP 日志脱敏、网关重启 RPC、<code>serviceTier</code></td>
+<td>自托管 Agent 平台工程</td>
+</tr>
+<tr>
+<td>Codex 发布工程</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.1">Codex <code>rust-v0.131.0-alpha.1</code></a></td>
+<td>alpha 二进制矩阵、npm pack</td>
+<td>想在 alpha 通道验证新特性的团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：<strong>未发现</strong> LangChain 官方博客在 <strong>2026-05-09</strong> 的更新；同日工程热点主要由 <strong>OpenClaw 大 beta</strong> 与 <strong>国产模型&#x2F;语音</strong> 牵引。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent 平台</td>
+<td>OpenClaw：统一 <strong>provider&#x2F;model identity</strong> 注入 system prompt</td>
+<td>减少「模型自称与实际路由不一致」导致的调试成本</td>
+</tr>
+<tr>
+<td>模型路由</td>
+<td>OpenClaw：Google &#x2F; Gemini <strong>retired id 归一化</strong> 到 <code>gemini-3.1-pro-preview</code></td>
+<td>线上配置漂移时，用 <strong>canonical id</strong> 做迁移层</td>
+</tr>
+<tr>
+<td>RAG &#x2F; 工具</td>
+<td>OpenClaw：<code>oc-path</code> 插件、<code>openclaw path</code> 访问 workspace 文本</td>
+<td>最小权限读取敏感 workspace 文件</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.9-beta.1">OpenClaw <code>v2026.5.9-beta.1</code> Release Notes</a></td>
+<td>单版本集中观察 <strong>多通道（Discord&#x2F;Telegram&#x2F;Feishu）+ 语音 + Codex harness</strong> 的耦合方式</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.137">Claude Code <code>v2.1.137</code></a></td>
+<td>Windows 开发者可立刻核对扩展激活回归</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/414496.html">文心 5.1 量子位报道</a></td>
+<td>快速获取国内模型发布叙事与指标口径</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-09 00:00:00 到 2026-05-09 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, openai.com（Codex 仓库）, qbitai.com, anthropics.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Codex <code>0.131.0-alpha.1</code></td>
+<td>2026-05-09</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.1">https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.1</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code <code>v2.1.137</code></td>
+<td>2026-05-09</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.137">https://github.com/anthropics/claude-code/releases/tag/v2.1.137</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw <code>v2026.5.9-beta.1</code></td>
+<td>2026-05-09</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.9-beta.1">https://github.com/openclaw/openclaw/releases/tag/v2026.5.9-beta.1</a></td>
+</tr>
+<tr>
+<td>中文媒体</td>
+<td>百度发布文心 5.1</td>
+<td>2026-05-09</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/414496.html">https://www.qbitai.com/2026/05/414496.html</a></td>
+</tr>
+<tr>
+<td>中文媒体</td>
+<td>阶跃 StepAudio 2.5 TTS</td>
+<td>2026-05-09</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/415023.html">https://www.qbitai.com/2026/05/415023.html</a></td>
+</tr>
+<tr>
+<td>中文媒体</td>
+<td>高德 ABot AGIBot 夺冠</td>
+<td>2026-05-09</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/414826.html">https://www.qbitai.com/2026/05/414826.html</a></td>
+</tr>
+<tr>
+<td>中文媒体（相邻）</td>
+<td>两项 AI 政策发布（解读稿）</td>
+<td>2026-05-08 &#x2F; 2026-05-09 传播</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/415019.html">https://www.qbitai.com/2026/05/415019.html</a></td>
+</tr>
+<tr>
+<td>开源发布（相邻）</td>
+<td>Hermes Agent <code>v2026.5.7</code></td>
+<td>2026-05-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.7">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.5.7</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-29 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-29</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-29</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 29 日主线是 <strong>Sonnet 5.5 成为 Claude Code 的默认 Sonnet，并进入 LangChain 兼容层</strong>；同日 <strong>Code Graph 1.6.1 把前端路由写进代码图</strong>，Codex 0.159 允许新输入打断长调用。Copilot 模型清单已记在 9&#x2F;28。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Claude Code、Codex、Langfuse、Code Graph、LangChain、Copilot changelog、Loop Engineering 课程、专项主题</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）Sonnet 5.5 从发布变成默认档与计费档；2）代码图开始覆盖页面路由和调用条件；3）Codex 把「打断」做成显式开关，并删掉自动追问</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.284">Claude Code v2.1.284</a>；<a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.1">codegraph v1.6.1</a>；<a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.159.0">Codex 0.159.0</a></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：v2.1.284，北京时间 9&#x2F;29 02:02。<strong>Codex</strong>：0.159.0，北京时间 9&#x2F;29 16:05。<strong>Code Graph</strong>：v1.6.1。<strong>Langfuse</strong>：v4.47.0（ClickHouse Native 写入、网关环境头）。<strong>LangChain</strong>：<code>langchain==1.4.3</code>（北京时间 9&#x2F;29 04:17）与 <code>langchain-core==1.6.6</code>；<strong>LangGraph 仓库无本日 release</strong>。<strong>Loop Engineering</strong>：Blueprint 课程日期为 9&#x2F;29，讲独立 verifier 与 worktree。<strong>Spring AI &#x2F; Spring Alibaba AI &#x2F; OpenClaw &#x2F; Hermes</strong>：无本日 release</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.284">v2.1.284</a></td>
+<td>2026-09-29（Published 2026-09-28 18:02 UTC）</td>
+<td>开源发布</td>
+<td>Sonnet 5.5 成为 Anthropic API 上的默认 Sonnet：1M 上下文，$2&#x2F;$10 每百万 token，缓存读 $0.20；<code>/usage</code> 开始显示网关花费美元</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.159.0">0.159.0</a></td>
+<td>2026-09-29</td>
+<td>开源发布</td>
+<td>可选 <code>instant_interrupt</code> 在模型回复或长 code-mode 调用中改道；默认打开高权限命令的终端审批；移除自动追问和内置 <code>plugin-creator</code> skill</td>
+</tr>
+<tr>
+<td>Code Graph</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.1">codegraph v1.6.1</a></td>
+<td>2026-09-29</td>
+<td>开源发布</td>
+<td>Expo&#x2F;Next&#x2F;React Router&#x2F;TanStack&#x2F;Vue&#x2F;Nuxt&#x2F;SvelteKit 页面成为路由边；<code>codegraph_explore</code> 的 Flow 带上分支条件。升级后要重建索引</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.47.0">v4.47.0</a></td>
+<td>2026-09-29</td>
+<td>开源发布</td>
+<td>ClickHouse Native 写入路径；AI Gateway 用 <code>langfuse-environment</code> 头标环境；全文输入上限 5 MiB 并标记被省略的输入</td>
+</tr>
+<tr>
+<td>LangChain</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.3">langchain 1.4.3</a> &#x2F; <a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.6">core 1.6.6</a></td>
+<td>2026-09-29</td>
+<td>开源发布</td>
+<td><code>init_chat_model</code> 支持 Bedrock Mantle；修复无 profile 时的 GPT-6 结构化输出；core 增加 Sonnet 5.5 兼容</td>
+</tr>
+<tr>
+<td>Loop Engineering</td>
+<td><a target="_blank" rel="noopener" href="https://theblueprintai.substack.com/p/loop-engineering-full-course">Loop Engineering full course</a></td>
+<td>2026-09-29</td>
+<td>技术媒体</td>
+<td>七日练习：定时触发、独立 worktree、不能改文件的 verifier、失败上限后交回人。不是官方 CLI 变更</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>默认模型</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.284">v2.1.284</a></td>
+<td>Sonnet 5.5 价格、1M 上下文、花费限额美元字段</td>
+<td>管 Claude Code 账单的人</td>
+</tr>
+<tr>
+<td>代码图</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.1">v1.6.1</a></td>
+<td>路由边、调用条件、MCP 增量同步、大仓库少扫全图</td>
+<td>用 MCP 给 Agent 看代码结构的人</td>
+</tr>
+<tr>
+<td>打断与审批</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.159.0">Codex 0.159.0</a></td>
+<td><code>instant_interrupt</code>、默认终端审批、去掉自动追问</td>
+<td>Codex CLI 用户</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：框架层是兼容新模型和小修复；更值得看的是代码图把「页面跳到哪个接口」收成一条边。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Sonnet 5.5</td>
+<td>Claude Code 默认档、Copilot 可选、LangChain core 兼容</td>
+<td>评测和网关定价要一起改，不能只改别名</td>
+</tr>
+<tr>
+<td>Code Graph</td>
+<td>路由与 fetch 进图，探索结果声明是否被截断</td>
+<td>「这个按钮打到哪」不必再靠全文搜索</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>打断是 opt-in；高权限命令默认要终端确认</td>
+<td>长任务可改道，但提权不能靠记忆里的旧授权</td>
+</tr>
+<tr>
+<td>Skills</td>
+<td>移除内置 plugin-creator</td>
+<td>技能市场和内置技能会收缩，别依赖未声明的默认技能</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td>环境头与 5 MiB 输入上限</td>
+<td>网关侧要显式标环境，超限输入会被标记而不是静默丢</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.1">codegraph v1.6.1</a></td>
+<td>路由边和调用条件是代码图对前端仓库的实质增量</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.284">Claude Code v2.1.284</a></td>
+<td>默认 Sonnet 的价格和上下文</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://theblueprintai.substack.com/p/loop-engineering-full-course">Loop Engineering course</a></td>
+<td>把 verifier 不能改文件写成可执行日程</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-29 00:00:00 到 2026-09-29 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, theblueprintai.substack.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.284</td>
+<td>2026-09-29（Published 2026-09-28 18:02 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.284">https://github.com/anthropics/claude-code/releases/tag/v2.1.284</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex rust-v0.159.0</td>
+<td>2026-09-29</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.159.0">https://github.com/openai/codex/releases/tag/rust-v0.159.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>codegraph v1.6.1</td>
+<td>2026-09-29</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.1">https://github.com/colbymchenry/codegraph/releases/tag/v1.6.1</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.47.0</td>
+<td>2026-09-29</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.47.0">https://github.com/langfuse/langfuse/releases/tag/v4.47.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langchain&#x3D;&#x3D;1.4.3</td>
+<td>2026-09-29（Published 2026-09-28 20:17 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.3">https://github.com/langchain-ai/langchain/releases/tag/langchain%3D%3D1.4.3</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langchain-core&#x3D;&#x3D;1.6.6</td>
+<td>2026-09-29</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.6">https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.6.6</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Loop Engineering full course</td>
+<td>2026-09-29</td>
+<td><a target="_blank" rel="noopener" href="https://theblueprintai.substack.com/p/loop-engineering-full-course">https://theblueprintai.substack.com/p/loop-engineering-full-course</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

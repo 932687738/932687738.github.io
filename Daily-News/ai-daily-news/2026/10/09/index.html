@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-09 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-09</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-09</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：10 月 9 日主线是 <strong>开源漏洞扫描和编码代理的失败关闭</strong>：Anthropic 的 OSS Scanner 在北京时间凌晨上线，Claude Code 让起不来的钩子默认拦住动作，Codex 0.162.0 补上受控的 Git worktree。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic、GitHub changelog、Claude Code、Codex、Langfuse，以及 Spring AI、LangGraph、Code Graph、Loop Engineering、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）模型生成的漏洞报告可以选入，但没有人工复核；2）钩子和 <code>/loop</code> 在进程挂掉或超时时要失败关闭；3）观测查询开始强制时间窗，读流量拆到副本</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">OSS Scanner</a>；<a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.295">Claude Code v2.1.295</a>；<a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.162.0">Codex 0.162.0</a>；<a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.56.0">Langfuse v4.56.0</a></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：v2.1.295，Published 2026-10-08 19:48 UTC，北京时间 10&#x2F;9 03:48。<strong>Codex</strong>：稳定版 0.162.0，Published 10&#x2F;8 18:55 UTC，北京时间 10&#x2F;9 02:55。同日 alpha 无独立变更说明，不展开。<strong>Langfuse</strong>：v4.56.0。<strong>Loop Engineering</strong>：v2.1.295 写明后台 <code>/loop</code> 在进程不在时不再静默停掉，Esc 可以取消已转入后台的自定步循环。<strong>Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; OpenClaw &#x2F; Hermes &#x2F; skills</strong>：无本日官方 release。Langfuse 本日改的是产品内评测结果，不是 Agent Skills 规范</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">OSS Scanner</a></td>
+<td>2026-10-09（页面写 10&#x2F;8，Published 2026-10-08 19:00 UTC）</td>
+<td>官方发布</td>
+<td>符合条件的开源项目可免费接受最强模型的定期扫描，报告不经人工复核，可能有误报。用 PR 登记。另有 Claude for OSS 的 Max 20x 订阅用于修复</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.295">v2.1.295</a></td>
+<td>2026-10-09（Published 2026-10-08 19:48 UTC）</td>
+<td>开源发布</td>
+<td>命令和 HTTP 钩子可设 <code>onFailure: &quot;block&quot;</code>：起不来、超时或退出码异常时拦住动作。支持 OSC 7501，终端可显示正在工作、等待或已完成。后台 <code>/loop</code> 在进程不在时会说明唤醒落空</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.162.0">0.162.0</a></td>
+<td>2026-10-09（Published 2026-10-08 18:55 UTC）</td>
+<td>开源发布</td>
+<td>受信任的本地项目可创建和列出托管 Git worktree。命令中心可用 <code>p</code> 固定任务。自定义 Responses 兼容供应商可配置实时网页访问和远程压缩</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.56.0">v4.56.0</a></td>
+<td>2026-10-09（Published 10:13 UTC）</td>
+<td>开源发布</td>
+<td>MCP 的 get observations 必须带日期范围。决策模型评测结果重做。ClickHouse 计费组织可收花费告警。大量分数和导出读请求改走只读副本</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/">10 月 5 日当周汇总</a></td>
+<td>2026-10-09</td>
+<td>官方发布</td>
+<td>新点是 Copilot 应用可以把许可证账号和仓库账号分开，CLI 用 <code>/model</code> 发现本机 Ollama，VS Code 1.141 可并排看代理会话并清理 worktree。Haiku 5.5 和本地沙箱已在 10&#x2F;7 记过</td>
+</tr>
+<tr>
+<td>代码扫描</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/">CodeQL 2.27.2</a></td>
+<td>2026-10-09</td>
+<td>官方发布</td>
+<td>补了 C++ 正则解析，并改进 Rust 的属性、文档注释和 async 数据流。github.com 的代码扫描会自动用上新版本</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源扫描</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">OSS Scanner</a></td>
+<td>选择加入、无人工复核、PR 登记</td>
+<td>关键基础设施类开源项目的维护者</td>
+</tr>
+<tr>
+<td>钩子</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.295">v2.1.295</a></td>
+<td><code>onFailure: &quot;block&quot;</code>、<code>/loop</code> 掉线说明</td>
+<td>用钩子做门禁的人</td>
+</tr>
+<tr>
+<td>观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.56.0">v4.56.0</a></td>
+<td>MCP 必须带时间范围</td>
+<td>用 Langfuse MCP 拉观测的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：没有 LangGraph 或 Spring AI release。工程变化是「扫描和钩子都要明确失败时怎么办」。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>安全扫描</td>
+<td>OSS Scanner 的报告全是模型生成</td>
+<td>选择加入等于接受误报；不能把未复核报告直接当漏洞工单</td>
+</tr>
+<tr>
+<td>Loop</td>
+<td>进程不在时 <code>/loop</code> 会说明，而不是静默停</td>
+<td>唤醒失败要写进会话，否则人以为循环还在跑</td>
+</tr>
+<tr>
+<td>观测</td>
+<td>MCP 拉观测必须带日期</td>
+<td>禁止无界查询，避免一次把历史 trace 拖下来</td>
+</tr>
+<tr>
+<td>Worktree</td>
+<td>Codex 可创建托管 worktree</td>
+<td>并行任务先隔离工作区，再谈代理数量</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">OSS Scanner</a></td>
+<td>写清无人工复核这一条</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.295">v2.1.295</a></td>
+<td>钩子失败关闭和 <code>/loop</code> 掉线</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/">CodeQL 2.27.2</a></td>
+<td>代码扫描规则面，不是生成式模型</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-09 00:00:00 到 2026-10-09 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, github.com, github.blog</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>OSS Scanner</td>
+<td>2026-10-09（页面 10&#x2F;8，Published 19:00 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source">https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.295</td>
+<td>2026-10-09（Published 2026-10-08 19:48 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.295">https://github.com/anthropics/claude-code/releases/tag/v2.1.295</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex 0.162.0</td>
+<td>2026-10-09（Published 2026-10-08 18:55 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.162.0">https://github.com/openai/codex/releases/tag/rust-v0.162.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.56.0</td>
+<td>2026-10-09</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.56.0">https://github.com/langfuse/langfuse/releases/tag/v4.56.0</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot weekly releases October 5</td>
+<td>2026-10-09</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/">https://github.blog/changelog/2026-10-09-github-copilot-weekly-releases-october-5/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>CodeQL 2.27.2</td>
+<td>2026-10-09</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/">https://github.blog/changelog/2026-10-09-codeql-2-27-2-improves-c-go-rust-and-javascript-analysis/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-07 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-07</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-07</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-07</code> 是 <strong>「Meta Muse 自研多模态首发 + Anthropic Cowork 全端&#x2F;政府版双轨扩张 + 巨头自研模型降本与地缘摩擦」</strong>——Meta Superintelligence Labs 发布 <strong>Muse Image</strong> 并预览 <strong>Muse Video</strong>；Anthropic 同日推出 <strong>Cowork 移动&#x2F;网页</strong> 与 <strong>Claude for Government Desktop 公测（Code+Cowork）</strong>；Microsoft 在 Office 中提高 <strong>MAI 自研模型</strong> 占比；<strong>Alibaba</strong> 因安全争议将 <strong>Claude Code</strong> 列入高风险软件（<strong>7&#x2F;10</strong> 生效）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Meta&#x2F;Anthropic 官方；TechCrunch&#x2F;The Verge&#x2F;VentureBeat&#x2F;CNBC；NVIDIA&#x2F;Crusoe；GitHub release；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>自研多模态</strong>：Meta 用 <strong>Muse</strong> 替代第三方图像模型并接入 <strong>Instagram @mention</strong>；<strong>知识工作 Agent 平台化</strong>：Cowork <strong>&gt;90% 非编码</strong>、<strong>云端后台续跑</strong>；<strong>成本与主权</strong>：Microsoft <strong>MAI 替代第三方</strong>、Alibaba <strong>禁 Claude Code</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 <strong>Muse Image</strong> 的 <strong>agentic tool use + Instagram 上下文</strong> 对广告&#x2F;UGC 合规影响；政府客户跟踪 <strong>FedRAMP High Desktop</strong> 的 <strong>hash-chained audit log</strong>；升级 <strong>Claude Code v2.1.203</strong> 修复 background agent 僵死</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.203</strong>（<strong>Published: 2026-07-07T21:06Z</strong>）修复 macOS 内存误判、background session 僵死、MCP roots；<strong>Codex</strong>：<strong>0.143.0-alpha.38</strong>（<strong>2026-07-07T04:34Z</strong>）；<strong>OpenClaw</strong>：无 <strong>7&#x2F;7</strong> 新 tag（<strong>v2026.7.1-beta.2 为 7&#x2F;5</strong>）；<strong>7&#x2F;7</strong> 合并 <strong>promos CLI</strong>（ClawHub 促销认领，社区报道）；<strong>Hermes</strong>：无 <strong>7&#x2F;7</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;7</strong> release；<strong>Langfuse &#x2F; LangChain &#x2F; Code Graph</strong>：无 <strong>7&#x2F;7</strong> release</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Meta &#x2F; 多模态</td>
+<td><a target="_blank" rel="noopener" href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">Introducing Muse Image and Muse Video（官方）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>官方发布</td>
+<td><strong>MSL</strong> 首个自研图像模型；<strong>agentic</strong> 推理+工具；<strong>Instagram 社交上下文</strong>；<strong>Muse Video</strong> 预览</td>
+</tr>
+<tr>
+<td>Meta &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/">Meta rolls out Muse image generator（TechCrunch）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>技术媒体</td>
+<td>代号 <strong>Mango</strong>；免费额度+订阅；<strong>Marketplace 室内 redesign</strong>、Stories <strong>30 款 AI 特效</strong></td>
+</tr>
+<tr>
+<td>Meta &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram">Meta Muse Image can @mention Instagram users（The Verge）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>技术媒体</td>
+<td><strong>@mention</strong> 拉入他人公开形象；需关注 <strong>likeness&#x2F;隐私</strong> 控制</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; Cowork</td>
+<td><a target="_blank" rel="noopener" href="https://claude.com/blog/cowork-web-mobile">Claude Cowork on web and mobile（官方）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>官方发布</td>
+<td><strong>Max</strong> 先行；<strong>云端后台续跑</strong>、<strong>定时任务无设备在线</strong>；**&gt;90% 非软件开发** 使用数据</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; Cowork</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/">Claude Cowork expands to mobile and web（TechCrunch）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>技术媒体</td>
+<td>编码 Agent 战争外溢至 <strong>行政&#x2F;知识工作</strong>；与 <strong>Claude Tag（Slack）</strong> 联动</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 政府</td>
+<td><a target="_blank" rel="noopener" href="https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government">Bringing Claude Code and Claude Cowork to government（官方）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>官方发布</td>
+<td><strong>FedRAMP High Desktop 公测</strong>；<strong>hash-chained audit log</strong>、<strong>SCIM 分层配额</strong>、<strong>预付 usage NTE cap</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/redeploying-fable-5">Fable 5 订阅含额度窗口截止（官方 redeploy 文）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>产品&#x2F;政策</td>
+<td>Pro&#x2F;Max&#x2F;Team&#x2F;部分 Enterprise <strong>含 Fable 5 至 7&#x2F;7</strong>；之后转 <strong>usage credits</strong></td>
+</tr>
+<tr>
+<td>Microsoft &#x2F; 成本</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/">Microsoft joins AI cost-cutting trend（TechCrunch）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>产业&#x2F;产品</td>
+<td><strong>Excel&#x2F;Word</strong> 提高 <strong>MAI 自研</strong> 应答比例；与 <strong>Build 七款 MAI</strong> 叙事衔接</td>
+</tr>
+<tr>
+<td>法律 AI</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/">Norm raises $120M, unicorn valuation（TechCrunch）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>融资&#x2F;产业</td>
+<td><strong>AI-native law firm</strong> + <strong>agent 监督 agent</strong>；企业法务自动化样本</td>
+</tr>
+<tr>
+<td>机器人 &#x2F; 开源</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.nvidia.com/blog/hugging-face-lerobot-models-frameworks-open-robotics/">NVIDIA + Hugging Face LeRobot integration（NVIDIA Blog）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>官方发布</td>
+<td><strong>Isaac GR00T 1.7</strong>、<strong>Teleop</strong> 进 LeRobot；<strong>Cosmos 3</strong> 世界模型即将接入</td>
+</tr>
+<tr>
+<td>基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://www.crusoe.ai/resources/newsroom/crusoe-launches-serverless-fine-tuning-and-self-serve-inference-deployments">Crusoe serverless fine-tuning + self-serve inference（官方）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>产业&#x2F;基建</td>
+<td><strong>Intelligence Foundry</strong> 一键 <strong>微调→生产推理</strong>；<strong>H100&#x2F;H200</strong> GPU-hour 计费</td>
+</tr>
+<tr>
+<td>地缘 &#x2F; 安全</td>
+<td><a target="_blank" rel="noopener" href="https://finance.yahoo.com/technology/ai/articles/alibaba-orders-staff-drop-anthropic-050542787.html">Alibaba orders staff to drop Claude Code（Yahoo&#x2F;CNBC 报道）</a></td>
+<td><strong>2026-07-07</strong>（相邻日期&#x2F;中国时间窗口传播）</td>
+<td>产业&#x2F;安全</td>
+<td><strong>7&#x2F;10</strong> 起禁 <strong>Claude Code</strong>；改 <strong>Qoder</strong>；与 <strong>反蒸馏&#x2F;检测代码</strong> 争议相关</td>
+</tr>
+<tr>
+<td>平台 &#x2F; 治理</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/962018/reddits-ai-conundrum">Reddit’s AI conundrum（The Verge）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>产业&#x2F;治理</td>
+<td><strong>LLM 反 LLM 垃圾</strong> 舆论续传；平台 <strong>卖数据+反滥用</strong> 张力</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.203">v2.1.203（GitHub release）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>开源发布</td>
+<td>login 过期预警、manual mode 徽章、background session 恢复、MCP roots</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.38">0.143.0-alpha.38（GitHub release）</a></td>
+<td><strong>2026-07-07</strong></td>
+<td>开源发布</td>
+<td>alpha 线例行跟进</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Muse 多模态</td>
+<td><strong>Meta 官方 Muse 博文</strong></td>
+<td>agentic 图像&#x2F;视频、Instagram 上下文、Seal watermark</td>
+<td>多模态&#x2F;社交产品</td>
+</tr>
+<tr>
+<td>Cowork 跨端</td>
+<td><strong>Anthropic Cowork 官方文</strong></td>
+<td>云端续跑、审批推送、chat&#x2F;Cowork 统一入口</td>
+<td>知识工作 Agent 设计</td>
+</tr>
+<tr>
+<td>政府合规</td>
+<td><strong>Claude for Government Desktop</strong></td>
+<td>FedRAMP High、hash-chained audit、SCIM 分层</td>
+<td>公共部门架构&#x2F;安全</td>
+</tr>
+<tr>
+<td>LeRobot</td>
+<td><strong>NVIDIA LeRobot 集成文</strong></td>
+<td>GR00T 1.7 post-train、Teleop 数据采集</td>
+<td>具身智能&#x2F;机器人研发</td>
+</tr>
+<tr>
+<td>Claude Code 运维</td>
+<td><strong>v2.1.203 release notes</strong></td>
+<td>background agent 恢复、macOS 内存回归修复</td>
+<td>终端 Agent 运维</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;7 呈现 <strong>「消费端多模态自研 + 知识工作 Agent 全端化 + 政企合规桌面化」</strong> 三线并进——Meta <strong>Muse</strong> 把 <strong>社交图谱</strong> 写进生成链路；Anthropic 用 <strong>Cowork 使用数据</strong> 证明 <strong>非编码才是主战场</strong>，并用 <strong>Government Desktop</strong> 把同一套 Code&#x2F;Cowork 搬进 <strong>FedRAMP High</strong>；工程侧 <strong>Claude Code 2.1.203</strong> 继续加固 <strong>background&#x2F;MCP</strong> 可靠性。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>知识工作 Agent</td>
+<td><strong>Cowork 移动&#x2F;网页 + 云端后台</strong></td>
+<td>长任务需 <strong>跨设备状态机 + 人工审批推送</strong>；桌面保留 <strong>本地文件&#x2F;浏览器</strong> 深能力</td>
+</tr>
+<tr>
+<td>政府交付</td>
+<td><strong>Code+Cowork FedRAMP Desktop</strong></td>
+<td><strong>hash-chained admin audit</strong>、<strong>部门级 prepaid cap</strong> 可复制到企业多租户</td>
+</tr>
+<tr>
+<td>多模态产品</td>
+<td><strong>Muse Image @mention</strong></td>
+<td>UGC&#x2F;广告场景要预设 <strong>likeness opt-out</strong> 与 <strong>水印检测 API</strong></td>
+</tr>
+<tr>
+<td>编码 Agent</td>
+<td><strong>Claude Code 2.1.203</strong></td>
+<td>background session <strong>token 过期自恢复</strong>；MCP <strong>roots&#x2F;list_changed</strong> 同步工作目录</td>
+</tr>
+<tr>
+<td>成本优化</td>
+<td><strong>Microsoft MAI 混用</strong></td>
+<td>企业可评估 <strong>自研小模型路由</strong> 降低第三方 token 账单</td>
+</tr>
+<tr>
+<td>地缘合规</td>
+<td><strong>Alibaba 禁 Claude Code</strong></td>
+<td>跨国团队需 <strong>工具链白名单 + 数据出境</strong> 双轨治理</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><strong>promos CLI</strong>（<strong>7&#x2F;7</strong> 社区）</td>
+<td><strong>ClawHub 促销</strong> 应 <strong>显式 claim</strong> 而非静默改默认模型</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><strong>0.143.0-alpha.38</strong></td>
+<td>alpha 线继续在 staging 验证后再推广</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Meta Muse Image&#x2F;Video 官方发布</strong></td>
+<td><strong>7&#x2F;7 最可核验自研多模态里程碑</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Anthropic Cowork 移动&#x2F;网页 + 政府 Desktop</strong></td>
+<td>同日 <strong>消费&#x2F;政企</strong> 双轨 Agent 平台化</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch：Microsoft MAI 降本</strong></td>
+<td>理解 <strong>tokenmaxxing 退潮</strong> 后的 <strong>自研模型路由</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>NVIDIA LeRobot + GR00T 1.7</strong></td>
+<td>开源 <strong>VLA</strong> 进标准 robotics 工作流</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>Alibaba 禁 Claude Code 报道</strong></td>
+<td><strong>Agent 供应链地缘化</strong> 与 <strong>反滥用检测</strong> 争议样本</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-07 00:00:00 到 2026-07-07 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：ai.meta.com, claude.com, anthropic.com, techcrunch.com, theverge.com, blogs.nvidia.com, crusoe.ai, github.com, finance.yahoo.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Introducing Muse Image and Muse Video</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/">https://ai.meta.com/blog/introducing-muse-image-muse-video-msl/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Claude Cowork web and mobile</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://claude.com/blog/cowork-web-mobile">https://claude.com/blog/cowork-web-mobile</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Claude Code and Cowork for government</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government">https://claude.com/blog/bringing-claude-code-and-claude-cowork-to-government</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Meta Muse image generator</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/">https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Claude Cowork mobile web</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/">https://techcrunch.com/2026/07/07/the-coding-agent-wars-are-spilling-into-the-rest-of-the-office-claude-cowork/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Microsoft MAI cost cutting</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/">https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Norm $120M Series C</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/">https://techcrunch.com/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Meta Muse @mention Verge</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram">https://www.theverge.com/tech/962485/meta-muse-image-ai-model-instagram</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>NVIDIA Hugging Face LeRobot</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.nvidia.com/blog/hugging-face-lerobot-models-frameworks-open-robotics/">https://blogs.nvidia.com/blog/hugging-face-lerobot-models-frameworks-open-robotics/</a></td>
+</tr>
+<tr>
+<td>产业</td>
+<td>Crusoe serverless fine-tuning</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://www.crusoe.ai/resources/newsroom/crusoe-launches-serverless-fine-tuning-and-self-serve-inference-deployments">https://www.crusoe.ai/resources/newsroom/crusoe-launches-serverless-fine-tuning-and-self-serve-inference-deployments</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.203</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.203">https://github.com/anthropics/claude-code/releases/tag/v2.1.203</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex 0.143.0-alpha.38</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.38">https://github.com/openai/codex/releases/tag/rust-v0.143.0-alpha.38</a></td>
+</tr>
+<tr>
+<td>产业&#x2F;安全</td>
+<td>Alibaba ban Claude Code</td>
+<td>2026-07-07（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://finance.yahoo.com/technology/ai/articles/alibaba-orders-staff-drop-anthropic-050542787.html">https://finance.yahoo.com/technology/ai/articles/alibaba-orders-staff-drop-anthropic-050542787.html</a></td>
+</tr>
+<tr>
+<td>政策&#x2F;产品</td>
+<td>Fable 5 allowance ends Jul 7</td>
+<td>2026-07-07</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/redeploying-fable-5">https://www.anthropic.com/news/redeploying-fable-5</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

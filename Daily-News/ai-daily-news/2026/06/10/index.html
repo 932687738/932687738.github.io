@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-06-10 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-06-10</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/06/">2026-06</a>
+          <span class="post-date">2026-06-10</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-06-10</code> 是 <strong>「监管提案与资本定价同日升温 + 扩散式文本模型开源 + Agent Skills 平台化」</strong>——Anthropic 发布 <strong>Policy on the AI Exponential</strong>（<strong>Advanced AI Framework</strong> + <strong>Economic Policy Framework</strong>，Amodei 呼吁 <strong>FAA 式 frontier 监管</strong>）；Google 同日开源 <strong>DiffusionGemma</strong>（26B MoE 离散扩散、<strong>最高约 4×</strong> 推理加速）并下调 <strong>Google AI Plus</strong> 至 <strong>$4.99&#x2F;月</strong>；产业侧 <strong>SpaceX IPO 定价窗口</strong>、<strong>Meta×Reliance 168MW 印度 AI 数据中心</strong>、<strong>Decart Oasis 3 世界模型 API</strong> 与 <strong>xAI Grok 安全诉讼</strong> 并行；开发者生态 <strong>Claude Code v2.1.172</strong>、<strong>Preset&#x2F;Replit Agent Skills</strong> 继续把 <strong>skills 市场</strong> 推成标配。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic 官方政策页；Google blog&#x2F;developers；TechCrunch&#x2F;VentureBeat&#x2F;Inc；GitHub claude-code release；Preset&#x2F;Replit；arXiv 6&#x2F;10；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>监管从自愿披露转向「可阻断部署」提案</strong>；<strong>非自回归文本生成</strong>（DiffusionGemma）探索速度&#x2F;交互新范式；<strong>消费级 AI 订阅价格战</strong>（Google AI Plus 近 <strong>40%</strong> 降价）；<strong>物理 AI &#x2F; 世界模型 API 化</strong>（Decart Oasis 3）</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>对照 <strong>AAIF</strong> 的第三方评测与政府阻断权提案评估企业合规路线；本地&#x2F;低并发场景试用 <strong>DiffusionGemma + vLLM</strong>；订阅 FinOps 跟踪 <strong>Gemini vs ChatGPT Go</strong> 价差；CI 继续审计 <strong>Agent 配置变更</strong>（Miasma 余波）</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.172</strong>（<strong>2026-06-10</strong> GitHub release）；<strong>Codex</strong>：无 <strong>6&#x2F;10</strong> 新 release（<strong>Goal mode&#x2F;Sites&#x2F;Chrome</strong> 等 <strong>6 月</strong> 能力仍为主线，媒体 <strong>6&#x2F;10</strong> 对比文活跃）；<strong>OpenClaw</strong>：无 <strong>6&#x2F;10</strong> 官方 release（<strong>Hermes migrate</strong> 文档&#x2F;skills 生态延续）；<strong>Hermes</strong>：无 <strong>6&#x2F;10</strong> 官方 release（OpenClaw skills 仓含 <strong>hermes-installer</strong> 社区 skill）；<strong>Spring AI</strong>：无 <strong>6&#x2F;10</strong> 官方 release；<strong>skills</strong>：<strong>Preset Agent Skills</strong>（<strong>6&#x2F;10</strong>）、<strong>Replit Agent Customization</strong>（<strong>6&#x2F;10</strong>）、<strong>Addy Osmani agent-skills</strong> 社区热度（<strong>6&#x2F;10</strong> 传播）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; 政策</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/policy-on-the-ai-exponential">Policy on the AI Exponential</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>官方政策</td>
+<td><strong>Advanced AI Framework</strong>：强制第三方安全测试、透明度、政府 <strong>阻断&#x2F;召回</strong> 危险部署；<strong>Economic Policy Framework</strong> 应对 AI 就业冲击；**$350M** 配套承诺</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 政策</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/policy-on-the-ai-exponential/aaif">Advanced AI Framework（AAIF）</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>官方政策</td>
+<td>面向 <strong>frontier model</strong> 灾难性风险：独立评测、持续披露、跨部门韧性投资</td>
+</tr>
+<tr>
+<td>媒体 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/technology/anthropic-ceo-calls-for-faa-style-regulation-of-powerful-ai-models-what-enterprises-should-know">Anthropic CEO calls for FAA-style regulation（VentureBeat）</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>技术媒体</td>
+<td>Amodei 将 <strong>frontier AI</strong> 类比航空器：<strong>技术测试+审计</strong>，未达标应 <strong>阻止发布</strong>；与 <strong>Fable 5</strong> 发布形成「能力+监管」双线</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 产品（传播）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/">Cybersecurity researchers aren’t happy about Fable guardrails（TechCrunch）</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>技术媒体</td>
+<td><strong>Fable 5</strong>（<strong>6&#x2F;9</strong> 发布）护栏被批 <strong>关键词触发过宽</strong>；<strong>Cyber Verification Program</strong> 与 <strong>Opus 4.8 fallback</strong> 机制引争议</td>
+</tr>
+<tr>
+<td>Google &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">DiffusionGemma: 4x faster text generation</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>官方发布</td>
+<td><strong>26B MoE</strong>（推理激活 <strong>~3.8B</strong>）<strong>离散扩散</strong>文本生成；<strong>Apache 2.0</strong>；<strong>vLLM&#x2F;Transformers&#x2F;MLX</strong> day-zero；定位为 <strong>实验&#x2F;低并发本地</strong> 而非生产默认</td>
+</tr>
+<tr>
+<td>Google &#x2F; 开发者</td>
+<td><a target="_blank" rel="noopener" href="https://developers.googleblog.com/diffusiongemma-the-developer-guide/">DiffusionGemma: The Developer Guide</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>官方文档</td>
+<td>256-token 块并行去噪、双向注意力、量化 <strong>~18GB VRAM</strong>；与 <strong>Gemma 4 26B</strong> 质量差距需在选型时显式评估</td>
+</tr>
+<tr>
+<td>Google &#x2F; 定价</td>
+<td><a target="_blank" rel="noopener" href="https://www.inc.com/chloe-aiello/googles-new-ai-price-cuts-should-make-openai-and-anthropic-nervous/91359297">Google AI Plus price cut（Inc.）</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>产品&#x2F;定价</td>
+<td><strong>$7.99→$4.99&#x2F;月</strong>，存储 <strong>200GB→400GB</strong>；续费生效；施压 <strong>ChatGPT Go（$8）</strong> 与 <strong>Claude Pro（$20 起）</strong></td>
+</tr>
+<tr>
+<td>Meta &#x2F; 基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/">Meta signs first AI data center deal in India with Reliance（TechCrunch）</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>基础设施</td>
+<td><strong>168MW</strong> AI 数据中心（<strong>Jamnagar, Gujarat</strong>），约 <strong>2 年</strong>就绪；承接 Meta 全球 AI 算力与 <strong>Jio</strong> 多年合作延伸</td>
+</tr>
+<tr>
+<td>物理 AI</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/10/decarts-new-world-model-can-simulate-hours-of-photorealistic-driving-with-some-caveats/">Decart Oasis 3 world model（TechCrunch）</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>产品&#x2F;API</td>
+<td>实时 <strong>photorealistic driving</strong> 多相机环境；API <strong>$0.02&#x2F;秒</strong>；面向 <strong>AV 边缘场景</strong> 与 <strong>physical AI</strong> 开发者生态</td>
+</tr>
+<tr>
+<td>xAI &#x2F; 治理</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety-new-lawsuit-claims/">xAI fired engineer over Grok safety alarms（TechCrunch）</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>法律&#x2F;安全</td>
+<td>前工程师 <strong>Kim</strong> 诉称因 <strong>Grok 安全&#x2F;歧视&#x2F;WMD 信息</strong> 担忧被解雇；诉状提及 <strong>Grok Code 1</strong> EU 测试争议</td>
+</tr>
+<tr>
+<td>资本（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://senx.ai/news/2026-06-10-daily-ai-news">June 10 AI Roundup: IPO cluster（SEN-X）</a></td>
+<td><strong>2026-06-10</strong></td>
+<td>行业分析</td>
+<td><strong>Anthropic&#x2F;OpenAI&#x2F;SpaceX</strong> IPO 叙事同日发酵；<strong>SpaceX 6&#x2F;12 Nasdaq（SPCX）</strong> 预期；<strong>Google 订阅降价</strong> 与 <strong>联邦 AI 治理</strong> 讨论并行</td>
+</tr>
+<tr>
+<td>Agent 安全（传播）</td>
+<td><a target="_blank" rel="noopener" href="https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents">Miasma worm supply-chain（StepSecurity，持续）</a></td>
+<td><strong>2026-06-05</strong> 攻击 &#x2F; <strong>6&#x2F;10</strong> 传播</td>
+<td>安全事件</td>
+<td><strong>AI coding agent 配置</strong> 仍为高优先级攻击面；与 <strong>Fable&#x2F;Codex&#x2F;Claude Code</strong> 生态交叉</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Frontier 监管</td>
+<td><strong>Anthropic AAIF + Amodei 文</strong></td>
+<td>第三方评测、政府阻断权、经济配套</td>
+<td>合规&#x2F;平台&#x2F;安全负责人</td>
+</tr>
+<tr>
+<td>扩散式 LLM</td>
+<td><strong>DiffusionGemma Developer Guide</strong></td>
+<td>块并行去噪、MoE、vLLM 部署</td>
+<td>推理&#x2F;本地模型工程师</td>
+</tr>
+<tr>
+<td>Fable 护栏</td>
+<td><strong>TechCrunch Fable 护栏争议</strong></td>
+<td>keyword fallback、Cyber Verification</td>
+<td>红队&#x2F;SecOps</td>
+</tr>
+<tr>
+<td>Agent Skills</td>
+<td><strong>Preset Agent Skills 公告</strong></td>
+<td>MCP&#x2F;API&#x2F;CLI 三包 skills、跨客户端安装</td>
+<td>数据&#x2F;Agent 平台工程师</td>
+</tr>
+<tr>
+<td>Skills 产品化</td>
+<td><strong>Replit Agent Customization</strong></td>
+<td>Custom Instructions vs 按需 <strong>skills</strong> 叠加</td>
+<td>全栈&#x2F;小团队 Agent 用户</td>
+</tr>
+<tr>
+<td>世界模型</td>
+<td><strong>Decart Oasis 3 API</strong></td>
+<td>多相机物理仿真、按秒计费</td>
+<td>AV&#x2F;Robotics 研发</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：6&#x2F;10 呈现 <strong>「政策提案、模型架构创新与 Agent 工程范式（Loop&#x2F;skills）三线并进」</strong>——监管侧 <strong>AAIF</strong> 把 <strong>评测+阻断</strong> 写成可执行框架；模型侧 <strong>DiffusionGemma</strong> 挑战 <strong>自回归默认</strong>；工程侧 <strong>Claude Code release + Preset&#x2F;Replit skills</strong> 强化 <strong>「设计 loop &#x2F; 安装 skill」</strong> 而非单次 prompt。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>监管框架</td>
+<td><strong>Policy on the AI Exponential</strong></td>
+<td>企业应预备 <strong>frontier 模型第三方审计</strong> 与 <strong>部署阻断</strong> 预案</td>
+</tr>
+<tr>
+<td>非 AR 文本</td>
+<td><strong>DiffusionGemma</strong></td>
+<td>交互&#x2F;编辑类低并发场景可 A&#x2F;B <strong>扩散 vs AR</strong> 延迟与质量</td>
+</tr>
+<tr>
+<td>Coding Agent</td>
+<td><strong>Claude Code v2.1.172</strong></td>
+<td>跟踪 <strong>claude-code</strong> release 与 <strong>Fable 5</strong> API 后端变更</td>
+</tr>
+<tr>
+<td>Skills 生态</td>
+<td><strong>Preset + Replit skills</strong></td>
+<td>skills &#x3D; <strong>可安装工作流+边界</strong>；跨 <strong>Codex&#x2F;Cursor&#x2F;Claude Code</strong> 统一维护</td>
+</tr>
+<tr>
+<td>Loop Engineering</td>
+<td><strong>Addy Osmani &#x2F; Boris Cherny 论述</strong>（<strong>6&#x2F;7–6&#x2F;10</strong> 传播）</td>
+<td>从 <strong>prompt agent</strong> 转向 <strong>设计 prompt-agent 的 loop</strong></td>
+</tr>
+<tr>
+<td>物理 AI</td>
+<td><strong>Oasis 3 API</strong></td>
+<td>世界模型 <strong>API-first</strong> 复刻早期 <strong>LLM API</strong> 生态路径</td>
+</tr>
+<tr>
+<td>专项空窗</td>
+<td>OpenClaw&#x2F;Hermes&#x2F;Spring AI 无 6&#x2F;10 release</td>
+<td>关注 <strong>OpenClaw Hermes migrate</strong> 与 <strong>Spring AI</strong> 下一版 release notes</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Anthropic Policy on the AI Exponential</strong></td>
+<td>2026 <strong>frontier AI 监管</strong> 最完整官方提案之一</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>DiffusionGemma 官方文 + model card</strong></td>
+<td>理解 <strong>离散扩散 LLM</strong> 的能力&#x2F;质量 trade-off</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>VentureBeat：FAA-style regulation</strong></td>
+<td>企业视角解读 <strong>AAIF</strong> 与 <strong>Fable 5</strong> 同周发布</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch：Fable 护栏争议</strong></td>
+<td><strong>cyber-capable 模型 GA</strong> 的护栏工程样本</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Preset Agent Skills</strong></td>
+<td><strong>跨 MCP&#x2F;API&#x2F;CLI</strong> 的 skills 分包与 marketplace 安装</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>arXiv: SkillAxe（2606.10546）</strong></td>
+<td><strong>evaluation-guided</strong> 自动改写 agent skills</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>arXiv: TrajGenAgent（2606.12657）</strong></td>
+<td><strong>LangGraph</strong> 分层 agent 轨迹生成范式</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-06-10 00:00:00 到 2026-06-10 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, blog.google, developers.googleblog.com, ai.google.dev, techcrunch.com, venturebeat.com, inc.com, github.com, preset.io, replit.com, senx.ai, arxiv.org, stepsecurity.io</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方政策</td>
+<td>Policy on the AI Exponential</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/policy-on-the-ai-exponential">https://www.anthropic.com/policy-on-the-ai-exponential</a></td>
+</tr>
+<tr>
+<td>官方政策</td>
+<td>Advanced AI Framework</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/policy-on-the-ai-exponential/aaif">https://www.anthropic.com/policy-on-the-ai-exponential/aaif</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>VentureBeat FAA-style regulation</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/technology/anthropic-ceo-calls-for-faa-style-regulation-of-powerful-ai-models-what-enterprises-should-know">https://venturebeat.com/technology/anthropic-ceo-calls-for-faa-style-regulation-of-powerful-ai-models-what-enterprises-should-know</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>TechCrunch Fable guardrails</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/">https://techcrunch.com/2026/06/10/cybersecurity-researchers-arent-happy-about-the-guardrails-on-anthropics-fable/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>DiffusionGemma launch</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/">https://blog.google/innovation-and-ai/technology/developers-tools/diffusion-gemma-faster-text-generation/</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>DiffusionGemma Developer Guide</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://developers.googleblog.com/diffusiongemma-the-developer-guide/">https://developers.googleblog.com/diffusiongemma-the-developer-guide/</a></td>
+</tr>
+<tr>
+<td>产品&#x2F;定价</td>
+<td>Google AI Plus price cut</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://www.inc.com/chloe-aiello/googles-new-ai-price-cuts-should-make-openai-and-anthropic-nervous/91359297">https://www.inc.com/chloe-aiello/googles-new-ai-price-cuts-should-make-openai-and-anthropic-nervous/91359297</a></td>
+</tr>
+<tr>
+<td>基础设施</td>
+<td>Meta×Reliance India DC</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/">https://techcrunch.com/2026/06/10/meta-signs-first-ai-data-center-deal-in-india-with-reliance/</a></td>
+</tr>
+<tr>
+<td>产品&#x2F;API</td>
+<td>Decart Oasis 3</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/10/decarts-new-world-model-can-simulate-hours-of-photorealistic-driving-with-some-caveats/">https://techcrunch.com/2026/06/10/decarts-new-world-model-can-simulate-hours-of-photorealistic-driving-with-some-caveats/</a></td>
+</tr>
+<tr>
+<td>法律&#x2F;安全</td>
+<td>xAI Grok safety lawsuit</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety-new-lawsuit-claims/">https://techcrunch.com/2026/06/10/xai-fired-an-engineer-who-raised-alarms-about-grok-safety-new-lawsuit-claims/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.172</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.172">https://github.com/anthropics/claude-code/releases/tag/v2.1.172</a></td>
+</tr>
+<tr>
+<td>开源&#x2F;平台</td>
+<td>Preset Agent Skills</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://preset.io/blog/announcing-preset-agent-skills/">https://preset.io/blog/announcing-preset-agent-skills/</a></td>
+</tr>
+<tr>
+<td>产品</td>
+<td>Replit Agent Customization</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://replit.com/blog/custom-skills">https://replit.com/blog/custom-skills</a></td>
+</tr>
+<tr>
+<td>行业分析</td>
+<td>SEN-X June 10 roundup</td>
+<td>2026-06-10</td>
+<td><a target="_blank" rel="noopener" href="https://senx.ai/news/2026-06-10-daily-ai-news">https://senx.ai/news/2026-06-10-daily-ai-news</a></td>
+</tr>
+<tr>
+<td>论文</td>
+<td>SkillAxe</td>
+<td>2026-06（arXiv）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/html/2606.10546v2">https://arxiv.org/html/2606.10546v2</a></td>
+</tr>
+<tr>
+<td>论文</td>
+<td>TrajGenAgent</td>
+<td>2026-06（arXiv）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/html/2606.12657v1">https://arxiv.org/html/2606.12657v1</a></td>
+</tr>
+<tr>
+<td>安全事件</td>
+<td>Miasma worm</td>
+<td>2026-06-05&#x2F;6&#x2F;10 传播</td>
+<td><a target="_blank" rel="noopener" href="https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents">https://www.stepsecurity.io/blog/miasma-worm-hits-microsoft-again-azure-functions-action-and-72-other-repositories-disabled-after-supply-chain-attack-targeting-ai-coding-agents</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

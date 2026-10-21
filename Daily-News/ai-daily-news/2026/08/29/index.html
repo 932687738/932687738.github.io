@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-29 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-29</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-29</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：8 月 29 日主线是 <strong>Claude Code <code>v2.1.251</code>（模型切换 hook + 前台子 Agent 直播）</strong>、<strong>Codex <code>0.151.0</code>（MCP 结果可拦截、沙箱按执行器 OS&#x2F;家目录对齐）</strong>，以及 <strong>OpenAI 拟于 11&#x2F;12 切断 Cursor 的模型供应</strong>（官方 8&#x2F;28，中国时间周末窗口 + Reuters 8&#x2F;29）；OpenClaw 仅有 <code>2026.9.1-beta.1</code> 预发布。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、安全治理、Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes、Spring AI&#x2F;Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、skills、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）编程 CLI 把「换模型&#x2F;换沙箱」做成可审计事件；2）IDE 分发权开始被 ToS&#x2F;控制权条款改写；3）Gateway 类 runtime 先补重启恢复，再谈新模型</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><code>PreModelSwitch</code>&#x2F;<code>PostModelSwitch</code>；Codex extension 拦截 MCP 结果；Cursor 11&#x2F;12 关停窗口与 Claude 算力加码</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：<code>v2.1.251</code>（Published 2026-08-28T18:19:32Z，中国时间 8&#x2F;29 02:19）。Codex：<code>rust-v0.151.0</code>（2026-08-29T09:55:39Z，中国时间 17:55）。OpenClaw：<code>v2026.9.1-beta.1</code>（2026-08-28T20:43:46Z，中国时间 8&#x2F;29 04:43，<strong>预发布</strong>）。Langfuse：最新仍为 8&#x2F;28 的 <code>v4.24.0</code>。Hermes：仍停在 <code>v0.20.6</code>&#x2F;<code>v2026.8.27</code>。Spring AI：最新稳定 <code>2.0.1</code>（8&#x2F;21），无 8&#x2F;29 tag。Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills：未发现可核验的 8&#x2F;29 重大稳定版更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.251">Claude Code v2.1.251</a></td>
+<td>2026-08-29（UTC 8&#x2F;28 18:19）</td>
+<td>开源发布</td>
+<td><code>PreModelSwitch</code>&#x2F;<code>PostModelSwitch</code> 可拦截&#x2F;确认换模型；<code>SessionStart</code> resume 带 stale 与重缓存成本；前台子 Agent 工具流可直播到 Remote Control；<code>/usage</code> 增加 Spend limit；<code>/cost</code> 增加 session 级 prompt-cache；修 symlink 逃逸、marketplace 路径穿越、Workflow <code>scriptPath</code> 未鉴权先读、算术赋值绕过 bash 审批等</td>
+</tr>
+<tr>
+<td>编程 CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.151.0">Codex 0.151.0</a></td>
+<td>2026-08-29</td>
+<td>开源发布</td>
+<td>可选 MCP 发现宽限期可配；extension 可在结果进模型前检查&#x2F;替换；插件目录合并每仓配置；修 <code>/cd</code> 削弱沙箱、换模型后工具&#x2F;reasoning 错配、远程沙箱按执行器 home&#x2F;OS&#x2F;路径语义、子 Agent token 计入 root goal、过期 Guardian 分类继续授权</td>
+</tr>
+<tr>
+<td>IDE 分发</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">Our decision on Cursor following its acquisition by SpaceX</a></td>
+<td>相邻日期&#x2F;中国时间窗口传播（官方 8&#x2F;28；Reuters 8&#x2F;29）</td>
+<td>官方发布</td>
+<td>拟 2026-11-12 切断 Cursor 的 OpenAI 模型供应，并明确不向 Cursor 提供后续模型（含 Astra）；理由是 SpaceX 控制权变更后无法确信遵守 ToS。Cursor 侧称 OpenAI 流量约 5%，并称仍在谈</td>
+</tr>
+<tr>
+<td>厂商表态</td>
+<td><a target="_blank" rel="noopener" href="https://www.reuters.com/business/media-telecom/openai-end-partnership-with-spacexs-cursor-2026-08-29/">OpenAI to cut off AI models for SpaceX-owned Cursor</a></td>
+<td>2026-08-29</td>
+<td>技术媒体</td>
+<td>Reuters 交叉核验官方博文；Anthropic 联合创始人 Tom Brown 称将继续加码 Cursor 上的 Claude 算力。媒体转述，非 Anthropic 博客原文</td>
+</tr>
+<tr>
+<td>Agent runtime</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.1-beta.1">OpenClaw 2026.9.1-beta.1</a></td>
+<td>2026-08-29（UTC 8&#x2F;28 20:43）</td>
+<td>开源预发布</td>
+<td>Gateway 重启保留已准入 turn；config 写入跨 watcher 交接；捆绑 Codex runtime 到 0.150.1；Linux 安装锁定 Node 24 LTS；worker 回收死 turn。<strong>不要当 GA</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型切换治理</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.251">v2.1.251 hook 事件</a></td>
+<td>换模型不再是静默路由，可 block&#x2F;confirm&#x2F;annotate</td>
+<td>多模型网关、要审计「谁切了 Opus」的团队</td>
+</tr>
+<tr>
+<td>MCP 中间件</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.151.0">Codex 0.151.0</a></td>
+<td>工具结果在进模型前可被 extension 改写</td>
+<td>要做 MCP 输出脱敏&#x2F;配额的人</td>
+</tr>
+<tr>
+<td>合同&#x2F;分发</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">OpenAI Cursor 决定</a></td>
+<td>change-of-control + 未来模型停供是两件独立事</td>
+<td>把 IDE 当唯一模型入口的团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：当日工程增量在编程 CLI 的可观测切换与 MCP 结果拦截；编排框架与可观测平台无新 GA。Cursor 分发事件提醒：agent 产品的模型供应是合同问题，不是默认能力。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td>v2.1.251 hook + cache&#x2F;spend 可见</td>
+<td>换模型、重缓存、花费上限都要进 status line</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>0.151.0 MCP 结果拦截</td>
+<td>工具输出默认不可信，先过 extension</td>
+</tr>
+<tr>
+<td>Loop Engineering</td>
+<td>无新范式文；v2.1.251 修 team lead 收不到 teammate 终答</td>
+<td>多 Agent 终态必须进 idle 通知，不能只报 available</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td>9.1-beta.1 重启恢复</td>
+<td>长任务先保证 Gateway 可重启，再升模型</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td>无 8&#x2F;29 tag</td>
+<td>自托管仍以 v4.24.0 为准，先配 <code>LANGFUSE_AI_PROVIDER</code></td>
+</tr>
+<tr>
+<td>其余专项</td>
+<td>Hermes &#x2F; Spring* &#x2F; LangChain &#x2F; Code Graph &#x2F; skills</td>
+<td>未发现 8&#x2F;29 重大稳定更新</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.251">Claude Code v2.1.251</a></td>
+<td>本周最大功能+安全补丁包，按中国时间记本日</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.151.0">Codex 0.151.0</a></td>
+<td>MCP 结果可改写 + 沙箱语义对齐执行器</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">OpenAI on Cursor</a></td>
+<td>控制权变更如何改写模型分发</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-29 00:00:00 到 2026-08-29 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, openai.com, reuters.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.251</td>
+<td>2026-08-29（UTC 8&#x2F;28 18:19）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.251">https://github.com/anthropics/claude-code/releases/tag/v2.1.251</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex 0.151.0</td>
+<td>2026-08-29</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.151.0">https://github.com/openai/codex/releases/tag/rust-v0.151.0</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>OpenAI decision on Cursor</td>
+<td>相邻日期&#x2F;中国时间窗口传播（官方 8&#x2F;28）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/">https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Reuters: OpenAI cut off Cursor</td>
+<td>2026-08-29</td>
+<td><a target="_blank" rel="noopener" href="https://www.reuters.com/business/media-telecom/openai-end-partnership-with-spacexs-cursor-2026-08-29/">https://www.reuters.com/business/media-telecom/openai-end-partnership-with-spacexs-cursor-2026-08-29/</a></td>
+</tr>
+<tr>
+<td>开源预发布</td>
+<td>OpenClaw 2026.9.1-beta.1</td>
+<td>2026-08-29（UTC 8&#x2F;28 20:43）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.9.1-beta.1">https://github.com/openclaw/openclaw/releases/tag/v2026.9.1-beta.1</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

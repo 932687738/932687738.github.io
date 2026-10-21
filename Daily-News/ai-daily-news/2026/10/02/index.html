@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-02 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-02</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-02</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：10 月 2 日主线是 <strong>Anthropic 用 1 亿美元办部署工程师学院</strong>，GitHub 同时下线一批 Copilot 旧模型；编码工具侧，Claude Code 的 Mods 和 Codex 0.160.0 都在北京时间凌晨落地。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic &#x2F; GitHub 官方、Claude Code、Codex、Langfuse，以及五个工程专项、论文与政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）企业落地缺口被定义成「会部署的工程师」，而不是再发一个模型；2）Copilot 模型菜单在换代；3）Claude Code 插件从钩子走到可改行为的 Mods</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-frontier-academy">Claude Frontier Academy</a>；<a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/">Copilot 模型弃用</a>；<a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">Claude Code v2.1.287</a>；<a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.50.0">Langfuse v4.50.0</a></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：v2.1.287，列表时间 10&#x2F;1 18:00，按 UTC 口径为北京时间 10&#x2F;2 02:00，与上一份日报的边界说明一致。<strong>Codex</strong>：0.160.0，Published 10&#x2F;1 20:19 UTC，北京时间 10&#x2F;2 04:19。<strong>Langfuse</strong>：v4.50.0。<strong>Loop Engineering</strong>：一篇 10&#x2F;2 的个人博客把 harness、loop、graph 拆开，单一来源，不单列。Hermes 的 operating-agent-loops 文档 PR 未能核验合并日落在本日。<strong>Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; OpenClaw &#x2F; skills</strong>：无本日官方 release</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>企业人才</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-frontier-academy">Claude Frontier Academy</a></td>
+<td>2026-10-02</td>
+<td>官方发布</td>
+<td>1 亿美元，目标到 2027 年底训练 1 万名 Frontier Deployed Engineer。首期包括 Accenture、Bain、Capgemini、德勤、麦肯锡、摩根士丹利等，报名靠提名</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/">部分模型弃用</a></td>
+<td>2026-10-02</td>
+<td>官方发布</td>
+<td>Gemini 3.5&#x2F;3.6 Flash 改到 3.8 Flash；Kimi K2.7 Code 改到 Kimi K3；Claude Opus 4.7 改到 Opus 5.5。企业要在模型策略里打开替代模型</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">v2.1.287</a></td>
+<td>2026-10-02（列表 10&#x2F;1 18:00，按 UTC 口径换算）</td>
+<td>开源发布</td>
+<td>Claude Mods：插件可以改更深层行为。内置 “You should know” 用侧边代理标出人和模型可能漏掉的点。代理列表增加 <code>n:</code> 名称过滤</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.160.0">0.160.0</a></td>
+<td>2026-10-02（Published 2026-10-01 20:19 UTC）</td>
+<td>开源发布</td>
+<td>可选的 Guardian 能取回更早的用户说明，并带上代理交接上下文。支持无项目目录的会话。Windows 沙箱补了 PowerShell 回退和长路径权限</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.50.0">v4.50.0</a></td>
+<td>2026-10-02（Published 10:13 UTC）</td>
+<td>开源发布</td>
+<td>评测器增加 facet 类型、内置保护和规则空闲时间；状态里展示 7 天执行健康；保存前校验评测模型是否可用</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>部署人才</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-frontier-academy">Frontier Academy</a></td>
+<td>提名制、首期城市与公司</td>
+<td>企业 AI 落地负责人</td>
+</tr>
+<tr>
+<td>模型迁移</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/">Copilot 弃用说明</a></td>
+<td>旧模型到替代模型的对照</td>
+<td>管 Copilot 模型策略的人</td>
+</tr>
+<tr>
+<td>插件</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">v2.1.287</a></td>
+<td>Mods、内置侧边检查</td>
+<td>在写 Claude Code 插件的人</td>
+</tr>
+<tr>
+<td>评测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.50.0">Langfuse v4.50.0</a></td>
+<td>7 天健康、保存前校验模型</td>
+<td>维护评测器的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：没有 LangGraph 或 Spring 发布。当天的工程变化是「插件可以改行为」和「评测器要先确认模型还在」。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>插件</td>
+<td>Claude Mods 与 “You should know”</td>
+<td>检查代理和执行代理分开，侧边代理只标风险，不代替主会话宣布完成</td>
+</tr>
+<tr>
+<td>评测</td>
+<td>7 天执行健康、保存前校验模型</td>
+<td>评测器下线模型时要失败在保存时，而不是跑了一周才发现</td>
+</tr>
+<tr>
+<td>审查</td>
+<td>Guardian 可选地带上交接上下文</td>
+<td>审查子代理需要主会话交代过的约束，否则会按不完整目标放行</td>
+</tr>
+<tr>
+<td>Loop</td>
+<td>无官方命令更新</td>
+<td>个人博客对 harness&#x2F;loop&#x2F;graph 的区分可作阅读，不作为行为变更</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-frontier-academy">Frontier Academy</a></td>
+<td>企业部署人才的官方计划</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">v2.1.287</a></td>
+<td>Mods 的能力边界</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.50.0">Langfuse v4.50.0</a></td>
+<td>评测器健康度怎么展示</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-02 00:00:00 到 2026-10-02 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, github.blog, github.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Claude Frontier Academy</td>
+<td>2026-10-02</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/claude-frontier-academy">https://www.anthropic.com/news/claude-frontier-academy</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Selected models in GitHub Copilot deprecated</td>
+<td>2026-10-02</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/">https://github.blog/changelog/2026-10-02-selected-models-in-github-copilot-deprecated/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.287</td>
+<td>2026-10-02（列表时间换算）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.287">https://github.com/anthropics/claude-code/releases/tag/v2.1.287</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex 0.160.0</td>
+<td>2026-10-02（Published 2026-10-01 20:19 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.160.0">https://github.com/openai/codex/releases/tag/rust-v0.160.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.50.0</td>
+<td>2026-10-02</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.50.0">https://github.com/langfuse/langfuse/releases/tag/v4.50.0</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

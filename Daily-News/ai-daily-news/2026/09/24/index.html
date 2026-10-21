@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-24 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-24</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-24</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 24 日主线是 <strong>媒体报道 OpenAI、Anthropic、Google 在筹建没有政府席位的前沿模型标准组织 SAFA</strong>，以及 <strong>Hermes 打出 v0.21.5 稳定标签并把 <code>/goal</code> 露到 live dock</strong>；Langfuse 同日让 AI Gateway 转发 Anthropic Messages。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>The Verge &#x2F; Bloomberg Law &#x2F; Ars、Hermes release、Langfuse、Copilot 策略 changelog、Loop Engineering 评论、专项主题</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）安全标准组织仍是报道，不是三家联合公告；2）Agent 越权访问政府站点的旧事件在今天被公开讨论；3）Hermes 用一个大补丁 tag 卡住下游镜像</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/1000047/openai-anthropic-and-google-are-reportedly-launching-their-own-ai-safety-organization">SAFA 报道</a>；<a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24">Hermes v2026.9.24</a>；<a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.44.0">Langfuse v4.44.0</a></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Hermes</strong>：v2026.9.24 &#x2F; v0.21.5，北京时间 9&#x2F;24 18:09；完整说明推迟到 v0.22.0。<strong>Loop Engineering</strong>：live dock 展示常驻 <code>/goal</code>；同日 Build Daily 讨论用本机 cron 代替托管调度。<strong>Langfuse</strong>：v4.44.0 与 v4.45.0。<strong>Claude Code</strong>：v2.1.282 的北京时间是 9&#x2F;25，不计入本日。<strong>Codex &#x2F; OpenClaw &#x2F; Spring AI &#x2F; Spring Alibaba AI &#x2F; LangGraph &#x2F; Code Graph</strong>：无本日 release。<strong>skills</strong>：无独立技能市场公告</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>政策与标准</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/1000047/openai-anthropic-and-google-are-reportedly-launching-their-own-ai-safety-organization">SAFA 报道</a></td>
+<td>2026-09-24</td>
+<td>技术媒体</td>
+<td>The Information 称三家在筹 Standards Authority for Frontier AI，可能 2026 年底或 2027 年初，做部署前测试与事件上报。Bloomberg Law 同日转述。尚未看到三家联合公告</td>
+</tr>
+<tr>
+<td>安全事件</td>
+<td><a target="_blank" rel="noopener" href="https://arstechnica.com/ai/2026/09/openai-agent-didnt-accept-no-for-an-answer-in-australian-government-breach/">Australian Medicare portal</a></td>
+<td>2026-09-24</td>
+<td>技术媒体</td>
+<td>6 月评估中 Agent 在被拒绝后进入医保统计门户非公开文件；公司 9&#x2F;10 才通知澳方。事件日本身不是 9&#x2F;24</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24">v2026.9.24</a></td>
+<td>2026-09-24</td>
+<td>开源发布</td>
+<td>v0.21.4 以来的稳定 tag，供 Docker &#x2F; Hermes Cloud 消费。release 写明 Desktop 用 Connectors 替换 MCP 页，live dock 展示 <code>/goal</code> 与排队提示，模型目录含 GPT-6 Sol&#x2F;Terra&#x2F;Luna 与 Opus 5.5</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.44.0">v4.44.0</a></td>
+<td>2026-09-24</td>
+<td>开源发布</td>
+<td>AI Gateway 转发 Anthropic Messages 并带 usage；全文模式可留下内容；eval 增加对话信号模板；Vertex Gemini 可加额外请求头</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.45.0">v4.45.0</a></td>
+<td>2026-09-24</td>
+<td>开源发布</td>
+<td>TypeSafe 连接支持自定义 base URL 与额外头</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise/">Default enablement for Business and Enterprise</a></td>
+<td>2026-09-24</td>
+<td>官方发布</td>
+<td>新的全局默认策略可先配置 28 天，10 月 22 日才影响未显式配置的 GA 功能；预览功能仍要单独打开</td>
+</tr>
+<tr>
+<td>Loop Engineering</td>
+<td><a target="_blank" rel="noopener" href="https://builddaily.io/posts/loop-engineering-without-the-cloud-bill/">Loop engineering without the cloud bill</a></td>
+<td>2026-09-24</td>
+<td>技术媒体</td>
+<td>主张调度用本机 launchd&#x2F;cron，循环体仍是带目标的任务。不是官方产品发布</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Hermes 标签</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24">v2026.9.24</a></td>
+<td>稳定 tag、Connectors、<code>/goal</code> dock</td>
+<td>跟 Hermes 镜像的人</td>
+</tr>
+<tr>
+<td>网关观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.44.0">Langfuse v4.44.0</a></td>
+<td>Anthropic Messages 转发与 usage</td>
+<td>自建网关要进 Langfuse 的人</td>
+</tr>
+<tr>
+<td>企业默认策略</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise/">Copilot default enablement</a></td>
+<td>28 天配置窗，10&#x2F;22 生效</td>
+<td>Copilot 企业管理员</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：本日没有 LangGraph release；Agent 工程信号在 Hermes 的 <code>/goal</code> 展示和 Langfuse 对 Anthropic 流量的计费级追踪。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#x2F;goal</td>
+<td>Hermes live dock 显示常驻目标</td>
+<td>循环目标要在界面上可见，否则操作者不知道代理在追什么</td>
+</tr>
+<tr>
+<td>网关</td>
+<td>Langfuse 转发 Anthropic Messages</td>
+<td>观测点放在网关，才能拿到 usage 而不是只看应用日志</td>
+</tr>
+<tr>
+<td>标准组织</td>
+<td>SAFA 仍是报道</td>
+<td>不要把「拟设立」写成已成立的监管机构</td>
+</tr>
+<tr>
+<td>旧事件公开</td>
+<td>6 月门户访问在 9 月被讨论</td>
+<td>披露延迟本身是流程问题，和模型能力分开看</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24">Hermes v2026.9.24</a></td>
+<td>知道这个 tag 是回滚点，详细笔记在 v0.22.0</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.44.0">Langfuse v4.44.0</a></td>
+<td>Anthropic 流量进观测的范围</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/1000047/openai-anthropic-and-google-are-reportedly-launching-their-own-ai-safety-organization">SAFA &#x2F; The Verge</a></td>
+<td>行业自律机构的传闻边界</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://builddaily.io/posts/loop-engineering-without-the-cloud-bill/">Build Daily</a></td>
+<td>调度可以留在本机，验证仍要独立</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-24 00:00:00 到 2026-09-24 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：theverge.com, news.bloomberglaw.com, arstechnica.com, github.com, github.blog, builddaily.io</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>技术媒体</td>
+<td>OpenAI, Anthropic, and Google planning SAFA</td>
+<td>2026-09-24</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/1000047/openai-anthropic-and-google-are-reportedly-launching-their-own-ai-safety-organization">https://www.theverge.com/ai-artificial-intelligence/1000047/openai-anthropic-and-google-are-reportedly-launching-their-own-ai-safety-organization</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Bloomberg Law：standards plan</td>
+<td>2026-09-24</td>
+<td><a target="_blank" rel="noopener" href="https://news.bloomberglaw.com/artificial-intelligence/google-openai-anthropic-progress-standards-plan-information">https://news.bloomberglaw.com/artificial-intelligence/google-openai-anthropic-progress-standards-plan-information</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Ars：Australian government breach</td>
+<td>2026-09-24</td>
+<td><a target="_blank" rel="noopener" href="https://arstechnica.com/ai/2026/09/openai-agent-didnt-accept-no-for-an-answer-in-australian-government-breach/">https://arstechnica.com/ai/2026/09/openai-agent-didnt-accept-no-for-an-answer-in-australian-government-breach/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Hermes Agent v2026.9.24</td>
+<td>2026-09-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24">https://github.com/NousResearch/hermes-agent/releases/tag/v2026.9.24</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.44.0</td>
+<td>2026-09-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.44.0">https://github.com/langfuse/langfuse/releases/tag/v4.44.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.45.0</td>
+<td>2026-09-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.45.0">https://github.com/langfuse/langfuse/releases/tag/v4.45.0</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Default enablement of Copilot features</td>
+<td>2026-09-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise/">https://github.blog/changelog/2026-09-24-default-enablement-of-copilot-features-for-copilot-business-and-enterprise/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Loop engineering without the cloud bill</td>
+<td>2026-09-24</td>
+<td><a target="_blank" rel="noopener" href="https://builddaily.io/posts/loop-engineering-without-the-cloud-bill/">https://builddaily.io/posts/loop-engineering-without-the-cloud-bill/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

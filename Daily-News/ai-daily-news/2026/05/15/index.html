@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-15 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-15</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-15</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-05-15</code>（Asia&#x2F;Shanghai，00:00–23:59）更像「<strong>平台把 Agent 的个性化记忆与模型阵容治理收口（Copilot Memory 用户偏好 × Grok Code Fast 1 下线）</strong> × <strong>开源侧把 OpenAI 回合交给 Codex app-server 接管（OpenClaw 官方博文 + 巨型 beta 发布）</strong> × <strong>产业&#x2F;监管侧讨论“GEO&#x2F;操纵生成式答案也算垃圾内容”与“大厂组织全力押注单一 agentic 平台”</strong>」三条主线并行。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>GitHub 官方 changelog（Copilot Memory、Grok 模型退役）；OpenClaw 官方博客 + GitHub <code>Published</code> 时间戳（UTC→上海）；OpenAI <code>codex</code> Release；Anthropic PwC 官宣（页面日期字段校准）；The Verge（OpenClaw×OpenAI、OpenAI 组织调整、Google spam policy）；Hugging Face Daily Papers <code>2026-05-15</code>；Spring AI &#x2F; LangChain 博客日期硬对齐；Claude Code &#x2F; Hermes GitHub releases 专项；skills&#x2F;Cursor 专项；中文补充（机器之心等未见同日强匹配主编发）</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>记忆与偏好跨仓复用</strong>：Copilot Memory 从「仓库级」扩到「用户级」偏好，直接影响多代理一致性与合规审计设计；<strong>模型生命周期治理</strong>：GitHub 侧明确退役 Grok Code Fast 1 并给替代模型建议；<strong>运行时边界重划</strong>：OpenClaw 将 <code>openai/gpt-*</code> 默认回合交给 Codex app-server，减少工具重复与会话泄漏；<strong>搜索生态反 GEO</strong>：Google 明确把「操纵生成式 AI 回答」纳入 spam 语义</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>企业侧：把 <strong>user-level memory</strong>当成「可导出、可删除、可隔离租户」的合规对象，而不是聊天增值功能；平台侧：<strong>模型退役</strong>会打断自动化流水线，需在 CI&#x2F;IDE policy 做 <strong>pin + fallback</strong>；Agent 工程：<strong>harness 切换可显著改评测</strong>（WildClawBench 结论与 OpenClaw&#x2F;Codex 路线形成互文）</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Codex</strong>：<code>rust-v0.131.0-alpha.18</code> 的 GitHub <strong><code>Published</code></strong> 为 <strong><code>2026-05-14T21:41:33Z</code></strong> → <strong><code>2026-05-15 05:41:33（Asia/Shanghai）</code><strong>，</strong>落入</strong>本日窗口；<strong>Claude Code</strong>：<strong>未发现</strong>与 <strong><code>2026-05-15（上海）</code></strong> 强对齐的新 GitHub Release tag（以 releases 页检索为准）；<strong>OpenClaw</strong>：<code>v2026.5.14-beta.1</code> 的 <strong><code>Published</code></strong> 为 <strong><code>2026-05-14T21:31:13Z</code></strong> → <strong><code>2026-05-15 05:31:13（Asia/Shanghai）</code><strong>，</strong>落入</strong>本日窗口；同日官方博文说明 <strong><code>openai/gpt-*</code> 默认走 Codex app-server</strong>；<strong>Hermes</strong>：<strong>未发现</strong>同日 Hermes Agent <strong>新 tag</strong>；见 <strong>第三方报道</strong>对 OpenRouter 日推理排行的解读（需与官方&#x2F;第三方 API 统计交叉核验）；<strong>Spring AI</strong>：<strong>未发现</strong> <code>spring.io/blog</code> 上与 <strong><code>2026-05-15</code></strong> 日期字段明确对齐的新条目；<strong>MCP</strong>：未检索到「规范级」单一重磅条款式发布；以 SDK&#x2F;inspector 仓库活跃度与集成叙事为主；<strong>skills</strong>：OpenClaw 发布说明维护者侧 <strong><code>codex-review</code> skill</strong>（偏工程化治理&#x2F;评审闭环）；<strong>Cursor Agent Skills</strong>：<strong>未发现</strong>与 <strong><code>2026-05-15</code></strong> 强绑定的独立技能平台发布（仍以文档与邻近版本节奏为主）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Copilot &#x2F; 记忆</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-15-copilot-memory-supports-user-preferences-for-pro-pro-users/">Copilot Memory supports user preferences for Pro, Pro+ users</a></td>
+<td><strong>2026-05-15</strong>（changelog  slug <strong><code>2026-05-15</code></strong>)</td>
+<td>官方 changelog</td>
+<td>早期体验：把 <strong>提交风格 &#x2F; PR 结构 &#x2F; 沟通语气</strong>等做成 <strong>跨仓库、跨代理</strong>可用的用户级偏好；工程上要同步考虑 <strong>记忆最小化、可撤回、与组织策略&#x2F;审计日志</strong>的对齐</td>
+</tr>
+<tr>
+<td>Copilot &#x2F; 模型治理</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-15-grok-code-fast-1-deprecated/">Grok Code Fast 1 deprecated</a></td>
+<td><strong>2026-05-15</strong>（GitHub：<strong>today, May 15, 2026</strong>）</td>
+<td>官方 changelog</td>
+<td>明确 <strong>退役日 + 建议替代</strong>（GPT-5 mini &#x2F; Claude Haiku 4.5）；对企业意味着 <strong>模型白名单、提示词&#x2F;评测基准、成本曲线</strong>要随政策变化做例行巡检</td>
+</tr>
+<tr>
+<td>企业落地 &#x2F; 合作伙伴</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/pwc-expanded-partnership">PwC is deploying Claude to build technology, execute deals, and reinvent enterprise functions for clients</a></td>
+<td><strong>2026-05-14</strong>（Anthropic 页面落款；<strong>与上海窗相邻&#x2F;隔夜传播</strong>）</td>
+<td>官方公告</td>
+<td>组织级叙述聚焦 <strong>Claude Code + Cowork</strong> rollout、<strong>30k</strong> 培训认证、<strong>Office of the CFO</strong> 新事业群；更像「专业服务业如何把 agentic build&#x2F;deal execution&#x2F;职能再造打成产品」的样本，需结合客户行业合规再拆解</td>
+</tr>
+<tr>
+<td>多通道 Agent &#x2F; Codex 集成</td>
+<td>OpenClaw：<a target="_blank" rel="noopener" href="https://openclaw.ai/blog/openai-models-in-openclaw-done-right">OpenAI Models in OpenClaw, Done Right</a> + The Verge：<a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/931078/openclaw-now-works-better-with-openai-models-and-codex">OpenClaw now works better with OpenAI models and Codex</a></td>
+<td>Verge：<strong>Posted May 15, 2026 at 12:29 AM UTC</strong>（<strong>落入上海 <code>2026-05-15</code> 08:29</strong>）；OpenClaw 博文未展示独立「日历发布时间戳」（以正文表述为准）</td>
+<td>官方博客 + 技术媒体</td>
+<td>关键工程信息：<code>openai/gpt-*</code> <strong>默认</strong>切到 <strong>Codex app-server</strong>；外层 OpenClaw 继续握 <strong>channels&#x2F;memory&#x2F;cron&#x2F;tools</strong>；内层 <strong>native thread&#x2F;tool search&#x2F;visible reply 工具化</strong>——这是「两层 agent 平台」的清晰边界练习</td>
+</tr>
+<tr>
+<td>开源发布 &#x2F; Codex CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.18">openai&#x2F;codex <code>rust-v0.131.0-alpha.18</code></a></td>
+<td>GitHub <strong><code>Published</code></strong> <strong><code>2026-05-14T21:41:33Z</code></strong> → <strong><code>2026-05-15 05:41:33（Asia/Shanghai）</code></strong></td>
+<td>开源预发布</td>
+<td>以 <strong>UTC 发布时间换算</strong>落入上海日历日窗口；适合作为 <strong><code>2026-05-15</code></strong> 批次的「二进制&#x2F;代理&#x2F;打包」增量追踪点</td>
+</tr>
+<tr>
+<td>开源发布 &#x2F; OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.14-beta.1">openclaw&#x2F;openclaw <code>v2026.5.14-beta.1</code></a></td>
+<td>GitHub <strong><code>Published</code></strong> <strong><code>2026-05-14T21:31:13Z</code></strong> → <strong><code>2026-05-15 05:31:13（Asia/Shanghai）</code></strong></td>
+<td>开源预发布</td>
+<td>变更面极大：<strong>Codex app-server 迁移&#x2F;会话绑定</strong>、<strong>依赖与供应链治理（npm advisory gating）</strong>、多通道 <strong>status reaction</strong>、以及与 <strong>review skills &#x2F; 贡献者分流 skills</strong>相关的维护者工具链</td>
+</tr>
+<tr>
+<td>组织与产品战略（媒体报道）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle">OpenAI keeps shuffling its executives in bid to win AI agent battle</a></td>
+<td><strong>May 15, 2026, 6:21 PM UTC</strong> → <strong>上海 <code>2026-05-16</code> 02:21</strong>（<strong>相邻日期&#x2F;跨区域传播</strong>；以稿件日期落款为准）</td>
+<td>技术媒体</td>
+<td>引用备忘录口径：<strong>单一 agentic 平台</strong>、<strong>合并 ChatGPT 与 Codex 体验</strong>；组织研究价值高，但实施细节仍需 <strong>OpenAI 官方后续产品与工程发布</strong>印证</td>
+</tr>
+<tr>
+<td>搜索生态 &#x2F; 治理</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/931416/google-ai-search-spam-policy">Google updates its spam rules to include attempts to ‘manipulate’ AI</a></td>
+<td><strong>May 15, 2026, 4:42 PM UTC</strong> → <strong>上海 <code>2026-05-16</code> 00:42</strong>（<strong>相邻日期</strong>；The Verge 引用 <a target="_blank" rel="noopener" href="https://developers.google.com/search/docs/essentials/spam-policies">Google spam policies</a>）</td>
+<td>技术媒体 + 政策文档入口</td>
+<td>「<strong>操纵生成式回答</strong>」被明确纳入 spam 语义，和 <strong>GEO &#x2F; recommendation poisoning</strong>讨论直接相关；内容侧与安全侧要做 <strong>威胁建模：对手盘会如何注入“权威记忆”</strong></td>
+</tr>
+<tr>
+<td>论文社区聚合</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-05-15">Hugging Face Daily Papers（May 15, 2026）</a></td>
+<td><strong>2026-05-15</strong>（HF 列表页日期）</td>
+<td>论文社区聚合</td>
+<td>适合做当日「<strong>Agent &#x2F; 记忆 &#x2F; 长程评测</strong>」的阅读索引；单篇是否首发请以 arXiv <strong>Submission history</strong>为准</td>
+</tr>
+<tr>
+<td>论文原文（示例核验）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.10912">WildClawBench（arXiv:2605.10912）</a></td>
+<td><strong>见于</strong> HF Daily <strong><code>2026-05-15</code></strong> 列表；<strong>arXiv 页面以 Submission history 为准</strong></td>
+<td>论文原文</td>
+<td><strong>原生运行时 + 长程 + 真实工具</strong>的 Agent benchmark 叙事；核心方法信号：<strong>同模型切换 harness 可带来大幅分数差</strong>，直接支持你在架构评审里主张「<strong>评测要绑定运行时</strong>」</td>
+</tr>
+<tr>
+<td>产业排名（第三方报道）</td>
+<td>TechTimes：<a target="_blank" rel="noopener" href="http://www.techtimes.com/articles/316694/20260515/nous-researchs-hermes-agent-dethrones-openclaw-worlds-most-used-open-source-ai-agent.htm">Nous Research’s Hermes Agent…（OpenRouter 日推理排行叙事）</a></td>
+<td>页面标识 <strong><code>20260515</code><strong>；</strong>非 Hermes GitHub release</strong></td>
+<td><strong>第三方报道，补充核验</strong></td>
+<td>只适合当「市场叙事&#x2F;传播事件」线索；<strong>token 规模、排行口径、统计窗口</strong>必须回到 <strong>OpenRouter &#x2F; 项目方</strong>一手材料复核</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Copilot Memory 治理</td>
+<td>GitHub Docs：<a target="_blank" rel="noopener" href="https://docs.github.com/copilot/concepts/agents/copilot-memory">About GitHub Copilot Memory</a> + <a target="_blank" rel="noopener" href="https://github.com/settings/copilot/memory">个人 Memory 设置</a></td>
+<td>用户记忆的最小化、审阅与删除路径</td>
+<td>企业安全 &#x2F; DevEx</td>
+</tr>
+<tr>
+<td>OpenClaw × Codex 边界</td>
+<td>OpenClaw：<strong>OpenAI Models in OpenClaw, Done Right</strong>（见上）</td>
+<td>app-server 负责 native loop；OpenClaw 负责通道与产品层策略</td>
+<td>多模型 Agent 平台架构师</td>
+</tr>
+<tr>
+<td>反 GEO &#x2F; 内容合规</td>
+<td>Google：<strong>Search spam policies</strong>（见 The Verge 引用链）</td>
+<td>操纵生成式结果亦可构成违规</td>
+<td>增长 &#x2F; SEO &#x2F; Trust &amp; Safety</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程发布主战场在 <strong>「Copilot 记忆与模型阵容」</strong>与 <strong>「OpenClaw&#x2F;Codex 运行时融合」</strong>；论文侧 <strong>HF 日更列表高密度</strong>，但需 <strong>逐篇用 arXiv 时间戳</strong>剔除“旧稿新上榜”。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>记忆从仓库到用户</td>
+<td>Copilot Memory：user-level preferences</td>
+<td>多仓协作团队要避免「个人偏好」与「组织编码规范」冲突：需要 <strong>precedence 规则</strong></td>
+</tr>
+<tr>
+<td>harness 与评测绑定</td>
+<td>WildClawBench + OpenClaw release</td>
+<td><strong>benchmark 结论迁移到生产</strong>时，至少锁定：<strong>CLI 版本、工具白名单、超时、重试、权限</strong></td>
+</tr>
+<tr>
+<td>模型退役</td>
+<td>Grok Code Fast 1 deprecated</td>
+<td>把「模型名」从配置与评测里 <strong>参数化</strong>，避免 CI 突然红一片</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td>OpenClaw：<strong>OpenAI Models in OpenClaw, Done Right</strong></td>
+<td>把「谁来跑 tool loop」讲清楚，是做多供应商 Agent 平台的通用参照</td>
+</tr>
+<tr>
+<td>必读</td>
+<td>GitHub：<strong>Copilot Memory user preferences</strong> changelog</td>
+<td>直接影响交付一致性与代码评审风格，且牵动隐私治理</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td>arXiv：<strong>WildClawBench（2605.10912）</strong></td>
+<td>用数据提醒：<strong>换 harness ≈ 换系统</strong>，别用单一分数拍板</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td>The Verge：<strong>Google spam policy &#x2F; GEO</strong></td>
+<td>把「内容操纵」与「模型输出操纵」串到同一张风险地图上</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-15 00:00:00 到 2026-05-15 23:59:59（Asia&#x2F;Shanghai），并对 <strong>GitHub <code>Published</code>（UTC）</strong>与 <strong>媒体 UTC 时间</strong>做换算校准</li>
+<li>引用域名：<code>github.blog</code>, <code>github.com</code>, <code>anthropic.com</code>, <code>openclaw.ai</code>, <code>theverge.com</code>, <code>developers.google.com</code>, <code>huggingface.co</code>, <code>arxiv.org</code>, <code>techtimes.com</code></li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方 changelog</td>
+<td>Copilot Memory user preferences</td>
+<td><strong>2026-05-15</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-15-copilot-memory-supports-user-preferences-for-pro-pro-users/">https://github.blog/changelog/2026-05-15-copilot-memory-supports-user-preferences-for-pro-pro-users/</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Grok Code Fast 1 deprecated</td>
+<td><strong>2026-05-15</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-15-grok-code-fast-1-deprecated/">https://github.blog/changelog/2026-05-15-grok-code-fast-1-deprecated/</a></td>
+</tr>
+<tr>
+<td>官方公告</td>
+<td>Anthropic × PwC expanded partnership</td>
+<td><strong>2026-05-14（页面日期；相邻窗阅读）</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/pwc-expanded-partnership">https://www.anthropic.com/news/pwc-expanded-partnership</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>OpenAI Models in OpenClaw, Done Right</td>
+<td>正文未给独立日历戳（以表述为准）</td>
+<td><a target="_blank" rel="noopener" href="https://openclaw.ai/blog/openai-models-in-openclaw-done-right">https://openclaw.ai/blog/openai-models-in-openclaw-done-right</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenClaw × OpenAI &#x2F; Codex（The Verge）</td>
+<td>Posted <strong>2026-05-15 00:29 UTC</strong> → 上海 <strong>08:29</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/931078/openclaw-now-works-better-with-openai-models-and-codex">https://www.theverge.com/ai-artificial-intelligence/931078/openclaw-now-works-better-with-openai-models-and-codex</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenAI executive shuffle &#x2F; agent memo（The Verge）</td>
+<td><strong>2026-05-15 18:21 UTC</strong>（<strong>上海日历相邻</strong>）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle">https://www.theverge.com/ai-artificial-intelligence/931544/openai-keeps-shuffling-its-executives-in-bid-to-win-ai-agent-battle</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google spam policy &amp; AI manipulation（The Verge）</td>
+<td><strong>2026-05-15 16:42 UTC</strong>（<strong>上海日历相邻</strong>）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/931416/google-ai-search-spam-policy">https://www.theverge.com/tech/931416/google-ai-search-spam-policy</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex <code>rust-v0.131.0-alpha.18</code></td>
+<td><strong><code>Published</code> UTC → 上海 <code>2026-05-15</code> 早盘</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.18">https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.18</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw <code>v2026.5.14-beta.1</code></td>
+<td><strong><code>Published</code> UTC → 上海 <code>2026-05-15</code> 早盘</strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.14-beta.1">https://github.com/openclaw/openclaw/releases/tag/v2026.5.14-beta.1</a></td>
+</tr>
+<tr>
+<td>论文聚合</td>
+<td>Hugging Face Daily Papers</td>
+<td><strong>2026-05-15</strong></td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-05-15">https://huggingface.co/papers/date/2026-05-15</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>WildClawBench</td>
+<td><strong>见 HF 列表；arXiv 以 submission 为准</strong></td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.10912">https://arxiv.org/abs/2605.10912</a></td>
+</tr>
+<tr>
+<td>第三方报道</td>
+<td>Hermes&#x2F;OpenRouter 叙事（TechTimes）</td>
+<td><strong>20260515 页面标识</strong></td>
+<td><a target="_blank" rel="noopener" href="http://www.techtimes.com/articles/316694/20260515/nous-researchs-hermes-agent-dethrones-openclaw-worlds-most-used-open-source-ai-agent.htm">http://www.techtimes.com/articles/316694/20260515/nous-researchs-hermes-agent-dethrones-openclaw-worlds-most-used-open-source-ai-agent.htm</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

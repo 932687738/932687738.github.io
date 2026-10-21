@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-18 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-18</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-18</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 18 日主线是 <strong>Anthropic 把 Accenture&#x2F;Faculty 嵌进前沿评估链</strong>，GitHub <strong>Copilot 代码审查与 auto 选模再迭代</strong>，以及 <strong>Claude Code 2.1.277 正式认 AGENTS.md</strong>；安全侧 <strong>Plugin4Shell</strong> 在媒体侧集中曝光（Claude&#x2F;Codex 已修，Copilot&#x2F;Gemini CLI 仍高危）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、GitHub changelog、HF 日刊、Agent 安全、专项主题、政策监管</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）「嵌入式评估」从 Amodei 倡议落到可签约的第三方常驻；2）Copilot 把审查当成多轮会话产品化（自动 resolve + 智能 commit message）；3）多 Agent 共用 AGENTS.md 成为 CLI 一等公民</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Accenture 嵌入式评估；Copilot code review GA 增强；Claude Code AGENTS.md 回退；HF《Harness Design》《SoL-Pi》；Plugin4Shell 供应链</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：2.1.277 支持无 CLAUDE.md 时读 AGENTS.md，移除 TaskOutput。<strong>Codex</strong>：Plugin4Shell 已在 0.146.0 修 SHA 校验（本轮为媒体披露日，非新 tag）。<strong>OpenClaw&#x2F;Hermes</strong>：未见 9&#x2F;18 可核验 release。<strong>Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain changelog</strong>：未见 9&#x2F;18 新稳定发布。<strong>Code Graph</strong>：无工具链 release；HF 偏 Agent harness 论文。<strong>Loop Engineering</strong>：HF《SoL-Pi》递归 auto-research loop；无 cobusgreyling 新 scaffold。<strong>skills</strong>：Tailwind 被 AI 文档流量冲击（社区热文，非官方 skills 发布）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>安全治理</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/accenture-embedded-evaluation">Partnering with Accenture on embedded evaluation</a></td>
+<td>2026-09-18</td>
+<td>官方发布</td>
+<td>Faculty 常驻做红队&#x2F;对齐&#x2F;护栏测试；Anthropic 直接资助，非独家；为「We Must Pace the Frontier」落地</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/">Copilot code review: An improved review experience</a></td>
+<td>2026-09-18</td>
+<td>官方发布</td>
+<td>多轮审查自动 resolve 已处理 comment；批量采纳建议时生成 commit title&#x2F;body；Lite 合并多 Agent 发现</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/">GitHub Copilot weekly releases — September 14</a></td>
+<td>2026-09-18</td>
+<td>官方发布</td>
+<td>auto 三档 efficiency&#x2F;balance&#x2F;intelligence；Copilot app 接 Sentry canvas；审查可用 shell 校验</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/">Upcoming deprecation of selected GitHub Copilot models</a></td>
+<td>2026-09-18</td>
+<td>官方发布</td>
+<td>2026-10-19 下架 GPT-5.4&#x2F;5.5 等，迁移表已给；Enterprise 需核对 model policy</td>
+</tr>
+<tr>
+<td>AI 编程</td>
+<td>Claude Code 2.1.277（AGENTS.md）</td>
+<td>2026-09-18</td>
+<td>开源发布</td>
+<td>无 CLAUDE.md 时读 AGENTS.md；&#x2F;config 可选；Bedrock&#x2F;Vertex&#x2F;Foundry 尚未支持</td>
+</tr>
+<tr>
+<td>Agent 安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.air.security/blog-posts/plugin4shell">Plugin4Shell</a></td>
+<td>2026-09-17（相邻日期&#x2F;中国时间窗口传播）</td>
+<td>安全研究</td>
+<td>插件 SHA pin 可被分支名 bypass + 后台 auto-update → 零点击 RCE；Copilot 仍无官方补丁</td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-18">HF Daily Papers 2026-09-18</a></td>
+<td>2026-09-18</td>
+<td>论文原文</td>
+<td>Harness Design、SoL-Pi auto-research loop、DeepSeek-V4.1-Flash KV 压缩等</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>嵌入式评估</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/accenture-embedded-evaluation">Accenture 合作文</a></td>
+<td>第三方 evaluators 常驻 + 独立发表权；多 evaluator 生态</td>
+<td>做模型治理&#x2F;合规的人</td>
+</tr>
+<tr>
+<td>审查产品化</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/">Copilot code review changelog</a></td>
+<td>审查是状态机：comment → commit → 再审查 → auto resolve</td>
+<td>管 PR 质量门禁的人</td>
+</tr>
+<tr>
+<td>多 Agent 说明</td>
+<td>Claude Code 2.1.277 release notes</td>
+<td>AGENTS.md 与 CLAUDE.md 互斥回退；TaskOutput 退役改 Read</td>
+<td>同时跑 Claude&#x2F;Cursor&#x2F;Codex 的仓库</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程增量在 <strong>审查闭环</strong> 与 <strong>插件供应链</strong>，框架发版平静，论文侧继续写 harness&#x2F;loop。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>评估驻场</td>
+<td>Accenture&#x2F;Faculty 嵌入式评估</td>
+<td>对齐不能只在发版前做一次；要有人能独立发报告</td>
+</tr>
+<tr>
+<td>Copilot auto</td>
+<td>efficiency&#x2F;balance&#x2F;intelligence</td>
+<td>同一模型池、不同成本&#x2F;质量权重；按 prompt 动态选小模型</td>
+</tr>
+<tr>
+<td>Harness 论文</td>
+<td>SoL-Pi、Harness Design</td>
+<td>Agent 效率瓶颈在 harness 设计，不在再堆参数</td>
+</tr>
+<tr>
+<td>Plugin4Shell</td>
+<td>SHA checkout 未验 HEAD</td>
+<td>插件源必须在 GitHub 或验 <code>git rev-parse</code>；Copilot 用户暂无解</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; LangChain &#x2F; Spring &#x2F; Code Graph</td>
+<td>无 9&#x2F;18 稳定更新</td>
+<td>专项记空</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/accenture-embedded-evaluation">Accenture embedded evaluation</a></td>
+<td>把「放慢前沿」写成可审计流程</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/">Copilot code review GA</a></td>
+<td>多轮 Agent 审查如何不淹没开发者</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-18">HF Daily Papers 9&#x2F;18</a></td>
+<td>harness 与 auto-research loop 同日上榜</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.air.security/blog-posts/plugin4shell">Plugin4Shell</a></td>
+<td>Agent marketplace 的 pin 语义必须验 commit</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-18 00:00:00 到 2026-09-18 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, github.blog, huggingface.co, air.security, thehackernews.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Partnering with Accenture on embedded evaluation</td>
+<td>2026-09-18</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/accenture-embedded-evaluation">https://www.anthropic.com/news/accenture-embedded-evaluation</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot code review improved experience</td>
+<td>2026-09-18</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/">https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>GitHub Copilot weekly Sep 14</td>
+<td>2026-09-18</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/">https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot model deprecation notice</td>
+<td>2026-09-18</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/">https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code 2.1.277</td>
+<td>2026-09-18</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code">https://github.com/anthropics/claude-code</a></td>
+</tr>
+<tr>
+<td>安全研究</td>
+<td>Plugin4Shell</td>
+<td>2026-09-17（相邻日期&#x2F;中国时间窗口传播）</td>
+<td><a target="_blank" rel="noopener" href="https://www.air.security/blog-posts/plugin4shell">https://www.air.security/blog-posts/plugin4shell</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Hugging Face Daily Papers</td>
+<td>2026-09-18</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-18">https://huggingface.co/papers/date/2026-09-18</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

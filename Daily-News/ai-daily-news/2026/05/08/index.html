@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-08 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-08</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-08</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：本日主轴是「 coding agent 企业治理可被产品化」「供应链与证书轮转进入硬截止日」「对齐训练方法论公开升级」，同时大厂个人 Agent 叙事与开源 Agent 爆款形成明显竞品压力。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI &#x2F; Anthropic 官方；Google Cloud Gemini；GitHub Copilot &amp; 平台changelog；coding agent（Codex&#x2F;Claude Code&#x2F;OpenClaw&#x2F;Hermes）；MCP&#x2F;registry；可信媒体（CNBC）；政策相邻（EU 云）；论文相邻（arXiv）；中文量子位相邻</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>OpenAI 将 macOS 证书生效日与《Running Codex safely》长篇实践同日公开；Anthropic 以「Teaching Claude why」解释 agentic 对齐训练；Gemini Flash-Lite 进入企业 Agent 平台 GA（官方日期为前一自然日）；GitHub Copilot cloud agent 的工程化指标与密钥管理同日增强</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>证书与客户端强制更新窗口；Codex sandbox&#x2F;approval&#x2F;OTel 与公司治理模版；对齐训练中「说理」优于单纯示范；Copilot Usage API 细粒度与安全供应链</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Codex</strong>：当日官方工程文《Running Codex safely at OpenAI》；稳定版 <code>[0.129.0](https://github.com/openai/codex/releases/tag/rust-v0.129.0)</code> <strong>发布日为 2026-05-07</strong>，作相邻日期摘录；<strong>Claude Code</strong>：当日 <strong>未发现</strong> GitHub Release；搜索结果中较近版本为 <code>**v2.1.129</code>（2026-05-06）<strong>，请以仓库 <a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases">Releases</a> 页面为准。</strong>OpenClaw<strong>：最近 <strong>2026-05-07</strong> 的 <code>v2026.5.7</code>，当日无新 tag；</strong>Hermes<strong>：当日 <strong>未发现</strong> 新的 GitHub Release（未检索到 <code>**v2026.5.8</code></strong> 等新 tag）；<strong>Spring AI</strong>：未发现 <strong>2026-05-08</strong> 官方 release；<strong>Agent Skills</strong>：未发现 <strong>当日</strong> Marketplace&#x2F;规范级大发布，<code>SKILL.md</code> 体系仍为既有文档主战场</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>供应链安全</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/axios-developer-tool-compromise/">OpenAI：Our response to the Axios developer tool compromise</a></td>
+<td>生效 <strong>2026-05-08</strong>（公告更新 2026-04-10）</td>
+<td>安全公告</td>
+<td>明确 <strong>GitHub Actions 漂浮标签风险</strong>、<code>minimumReleaseAge</code> 缺失教训；列出旧证书下线后最早仍受影响的 macOS 应用版本阈值，可作发布与 SBOM 流程对照</td>
+</tr>
+<tr>
+<td>AI 编程治理</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/running-codex-safely/">OpenAI：Running Codex safely at OpenAI</a></td>
+<td>2026-05-08</td>
+<td>实践博客</td>
+<td>Sandbox + approval + <strong>auto_review</strong>、网络代理白&#x2F;黑名单、<code>rules</code>、<strong>OpenTelemetry</strong> 导出与合规平台联动，可当企业落地 coding agent <strong>控制面清单</strong></td>
+</tr>
+<tr>
+<td>对齐与安全研究</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/teaching-claude-why">Anthropic：Teaching Claude why</a></td>
+<td>2026-05-08</td>
+<td>研究博文</td>
+<td>「示范不如说理」：<strong>difficult advice</strong>、constitutional document、OOD 泛化与 RL <strong>持续性</strong>一并讨论，适合做安全训练数据与 eval 设计的阅读材料</td>
+</tr>
+<tr>
+<td>云与模型 GA</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available">Google Cloud：Gemini 3.1 Flash-Lite is now generally available…</a></td>
+<td>2026-05-07（<strong>相邻日期</strong>，官方文首日期）</td>
+<td>产品 GA</td>
+<td>JetBrains&#x2F;Gladly 等点名 <strong>超低时延 Agent</strong> 管线；给出成本与延迟工程叙述，可作「边缘分类器 + Agent 编排」选型参考</td>
+</tr>
+<tr>
+<td>AI 编程</td>
+<td>[OpenAI Codex <code>rust-v0.129.0](https://github.com/openai/codex/releases/tag/rust-v0.129.0)</code></td>
+<td>2026-05-07（相邻日期）</td>
+<td>开源 stable</td>
+<td>vim modal、sandbox&#x2F;workspace <code>/diff</code>、<code>/hooks</code>、<code>/goal</code> discoverability 等一批 <strong>CLI&#x2F;TUI &amp; 治理能力</strong>齐备 GA</td>
+</tr>
+<tr>
+<td>开发者平台</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-more-flexible-secrets-and-variables-for-copilot-cloud-agent/">GitHub：<code>More flexible secrets…</code>（Copilot cloud agent）</a></td>
+<td>2026-05-08</td>
+<td>平台 Release</td>
+<td>Cloud agent <strong>密钥&#x2F;变量灵活性</strong>直接关系多环境与工作流模版安全</td>
+</tr>
+<tr>
+<td>开发者平台</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-copilot-code-review-comment-types-now-in-usage-metrics-api/">GitHub：Copilot code review comment types in usage metrics API</a></td>
+<td>2026-05-08</td>
+<td>平台 Release</td>
+<td>将 <strong>静态分析类注释</strong>并入用量 API，可做团队质量与采纳度观测</td>
+</tr>
+<tr>
+<td>模型生命周期</td>
+<td>[GitHub：<code>Upcoming deprecation of Grok Code Fast 1](https://github.blog/changelog/2026-05-08-upcoming-deprecation-of-grok-code-fast-1/)</code></td>
+<td>2026-05-08</td>
+<td>Retired</td>
+<td>提醒在 Copilot&#x2F;GitHub Models 侧的 <strong>路由与回退预案</strong></td>
+</tr>
+<tr>
+<td>应用安全</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-codeql-2-25-3-adds-swift-6-3-support/">GitHub：CodeQL 2.25.3 adds Swift 6.3 support</a></td>
+<td>2026-05-08</td>
+<td>安全扫描</td>
+<td>Swift 6.3 规则刷新，可与 AI 生成移动端代码的同周治理联动</td>
+</tr>
+<tr>
+<td>产业叙事</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/05/08/ai-agent-meta-google-agentic-wars-tech-download.html">CNBC：Meta, Google enter AI agent race…</a></td>
+<td>2026-05-08</td>
+<td>媒体综述</td>
+<td>「OpenClaw 现象 → 竞品 Agent」叙事 &amp; <strong>trust&#x2F;governance</strong> 引述；需与官方 primary 对照阅读</td>
+</tr>
+<tr>
+<td>政策相邻</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html">CNBC：EU cloud sensitive data restrictions…</a></td>
+<td>2026-05-07（相邻日期）</td>
+<td>政策&#x2F;地缘政治</td>
+<td><strong>跨境云与政务敏感数据</strong>，影响模型训练与 Sovereign AI 选型</td>
+</tr>
+<tr>
+<td>中文补充（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/412995.html">量子位：ChatGPT 免费模型升级（GPT-5.5 Instant）</a></td>
+<td>2026-05-05（页面日期，相邻传播）</td>
+<td>中文媒体</td>
+<td>「幻觉」「记忆」「回答长度」产品力叙述，可作国内用户体感对照；<strong>仍以 OpenAI primary 为准</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Coding agent 治理</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/running-codex-safely/">Running Codex safely at OpenAI</a> + <a target="_blank" rel="noopener" href="https://developers.openai.com/codex/config-basic">Codex 基础配置</a></td>
+<td>sandbox、approval、auto_review、网络策略、rules、otel、合规日志</td>
+<td>SecDevOps &#x2F; 平台工程</td>
+</tr>
+<tr>
+<td>供应链</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/axios-developer-tool-compromise/">Axios compromise 应答文</a> + Google Threat Intel (<a target="_blank" rel="noopener" href="https://cloud.google.com/blog/topics/threat-intelligence/north-korea-threat-actor-targets-axios-npm-package">背景</a>)</td>
+<td>流水线固定 commit hash、发证材料隔离、证书轮转与客户沟通节拍</td>
+<td>CI&#x2F;CD &#x2F; 签名发布负责人</td>
+</tr>
+<tr>
+<td>对齐训练</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/teaching-claude-why">Teaching Claude why</a></td>
+<td>honeypots、constitutional SDF、RL 存续性</td>
+<td>对齐 &#x2F; 安全研究</td>
+</tr>
+<tr>
+<td>低延迟 Agent 模型</td>
+<td><a target="_blank" rel="noopener" href="https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-flash-lite">Gemini 3.1 Flash-Lite 文档（Enterprise Agent Platform）</a></td>
+<td>定价、时延档位、Enterprise Agent Platform</td>
+<td>ML 平台 &#x2F; 应用架构</td>
+</tr>
+<tr>
+<td>Copilot 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-copilot-code-review-comment-types-now-in-usage-metrics-api/">Usage metrics：comment types changelog</a></td>
+<td>REST schema 增量</td>
+<td>Inner Source &#x2F; Developer Insights</td>
+</tr>
+<tr>
+<td>MCP 安全（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-05-secret-scanning-with-github-mcp-server-is-now-generally-available/">Secret scanning w&#x2F; GitHub MCP Server GA</a></td>
+<td>MCP + secret scanning GA</td>
+<td>Agent + GitHub MCP 集成团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：当日 <strong>未发现</strong> LangChain &#x2F; LangGraph 官方博客带 <strong>2026-05-08</strong> 标注的更新；工程侧热点更多来自 <strong>云平台 GA</strong>、<strong>GitHub Copilot 平台 changelog</strong>、<strong>coding agent OTel</strong>，以及大厂 <strong>竞品 Agent</strong> 媒体叙事。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LangChain&#x2F;LangGraph</td>
+<td>当日无核验到的官方新发版&#x2F;博客条目</td>
+<td>关注后续 <strong>Deep Agents</strong> 系列是否与托管 Agent 竞品形成镜像</td>
+</tr>
+<tr>
+<td>MCP</td>
+<td>MCP registry <code>v1.7.7</code> 等为 <strong>本周早前</strong>相邻发布</td>
+<td>OIDC slice claims、HTML 逃逸等 <strong>registry 健壮性</strong>，适合私服镜像</td>
+</tr>
+<tr>
+<td>RAG&#x2F;MCP&#x2F;GitHub</td>
+<td>2026-05-05 <strong>Secret scanning + MCP Server GA</strong>（相邻）</td>
+<td>把 MCP 接入从「能用」升级到「可 governance」的一条路径</td>
+</tr>
+<tr>
+<td>开源 coding agent</td>
+<td><strong>Codex stable 0.129.0</strong>（2026-05-07）</td>
+<td>治理能力（hooks&#x2F;goals&#x2F;marketplace）与 <strong>Stable</strong> cadence</td>
+</tr>
+<tr>
+<td>Agent 竞品</td>
+<td>CNBC：<strong>Meta&#x2F;Google</strong> 个人助手类 Agent vs <strong>OpenClaw</strong> 先例</td>
+<td>「能做」≠「可被信任」，需同步投资 <strong>telemetry + approvals</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/teaching-claude-why">Teaching Claude why</a></td>
+<td>对齐训练可操作结论（说理&#x2F;宪法文本&#x2F;多样性环境）集中度最高</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/running-codex-safely/">Running Codex safely at OpenAI</a></td>
+<td>少见的同时覆盖 <strong>运行时控制面 + observability + 企业内部 triage playbook</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/axios-developer-tool-compromise/">Axios compromise 应答</a></td>
+<td>端到端 Incident 叙述 + <strong>客户侧硬截止日期</strong>对齐</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/05/08/ai-agent-meta-google-agentic-wars-tech-download.html">CNBC agent 「军备」稿</a></td>
+<td>理解资本市场与用户对 <strong>personal agent</strong> 的叙事和风险感知</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.05873">[arXiv:2605.05873] CITE…</a></td>
+<td><strong>Self-consistency &#x2F; 自适应停时</strong>的理论化（提交日 2026-05-07，相邻精读）</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-08 00:00:00 到 2026-05-08 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, anthropic.com, cloud.google.com, github.com, github.blog, cnbc.com, arxiv.org, qbitai.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Our response to the Axios developer tool compromise</td>
+<td>生效 2026-05-08；文面 2026-04-10</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/axios-developer-tool-compromise/">https://openai.com/index/axios-developer-tool-compromise/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Running Codex safely at OpenAI</td>
+<td>2026-05-08</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/running-codex-safely/">https://openai.com/index/running-codex-safely/</a></td>
+</tr>
+<tr>
+<td>研究</td>
+<td>Teaching Claude why</td>
+<td>2026-05-08</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/teaching-claude-why">https://www.anthropic.com/research/teaching-claude-why</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Gemini 3.1 Flash-Lite GA</td>
+<td>2026-05-07（相邻日期）</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available">https://cloud.google.com/blog/products/ai-machine-learning/gemini-3-1-flash-lite-is-now-generally-available</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex rust-v0.129.0</td>
+<td>2026-05-07（相邻日期）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.129.0">https://github.com/openai/codex/releases/tag/rust-v0.129.0</a></td>
+</tr>
+<tr>
+<td>开源发布（相邻）</td>
+<td>OpenClaw v2026.5.7</td>
+<td>2026-05-07（相邻日期）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.7">https://github.com/openclaw/openclaw/releases/tag/v2026.5.7</a></td>
+</tr>
+<tr>
+<td>平台 Release</td>
+<td>Copilot secrets&#x2F;variables cloud agent</td>
+<td>2026-05-08</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-more-flexible-secrets-and-variables-for-copilot-cloud-agent/">https://github.blog/changelog/2026-05-08-more-flexible-secrets-and-variables-for-copilot-cloud-agent/</a></td>
+</tr>
+<tr>
+<td>平台 Release</td>
+<td>Copilot code review metrics API</td>
+<td>2026-05-08</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-copilot-code-review-comment-types-now-in-usage-metrics-api/">https://github.blog/changelog/2026-05-08-copilot-code-review-comment-types-now-in-usage-metrics-api/</a></td>
+</tr>
+<tr>
+<td>平台 Retired</td>
+<td>Grok Code Fast 1 deprecation</td>
+<td>2026-05-08</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-upcoming-deprecation-of-grok-code-fast-1/">https://github.blog/changelog/2026-05-08-upcoming-deprecation-of-grok-code-fast-1/</a></td>
+</tr>
+<tr>
+<td>平台 Improvement</td>
+<td>Disable commit comments (user-level)</td>
+<td>2026-05-08</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-disable-commit-comments-on-the-user-level/">https://github.blog/changelog/2026-05-08-disable-commit-comments-on-the-user-level/</a></td>
+</tr>
+<tr>
+<td>安全扫描</td>
+<td>CodeQL Swift 6.3</td>
+<td>2026-05-08</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-08-codeql-2-25-3-adds-swift-6-3-support/">https://github.blog/changelog/2026-05-08-codeql-2-25-3-adds-swift-6-3-support/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>The Tech Download: Agentic wars</td>
+<td>2026-05-08</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/05/08/ai-agent-meta-google-agentic-wars-tech-download.html">https://www.cnbc.com/2026/05/08/ai-agent-meta-google-agentic-wars-tech-download.html</a></td>
+</tr>
+<tr>
+<td>政策相邻</td>
+<td>EU cloud &#x2F; sensitive data</td>
+<td>2026-05-07</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html">https://www.cnbc.com/2026/05/07/eu-commission-cloud-sensitive-data.html</a></td>
+</tr>
+<tr>
+<td>中文媒体（相邻）</td>
+<td>ChatGPT 免费模型升级量子位稿件</td>
+<td>2026-05-05</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/05/412995.html">https://www.qbitai.com/2026/05/412995.html</a></td>
+</tr>
+<tr>
+<td>论文相邻</td>
+<td>arXiv:2605.05873 CITE</td>
+<td>2026-05-07</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.05873">https://arxiv.org/abs/2605.05873</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

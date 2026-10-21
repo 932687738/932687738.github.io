@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-10 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-10</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-10</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-10</code> 是 <strong>「Claude Code v2.1.206 工程修复密集落地 + 阿里禁 Anthropic 工具正式生效 + GPT-5.6 24h 放量窗口收尾」</strong>——Anthropic 发布 <strong>v2.1.206</strong>（<strong>Published: 2026-07-10T01:45Z</strong>）；<strong>阿里巴巴</strong> 内部 <strong>Anthropic 全系</strong>（含 Claude Code）禁令 <strong>7&#x2F;10 起执行</strong>；<strong>Langfuse</strong> 上线 <strong>Slack&#x2F;Webhook 项目通知</strong> 与 <strong>可定制 Home 仪表盘</strong>；<strong>GPT-5.6 &#x2F; ChatGPT Work</strong> 自 <strong>7&#x2F;9</strong> 起的 <strong>24h 全球滚动</strong> 进入收官日。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic&#x2F;OpenAI&#x2F;Meta&#x2F;Langfuse 官方；GitHub release；Artificial Analysis；Trivium China；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Agent CLI 运维 maturity</strong>：Claude Code <strong>MCP timeout &#x2F; OAuth &#x2F; worktree 安全</strong> 批量修复；<strong>地缘工具链分化</strong>：阿里 <strong>Qoder 替代 Claude Code</strong> 落地；<strong>LLM 可观测 productization</strong>：Langfuse <strong>告警路由 + Home dashboard</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>升级 <strong>v2.1.206</strong> 修复 <strong>MCP <code>request_timeout_ms</code></strong> 与 <strong>OAuth 刷新</strong>；跨境团队评估 <strong>Qoder vs Copilot CLI</strong> 迁移路径；Langfuse 项目侧配置 <strong>Notifications → Slack&#x2F;Webhook</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.206</strong>（<strong>7&#x2F;10</strong>）；<strong>Codex</strong>：<strong>GPT-5.6 放量窗口收尾</strong>（<strong>7&#x2F;9 GA 相邻</strong>）；<strong>OpenClaw</strong>：无 <strong>7&#x2F;10</strong> 新 tag；<strong>Hermes</strong>：无 <strong>7&#x2F;10</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;10</strong> release；<strong>Langfuse</strong>：<strong>7&#x2F;10 changelog</strong>（通知通道 + Home dashboard，<strong>v3.210.0</strong> 代码 <strong>7&#x2F;9 发布相邻</strong>）；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>7&#x2F;10</strong> 重大 release；<strong>Code Graph</strong>：无 <strong>7&#x2F;10</strong> release</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.206">v2.1.206（GitHub）</a></td>
+<td><strong>2026-07-10</strong></td>
+<td>开源发布</td>
+<td><strong><code>/cd</code> 路径建议</strong>、<strong>CLAUDE.md trim &#x2F;doctor</strong>、<strong>MCP timeout 修复</strong>、<strong>worktree 外目录确认</strong>、<strong>background agent 热升级</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 平台</td>
+<td><a target="_blank" rel="noopener" href="https://docs.anthropic.com/en/release-notes/api">CMEK content preservation 文档扩展（Platform Release Notes）</a></td>
+<td><strong>2026-07-10</strong></td>
+<td>技术文档</td>
+<td><strong><code>cmek_preserve</code> 过滤示例</strong>、**<code>policy_violation_investigation</code> &#x2F; <code>csae_report</code> reason codes**</td>
+</tr>
+<tr>
+<td>地缘 &#x2F; 安全</td>
+<td><a target="_blank" rel="noopener" href="https://triviumchina.com/2026/07/09/alibaba-bans-anthropics-coding-tools-over-backdoor-fears/">Alibaba bans Anthropic coding tools（Trivium）</a></td>
+<td><strong>2026-07-10</strong>（<strong>生效日</strong>；报道 <strong>7&#x2F;9</strong>）</td>
+<td>政策&#x2F;安全</td>
+<td><strong>7&#x2F;10 起</strong> 内部禁 <strong>Anthropic 全系</strong>；改推 <strong>Qoder</strong>；触发因 <strong>Unicode 隐写检测</strong></td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/gpt-5-6/">GPT-5.6 24h 全球放量窗口（官方）</a></td>
+<td><strong>2026-07-10</strong>（<strong>7&#x2F;9 GA 相邻，24h rollout 收官</strong>）</td>
+<td>官方发布</td>
+<td><strong>Sol&#x2F;Terra&#x2F;Luna</strong> 分 tier 继续扩展；<strong>ChatGPT Work</strong> <strong>Plus&#x2F;Business</strong> 数日内跟进</td>
+</tr>
+<tr>
+<td>Meta &#x2F; 评测</td>
+<td><a target="_blank" rel="noopener" href="https://artificialanalysis.ai/articles">Muse Spark 1.1 Intelligence Index 51（Artificial Analysis）</a></td>
+<td><strong>2026-07-10</strong></td>
+<td>独立评测</td>
+<td><strong>7&#x2F;9 Muse Spark 1.1 GA</strong> 后首份 AA 量化：<strong>51 分</strong>、token 效率优于同档竞品</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-07-10-project-notification-channels">Project notification channels（Changelog）</a></td>
+<td><strong>2026-07-10</strong></td>
+<td>产品更新</td>
+<td><strong>blob export 失败</strong>、<strong>evaluator 停用</strong> 等告警可路由 <strong>Slack&#x2F;Webhook</strong></td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-07-10-home-is-a-dashboard">Home is a dashboard（Changelog）</a></td>
+<td><strong>2026-07-10</strong></td>
+<td>产品更新</td>
+<td><strong>Home 页可定制 widget</strong>；与 <strong>v3.210.0</strong> trace graph 视图增强配套</td>
+</tr>
+<tr>
+<td>政策 &#x2F; 劳动</td>
+<td><a target="_blank" rel="noopener" href="https://triviumchina.com/2026/07/10/labor-regulator-releases-ai-plan-for-hr/">Labor regulator AI plan for HR（Trivium）</a></td>
+<td><strong>2026-07-10</strong></td>
+<td>政策&#x2F;产业</td>
+<td><strong>MoHRSS 7&#x2F;9</strong> 发布 <strong>AI+人社</strong> 场景意见；<strong>7&#x2F;10</strong> 政策解读跟进</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code 运维</td>
+<td><strong>v2.1.206 release notes</strong></td>
+<td><strong>MCP <code>request_timeout_ms</code><strong>、</strong>OAuth 刷新</strong>、**<code>/doctor</code> CLAUDE.md trim**</td>
+<td>Agent CLI SRE</td>
+</tr>
+<tr>
+<td>企业合规</td>
+<td><strong>Anthropic CMEK preservation docs</strong></td>
+<td><strong><code>cmek_preserve</code> 事件</strong>、人工&#x2F;自动 pipeline 均写 preservation</td>
+<td>政企合规&#x2F;安全</td>
+</tr>
+<tr>
+<td>LLM 可观测</td>
+<td><strong>Langfuse 7&#x2F;10 changelog</strong></td>
+<td><strong>Slack&#x2F;Webhook 告警</strong>、<strong>Home dashboard preset</strong></td>
+<td>平台&#x2F;SRE</td>
+</tr>
+<tr>
+<td>模型选型</td>
+<td><strong>AA Muse Spark 1.1 评测</strong></td>
+<td><strong>Intelligence Index 51</strong>、成本&#x2F;token 效率</td>
+<td>Agent 架构师</td>
+</tr>
+<tr>
+<td>跨境 Agent</td>
+<td><strong>阿里禁 Claude Code + Qoder 替代</strong></td>
+<td><strong>供应链审计</strong>、<strong>内部 Agent 白名单</strong></td>
+<td>跨境研发团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;10 呈现 <strong>「终端 Agent 工程化补丁日 + 地缘工具链落地 + 可观测告警产品化」</strong>——Claude Code <strong>v2.1.206</strong> 集中修复 <strong>MCP&#x2F;登录&#x2F;worktree&#x2F;Windows</strong> 等生产痛点；阿里 <strong>7&#x2F;10 禁令</strong> 把 <strong>7&#x2F;9 信任危机</strong> 转为 <strong>内部工具切换</strong>；Langfuse <strong>通知路由</strong> 说明 Agent 平台 <strong>SRE 告警</strong> 正成为标配能力。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CLI 稳定性</td>
+<td><strong>Claude Code v2.1.206</strong></td>
+<td><strong>per-server MCP timeout</strong> 需在 <strong><code>.mcp.json</code></strong> 显式配置；<strong>background agent 热升级</strong> 减少 attach 延迟</td>
+</tr>
+<tr>
+<td>上下文治理</td>
+<td><strong><code>/doctor</code> CLAUDE.md trim</strong></td>
+<td>定期裁剪 <strong>checked-in CLAUDE.md</strong> 中可从代码推导的内容，控制 <strong>context 预算</strong></td>
+</tr>
+<tr>
+<td>地缘合规</td>
+<td><strong>阿里 Anthropic 禁令生效</strong></td>
+<td>跨境团队需 <strong>双栈 Agent CLI</strong>（<strong>Qoder&#x2F;Copilot CLI</strong>）与 <strong>egress 审计</strong></td>
+</tr>
+<tr>
+<td>模型放量</td>
+<td><strong>GPT-5.6 24h rollout 收官</strong></td>
+<td><strong>分 tier 滚动</strong> 意味着 <strong>feature flag &#x2F; 降级路径</strong> 需按 plan 设计</td>
+</tr>
+<tr>
+<td>可观测告警</td>
+<td><strong>Langfuse Slack&#x2F;Webhook</strong></td>
+<td><strong>evaluator 停用</strong>、<strong>export 失败</strong> 应走 <strong>项目级通知</strong> 而非仅 admin email</td>
+</tr>
+<tr>
+<td>OpenClaw&#x2F;Hermes&#x2F;Spring&#x2F;LangChain&#x2F;Code Graph</td>
+<td>无 <strong>7&#x2F;10</strong> 重大 release</td>
+<td>关注 OpenClaw <strong>durable runtime</strong> PR 栈（见 <strong>7&#x2F;9</strong> 日报）</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.206 GitHub release</strong></td>
+<td><strong>7&#x2F;10 最可核验</strong> 的 Agent CLI 工程更新</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Trivium 阿里禁 Anthropic 生效</strong></td>
+<td><strong>地缘 Agent 工具链</strong> 的首个 <strong>大厂内部落地日</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Langfuse 7&#x2F;10 双 changelog</strong></td>
+<td><strong>LLM 平台告警路由</strong> 的产品化样本</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Anthropic CMEK preservation 文档</strong></td>
+<td>企业 <strong>密钥托管 + 内容保全</strong> 审计事件规范</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AA Muse Spark 1.1 评测（7&#x2F;10）</strong></td>
+<td><strong>7&#x2F;9 Meta API GA</strong> 后的独立量化对照</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-07-09</strong></td>
+<td><strong>GPT-5.6 GA &#x2F; Muse Spark 1.1 &#x2F; Claude Reflect</strong> 全球主线</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-10 00:00:00 到 2026-07-10 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, docs.anthropic.com, triviumchina.com, openai.com, artificialanalysis.ai, langfuse.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.206</td>
+<td>2026-07-10</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.206">https://github.com/anthropics/claude-code/releases/tag/v2.1.206</a></td>
+</tr>
+<tr>
+<td>技术文档</td>
+<td>Anthropic Platform CMEK preservation</td>
+<td>2026-07-10</td>
+<td><a target="_blank" rel="noopener" href="https://docs.anthropic.com/en/release-notes/api">https://docs.anthropic.com/en/release-notes/api</a></td>
+</tr>
+<tr>
+<td>政策&#x2F;安全</td>
+<td>Alibaba bans Anthropic（生效 7&#x2F;10）</td>
+<td>2026-07-10</td>
+<td><a target="_blank" rel="noopener" href="https://triviumchina.com/2026/07/09/alibaba-bans-anthropics-coding-tools-over-backdoor-fears/">https://triviumchina.com/2026/07/09/alibaba-bans-anthropics-coding-tools-over-backdoor-fears/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>GPT-5.6 rollout（24h 窗口收官）</td>
+<td>2026-07-10（7&#x2F;9 GA 相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/gpt-5-6/">https://openai.com/index/gpt-5-6/</a></td>
+</tr>
+<tr>
+<td>独立评测</td>
+<td>Muse Spark 1.1 AA 评测</td>
+<td>2026-07-10</td>
+<td><a target="_blank" rel="noopener" href="https://artificialanalysis.ai/articles">https://artificialanalysis.ai/articles</a></td>
+</tr>
+<tr>
+<td>产品更新</td>
+<td>Langfuse project notification channels</td>
+<td>2026-07-10</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-07-10-project-notification-channels">https://langfuse.com/changelog/2026-07-10-project-notification-channels</a></td>
+</tr>
+<tr>
+<td>产品更新</td>
+<td>Langfuse Home dashboard</td>
+<td>2026-07-10</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-07-10-home-is-a-dashboard">https://langfuse.com/changelog/2026-07-10-home-is-a-dashboard</a></td>
+</tr>
+<tr>
+<td>政策&#x2F;产业</td>
+<td>MoHRSS AI+HR plan Trivium</td>
+<td>2026-07-10</td>
+<td><a target="_blank" rel="noopener" href="https://triviumchina.com/2026/07/10/labor-regulator-releases-ai-plan-for-hr/">https://triviumchina.com/2026/07/10/labor-regulator-releases-ai-plan-for-hr/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

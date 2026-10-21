@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-15 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-15</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-15</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：8 月 15 日技术增量集中在 <strong>文本水印落地细节</strong> 与 <strong>开源 Agent 运行时</strong>：Anthropic 说明 Claude 将采用 DeepMind SynthID-Text，并计划提供检测 API；OpenClaw 发布 <code>2026.8.1-beta.2</code>，把 GPT-5.6 Ultra 系列接到 OpenClaw&#x2F;Codex 双引擎。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic 水印、OpenClaw&#x2F;Codex、Claude Code、Spring AI 生态、Langfuse&#x2F;LangGraph、Code Graph、Loop Engineering、skills、论文政策</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）GPAI 行为准则下的水印从「要不要做」进入「怎么检、改写后还在不在」；2）多 runtime 原子切换成为 Agent harness 卖点；3）编程 CLI 无新稳定版</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>SynthID-Text 对代码注释&#x2F;轻改文档的覆盖边界；OpenClaw <code>/model</code> 原子切换与密钥 egress 绑定；Codex Bedrock Runtime 仍处 alpha</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：无 8&#x2F;15 tag（v2.1.233 属 8&#x2F;14）。Codex：alpha.18&#x2F;.19 等。OpenClaw：<code>v2026.8.1-beta.2</code>（Published 2026-08-15）。Hermes &#x2F; Spring AI（无 8&#x2F;14–16 新 GA）&#x2F; Spring Alibaba AI &#x2F; Langfuse（v4 属 8&#x2F;13）&#x2F; LangGraph（1.2.11 属 8&#x2F;11）&#x2F; Code Graph &#x2F; Loop Engineering &#x2F; Cursor Skills：未发现可核验的 8&#x2F;15 官方重大更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型治理</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/">Anthropic shares more details about how Claude’s new watermarks will work</a></td>
+<td>2026-08-15</td>
+<td>技术媒体（引官方博文）</td>
+<td>采用 SynthID-Text；计划检测 API；轻编辑几乎挂不上水印；代码主体难打标、注释可打</td>
+</tr>
+<tr>
+<td>Agent 运行时</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2">OpenClaw 2026.8.1-beta.2</a></td>
+<td>2026-08-15</td>
+<td>开源发布</td>
+<td>GPT-5.6 Ultra（Sol&#x2F;Terra&#x2F;Luna）跨 OpenClaw 与 Codex；<code>/model</code> 原子切换；密钥出站主机绑定；SQLite 快照备份</td>
+</tr>
+<tr>
+<td>基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/08/15/nvidia-mulls-3b-investment-in-sb-energy-in-openai-data-center-deal-report.html">Nvidia $3B SB Energy talks</a></td>
+<td>2026-08-15</td>
+<td>技术媒体</td>
+<td>俄亥俄 OpenAI 数据中心融资谈判，非官方成交</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>水印</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/">TechCrunch &#x2F; Claude watermarks</a></td>
+<td>SynthID-Text vs 文风检测；EU 行为准则同步</td>
+<td>合规、内容审核、文档流水线</td>
+</tr>
+<tr>
+<td>Agent harness</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2">OpenClaw release</a></td>
+<td>双引擎模型矩阵、secret egress、状态快照</td>
+<td>自建 Agent 运行时</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：可落地的工程更新在 <strong>OpenClaw 预发布</strong>；LangChain&#x2F;Langfuse 无新日更。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenClaw</td>
+<td>beta.2：模型&#x2F;runtime&#x2F;thinking 原子选择 + Codex 路由健康检查</td>
+<td>多 harness 时「切模型」必须带上 runtime，避免静默 fallback</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>8&#x2F;14 起 alpha 线加入 Bedrock Runtime</td>
+<td>企业 AWS 路径与 Mantle 提供商分开，稳定版仍停在 0.147.0 一带</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td>无 8&#x2F;15 changelog</td>
+<td>Cloud 将于 2026-11-16 仅保留 v4，迁移窗口继续</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/">Claude watermarks</a></td>
+<td>直接决定文档&#x2F;代码流水线要不要接检测 API</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2">OpenClaw v2026.8.1-beta.2</a></td>
+<td>目前最完整的 GPT-5.6 Ultra × Codex 双 runtime 说明</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-15 00:00:00 到 2026-08-15 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：techcrunch.com, github.com, cnbc.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>技术媒体</td>
+<td>Claude watermarks &#x2F; SynthID-Text</td>
+<td>2026-08-15</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/">https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw 2026.8.1-beta.2</td>
+<td>2026-08-15</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2">https://github.com/openclaw/openclaw/releases/tag/v2026.8.1-beta.2</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Nvidia SB Energy talks</td>
+<td>2026-08-15</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbc.com/2026/08/15/nvidia-mulls-3b-investment-in-sb-energy-in-openai-data-center-deal-report.html">https://www.cnbc.com/2026/08/15/nvidia-mulls-3b-investment-in-sb-energy-in-openai-data-center-deal-report.html</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

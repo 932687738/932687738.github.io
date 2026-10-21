@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-07 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-07</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-07</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-08-07</code> 是 <strong>「OpenAI Astra 触及 critical cybersecurity threshold 放缓开发 + Anthropic Fable 5 生物学 safeguard 降误杀 + Claude Code v2.1.224 自托管 runner 与跨 session SendMessage」</strong>——<strong>OpenAI</strong> 披露 <strong>Astra</strong>（开发中）在内部评估中触及 <strong>Preparedness Framework critical cybersecurity threshold</strong>，<strong>暂停部分内部活动</strong>并加强 guardrails（<strong>强调未参与 Hugging Face 入侵</strong>）；<strong>Anthropic</strong> 更新 <strong>Fable 5 生物学 classifier</strong>，<strong>biology fallback 约降 85%<strong>（</strong>virology&#x2F;toxicology 仍 fallback Opus 5</strong>）；<strong>Claude Code v2.1.224</strong>（<strong>8&#x2F;7 04:00 UTC</strong>；<strong>self-hosted-runner</strong>；<strong>SendMessage 跨 session</strong>；<strong>sandbox credential masking</strong>；<strong>archive plugin 源</strong>）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI Astra 安全披露；Anthropic Fable 5 biology；Claude Code release；ChatGPT Luna 默认延续；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>前沿 lab 主动公开「未发布模型触及 critical 阈值」</strong>；<strong>biology safeguard 从「全 block」转向「精调 classifier」</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>审计 <strong>Astra&#x2F;HF 事件</strong> 对 <strong>enterprise agent 沙箱策略</strong> 影响；升级 <strong>Claude Code ≥ v2.1.224</strong>；<strong>Fable 5 健康&#x2F;检验类 query fallback 应显著减少</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.224</strong>（<strong>8&#x2F;7 04:00 UTC</strong>）；<strong>Codex</strong>：无 <strong>8&#x2F;7</strong> stable release；<strong>OpenClaw</strong>：无 <strong>8&#x2F;7</strong> release；<strong>Hermes</strong>：无 <strong>8&#x2F;7</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>8&#x2F;7</strong> release；<strong>Langfuse</strong>：无 <strong>8&#x2F;7</strong> release；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>8&#x2F;7</strong> release；<strong>Code Graph</strong>：无 <strong>8&#x2F;7</strong> release；<strong>Loop Engineering</strong>：<strong>Astra agentic coding 评估 loop 暂停（安全 gate）</strong>；<strong>skills</strong>：无 <strong>8&#x2F;7</strong> 新发布</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>安全 &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/">Astra 开发放缓（TechCrunch 8&#x2F;7）</a></td>
+<td><strong>2026-08-07</strong></td>
+<td>官方&#x2F;安全</td>
+<td><strong>critical cybersecurity threshold；Preparedness Framework 触发</strong></td>
+</tr>
+<tr>
+<td>安全 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards">Fable 5 biology safeguards 更新（Anthropic 8&#x2F;7）</a></td>
+<td><strong>2026-08-07</strong></td>
+<td>官方&#x2F;安全</td>
+<td><strong>fallback ~85%↓；dual-use 仍 Opus 5</strong></td>
+</tr>
+<tr>
+<td>CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.224">Claude Code v2.1.224（GitHub Release）</a></td>
+<td><strong>2026-08-07</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>self-hosted-runner</strong>；<strong>SendMessage 跨 session</strong>；<strong>archive plugin</strong></td>
+</tr>
+<tr>
+<td>ChatGPT &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://www.digitalapplied.com/blog/chatgpt-gpt-5-6-luna-free-default-unlimited-chats">GPT-5.6 Luna 默认 + unlimited text 排期（digitalapplied 8&#x2F;7）</a></td>
+<td><strong>2026-08-07</strong></td>
+<td>产品&#x2F;追踪</td>
+<td><strong>Luna 默认本周；unlimited text 8&#x2F;10 周</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型安全</td>
+<td><strong>TechCrunch Astra 报道</strong></td>
+<td><strong>critical threshold 与 internal pause</strong></td>
+<td>AI 安全&#x2F;合规</td>
+</tr>
+<tr>
+<td>Biology safeguard</td>
+<td><strong>Anthropic 官方文</strong></td>
+<td><strong>classifier constitution 重写 + 分 surface fallback 统计</strong></td>
+<td>安全&#x2F;产品</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><strong>v2.1.224 release notes</strong></td>
+<td><strong>self-hosted-runner + sandbox JWT&#x2F;awsPairs masking</strong></td>
+<td>Team&#x2F;Enterprise CLI</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td><strong>digitalapplied Luna 文</strong></td>
+<td><strong>text unlimited 排期 vs 已 ship 边界</strong></td>
+<td>产品&#x2F;成本</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：8&#x2F;7 是 <strong>「前沿模型安全披露日 + CLI 基础设施 release 日」</strong>——<strong>Astra pause</strong> 与 <strong>8&#x2F;4–8&#x2F;6 HF 沙箱逃逸叙事</strong> 形成连续线；<strong>v2.1.224 self-hosted-runner</strong> 把 <strong>web&#x2F;mobile&#x2F;desktop session</strong> 接到 <strong>自有机器&#x2F;容器</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>安全 gate</td>
+<td><strong>Astra critical threshold</strong></td>
+<td><strong>agentic coding eval 须独立 red-team</strong></td>
+</tr>
+<tr>
+<td>Biology</td>
+<td><strong>Fable 5 classifier 精调</strong></td>
+<td><strong>health&#x2F;lab query 不应再 mass-fallback</strong></td>
+</tr>
+<tr>
+<td>CLI infra</td>
+<td><strong>self-hosted-runner + SendMessage</strong></td>
+<td><strong>跨机 agent inbox 成一等公民</strong></td>
+</tr>
+<tr>
+<td>Sandbox</td>
+<td><strong>JWT&#x2F;awsPairs credential masking</strong></td>
+<td><strong>TLS terminate + settings 来源限制</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>TechCrunch OpenAI Astra</strong></td>
+<td><strong>8&#x2F;7 最大安全事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Anthropic Fable 5 biology 更新</strong></td>
+<td><strong>可量化 fallback 降幅</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.224</strong></td>
+<td><strong>self-hosted-runner 首发</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>digitalapplied Luna&#x2F;unlimited 排期</strong></td>
+<td><strong>8&#x2F;10 周 Free tier 变更 calendar</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-08-06</strong></td>
+<td><strong>Claude Code v2.1.223 安全补丁前情</strong></td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-07 00:00:00 到 2026-08-07 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：techcrunch.com, anthropic.com, github.com, digitalapplied.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>安全</td>
+<td>OpenAI Astra slowed</td>
+<td>2026-08-07</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/">https://techcrunch.com/2026/08/07/openai-says-it-slowed-astra-model-development-over-security-concerns/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Fable 5 biology safeguards</td>
+<td>2026-08-07</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards">https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Claude Code v2.1.224</td>
+<td>2026-08-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.224">https://github.com/anthropics/claude-code/releases/tag/v2.1.224</a></td>
+</tr>
+<tr>
+<td>产品</td>
+<td>GPT-5.6 Luna default schedule</td>
+<td>2026-08-07</td>
+<td><a target="_blank" rel="noopener" href="https://www.digitalapplied.com/blog/chatgpt-gpt-5-6-luna-free-default-unlimited-chats">https://www.digitalapplied.com/blog/chatgpt-gpt-5-6-luna-free-default-unlimited-chats</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

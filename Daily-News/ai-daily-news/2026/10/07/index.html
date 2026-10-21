@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-07 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-07</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-07</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：10 月 7 日主线是 <strong>ChatGPT 换上 10 月版 GPT-6</strong>，同一天 Copilot 把 Haiku 5.5、本地沙箱和专用密钥模型放进工程链路，Langfuse 开始给 trace 做主题分桶。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI &#x2F; Anthropic &#x2F; Google &#x2F; GitHub changelog、Claude Code、Codex、Langfuse，以及 Spring AI、LangGraph、Code Graph、Loop Engineering、政策与论文</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）ChatGPT 的 10 月版 GPT-6 与 Codex 目录里的 GPT-6.1 Sol 不是同一套权重；2）本地代理执行边界（沙箱、UNC 读）在收紧；3）观测从「能搜」走到「能分桶、能外置媒体」</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation">GPT-6 安全卡</a>；<a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">Copilot 本地沙箱 GA</a>；<a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.54.0">Langfuse v4.54.0</a>；<a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.161.0">Codex 0.161.0</a></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：v2.1.292，Published 2026-10-06 18:59 UTC，北京时间 10&#x2F;7 02:59。v2.1.293 的 changelog 标 10&#x2F;7，GitHub 列表时间为 10&#x2F;7 18:10；若该时间为 UTC，北京时间已是 10&#x2F;8，Haiku 5.5 作为 Claude Code 默认 Haiku <strong>不计入本日正文</strong>。<strong>Codex</strong>：0.161.0。<strong>Langfuse</strong>：v4.54.0。<strong>Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; OpenClaw &#x2F; Hermes &#x2F; skills &#x2F; Loop Engineering</strong>：无本日可核验官方 release。Loop 的 <code>/loop</code> 修复落在 10&#x2F;6 的 v2.1.290</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GPT-6</td>
+<td><a target="_blank" rel="noopener" href="https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation">10 月版安全与训练评估</a></td>
+<td>2026-10-07</td>
+<td>官方发布</td>
+<td>ChatGPT 用 10 月版替换 GPT-5.6 Sol&#x2F;Luna。Codex 与 ChatGPT Work 仍用 9 月权重。网络安全、生物与化学按 High 能力处理，自我改进未到 High。博客入口见 <a target="_blank" rel="noopener" href="https://openai.com/index/gpt-6-for-everyone">GPT-6 and Intelligent UI</a></td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/">Claude Haiku 5.5</a></td>
+<td>2026-10-07</td>
+<td>官方发布</td>
+<td>轻量模型进入 Copilot 各端模型选择器，面向子代理、小改动和终端。按供应商目录价计费，企业默认可开、管理员可关</td>
+</tr>
+<tr>
+<td>Copilot</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">本地沙箱 GA</a></td>
+<td>2026-10-07</td>
+<td>官方发布</td>
+<td>CLI、Copilot 应用和 VS Code Agent Host 用 MXC 把策略落到 Windows&#x2F;macOS&#x2F;Linux。限制文件、网络和 Git 凭据；企业可强制开启。沙箱管的是工具执行，不随模型变化</td>
+</tr>
+<tr>
+<td>密钥检测</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/">专用泄露密钥模型</a></td>
+<td>2026-10-07</td>
+<td>官方发布</td>
+<td>读上下文找密码，不生成代码。已有 AI 密码告警自动切到新模型；推送保护为私有预览；<code>/security-review</code> 即将接入该分类器</td>
+</tr>
+<tr>
+<td>内容溯源</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/">SynthID Detector 全球开放</a></td>
+<td>2026-10-07</td>
+<td>官方发布</td>
+<td>英文版向所有人开放，可查 Google 及 OpenAI、NVIDIA、Kakao（Apple 即将加入）的水印。官方称已标记超过 1800 亿张图像&#x2F;视频</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.54.0">v4.54.0</a></td>
+<td>2026-10-07（Published 08:55 UTC）</td>
+<td>开源发布</td>
+<td>trace 按主题分桶；外部媒体存储；实验项与 prompt 事件的分数查询走编译路径。主题默认模型切到文中所称 gpt-6 luna</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.292">v2.1.292</a></td>
+<td>2026-10-07（Published 2026-10-06 18:59 UTC）</td>
+<td>开源发布</td>
+<td><code>claude plugin install --marketplace</code>；Agent 工具可指定 effort；UNC 网络路径的读不再被 PreToolUse 或 auto mode 绕过；stdio MCP 默认协商协议 2026-07-28</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.161.0">0.161.0</a></td>
+<td>2026-10-07（Published 15:58 UTC）</td>
+<td>开源发布</td>
+<td>捆绑目录与 Bedrock 默认模型改为 GPT-6.1 Sol；<code>/mcp login</code>；Bedrock 上的 multi-agent V2。这是目录默认，不是 ChatGPT 10 月版权重</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型切换</td>
+<td><a target="_blank" rel="noopener" href="https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation">GPT-6 安全卡</a></td>
+<td>10 月 &#x2F; 9 月权重分界、High 能力域</td>
+<td>要改默认模型或做上线评审的人</td>
+</tr>
+<tr>
+<td>本地执行边界</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">Copilot 本地沙箱</a></td>
+<td>MXC、文件&#x2F;网络&#x2F;凭据策略、企业强制</td>
+<td>让代理在本机跑命令的团队</td>
+</tr>
+<tr>
+<td>观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.54.0">Langfuse v4.54.0</a></td>
+<td>trace 主题分桶、外部媒体</td>
+<td>自建 Langfuse 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：本日没有 LangGraph 或 Spring AI release。工程变化在「ChatGPT 与 Codex 用的不是同一版 GPT-6」以及「本机工具必须有沙箱策略」。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型分叉</td>
+<td>ChatGPT 10 月版上线；Codex 0.161.0 把目录默认设为 GPT-6.1 Sol</td>
+<td>评测和账单要写明入口，不能把 ChatGPT 的行为和 Codex 目录默认当成同一个模型</td>
+</tr>
+<tr>
+<td>沙箱</td>
+<td>Copilot 本地沙箱 GA；Claude Code 堵住 UNC 读绕过</td>
+<td>工具执行策略跟模型解耦，企业策略应默认强制</td>
+</tr>
+<tr>
+<td>观测</td>
+<td>trace 主题分桶、外部媒体存储</td>
+<td>长轨迹先分类再抽样评测，媒体不要只留在应用盘</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation">GPT-6 安全卡</a></td>
+<td>写清 10 月与 9 月权重、以及 High 能力域</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">本地沙箱 GA</a></td>
+<td>本机代理的默认执行边界</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/">SynthID Detector</a></td>
+<td>生成内容核验从媒体机构扩到公开工具</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-07 00:00:00 到 2026-10-07 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, deploymentsafety.openai.com, github.blog, blog.google, github.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>GPT-6 Sol &#x2F; Luna 10 月安全卡</td>
+<td>2026-10-07</td>
+<td><a target="_blank" rel="noopener" href="https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation">https://deploymentsafety.openai.com/gpt-6-october/model-safety-training-and-evaluation</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>GPT-6 and Intelligent UI</td>
+<td>2026-10-07</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/gpt-6-for-everyone">https://openai.com/index/gpt-6-for-everyone</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Claude Haiku 5.5 in GitHub Copilot</td>
+<td>2026-10-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/">https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Local sandboxing GA</td>
+<td>2026-10-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/">https://github.blog/changelog/2026-10-07-local-sandboxing-for-github-copilot-now-generally-available/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Purpose-built secret detection model</td>
+<td>2026-10-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/">https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>SynthID Detector</td>
+<td>2026-10-07</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/">https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synth-id-ai-content/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.54.0</td>
+<td>2026-10-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.54.0">https://github.com/langfuse/langfuse/releases/tag/v4.54.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.292</td>
+<td>2026-10-07（Published 2026-10-06 18:59 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.292">https://github.com/anthropics/claude-code/releases/tag/v2.1.292</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex 0.161.0</td>
+<td>2026-10-07</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.161.0">https://github.com/openai/codex/releases/tag/rust-v0.161.0</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

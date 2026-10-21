@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-11 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-11</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-11</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-11</code> 是 <strong>「Claude Code v2.1.207 多云默认升级 + OpenAI 公开认错 ChatGPT Work 放量 + Apple 起诉 OpenAI 硬件窃密」</strong>——Anthropic 发布 <strong>v2.1.207</strong>（<strong>Published: 2026-07-11T00:52Z</strong>），<strong>Bedrock&#x2F;Vertex&#x2F;Foundry Auto mode 默认开启</strong>；<strong>Thibault Sottiaux（7&#x2F;11）</strong> 承认 <strong>ChatGPT Work&#x2F;GPT-5.6</strong> 四类问题并 <strong>双重置额度</strong>；<strong>Apple 7&#x2F;10 起诉 OpenAI</strong> 在 <strong>7&#x2F;11</strong> 引爆全球解读。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic&#x2F;OpenAI&#x2F;Apple&#x2F;GitHub 官方；Releasebot；The Decoder&#x2F;Euronews；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>CLI 多云 parity</strong>：Claude Code <strong>Auto mode + Opus 4.8 默认</strong> 扩至 <strong>Bedrock&#x2F;Vertex&#x2F;Foundry</strong>；<strong>Agent 产品化阵痛</strong>：OpenAI <strong>桌面大改+额度风暴</strong>；<strong>AI 硬件供应链诉讼</strong>：Apple <strong>io Products&#x2F;前员工</strong> 链条</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>多云 Claude Code 检查 <strong><code>disableAutoMode</code></strong> 与 <strong><code>~/.claude/settings.json</code></strong> 存放 Auto 配置；OpenAI 用户区分 <strong>Work vs Codex</strong> 并关注 <strong>7&#x2F;14 周</strong> 修复；跟踪 <strong>OpenAI 硬件</strong> 诉讼对 <strong>io 设备</strong> 时间表影响</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.207</strong>（<strong>7&#x2F;11</strong>）；<strong>Codex</strong>：<strong>Sottiaux 7&#x2F;11 回应</strong>（<strong>7&#x2F;9 发布相邻</strong>）；<strong>OpenClaw</strong>：无 <strong>7&#x2F;11</strong> 新 tag；<strong>Hermes</strong>：无 <strong>7&#x2F;11</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>7&#x2F;11</strong> release；<strong>Langfuse</strong>：无 <strong>7&#x2F;11</strong> release&#x2F;changelog；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>7&#x2F;11</strong> 重大 release；<strong>Code Graph</strong>：无 <strong>7&#x2F;11</strong> release</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.207">v2.1.207（GitHub）</a></td>
+<td><strong>2026-07-11</strong></td>
+<td>开源发布</td>
+<td><strong>Bedrock&#x2F;Vertex&#x2F;Foundry Auto mode 默认</strong>、<strong>Opus 4.8 默认</strong>、<strong>plugin shell-injection 修复</strong>、<strong>Remote Control&#x2F;worktree 多项修复</strong></td>
+</tr>
+<tr>
+<td>Claude Code &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/whats-new/2026-w28">In-app browser on Desktop（官方 Week 28）</a></td>
+<td><strong>2026-07-11</strong>（<strong>Week 28：7&#x2F;6–7&#x2F;10 相邻</strong>）</td>
+<td>官方文档</td>
+<td><strong>沙箱内置浏览器</strong> 读文档&#x2F;设计稿；<strong>Ctrl&#x2F;Cmd+Shift+B</strong>；与 <strong>Chrome 扩展</strong> 分工</td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://the-decoder.com/openai-admits-it-didnt-get-everything-quite-right-with-chatgpt-work-launch-and-scrambles-to-fix-ux-and-costs/">Sottiaux：ChatGPT Work 四类问题（The Decoder）</a></td>
+<td><strong>2026-07-11</strong></td>
+<td>官方回应</td>
+<td><strong>额度消耗过快</strong>、<strong>桌面导航改版</strong>、<strong>Codex 停服误解</strong>、<strong>多 Agent 回归</strong></td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 运营</td>
+<td><a target="_blank" rel="noopener" href="https://coinfea.com/openai-restores-codex-and-chatgpt-work-limits-after-traffic-surge/">Codex&#x2F;Work 额度双重置（CoinFeA）</a></td>
+<td><strong>2026-07-11</strong></td>
+<td>产品运营</td>
+<td><strong>流量激增</strong> 下 <strong>当日二次 reset</strong>；<strong>7&#x2F;10</strong> 已先行上调</td>
+</tr>
+<tr>
+<td>诉讼 &#x2F; 硬件</td>
+<td><a target="_blank" rel="noopener" href="https://www.euronews.com/next/2026/07/11/apple-sues-openai-over-alleged-theft-of-trade-secrets-heres-what-to-know">Apple 诉 OpenAI 贸易秘密（Euronews）</a></td>
+<td><strong>2026-07-11</strong>（**起诉书 <strong>7&#x2F;10</strong>）</td>
+<td>法律&#x2F;产业</td>
+<td><strong>Tang Tan</strong>「show and tell 真机零件」、<strong>Chang Liu</strong> 下载 <strong>硬件机密文件</strong></td>
+</tr>
+<tr>
+<td>诉讼 &#x2F; 硬件</td>
+<td><a target="_blank" rel="noopener" href="https://www.techtimes.com/articles/320168/20260711/apple-sues-openai-hardware-chief-ran-parts-smuggling-scheme-build-ai-device.htm">Apple 诉 OpenAI 细节（TechTimes）</a></td>
+<td><strong>2026-07-11</strong></td>
+<td>技术媒体</td>
+<td><strong>io Products $6.5B 收购</strong> 与 <strong>预禁令</strong> 风险</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 产品</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbctv18.com/technology/anthropic-extends-access-to-fable-5-paid-users-till-july-12-19940672.htm">Fable 5 延期至 7&#x2F;12（CNBC TV18）</a></td>
+<td><strong>2026-07-11</strong>（<strong>公告 <strong>7&#x2F;7</strong> 延续传播</strong>）</td>
+<td>产品&#x2F;定价</td>
+<td><strong>50% 周限额</strong> 含 Fable 5 <strong>延长至 7&#x2F;12</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多云 CLI</td>
+<td><strong>v2.1.207 release notes</strong></td>
+<td><strong><code>disableAutoMode</code><strong>、</strong>Bedrock SSO 60s 超时修复</strong></td>
+<td>企业 Claude Code</td>
+</tr>
+<tr>
+<td>Desktop 浏览器</td>
+<td><strong>Claude Code Week 28 文档</strong></td>
+<td><strong>sandbox browser</strong> vs <strong>Claude in Chrome</strong></td>
+<td>前端&#x2F;全栈 Agent</td>
+</tr>
+<tr>
+<td>Plugin 安全</td>
+<td><strong>v2.1.207 plugin 变更</strong></td>
+<td><strong>shell-form hooks 拒绝 <code>${user_config.*}</code></strong></td>
+<td>Plugin 作者</td>
+</tr>
+<tr>
+<td>Agent 产品</td>
+<td><strong>Sottiaux 回应</strong></td>
+<td><strong>Work&#x2F;Codex 合并 UX</strong> 与 <strong>quota 可视化</strong></td>
+<td>产品经理&#x2F;研发</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;11 呈现 <strong>「终端 Agent 多云落地 + 消费级 Agent 放量事故 + 硬件人才战争司法化」</strong>——Claude Code <strong>v2.1.207</strong> 把 <strong>Auto&#x2F;Opus 4.8</strong> 默认推到 <strong>三大 cloud provider</strong>；OpenAI <strong>ChatGPT Work</strong> 首日 <strong>额度&#x2F;UX</strong> 问题迫使 <strong>公开道歉+紧急 reset</strong>；Apple 诉讼显示 <strong>Frontier  labs 硬件化</strong> 已进入 <strong>IP 战</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多云 Agent CLI</td>
+<td><strong>Claude Code v2.1.207</strong></td>
+<td><strong>Auto mode</strong> 不再需 **<code>CLAUDE_CODE_ENABLE_AUTO_MODE</code>**；企业用 <strong><code>disableAutoMode</code></strong> 控成本</td>
+</tr>
+<tr>
+<td>Desktop 体验</td>
+<td><strong>In-app browser（Week 28）</strong></td>
+<td><strong>文档&#x2F;设计站</strong> 与 <strong>本地 preview</strong> 同屏；仍优先 <strong>Chrome 扩展</strong> 做 <strong>已登录会话</strong></td>
+</tr>
+<tr>
+<td>插件安全</td>
+<td><strong>shell-injection 修复</strong></td>
+<td>Plugin <strong>hooks</strong> 改 <strong>exec form</strong> 或 <strong>脚本内读 config</strong></td>
+</tr>
+<tr>
+<td>放量治理</td>
+<td><strong>OpenAI 双 reset</strong></td>
+<td><strong>Sol max&#x2F;ultra</strong> 应 <strong>显式 opt-in</strong> + <strong>quota 仪表</strong></td>
+</tr>
+<tr>
+<td>硬件供应链</td>
+<td><strong>Apple v. OpenAI</strong></td>
+<td><strong>AI 设备</strong> 竞争含 <strong>人才+供应商情报</strong> 风险</td>
+</tr>
+<tr>
+<td>OpenClaw&#x2F;Hermes&#x2F;Spring&#x2F;Langfuse&#x2F;Code Graph</td>
+<td>无 <strong>7&#x2F;11</strong> 重大 release</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.207 GitHub release</strong></td>
+<td><strong>7&#x2F;11 最可核验</strong> CLI 工程发布</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Sottiaux ChatGPT Work 回应（The Decoder）</strong></td>
+<td><strong>Frontier Agent 消费级放量</strong> 的首个 <strong>官方认错样本</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Claude Code Week 28 in-app browser</strong></td>
+<td><strong>Desktop Agent</strong> 减少 <strong>上下文切换</strong> 的官方方案</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Apple 诉 OpenAI（Euronews&#x2F;TechTimes）</strong></td>
+<td><strong>AI 硬件</strong> 与 <strong>trade secret</strong> 边界案例</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-07-10</strong></td>
+<td><strong>v2.1.206 &#x2F; 阿里禁令 &#x2F; Langfuse 告警</strong></td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-11 00:00:00 到 2026-07-11 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, code.claude.com, the-decoder.com, euronews.com, techtimes.com, coinfea.com, cnbctv18.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.207</td>
+<td>2026-07-11</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.207">https://github.com/anthropics/claude-code/releases/tag/v2.1.207</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>In-app browser Week 28</td>
+<td>2026-07-11（7&#x2F;6–7&#x2F;10 相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/whats-new/2026-w28">https://code.claude.com/docs/en/whats-new/2026-w28</a></td>
+</tr>
+<tr>
+<td>官方回应</td>
+<td>Sottiaux ChatGPT Work 问题 The Decoder</td>
+<td>2026-07-11</td>
+<td><a target="_blank" rel="noopener" href="https://the-decoder.com/openai-admits-it-didnt-get-everything-quite-right-with-chatgpt-work-launch-and-scrambles-to-fix-ux-and-costs/">https://the-decoder.com/openai-admits-it-didnt-get-everything-quite-right-with-chatgpt-work-launch-and-scrambles-to-fix-ux-and-costs/</a></td>
+</tr>
+<tr>
+<td>产品运营</td>
+<td>Codex&#x2F;Work 额度重置 CoinFeA</td>
+<td>2026-07-11</td>
+<td><a target="_blank" rel="noopener" href="https://coinfea.com/openai-restores-codex-and-chatgpt-work-limits-after-traffic-surge/">https://coinfea.com/openai-restores-codex-and-chatgpt-work-limits-after-traffic-surge/</a></td>
+</tr>
+<tr>
+<td>法律&#x2F;产业</td>
+<td>Apple sues OpenAI Euronews</td>
+<td>2026-07-11（起诉 7&#x2F;10）</td>
+<td><a target="_blank" rel="noopener" href="https://www.euronews.com/next/2026/07/11/apple-sues-openai-over-alleged-theft-of-trade-secrets-heres-what-to-know">https://www.euronews.com/next/2026/07/11/apple-sues-openai-over-alleged-theft-of-trade-secrets-heres-what-to-know</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Apple sues OpenAI TechTimes</td>
+<td>2026-07-11</td>
+<td><a target="_blank" rel="noopener" href="https://www.techtimes.com/articles/320168/20260711/apple-sues-openai-hardware-chief-ran-parts-smuggling-scheme-build-ai-device.htm">https://www.techtimes.com/articles/320168/20260711/apple-sues-openai-hardware-chief-ran-parts-smuggling-scheme-build-ai-device.htm</a></td>
+</tr>
+<tr>
+<td>产品</td>
+<td>Fable 5 延至 7&#x2F;12 CNBC TV18</td>
+<td>2026-07-11（公告 7&#x2F;7 传播）</td>
+<td><a target="_blank" rel="noopener" href="https://www.cnbctv18.com/technology/anthropic-extends-access-to-fable-5-paid-users-till-july-12-19940672.htm">https://www.cnbctv18.com/technology/anthropic-extends-access-to-fable-5-paid-users-till-july-12-19940672.htm</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-08 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-08</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-08</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 8 日主线是 <strong>OpenAI 官方公布内部系统对 Navier–Stokes 千禧年问题的解析证明 + Lean 形式化</strong>，以及 <strong>DeepMind 发布覆盖约 90 亿单碱基变异的 AlphaGenome Atlas</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、论文、政策、专项主题、技术媒体</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）万级并行 agent + 未发布内部模型被用来啃开放数学题；2）基因组效应从「按需推理」变成「预计算地图 + AVI 分数」；3）HF 日刊出现 verifier 接地的自改进论文，和 loop 范式同构</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>官方写明不申领 Clay 奖、Lean 证明链接；Atlas 学术门户 &#x2F; API &#x2F; Antigravity skill；不要把媒体里的「15M 美元重跑」当成产品报价</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code &#x2F; Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; skills：未发现可核验的 9&#x2F;8 新稳定版。Loop Engineering：HF 日刊《FlowBalance: Verifier-Grounded Self-Improvement》与「独立 verifier」同构，但是论文不是 CLI 更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>科学 &#x2F; Agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/navier-stokes-solution/">On the Navier–Stokes Millennium Prize Problem</a></td>
+<td>2026-09-08</td>
+<td>官方发布</td>
+<td>内部模型（官方称显著强于 GPT-6 Astra）驱动约 1 万并发 agent，约 88 小时得到有限能量、有外力的奇点证明，另 17 小时用 Astra 做 Lean。约 270 万条消息 &#x2F; 1300 亿 output token。承认 Alpöge&#x2F;Buckmaster 对 forced Euler 的优先权。不申领千禧年奖</td>
+</tr>
+<tr>
+<td>科学 &#x2F; 基因组</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">AlphaGenome Atlas</a></td>
+<td>2026-09-08</td>
+<td>官方发布</td>
+<td>预计算约 90 亿 SNV 分子效应（约 1PB），给出 AVI 分数与特征归因；学术免费门户 + API，商用走 Cloud。已有罕见病与 UKB 非编码关联案例</td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td><a target="_blank" rel="noopener" href="https://www.nature.com/articles/d41586-026-02842-5">OpenAI claims huge maths breakthrough</a></td>
+<td>2026-09-08</td>
+<td>技术媒体</td>
+<td>Nature 交代与 Alpöge&#x2F;Buckmaster 7 日 Euler 论文的时间线。重大结论仍以 OpenAI 原文为准</td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-08">HF Daily Papers 2026-09-08</a></td>
+<td>2026-09-08</td>
+<td>论文原文</td>
+<td>含 FlowBalance（verifier 接地自改进）、EmbodiedSkills、离散扩散无损加速等</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多智能体科研</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/navier-stokes-solution/">Navier–Stokes 官方说明</a></td>
+<td>分组提示 A&#x2F;B vs C&#x2F;D；组内通信；Codex 交叉播种；隔离与监控</td>
+<td>想做长时科研 harness 的人</td>
+</tr>
+<tr>
+<td>基因组地图</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">AlphaGenome Atlas</a></td>
+<td>预计算 + AVI + motif；学术&#x2F;商用分流</td>
+<td>做变异解释或生物信息 Agent 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：当天最强信号是 <strong>「万级 agent + 形式化验证」能啃开放数学</strong>，以及 <strong>科学数据被做成可被 agent 调用的 skill&#x2F;API</strong>。编码 CLI 专项无新版本。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Loop &#x2F; 科研 harness</td>
+<td>1 万 agent、88 小时、Lean 另开 17 小时</td>
+<td>worker 出证明，checker 必须是独立形式化工具，不能自证</td>
+</tr>
+<tr>
+<td>DeepMind skill</td>
+<td>Atlas 以 Antigravity skill &#x2F; API 交付</td>
+<td>科学资产要同时给人看的门户和给 agent 的接口</td>
+</tr>
+<tr>
+<td>其余专项</td>
+<td>编码工具链与 Java AI</td>
+<td>未发现 9&#x2F;8 可核验稳定更新</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/navier-stokes-solution/">Navier–Stokes 官方说明</a></td>
+<td>方法、规模、与并行人类工作的边界都写在原文</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">AlphaGenome Atlas</a></td>
+<td>预计算基因组效应如何产品化</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://www.nature.com/articles/d41586-026-02842-5">Nature 报道</a></td>
+<td>交叉核验时间线与数学共同体反应</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-08">HF Daily Papers 9&#x2F;8</a></td>
+<td>verifier 接地自改进与具身 skills</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-08 00:00:00 到 2026-09-08 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, deepmind.google, nature.com, huggingface.co</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>On the Navier–Stokes Millennium Prize Problem</td>
+<td>2026-09-08</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/navier-stokes-solution/">https://openai.com/index/navier-stokes-solution/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>AlphaGenome Atlas</td>
+<td>2026-09-08</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/">https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenAI claims huge maths breakthrough</td>
+<td>2026-09-08</td>
+<td><a target="_blank" rel="noopener" href="https://www.nature.com/articles/d41586-026-02842-5">https://www.nature.com/articles/d41586-026-02842-5</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Hugging Face Daily Papers 2026-09-08</td>
+<td>2026-09-08</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-08">https://huggingface.co/papers/date/2026-09-08</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-10 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-10</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-10</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-08-10</code> 是 <strong>「Qwen3.8 开放权重承诺窗口开启但仍 pending + ChatGPT Free&#x2F;Go 无限 Luna 文本聊天 rollout 周 + Claude Code v2.1.227 + Auto Mode 8&#x2F;14 默认变更进入倒计时」</strong>——<strong>Qwen3.8-Max &#x2F; Qwen3.8-27B</strong> 按 <strong>8&#x2F;2 承诺</strong> 进入 <strong>8&#x2F;10 当周</strong> HF&#x2F;ModelScope 窗口，<strong>截至 8&#x2F;10 末仍无官方 repo 与 license</strong>；<strong>OpenAI</strong> <strong>Free&#x2F;Go unlimited text chat + Think button</strong> 按 <strong>8&#x2F;6 公告</strong> 于 <strong>8&#x2F;10 当周</strong> rollout（<strong>text-only；图片&#x2F;文件&#x2F;语音仍 capped</strong>）；<strong>Claude Code v2.1.227</strong>（<strong>8&#x2F;10 22:56 UTC</strong>；<strong>feature flag &#x2F; GitHub Action &#x2F; &#x2F;tui 修复</strong>）；<strong>Anthropic Auto Mode</strong> 将于 <strong>8&#x2F;14</strong> 成为 <strong>Pro&#x2F;Max&#x2F;Team 新 session 默认</strong>（<strong>8&#x2F;7 官方博客；classifier overhead 自 8&#x2F;7 起不再向 Pro&#x2F;Max&#x2F;Team 收费</strong>）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Qwen3.8 权重窗口；ChatGPT Free tier rollout；Claude Code release；Auto Mode 政策；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>「承诺窗口 ≠ 已 ship」</strong>——Qwen Max 级开放权重与 Free tier 去 cap 同日进入 <strong>calendar checkpoint</strong>；<strong>CLI 补丁密度维持</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><strong>盯 Qwen HuggingFace org 官方 repo + license</strong>；验证 <strong>Free tier unlimited text</strong> 是否已到你的账号；升级 <strong>Claude Code ≥ v2.1.227</strong>；<strong>8&#x2F;14 前评估 Auto Mode 默认切换</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.227</strong>（<strong>8&#x2F;10 22:56 UTC</strong>）；<strong>Codex</strong>：无 <strong>8&#x2F;10</strong> stable release；<strong>OpenClaw</strong>：无 <strong>8&#x2F;10</strong> release；<strong>Hermes</strong>：无 <strong>8&#x2F;10</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>8&#x2F;10</strong> release；<strong>Langfuse</strong>：无 <strong>8&#x2F;10</strong> release；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>8&#x2F;10</strong> release；<strong>Code Graph</strong>：无 <strong>8&#x2F;10</strong> release；<strong>Loop Engineering</strong>：<strong>Qwen 权重窗口 + Free tier text loop 扩权（产品&#x2F;infra loop）</strong>；<strong>skills</strong>：无 <strong>8&#x2F;10</strong> 新发布</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型 &#x2F; 阿里</td>
+<td><a target="_blank" rel="noopener" href="https://www.digitalapplied.com/blog/qwen3-8-open-weights-checklist-before-download">Qwen3.8 开放权重窗口开启仍 pending（digitalapplied 8&#x2F;10）</a></td>
+<td><strong>2026-08-10</strong></td>
+<td>追踪&#x2F;承诺</td>
+<td><strong>Max + 27B 承诺 HF&#x2F;ModelScope；license 未披露；HF org 无 repo</strong></td>
+</tr>
+<tr>
+<td>模型 &#x2F; 阿里</td>
+<td><a target="_blank" rel="noopener" href="https://byteiota.com/qwen3-8-open-weights-drop-this-week-read-before-you-download/">Qwen3.8-27B 自托管 sizing 预览（byteiota 8&#x2F;10）</a></td>
+<td><strong>2026-08-10</strong></td>
+<td>社区&#x2F;infra</td>
+<td><strong>27B 4-bit ~14–16GB VRAM；Max 全精度 ~20× H100</strong></td>
+</tr>
+<tr>
+<td>ChatGPT &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/">Free&#x2F;Go unlimited Luna text  rollout 周（Unite.AI 8&#x2F;6）</a></td>
+<td><strong>2026-08-10</strong>（<strong>8&#x2F;6 排期兑现周</strong>）</td>
+<td>产品</td>
+<td><strong>无限 text + Think button；multimodal 仍 capped</strong></td>
+</tr>
+<tr>
+<td>CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.227">Claude Code v2.1.227（GitHub Release）</a></td>
+<td><strong>2026-08-10</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>expired token feature flag 修复；claude-code-action Bash 修复</strong></td>
+</tr>
+<tr>
+<td>产品 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://claude.com/blog/auto-mode-default-in-claude-code">Auto Mode 8&#x2F;14 默认 + classifier 免费（Anthropic 8&#x2F;7）</a></td>
+<td><strong>2026-08-10</strong>（<strong>8&#x2F;7 公告；8&#x2F;10 传播</strong>）</td>
+<td>官方&#x2F;产品</td>
+<td><strong>Pro&#x2F;Max&#x2F;Team 新 session 默认 auto；Enterprise&#x2F;API 仍 opt-in</strong></td>
+</tr>
+<tr>
+<td>安全 &#x2F; Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.helpnetsecurity.com/2026/08/10/anthropic-claude-code-auto-mode/">Auto Mode 默认变更解读（Help Net Security 8&#x2F;10）</a></td>
+<td><strong>2026-08-10</strong></td>
+<td>媒体&#x2F;安全</td>
+<td><strong>classifier 替代人工逐条审批；admin 评估窗口</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开放权重</td>
+<td><strong>digitalapplied 下载前 checklist</strong></td>
+<td><strong>HF org 核验；license 未出前勿部署</strong></td>
+<td>ML&#x2F;infra</td>
+</tr>
+<tr>
+<td>自托管</td>
+<td><strong>byteiota Qwen3.8 硬件文</strong></td>
+<td><strong>27B vs Max  realistic 路径</strong></td>
+<td>推理团队</td>
+</tr>
+<tr>
+<td>ChatGPT</td>
+<td><strong>OpenAI Help Center release notes</strong></td>
+<td><strong>text unlimited vs 工具 cap 边界</strong></td>
+<td>产品&#x2F;成本</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><strong>v2.1.227 release notes</strong></td>
+<td><strong>GitHub Action allowed_non_write_users 修复</strong></td>
+<td>CI&#x2F;CD + CLI</td>
+</tr>
+<tr>
+<td>Auto Mode</td>
+<td><strong>code.claude.com auto-mode-config</strong></td>
+<td><strong>autoMode.environment 信任域配置</strong></td>
+<td>Team&#x2F;Enterprise</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：8&#x2F;10 是 <strong>「开放权重窗口日 + Free tier 扩权 rollout 日 + CLI 补丁日」</strong>——工程侧应把 <strong>Qwen HF repo 监控</strong> 与 <strong>Free tier traffic 结构变化</strong> 当作同日 <strong>calendar gate</strong>；<strong>Auto Mode 8&#x2F;14</strong> 将改变 <strong>Pro&#x2F;Max&#x2F;Team 默认 permission loop</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开放权重</td>
+<td><strong>Qwen3.8 窗口开启仍 pending</strong></td>
+<td><strong>只认 Qwen org 官方 repo；27B 为 realistic 自托管</strong></td>
+</tr>
+<tr>
+<td>Free tier</td>
+<td><strong>unlimited text rollout 周</strong></td>
+<td><strong>text vs multimodal 成本分离；guardrail 仍可能限 bot</strong></td>
+</tr>
+<tr>
+<td>CLI</td>
+<td><strong>v2.1.227 小版本修复</strong></td>
+<td><strong>CI Action + expired OAuth token 回归</strong></td>
+</tr>
+<tr>
+<td>权限</td>
+<td><strong>Auto Mode 8&#x2F;14 默认</strong></td>
+<td><strong>8&#x2F;10–8&#x2F;13 配置 autoMode.environment 信任域</strong></td>
+</tr>
+<tr>
+<td>Eval</td>
+<td><strong>Qwen Anthropic-compatible endpoint</strong></td>
+<td><strong>Claude Code harness 可 pin 对照 incumbent</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>digitalapplied Qwen3.8 checklist</strong></td>
+<td><strong>8&#x2F;10 最大 pending 事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.227</strong></td>
+<td><strong>8&#x2F;10 唯一 hard release</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Anthropic Auto Mode 博客</strong></td>
+<td><strong>8&#x2F;14 默认切换前必读</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>byteiota Qwen 硬件 sizing</strong></td>
+<td><strong>27B vs Max 部署决策</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-08-09</strong></td>
+<td><strong>Atlas 下线 &#x2F; Qwen 权重前夜</strong></td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-10 00:00:00 到 2026-08-10 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：digitalapplied.com, byteiota.com, github.com, claude.com, helpnetsecurity.com, unite.ai</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>追踪</td>
+<td>Qwen3.8 open weights checklist</td>
+<td>2026-08-10</td>
+<td><a target="_blank" rel="noopener" href="https://www.digitalapplied.com/blog/qwen3-8-open-weights-checklist-before-download">https://www.digitalapplied.com/blog/qwen3-8-open-weights-checklist-before-download</a></td>
+</tr>
+<tr>
+<td>社区</td>
+<td>Qwen3.8 hardware sizing</td>
+<td>2026-08-10</td>
+<td><a target="_blank" rel="noopener" href="https://byteiota.com/qwen3-8-open-weights-drop-this-week-read-before-you-download/">https://byteiota.com/qwen3-8-open-weights-drop-this-week-read-before-you-download/</a></td>
+</tr>
+<tr>
+<td>产品</td>
+<td>Free unlimited Luna text</td>
+<td>2026-08-10</td>
+<td><a target="_blank" rel="noopener" href="https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/">https://www.unite.ai/openai-gives-free-chatgpt-users-unlimited-text-chats-on-gpt-5-6-luna/</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Claude Code v2.1.227</td>
+<td>2026-08-10</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.227">https://github.com/anthropics/claude-code/releases/tag/v2.1.227</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Auto mode default blog</td>
+<td>2026-08-10（8&#x2F;7 公告）</td>
+<td><a target="_blank" rel="noopener" href="https://claude.com/blog/auto-mode-default-in-claude-code">https://claude.com/blog/auto-mode-default-in-claude-code</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>Auto mode Help Net Security</td>
+<td>2026-08-10</td>
+<td><a target="_blank" rel="noopener" href="https://www.helpnetsecurity.com/2026/08/10/anthropic-claude-code-auto-mode/">https://www.helpnetsecurity.com/2026/08/10/anthropic-claude-code-auto-mode/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

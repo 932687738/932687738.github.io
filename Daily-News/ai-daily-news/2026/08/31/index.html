@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-31 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-31</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-31</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：8 月 31 日主线是 <strong>OpenClaw <code>2026.8.1</code>（品牌化 2.0：会话改 SQLite、权限与凭证默认值重写）</strong>、<strong>Langfuse <code>v4.25.0</code>（Web 表格列标准化）</strong>，以及 <strong>DeepSeek-V4-Flash-Vision-Exp 开源权重（MIT，Hugging Face）</strong>；编程 CLI 无中国时间窗口内的新稳定版。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、开源 release、Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes、Spring AI&#x2F;Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、skills、论文与政策、中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）个人 Agent runtime 把「会话存储&#x2F;权限&#x2F;凭证」当成一次 breaking 大版本，而不是再叠小功能；2）可观测平台继续做 UI 工程债而不是新协议；3）多模态开源权重补上 API 已上线 10 天的 Vision-Exp</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>升级 OpenClaw 前备份并读 SQLite 迁移；Langfuse 自托管跟到 <code>v4.25.0</code>；本地评 Vision-Exp 用官方 HF 仓而不是转载新闻</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>OpenClaw：<code>v2026.8.1</code>（Published 2026-08-31T03:30:51Z，中国时间 11:30，AKA 2.0）。Langfuse：<code>v4.25.0</code>（2026-08-31T10:42:43Z，中国时间 18:42）。Claude Code：当日无中国时间窗口内的新 tag（<code>v2.1.252</code> 落在 9&#x2F;1 03:46）。Codex：仅有 <code>0.152.0-alpha.*</code>，稳定版仍为 8&#x2F;29 的 <code>0.151.0</code>。Hermes：<code>v0.21.0</code>&#x2F;<code>v2026.8.31</code> 的 Published 为 UTC 19:29，记入 9&#x2F;1。Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills：未发现可核验的 8&#x2F;31 重大稳定版更新。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent runtime</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.1">OpenClaw 2026.8.1（AKA 2.0）</a></td>
+<td>2026-08-31</td>
+<td>开源发布</td>
+<td>会话&#x2F;转写迁到 SQLite，降级需先还原归档；安装与 onboarding 默认值、session 权限模式、插件信任审查、私有凭证一并改写。官方说明：<code>openclaw doctor --fix</code> 可处理大部分 breaking。详见 <a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.8.1">release notes</a></td>
+</tr>
+<tr>
+<td>LLM 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.25.0">Langfuse v4.25.0</a></td>
+<td>2026-08-31</td>
+<td>开源发布</td>
+<td>Web 表格列（文本&#x2F;数字&#x2F;Token Usage&#x2F;下拉）抽到统一工厂，并加 design-system import 边界。无新 Public API &#x2F; MCP 能力；自托管升级主要是 UI 一致性</td>
+</tr>
+<tr>
+<td>开源模型</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp">DeepSeek-V4-Flash-Vision-Exp</a></td>
+<td>2026-08-31</td>
+<td>开源发布</td>
+<td>V4 系首个多模态实验权重，MIT；含 tokenizer、prompt encoding 与覆盖 ViT&#x2F;Aligner&#x2F;DFlash&#x2F;MoE&#x2F;DSpark 的最小 PyTorch 推理。API 已于 8&#x2F;21 上线，本日是权重+参考实现</td>
+</tr>
+<tr>
+<td>服务可用性</td>
+<td><a target="_blank" rel="noopener" href="https://status.openai.com/incidents/01M1C5M4K0WC8PPT0Z175RJA1E">ChatGPT Work elevated errors and latency</a></td>
+<td>2026-08-31</td>
+<td>官方状态</td>
+<td>Plus 用户 Work 模式一度不可用，当日已缓解。企业排障先查 status，不要当成模型能力回归</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>升级路径</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.8.1">v2026.8.1 release notes</a></td>
+<td>SQLite 会话、权限默认值、插件 SDK 子路径弃用时间表</td>
+<td>已在跑 Gateway &#x2F; 写 OpenClaw 插件的人</td>
+</tr>
+<tr>
+<td>多模态推理</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp">HF 仓 + inference&#x2F;</a></td>
+<td>参考实现与权重分片分开，无 symlink 依赖</td>
+<td>要本地复现 Vision-Exp 而不是只调 API 的人</td>
+</tr>
+<tr>
+<td>可观测 UI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.25.0">Langfuse v4.25.0</a></td>
+<td>表格列组件边界，避免业务页直接引设计系统内部件</td>
+<td>自托管 Langfuse 或二次开发 Web 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：本日工程增量集中在「个人 Agent 的存储&#x2F;权限默认值」和「多模态权重可本地跑」；编排框架与 Java AI 无新 GA。OpenClaw 把 maker&#x2F;checker 之外的<strong>会话持久化与凭证默认值</strong>当成 2.0 的真正 breaking。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenClaw &#x2F; Loop</td>
+<td>2.0 改会话存储与权限默认</td>
+<td>升级前备份；长任务 loop 先保证会话可迁、可回滚，再谈新 skill</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td>v4.25.0 UI 列标准化</td>
+<td>观测平台的债往往在表格&#x2F;权限边界，不是再接一个 exporter</td>
+</tr>
+<tr>
+<td>DeepSeek Vision</td>
+<td>权重+参考实现同日放出</td>
+<td>Agent 截图&#x2F;OCR 任务可切到开源权重做离线评测</td>
+</tr>
+<tr>
+<td>Claude Code &#x2F; Codex</td>
+<td>无中国时间窗口稳定版</td>
+<td>不要把 UTC 当晚的 <code>v2.1.252</code> &#x2F; Hermes <code>0.21.0</code> 记进本日</td>
+</tr>
+<tr>
+<td>其余专项</td>
+<td>Hermes &#x2F; Spring* &#x2F; LangChain &#x2F; Code Graph &#x2F; skills</td>
+<td>未发现 8&#x2F;31 重大稳定更新</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.8.1">OpenClaw 2026.8.1 notes</a></td>
+<td>本月最大 runtime 变更，按中国时间记本日</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp">DeepSeek-V4-Flash-Vision-Exp</a></td>
+<td>官方权重与参考实现，优于中文门户转载</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.25.0">Langfuse v4.25.0</a></td>
+<td>确认本日没有新 trace&#x2F;eval API</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-31 00:00:00 到 2026-08-31 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, docs.openclaw.ai, huggingface.co, status.openai.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>OpenClaw 2026.8.1</td>
+<td>2026-08-31</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.8.1">https://github.com/openclaw/openclaw/releases/tag/v2026.8.1</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>v2026.8.1 (AKA OpenClaw 2.0)</td>
+<td>2026-08-31</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.8.1">https://docs.openclaw.ai/releases/2026.8.1</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Langfuse v4.25.0</td>
+<td>2026-08-31</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.25.0">https://github.com/langfuse/langfuse/releases/tag/v4.25.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>DeepSeek-V4-Flash-Vision-Exp</td>
+<td>2026-08-31</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp">https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-Vision-Exp</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>ChatGPT Work incident</td>
+<td>2026-08-31</td>
+<td><a target="_blank" rel="noopener" href="https://status.openai.com/incidents/01M1C5M4K0WC8PPT0Z175RJA1E">https://status.openai.com/incidents/01M1C5M4K0WC8PPT0Z175RJA1E</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

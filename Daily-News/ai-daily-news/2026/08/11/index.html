@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-11 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-11</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-11</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-08-11</code> 是 <strong>「Claude Code v2.1.228 稳定性补丁日 + GPT-5.6-Cyber &#x2F; Daybreak Red 传播日 + Qwen3.8 开放权重仍 pending、ModelScope 倒计时指向 8&#x2F;12」</strong>——<strong>Claude Code v2.1.228</strong>（<strong>8&#x2F;11 19:50 UTC</strong>；<strong>Windows Git 路径 &#x2F; TUI &#x2F; SendMessage inbox &#x2F; self-hosted-runner &#x2F; skills 硬化</strong> 等多项修复）；<strong>OpenAI GPT-5.6-Cyber</strong> 与 <strong>Daybreak Blue&#x2F;Red</strong> 分层（<strong>主公告 8&#x2F;10</strong>）在 <strong>8&#x2F;11</strong> 持续被安全媒体拆解（<strong>exploit 完成率约 95%；仅 Daybreak Red 可信伙伴</strong>）；<strong>Qwen3.8-Max &#x2F; 27B</strong> 开放权重 <strong>截至 8&#x2F;11 仍无 HF&#x2F;ModelScope 官方 repo</strong>，社区监测 <strong>ModelScope 倒计时指向 8&#x2F;12 ~11:00 EDT</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Claude Code release；OpenAI Daybreak&#x2F;Cyber 传播；Qwen 权重窗口；Auto Mode 倒计时；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>「安全专用模型 + 门禁访问」与「开放权重延期」并行</strong>；<strong>CLI 继续高频小版本修复</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>升级 <strong>Claude Code ≥ v2.1.228</strong>（尤其 Windows）；<strong>8&#x2F;12 盯 Qwen ModelScope&#x2F;HF 官方 repo + license</strong>；<strong>8&#x2F;14 Auto Mode 默认切换前配置 autoMode.environment</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.228</strong>（<strong>8&#x2F;11 19:50 UTC</strong>）；<strong>Codex</strong>：无 <strong>8&#x2F;11</strong> stable release；<strong>OpenClaw</strong>：无 <strong>8&#x2F;11</strong> release；<strong>Hermes</strong>：无 <strong>8&#x2F;11</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>8&#x2F;11</strong> release；<strong>Langfuse</strong>：无 <strong>8&#x2F;11</strong> release；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>8&#x2F;11</strong> release；<strong>Code Graph</strong>：无 <strong>8&#x2F;11</strong> release；<strong>Loop Engineering</strong>：<strong>oh-my-cli 长时 agent loop 仍为 Qwen 叙事样板 + Auto Mode 8&#x2F;14 permission loop 倒计时</strong>；<strong>skills</strong>：<strong>v2.1.228 硬化 claude.ai 同步 skills（不再 shadow 本地命令&#x2F;MCP；禁 <code>!</code>&#x2F;<code>@</code> 扩展）</strong></td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.228">Claude Code v2.1.228（GitHub Release）</a></td>
+<td><strong>2026-08-11</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>Windows Git 路径；TUI model；SendMessage inbox；self-hosted-runner；skills 硬化</strong></td>
+</tr>
+<tr>
+<td>安全 &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/">GPT-5.6-Cyber 解读（Help Net Security 8&#x2F;11）</a></td>
+<td><strong>2026-08-11</strong></td>
+<td>媒体&#x2F;安全</td>
+<td><strong>Daybreak Red；exploit 完成率 ~95%；CVE-2026-15903（V8）</strong></td>
+</tr>
+<tr>
+<td>安全 &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/">Daybreak Blue&#x2F;Red + GPT-5.6-Cyber（TechCrunch 8&#x2F;10）</a></td>
+<td><strong>2026-08-11</strong>（<strong>8&#x2F;10 公告传播</strong>）</td>
+<td>官方&#x2F;产品</td>
+<td><strong>Blue&#x3D;通用防御；Red&#x3D;专用 cyber 模型门禁</strong></td>
+</tr>
+<tr>
+<td>模型 &#x2F; 阿里</td>
+<td><a target="_blank" rel="noopener" href="https://awesomeagents.ai/models/qwen-3-8-max/">Qwen3.8 权重 8&#x2F;11 仍 pending（Awesome Agents）</a></td>
+<td><strong>2026-08-11</strong></td>
+<td>追踪</td>
+<td><strong>HF&#x2F;ModelScope 无官方 repo；license 未披露</strong></td>
+</tr>
+<tr>
+<td>模型 &#x2F; 阿里</td>
+<td><a target="_blank" rel="noopener" href="https://aireiter.com/blog/qwen3-8-27b">ModelScope 倒计时指向 8&#x2F;12（aireiter 8&#x2F;11）</a></td>
+<td><strong>2026-08-11</strong></td>
+<td>社区&#x2F;infra</td>
+<td><strong>2.4T-A95B 约 8&#x2F;12 11:00 EDT；27B 预计随后</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><strong>v2.1.228 release notes</strong></td>
+<td><strong>self-hosted-runner checkout skip；Write tool 新模型可覆盖未读文件</strong></td>
+<td>CLI &#x2F; CI</td>
+</tr>
+<tr>
+<td>Cyber 门禁</td>
+<td><strong>Help Net Security GPT-5.6-Cyber</strong></td>
+<td><strong>High vs Critical Preparedness 阈值；Red 伙伴名单</strong></td>
+<td>安全&#x2F;合规</td>
+</tr>
+<tr>
+<td>开放权重</td>
+<td><strong>Awesome Agents Qwen3.8-Max 页</strong></td>
+<td><strong>承诺窗口 vs 实际 ship 核验</strong></td>
+<td>ML&#x2F;infra</td>
+</tr>
+<tr>
+<td>Auto Mode</td>
+<td><strong>Anthropic Auto Mode 博客（8&#x2F;7）</strong></td>
+<td><strong>8&#x2F;14 Pro&#x2F;Max&#x2F;Team 默认切换</strong></td>
+<td>Team&#x2F;Enterprise</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：8&#x2F;11 是 <strong>「CLI 稳定性补丁日 + 安全专用模型传播日 + 开放权重窗口延期日」</strong>——<strong>v2.1.228</strong> 把 <strong>skills 同步安全</strong> 与 <strong>Remote Control &#x2F; self-hosted-runner</strong> 边角修好；<strong>GPT-5.6-Cyber</strong> 把 <strong>「降低 refusal」</strong> 做成 <strong>门禁产品</strong>，与 <strong>Astra critical pause</strong> 形成同一周内的安全叙事对照。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CLI</td>
+<td><strong>v2.1.228 多平台&#x2F;多 session 修复</strong></td>
+<td><strong>Windows 用户优先升级；验证 SendMessage inbox</strong></td>
+</tr>
+<tr>
+<td>Skills</td>
+<td><strong>claude.ai 同步 skills 硬化</strong></td>
+<td><strong>禁止 shadow 本地命令；禁 <code>!</code>&#x2F;<code>@</code> 扩展</strong></td>
+</tr>
+<tr>
+<td>Cyber</td>
+<td><strong>Daybreak Red + GPT-5.6-Cyber</strong></td>
+<td><strong>双用途能力须门禁 + 审计，不可公开 API</strong></td>
+</tr>
+<tr>
+<td>开放权重</td>
+<td><strong>Qwen 仍 pending → 倒计时 8&#x2F;12</strong></td>
+<td><strong>只认官方 org；license 未出前勿生产部署</strong></td>
+</tr>
+<tr>
+<td>Permission</td>
+<td><strong>Auto Mode 距 8&#x2F;14 剩 3 天</strong></td>
+<td><strong>提前配置 autoMode.environment 信任域</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.228</strong></td>
+<td><strong>8&#x2F;11 唯一 hard release</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Help Net Security GPT-5.6-Cyber</strong></td>
+<td><strong>Daybreak Red 能力边界与 CVE 样例</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Awesome Agents &#x2F; aireiter Qwen 追踪</strong></td>
+<td><strong>权重窗口延期与 8&#x2F;12 倒计时</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-08-10</strong></td>
+<td><strong>Qwen 窗口开启日 &#x2F; v2.1.227 &#x2F; Auto Mode</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-08-07</strong></td>
+<td><strong>Astra critical threshold 前情</strong></td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-11 00:00:00 到 2026-08-11 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, helpnetsecurity.com, techcrunch.com, awesomeagents.ai, aireiter.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源</td>
+<td>Claude Code v2.1.228</td>
+<td>2026-08-11</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.228">https://github.com/anthropics/claude-code/releases/tag/v2.1.228</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>GPT-5.6-Cyber Help Net Security</td>
+<td>2026-08-11</td>
+<td><a target="_blank" rel="noopener" href="https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/">https://www.helpnetsecurity.com/2026/08/11/openai-gpt-5-6-cyber-model/</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>Daybreak TechCrunch</td>
+<td>2026-08-10（8&#x2F;11 传播）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/">https://techcrunch.com/2026/08/10/as-ai-led-attacks-multiply-openai-launches-a-new-cyber-model/</a></td>
+</tr>
+<tr>
+<td>追踪</td>
+<td>Qwen3.8-Max Awesome Agents</td>
+<td>2026-08-11</td>
+<td><a target="_blank" rel="noopener" href="https://awesomeagents.ai/models/qwen-3-8-max/">https://awesomeagents.ai/models/qwen-3-8-max/</a></td>
+</tr>
+<tr>
+<td>社区</td>
+<td>Qwen3.8-27B &#x2F; ModelScope countdown</td>
+<td>2026-08-11</td>
+<td><a target="_blank" rel="noopener" href="https://aireiter.com/blog/qwen3-8-27b">https://aireiter.com/blog/qwen3-8-27b</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

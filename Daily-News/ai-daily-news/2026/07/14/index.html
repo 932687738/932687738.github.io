@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-07-14 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-07-14</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/07/">2026-07</a>
+          <span class="post-date">2026-07-14</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-07-14</code> 是 <strong>「Claude Code 三连发 v2.1.208–210 + Langfuse v3.213.0 + Sol Ultra 数学证明进入主流科学媒体解读周」</strong>——Anthropic 一日发布 <strong>v2.1.208 &#x2F; v2.1.209 &#x2F; v2.1.210</strong>（<strong>screen reader &#x2F; worktree 隔离 &#x2F; 间接注入防护</strong>）；<strong>Langfuse v3.213.0（7&#x2F;14）</strong> 带来 <strong>自托管 Monitors</strong> 与 <strong>code evaluator autocomplete</strong>；<strong>Scientific American 7&#x2F;14</strong> 深度解读 <strong>Cycle Double Cover</strong> 候选证明（<strong>OpenAI 7&#x2F;10 发布；7&#x2F;14 传播高峰</strong>）；<strong>ChatGPT Work 桌面 Projects 回归</strong> 仍无 <strong>7&#x2F;14</strong> 官方 ship（**#31862 &#x2F; 社区 7&#x2F;14 仍报 UX 回归**）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic&#x2F;GitHub&#x2F;Langfuse&#x2F;OpenAI&#x2F;Google 官方与衍生；Scientific American&#x2F;The Decoder&#x2F;OutYet；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Agent CLI 工程密度</strong>：Claude Code <strong>三连 patch</strong> 聚焦 <strong>内存&#x2F;权限&#x2F;多 Agent 安全</strong>；<strong>可观测平台化</strong>：Langfuse <strong>Monitors GA（自托管）</strong>；<strong>Sol 数学叙事</strong>：<strong>64 subagent multiagent v2</strong> 进入 <strong>科学媒体</strong> 但 <strong>peer review 未过</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>升级 <strong>Claude Code ≥ v2.1.210</strong> 获取 <strong>worktree git 隔离</strong> 与 <strong>Agent 间接注入加固</strong>；自托管 Langfuse 可开 <strong>Monitors</strong>；桌面 Work 用户 <strong>Projects 仍走 web</strong>；<strong>Gemini 3.5 Pro</strong> 距 <strong>7&#x2F;17 传闻 GA</strong> 仅 <strong>3 天</strong>（<strong>OutYet 7&#x2F;14 仍未 GA</strong>）</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.208 &#x2F; v2.1.209 &#x2F; v2.1.210</strong>（均 <strong>7&#x2F;14</strong>）；<strong>Codex</strong>：<strong>Projects&#x2F;sidebar 回归未 ship</strong>（**#31862 7&#x2F;14 仍 open<strong>）；</strong>OpenClaw<strong>：无 <strong>7&#x2F;14</strong> 新 tag（最新 <strong>2026.7.1</strong> 为 <strong>7&#x2F;13</strong>）；</strong>Hermes<strong>：无 <strong>7&#x2F;14</strong> release；</strong>Spring AI &#x2F; Spring Alibaba AI<strong>：无 <strong>7&#x2F;14</strong> release；</strong>Langfuse<strong>：</strong>v3.213.0<strong>（</strong>7&#x2F;14<strong>）；</strong>LangChain&#x2F;LangGraph<strong>：无 <strong>7&#x2F;14</strong> release；</strong>Code Graph**：无 <strong>7&#x2F;14</strong> release</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.210">Claude Code v2.1.210（GitHub Release）</a></td>
+<td><strong>2026-07-14</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>worktree 子 Agent git 隔离</strong>、<strong>间接 prompt injection 加固</strong>、<strong>Auto mode Sonnet 5 分类器</strong>、<strong>Fable advisor 临时不可用</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.208">Claude Code v2.1.208（GitHub Release）</a></td>
+<td><strong>2026-07-14</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>screen reader 模式</strong>、<strong>长会话内存泄漏修复</strong>（MCP stderr&#x2F;LSP LRU）、<strong>Edit 大文件 offset 保护</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.209">Claude Code v2.1.209（GitHub Release）</a></td>
+<td><strong>2026-07-14</strong></td>
+<td>开源&#x2F;release</td>
+<td>修复 <strong><code>claude agents</code> 后台会话</strong> 中 <strong><code>/model</code> 等对话框被阻断</strong></td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.213.0">Langfuse v3.213.0（GitHub Release）</a></td>
+<td><strong>2026-07-14</strong></td>
+<td>开源&#x2F;release</td>
+<td><strong>自托管 Monitors</strong>、<strong>code evaluator contract autocomplete</strong>、<strong>blob export manifest</strong>、<strong>REDIS_SOCKET_TIMEOUT_MS</strong></td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 研究</td>
+<td><a target="_blank" rel="noopener" href="https://www.scientificamerican.com/article/chatgpt-just-proved-another-50-year-old-math-conjecture/">ChatGPT 证明 50 年图论猜想（Scientific American）</a></td>
+<td><strong>2026-07-14</strong>（<strong>证明发布 7&#x2F;10</strong>）</td>
+<td>科学媒体&#x2F;研究</td>
+<td><strong>Cycle Double Cover</strong> 候选证明；<strong>64 parallel agents</strong> + <strong>「至少 8 小时勿放弃」</strong> prompt 脚手架</td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 研究</td>
+<td><a target="_blank" rel="noopener" href="https://the-decoder.com/openais-gpt-5-6-sol-ultra-reportedly-solves-a-50-year-old-math-problem-in-under-an-hour/">Thomas Bloom 评价缺引用（The Decoder）</a></td>
+<td><strong>2026-07-14</strong>（<strong>7&#x2F;10–7&#x2F;14 传播窗口</strong>）</td>
+<td>独立评测&#x2F;学术</td>
+<td>证明 <strong>elementary</strong> 但 <strong>未引 1983 Bermond-Jackson-Jaeger</strong>；<strong>candidate proof ≠ settled</strong></td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; UX</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/issues/31862">Desktop UX regressions #31862</a></td>
+<td><strong>2026-07-14</strong>（<strong>7&#x2F;9 发布相邻；7&#x2F;14 仍 open</strong>）</td>
+<td>Bug&#x2F;产品</td>
+<td><strong>Chat 历史&#x2F;Projects 不在 sidebar</strong>；<strong>7&#x2F;14 周 promised fix 未见官方 release note</strong></td>
+</tr>
+<tr>
+<td>Google &#x2F; 模型</td>
+<td><a target="_blank" rel="noopener" href="https://outyet.ai/models/gemini-3-5-pro">Gemini 3.5 Pro 仍未 GA（OutYet）</a></td>
+<td><strong>2026-07-14</strong></td>
+<td>第三方追踪</td>
+<td><strong>Last checked Jul 14</strong> 仍 <strong>Vertex preview</strong>；<strong>7&#x2F;17 目标仍为 leak</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent CLI 安全</td>
+<td><strong>Claude Code v2.1.210 changelog</strong></td>
+<td><strong>worktree isolation</strong>、<strong>subagent 间接注入</strong>、<strong>ultracode 误触发防护</strong></td>
+<td>Claude Code&#x2F;DevOps</td>
+</tr>
+<tr>
+<td>可访问性</td>
+<td><strong>Claude Code v2.1.208 <code>--ax-screen-reader</code></strong></td>
+<td><strong>plain-text 渲染</strong>、<strong>Shift+Tab 权限模式播报</strong></td>
+<td>a11y&#x2F;CLI 用户</td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><strong>Langfuse v3.213.0 Monitors</strong></td>
+<td><strong>events writes 自托管</strong>、<strong>code eval trace 可读</strong></td>
+<td>LLM 平台&#x2F;SRE</td>
+</tr>
+<tr>
+<td>多 Agent 数学</td>
+<td><strong>Scientific American CDC 文 + OpenAI prompt PDF</strong></td>
+<td><strong>multiagent v2 64 cap</strong> vs <strong>Ultra 默认 4 agent</strong></td>
+<td>Agent 架构&#x2F;研究</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：7&#x2F;14 呈现 <strong>「CLI 运行时硬ening 日 + 可观测自托管补齐 + Sol 数学 PR 进入第二传播波」</strong>——Claude Code <strong>三连发</strong> 把 <strong>worktree 泄露</strong> 与 <strong>间接注入</strong> 推成 <strong>默认可利用面修复</strong>；Langfuse <strong>Monitors 下放到 self-hosted</strong> 缩小 cloud&#x2F;自建差距；OpenAI <strong>CDC 证明</strong> 在 <strong>7&#x2F;14</strong> 被 <strong>Scientific American</strong> 定性为 <strong>benchmark 叙事</strong> 而非 <strong>已验收定理</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CLI 安全</td>
+<td><strong>v2.1.210 worktree 隔离</strong></td>
+<td><strong><code>isolation: worktree</code> 子 Agent</strong> 勿假设 <strong>与主仓隔离</strong> 直到 <strong>≥2.1.210</strong></td>
+</tr>
+<tr>
+<td>间接注入</td>
+<td><strong>Agent tool 加固</strong></td>
+<td><strong>子 Agent 读到的不可信内容</strong> 需 <strong>与主会话同等级过滤</strong></td>
+</tr>
+<tr>
+<td>内存</td>
+<td><strong>v2.1.208 MCP&#x2F;LSP 泄漏修复</strong></td>
+<td><strong>长会话 + 多 MCP</strong> 升级前监控 <strong>RSS</strong></td>
+</tr>
+<tr>
+<td>可观测</td>
+<td><strong>Langfuse Monitors self-hosted</strong></td>
+<td><strong>events 写入模式</strong> 下可开 <strong>生产级 monitor</strong></td>
+</tr>
+<tr>
+<td>数学 Agent</td>
+<td><strong>CDC candidate proof</strong></td>
+<td><strong>announcement ≠ verification</strong>；采购 <strong>Ultra&#x2F;multiagent v2</strong> 看 <strong>可审计 trace</strong> 而非 headline</td>
+</tr>
+<tr>
+<td>OpenClaw&#x2F;Hermes&#x2F;Spring&#x2F;Code Graph</td>
+<td>无 <strong>7&#x2F;14</strong> 重大 release</td>
+<td><strong>OpenClaw 2026.7.1（7&#x2F;13）</strong> 含 <strong>GPT-5.6 兼容</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Claude Code v2.1.210 release notes</strong></td>
+<td><strong>7&#x2F;14 最硬</strong> 的安全与稳定性 patch 清单</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Langfuse v3.213.0 changelog</strong></td>
+<td><strong>自托管 Monitors + eval 编辑器</strong> 可直接落地</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Scientific American 7&#x2F;14 CDC 长文</strong></td>
+<td><strong>Sol 数学 benchmark</strong> 的 <strong>媒体级解读样本</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>The Decoder Thomas Bloom 评价</strong></td>
+<td><strong>AI 证明缺引用</strong> 的 <strong>学术规范问题</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-07-13</strong></td>
+<td><strong>Sol 5h cap &#x2F; Fable 7&#x2F;19 &#x2F; Langfuse Graph</strong></td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-07-14 00:00:00 到 2026-07-14 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, langfuse.com, scientificamerican.com, the-decoder.com, outyet.ai</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源</td>
+<td>Claude Code v2.1.210</td>
+<td>2026-07-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.210">https://github.com/anthropics/claude-code/releases/tag/v2.1.210</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Claude Code v2.1.208</td>
+<td>2026-07-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.208">https://github.com/anthropics/claude-code/releases/tag/v2.1.208</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Claude Code v2.1.209</td>
+<td>2026-07-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.209">https://github.com/anthropics/claude-code/releases/tag/v2.1.209</a></td>
+</tr>
+<tr>
+<td>开源</td>
+<td>Langfuse v3.213.0</td>
+<td>2026-07-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v3.213.0">https://github.com/langfuse/langfuse/releases/tag/v3.213.0</a></td>
+</tr>
+<tr>
+<td>科学媒体</td>
+<td>Scientific American CDC 证明</td>
+<td>2026-07-14（证明 7&#x2F;10）</td>
+<td><a target="_blank" rel="noopener" href="https://www.scientificamerican.com/article/chatgpt-just-proved-another-50-year-old-math-conjecture/">https://www.scientificamerican.com/article/chatgpt-just-proved-another-50-year-old-math-conjecture/</a></td>
+</tr>
+<tr>
+<td>学术评论</td>
+<td>The Decoder Thomas Bloom</td>
+<td>2026-07-14（传播）</td>
+<td><a target="_blank" rel="noopener" href="https://the-decoder.com/openais-gpt-5-6-sol-ultra-reportedly-solves-a-50-year-old-math-problem-in-under-an-hour/">https://the-decoder.com/openais-gpt-5-6-sol-ultra-reportedly-solves-a-50-year-old-math-problem-in-under-an-hour/</a></td>
+</tr>
+<tr>
+<td>Bug</td>
+<td>Desktop UX regressions #31862</td>
+<td>2026-07-14</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/issues/31862">https://github.com/openai/codex/issues/31862</a></td>
+</tr>
+<tr>
+<td>追踪</td>
+<td>OutYet Gemini 3.5 Pro</td>
+<td>2026-07-14</td>
+<td><a target="_blank" rel="noopener" href="https://outyet.ai/models/gemini-3-5-pro">https://outyet.ai/models/gemini-3-5-pro</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

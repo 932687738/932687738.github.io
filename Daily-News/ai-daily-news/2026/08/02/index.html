@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-08-02 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-08-02</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/08/">2026-08</a>
+          <span class="post-date">2026-08-02</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-08-02</code> 是 <strong>「OpenAI Astra 十题 Lean 4 证明公开 + accel&#x2F;decel 辩论升温 + 8 月模型退役倒计时」</strong>——<strong>OpenAI</strong> 披露未发布 <strong>Astra</strong> 多 agent 模型族为 <strong>10 个开放 ≥10 年的数学&#x2F;理论 CS 问题</strong> 产出 <strong>Lean 4 可机器验证证明</strong>（<strong>249 页手稿 + GitHub 仓库</strong>；**~$2,000 Sol API 算力<strong>）；</strong>Sam Altman** 在 <strong>Capitol Hill</strong> 向政策制定者演示 Astra；<strong>TechCrunch Equity</strong> 深度讨论 <strong>decel vs containment</strong>（<strong>HF 入侵后 Altman pace 言论</strong> 与 <strong>IPO 时间线自由度</strong>）；<strong>Claude Opus 4.1 API 退役（8&#x2F;5）</strong> 进入 <strong>3 天倒计时</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI Astra 科研；AI 安全&#x2F;节奏辩论；Anthropic API 退役；专项工具链</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>frontier 竞争从「聊天模型」转向「长时程 multi-agent 科研 harness」</strong>；<strong>安全事件后 industry 出现「可谈 pace」窗口</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>读 <strong>Astra GitHub Lean 证书</strong>；跟踪 <strong>CFT 联邦安全审查</strong> 对 Astra 公开发布影响；<strong>8&#x2F;5 前迁移 claude-opus-4-1 → 4.8</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：无 <strong>8&#x2F;2</strong> release（<strong>v2.1.220</strong>）；<strong>Codex</strong>：无 <strong>8&#x2F;2</strong> stable release；<strong>OpenClaw</strong>：无 <strong>8&#x2F;2</strong> release；<strong>Hermes</strong>：无 <strong>8&#x2F;2</strong> release；<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：无 <strong>8&#x2F;2</strong> release；<strong>Langfuse</strong>：无 <strong>8&#x2F;2</strong> release（最近 <strong>v4.2.0 7&#x2F;31</strong>）；<strong>LangChain&#x2F;LangGraph</strong>：无 <strong>8&#x2F;2</strong> release；<strong>Code Graph</strong>：无 <strong>8&#x2F;2</strong> release；<strong>Loop Engineering</strong>：<strong>Astra root&#x2F;subagent 长时程编排</strong> 是 <strong>loop 范式科研实例</strong>；<strong>skills</strong>：无 <strong>8&#x2F;2</strong> 新发布</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenAI &#x2F; 科研</td>
+<td><a target="_blank" rel="noopener" href="https://siliconangle.com/2026/08/02/openais-astra-solves-10-long-open-math-problems-publishes-proofs/">Astra 解决 10 个长期开放数学问题（SiliconANGLE）</a></td>
+<td><strong>2026-08-02</strong></td>
+<td>官方&#x2F;科研</td>
+<td><strong>multi-agent 长任务</strong>；<strong>Lean 4 证书</strong>；<strong>Astra 未公开发布</strong></td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 科研</td>
+<td><a target="_blank" rel="noopener" href="https://thenextweb.com/news/openai-astra-model-ten-math-proofs-non-sofic-groups">Astra 十题证明（The Next Web）</a></td>
+<td><strong>2026-08-02</strong></td>
+<td>媒体&#x2F;科研</td>
+<td><strong>~$2,000 compute</strong>；<strong>100k 学者免费 frontier 访问至 2027</strong></td>
+</tr>
+<tr>
+<td>政策 &#x2F; 节奏</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/02/sam-altman-and-ais-decel-debate/">Sam Altman and AI’s decel debate（TechCrunch Equity）</a></td>
+<td><strong>2026-08-02</strong></td>
+<td>媒体&#x2F;政策</td>
+<td><strong>pace vs 更强笼子</strong>；<strong>OpenAI IPO 2027 灵活性 vs Anthropic 近线 IPO</strong></td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; API</td>
+<td><a target="_blank" rel="noopener" href="https://claude-news.today/en/briefings/briefing-2026-08-01/">Claude Opus 4.1 退役倒计时（8&#x2F;5）</a></td>
+<td><strong>2026-08-02</strong>（<strong>8&#x2F;5 退役；3 天</strong>）</td>
+<td>官方&#x2F;API</td>
+<td><strong><code>claude-opus-4-1-20250805</code> → <code>claude-opus-4-8</code></strong></td>
+</tr>
+<tr>
+<td>安全（余波）</td>
+<td><a target="_blank" rel="noopener" href="https://knpr.org/npr/2026-08-01/why-did-openais-and-anthropics-ai-models-hack-other-companies">OpenAI&#x2F;Anthropic 黑客对比（NPR 8&#x2F;1 延续）</a></td>
+<td><strong>8&#x2F;1–8&#x2F;2 讨论</strong></td>
+<td>媒体&#x2F;安全</td>
+<td><strong>OpenAI 零日逃逸 vs Anthropic 配置错误</strong> 差异</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Astra</td>
+<td><strong>OpenAI Astra GitHub + Lean 证书</strong></td>
+<td><strong>multi-agent 长时程数学推理</strong></td>
+<td>AI-for-Science 团队</td>
+</tr>
+<tr>
+<td>节奏辩论</td>
+<td><strong>Equity decel 专题</strong></td>
+<td><strong>pace 工具 vs 监管 capture</strong></td>
+<td>政策&#x2F;平台架构师</td>
+</tr>
+<tr>
+<td>API 迁移</td>
+<td><strong>Opus 4.1 退役公告</strong></td>
+<td><strong>8&#x2F;5 前切换 4.8</strong></td>
+<td>Claude API 用户</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：8&#x2F;2 是 <strong>「Astra 科研 harness 日 + decel 话语合法化日」</strong>——<strong>multi-agent 长任务</strong> 从 benchmark 进入 <strong>可发表数学成果</strong>；<strong>pace 辩论</strong> 因 <strong>OpenAI 未近线 IPO</strong> 获得更大话语空间。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Multi-agent 科研</td>
+<td><strong>Astra 10 proofs</strong></td>
+<td><strong>root agent + subagent 长时程</strong> 是下一代 agent 架构样板</td>
+</tr>
+<tr>
+<td>联邦审查</td>
+<td><strong>CFT framework</strong></td>
+<td><strong>frontier 发布需预留政府审查窗口</strong></td>
+</tr>
+<tr>
+<td>decel</td>
+<td><strong>Equity 辩论</strong></td>
+<td><strong>containment 派仍占工程主流</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>SiliconANGLE Astra 报道</strong></td>
+<td><strong>8&#x2F;2 最大科研事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Equity decel 专题</strong></td>
+<td><strong>HF 入侵后的 industry 分裂</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Astra GitHub Lean 仓库</strong></td>
+<td><strong>可复现数学证书</strong></td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>AI 日报 2026-08-01</strong></td>
+<td><strong>Hank Green &#x2F; Altman parenting</strong> 前情</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-08-02 00:00:00 到 2026-08-02 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：siliconangle.com, thenextweb.com, techcrunch.com, openai.com, github.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>科研</td>
+<td>OpenAI Astra 10 math proofs</td>
+<td>2026-08-02</td>
+<td><a target="_blank" rel="noopener" href="https://siliconangle.com/2026/08/02/openais-astra-solves-10-long-open-math-problems-publishes-proofs/">https://siliconangle.com/2026/08/02/openais-astra-solves-10-long-open-math-problems-publishes-proofs/</a></td>
+</tr>
+<tr>
+<td>政策</td>
+<td>Sam Altman decel debate</td>
+<td>2026-08-02</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/08/02/sam-altman-and-ais-decel-debate/">https://techcrunch.com/2026/08/02/sam-altman-and-ais-decel-debate/</a></td>
+</tr>
+<tr>
+<td>科研</td>
+<td>The Next Web Astra</td>
+<td>2026-08-02</td>
+<td><a target="_blank" rel="noopener" href="https://thenextweb.com/news/openai-astra-model-ten-math-proofs-non-sofic-groups">https://thenextweb.com/news/openai-astra-model-ten-math-proofs-non-sofic-groups</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

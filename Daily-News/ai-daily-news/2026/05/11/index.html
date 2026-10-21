@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-11 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-11</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-11</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：本日 AI 主线从单点模型发布转向 <strong>Agent 工具链持续发版 + 企业部署服务化 + Agent 治理平台化</strong>，其中 Codex 与 OpenClaw 的开源 release 最具工程可复现价值。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI &#x2F; Anthropic &#x2F; GitHub &#x2F; Codex &#x2F; Claude Code &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; LangGraph &#x2F; RAG &#x2F; MCP &#x2F; arXiv &#x2F; Hugging Face &#x2F; VentureBeat &#x2F; IAPP &#x2F; 量子位</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Coding agent 继续高频迭代</strong>：Codex alpha 与 OpenClaw beta 同日可核验；<strong>企业 AI 进入交付公司化阶段</strong>：OpenAI Deployment Company 线索显示模型厂商开始前置咨询和工程交付；<strong>Agent 平台治理成为竞争点</strong>：memory、eval、orchestration 与合规可观测被打包进平台能力</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Codex <code>0.131.0-alpha.6</code> 的多平台资产与 sigstore；OpenClaw <code>maxPingPongTurns</code>、跨上下文消息权限、<code>/context map</code>；OpenAI &#x2F; Anthropic 企业交付模式对自建 Agent 平台边界的影响</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Codex</strong>：GitHub <code>rust-v0.131.0-alpha.6</code> Published <code>2026-05-11T11:48:21Z</code>；<strong>Claude Code</strong>：未核验到官方 GitHub Release 页面明确标注 <code>2026-05-11</code> 的重要功能发布，第三方索引提到 <code>v2.1.138</code> internal fixes，未列为重大事件；<strong>OpenClaw</strong>：<code>v2026.5.10-beta.4</code> 在目标窗口可核验；<strong>Hermes</strong>：未发现当日新 release，最近仍为 <code>v2026.5.7</code>；<strong>Spring AI</strong>：未发现当日 release，最近相邻为 2026-05-08 的 <code>1.1.6</code> &#x2F; <code>2.0.0-M6</code>；<strong>skills</strong>：未发现当日规范级新发布，OpenAI &#x2F; Cursor &#x2F; Claude skills 文档仍作为背景资料</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AI 编程 &#x2F; Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.6">OpenAI Codex <code>0.131.0-alpha.6</code></a></td>
+<td>2026-05-11</td>
+<td>开源 prerelease</td>
+<td>覆盖 Codex CLI、app-server、responses proxy、Windows sandbox setup、npm 包和 sigstore 资产，适合验证跨平台分发与供应链签名流程</td>
+</tr>
+<tr>
+<td>开源 Agent 运行时</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.10-beta.4">OpenClaw <code>v2026.5.10-beta.4</code></a></td>
+<td>2026-05-11</td>
+<td>开源 prerelease</td>
+<td>增强 agent-to-agent 长链路、跨上下文消息权限、Slack 展开控制、Fly Machines 环境检测、<code>/context map</code>，可作为自托管 Agent 运行时治理参考</td>
+</tr>
+<tr>
+<td>企业 AI 落地</td>
+<td><a target="_blank" rel="noopener" href="https://www.techmeme.com/260511/p22">OpenAI launches the OpenAI Deployment Company</a></td>
+<td>2026-05-11</td>
+<td>企业 AI &#x2F; 媒体聚合</td>
+<td>OpenAI 以部署公司承接企业 AI 系统建设，说明模型厂商正在从 API 供应商向前置交付和工作流重构延伸</td>
+</tr>
+<tr>
+<td>Agent 平台治理（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/orchestration/anthropic-wants-to-own-your-agents-memory-evals-and-orchestration-and-that-should-make-enterprises-nervous/">Anthropic wants to own your agent’s memory, evals, and orchestration</a></td>
+<td>2026-05-08（相邻日期）</td>
+<td>技术媒体 &#x2F; 架构分析</td>
+<td>把 Agent memory、evaluation、multi-agent orchestration 的平台化与厂商锁定风险讲清楚，适合企业评估自建 vs 托管 Agent 控制面</td>
+</tr>
+<tr>
+<td>Java AI（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.0.0-M6">Spring AI <code>2.0.0-M6</code></a></td>
+<td>2026-05-08（相邻日期）</td>
+<td>开源 milestone</td>
+<td>OpenAI 类层次重构、provider options 不可变化、模块移除等变化提醒 Java 企业栈关注 API 兼容与值对象不可变设计</td>
+</tr>
+<tr>
+<td>政策监管（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://iapp.org/news/a/eu-agrees-to-amend-ai-act-clarifies-overlap-with-machinery-rules">EU agrees to amend AI Act, clarifies overlap with machinery rules</a></td>
+<td>2026-05-07（相邻日期）</td>
+<td>政策监管</td>
+<td>高风险 AI 合规期限、工业 AI 适用边界和 nudifier 禁令变化，会影响欧盟市场 AI 产品路线图与治理排期</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Codex 发布工程</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.6">Codex <code>0.131.0-alpha.6</code> Release</a></td>
+<td>多平台二进制、npm 包、sigstore、Windows sandbox setup</td>
+<td>DevEx &#x2F; 供应链安全</td>
+</tr>
+<tr>
+<td>Agent 运行时治理</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.10-beta.4">OpenClaw <code>v2026.5.10-beta.4</code></a></td>
+<td>消息权限、上下文地图、Slack 配置、local model service</td>
+<td>Agent 平台 &#x2F; 自托管团队</td>
+</tr>
+<tr>
+<td>Workspace Agent 背景</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">Introducing workspace agents in ChatGPT</a></td>
+<td>组织共享 Agent、审批、Slack、Compliance API、prompt injection safeguard</td>
+<td>企业 AI 平台 &#x2F; 治理团队</td>
+</tr>
+<tr>
+<td>Java Agent 生态</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.0.0-M6">Spring AI <code>2.0.0-M6</code></a></td>
+<td>breaking changes、provider options 不可变、MCP SDK 演进</td>
+<td>Java &#x2F; Spring AI 团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：当日未发现 LangChain &#x2F; LangGraph &#x2F; LlamaIndex &#x2F; MCP 官方在 <code>2026-05-11</code> 的重大新 release；工程焦点落在 coding agent 本体、Agent 运行时治理和企业交付模式。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Coding agent</td>
+<td>Codex alpha 继续提供完整多平台资产矩阵</td>
+<td>内部试用 alpha 通道时要把 <strong>版本固定、资产校验、回滚策略</strong>纳入流水线，而不是只看功能点</td>
+</tr>
+<tr>
+<td>Agent runtime</td>
+<td>OpenClaw 放大跨 Agent 消息链路、上下文可视化和 provider local service</td>
+<td>长会话 Agent 的治理重点是 <strong>上下文可解释、权限可控、运行时可迁移</strong></td>
+</tr>
+<tr>
+<td>托管 Agent 平台</td>
+<td>OpenAI &#x2F; Anthropic 都在把企业流程、memory、eval、orchestration 前移到平台层</td>
+<td>企业要先定义哪些能力必须由自己掌控，避免业务规则、评测标准和记忆数据被单一厂商绑定</td>
+</tr>
+<tr>
+<td>Java AI</td>
+<td>Spring AI 相邻版本强调不可变 options 与接口重构</td>
+<td>企业 Java 栈要把 AI provider 配置当成稳定契约管理，避免应用层堆 if&#x2F;else 适配各供应商</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.10-beta.4">OpenClaw <code>v2026.5.10-beta.4</code></a></td>
+<td>最能观察自托管 Agent runtime 在权限、上下文、消息平台和本地模型服务上的演进</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.6">Codex <code>0.131.0-alpha.6</code></a></td>
+<td>适合检查 Codex 的跨平台构建、资产命名和供应链签名方式</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/orchestration/anthropic-wants-to-own-your-agents-memory-evals-and-orchestration-and-that-should-make-enterprises-nervous/">VentureBeat：Anthropic agent memory&#x2F;evals&#x2F;orchestration</a></td>
+<td>帮助判断托管 Agent 平台与自建 LangGraph &#x2F; CrewAI &#x2F; RAG memory 的边界</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://iapp.org/news/a/eu-agrees-to-amend-ai-act-clarifies-overlap-with-machinery-rules">IAPP：EU AI Act amendments</a></td>
+<td>合规期限和工业 AI 边界变化会直接影响产品出海排期</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-11 00:00:00 到 2026-05-11 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：github.com, openai.com, techmeme.com, venturebeat.com, iapp.org, spring-projects&#x2F;spring-ai</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>OpenAI Codex <code>0.131.0-alpha.6</code></td>
+<td>2026-05-11</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.6">https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.6</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw <code>v2026.5.10-beta.4</code></td>
+<td>2026-05-11</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.10-beta.4">https://github.com/openclaw/openclaw/releases/tag/v2026.5.10-beta.4</a></td>
+</tr>
+<tr>
+<td>媒体聚合 &#x2F; 企业 AI</td>
+<td>OpenAI Deployment Company</td>
+<td>2026-05-11</td>
+<td><a target="_blank" rel="noopener" href="https://www.techmeme.com/260511/p22">https://www.techmeme.com/260511/p22</a></td>
+</tr>
+<tr>
+<td>官方产品背景</td>
+<td>Introducing workspace agents in ChatGPT</td>
+<td>2026-04-22（相邻背景）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">https://openai.com/index/introducing-workspace-agents-in-chatgpt/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Anthropic agent memory&#x2F;evals&#x2F;orchestration analysis</td>
+<td>2026-05-08（相邻日期）</td>
+<td><a target="_blank" rel="noopener" href="https://venturebeat.com/orchestration/anthropic-wants-to-own-your-agents-memory-evals-and-orchestration-and-that-should-make-enterprises-nervous/">https://venturebeat.com/orchestration/anthropic-wants-to-own-your-agents-memory-evals-and-orchestration-and-that-should-make-enterprises-nervous/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Spring AI <code>2.0.0-M6</code></td>
+<td>2026-05-08（相邻日期）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.0.0-M6">https://github.com/spring-projects/spring-ai/releases/tag/v2.0.0-M6</a></td>
+</tr>
+<tr>
+<td>政策监管</td>
+<td>EU AI Act amendments</td>
+<td>2026-05-07（相邻日期）</td>
+<td><a target="_blank" rel="noopener" href="https://iapp.org/news/a/eu-agrees-to-amend-ai-act-clarifies-overlap-with-machinery-rules">https://iapp.org/news/a/eu-agrees-to-amend-ai-act-clarifies-overlap-with-machinery-rules</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

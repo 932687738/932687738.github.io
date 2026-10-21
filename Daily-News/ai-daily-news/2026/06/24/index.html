@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-06-24 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-06-24</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/06/">2026-06</a>
+          <span class="post-date">2026-06-24</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-06-24</code> 是 <strong>「OpenAI 自研推理芯片 Jalapeño + Google Gemini 3.5 Flash 内置 computer use + 人才&#x2F;供应链双线」</strong>——OpenAI 与 Broadcom 发布 <strong>Jalapeño</strong>（9 个月 tape-out，实验室已跑 <strong>GPT-5.3-Codex-Spark</strong>）；Google 将 <strong>computer use</strong> 原生集成进 <strong>Gemini 3.5 Flash</strong> 并配套企业级 prompt injection 防护；产业侧 <strong>Google 核心研究员再流向 Anthropic&#x2F;OpenAI</strong>、<strong>OpenClaw ClawHub 恶意 skills 持续曝光</strong>、<strong>Figma 画布 AI skills&#x2F;代码层</strong> 升级；<strong>GPT-5.6 仍未官宣</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI Jalapeño；Google computer use；TechCrunch 人才流动；Claude Code releases；OpenClaw&#x2F;Hermes；arXiv agent 记忆论文；中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>全栈推理基础设施</strong>：模型厂商自研 <strong>inference ASIC</strong> 与 <strong>UI Agent 内置工具</strong> 并行；<strong>Agent 供应链安全</strong> 从 CVE 延伸到 <strong>marketplace skills</strong>；<strong>人才 IPO 窗口</strong> 加速 <strong>Google→Anthropic&#x2F;OpenAI</strong> 流动</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 <strong>Jalapeño</strong> 对 <strong>Codex&#x2F;ChatGPT 推理 FinOps</strong> 的中长期影响；试用 <strong>Gemini 3.5 Flash computer use</strong> 的企业 <strong>confirmation&#x2F;stop-on-injection</strong> 护栏；升级 <strong>Claude Code v2.1.191</strong> 的 <strong>&#x2F;rewind、hooks matcher、background agent</strong> 修复</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>v2.1.190&#x2F;191</strong>（<strong>2026-06-24</strong> GitHub release，含 <strong>&#x2F;rewind</strong>、streaming scroll、hooks 修复）；<strong>Codex</strong>：无 <strong>6&#x2F;24</strong> 新 tag（<strong>CLI 0.142.0 为 6&#x2F;22</strong>，<strong>0.142.1 为 6&#x2F;25</strong>）；<strong>OpenClaw</strong>：<strong>v2026.6.10</strong> release + <strong>Dark Reading 6&#x2F;24</strong> 报道 <strong>ClawHub 新一批恶意 skills</strong>；<strong>Hermes</strong>：<strong>MarkTechPost 6&#x2F;24</strong> 报道 <strong><code>/learn</code> skills 自动生成</strong>（推文 <strong>6&#x2F;23</strong>）；<strong>Spring AI</strong>：无 <strong>6&#x2F;24</strong> release（<strong>2.0.0 GA 为 6&#x2F;12</strong>）；<strong>skills</strong>：无 <strong>6&#x2F;24</strong> 官方新标准发布（生态仍以 <strong>agentskills.io</strong> 与 IDE 集成为主）；<strong>GPT-5.6</strong>：<strong>OpenAI 未发布</strong></td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenAI &#x2F; 基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">OpenAI and Broadcom unveil Jalapeño inference chip（官方）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>官方发布</td>
+<td>首款 <strong>LLM 推理 ASIC</strong>；<strong>9 个月 tape-out</strong>；实验室 workload 含 <strong>GPT-5.3-Codex-Spark</strong>；多代 <strong>gigawatt</strong> 平台</td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; 基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/">OpenAI unveils its first custom chip（TechCrunch）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>技术媒体</td>
+<td>强调 <strong>inference 降本</strong> 与 <strong>降低 Nvidia 依赖</strong>；<strong>pre-training 仍可能依赖 Nvidia</strong></td>
+</tr>
+<tr>
+<td>Google &#x2F; Agent</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/">Introducing computer use in Gemini 3.5 Flash（Google Blog）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>官方发布</td>
+<td><strong>computer use 内置工具</strong> 进入主 Flash 模型；<strong>Gemini API &#x2F; Enterprise Agent Platform</strong>；可选 <strong>用户确认 + injection 自动停止</strong></td>
+</tr>
+<tr>
+<td>人才 &#x2F; 竞争</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/">AI researchers continue to leave Google for rivals（TechCrunch）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>产业</td>
+<td><strong>Jonas Adler、Alexander Pritzel</strong> 加盟 <strong>Anthropic</strong>（Gemini 核心贡献者）；延续 <strong>Shazeer&#x2F;Jumper</strong> 离职链</td>
+</tr>
+<tr>
+<td>Anthropic &#x2F; 企业</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/webinars/claude-on-google-cloud-monitoring-and-securing-agents-at-scale">Claude on Google Cloud: Monitoring and Securing Agents at Scale（Webinar）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>技术活动</td>
+<td><strong>Agent SDK + OpenTelemetry + Model Armor + Cloud IAM&#x2F;Agent Gateway</strong> 生产落地路径</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.191">Claude Code v2.1.191（GitHub）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>开源发布</td>
+<td><strong>&#x2F;rewind</strong>；修复 <strong>streaming scroll jump</strong>、<strong>background agent 复活</strong>、<strong>hooks 逗号 matcher 不触发</strong></td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.190">Claude Code v2.1.190（GitHub）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>开源发布</td>
+<td><strong>Bug fixes and reliability improvements</strong>（同日较早 tag）</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.6.10">openclaw v2026.6.10（GitHub）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>开源发布</td>
+<td>例行版本；与 <strong>ClawHub 供应链安全</strong> 议题同日传播</td>
+</tr>
+<tr>
+<td>Agent 安全</td>
+<td><a target="_blank" rel="noopener" href="https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain">More Malicious OpenClaw Skills Threaten AI Supply Chain（Dark Reading）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>安全研究</td>
+<td><strong>Unit 42 五类恶意 skills</strong> 绕过扫描；<strong>infostealer &#x2F; agentic front-running</strong> 等</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td><a target="_blank" rel="noopener" href="https://www.marktechpost.com/2026/06/24/nous-research-adds-learn-to-hermes-agents-skills-system-capturing-workflows-as-slash-commands-without-hand-writing-skill-md/">Nous Research <code>/learn</code> for Hermes Agent Skills（MarkTechPost）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>产品&#x2F;生态</td>
+<td><strong><code>/learn</code></strong> 从目录&#x2F;URL&#x2F;对话自动生成 <strong>SKILL.md</strong>；<strong>progressive disclosure</strong> 降 token</td>
+</tr>
+<tr>
+<td>设计 &#x2F; Agent</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/">Figma adds code layers, animations, more AI features（TechCrunch）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>产品</td>
+<td><strong>代码层 + Claude Code&#x2F;Codex 集成延续</strong>；画布 <strong>AI skills</strong> 与 <strong>自定义插件 prompt</strong></td>
+</tr>
+<tr>
+<td>模型（未证实）</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7654563844733075491">GPT-5.6 仍未官宣（社区&#x2F;掘金汇总）</a></td>
+<td><strong>2026-06-24</strong></td>
+<td>市场观察</td>
+<td><strong>OpenAI 官网&#x2F;API 无 GPT-5.6</strong>；仅 <strong>Codex canary</strong> 间接证据；勿当作已发布</td>
+</tr>
+<tr>
+<td>论文（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.24595v1">MEMPROBE: Probing Long-Term Agent Memory（arXiv:2606.24595）</a></td>
+<td><strong>2026-06-23</strong></td>
+<td>论文原文</td>
+<td><strong>记忆 artifact 可审计</strong> benchmark；任务成功 ≠ 状态可恢复</td>
+</tr>
+<tr>
+<td>论文（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.23525v1">Self-Compacting Language Model Agents（arXiv:2606.23525）</a></td>
+<td><strong>2026-06-22</strong></td>
+<td>论文原文</td>
+<td><strong>SelfCompact</strong>：模型自触发 <strong>compact</strong> 替代固定 token 阈值</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推理 ASIC</td>
+<td><strong>OpenAI Jalapeño 官方文</strong></td>
+<td>LLM inference 专用架构、<strong>perf&#x2F;watt</strong>、多代平台</td>
+<td>基础设施&#x2F;FinOps</td>
+</tr>
+<tr>
+<td>UI Agent</td>
+<td><strong>Gemini 3.5 Flash computer use</strong></td>
+<td>内置 <strong>computer_use</strong>、Browserbase demo、企业 safeguard</td>
+<td>Agent 平台工程师</td>
+</tr>
+<tr>
+<td>GCP Agent 治理</td>
+<td><strong>Anthropic×Google Cloud Webinar</strong></td>
+<td><strong>Model Armor、Agent Identity、OTel traces</strong></td>
+<td>企业 SRE&#x2F;安全</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><strong>v2.1.191 release notes</strong></td>
+<td><strong>&#x2F;rewind</strong>、hooks matcher、background tasks</td>
+<td>日常 CC 用户</td>
+</tr>
+<tr>
+<td>Agent 记忆评测</td>
+<td><strong>MEMPROBE 论文</strong></td>
+<td><strong>hidden user-state recovery</strong> 直接审计记忆</td>
+<td>长时 Agent 架构</td>
+</tr>
+<tr>
+<td>OpenClaw 安全</td>
+<td><strong>Dark Reading + Unit 42</strong></td>
+<td><strong>ClawHub 恶意 skills 绕过 VT&#x2F;ClawScan</strong></td>
+<td>安全&#x2F;平台</td>
+</tr>
+<tr>
+<td>Hermes Skills</td>
+<td><strong>MarkTechPost <code>/learn</code></strong></td>
+<td>自动 <strong>SKILL.md</strong>、**~&#x2F;.hermes&#x2F;skills&#x2F;** 单源</td>
+<td>开源 Agent 用户</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：6&#x2F;24 呈现 <strong>「推理芯片 + UI Agent 工具内置 + Agent marketplace 供应链风险」</strong> 三线——OpenAI <strong>Jalapeño</strong> 把 <strong>Codex&#x2F;ChatGPT 推理</strong> 拉向自研 silicon；Google 把 <strong>computer use</strong> 从独立模型并入 <strong>Flash 主模型</strong> 降低集成成本；工程侧应同步加固 <strong>skills&#x2F;MCP&#x2F;marketplace</strong> 供应链与 <strong>Gemini&#x2F;OpenClaw 类 UI Agent</strong> 的 <strong>injection 护栏</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推理基础设施</td>
+<td><strong>Jalapeño ASIC</strong></td>
+<td>关注 <strong>inference $&#x2F;token</strong> 曲线；训练仍可能 <strong>GPU 混部</strong></td>
+</tr>
+<tr>
+<td>UI Agent</td>
+<td><strong>Gemini 3.5 computer use</strong></td>
+<td>默认启用 <strong>confirmation + stop-on-injection</strong>；Browserbase 作沙箱参考</td>
+</tr>
+<tr>
+<td>Coding Agent</td>
+<td><strong>Claude Code v2.1.191</strong></td>
+<td>用 <strong>&#x2F;rewind</strong> Recover from <code>/clear</code>；审计 <strong>hooks matcher</strong> 语法</td>
+</tr>
+<tr>
+<td>Agent 供应链</td>
+<td><strong>OpenClaw ClawHub</strong></td>
+<td><strong>skills 签名&#x2F;沙箱&#x2F;白名单</strong>；勿假设 <strong>VT 扫描 &#x3D; 安全</strong></td>
+</tr>
+<tr>
+<td>Skills 生态</td>
+<td><strong>Hermes <code>/learn</code></strong></td>
+<td>自动生成 skill 需 <strong>write_approval</strong> 与 <strong>人工 review</strong></td>
+</tr>
+<tr>
+<td>MCP&#x2F;LangChain</td>
+<td><strong>langchain-mcp-adapters 0.3.0（6&#x2F;10）</strong></td>
+<td>6&#x2F;24 无新 release；MCP→LangGraph 仍以 <strong>MultiServerMCPClient</strong> 为主</td>
+</tr>
+<tr>
+<td>Spring AI</td>
+<td><strong>无 6&#x2F;24 release</strong></td>
+<td><strong>Vertex Generative AI 模块 6&#x2F;24 弃用截止</strong>（社区 issue 讨论 <strong>java-genai 迁移</strong>）</td>
+</tr>
+<tr>
+<td>长期记忆</td>
+<td><strong>MEMPROBE</strong></td>
+<td>评测从 <strong>下游任务</strong> 转向 <strong>memory artifact 可恢复性</strong></td>
+</tr>
+<tr>
+<td>GPT-5.6</td>
+<td><strong>未发布</strong></td>
+<td>生产路由勿硬编码 <strong>gpt-5.6</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>OpenAI Jalapeño 官方发布</strong></td>
+<td><strong>6&#x2F;24 最可核验重大基础设施事件</strong></td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>Google：computer use in Gemini 3.5 Flash</strong></td>
+<td><strong>UI Agent 内置工具 + 企业 safeguard</strong> 样本</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Claude Code v2.1.191</strong></td>
+<td><strong>&#x2F;rewind、hooks、background agent</strong> 生产级修复</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>TechCrunch：Google 人才流向 Anthropic</strong></td>
+<td>理解 <strong>Gemini vs Claude</strong> 研发竞争态势</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Dark Reading：OpenClaw ClawHub</strong></td>
+<td><strong>Agent marketplace 供应链</strong> 最新案例</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>MEMPROBE 论文</strong></td>
+<td><strong>长时 Agent 记忆审计</strong> 新 benchmark 范式</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-06-24 00:00:00 到 2026-06-24 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, blog.google, techcrunch.com, github.com, anthropic.com, darkreading.com, marktechpost.com, arxiv.org, juejin.cn</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>OpenAI Jalapeño inference chip</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/">https://openai.com/index/openai-broadcom-jalapeno-inference-chip/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Gemini 3.5 Flash computer use</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-computer-use-gemini-3-5-flash/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenAI custom chip (TechCrunch)</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/">https://techcrunch.com/2026/06/24/openai-unveils-its-first-custom-chip-built-by-broadcom/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Google researchers leave for rivals</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/">https://techcrunch.com/2026/06/24/ai-researchers-continue-to-leave-google-for-its-rivals/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Figma AI&#x2F;code layers update</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/">https://techcrunch.com/2026/06/24/figma-adds-code-layers-support-for-animations-more-ai-features-in-new-update/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.191</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.191">https://github.com/anthropics/claude-code/releases/tag/v2.1.191</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.190</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.190">https://github.com/anthropics/claude-code/releases/tag/v2.1.190</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>openclaw v2026.6.10</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.6.10">https://github.com/openclaw/openclaw/releases/tag/v2026.6.10</a></td>
+</tr>
+<tr>
+<td>安全研究</td>
+<td>OpenClaw malicious skills (Dark Reading)</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain">https://www.darkreading.com/cyber-risk/malicious-openclaw-skills-clawhub-threaten-ai-supply-chain</a></td>
+</tr>
+<tr>
+<td>技术活动</td>
+<td>Claude on GCP webinar</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/webinars/claude-on-google-cloud-monitoring-and-securing-agents-at-scale">https://www.anthropic.com/webinars/claude-on-google-cloud-monitoring-and-securing-agents-at-scale</a></td>
+</tr>
+<tr>
+<td>生态报道</td>
+<td>Hermes &#x2F;learn skills</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://www.marktechpost.com/2026/06/24/nous-research-adds-learn-to-hermes-agents-skills-system-capturing-workflows-as-slash-commands-without-hand-writing-skill-md/">https://www.marktechpost.com/2026/06/24/nous-research-adds-learn-to-hermes-agents-skills-system-capturing-workflows-as-slash-commands-without-hand-writing-skill-md/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>MEMPROBE</td>
+<td>2026-06-23（相邻日期&#x2F;中国时间窗口传播）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.24595v1">https://arxiv.org/abs/2606.24595v1</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>SelfCompact</td>
+<td>2026-06-22（相邻日期&#x2F;中国时间窗口传播）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.23525v1">https://arxiv.org/abs/2606.23525v1</a></td>
+</tr>
+<tr>
+<td>中文补充</td>
+<td>掘金 GPT-5.6 跳票汇总</td>
+<td>2026-06-24</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7654563844733075491">https://juejin.cn/post/7654563844733075491</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

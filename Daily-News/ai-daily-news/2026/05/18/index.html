@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-18 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-18</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-18</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-05-18</code>（Asia&#x2F;Shanghai，00:00–23:59）主线是「<strong>开源 Agent 网关密集迭代（OpenClaw <code>v2026.5.16-beta.5</code> 的 GitHub <code>Published</code> 换算落入上海当日凌晨）</strong> × <strong>企业协作厂商把会议与会话上下文通过 MCP 推进到 Codex &#x2F; Claude 工具链（Zoom 官方稿 <code>Published May 18, 2026</code>）</strong> × <strong>涉 OpenAI 组织形态与 Altman 的诉讼以“程序法窗口”收束（陪审团裁决 + 大量美媒 UTC&#x2F;美西时间戳换算后落入上海次日）</strong>」并行；同日 <strong>患者侧 AI 就诊笔记（Kin Health 种子轮）</strong>与 <strong>HF Daily <code>2026-05-18</code> 上的 Agent&#x2F;RAG&#x2F;浏览器 Agent 指纹论文</strong>补充研发视角。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenClaw GitHub Release（UTC→上海）；Zoom MCP 新闻稿与 Codex 插件仓库线索；Musk v. Altman 陪审团进展（The Verge &#x2F; TechCrunch）；Schiff 数据中心能源法案快讯（The Verge）；患者侧 AI notetaker 融资（TechCrunch）；Hugging Face Daily Papers <code>2026-05-18</code>；Codex &#x2F; Claude Code &#x2F; Hermes &#x2F; Spring AI &#x2F; LangChain &#x2F; skills 专项；arXiv 核对</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>Agent 基础设施继续“平台化”</strong>：网关侧一周多更 + 会议厂商把 <strong>组织上下文</strong>接进 MCP；<strong>法律战</strong>短期落到 <strong>诉讼时效与程序</strong>，但 <strong>治理与信任</strong>议题不会消失；<strong>医疗 + LLM</strong>仍在 <strong>准确率&#x2F;同意&#x2F;HIPAA</strong>张力下扩张</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>维护 OpenClaw&#x2F;Codex 集成：跟踪 <strong>typed tool plugins、代理 TLS、QA-Lab parity</strong>；企业 AI：评估 <strong>Zoom MCP</strong>时的 <strong>数据驻留、审计、最小权限</strong>；安全：<strong>浏览器 Agent 可被动指纹识别</strong>意味着你要重新设计 <strong>流量与脚本策略</strong></td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Codex</strong>：未发现 <strong><code>Published</code> 落入上海 <code>2026-05-18</code></strong> 的新稳定版 tag（以 <code>openai/codex</code> releases 为准）；<strong>Claude Code</strong>：未发现 <strong><code>2026-05-18（上海）</code></strong> 强对齐的新 GitHub Release tag；<strong>OpenClaw</strong>：**<code>v2026.5.16-beta.5</code>** GitHub <strong><code>Published: 2026-05-17T17:59:02Z</code> → <code>2026-05-18 01:59:02（Asia/Shanghai）</code><strong>，</strong>落入</strong>当日窗口；<strong>Hermes</strong>：未发现 <strong><code>2026-05-18（上海）</code></strong> 新 tag（<code>v2026.5.16</code> 仍属此前窗口）；<strong>Spring AI &#x2F; LangChain</strong>：未发现与 <strong><code>2026-05-18</code></strong> 日期字段硬对齐的新博文&#x2F;变更日志条目；<strong>skills</strong>：以 <strong>OpenClaw beta.5</strong>（meme-maker、<code>autoreview</code>、node inspector、Python debug、<code>defineToolPlugin</code> 等）与 <strong>Zoom×Codex</strong> 物料为主</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多通道 Agent 网关</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.16-beta.5">openclaw&#x2F;openclaw <code>v2026.5.16-beta.5</code></a></td>
+<td>GitHub <strong><code>Published: 2026-05-17T17:59:02Z</code> → <code>2026-05-18 01:59:02（Asia/Shanghai）</code></strong></td>
+<td>开源预发布</td>
+<td>Mac 端 Settings 卡片化、**<code>defineToolPlugin</code> + plugins build&#x2F;validate&#x2F;init<strong>、HTTPS 托管 forward-proxy、</strong>meme-maker &#x2F; autoreview &#x2F; node inspector &#x2F; Python debug** 等 skills、QA-Lab 与 runtime parity 闸门强化——典型“<strong>生产型 Agent 平台周更</strong>”</td>
+</tr>
+<tr>
+<td>企业 MCP &#x2F; 会议智能</td>
+<td><a target="_blank" rel="noopener" href="https://news.zoom.com/zoom-mcp-expanded-capabilities/">Zoom connects conversations and organizational context across AI tools through expanded MCP capabilities</a></td>
+<td><strong>官方稿：<code>Published May 18, 2026</code></strong></td>
+<td>官方新闻稿</td>
+<td>将 <strong>会议摘要&#x2F;转写&#x2F;录制&#x2F;Notes</strong>与 <strong>Salesforce、Workday、ServiceNow</strong> 等接进 <strong>MCP Server</strong>，并宣布 <strong>OpenAI Codex 插件</strong>与 <strong>Claude 插件</strong>路径——企业要把 <strong>上下文治理</strong>前置到集成设计</td>
+</tr>
+<tr>
+<td>Codex 插件物料</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/plugins/tree/main/plugins/zoom">openai&#x2F;plugins：<code>plugins/zoom</code></a>（Zoom 稿内链接）</td>
+<td><strong>与 Zoom 官方稿同日宣发（以稿件为准）</strong></td>
+<td>开源插件目录</td>
+<td>把 <strong>会议可验证事实</strong>导入 <strong>编码侧文档化&#x2F;自动化</strong>的参考接线</td>
+</tr>
+<tr>
+<td>诉讼 &#x2F; 治理</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/932383/jury-verdict-musk-v-altman-openai-trial">Elon Musk loses his case against Sam Altman | The Verge</a></td>
+<td><strong><code>May 18, 2026, 5:39 PM UTC</code> → <code>2026-05-19 01:39（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区传播）</strong></td>
+<td>技术媒体</td>
+<td>咨询陪审团：两条主张 <strong>诉讼时效</strong>挡下，另一条连带失败；<strong>法官接受意见</strong>；对 <strong>非营利&#x2F;关联交易叙事</strong>的工程组织仍具 <strong>合规对照</strong>价值</td>
+</tr>
+<tr>
+<td>诉讼 &#x2F; 产业</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/">Elon Musk has lost his lawsuit against Sam Altman and OpenAI | TechCrunch</a></td>
+<td><strong><code>May 18, 2026 10:34 AM PDT</code> → <code>2026-05-19 01:34（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区传播）</strong></td>
+<td>技术媒体</td>
+<td>更偏 <strong>程序法</strong>：陪审团认为 <strong>提起过晚</strong>；强调 <strong>IPO 前“结构性威胁”之一被移开</strong></td>
+</tr>
+<tr>
+<td>政策 &#x2F; 数据中心</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/policy/932472/a-new-bill-aims-to-shield-energy-consumers-from-ai-data-center-related-costs">A new bill aims to shield energy consumers from AI data center-related costs | The Verge</a></td>
+<td><strong><code>Posted May 18, 2026 at 5:56 PM UTC</code> → <code>2026-05-19 01:56（Asia/Shanghai）</code>（相邻日期&#x2F;跨时区传播）</strong></td>
+<td>技术媒体（ linked 参议员公告）</td>
+<td><strong>Energy Cost Fairness and Reliability Act</strong>：对“<strong>energy-intensive facilities</strong>”提要求以缓解电网压力——算力扩张进入 <strong>立法与电价分配</strong>讨论</td>
+</tr>
+<tr>
+<td>医疗 × LLM 产品</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/18/kin-health-raises-9m-to-build-an-ai-notetaker-for-patients/">Kin Health raises $9M to build an AI notetaker for patients | TechCrunch</a></td>
+<td><strong><code>May 18, 2026 8:26 AM PDT</code> → <code>2026-05-18 23:26（Asia/Shanghai）</code></strong></td>
+<td>技术媒体</td>
+<td>患者侧 <strong>录音→临床叙事→摘要</strong>流水线；<strong>未宣称 HIPAA 认证</strong>但强调加密与默认私有——对 <strong>同意&#x2F;准确性&#x2F;责任边界</strong>要按监管口径自己再核验</td>
+</tr>
+<tr>
+<td>论文（Agent&#x2F;编程）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.15301">Solvita: Enhancing Large Language Models for Competitive Programming via Agentic Evolution</a></td>
+<td><strong>见于</strong> HF Daily <a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-05-18"><code>2026-05-18</code></a>；<strong>arXiv 版本历史以 abs 页为准</strong></td>
+<td>论文原文</td>
+<td><strong>Planner&#x2F;Solver&#x2F;Oracle&#x2F;Hacker</strong> 闭环 + <strong>图结构知识网络</strong>沉淀经验，强调 <strong>竞赛编程 Agent</strong> 的可演进性</td>
+</tr>
+<tr>
+<td>论文（安全 × Browser Agent）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.14786">Known By Their Actions: Fingerprinting LLM Browser Agents via UI Traces</a></td>
+<td><strong>见于</strong> HF Daily <a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-05-18"><code>2026-05-18</code></a></td>
+<td>论文原文</td>
+<td><strong>被动 UI traces</strong> 可对 <strong>14 个前沿模型</strong>做高 F1 <strong>指纹识别</strong>——对 <strong>客户端自动化、Bot 治理、红队</strong>有直接含义</td>
+</tr>
+<tr>
+<td>论文（RAG 评测）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.07249">MLAIRE: Multilingual Language-Aware Information Retrieval Evaluation Protocal</a></td>
+<td><strong>见于</strong> HF Daily <a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-05-18"><code>2026-05-18</code></a></td>
+<td>论文原文</td>
+<td>把 <strong>跨语语义相关</strong>与 <strong>query-language preference</strong>拆开评测——多语 <strong>RAG&#x2F;搜索引擎</strong>上线前的指标设计参考</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenClaw 变更阅读</td>
+<td>OpenClaw Release <strong><code>v2026.5.16-beta.5</code></strong></td>
+<td>tool plugins、代理 TLS、skills、QA gates</td>
+<td>Agent 平台 &#x2F; SRE</td>
+</tr>
+<tr>
+<td>MCP 集成</td>
+<td>Zoom 官方稿 + <code>openai/plugins</code> Zoom 目录</td>
+<td>MCP server、Codex 插件、企业系统连接器</td>
+<td>企业架构 &#x2F; 集成工程师</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程热点在 <strong>“把组织上下文接到工具协议上”</strong>（Zoom MCP）与 <strong>“把 Agent 网关打磨到可发布节奏”</strong>（OpenClaw）；论文侧则提醒 <strong>浏览器 Agent 的匿名性假设可能不成立</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MCP 作为上下文总线</td>
+<td>Zoom：会议智能 + CRM&#x2F;ITSM</td>
+<td>企业侧需要 <strong>数据分级、检索边界、审计追踪</strong>与 <strong>MCP Server 版本治理</strong></td>
+</tr>
+<tr>
+<td>网关交付</td>
+<td>OpenClaw beta.5</td>
+<td><strong>插件工具链 + QA-Lab</strong>是长期维护成本中心，要提前预算</td>
+</tr>
+<tr>
+<td>评测</td>
+<td>MLAIRE &#x2F; Solvita &#x2F; “Known By Their Actions”</td>
+<td><strong>多语 RAG</strong>要同时看 <strong>语义与可读语言</strong>；<strong>浏览器自动化</strong>要假设 <strong>可被站点侧观测</strong></td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td>OpenClaw：**<code>v2026.5.16-beta.5</code> notes**</td>
+<td>直接反映 <strong>Agent 网关</strong>一周内的真实修复面</td>
+</tr>
+<tr>
+<td>必读</td>
+<td>arXiv：<strong>2605.14786（Browser Agent fingerprint）</strong></td>
+<td>安全与产品设计交叉点</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td>Zoom：<strong>expanded MCP</strong> 官方稿</td>
+<td>看清 <strong>“会议上下文商品化”</strong>的接口与叙事</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-18 00:00:00 到 2026-05-18 23:59:59（Asia&#x2F;Shanghai），并对 <strong>GitHub <code>Published</code>（UTC）</strong>、媒体 <strong>UTC&#x2F;PDT</strong> 做换算标注</li>
+<li>引用域名：<code>github.com</code>, <code>news.zoom.com</code>, <code>theverge.com</code>, <code>techcrunch.com</code>, <code>schiff.senate.gov</code>（linked）, <code>huggingface.co</code>, <code>arxiv.org</code></li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>开源发布</td>
+<td>OpenClaw <code>v2026.5.16-beta.5</code></td>
+<td><strong>UTC→上海 <code>2026-05-18</code></strong></td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.16-beta.5">https://github.com/openclaw/openclaw/releases/tag/v2026.5.16-beta.5</a></td>
+</tr>
+<tr>
+<td>官方新闻稿</td>
+<td>Zoom expanded MCP</td>
+<td><strong><code>Published May 18, 2026</code></strong></td>
+<td><a target="_blank" rel="noopener" href="https://news.zoom.com/zoom-mcp-expanded-capabilities/">https://news.zoom.com/zoom-mcp-expanded-capabilities/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Musk loses（The Verge）</td>
+<td><strong>相邻日期&#x2F;跨时区传播</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/932383/jury-verdict-musk-v-altman-openai-trial">https://www.theverge.com/ai-artificial-intelligence/932383/jury-verdict-musk-v-altman-openai-trial</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Musk loses（TechCrunch）</td>
+<td><strong>相邻日期&#x2F;跨时区传播</strong></td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/">https://techcrunch.com/2026/05/18/elon-musk-has-lost-his-lawsuit-against-sam-altman-and-openai/</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Schiff energy bill</td>
+<td><strong>相邻日期&#x2F;跨时区传播</strong></td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/policy/932472/a-new-bill-aims-to-shield-energy-consumers-from-ai-data-center-related-costs">https://www.theverge.com/policy/932472/a-new-bill-aims-to-shield-energy-consumers-from-ai-data-center-related-costs</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Kin Health $9M</td>
+<td>**上海 <code>2026-05-18</code>**（PDT→上海）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/05/18/kin-health-raises-9m-to-build-an-ai-notetaker-for-patients/">https://techcrunch.com/2026/05/18/kin-health-raises-9m-to-build-an-ai-notetaker-for-patients/</a></td>
+</tr>
+<tr>
+<td>论文聚合</td>
+<td>Hugging Face Daily Papers</td>
+<td><strong>列表页：<code>2026-05-18</code></strong></td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-05-18">https://huggingface.co/papers/date/2026-05-18</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Solvita</td>
+<td><strong>以 arXiv 为准</strong></td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.15301">https://arxiv.org/abs/2605.15301</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Known By Their Actions</td>
+<td><strong>以 arXiv 为准</strong></td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.14786">https://arxiv.org/abs/2605.14786</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>MLAIRE</td>
+<td><strong>以 arXiv 为准</strong></td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.07249">https://arxiv.org/abs/2605.07249</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

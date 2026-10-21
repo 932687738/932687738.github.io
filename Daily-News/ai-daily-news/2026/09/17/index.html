@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-17 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-17</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-17</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 17 日主线是 <strong>Anthropic 把 Claude 做成生物建模加速器，并开闸生命科学核验计划（LSVP）</strong>；HF 日刊把 <strong>科学代码环境 &#x2F; 共享 Git 记忆 &#x2F; 自进化交易与假设 Agent</strong> 推到头条。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、生命科学安全、HF 日刊、专项主题、政策监管</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）科研 Agent 从「花 2500 H100 小时出 binder」压到单卡 24 小时同水平；2）生命科学访问从实时拦截改成核验 + 离线监测；3）论文侧把仓库当 Agent 环境、把 Git 当共享记忆</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>FlashPairformer &#x2F; Big mode 开源代码；LSVP Standard vs High-risk 授权；ScienceIDE、Agora、CERA-MoA</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code &#x2F; Codex &#x2F; OpenClaw &#x2F; Hermes：未见可核验 9&#x2F;17 新稳定 tag（The New Stack 称 Projects 并行会话 beta，事实以官方为准）。Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain changelog &#x2F; Code Graph：未见 9&#x2F;17 新稳定发布。Loop &#x2F; skills：HF《EvolveTrade》《HypoEvolve》《CERA-MoA》；OpenAI《Rethinking skills》原文为 9&#x2F;11，不回填。OpenAI &#x2F; Google：未见 9&#x2F;17 新模型或开发者 API。政策：LSVP 属受控放宽，不是监管新法</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>科研 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling">How Claude is uplifting biomolecular modeling</a></td>
+<td>2026-09-17</td>
+<td>官方研究</td>
+<td>四周内优化 30+ 开源生物模型，平均约 4x；FlashPairformer 加速 triangle attention；Big mode 单节点跑 1 万+ token 分子机器。开源优化代码；Adaptyv 竞赛最高 100 万美元 Claude 额度</td>
+</tr>
+<tr>
+<td>生命科学访问</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/life-sciences-verification-program">Introducing the Life Sciences Verification Program</a></td>
+<td>2026-09-17</td>
+<td>官方发布</td>
+<td>核验后开放 Mythos&#x2F;Opus&#x2F;Sonnet，分类器对生物学更宽松。Standard Use 按团队年审；High-risk 按项目半年审。从实时拦截改成 30 天保留 + 离线监测。个人套餐与第三方平台暂不支持</td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-17">HF Daily Papers 2026-09-17</a></td>
+<td>2026-09-17</td>
+<td>论文原文</td>
+<td>ScienceIDE、ProgramDistill、Agora、EvolveTrade、HypoEvolve、CERA-MoA。科学代码当可学环境，Git 当集体记忆</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推理优化</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling">Claude × 生物建模</a></td>
+<td>先写可迁移 kernel，再对单模型做缓存&#x2F;死分支折叠；监督者不必是 kernel 专家</td>
+<td>做科学计算加速或科研 harness 的人</td>
+</tr>
+<tr>
+<td>受控放宽</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/life-sciences-verification-program">LSVP</a></td>
+<td>合法科研和滥用在单请求上分不开，所以核验组织、锁用例、事后看行为</td>
+<td>做生物&#x2F;医药 Agent 合规的人</td>
+</tr>
+<tr>
+<td>Agent 环境</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-17">HF Daily Papers 9&#x2F;17</a></td>
+<td>把世界科学代码库变成可学环境，比再堆 prompt 更稳</td>
+<td>做 explorer &#x2F; eval harness 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程增量在 <strong>「科研 Agent 的算力账」</strong> 和 <strong>「双用途访问从拦请求改成核验组织」</strong>，不在框架发版。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>科研 harness</td>
+<td>单模型 + 加速后的开源工具，GPU 小时降两个数量级</td>
+<td>先优化工具链再堆子代理；prompt 从 1.6 万字压到约 1100 字也能打平</td>
+</tr>
+<tr>
+<td>安全闸</td>
+<td>LSVP 离线监测</td>
+<td>合法&#x2F;恶意难实时二分时，把拦截换成授权范围 + 行为审计</td>
+</tr>
+<tr>
+<td>Loop &#x2F; 自进化</td>
+<td>EvolveTrade、HypoEvolve、CERA-MoA</td>
+<td>路由机制应和 Agent 一起共进化，而不是写死分类器</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; LangChain changelog &#x2F; Spring &#x2F; Code Graph &#x2F; Claude Code</td>
+<td>无 9&#x2F;17 稳定更新</td>
+<td>专项记空</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling">Claude × 生物建模</a></td>
+<td>官方把「Agent 优化别人的模型」写成可对标的实验</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/life-sciences-verification-program">LSVP</a></td>
+<td>讲清 Standard &#x2F; High-risk、数据保留和共享责任</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-17">HF Daily Papers 2026-09-17</a></td>
+<td>一天内同时出现科学代码环境和集体 Git 记忆</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-17 00:00:00 到 2026-09-17 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, huggingface.co</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方研究</td>
+<td>How Claude is uplifting biomolecular modeling</td>
+<td>2026-09-17</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling">https://www.anthropic.com/research/claude-uplifts-biomolecular-modeling</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Introducing the Life Sciences Verification Program</td>
+<td>2026-09-17</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/life-sciences-verification-program">https://www.anthropic.com/news/life-sciences-verification-program</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Hugging Face Daily Papers</td>
+<td>2026-09-17</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-17">https://huggingface.co/papers/date/2026-09-17</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

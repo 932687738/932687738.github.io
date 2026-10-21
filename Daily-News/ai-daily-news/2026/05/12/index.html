@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-05-12 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-05-12</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/05/">2026-05</a>
+          <span class="post-date">2026-05-12</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：本日同时出现 <strong>交互层（指针&#x2F;系统 UI）</strong>、<strong>平台商业化（Copilot 用量与套餐）</strong> 与 <strong>工程底座（Codex alpha、MCP 参考实现、开源 Agent 运行时）</strong> 三条线叠加——更像“产品入口改造 + 企业付费模型落地 + Agent 工具链持续打补丁”的组合拳，而不是单一模型发布日。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI &#x2F; Google DeepMind &#x2F; GitHub 官方与 changelog；Codex &#x2F; OpenClaw；MCP servers；The Verge（政策与产业）；LangChain &#x2F; Spring AI &#x2F; Hermes &#x2F; Claude Code &#x2F; Cursor Skills 专项检索；中文补充（掘金）</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>UI 入口前移</strong>：DeepMind 公布 AI 指针原则并推进 Gemini in Chrome &#x2F; Googlebook「Magic Pointer」；<strong>Copilot 用量经济实锤</strong>：个人套餐引入 flex、发布 Max，并开放 4 月用量报告；<strong>开源工程继续增量</strong>：Codex <code>0.131.0-alpha.7</code>、OpenClaw <code>beta.5</code>（上海时区落入当日窗口）、MCP everything-server 合并 Zod v4 升级 PR</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>指针交互对「少写 prompt、 pixels → 实体」的产品隐喻；企业侧 Copilot <strong>base + flex</strong> 的预算模型；MCP 参考服务器与 SDK 版本联动的 schema 栈升级</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Codex</strong>：<code>rust-v0.131.0-alpha.7</code>，GitHub <code>Published</code> <code>2026-05-12T01:58:34Z</code>（Asia&#x2F;Shanghai 当日）；<strong>Claude Code</strong>：<strong>未发现</strong> GitHub Release 页面明确落在 <code>2026-05-12</code> 的新 tag（最近相邻为 <code>v2.1.139</code> <strong>2026-05-11</strong>）；<strong>OpenClaw</strong>：<code>v2026.5.10-beta.5</code>，<code>Published</code> <code>2026-05-11T16:38:39Z</code> → <strong>落入 <code>2026-05-12 00:38</code> Asia&#x2F;Shanghai</strong>；<strong>Hermes</strong>：<strong>未发现</strong>当日新 release（最近仍为 <code>v2026.5.7</code> <strong>2026-05-07</strong>）；<strong>Spring AI</strong>：<strong>未发现</strong>当日 release（最近相邻仍为 <strong>2026-05-08</strong> milestone&#x2F;patch）；<strong>skills &#x2F; Agent Skills</strong>：<strong>未发现</strong>可核验的规范级当日大发布（以文档与社区迁移内容为主）</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>研究与竞赛</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/what-parameter-golf-taught-us/">What Parameter Golf taught us</a></td>
+<td>2026-05-12</td>
+<td>官方研究</td>
+<td>OpenAI 复盘 Parameter Golf：海量提交、<strong>编码 agent 广泛参与</strong>带来实验加速，也带来审核&#x2F;归因&#x2F;抄榜噪声；并提到 <strong>Codex triage bot</strong> 在大流量下的用法，对“人机混合评审流水线”有直接启发</td>
+</tr>
+<tr>
+<td>交互与多模态产品</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/ai-pointer/">Shaping the future of AI interaction by reimagining the mouse pointer</a></td>
+<td>2026-05-12</td>
+<td>官方研究 &#x2F; 产品路线</td>
+<td>提出指针交互四原则，并把实验 demo 放进 AI Studio；同步宣布在 <strong>Chrome</strong> 与 <strong>Googlebook</strong> 上推进更“无打断”的 pointing+语音交互，适合做端侧&#x2F;桌面 Agent 产品的人机界面参考</td>
+</tr>
+<tr>
+<td>开发者平台 &#x2F; AI 编程商业化</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/">GitHub Copilot individual plans: flex allotments, new Max plan</a></td>
+<td>2026-05-12</td>
+<td>官方公告</td>
+<td><strong>Pro &#x2F; Pro+ &#x2F; Max</strong> 的 <strong>base credits + flex allotment</strong> 结构，配合 <strong>6 月 1 日</strong>用量计费切换；付费计划下 <strong>completions &#x2F; next edit suggestions 仍不限</strong></td>
+</tr>
+<tr>
+<td>开发者工具链</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.7">Codex <code>0.131.0-alpha.7</code></a></td>
+<td>2026-05-12（<code>Published</code> UTC 对应上海当日）</td>
+<td>开源 prerelease</td>
+<td>延续多平台资产与分发矩阵；与同日 Parameter Golf 文章形成“产品体验 ↔ 开源 CLI”对照阅读</td>
+</tr>
+<tr>
+<td>开源 Agent 运行时</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.10-beta.5">OpenClaw <code>v2026.5.10-beta.5</code></a></td>
+<td>2026-05-12（Asia&#x2F;Shanghai；<code>Published</code> <code>2026-05-11T16:38:39Z</code>）</td>
+<td>开源 prerelease</td>
+<td>Fly Machines 环境识别、Fal 图片编辑路由、**<code>session.agentToAgent.maxPingPongTurns</code> 上限提升到 20<strong>、Slack unfurl、</strong><code>/context map</code>**、Codex app-server 超时客户端回收、pnpm 11 等——偏“平台化运营+可靠性补丁”</td>
+</tr>
+<tr>
+<td>MCP 工程</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/servers/pull/4136">servers#4136：upgrade everything-server to zod v4, latest MCP sdk</a></td>
+<td>2026-05-12（Merged <code>2026-05-12T14:15:10Z</code>）</td>
+<td>开源合并</td>
+<td>参考实现升级 <strong>Zod v4</strong> 与 **<code>@modelcontextprotocol/sdk</code> <code>1.29.0</code>**，展示 <strong>v3→v4</strong> API 迁移样例；自述 <strong>不改变 MCP tool schema 行为</strong></td>
+</tr>
+<tr>
+<td>AI 政策与授权</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/928534/rsl-media-human-consent-standard">Human Consent Standard for AI licensing（RSL Media）</a></td>
+<td>2026-05-12</td>
+<td>技术媒体 &#x2F; 产业标准</td>
+<td>把“机器人协议信号”扩展到 <strong>肖像&#x2F;角色&#x2F;作品本体</strong>；六月 registry 预期上线——对训练数据合规、爬虫策略与安全红线有前置影响</td>
+</tr>
+<tr>
+<td>Copilot 产品体验</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-12-copilot-code-review-comment-experience-improvements/">Copilot code review: comment experience improvements</a></td>
+<td>2026-05-12</td>
+<td>官方 changelog</td>
+<td>PR 场景：<strong>severity</strong> + <strong>分组 comment</strong>，降低大 PR 噪声；依赖新 PR 体验开关</td>
+</tr>
+<tr>
+<td>Copilot 迁移配套</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-12-april-reports-are-now-available-to-prepare-for-usage-based-billing/">April reports for usage-based billing</a></td>
+<td>2026-05-12</td>
+<td>官方 changelog</td>
+<td>4 月用量→credits 的“预演报表”，帮助个人与企业在 <strong>6&#x2F;1</strong> 前估预算（文档提示有统计口径边界）</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>竞赛运营与 agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/what-parameter-golf-taught-us/">Parameter Golf 复盘</a></td>
+<td>低比特训练、量化、评测策略边界、agent 辅助提交流程</td>
+<td>ML 平台 &#x2F; DevRel &#x2F; 研究团队</td>
+</tr>
+<tr>
+<td>MCP schema 栈</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/servers/pull/4136">PR #4136 描述与 diff 导向阅读</a></td>
+<td>Zod v4：<code>z.url()</code>、<code>z.looseObject()</code>、SDK 版本对齐</td>
+<td>MCP server 维护者</td>
+</tr>
+<tr>
+<td>Copilot 计费</td>
+<td><a target="_blank" rel="noopener" href="https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-individuals">Usage-based billing 文档入口（GitHub Docs）</a></td>
+<td>base&#x2F;flex、仪表盘读数</td>
+<td>需要给研发部做预算模型的人</td>
+</tr>
+<tr>
+<td>指针交互原型</td>
+<td><a target="_blank" rel="noopener" href="https://aistudio.google.com/">AI Pointer demos（AI Studio）</a>（文内链接）</td>
+<td>pointing+语音、上下文绑定</td>
+<td>端侧产品 &#x2F; 交互设计</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：<strong>未发现</strong> LangChain 官方博客在 <code>2026-05-12</code> 的新发长文；同日工程注意力更多在 <strong>IDE&#x2F;浏览器入口</strong>、<strong>GitHub Copilot 计费与 code review 交互</strong>、以及 <strong>MCP 参考实现依赖升级</strong> 上。LangChain 侧的 <strong>Interrupt 会议</strong>处于 <strong>2026-05-13<code>–</code>05-14</strong>（<strong>相邻日期</strong>）窗口，可作为 community 热度背景。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>MCP 实现面</td>
+<td>everything-server 合并 Zod v4 升级</td>
+<td>给“协议不变、实现库升级”的场景一套可抄的迁移路径；注意 <strong>SDK 小版本</strong>与 schema 库联动</td>
+</tr>
+<tr>
+<td>Agent 运行态</td>
+<td>OpenClaw 继续堆多通道与沙箱策略细粒度开关</td>
+<td>多 Agent ping‑pong、消息跨上下文权限，本质是 ** blast radius 控制**，企业自建 agent 也要 Product+Security 同桌设参</td>
+</tr>
+<tr>
+<td>交互层</td>
+<td>DeepMind AI Pointer</td>
+<td>把“选区即 prompt”推到 UI 预设里，减少长提示与粘贴摩擦</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/what-parameter-golf-taught-us/">Parameter Golf 复盘</a></td>
+<td>一手总结 agent 时代开放式技术竞技的治理难题</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/ai-pointer/">DeepMind：AI pointer</a></td>
+<td>看懂 Google 如何把多模态理解嵌进最基础的指针交互</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/">Copilot 个人套餐与 flex</a></td>
+<td>直接决定团队 IDE agent 用量规划</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/928534/rsl-media-human-consent-standard">The Verge：Human Consent Standard</a></td>
+<td>训练&#x2F;爬虫&#x2F;真人素材授权的新信号，需和法务一起读</td>
+</tr>
+<tr>
+<td>延伸（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.langchain.com/introducing-interrupt-langchain-conference">Introducing Interrupt（LangChain 会议预热）</a></td>
+<td>Agent 社区议程风向标（会议日：2026-05-13 起）</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-05-12 00:00:00 到 2026-05-12 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, deepmind.google, aistudio.google.com, github.com, github.blog, theverge.com, rslmedia.org, juejin.cn, blog.langchain.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>What Parameter Golf taught us</td>
+<td>2026-05-12</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/what-parameter-golf-taught-us/">https://openai.com/index/what-parameter-golf-taught-us/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Reimagining the mouse pointer（AI pointer）</td>
+<td>2026-05-12</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/ai-pointer/">https://deepmind.google/blog/ai-pointer/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>GitHub Copilot individual plans（flex &#x2F; Max）</td>
+<td>2026-05-12</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/">https://github.blog/news-insights/company-news/github-copilot-individual-plans-introducing-flex-allotments-in-pro-and-pro-and-a-new-max-plan/</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>April reports for usage-based billing</td>
+<td>2026-05-12</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-12-april-reports-are-now-available-to-prepare-for-usage-based-billing/">https://github.blog/changelog/2026-05-12-april-reports-are-now-available-to-prepare-for-usage-based-billing/</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Copilot code review comment experience improvements</td>
+<td>2026-05-12</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-05-12-copilot-code-review-comment-experience-improvements/">https://github.blog/changelog/2026-05-12-copilot-code-review-comment-experience-improvements/</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenAI Codex <code>0.131.0-alpha.7</code></td>
+<td>2026-05-12（Asia&#x2F;Shanghai）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.7">https://github.com/openai/codex/releases/tag/rust-v0.131.0-alpha.7</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>OpenClaw <code>v2026.5.10-beta.5</code></td>
+<td>2026-05-12（Asia&#x2F;Shanghai；UTC 相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.5.10-beta.5">https://github.com/openclaw/openclaw/releases/tag/v2026.5.10-beta.5</a></td>
+</tr>
+<tr>
+<td>开源合并</td>
+<td>MCP servers PR #4136（Zod v4）</td>
+<td>2026-05-12</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/modelcontextprotocol/servers/pull/4136">https://github.com/modelcontextprotocol/servers/pull/4136</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Human Consent Standard（RSL Media）</td>
+<td>2026-05-12</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/928534/rsl-media-human-consent-standard">https://www.theverge.com/ai-artificial-intelligence/928534/rsl-media-human-consent-standard</a></td>
+</tr>
+<tr>
+<td>中文补充</td>
+<td>掘金：ChatGPT 更新节奏与趋势（社区稿）</td>
+<td>2026-05-12</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7638839672550785062">https://juejin.cn/post/7638839672550785062</a></td>
+</tr>
+<tr>
+<td>社区预热（相邻日期）</td>
+<td>Introducing Interrupt（LangChain conference）</td>
+<td>发布日未在抓取正文顶部展示；会议为 2026-05-13<code>–</code>05-14（相邻日期）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.langchain.com/introducing-interrupt-langchain-conference">https://blog.langchain.com/introducing-interrupt-langchain-conference</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

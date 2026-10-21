@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-06-01 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-06-01</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/06/">2026-06</a>
+          <span class="post-date">2026-06-01</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：<code>2026-06-01</code>（Asia&#x2F;Shanghai）是 <strong>「Anthropic 抢跑 IPO 保密申报 + Copilot&#x2F;Codex 计费切换生效日 + 开源 Agent 栈小版本」</strong>——<strong>Anthropic</strong> 于当日向 SEC <strong>保密提交 Form S-1</strong>（估值语境约 <strong>$965B</strong>）；<strong>GitHub Copilot PRU→AI Credits</strong> 与 <strong>OpenAI Codex Pro 2x promo 截止</strong> 均在 <strong>6&#x2F;1</strong> 起改变开发者成本模型；<strong>OpenAI Codex <code>rust-v0.136.0</code></strong> 与 <strong>LangGraph SDK <code>0.4.1</code></strong> 同日发布；监管&#x2F;产业侧 <strong>佛罗里达州起诉 OpenAI</strong>、<strong>FTC 深化微软云&#x2F;AI 反垄断调查</strong>、<strong>Nvidia RTX Spark</strong> 消费级 AI PC 芯片亮相。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Anthropic&#x2F;OpenAI 官方与监管；GitHub Copilot&#x2F;Codex 定价；LangGraph&#x2F;Codex GitHub release；The Verge&#x2F;TechCrunch&#x2F;CNBC；NIST&#x2F;DoD 政策语境；Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;skills 专项；中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td><strong>资本侧</strong>：Anthropic <strong>保密 IPO</strong> 抢在 OpenAI&#x2F;SpaceX 窗口前占位；<strong>工程侧</strong>：<strong>6&#x2F;1 双计费切换</strong> 迫使团队建立 <strong>token&#x2F;credits guard</strong>；<strong>产品侧</strong>：<strong>Microsoft Build</strong> 周预热 <strong>MAI-Thinking-1</strong> 与 <strong>Copilot super app</strong>；<strong>硬件侧</strong>：<strong>RTX Spark</strong> 统一内存面向 <strong>本地 Agent</strong></td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><strong>Copilot 管理员</strong> 核对 <strong>AI Credits</strong> 与 org promo；<strong>Codex Pro</strong> 用户确认 <strong>6&#x2F;1 起配额倍数</strong>；跟踪 <strong>Anthropic S-1</strong> 后续公开招股书时间节点；评估 <strong>Codex 0.136.0</strong>（OSC8 链接、rmcp 1.7.0）与 <strong>langgraph-sdk 0.4.1</strong>（v3 streaming）升级</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：<strong>无 2026-06-01 新 release</strong>（最近 <strong><code>v2.1.154</code> 为 2026-05-28</strong>）；<strong>Codex</strong>：**<code>rust-v0.136.0</code> <code>Published: 2026-06-01T17:49:22Z</code><strong>；</strong>OpenClaw&#x2F;Hermes<strong>：</strong>无 6&#x2F;1 新 release<strong>（生态报道延续 <strong>Hermes 日 token 领先</strong> 叙事，非当日官方发布）；</strong>Spring AI<strong>：</strong>无 6&#x2F;1 官方 release&#x2F;博文<strong>；</strong>skills<strong>：</strong>无重大官方 skills 发布**，社区聚焦 <strong>Agent Skills 人机交互 spec</strong> 讨论</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Anthropic &#x2F; IPO</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic confidentially submits draft S-1 to the SEC</a></td>
+<td><strong>2026-06-01</strong></td>
+<td>官方发布</td>
+<td><strong>保密申报</strong> 开启上市路径；股数&#x2F;定价未定；与 <strong>$965B 估值</strong>、<strong>Claude Code</strong> 企业叙事联动</td>
+</tr>
+<tr>
+<td>监管 &#x2F; OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/940978/florida-is-suing-openai-over-user-safety-concerns">Florida sues OpenAI over user safety（The Verge）</a></td>
+<td><strong>2026-06-01</strong></td>
+<td>政策&#x2F;诉讼</td>
+<td>州 AG 指控 <strong>ChatGPT 安全与成瘾风险</strong>；寻求 <strong>民事处罚与法院命令</strong>（刑事调查进行中）</td>
+</tr>
+<tr>
+<td>GitHub Copilot &#x2F; 计费</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">Copilot usage-based billing 生效（6&#x2F;1）</a></td>
+<td><strong>2026-06-01 起</strong></td>
+<td>官方政策</td>
+<td><strong>PRU 结束</strong> → <strong>AI Credits（1 credit&#x3D;$0.01）</strong>；Chat&#x2F;Agent&#x2F;Code Review <strong>按 token</strong></td>
+</tr>
+<tr>
+<td>OpenAI &#x2F; Codex 配额</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/codex/pricing">Codex Pricing — Pro 2x promo 截止 2026-05-31</a></td>
+<td><strong>2026-06-01 起恢复标准倍数</strong></td>
+<td>官方定价</td>
+<td><strong>Pro $100</strong>：有效 <strong>5h 限额从 2x→标准</strong>；长时 cloud task 需重算预算</td>
+</tr>
+<tr>
+<td>开源 &#x2F; Codex CLI</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.136.0">openai&#x2F;codex <code>rust-v0.136.0</code></a></td>
+<td><strong><code>Published: 2026-06-01T17:49:22Z</code></strong></td>
+<td>开源发布</td>
+<td><strong>OSC 8 超链接</strong>、markdown 表格 KV 渲染、<strong>rmcp 1.7.0</strong>、远程 exec-server <strong>API-key 注册</strong></td>
+</tr>
+<tr>
+<td>LangGraph &#x2F; SDK</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.1">langgraph-sdk&#x3D;&#x3D;0.4.1</a></td>
+<td><strong><code>Published: 2026-06-01T15:23:38Z</code></strong></td>
+<td>开源发布</td>
+<td><strong>v3 streaming</strong> 解码器、<code>RemoteGraph</code> v3、<strong>tools_agent</strong> 无状态修复</td>
+</tr>
+<tr>
+<td>Microsoft &#x2F; Build 预热</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/report/940861/microsoft-build-ai-models-windows-dev-mode-what-to-expect">Microsoft Build：MAI-Thinking-1 与 Copilot super app（The Verge）</a></td>
+<td><strong>2026-06-01</strong> 报道</td>
+<td>技术媒体</td>
+<td><strong>首个自研 reasoning 模型</strong>（非蒸馏）；<strong>Windows 11 开发者优化体验</strong>；Copilot <strong>super app 仍为 mockup</strong></td>
+</tr>
+<tr>
+<td>反垄断 &#x2F; 云+AI</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/policy/940220/microsoft-ftc-antitrust-investigation-cloud-ai">FTC 深化微软云与 AI 竞争调查（The Verge）</a></td>
+<td><strong>2026-06-01</strong></td>
+<td>政策监管</td>
+<td>CID 聚焦 <strong>Azure 排他</strong>、<strong>AI 捆绑</strong> 与 <strong>M365+AI 搭售</strong> 潜在违法风险</td>
+</tr>
+<tr>
+<td>硬件 &#x2F; 边缘 AI</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/940589/nvidia-rtx-spark-n1-n1x-laptop-desktop-pc-cpu-gpu-ai-release-date">Nvidia RTX Spark 消费级 AI PC 芯片（The Verge）</a></td>
+<td><strong>2026-06-01</strong></td>
+<td>产品发布</td>
+<td><strong>GB10 家族</strong> 进笔记本&#x2F;迷你 PC；<strong>128GB 统一内存</strong> 支撑 <strong>120B 级本地 Agent</strong>；Build 周将演示 <strong>OpenShell + Windows 安全 containment</strong></td>
+</tr>
+<tr>
+<td>媒体 &#x2F; IPO 语境</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/">Anthropic files to go public（TechCrunch）</a></td>
+<td><strong>2026-06-01</strong></td>
+<td>技术媒体</td>
+<td>与 OpenAI <strong>IPO 竞速</strong>、SpaceX <strong>6&#x2F;12</strong> 窗口形成 <strong>2026 超级上市季</strong></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Copilot 6&#x2F;1 迁移</td>
+<td><a target="_blank" rel="noopener" href="https://docs.github.com/en/copilot/concepts/billing/usage-based-billing-for-organizations-and-enterprises">Usage-based billing 官方文 + Docs</a></td>
+<td>AI Credits、token 计价、Business&#x2F;Enterprise <strong>6–8 月 promo credits</strong></td>
+<td>Copilot 管理员</td>
+</tr>
+<tr>
+<td>Codex 配额与升级</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/codex/pricing">OpenAI Codex Pricing</a> + <a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.136.0">v0.136.0 changelog</a></td>
+<td><strong>6&#x2F;1 配额恢复</strong>、MCP&#x2F;rmcp、TUI 渲染</td>
+<td>Codex CLI 重度用户</td>
+</tr>
+<tr>
+<td>LangGraph 流式</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.1">langgraph-sdk 0.4.1 release</a></td>
+<td><strong>stream v3</strong>、<code>interleave_projections</code></td>
+<td>LangGraph 平台&#x2F;SDK 集成方</td>
+</tr>
+<tr>
+<td>Anthropic 上市文件</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic S-1 保密申报公告</a></td>
+<td>Rule 135、SEC 审查流程</td>
+<td>关注 <strong>AI 上市公司治理</strong> 的研发&#x2F;投资读者</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：Agent 工程在 <strong>6&#x2F;1</strong> 呈现 <strong>「商业计费落地 + 开源 SDK 跟进」</strong>——Copilot&#x2F;Codex <strong>同日切换</strong> 把 <strong>长时 Agent 会话</strong> 推入 <strong>可计量成本</strong> 时代；LangGraph <strong>SDK 0.4.1</strong> 继续铺 <strong>v3 事件流</strong> 基建，与 <strong>Google Antigravity &#x2F; Gemini Spark</strong>（Build 周）的 <strong>常驻 Agent</strong> 叙事形成对照。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>计费范式</td>
+<td><strong>Copilot credits + Codex 标准配额 6&#x2F;1 生效</strong></td>
+<td>为 <strong>multi-agent 并行</strong> 设 <strong>per-session cap</strong>；Completions 仍免费可作 <strong>轻量补位</strong></td>
+</tr>
+<tr>
+<td>Codex 运行时</td>
+<td><strong>0.136.0</strong> 强化 TUI&#x2F;MCP</td>
+<td><strong>OSC8</strong> 与 <strong>表格 KV 渲染</strong> 改善 <strong>终端 Agent UX</strong>；升级前测 <strong>rmcp 1.7.0</strong> 兼容性</td>
+</tr>
+<tr>
+<td>LangGraph SDK</td>
+<td><strong>0.4.1 + v3 streaming</strong></td>
+<td>迁移 <strong><code>astream_events(version=&quot;v3&quot;)</code></strong> 前对齐 <strong>RemoteGraph</strong> 与 <strong>messages 投影</strong></td>
+</tr>
+<tr>
+<td>OpenClaw vs Hermes</td>
+<td><strong>无 6&#x2F;1 release</strong>；生态 <strong>token 用量榜</strong> 持续发酵</td>
+<td>选型看 <strong>Skill 治理（OpenClaw）</strong> vs <strong>自进化 skills（Hermes）</strong> 与 <strong>CVE&#x2F;审计</strong> 风险，非单日版本</td>
+</tr>
+<tr>
+<td>Spring AI</td>
+<td><strong>无 6&#x2F;1 官方更新</strong></td>
+<td>继续关注 <strong>2.0.0-M6+ MCP 注解</strong> 与 <strong>1.1.7</strong> 稳定线，勿将社区博文当作官方 release</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><strong>Anthropic 保密 S-1 官方公告</strong></td>
+<td>理解 <strong>2026 AI 超级 IPO 季</strong> 的第一张多米诺</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><strong>GitHub Copilot + OpenAI Codex 6&#x2F;1 计费文档</strong></td>
+<td>直接影响 <strong>团队 Agent 预算与选型</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>Codex 0.136.0 + langgraph-sdk 0.4.1</strong></td>
+<td>当日 <strong>可核验</strong> 的两条 <strong>开源工程 changelog</strong></td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><strong>The Verge：Microsoft Build &#x2F; FTC Microsoft</strong></td>
+<td><strong>企业 reasoning 模型</strong> 与 <strong>云+AI 反垄断</strong> 并行升温</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><strong>Nvidia RTX Spark</strong></td>
+<td><strong>本地 120B Agent</strong> 与 <strong>Windows containment</strong> 的硬件前提</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-06-01 00:00:00 到 2026-06-01 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：anthropic.com, theverge.com, techcrunch.com, cnbc.com, github.blog, docs.github.com, developers.openai.com, github.com, nist.gov（相邻）, meritalk.com（相邻）</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Anthropic 保密提交 S-1</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/confidential-draft-s1-sec">https://www.anthropic.com/news/confidential-draft-s1-sec</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Florida 起诉 OpenAI</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/940978/florida-is-suing-openai-over-user-safety-concerns">https://www.theverge.com/ai-artificial-intelligence/940978/florida-is-suing-openai-over-user-safety-concerns</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Anthropic IPO（TechCrunch）</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/">https://techcrunch.com/2026/06/01/anthropic-files-to-go-public/</a></td>
+</tr>
+<tr>
+<td>官方政策</td>
+<td>GitHub Copilot usage-based billing 生效</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/">https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/</a></td>
+</tr>
+<tr>
+<td>官方定价</td>
+<td>OpenAI Codex promo 截止后配额</td>
+<td>2026-06-01 起</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/codex/pricing">https://developers.openai.com/codex/pricing</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>openai&#x2F;codex rust-v0.136.0</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.136.0">https://github.com/openai/codex/releases/tag/rust-v0.136.0</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>langgraph-sdk 0.4.1</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.1">https://github.com/langchain-ai/langgraph/releases/tag/sdk%3D%3D0.4.1</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Microsoft Build 预热</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/report/940861/microsoft-build-ai-models-windows-dev-mode-what-to-expect">https://www.theverge.com/report/940861/microsoft-build-ai-models-windows-dev-mode-what-to-expect</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>FTC 微软云&#x2F;AI 调查</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/policy/940220/microsoft-ftc-antitrust-investigation-cloud-ai">https://www.theverge.com/policy/940220/microsoft-ftc-antitrust-investigation-cloud-ai</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Nvidia RTX Spark</td>
+<td>2026-06-01</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/tech/940589/nvidia-rtx-spark-n1-n1x-laptop-desktop-pc-cpu-gpu-ai-release-date">https://www.theverge.com/tech/940589/nvidia-rtx-spark-n1-n1x-laptop-desktop-pc-cpu-gpu-ai-release-date</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-09-15 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-09-15</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/09/">2026-09</a>
+          <span class="post-date">2026-09-15</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：9 月 15 日主线是 <strong>Google 把 Gemini 3.8 Live &#x2F; Live Extended Thinking 做成「边说边干」的语音 Agent 栈</strong>；HF 日刊把 <strong>递归自改进 &#x2F; Computer-Use 安全 &#x2F; GUI Agent</strong> 推到头条。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商、语音 Agent、HF 日刊、专项主题、政策监管、中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）语音模型从级联 STT&#x2F;TTS 转到原生 speech-to-speech，并异步跑工具；2）Extended Thinking 一边说话一边做多步推理；3）论文侧 RSI 与「审计看得见、拦不住」同时出现</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Gemini Live API（$0.005&#x2F;min 入、$0.018&#x2F;min 出）；LiveKit&#x2F;LangChain&#x2F;Pipecat 等接入；Dream-RSI &#x2F; RSIAgent &#x2F; HazardAuditor</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code &#x2F; Codex &#x2F; OpenClaw &#x2F; Hermes：未见可核验 9&#x2F;15 新稳定 tag（OpenClaw 2026.9.14 不回填）。Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain·LangGraph changelog &#x2F; Code Graph：未见 9&#x2F;15 新稳定发布。LangChain 仅作为 Google Live API 合作伙伴被点名。Loop &#x2F; skills：HF《Dream-RSI》《RSIAgent》与 Google live api skill 同构。Anthropic：当日为企业成本管控 webinar 与 Claude 工作坊，不是新模型。政策：未见 AI Office 当日官方新公告</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>语音 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/">Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking</a></td>
+<td>2026-09-15</td>
+<td>官方发布</td>
+<td>97 语种中途切换；视觉接地；后台异步 tool&#x2F;API；Extended Thinking 边说边推理。Workspace&#x2F;Search&#x2F;Gemini app 同步铺开</td>
+</tr>
+<tr>
+<td>开发者 API</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/">Build real-time voice applications with Gemini 3.8 Live</a></td>
+<td>2026-09-15</td>
+<td>官方发布</td>
+<td>Live API 定价与异步函数调用、字母数字精度、增量结构化更新；合作伙伴含 LangChain &#x2F; LiveKit &#x2F; Pipecat</td>
+</tr>
+<tr>
+<td>论文</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-15">HF Daily Papers 2026-09-15</a></td>
+<td>2026-09-15</td>
+<td>论文原文</td>
+<td>Vidu S2、Atria Dawn、ZGCM-1、Dream-RSI、RSIAgent、HazardAuditor、LLaDA-UI。部分 arXiv submitted 为 9&#x2F;14，以 HF 日刊日为准</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>语音 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/">Gemini 3.8 Live</a></td>
+<td>先回一句「我去查」，工具在后台跑，主对话不中断</td>
+<td>做客服&#x2F;入职导览&#x2F;语音下单的人</td>
+</tr>
+<tr>
+<td>Live API</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/">开发者音频套件</a></td>
+<td>不要再自己拼级联；用 Live API + 媒体中间件</td>
+<td>要从 WebSocket 语音 demo 上生产的人</td>
+</tr>
+<tr>
+<td>Agent 自改进</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-15">HF Daily Papers 9&#x2F;15</a></td>
+<td>用历史探索树做「做梦」回放，少烧在线 rollout</td>
+<td>做 harness &#x2F; explorer 的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程增量在 <strong>「语音通道也能跑异步工具」</strong> 和 <strong>「RSI 要可回放、安全闸要能拦」</strong>，不在框架发版。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>语音 + 工具</td>
+<td>Gemini Live 异步 function calling</td>
+<td>语音 Agent 的超时不应卡死主对话；进度用口头旁白</td>
+</tr>
+<tr>
+<td>Loop &#x2F; RSI</td>
+<td>Dream-RSI、RSIAgent</td>
+<td>explorer 策略要能离线评估；新环境先造可复用记忆再上线</td>
+</tr>
+<tr>
+<td>Computer-Use 安全</td>
+<td>HazardAuditor</td>
+<td>可执行威胁要进评测，不能只看截图分类</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; LangChain changelog &#x2F; Spring &#x2F; Code Graph &#x2F; Claude Code</td>
+<td>无 9&#x2F;15 稳定更新</td>
+<td>专项记空</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/">Gemini 3.8 Live</a></td>
+<td>官方把「边说边干」写成可对标的产品能力</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-15">HF Daily Papers 2026-09-15</a></td>
+<td>一天内同时出现 RSI、GUI Agent 和 Computer-Use 审计</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/">Gemini Audio for developers</a></td>
+<td>看定价和合作伙伴名单，决定要不要换级联架构</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-09-15 00:00:00 到 2026-09-15 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：blog.google, huggingface.co</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Introducing Gemini 3.8 Live and 3.8 Live Extended Thinking</td>
+<td>2026-09-15</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Build real-time voice applications with Gemini 3.8 Live</td>
+<td>2026-09-15</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/">https://blog.google/innovation-and-ai/technology/developers-tools/build-real-time-voice-applications-gemini-audio/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>Hugging Face Daily Papers</td>
+<td>2026-09-15</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-09-15">https://huggingface.co/papers/date/2026-09-15</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
