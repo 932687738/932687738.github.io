@@ -1,7 +1,7 @@
 # 参考配置 https://github.com/hooozen/hexo-theme-test/blob/main/_config.tranquility.yml
 slogan: “古柯”
 email: 932687738@qq.com
-logo: "/images/logo.svg"
+logo: "/images/logo.png"
 
 mathjax: false # 加载 LateX 数学公式库
 
@@ -9,7 +9,6 @@ favicon: # 配置网页图标
   small: /images/favicon-16x16.png
   medium: /images/favicon-32x32.png
   apple_touch_icon: /images/apple-touch-icon.png
-  safari_pinned_tab: /images/logo.svg
 
 subpage: # 开启“子页”功能，详见 README
   enable: true
