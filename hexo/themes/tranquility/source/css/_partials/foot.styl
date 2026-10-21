@@ -7,53 +7,62 @@
   color: #aaa;
   margin: 0 auto;
   max-width: 1200px;
-  overflow: hidden;
-  padding: 40px 0 10px;
+  padding: 48px 20px 28px;
+  text-align: center;
 }
 
-.foot-item {
-  margin: 22px;
-  line-height: 40px;
-}
-
-.foot__head {
-  margin: 0 20px 50px;
+.foot-verse {
+  margin: 0;
+  font-family: sourceHanSerif, serif;
   font-size: 36px;
-  font-weight: bold;
-  font-family: sourceHanSerif;
-  cursor: default;
-  display: flex;
-  flex-wrap: wrap;
-
-  .foot-line {
-    margin: 0 10px;
-  }
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.12em;
+  color: #aaa;
 }
 
-.foot__body {
+.foot-meta {
   display: flex;
   flex-wrap: wrap;
-}
-
-.foot-item__head {
-  font-size: 24px;
-  margin: 10px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 8px 28px;
+  margin-top: 28px;
 }
 
 .foot-link {
-  display: inline-block;
-  padding-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaa;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.foot a:hover {
+  color: #fff;
+}
+
+.foot a:focus-visible {
+  outline: 1px solid #ddd;
+  outline-offset: 4px;
 }
 
 .copyright {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  margin-top: 28px;
   font-size: $font-size-smaller;
-  color: $black-light;
+  letter-spacing: 0.12em;
+  color: #aaa;
+}
 
-  a:hover {
-    color: $black-lighter;
+.copyright a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 415px) {
+  .foot-verse {
+    font-size: 28px;
   }
 }

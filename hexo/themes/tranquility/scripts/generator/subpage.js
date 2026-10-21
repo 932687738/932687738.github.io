@@ -45,11 +45,6 @@ function subpage_generator(locals) {
 
   if (!ctx.theme.config.subpage.enable) { return; }
 
-  const config = ctx.config;
-  const perPage = config.subpage_generator.per_page;
-  const paginationDir = config.pagination_dir || 'page';
-  const orderBy = config.subpage_generator.order_by || '-date';
-
   return ctx.theme.config.subpage.pages.reduce((result, page) => {
     if (page.dailyNews) {
       return result;
@@ -65,30 +60,27 @@ function subpage_generator(locals) {
         data: {
           ...page,
           module_path: getModulePath(page),
-          tags: []
+          tags: [],
+          show_posts: false
         }
       }]);
     }
 
-    const posts = category.posts.sort(orderBy);
-    posts.data.sort((a, b) => (b.sticky || 0) - (a.sticky || 0));
     const ids = getTagIds(category);
 
     const Tag = ctx.model('Tag');
     const tags = Tag.find({ _id: { $in: ids } });
 
-    const data = pagination(path, posts, {
-      perPage,
+    return result.concat([{
+      path,
       layout: ['category', 'archive', 'index'],
-      format: paginationDir + '/%d/',
       data: {
         ...page,
         module_path: getModulePath(page),
-        tags
+        tags,
+        show_posts: false
       }
-    });
-
-    return result.concat(data);
+    }]);
   }, []);
 };
 

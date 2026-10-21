@@ -154,20 +154,10 @@ foot:
     - "长相知"
     - "不相疑"
 
-links: # 朋友
-  - name: "Theme Tranquility"
-    url: https://github.com/hooozen/hexo-theme-tranquility
-
-social: # 账号
-  - name: "github"
+social:
+  - name: GitHub
     icon: "/images/logo-github.svg"
-    url: https://github.com/
-  - name: "微信公众号"
-    icon: "/images/logo-wx.svg"
-    url: 
-  - name: "知乎"
-    icon: "/images/logo-zh.svg"
-    url: 
+    url: https://github.com/932687738 
 
 reward: # 赞赏
   enable: true

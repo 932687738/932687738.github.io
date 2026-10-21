@@ -89,57 +89,26 @@
     </div>
     <div class="foot">
       <div class="foot-inner">
-        <div class="foot__head">
-          {% for line in theme.foot.title %}
-            <div class="foot-line">
-              {% for word in line %}
-                <div class="matts">{{ word }}</div>
-              {% endfor %}
-            </div>
-          {% endfor %}
-        </div>
-        <div class="foot__body">
-          {% if theme.links %}
-            <div class="foot-item">
-              <div class="foot-item__head">朋友</div>
-              <div class="foot-item__body">
-                {% for link in theme.links %}
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="{{ url_for("/images/icon/icon-link.svg") }}"/>
-                    <a class="foot-link" href="{{ link.url }}">{{ link.name }}</a>
-                  </div>
-                {% endfor %}
-                <div class="text">
-                  <img alt="link" height="20px" width="20px" src="{{ url_for("/images/icon/icon-link+.svg") }}"/>
-                  <a class="foot-link"
-                     href="mailto:{{ theme.email }}?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
-                  申请友链</a>
-                </div>
-              </div>
-            </div>
-          {% endif %}
+        {% if theme.foot and theme.foot.title %}
+          <p class="foot-verse">{% for line in theme.foot.title %}{{ line }}{% if not loop.last %}　{% endif %}{% endfor %}</p>
+        {% endif %}
+        <div class="foot-meta">
           {% if theme.social %}
-            <div class="foot-item">
-              <div class="foot-item__head">账号</div>
-              <div class="foot-item__body">
-                {% for link in theme.social %}
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="{{ url_for(link.icon) }}"/>
-                    <a class="foot-link" href="{{ link.url }}">{{ link.name }}</a>
-                  </div>
-                {% endfor %}
-              </div>
-            </div>
+            {% for link in theme.social %}
+              {% if link.url %}
+                <a class="foot-link" href="{{ link.url }}">
+                  <img alt="" height="16" width="16" src="{{ url_for(link.icon) }}"/>
+                  {{ link.name }}
+                </a>
+              {% endif %}
+            {% endfor %}
           {% endif %}
-          <div class="foot-item">
-            <div class="foot-item__head">联系</div>
-            <div class="foot-item__body">
-              <div class="text">
-                <img alt="link" height="20px" width="20px" src="{{ url_for("/images/icon/icon-email.svg") }}"/>
-                <a class="foot-link" href="mailto:{{ theme.email }}">{{ theme.email }}</a>
-              </div>
-            </div>
-          </div>
+          {% if theme.email %}
+            <a class="foot-link" href="mailto:{{ theme.email }}">
+              <img alt="" height="16" width="16" src="{{ url_for('/images/icon/icon-email.svg') }}"/>
+              {{ theme.email }}
+            </a>
+          {% endif %}
         </div>
         <div class="copyright">
           <a href="{{ config.url }}">{{ config.title }}</a>
