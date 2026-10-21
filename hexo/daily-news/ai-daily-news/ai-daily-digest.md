@@ -2,6 +2,92 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-10-20
+
+### 今日总览
+
+**一句话结论**：DeepSeek 把生产推理栈的离线核心放出来了；同一天 GitHub 开始在安装阶段拦截恶意 npm 包，OpenAI 则把生命科学里的项目协调收成 Agent 工作流。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI、Anthropic、Google、GitHub Changelog、DeepSeek、Langfuse、Hugging Face、AWS、Claude Code、Codex、LangGraph、Spring、政策与中文补充 |
+| 核心趋势 | 推理框架开始公开「离线核心 / 在线服务」的分界；供应链防护前移到装包；Agent 产品在往多代理、会话隔离和多租户沙箱收 |
+| 可直接关注 | DeepInfer 缺的三块在线组件；GitHub 包防火墙目前只覆盖 npm；Langfuse 4.65 的自建网关可以关掉采集 |
+| 专项检索结论 | Langfuse v4.65.0 在北京时间 10 月 20 日晚间发布。Codex 0.164.0-alpha.7 只有一行 Release。Claude Code v2.1.305 与 LangGraph JS SDK 1.8.11 的页面时间落在 UTC 10 月 20 日傍晚，北京时间已是 10 月 21 日，不计入本日。OpenClaw、Hermes、Spring AI、Spring Alibaba AI、Code Graph、Loop Engineering 无本日正式发布 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| DeepSeek | [DeepInfer](https://github.com/deepseek-ai/DeepInfer) | 2026-10-20 | 开源发布 | 仓库说明这是支撑大规模生产服务的推理框架，本次只开放离线推理。支持 DeepSeek-V4.1-Flash，硬件写的是 NVIDIA SM100 和华为昇腾 950。完整在线服务仍要自备 KV 缓存、VE/Prefill/Decode 分离和跨 DP 副本的负载均衡。无 GitHub Release |
+| GitHub | [包防火墙公开预览](https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview/) | 2026-10-20 | 官方发布 | 挡在 Actions、编码代理和上游仓库之间，检查元数据请求和包下载。企业可配冷却期、Advisory Database 里的恶意软件或漏洞，以及证明降级。现只支持 npm，GitHub Enterprise Cloud 预览期免费，正式商用后按量计费 |
+| OpenAI | [收购 Orchestra Bio](https://openai.com/index/openai-to-acquire-orchestra-bio) | 2026-10-20 | 官方发布 | 把药物研发的项目协调平台并进 Rosalind。官方描述是人和 Agent 一起盯试验与战役：一批生产失败会牵动临床试验，Agent 先标出受影响的活动和时间线。决策仍留给科学家和项目负责人 |
+| OpenAI | [ChatGPT 10 月 20 日更新](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) | 2026-10-20 | 官方发布 | 锁定对话用 4 位 PIN 或设备认证打开，不出现在普通历史、置顶和搜索里，保留与模型改进设置不变。Slides 面向有 Space 的 Pro、Business、Enterprise。GPT-6 Pro 可让多个 Agent 并行做同一任务的不同部分。GPT-6.1 Sol 开始在 ChatGPT Work 和 Codex 向 Pro 铺开 |
+| Anthropic | [用 Claude 缩小代码攻击面](https://www.anthropic.com/research/attack-surface-reduction) | 2026-10-20 | 官方发布 | 在 25 个开源项目里标出 493 个问题。三条路径是默认配置里不该暴露的代码、两个选项叠在一起才出问题、以及认证前或无交互就能走到的敏感代码。做法是把可达性往后推，不是逐个漏洞修补 |
+| Anthropic | [蝎毒微型结合蛋白](https://www.anthropic.com/research/claude-scorpion-toxin-binder-design) | 2026-10-20 | 官方发布 | 内部研究模型生成 318,484 个设计，选出 180 个，团队再补 31 个。Adaptyv Bio 与 Twist 测了 211 个，17 个达到结合标准。官方写明没有在细胞环境里验证能否中和毒素，不声称做出抗毒血清 |
+| 推理基础设施 | [llm-d 1.0](https://cloud.google.com/blog/topics/ai-infrastructure/llm-d-1-0-an-open-source-stack-for-distributed-inference) | 2026-10-20 | 开源发布 | CNCF Sandbox 项目，Kubernetes 上调度 vLLM 与 SGLang。1.0 补的是多租户流控、路由高可用和不停机升级、会话感知路由，以及 Responses API 状态。仓库 [v1.0.0](https://github.com/llm-d/llm-d/releases/tag/v1.0.0) 于 02:30Z 发布，北京时间 10:30 |
+| Langfuse | [v4.65.0](https://github.com/langfuse/langfuse/releases/tag/v4.65.0) | 2026-10-20（13:35Z，北京时间 21:35） | 开源发布 | 大量 topic 的聚类改为不阻塞；topic 按 facet 在问什么来命名。Skills API 稳住并恢复 MCP。自建 AI gateway 可以选 None 采集，随后的修复让这种模式不再要求采集项目或签名密钥 |
+| 评测 | [可监控性的补充指标](https://alignment.openai.com/beyond-gmean-squared/) | 2026-10-20 | 官方发布 | 配对指标避免不同模型评的不是同一批样本；事后控制指标模拟「监视器否决后再采样」。干预评测里，原来的 g-mean² 被写成上界，文中补了下界 |
+| 企业落地 | [Octave 在 Bedrock 上的多租户底座](https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/) | 2026-10-20 | 技术媒体 | 质量系统先做隔离底座再做功能。投诉分诊用独立 microVM，附件当不可信输入，Guardrails 打在嵌入前、进上下文前和给人看之前。Cohere Embed v4 在自有语料上把维度收到 512，存储大约少三分之二。文中称单次调查少掉 4–6 小时，每个用例的上线时间少一半。处置决定仍由质检人员做 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 推理服务 | [DeepInfer README](https://github.com/deepseek-ai/DeepInfer) | 草稿默认最多 5 个 token；SWA 默认只回放后缀；批量不变和确定性采样目前只写了 NVIDIA。基准是 4 张 SM100 做 prefill、64 张做 decode | 在接 V4.1 Flash 离线推理的人 |
+| 供应链 | [包防火墙](https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview/) | 端点要改走防火墙，不能直连上游；误拦走例外流程 | 管 Actions 和编码代理装包的人 |
+| Agent 训练 | [训练 Agent 的五步课程](https://huggingface.co/blog/huggingface/train-agents) | SFT 用更强模型的轨迹，蒸馏用教师概率，RL 用分数或环境，规模化用 AsyncGRPOTrainer 把生成和训练拆到不同 GPU | 要把编码 Agent 从提示词推进到后训练的人 |
+| 密钥扫描 | [Secret scanning 更新](https://github.blog/changelog/2026-10-20-updates-to-github-secret-scanning/) | 11 月 12 日起，相关审计日志的 `business` 从企业显示名改成 slug；私有仓库里 Base64 编码的 GitHub 令牌也可以走撤销 | 把审计日志接到下游的人 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：当天能核到的工程变化集中在可观测性和推理服务边界，LangGraph Python 与 Spring 两侧没有新发布。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Langfuse | 4.65 让 topic 聚类不阻塞界面，并允许自建网关不做采集 | 自建时若不想把流量再送进 Langfuse 项目，先看 None 模式是否还要求签名密钥 |
+| LangGraph | JS SDK 1.8.11 修复排队 run 丢失 streamMode，页面时间为 10 月 20 日 19:18Z | 北京时间已是 10 月 21 日 03:18，留到下一日。Python CLI 0.4.37 仍是 10 月 19 日 |
+| Claude Code | v2.1.305 的 feed 时间是 10 月 20 日 20:46Z | 北京时间 10 月 21 日 04:46。其中有 Vertex/Bedrock 上 tool search 被拒后的重试，以及 Linux 嵌套 user namespace。不写入本日发布表 |
+| Codex | [0.164.0-alpha.7](https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.7) | 说明只有 “Release 0.164.0-alpha.7”。alpha.8 的页面时间更晚，按 UTC 已跨过北京时间 10 月 21 日 |
+| 记忆 | [ALTK-Evolve](https://huggingface.co/blog/ibm-research/altk-evolve-bc) | 用 GPT-4.1 从训练任务里抽出短规则，再贴进系统提示。零售 τ²-bench 的 Pass^4 为 67.5%，没有改权重 |
+| 公平性 | [FairStress](https://huggingface.co/blog/allenai/fairstress) | 300 个双候选人场景、29 个领域，看的是说服性前缀会不会因受益群体不同而改变模型改口的难易 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [DeepInfer](https://github.com/deepseek-ai/DeepInfer) | 把离线引擎和在线服务拆开写清楚，避免把 README 里的基准当成完整集群配置 |
+| 必读 | [攻击面收缩](https://www.anthropic.com/research/attack-surface-reduction) | 给了一条不依赖「先找到漏洞」的缩面方法，并标明它减的是可达性 |
+| 推荐 | [llm-d 1.0 项目说明](https://llm-d.ai/blog/llm-d-v1.0-state-of-the-art-inference-ready-for-day-2) | 项目博客把 1.0 定义成 Day-2：多租户、升级和 Agent 会话，而不是再堆一个引擎 |
+| 推荐 | [Octave 的隔离底座](https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/) | 隔离放在 microVM 和身份传递上，不放在每个功能自己的 if 里 |
+| 延伸 | [车载 Gemini 的 Personal Intelligence](https://blog.google/products-and-platforms/platforms/android/android-auto-cars-with-google-built-in-gemini-personal-intelligence/) | 10 月 20 日起在 Android Auto 铺开，连接 Gmail、日历、相册等要逐项授权。产品向，工程细节少 |
+
+### 来源清单
+
+- 检索范围：2026-10-20 00:00:00 到 2026-10-20 23:59:59（Asia/Shanghai）
+- 引用域名：github.com, github.blog, openai.com, help.openai.com, alignment.openai.com, anthropic.com, cloud.google.com, llm-d.ai, blog.google, huggingface.co, aws.amazon.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 开源发布 | DeepInfer | 2026-10-20 | https://github.com/deepseek-ai/DeepInfer |
+| 官方发布 | GitHub package firewall in public preview | 2026-10-20 | https://github.blog/changelog/2026-10-20-github-package-firewall-in-public-preview/ |
+| 官方发布 | OpenAI acquires Orchestra Bio | 2026-10-20 | https://openai.com/index/openai-to-acquire-orchestra-bio |
+| 官方发布 | ChatGPT release notes | 2026-10-20 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes |
+| 官方发布 | Using Claude to reduce the attack surface of code | 2026-10-20 | https://www.anthropic.com/research/attack-surface-reduction |
+| 官方发布 | How Claude designed protein binders against scorpion neurotoxins | 2026-10-20 | https://www.anthropic.com/research/claude-scorpion-toxin-binder-design |
+| 官方发布 | llm-d 1.0 | 2026-10-20 | https://cloud.google.com/blog/topics/ai-infrastructure/llm-d-1-0-an-open-source-stack-for-distributed-inference |
+| 开源发布 | llm-d v1.0.0 | 2026-10-20 | https://github.com/llm-d/llm-d/releases/tag/v1.0.0 |
+| 开源发布 | Langfuse v4.65.0 | 2026-10-20（北京时间） | https://github.com/langfuse/langfuse/releases/tag/v4.65.0 |
+| 官方发布 | Beyond g-mean² | 2026-10-20 | https://alignment.openai.com/beyond-gmean-squared/ |
+| 技术媒体 | Octave on Amazon Bedrock | 2026-10-20 | https://aws.amazon.com/blogs/machine-learning/how-octave-built-a-secure-multi-tenant-ai-foundation-on-amazon-bedrock/ |
+| 官方发布 | A curriculum for post-training agents | 2026-10-20 | https://huggingface.co/blog/huggingface/train-agents |
+| 官方发布 | ALTK-Evolve | 2026-10-20 | https://huggingface.co/blog/ibm-research/altk-evolve-bc |
+| 官方发布 | FairStress | 2026-10-20 | https://huggingface.co/blog/allenai/fairstress |
+| 官方发布 | Updates to GitHub secret scanning | 2026-10-20 | https://github.blog/changelog/2026-10-20-updates-to-github-secret-scanning/ |
+| 开源发布 | Codex 0.164.0-alpha.7 | 2026-10-20 | https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.7 |
+| 官方发布 | Gemini Personal Intelligence in cars | 2026-10-20 | https://blog.google/products-and-platforms/platforms/android/android-auto-cars-with-google-built-in-gemini-personal-intelligence/ |
+
 ## 2026-10-19
 
 ### 今日总览
