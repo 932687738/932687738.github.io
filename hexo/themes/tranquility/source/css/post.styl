@@ -386,6 +386,122 @@
   }
 }
 
+.post-content--digest .post-content__body {
+  h3 {
+    max-width: none;
+    margin: 52px 0 16px;
+    padding: 20px 18px 0;
+    border-top: 1px solid $gainsboro;
+    font-family: sourceHanSerif, serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: 0.04em;
+    box-sizing: border-box;
+  }
+
+  h3:first-child {
+    margin-top: 8px;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  h4 {
+    max-width: none;
+    margin: 28px 0 12px;
+    padding: 0 18px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    color: $black-dim;
+  }
+
+  p,
+  ul,
+  ol,
+  hr {
+    max-width: none;
+  }
+
+  p {
+    padding: 0 18px;
+    box-sizing: border-box;
+  }
+
+  ul,
+  ol {
+    padding-left: calc(18px + 1.4em);
+    padding-right: 18px;
+    box-sizing: border-box;
+  }
+
+  table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) {
+    table-layout: fixed;
+
+    th,
+    td {
+      box-sizing: border-box;
+    }
+
+    th {
+      white-space: normal;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+      width: 8%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 18%;
+    }
+
+    th:nth-child(3),
+    td:nth-child(3) {
+      width: 12%;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 14%;
+    }
+
+    th:nth-child(6),
+    td:nth-child(6) {
+      width: 16%;
+      overflow-wrap: anywhere;
+    }
+  }
+
+  table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) {
+    table-layout: fixed;
+
+    th,
+    td {
+      box-sizing: border-box;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1) {
+      width: 12%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 14%;
+    }
+
+    th:nth-child(4),
+    td:nth-child(4) {
+      width: 28%;
+      overflow-wrap: anywhere;
+    }
+  }
+}
+
 .post-content--rank .post-content__body {
   > p:not(:last-of-type) {
     max-width: none;
@@ -446,6 +562,21 @@
     th,
     td {
       padding: 12px 10px;
+    }
+  }
+
+  .post-content--digest .post-content__body {
+    h3,
+    h4,
+    p {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    ul,
+    ol {
+      padding-left: calc(10px + 1.4em);
+      padding-right: 10px;
     }
   }
 
