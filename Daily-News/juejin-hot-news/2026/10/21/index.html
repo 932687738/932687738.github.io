@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        掘金热榜 2026-10-21 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+      <link rel="mask-icon"
+            href="/images/logo.svg"
+            color=""/>
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">掘金热榜 2026-10-21</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/juejin-hot-news/">掘金热榜</a>
+          <a class="post-tag" href="/Daily-News/juejin-hot-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-21</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：新文仍只在文章热榜；后端在讲怎么给 Agent 加熔断和网关，前端在讲流式 JSON 和请求库选型，开发工具在给编码代理补费用和 Token 账。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>文章热榜 + 收藏热榜 × 后端&#x2F;前端&#x2F;人工智能&#x2F;开发工具</td>
+</tr>
+<tr>
+<td>榜单规模</td>
+<td>每槽最多 15 条；列表 120；新 URL 23；跳过已见 97；详情成功 23 &#x2F; 失败 0</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>供应商中断被写成要有备用路由；流式输出从纯文本转到半截 JSON；费用要按峰谷和缓存命中分开算</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697500325121998848">Java Agent 的工具层熔断</a>、<a target="_blank" rel="noopener" href="https://juejin.cn/post/7697622920013021219">半截 JSON 边收边渲染</a>、<a target="_blank" rel="noopener" href="https://juejin.cn/post/7697150457639108662">DeepSeek Harness 费用插件</a></td>
+</tr>
+</tbody></table>
+<h3 id="后端"><a href="#后端" class="headerlink" title="后端"></a>后端</h3><h4 id="文章热榜"><a href="#文章热榜" class="headerlink" title="文章热榜"></a>文章热榜</h4><p>| 排名 | 标题 | 作者 | 热度&#x2F;互动 | 内容摘要 | 链接 |<br>| — | —:| — | — | — | — | — |<br>| 8 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697500325121998848">一个 Java 后端的 AI Agent 落地全景</a> | 小番茄程序猿 | 赞 2 &#x2F; 藏 6 &#x2F; 阅 241 | 用 Spring Boot 3.4、Spring AI 和 Langfuse 做了六阶段实验，把模型当成高延迟、会胡说、按 token 计费的下游。工具层按熔断、缓存、真调、写缓存、结构化降级五步走，舱壁满了直接 503。文中称编排层 p95 从 836ms 降到 12.34ms，缓存命中率 97.7%，并强调终答评测不够，轨迹要单独量。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697500325121998848">https://juejin.cn/post/7697500325121998848</a> |<br>| 9 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696763674732757033">DeepSeek 崩了 5 小时：你的 AI 应用为什么跟着一起挂？</a> | 青衫烟雨 | 赞 2 &#x2F; 藏 3 &#x2F; 阅 254 | 以 10 月 15 日约 4 小时 52 分的中断为例，讨论单供应商时可用性等于对方可用性乘以自己的代码。三种单点是前端直连、后端写死一个 SDK、有封装但没有第二条路。建议加模型网关，并把超时拆开，熔断之后要有备用路由。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696763674732757033">https://juejin.cn/post/7696763674732757033</a> |<br>| 11 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696908590871511075">从零手搓 RAG 之文档解析技术</a> | 我是Allen | 赞 2 &#x2F; 藏 1 &#x2F; 阅 238 | 索引阶段要把段落、表格、标题和图片按阅读顺序抽成干净文本。FastRAG 用 Go 的 <code>IParser</code> 只约定三件事：名字、支持的扩展名、把 URL 上的文档解析成 Markdown。接口收 URL 不收字节，调用方要先把文件放到对象存储。后文对 PDF，以及 Docling、腾讯云两条后端。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696908590871511075">https://juejin.cn/post/7696908590871511075</a> |<br>| 12 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696387828729970729">我用 Spring AI + MCP 把公司内部系统接给了 AI</a> | 卷毛的技术笔记 | 赞 2 &#x2F; 藏 2 &#x2F; 阅 194 | 运维群里查工单，先用 Function Calling 三十行跑通，但工具定义和模型、前端绑在一起。改成 MCP Server 后，查工单、订单和配置可以给 Claude Desktop、Cursor 和自己的 Spring AI 应用共用。栈是 Spring Boot 3.5、Spring AI 1.1 和 <code>spring-ai-starter-mcp-server</code>。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696387828729970729">https://juejin.cn/post/7696387828729970729</a> |<br>| 13 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696084790848176164">FastAPI 零基础入门教程：写过 Node.js，就能轻松学会 Python 后端开发（一）</a> | Tree1024 | 赞 2 &#x2F; 藏 3 &#x2F; 阅 242 | 给写过 Express 或 NestJS 的人对照着学 FastAPI，不从语法课讲起。对应关系包括 pip&#x2F;uv 对 npm、Pydantic 对 Zod、SQLModel 对 Prisma。后文走到类型注解、SQLite CRUD、目录、异步和自带的 OpenAPI。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696084790848176164">https://juejin.cn/post/7696084790848176164</a> |<br>| 14 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7698044277812772873">一人公司的全栈选型指南</a> | 卷无止境 | 赞 2 &#x2F; 藏 3 &#x2F; 阅 239 | 选型标准从「自己熟不熟」改成 Agent 能不能一次写对。三条经验是主流且约定统一、类型严格、托管程度高，少写基础设施。文中把技术栈和具体工具拆开：工具会换，栈要能被 Claude Code、Codex、Cursor 读懂。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7698044277812772873">https://juejin.cn/post/7698044277812772873</a> |<br>| 15 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697853177081020466">CPU 就行，老照片变清晰</a> | 半刻维度 | 赞 3 &#x2F; 藏 4 &#x2F; 阅 148 | 用 GFPGAN 在本地把人脸修完再贴回原图，权重约 582MB，不要求独立显卡和 CUDA。<code>upscale=2</code>，<code>weight</code> 越小修得越狠。照片不出本机。适合想先跑通本地推理、不打算上 GPU 服务的人。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697853177081020466">https://juejin.cn/post/7697853177081020466</a> |</p>
+<h4 id="收藏热榜"><a href="#收藏热榜" class="headerlink" title="收藏热榜"></a>收藏热榜</h4><p>本槽无新增。</p>
+<h3 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h3><h4 id="文章热榜-1"><a href="#文章热榜-1" class="headerlink" title="文章热榜"></a>文章热榜</h4><p>| 排名 | 标题 | 作者 | 热度&#x2F;互动 | 内容摘要 | 链接 |<br>| — | —:| — | — | — | — | — |<br>| 2 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7698268211587022874">为什么我在团队里禁止使用 axios？</a> | ErpanOmer | 赞 22 &#x2F; 藏 18 &#x2F; 阅 1724 | 新项目不再引入 axios，老项目在下次重构时拿掉。作者对照 2026 年的 fetch：超时、拦截和取消已经能用原生能力覆盖，axios 的拦截器嵌套难查，CancelToken 已废弃，Edge Runtime 也不省心。文中给了大约 30 行的封装，并提醒 Token 刷新和超时兼容还要自己处理。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7698268211587022874">https://juejin.cn/post/7698268211587022874</a> |<br>| 9 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697622920013021219">AI 流式传输工程指南：模型吐出半截 JSON，前端如何边收边渲染？</a> | 猫头_ | 赞 13 &#x2F; 藏 13 &#x2F; 阅 475 | 聊天可以一个字一个字追加，商品卡片、表格和表单要的是还没闭合的 JSON。文章按原生 JS、Vue 3 和 React 给了边收边渲染的写法，避免整段生成完才出界面。适合已经在做结构化流式输出、不想等最后一个括号的人。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697622920013021219">https://juejin.cn/post/7697622920013021219</a> |<br>| 11 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696821865848733705">AI Coding 时代最值钱的东西，软件工程（上）</a> | 乘风gg | 赞 5 &#x2F; 藏 10 &#x2F; 阅 447 | 拆 <code>mattpocock/skills</code> 的 README，四条失败是没对齐、太啰嗦、没验证、能跑但没人敢改。作者认为这些是软件工程的老问题，Agent 只是放大了它们。适合在往 Claude Code 或 Codex 里装技能、又觉得技能只是提示词的人。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696821865848733705">https://juejin.cn/post/7696821865848733705</a> |<br>| 12 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697474838380265482">面向 Schema 配置编程，Vue3 动态表单支持弹框组件</a> | 全栈小卷 | 赞 3 &#x2F; 藏 6 &#x2F; 阅 411 | 保险中台不想把数据和表单迁到第三方低代码，于是用 Vue3 自研按 schema 渲染的动态表单。这篇讲怎么在配置里挂弹框，例子是投保人、被保人和受益人，以及「同投保人」开关如何带动字段。适合维护大量后台表单、又要字段联动的人。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697474838380265482">https://juejin.cn/post/7697474838380265482</a> |<br>| 13 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697615256115363882">如何低成本部署网站？Vercel 和 Cloudflare 怎么选？</a> | 代码小学僧 | 赞 6 &#x2F; 藏 4 &#x2F; 阅 337 | 独立工具站验证期优先 Serverless，访问量不大、没有复杂后台任务时不必先买 VPS。对比了按月付费的闲置成本和按请求计费，也写了冷启动、持久化要外接 KV 或数据库。适合刚起步、怕账单突然变大的人。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697615256115363882">https://juejin.cn/post/7697615256115363882</a> |<br>| 14 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697865664232702006">纯前端预览 275 种文件格式是怎么做到的</a> | 执子念的飞鱼 | 赞 10 &#x2F; 藏 7 &#x2F; 阅 337 | File Viewer 3.2.2 在浏览器里打开附件，不经服务端转码。格式目录注册了 275 个扩展名、47 条预览链路，外壳统一搜索、缩放、打印和下载，格式是可插拔实现。做不到的部分文中单独写了。适合内网 OA 不能把文件交给公网预览的人。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697865664232702006">https://juejin.cn/post/7697865664232702006</a> |<br>| 15 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696060477454352399">我抓了 5 个内存泄漏现行，最狠的一个 91MB</a> | kyriewen | 赞 4 &#x2F; 藏 8 &#x2F; 阅 396 | 在 Node 24 里强制 GC 两次后读 heapUsed。忘清的定时器约 +76.3MB，只加不减的监听器约 +76.7MB，无上限 Map 在外部引用删掉后堆不动，23 字节闭包拽着约 91MB。附三快照法和可复跑脚本。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696060477454352399">https://juejin.cn/post/7696060477454352399</a> |</p>
+<h4 id="收藏热榜-1"><a href="#收藏热榜-1" class="headerlink" title="收藏热榜"></a>收藏热榜</h4><p>本槽无新增。</p>
+<h3 id="人工智能"><a href="#人工智能" class="headerlink" title="人工智能"></a>人工智能</h3><h4 id="文章热榜-2"><a href="#文章热榜-2" class="headerlink" title="文章热榜"></a>文章热榜</h4><p>| 排名 | 标题 | 作者 | 热度&#x2F;互动 | 内容摘要 | 链接 |<br>| — | —:| — | — | — | — | — |<br>| 8 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697474838380134410">我实测了 V4.1-Flash-1017</a> | 知赛官方 | 赞 2 &#x2F; 藏 1 &#x2F; 阅 755 | 作者称 10 月 17 日 18:07 三端切到 V4.1-Flash-1017，API 名和价格没变。表格里的 Terminal-Bench 4.0 从 31.2 到 42.3，这些是文中所引模型卡，不是本文复测。实测结论是思考会吃掉输出预算，额度不够时代码会在中途被截断。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697474838380134410">https://juejin.cn/post/7697474838380134410</a> |<br>| 10 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697418750073929762">给 AI 记忆加上不可篡改的收据</a> | doujiaozh | 赞 7 &#x2F; 藏 8 &#x2F; 阅 302 | AMP 不保存记忆本身，只要求每次读写带上来源、方法、置信度、局限和采集时间，缺证据就 400。读写和授权撤销追加到哈希链。大约 300 行参考实现，解决的是「凭什么知道、谁授权、删干净没有」。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697418750073929762">https://juejin.cn/post/7697418750073929762</a> |<br>| 11 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697865664233947190">刷短剧上头后，我用 5090 和 ComfyUI 部署 MiniMax H3</a> | niaonao | 赞 5 &#x2F; 藏 4 &#x2F; 阅 447 | 本机 5060 Ti 16GB 生成 768p、5 秒视频约 22 分钟，于是在 AutoDL 租 5090（2.88 元&#x2F;小时）用 ComfyUI 跑 MiniMax H3。文中记了实例、模型下载和文生视频、图生视频工作流。适合要估算生成成本、而不是只看画质的人。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697865664233947190">https://juejin.cn/post/7697865664233947190</a> |<br>| 13 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696324130459467827">Gemini 4 上线！又回到御三家了？</a> | 老金带你玩AI | 赞 5 &#x2F; 藏 3 &#x2F; 阅 436 | 复述 Gemini 4 Argon 扩大开放后的两个官方小游戏：桌面赛车用真实办公桌照片定赛道，另一个是 3D 巫师棋。关注点是贴图、碰撞、声音和规则能不能接上，而不是模型会不会写代码。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696324130459467827">https://juejin.cn/post/7696324130459467827</a> |<br>| 14 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697056782357037099">亲测有效！免费 Google AI Pro 用户用上 Gemini 4 Argon</a> | XiaoLei_Liu | 赞 2 &#x2F; 藏 1 &#x2F; 阅 477 | 写 Antigravity 里 Argon 对试用、学生和低价联名 Pro 显示不可用，正文付费 Pro 才在菜单里可选，而且是单独的周配额，不跟 5 小时刷新走。后半给出作者称为亲测的解锁步骤。解锁手段是否违反服务条款，文中没有讨论，使用前要自己看账号条款。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697056782357037099">https://juejin.cn/post/7697056782357037099</a> |<br>| 15 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696894428132294665">70 美金的 Beyond Compare，我让 Gemini 4 和 DeepSeek 造个开源免费版（Day 2）</a> | 朱涛的自习室 | 赞 4 &#x2F; 藏 2 &#x2F; 阅 323 | Day 2 只定范围：5 个写代码的日子里做文件夹对比、三向合并、按主键对齐的 CSV，以及忽略键顺序的 JSON&#x2F;YAML。十六进制、远端挂载和双向同步被砍掉。适合看人怎么给 Agent 限范围，而不是来拿一个已经能用的替代品。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696894428132294665">https://juejin.cn/post/7696894428132294665</a> |</p>
+<h4 id="收藏热榜-2"><a href="#收藏热榜-2" class="headerlink" title="收藏热榜"></a>收藏热榜</h4><p>本槽无新增。</p>
+<h3 id="开发工具"><a href="#开发工具" class="headerlink" title="开发工具"></a>开发工具</h3><h4 id="文章热榜-3"><a href="#文章热榜-3" class="headerlink" title="文章热榜"></a>文章热榜</h4><p>| 排名 | 标题 | 作者 | 热度&#x2F;互动 | 内容摘要 | 链接 |<br>| — | —:| — | — | — | — | — |<br>| 11 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697150457639108662">给 DeepSeek Harness 写费用插件</a> | 史瓦辛格 | 赞 1 &#x2F; 藏 1 &#x2F; 阅 164 | <code>dsh-spend-pill</code> 按官方人民币峰谷价，把缓存命中、未命中和输出分成三个桶。高峰是北京时间工作日 9:00–12:00 和 14:00–18:00，周末和法定节假日按半价。不能用 token 数乘一个单价。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7697150457639108662">https://juejin.cn/post/7697150457639108662</a> |<br>| 13 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696500704472580123">电脑如何录屏幕视频和声音？</a> | 屏什么录 | 赞 0 &#x2F; 藏 1 &#x2F; 阅 164 | 把录屏拆成持续截屏、采音和编码封装，并用一张表给分辨率、帧率、码率。没声音常常是只开了一路通道。方案从图形工具到 GDI、DXGI 和 FFmpeg。偏工具文，后半有产品介绍。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696500704472580123">https://juejin.cn/post/7696500704472580123</a> |<br>| 15 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696060477454565391">Codex 每轮到底消耗多少 Token？</a> | 四七伵 | 赞 1 &#x2F; 藏 1 &#x2F; 阅 155 | 在已有的 Codex Hook 统计上补本轮 token、累计、缓存命中和推理占比。文中一轮例子跑了 17 分 2 秒、累计 212 万 token、缓存命中 97%，并说明这是多轮请求加总，不是一次补全。 | <a target="_blank" rel="noopener" href="https://juejin.cn/post/7696060477454565391">https://juejin.cn/post/7696060477454565391</a> |</p>
+<h4 id="收藏热榜-3"><a href="#收藏热榜-3" class="headerlink" title="收藏热榜"></a>收藏热榜</h4><p>本槽无新增。</p>
+<h3 id="跨榜重复与去重说明"><a href="#跨榜重复与去重说明" class="headerlink" title="跨榜重复与去重说明"></a>跨榜重复与去重说明</h3><ul>
+<li>本轮新摘要 URL 数：23</li>
+<li>因 <code>seen_urls</code> 跳过：97</li>
+<li>同文多标签&#x2F;双榜出现：无</li>
+</ul>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>快照日：2026-10-21（Asia&#x2F;Shanghai）</li>
+<li>页面：<a target="_blank" rel="noopener" href="https://juejin.cn/hot/articles">https://juejin.cn/hot/articles</a> 、 <a target="_blank" rel="noopener" href="https://juejin.cn/hot/collected-articles">https://juejin.cn/hot/collected-articles</a></li>
+<li>抓取：<code>tools/juejin_hot_fetch.py</code> → <code>_staging_latest.json</code></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>榜单</th>
+<th>标题</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>后端</td>
+<td>文章热榜</td>
+<td>一个 Java 后端的 AI Agent 落地全景</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697500325121998848">https://juejin.cn/post/7697500325121998848</a></td>
+</tr>
+<tr>
+<td>后端</td>
+<td>文章热榜</td>
+<td>DeepSeek 崩了 5 小时</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696763674732757033">https://juejin.cn/post/7696763674732757033</a></td>
+</tr>
+<tr>
+<td>后端</td>
+<td>文章热榜</td>
+<td>从零手搓 RAG 之文档解析技术</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696908590871511075">https://juejin.cn/post/7696908590871511075</a></td>
+</tr>
+<tr>
+<td>后端</td>
+<td>文章热榜</td>
+<td>我用 Spring AI + MCP 把公司内部系统接给了 AI</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696387828729970729">https://juejin.cn/post/7696387828729970729</a></td>
+</tr>
+<tr>
+<td>后端</td>
+<td>文章热榜</td>
+<td>FastAPI 零基础入门教程</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696084790848176164">https://juejin.cn/post/7696084790848176164</a></td>
+</tr>
+<tr>
+<td>后端</td>
+<td>文章热榜</td>
+<td>一人公司的全栈选型指南</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7698044277812772873">https://juejin.cn/post/7698044277812772873</a></td>
+</tr>
+<tr>
+<td>后端</td>
+<td>文章热榜</td>
+<td>CPU 就行，老照片变清晰</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697853177081020466">https://juejin.cn/post/7697853177081020466</a></td>
+</tr>
+<tr>
+<td>前端</td>
+<td>文章热榜</td>
+<td>为什么我在团队里禁止使用 axios</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7698268211587022874">https://juejin.cn/post/7698268211587022874</a></td>
+</tr>
+<tr>
+<td>前端</td>
+<td>文章热榜</td>
+<td>AI 流式传输工程指南</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697622920013021219">https://juejin.cn/post/7697622920013021219</a></td>
+</tr>
+<tr>
+<td>前端</td>
+<td>文章热榜</td>
+<td>AI Coding 时代最值钱的东西，软件工程（上）</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696821865848733705">https://juejin.cn/post/7696821865848733705</a></td>
+</tr>
+<tr>
+<td>前端</td>
+<td>文章热榜</td>
+<td>Vue3 动态表单支持弹框组件</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697474838380265482">https://juejin.cn/post/7697474838380265482</a></td>
+</tr>
+<tr>
+<td>前端</td>
+<td>文章热榜</td>
+<td>Vercel 和 Cloudflare 怎么选</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697615256115363882">https://juejin.cn/post/7697615256115363882</a></td>
+</tr>
+<tr>
+<td>前端</td>
+<td>文章热榜</td>
+<td>纯前端预览 275 种文件格式</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697865664232702006">https://juejin.cn/post/7697865664232702006</a></td>
+</tr>
+<tr>
+<td>前端</td>
+<td>文章热榜</td>
+<td>我抓了 5 个内存泄漏现行</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696060477454352399">https://juejin.cn/post/7696060477454352399</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td>文章热榜</td>
+<td>我实测了 V4.1-Flash-1017</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697474838380134410">https://juejin.cn/post/7697474838380134410</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td>文章热榜</td>
+<td>给 AI 记忆加上不可篡改的收据</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697418750073929762">https://juejin.cn/post/7697418750073929762</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td>文章热榜</td>
+<td>用 5090 和 ComfyUI 部署 MiniMax H3</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697865664233947190">https://juejin.cn/post/7697865664233947190</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td>文章热榜</td>
+<td>Gemini 4 上线</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696324130459467827">https://juejin.cn/post/7696324130459467827</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td>文章热榜</td>
+<td>免费 Google AI Pro 用户用上 Gemini 4 Argon</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697056782357037099">https://juejin.cn/post/7697056782357037099</a></td>
+</tr>
+<tr>
+<td>人工智能</td>
+<td>文章热榜</td>
+<td>Beyond Compare 开源替代 Day 2</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696894428132294665">https://juejin.cn/post/7696894428132294665</a></td>
+</tr>
+<tr>
+<td>开发工具</td>
+<td>文章热榜</td>
+<td>给 DeepSeek Harness 写费用插件</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7697150457639108662">https://juejin.cn/post/7697150457639108662</a></td>
+</tr>
+<tr>
+<td>开发工具</td>
+<td>文章热榜</td>
+<td>电脑如何录屏幕视频和声音</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696500704472580123">https://juejin.cn/post/7696500704472580123</a></td>
+</tr>
+<tr>
+<td>开发工具</td>
+<td>文章热榜</td>
+<td>Codex 每轮到底消耗多少 Token</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7696060477454565391">https://juejin.cn/post/7696060477454565391</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        <div class="foot__head">
+          
+            <div class="foot-line">
+              
+                <div class="matts">长</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">知</div>
+              
+            </div>
+          
+            <div class="foot-line">
+              
+                <div class="matts">不</div>
+              
+                <div class="matts">相</div>
+              
+                <div class="matts">疑</div>
+              
+            </div>
+          
+        </div>
+        <div class="foot__body">
+          
+            <div class="foot-item">
+              <div class="foot-item__head">朋友</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
+                  </div>
+                
+                <div class="text">
+                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
+                  <a class="foot-link"
+                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
+                  申请友链</a>
+                </div>
+              </div>
+            </div>
+          
+          
+            <div class="foot-item">
+              <div class="foot-item__head">账号</div>
+              <div class="foot-item__body">
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
+                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
+                    <a class="foot-link" href="">微信公众号</a>
+                  </div>
+                
+                  <div class="text">
+                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
+                    <a class="foot-link" href="">知乎</a>
+                  </div>
+                
+              </div>
+            </div>
+          
+          <div class="foot-item">
+            <div class="foot-item__head">联系</div>
+            <div class="foot-item__body">
+              <div class="text">
+                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
+                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
+          <svg width="20" height="20" viewBox="0 0 725 725">
+            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
+            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
+            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
+          </svg>
+          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
