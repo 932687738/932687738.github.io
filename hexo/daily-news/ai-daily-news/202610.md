@@ -2,6 +2,78 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-10-21
+
+### 今日总览
+
+**一句话结论**：OpenAI 把前沿模型与 Codex 工作流放进 Google Cloud Model Garden；同一天 Claude Code / Hermes / OpenClaw 连续发版，企业侧多云选模与 Agent 工具链可靠性同步升温。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI、Google Cloud、Anthropic/Claude Code、Hermes、OpenClaw、Codex、Langfuse、LangChain/LangGraph、Spring AI / Spring Alibaba AI、Code Graph、Loop Engineering、arXiv、TechCrunch、中文补充 |
+| 核心趋势 | 超大规模云开始并列托管多家闭源前沿模型；编码 Agent 发布节奏以稳定性与可观测性为主；Agent 商业化（购物/广告）与科研多 Agent 并行探索并存 |
+| 可直接关注 | GCP Model Garden 私有预览申请；Claude Code 2.1.306/2.1.307 的云会话登录与 safety OTel；OpenClaw Windows Gateway 修复；Hermes v0.22.4 桌面体验补丁 |
+| 专项检索结论 | Claude Code：npm 显示 2.1.306（10-21）并随后有 2.1.307 changelog。Codex：无独立稳定 tag，但 OpenAI×GCP 公告明确纳入 Codex agentic workflows。OpenClaw：v2026.10.10-beta.3 预发布。Hermes：v0.22.4。Spring AI / Spring Alibaba AI / Langfuse / LangChain·LangGraph / Code Graph / Loop Engineering：未发现可核验的本日正式重大发布（Langfuse 最近 changelog 停在 10-19）。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 多云模型分发 | [OpenAI models are coming to Google Cloud](https://openai.com/index/openai-models-google-cloud) | 2026-10-21 | 官方发布 | OpenAI 与 Google Cloud 合作，把前沿模型与 Codex agentic workflows 接入 Model Garden；经 Marketplace 计费并可抵扣 GCP commitment。Microsoft 仍为 OpenAI 主要云伙伴。GA 计划未来数周。 |
+| 企业平台 | [Google Cloud brings OpenAI models to customers](https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers) | 2026-10-21 | 官方发布 | 私有预览滚动 GPT-6 Astra / GPT-6.1 Sol / GPT-6 Luna；宣称成为同时提供三大闭源 LLM 的超大规模云。可把本地 Codex CLI/Desktop 接到 Gemini 平台推理；后续进 Antigravity 与 Gemini Agent。 |
+| Claude Code | [Claude Code changelog（2.1.306 / 2.1.307）](https://code.claude.com/docs/en/changelog) | 2026-10-21 | 开源发布 | 2.1.306：修复云会话 `claude -p` 误报未登录、MCP 工具过多时错误被误标为 prompt too long。2.1.307：`/claude-api api-version` 指向 `2026-10-21`；新增 `claude_code.safety_event` OTel；Code Review 支持 `@claude review stop`。 |
+| Hermes | [Hermes Agent v0.22.4](https://github.com/NousResearch/hermes-agent/releases) | 2026-10-21 | 开源发布 | 去掉桌面 composer 上方无用建议 pill；无依赖插件跳过空 consent；WhatsApp 重配对；审批模式 chip 跟随 profile。同日还有 v0.22.3 大窗口稳定打包说明。 |
+| OpenClaw | [openclaw 2026.10.10-beta.3](https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3) | 2026-10-21 | 开源预发布 | Windows Gateway 启动/升级恢复、agent DB 所有权竞态、后台任务完成丢失、Discord slash、CLI 会话跨 cron 连续性、macOS 长命令超时等 50+ 修复。 |
+| Anthropic 治理 | [Physicist Christopher Stubbs joins Long-Term Benefit Trust](https://www.anthropic.com/news) | 2026-10-21 | 官方公告 | 信任委员会人事更新，非模型发布。 |
+| 科研 Agent | [Using thousands of AI agents on biological data](https://openai.com/index/scaling-ai-research-for-complex-biological-data) | 2026-10-21 | 官方案例 | OpenAI×PerturbAI×Scripps 用数千 GPT‑Rosalind Agent 在约 32 分钟内解读百万级脑细胞扰动数据，示范分布式生物学推理。 |
+| 产品商业化 | [ChatGPT Ads expands to 26 new countries](https://openai.com/index/chatgpt-ads-expands-26-new-countries) | 2026-10-21 | 官方发布 | 广告覆盖扩至 89 国；仅 Free/Go 展示，Plus/Pro/Enterprise 仍无广告。 |
+| 媒体观察 | [Walmart Agent Gateway vs Amazon blocking agents](https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/) | 2026-10-21 | 技术媒体 | Walmart 以 MCP Agent Gateway 开放授权购物 Agent，与 Amazon 限制形成对照（需结合官方文档再落地）。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 多云选型 | [OpenAI on Google Cloud](https://openai.com/index/openai-models-google-cloud) | Model Garden + Marketplace 结算 + 治理控件；Codex 工作流进 GCP | 已有 GCP 承诺、要试 OpenAI/Codex 的企业架构师 |
+| 编码 Agent 运维 | [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 云会话环境变量、safety OTel、API version pin | 跑云会话 / self-hosted runner 的团队 |
+| 桌面 Agent | [OpenClaw beta.3 notes](https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3) | Windows Gateway、升级迁移、记忆索引冷启动 | Windows 主力 OpenClaw 用户 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：云厂商在拼「模型选择权 + 治理」；本地/桌面 Agent 则继续打补丁债——会话连续性、工具目录失效、sandbox/OTel 成为当日主线。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 多云 Codex | OpenAI 明确把 Codex workflows 放进 GCP | 评估同一套 Codex CLI 切推理后端时的密钥、计费与数据驻留 |
+| Claude Code 可观测 | `claude_code.safety_event` 记录权限/沙箱/hook 拦截 | 把 Agent 安全决策接到现有 OTel 管道，而不是只看对话日志 |
+| OpenClaw 可靠性 | 修 agent DB 双写所有权、后台完成丢失、CLI 工具目录失效 | 长跑 Agent 要把「会话状态」和「工具目录版本」当作一等公民 |
+| 专项空窗 | Langfuse / LangGraph / Spring AI Alibaba / Code Graph / Loop Engineering 本日无新正式版 | 继续跟踪 10-19 Langfuse Experiments 与既有 Java Graph 可观测 PR，不把旧文当成新发布 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [OpenAI × Google Cloud](https://openai.com/index/openai-models-google-cloud) | 改变企业「默认只在一家云上拿前沿模型」的假设 |
+| 必读 | [Claude Code changelog](https://code.claude.com/docs/en/changelog) | 云会话与安全事件是生产排障刚需 |
+| 推荐 | [OpenClaw 2026.10.10-beta.3](https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3) | Windows/升级路径问题清单完整 |
+| 延伸 | [生物数据多 Agent](https://openai.com/index/scaling-ai-research-for-complex-biological-data) | 大规模并行 Agent 在科研闭环中的分工样板 |
+
+### 来源清单
+
+- 检索范围：2026-10-21 00:00:00 到 2026-10-21 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, cloud.google.com, code.claude.com, anthropic.com, github.com, techcrunch.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | OpenAI models are coming to Google Cloud | 2026-10-21 | https://openai.com/index/openai-models-google-cloud |
+| 官方发布 | Google Cloud brings OpenAI models to customers | 2026-10-21 | https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers |
+| 开源发布 | Claude Code changelog | 2026-10-21 | https://code.claude.com/docs/en/changelog |
+| 开源发布 | openclaw 2026.10.10-beta.3 | 2026-10-21 | https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3 |
+| 开源发布 | Hermes Agent v0.22.4 | 2026-10-21 | https://github.com/NousResearch/hermes-agent |
+| 官方案例 | Scaling AI research for complex biological data | 2026-10-21 | https://openai.com/index/scaling-ai-research-for-complex-biological-data |
+| 官方发布 | ChatGPT Ads expands to 26 new countries | 2026-10-21 | https://openai.com/index/chatgpt-ads-expands-26-new-countries |
+| 技术媒体 | Walmart rolls out Agent Gateway | 2026-10-21 | https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/ |
+
 ## 2026-10-20
 
 ### 今日总览

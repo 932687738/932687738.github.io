@@ -2,6 +2,66 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-10-21
+
+### 今日总览
+
+**一句话结论**：阿里云开发者社区集中放出 Agent 生产化文章（RocketMQ LiteTopic 异步通信、百炼 MCP 执行能力），固定来源内 Java Agent / 消息中间件落地信号强于当日大厂博客首页更新。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里技术/阿里云开发者、腾讯云+社区、字节技术博客、美团、京东/凹凸、滴滴、百度、有赞、360、掘金、语雀阿里干货 |
+| 核心趋势 | Agent 从「会推理」转向「长任务异步、可恢复、可工具执行」；消息中间件与 MCP 成为 Java 企业落地抓手 |
+| 可直接关注 | RocketMQ for AI LiteTopic；百炼自研 MCP 六大能力；Java 侧 Spring AI / LangChain4j / AgentScope 选型讨论（见掘金热文交叉） |
+| 专项检索结论 | Spring Alibaba AI：固定来源本日无新版本文，但阿里云文强调 Agent 异步与 MCP 执行层，可作相邻实践参考。Langfuse / LangChain·LangGraph / Code Graph / Loop Engineering：固定来源内未发现可核验的本日新文。 |
+| 未发现更新 | 美团技术团队、字节跳动技术团队、腾讯 AlloyTeam、百度 FEX/EFE、滴滴、有赞、360 核心安全、凹凸实验室等站点未检出可确认属 2026-10-21 的新文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Agent 异步通信 | [RocketMQ for AI：基于 LiteTopic 的 Agent 异步通信架构与生产实践](https://developer.aliyun.com/article/1773435) | 2026-10-21 | 阿里云开发者社区 | 针对分钟～小时级 Agent 任务，讲 LiteTopic 断点续传、会话恢复、异步回调与 GPU 配额限流，并提到百炼 / Qoder Cloud Agents 落地。 |
+| Agent 工具执行 | [Agent 卡住你的，可能不是模型不够聪明](https://developer.aliyun.com/article/1773578) | 2026-10-21 | 阿里云开发者社区 | 介绍百炼自研 MCP：联网搜索、网页解析、图像/视频生成、语音识别与合成等统一 API，强调「会思考还要会执行」。 |
+| Agent 上下文 | [阿里云 AgentBridge：为生产级 Agent 构建多源实时上下文](https://developer.aliyun.com/article/1773425) | 2026-10-21（相邻日期/中国时间窗口传播） | 阿里云开发者社区 | 多源实时上下文治理，适合对照本日 LiteTopic/MCP 文一起读生产闭环。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 长任务 Agent | [RocketMQ LiteTopic](https://developer.aliyun.com/article/1773435) | 异步通信、状态恢复、资源限流 | Java/中间件 + Agent 平台工程师 |
+| MCP 执行层 | [百炼 MCP 能力文](https://developer.aliyun.com/article/1773578) | 统一工具 API、减少 Agent「空转」 | 在百炼上拼 Agent 的应用开发者 |
+
+### 工程实践归纳
+
+**总体判断**：固定来源本日主线是阿里云把 Agent「通信层 + 工具执行层」讲清楚；Langfuse/LangGraph/Code Graph/Loop Engineering/Spring Alibaba AI 版本发布类信号缺失，需继续盯掘金与 GitHub。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Agent 消息 | LiteTopic 面向长任务 | 别把同步 RPC 当 Agent 编排默认；要有会话与配额 |
+| MCP | 百炼打包高频工具 | 先统一执行面再抠提示词 |
+| Spring Alibaba AI / Langfuse 等 | 本日固定来源无新文 | 维持观察，不把旧 GA 文重复记成新日 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [RocketMQ for AI LiteTopic](https://developer.aliyun.com/article/1773435) | 少见的「消息中间件 × Agent」生产叙述 |
+| 推荐 | [Agent 卡住…百炼 MCP](https://developer.aliyun.com/article/1773578) | 执行层能力清单清晰 |
+| 延伸 | [AgentBridge](https://developer.aliyun.com/article/1773425) | 上下文治理与上两篇形成闭环 |
+
+### 来源清单
+
+- 检索范围：2026-10-21 00:00:00 到 2026-10-21 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里云开发者社区（有新增）；其余公司/组织维度已检索但无确认新增
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | RocketMQ for AI：基于 LiteTopic 的 Agent 异步通信架构与生产实践 | 2026-10-21 | https://developer.aliyun.com/article/1773435 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | Agent 卡住你的，可能不是模型不够聪明 | 2026-10-21 | https://developer.aliyun.com/article/1773578 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 阿里云 AgentBridge：为生产级 Agent 构建多源实时上下文 | 2026-10-21（相邻日期/中国时间窗口传播） | https://developer.aliyun.com/article/1773425 |
+| 其他 | 固定来源清单 | 无新增 | 美团/字节/腾讯团队博客等未检出可核验新文 | - | - |
+
 ## 2026-10-20
 
 ### 今日总览
