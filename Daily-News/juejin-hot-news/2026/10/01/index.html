@@ -28,10 +28,6 @@
             href="/images/favicon-16x16.png"/>
     
     
-      <link rel="mask-icon"
-            href="/images/logo.svg"
-            color=""/>
-    
     
     
       
@@ -65,13 +61,15 @@
     <div class="head">
       <div class="nav">
         <a href='/' class="nav-logo">
-          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+          <img alt="logo" src="/images/logo.png"/>
         </a>
         <input id="navBtn" type="checkbox"/>
         <div class="nav-menu">
           
             
               <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
             
               <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
             
@@ -99,7 +97,7 @@
     </div>
     <div class="body">
       
-  <article class="post-content">
+  <article class="post-content post-content--digest">
     <div class="post-inner">
       <div class="post-content__head">
         <div class="post-title">掘金热榜 2026-10-01</div>
@@ -140,7 +138,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -149,7 +147,7 @@
 </thead>
 <tbody><tr>
 <td>1</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689599510955278336">为什么越来越多人用 OnlyOffice？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689599510955278336">为什么越来越多人用 OnlyOffice？</a></td>
 <td>苏三说技术</td>
 <td>赞37&#x2F;藏35&#x2F;阅3367</td>
 <td>OnlyOffice 社区版从 9.4.0 起强制轻量模式，原标准模式不再提供。选型时要确认宏、插件和并发是否被轻量档砍掉。</td>
@@ -157,7 +155,7 @@
 </tr>
 <tr>
 <td>2</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690197651808616502">DeepSeek Harness 出了桌面端？我把它扒了一遍</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690197651808616502">DeepSeek Harness 出了桌面端？我把它扒了一遍</a></td>
 <td>cxuanAI</td>
 <td>赞7&#x2F;藏8&#x2F;阅764</td>
 <td>DeepSeek Harness 桌面端在官方声明前被拆出，随后又连夜改版。文中界面以作者截取时的构建为准，不要当成稳定 API。</td>
@@ -165,7 +163,7 @@
 </tr>
 <tr>
 <td>3</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690468159975637038">读懂LangGraph 的分支执行逻辑</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690468159975637038">读懂LangGraph 的分支执行逻辑</a></td>
 <td>Dragon_xjy</td>
 <td>赞3&#x2F;藏4&#x2F;阅869</td>
 <td>同一输入要分叉再汇合时，LangGraph 把分支写成可运行的图，而不是一串 if。适合要看清并行与汇合点的后端编排。</td>
@@ -173,7 +171,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688579804614361138">管理后台数据国际化：不建翻译表、一列 JSON、后端零改动</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688579804614361138">管理后台数据国际化：不建翻译表、一列 JSON、后端零改动</a></td>
 <td>mldong</td>
 <td>赞3&#x2F;藏7&#x2F;阅354</td>
 <td>后台文案放数据库时，语言包帮不上。作者比较翻译表、每语言一列和 JSON 扩展键，选第三种是为了加语言不改表。</td>
@@ -181,7 +179,7 @@
 </tr>
 <tr>
 <td>5</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690401920711655467">王者荣耀日志组件BqLog为什么这么快之1——高性能实时压缩日志</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690401920711655467">王者荣耀日志组件BqLog为什么这么快之1——高性能实时压缩日志</a></td>
 <td>pippocao</td>
 <td>赞5&#x2F;藏7&#x2F;阅225</td>
 <td>手游日志卡在少写、能追、包体小之间。文里把「少打点」和「出事能还原」拆开谈，而不是只压日志级别。</td>
@@ -189,7 +187,7 @@
 </tr>
 <tr>
 <td>6</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688910933353054244"> Redis 常见的数据类型及底层结构</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688910933353054244"> Redis 常见的数据类型及底层结构</a></td>
 <td>xyLJ</td>
 <td>赞4&#x2F;藏4&#x2F;阅235</td>
 <td>从 SDS、quicklist 到 Set 三态、ZSet 跳表加哈希、Hash 渐进 rehash，按结构讲 Redis 五种类型的内存形态。适合补存储原理，不是运维手册。</td>
@@ -197,7 +195,7 @@
 </tr>
 <tr>
 <td>7</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690490009979928576">面试官问”你怎么证明它有效”，200个转AI的后端没几个答得上来</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690490009979928576">面试官问”你怎么证明它有效”，200个转AI的后端没几个答得上来</a></td>
 <td>王中阳讲AI</td>
 <td>赞3&#x2F;藏4&#x2F;阅226</td>
 <td>用一场模拟面试追问「RAG 准确率提升 30%」的测量口径。重点是离线集、标注和上线对照，而不是简历句式。</td>
@@ -205,7 +203,7 @@
 </tr>
 <tr>
 <td>8</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690468159976701998">干了 6 年前端，我是怎么一步步转型到 AI 的？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690468159976701998">干了 6 年前端，我是怎么一步步转型到 AI 的？</a></td>
 <td>前端小小栈</td>
 <td>赞3&#x2F;藏2&#x2F;阅220</td>
 <td>作者复盘从前端、Node 基建、数据分析走到企业 Agent 的路径。是个人转型记录，工程步骤不完整。</td>
@@ -213,7 +211,7 @@
 </tr>
 <tr>
 <td>9</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690497906533138482">为什么 Spring Boot 自动配置了 Redis，还要自己写 RedisTemplate？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690497906533138482">为什么 Spring Boot 自动配置了 Redis，还要自己写 RedisTemplate？</a></td>
 <td>xyLJ</td>
 <td>赞4&#x2F;藏4&#x2F;阅160</td>
 <td>解释 Spring Boot 已经自动配置 Redis 时，为什么业务仍要自己声明 RedisTemplate，以及自定义 Bean 如何盖掉自动配置。</td>
@@ -221,7 +219,7 @@
 </tr>
 <tr>
 <td>10</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688603862199205930">秒懂 Rust 的 7 个核心概念</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688603862199205930">秒懂 Rust 的 7 个核心概念</a></td>
 <td>RockByte</td>
 <td>赞1&#x2F;藏5&#x2F;阅249</td>
 <td>讨论 Rust 在调查里长期受喜爱、但很多人被编译器劝退的原因。偏学习体验，没有新的语言特性发布。</td>
@@ -229,7 +227,7 @@
 </tr>
 <tr>
 <td>11</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690942973639475200">idea 插件-把数据库的表画出来</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690942973639475200">idea 插件-把数据库的表画出来</a></td>
 <td>签收日落</td>
 <td>赞4&#x2F;藏4&#x2F;阅167</td>
 <td>作者谈 AI 问答普及后，自己为什么还写技术博客。观点文，没有可复用的实现。</td>
@@ -237,7 +235,7 @@
 </tr>
 <tr>
 <td>12</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689030470209896498">同一个审批流引擎，我写了两次：一次 11226 行，一次 7036 行</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689030470209896498">同一个审批流引擎，我写了两次：一次 11226 行，一次 7036 行</a></td>
 <td>mldong</td>
 <td>赞3&#x2F;藏6&#x2F;阅174</td>
 <td>同一套审批语义写了两遍：内置模块约 1.1 万行，独立引擎约 7 千行。用行数差说明贫血模型和充血模型各自多出来的职责。</td>
@@ -245,7 +243,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689299210249044019">数据平台到底是什么？一篇文章搞懂数据平台开发</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689299210249044019">数据平台到底是什么？一篇文章搞懂数据平台开发</a></td>
 <td>前端小小栈</td>
 <td>赞2&#x2F;藏3&#x2F;阅163</td>
 <td>从业务库出发，串起采集、传输、仓与湖。是数据平台地图，深度停在概念层。</td>
@@ -253,7 +251,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690460679959035947">「一切皆插件」不是口号：手写一个敢上生产的治理管道过滤器</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690460679959035947">「一切皆插件」不是口号：手写一个敢上生产的治理管道过滤器</a></td>
 <td>后端LV</td>
 <td>赞4&#x2F;藏4&#x2F;阅100</td>
 <td>把「一切皆插件」落到 FilterContext：顺序契约、短路、异常隔离和数据边界。后半用两个过滤器拼等保审计，强调能跑和敢上线不是一回事。</td>
@@ -261,7 +259,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689077368330190899">大厂禁 JOIN 的真正原因，拆到第四层才清楚</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689077368330190899">大厂禁 JOIN 的真正原因，拆到第四层才清楚</a></td>
 <td>晚安日记wanna</td>
 <td>赞1&#x2F;藏2&#x2F;阅146</td>
 <td>禁 JOIN 的理由不是单条 SQL 慢，而是 join buffer 和分库之后跨库语法不成立。适合正在做分库分表的人。</td>
@@ -272,7 +270,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -281,7 +279,7 @@
 </thead>
 <tbody><tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7664407325864558628">为什么Spring要“抛弃”Feign？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7664407325864558628">为什么Spring要“抛弃”Feign？</a></td>
 <td>苏三说技术</td>
 <td>赞66&#x2F;藏64&#x2F;阅7173</td>
 <td>对照 Spring 的 @HttpExchange 和仍在用的 Feign：声明方式接近，但客户端、拦截器和负载均衡不一定原样搬过来。</td>
@@ -292,7 +290,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -301,7 +299,7 @@
 </thead>
 <tbody><tr>
 <td>1</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688805244534325263">同样叫 Harness，DeepSeek Harness 和 Pi 根本不在同一层</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688805244534325263">同样叫 Harness，DeepSeek Harness 和 Pi 根本不在同一层</a></td>
 <td>ikoala</td>
 <td>赞27&#x2F;藏30&#x2F;阅1964</td>
 <td>对照 DeepSeek Harness 和 Pi 的源码调用链：表面都能调模型和工具，扩展点挂的位置不同。看架构不要只看 README。</td>
@@ -309,7 +307,7 @@
 </tr>
 <tr>
 <td>2</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690497704220196883">用 GPT-6 Astra 和 Tripo3D 做智慧农业 3D 大屏：从调研到可巡检园区全流程实录</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690497704220196883">用 GPT-6 Astra 和 Tripo3D 做智慧农业 3D 大屏：从调研到可巡检园区全流程实录</a></td>
 <td>柳杉</td>
 <td>赞19&#x2F;藏15&#x2F;阅902</td>
 <td>把上一篇智慧厂房的调研到网页化链路换到农业园区，对象改成地块、作物、墒情和水肥。验证的是链路能不能换场景，不是新引擎。</td>
@@ -317,7 +315,7 @@
 </tr>
 <tr>
 <td>3</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689096640691683343">用 AI 迁项目有多爽？我把 Webpack 迁 Vite 的全过程记下来了</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689096640691683343">用 AI 迁项目有多爽？我把 Webpack 迁 Vite 的全过程记下来了</a></td>
 <td>CopyCode</td>
 <td>赞8&#x2F;藏14&#x2F;阅1054</td>
 <td>记录用 AI 把 Webpack 迁到 Vite 的过程，重点是保存到编译完成的等待和反复刷新。迁移清单要自己核对，文中时长是作者机器上的体感。</td>
@@ -325,7 +323,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690869176362270729">我重写了整个项目，但没人感谢我！</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690869176362270729">我重写了整个项目，但没人感谢我！</a></td>
 <td>ErpanOmer</td>
 <td>赞13&#x2F;藏4&#x2F;阅768</td>
 <td>大型前端基建迁移做完，绩效仍只是达标。作者认为因果链太长，技术语言没有提前换成业务代价。</td>
@@ -333,7 +331,7 @@
 </tr>
 <tr>
 <td>5</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690190550998007827">2026年，你终于可以在 <code>&lt;textarea&gt;</code> 里定位任意字符了</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690190550998007827">2026年，你终于可以在 <code>&lt;textarea&gt;</code> 里定位任意字符了</a></td>
 <td>涛涛ing</td>
 <td>赞11&#x2F;藏15&#x2F;阅725</td>
 <td>自动补全要贴着输入光标，但 input&#x2F;textarea 拿不到光标坐标。文里拆这个黑盒该在哪一层补测量。</td>
@@ -341,7 +339,7 @@
 </tr>
 <tr>
 <td>6</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688739949714997288">VibeCoding 一套 Admin 系统，五种技术栈实现</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688739949714997288">VibeCoding 一套 Admin 系统，五种技术栈实现</a></td>
 <td>白雾茫茫丶</td>
 <td>赞7&#x2F;藏8&#x2F;阅699</td>
 <td>一个多栈同构后台：先锁约定，再划清跨端对齐的层，以及 Agent 负责哪一段。附带可抄的 Vibe Coding 配置，但是项目约定不是通用框架。</td>
@@ -349,7 +347,7 @@
 </tr>
 <tr>
 <td>7</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690405198255325234">同样用 Element Plus，为什么你的后台总有一股“模板味”？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690405198255325234">同样用 Element Plus，为什么你的后台总有一股“模板味”？</a></td>
 <td>Liora_Yvonne</td>
 <td>赞5&#x2F;藏9&#x2F;阅671</td>
 <td>后台功能齐了仍显乱，因为查询、新增、行操作都是主按钮。讲的是层级和信息密度，不是组件库替换。</td>
@@ -357,7 +355,7 @@
 </tr>
 <tr>
 <td>8</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690614916369252387">我排查了一下午，发现项目打包体积翻倍的元凶是它</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690614916369252387">我排查了一下午，发现项目打包体积翻倍的元凶是它</a></td>
 <td>CopyCode</td>
 <td>赞6&#x2F;藏4&#x2F;阅638</td>
 <td>React 18 + Vite 的 H5 生产 JS 约 2MB，路由和 vendor 已拆过。后面讨论继续减肥时该动哪一块，而不是再拆一次路由。</td>
@@ -365,7 +363,7 @@
 </tr>
 <tr>
 <td>9</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689866047096602666">栗子前端技术周刊第 148 期 - Turborepo 2.11、Chrome 154 iframe、Node.js 26…</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689866047096602666">栗子前端技术周刊第 148 期 - Turborepo 2.11、Chrome 154 iframe、Node.js 26…</a></td>
 <td>晓得迷路了</td>
 <td>赞6&#x2F;藏1&#x2F;阅384</td>
 <td>前端周刊第 148 期，覆盖 9 月 21 日到 27 日，其中提到 Turborepo 2.11。周刊体，具体变更要回链到上游。</td>
@@ -373,7 +371,7 @@
 </tr>
 <tr>
 <td>10</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688917667420717091">Flutter 获取 iPhone Duo 预留区位置</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688917667420717091">Flutter 获取 iPhone Duo 预留区位置</a></td>
 <td>zeqinjie</td>
 <td>赞8&#x2F;藏6&#x2F;阅352</td>
 <td>把 iOS 当前遮挡区换成 Flutter 窗口坐标里的 Rect，给自定义界面避开摄像头一类局部遮挡。只适用于这个 Duo 预留区问题。</td>
@@ -381,7 +379,7 @@
 </tr>
 <tr>
 <td>11</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690205250238103567">Next.js+LangGraph.js+ 简历工具AI Agent完整落地</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690205250238103567">Next.js+LangGraph.js+ 简历工具AI Agent完整落地</a></td>
 <td>码农悟道</td>
 <td>赞2&#x2F;藏5&#x2F;阅347</td>
 <td>用 Next.js 和 LangGraph 做简历优化工作台，把可迭代工作流拆开。适合想在前端仓库里接 Agent 的人，后端编排深度有限。</td>
@@ -389,7 +387,7 @@
 </tr>
 <tr>
 <td>12</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689030315844419630">耗时两周从零搭建私有化企业 RAG 知识库，完整架构与踩坑总结</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689030315844419630">耗时两周从零搭建私有化企业 RAG 知识库，完整架构与踩坑总结</a></td>
 <td>码农悟道</td>
 <td>赞5&#x2F;藏9&#x2F;阅314</td>
 <td>用 FastAPI、LangGraph 和 PGVector 做可溯源的私有知识库，写架构选择和第一期踩坑。检索效果数字没有独立评测，不要直接当生产方案。</td>
@@ -397,7 +395,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689299285138374692"> vtable-guild 被收录进 vuejs&#x2F;awesome-vue 了 🎉</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689299285138374692"> vtable-guild 被收录进 vuejs&#x2F;awesome-vue 了 🎉</a></td>
 <td>parade岁月</td>
 <td>赞3&#x2F;藏3&#x2F;阅212</td>
 <td>个人 Vue 组件进入 awesome-vue 清单。是发布记录，没有新的组件实现细节。</td>
@@ -405,7 +403,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690779187615563776">AI Native 团队完整开发落地手册</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690779187615563776">AI Native 团队完整开发落地手册</a></td>
 <td>tingke</td>
 <td>赞6&#x2F;藏6&#x2F;阅225</td>
 <td>解读 Anthropic 的 AI-native SDLC 手册：问题不是模型能写多少行，而是几小时内生成的代码如何进入现有交付。手册日期是 2026 年 8 月，本文是转述。</td>
@@ -413,7 +411,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690468159975768110">自从有了 AI，我就再也不想拼 UI 了……</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690468159975768110">自从有了 AI，我就再也不想拼 UI 了……</a></td>
 <td>亿元程序员</td>
 <td>赞2&#x2F;藏2&#x2F;阅318</td>
 <td>续写用 Codex 从界面说明生成 PSD 的提示词经验，作者来自游戏主程。偏工作流手记。</td>
@@ -425,7 +423,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -434,7 +432,7 @@
 </thead>
 <tbody><tr>
 <td>1</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689818941397778478">突发！字节内部大调整，QA直接转研发了？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689818941397778478">突发！字节内部大调整，QA直接转研发了？</a></td>
 <td>狂师</td>
 <td>赞38&#x2F;藏9&#x2F;阅6156</td>
 <td>转述字节部分测试团队把 QA 和研发序列合并、分批转型。组织消息，没有公开的职级制度原文。</td>
@@ -442,7 +440,7 @@
 </tr>
 <tr>
 <td>2</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690769804492341298">漫话大模型：7 家中国公司被点名「蒸馏」，他们到底偷走了什么？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690769804492341298">漫话大模型：7 家中国公司被点名「蒸馏」，他们到底偷走了什么？</a></td>
 <td>程序员于老七</td>
 <td>赞23&#x2F;藏10&#x2F;阅1591</td>
 <td>转述 Anthropic 9 月报告点名七家中国公司蒸馏 Claude。以公司原文为准，这篇是社区复述。</td>
@@ -450,7 +448,7 @@
 </tr>
 <tr>
 <td>3</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689377403413430307">顶级模型一句话，AI 写出了能玩的 QQ飞车</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689377403413430307">顶级模型一句话，AI 写出了能玩的 QQ飞车</a></td>
 <td>怕浪猫</td>
 <td>赞8&#x2F;藏12&#x2F;阅982</td>
 <td>用一句话让模型做出可玩的网页小游戏，再换词做另外两个。展示的是生成幅度，不是可维护的游戏架构。</td>
@@ -458,7 +456,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690435049426681898">非游戏开发者用 AI 做微信小游戏的完整实录：聊天出 MVP、备案 27 天、踩坑</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690435049426681898">非游戏开发者用 AI 做微信小游戏的完整实录：聊天出 MVP、备案 27 天、踩坑</a></td>
 <td>尾巴斯斯</td>
 <td>赞6&#x2F;藏7&#x2F;阅842</td>
 <td>非游戏开发者用免费额度把微信小游戏从聊天 MVP 做到备案，周期约 27 天。流程记录，不代表审核时长可复制。</td>
@@ -466,7 +464,7 @@
 </tr>
 <tr>
 <td>5</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690490511467544602">再见了 WebUI，DeepSeek 桌面版真不错。</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690490511467544602">再见了 WebUI，DeepSeek 桌面版真不错。</a></td>
 <td>沉默王二</td>
 <td>赞6&#x2F;藏5&#x2F;阅751</td>
 <td>实测 DeepSeek Harness 桌面版和 WebUI 的差别、自动更新和登录，并拆插件机制。插件推荐以作者环境为准。</td>
@@ -474,7 +472,7 @@
 </tr>
 <tr>
 <td>6</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690010257952178218">ZCode 可以自己看微信小程序了</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690010257952178218">ZCode 可以自己看微信小程序了</a></td>
 <td>飞哥数智谈</td>
 <td>赞9&#x2F;藏14&#x2F;阅464</td>
 <td>用 ZCode 改微信小程序时，发现它能驱动开发者工具做运行、截图和再改。重点是 Agent 进入封闭工具链，不是模型榜。</td>
@@ -482,7 +480,7 @@
 </tr>
 <tr>
 <td>7</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689061402817265710">DHH 震撼发声：手写代码时代落幕，Agent 正重塑软件工程</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689061402817265710">DHH 震撼发声：手写代码时代落幕，Agent 正重塑软件工程</a></td>
 <td>王若风</td>
 <td>赞4&#x2F;藏4&#x2F;阅587</td>
 <td>转述 DHH 称 37signals 让 Agent 成为默认写码者。观点转述，没有该公司工程制度的原文链接核验。</td>
@@ -490,7 +488,7 @@
 </tr>
 <tr>
 <td>8</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688585710283014184">多智能体系统的通信风暴与死锁治理：生产级降级与容灾方案</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688585710283014184">多智能体系统的通信风暴与死锁治理：生产级降级与容灾方案</a></td>
 <td>吴佳浩Alben</td>
 <td>赞10&#x2F;藏8&#x2F;阅419</td>
 <td>谈多智能体的通信风暴和死锁，以及生产里的降级与容灾。系列文章，本篇给出的是治理方向而不是完整代码。</td>
@@ -498,7 +496,7 @@
 </tr>
 <tr>
 <td>9</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690197651807633462">画 AI 漫画，别只会写“日漫风”：10 种画风、适用故事和可复制提示词</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690197651807633462">画 AI 漫画，别只会写“日漫风”：10 种画风、适用故事和可复制提示词</a></td>
 <td>小酒星小杜</td>
 <td>赞9&#x2F;藏8&#x2F;阅397</td>
 <td>单句提示可以出好看的图，漫画还要交代等待的原因和下一格。讲分镜约束，不是图像模型发布。</td>
@@ -506,7 +504,7 @@
 </tr>
 <tr>
 <td>10</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690414588748464138">AI 测试 Skill 大全，我日常在用的 25 个，夯爆了！</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690414588748464138">AI 测试 Skill 大全，我日常在用的 25 个，夯爆了！</a></td>
 <td>狂师</td>
 <td>赞8&#x2F;藏13&#x2F;阅418</td>
 <td>作者把自己的 25 个测试 Skill 按需求到报告串起来。技能是个人仓库资产，换团队要重写入口条件。</td>
@@ -514,7 +512,7 @@
 </tr>
 <tr>
 <td>11</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690110881577304079">AI时代最大的红利：个人做量化，也能开发出一套适合你的策略</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690110881577304079">AI时代最大的红利：个人做量化，也能开发出一套适合你的策略</a></td>
 <td>代码北人生</td>
 <td>赞7&#x2F;藏15&#x2F;阅408</td>
 <td>量化研究背景里使用 AI 时，提醒未来函数、幸存者偏差和手续费漏算。领域经验，不是通用 Agent 教程。</td>
@@ -522,7 +520,7 @@
 </tr>
 <tr>
 <td>12</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690026779798208547">分享一个做视频的skill，这条白板视频，每一笔都是代码画的</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690026779798208547">分享一个做视频的skill，这条白板视频，每一笔都是代码画的</a></td>
 <td>怕浪猫</td>
 <td>赞7&#x2F;藏9&#x2F;阅384</td>
 <td>一句话交出白板视频技能 whiteboard-video，产物是成片结构而不是文案。技能仓库地址在文中，使用前看输入假设。</td>
@@ -530,7 +528,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689299285138128932">一天一个开源项目（第 227 篇）：Strands Agents Harness SDK —— 从「手写 Agent 循环」到「一行代码拿到生产级 Agent」</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689299285138128932">一天一个开源项目（第 227 篇）：Strands Agents Harness SDK —— 从「手写 Agent 循环」到「一行代码拿到生产级 Agent」</a></td>
 <td>冬奇Lab</td>
 <td>赞4&#x2F;藏9&#x2F;阅379</td>
 <td>介绍 Strands Agents（harness-sdk）这一期开源项目，目标是把 Agent 真正跑起来。项目卡片体，细节要回仓库。</td>
@@ -538,7 +536,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690762523469479977">基于Jev的浏览器Agent插件狂揽 21k star，3分钟教你解放双手</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690762523469479977">基于Jev的浏览器Agent插件狂揽 21k star，3分钟教你解放双手</a></td>
 <td>ServBay</td>
 <td>赞3&#x2F;藏5&#x2F;阅341</td>
 <td>把 Jev 说成离散动作上的判断模型，用来降低浏览器代理的等待。判断模型和生成模型职责不同，延迟数字以厂商说明为准。</td>
@@ -546,7 +544,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689029662157668390">我打回了 AI 写的 PR：新立 3 条规矩，第 1 条就有争议</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689029662157668390">我打回了 AI 写的 PR：新立 3 条规矩，第 1 条就有争议</a></td>
 <td>kyriewen</td>
 <td>赞6&#x2F;藏6&#x2F;阅296</td>
 <td>打回 AI 的 PR 看三态是否齐、需求理解有没有随 PR 提交、任务外改动是否零容忍。附打回评论模板，适合做评审口径。</td>
@@ -557,7 +555,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -566,7 +564,7 @@
 </thead>
 <tbody><tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7666482995197722630">Kimi K3太牛了！但老板说API太贵，让我本地化部署，我算完成本，他涨红脸沉默不语了！其实成本不高，三千万足矣。</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7666482995197722630">Kimi K3太牛了！但老板说API太贵，让我本地化部署，我算完成本，他涨红脸沉默不语了！其实成本不高，三千万足矣。</a></td>
 <td>李剑一</td>
 <td>赞117&#x2F;藏84&#x2F;阅24307</td>
 <td>以账单和老板反应串起的叙事。偏故事，技术增量弱，略读。</td>
@@ -574,7 +572,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7659709059810705462">三年了，为什么 AI 应用还没爆发？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7659709059810705462">三年了，为什么 AI 应用还没爆发？</a></td>
 <td>写代码像蔡徐抻</td>
 <td>赞159&#x2F;藏81&#x2F;阅23272</td>
 <td>从「算力过剩」的市场说法谈到应用何时出现。评论体，没有新的产能或模型数据。</td>
@@ -585,7 +583,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -594,7 +592,7 @@
 </thead>
 <tbody><tr>
 <td>1</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689599510956507136">《HelloGitHub》第 126 期</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689599510956507136">《HelloGitHub》第 126 期</a></td>
 <td>HelloGitHub</td>
 <td>赞5&#x2F;藏4&#x2F;阅487</td>
 <td>HelloGitHub 式的项目清单，覆盖多语言入门仓库。榜单体，略读后按兴趣点进仓库。</td>
@@ -602,7 +600,7 @@
 </tr>
 <tr>
 <td>2</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688669403517960202">Trae 每天自动签到：Serverless 定时任务完整复盘</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7688669403517960202">Trae 每天自动签到：Serverless 定时任务完整复盘</a></td>
 <td>夏天要喝冰可乐</td>
 <td>赞4&#x2F;藏3&#x2F;阅364</td>
 <td>复盘一个只用标准库的 Serverless 定时任务：接口逆向、误导性错误码、失败告警和配额竞争。适合看无人值守任务怎么失败。</td>
@@ -610,7 +608,7 @@
 </tr>
 <tr>
 <td>3</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690869043603292206">Web自动化测试全景图：20个主流AI自动化工具如何选？（强烈安利）</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690869043603292206">Web自动化测试全景图：20个主流AI自动化工具如何选？（强烈安利）</a></td>
 <td>狂师</td>
 <td>赞5&#x2F;藏5&#x2F;阅154</td>
 <td>Web 自动化不再只是 Playwright 和 Selenium，清单里一半带 AI。作者比较的是选择成本，不是新跑分。</td>
@@ -618,7 +616,7 @@
 </tr>
 <tr>
 <td>4</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690504159464505386"> 一张图三句需求，我用 Trae Work 做了一块能看日出日落和月相的天文机械表</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690504159464505386"> 一张图三句需求，我用 Trae Work 做了一块能看日出日落和月相的天文机械表</a></td>
 <td>汉堡大王9527</td>
 <td>赞3&#x2F;藏0&#x2F;阅133</td>
 <td>在 Trae 里丢一张天文表图片和一句需求，让它做出时分秒、月相和扫秒。是图像到界面的一次试做。</td>
@@ -626,7 +624,7 @@
 </tr>
 <tr>
 <td>5</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690415131084406822">GitHub 日榜趋势速报 | 2026-09-29</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690415131084406822">GitHub 日榜趋势速报 | 2026-09-29</a></td>
 <td>miofly</td>
 <td>赞1&#x2F;藏1&#x2F;阅169</td>
 <td>GitHub 日榜转载，日期写 2026-09-29。榜单聚合，略读。</td>
@@ -634,7 +632,7 @@
 </tr>
 <tr>
 <td>6</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690839722769563657">GitHub 日榜趋势速报 | 2026-09-30</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690839722769563657">GitHub 日榜趋势速报 | 2026-09-30</a></td>
 <td>miofly</td>
 <td>赞2&#x2F;藏0&#x2F;阅135</td>
 <td>GitHub 日榜转载，日期写 2026-09-30。榜单聚合，略读。</td>
@@ -642,7 +640,7 @@
 </tr>
 <tr>
 <td>7</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689654965350137899">Hutool之RandomUtil：随机数生成的终极利器</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689654965350137899">Hutool之RandomUtil：随机数生成的终极利器</a></td>
 <td>独泪了无痕</td>
 <td>赞3&#x2F;藏0&#x2F;阅90</td>
 <td>用 Hutool 生成验证码、临时密码一类随机串。工具类用法，没有安全随机数的边界讨论。</td>
@@ -650,7 +648,7 @@
 </tr>
 <tr>
 <td>8</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689314158994669614">GitHub 日榜趋势速报 | 2026-09-27</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689314158994669614">GitHub 日榜趋势速报 | 2026-09-27</a></td>
 <td>miofly</td>
 <td>赞2&#x2F;藏1&#x2F;阅101</td>
 <td>GitHub 日榜转载，日期写 2026-09-27。榜单聚合，略读。</td>
@@ -658,7 +656,7 @@
 </tr>
 <tr>
 <td>9</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689029662158651430">GitHub 日榜趋势速报 | 2026-09-25</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689029662158651430">GitHub 日榜趋势速报 | 2026-09-25</a></td>
 <td>miofly</td>
 <td>赞0&#x2F;藏1&#x2F;阅155</td>
 <td>GitHub 日榜转载，日期写 2026-09-25，提到 jev-chat-jarvis。榜单聚合，略读。</td>
@@ -666,7 +664,7 @@
 </tr>
 <tr>
 <td>10</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689771186259836955">GitHub 日榜趋势速报 | 2026-09-28</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689771186259836955">GitHub 日榜趋势速报 | 2026-09-28</a></td>
 <td>miofly</td>
 <td>赞0&#x2F;藏1&#x2F;阅123</td>
 <td>GitHub 日榜转载，日期写 2026-09-28。榜单聚合，略读。</td>
@@ -674,7 +672,7 @@
 </tr>
 <tr>
 <td>11</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689091429970952227">开发利器Hutool之MapUtil的使用</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689091429970952227">开发利器Hutool之MapUtil的使用</a></td>
 <td>独泪了无痕</td>
 <td>赞1&#x2F;藏0&#x2F;阅111</td>
 <td>Hutool MapUtil 对 Map 的创建、过滤、合并做静态封装。API 速查，不是新库发布。</td>
@@ -682,7 +680,7 @@
 </tr>
 <tr>
 <td>12</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689314158994964526">一个轻量级 AI 代理工具箱，与coding plan 推荐</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689314158994964526">一个轻量级 AI 代理工具箱，与coding plan 推荐</a></td>
 <td>码头的薯条</td>
 <td>赞2&#x2F;藏3&#x2F;阅96</td>
 <td>介绍一个对接 coding plan 的轻量代理，用来分发多家模型接口。动机是 token 花费，缺少限额和审计设计。</td>
@@ -690,7 +688,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690551361394851882">【AI】iPhone18抢不到？我用 Codex 做了个苹果库存监控工具</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7690551361394851882">【AI】iPhone18抢不到？我用 Codex 做了个苹果库存监控工具</a></td>
 <td>JavaDog程序狗</td>
 <td>赞1&#x2F;藏0&#x2F;阅80</td>
 <td>让 Codex 做苹果库存监控：认接口、辨真假库存、处理 HTTP 541，再包成可双击的程序。是一次个人自动化，库存接口可能变更。</td>
@@ -698,7 +696,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689030281899622438">把 ADB 装进 macOS app    </a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689030281899622438">把 ADB 装进 macOS app    </a></td>
 <td>tangzzzfan</td>
 <td>赞1&#x2F;藏3&#x2F;阅81</td>
 <td>验证 macOS 应用用 Rust sidecar 做 Android 无线调试，避免用户自己装 ADB。还是技术验证，不是成品分布。</td>
@@ -706,7 +704,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689030185367486510">再也不怕手滑丢代码！给 git 高危操作加一层安全校验</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7689030185367486510">再也不怕手滑丢代码！给 git 高危操作加一层安全校验</a></td>
 <td>用户7330964612309</td>
 <td>赞1&#x2F;藏1&#x2F;阅61</td>
 <td>讨论 checkout 和 reset –hard 之后如何留退路。面向日常 Git 误操作，不是新的版本控制模型。</td>
@@ -717,7 +715,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -726,7 +724,7 @@
 </thead>
 <tbody><tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7667084999975862323">《HelloGitHub》第 124 期</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7667084999975862323">《HelloGitHub》第 124 期</a></td>
 <td>HelloGitHub</td>
 <td>赞24&#x2F;藏17&#x2F;阅1224</td>
 <td>另一期 HelloGitHub 项目清单。榜单体，略读。</td>
@@ -1146,90 +1144,29 @@
     </div>
     <div class="foot">
       <div class="foot-inner">
-        <div class="foot__head">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
           
-            <div class="foot-line">
+            
               
-                <div class="matts">长</div>
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
               
-                <div class="matts">相</div>
-              
-                <div class="matts">知</div>
-              
-            </div>
-          
-            <div class="foot-line">
-              
-                <div class="matts">不</div>
-              
-                <div class="matts">相</div>
-              
-                <div class="matts">疑</div>
-              
-            </div>
-          
-        </div>
-        <div class="foot__body">
-          
-            <div class="foot-item">
-              <div class="foot-item__head">朋友</div>
-              <div class="foot-item__body">
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
-                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
-                  </div>
-                
-                <div class="text">
-                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
-                  <a class="foot-link"
-                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
-                  申请友链</a>
-                </div>
-              </div>
-            </div>
+            
           
           
-            <div class="foot-item">
-              <div class="foot-item__head">账号</div>
-              <div class="foot-item__body">
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
-                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
-                  </div>
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
-                    <a class="foot-link" href="">微信公众号</a>
-                  </div>
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
-                    <a class="foot-link" href="">知乎</a>
-                  </div>
-                
-              </div>
-            </div>
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
           
-          <div class="foot-item">
-            <div class="foot-item__head">联系</div>
-            <div class="foot-item__body">
-              <div class="text">
-                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
-                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="copyright">
-          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
-          <svg width="20" height="20" viewBox="0 0 725 725">
-            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
-            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
-            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
-          </svg>
-          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+          <a href="https://932687738.github.io">烟火与诗</a>
         </div>
       </div>
     </div>

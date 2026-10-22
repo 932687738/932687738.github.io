@@ -28,10 +28,6 @@
             href="/images/favicon-16x16.png"/>
     
     
-      <link rel="mask-icon"
-            href="/images/logo.svg"
-            color=""/>
-    
     
     
       
@@ -65,13 +61,15 @@
     <div class="head">
       <div class="nav">
         <a href='/' class="nav-logo">
-          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+          <img alt="logo" src="/images/logo.png"/>
         </a>
         <input id="navBtn" type="checkbox"/>
         <div class="nav-menu">
           
             
               <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
             
               <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
             
@@ -99,7 +97,7 @@
     </div>
     <div class="body">
       
-  <article class="post-content">
+  <article class="post-content post-content--digest">
     <div class="post-inner">
       <div class="post-content__head">
         <div class="post-title">掘金热榜 2026-09-11</div>
@@ -140,7 +138,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -149,7 +147,7 @@
 </thead>
 <tbody><tr>
 <td>8</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683457864929329204">为什么不推荐走Agent开发？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683457864929329204">为什么不推荐走Agent开发？</a></td>
 <td>程序员飞鱼</td>
 <td>赞29&#x2F;藏0&#x2F;阅320</td>
 <td>飞鱼从社招视角泼冷水：Agent 岗位需要业务增量，培训班鼓吹「人人 LangChain&#x2F;LangGraph 搭 Agent」多是焦虑营销。建议做有垂直场景的 Agent，而不是为了面试堆框架 Demo。</td>
@@ -157,7 +155,7 @@
 </tr>
 <tr>
 <td>9</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683515498140221478">为啥 Blender 突然火了？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683515498140221478">为啥 Blender 突然火了？</a></td>
 <td>cxuanAI</td>
 <td>赞11&#x2F;藏9&#x2F;阅558</td>
 <td>cxuanAI 科普 Blender：Astra 发布后「Astra+Blender 3D」出圈。Blender 是免费开源 3D 全流程工具；Astra 可代劳建模&#x2F;材质&#x2F;灯光&#x2F;渲染，降低 3D 创作门槛，但工程细节仍要人审。</td>
@@ -165,7 +163,7 @@
 </tr>
 <tr>
 <td>11</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683722642070896690">推荐一个比ES快5倍的搜索引擎</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683722642070896690">推荐一个比ES快5倍的搜索引擎</a></td>
 <td>苏三说技术</td>
 <td>赞10&#x2F;藏6&#x2F;阅238</td>
 <td>苏三介绍 Redis Search 作 ES 轻量替代：宣称同硬件 QPS 约为 ES 3–5 倍、P99 约 5ms。适合中小规模全文检索；复杂聚合&#x2F;超大规模仍要评估 ES&#x2F;OpenSearch。</td>
@@ -173,7 +171,7 @@
 </tr>
 <tr>
 <td>12</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7681223706186596387">ChatGPT Plus、Pro 5x、Pro 20x 到底有多少额度？聊聊 Codex 那个让人看不懂的“周限额”</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7681223706186596387">ChatGPT Plus、Pro 5x、Pro 20x 到底有多少额度？聊聊 Codex 那个让人看不懂的“周限额”</a></td>
 <td>掘金者阿豪</td>
 <td>赞0&#x2F;藏1&#x2F;阅381</td>
 <td>掘金者阿豪拆解 ChatGPT Plus&#x2F;Pro 5x&#x2F;20x 与 Codex <code>/status</code> 的 5 小时&#x2F;Weekly limit：社区用「美元额度」估算用量，但官方口径并不透明。重度 Codex 用户应盯 status 而不是只看套餐名。</td>
@@ -181,7 +179,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7681245344118063131">Java 图片处理还在用 ImageIO？这个库让你代码从 30 行变 3 行</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7681245344118063131">Java 图片处理还在用 ImageIO？这个库让你代码从 30 行变 3 行</a></td>
 <td>SimonKing</td>
 <td>赞4&#x2F;藏6&#x2F;阅264</td>
 <td>SimonKing 系统介绍 Thumbnailator：用链式 API 做裁剪&#x2F;缩放&#x2F;水印&#x2F;压缩，替代 ImageIO 几十行样板代码。适合头像、商品缩略图等 Java 高频图像处理。</td>
@@ -189,7 +187,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7682323883429232691">学习 FastAPI 的 Day 1：看懂接口与请求流程</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7682323883429232691">学习 FastAPI 的 Day 1：看懂接口与请求流程</a></td>
 <td>Dragon_xjy</td>
 <td>赞3&#x2F;藏3&#x2F;阅190</td>
 <td>Dragon_xjy FastAPI Day1：自动 Swagger&#x2F;Redoc、Pydantic 校验、依赖注入与中间件执行顺序。偏入门教程，适合 Python 后端转 API 开发。</td>
@@ -201,7 +199,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -210,7 +208,7 @@
 </thead>
 <tbody><tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683481485497188403">为什么市面上的 coding agent 大多数都基于Nodejs？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683481485497188403">为什么市面上的 coding agent 大多数都基于Nodejs？</a></td>
 <td>Moment</td>
 <td>赞13&#x2F;藏10&#x2F;阅770</td>
 <td>Moment 观察 Coding Agent 多选 TypeScript&#x2F;Node（Kimi CLI、DeepSeek Harness、Gemini&#x2F;Qwen CLI）；Claude Code&#x2F;OpenCode 走 TS+Bun。论点：CLI 生态、Ink&#x2F;Solid TUI、npm 分发速度推动 TS 占主导，不是语言本身更强。</td>
@@ -218,7 +216,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683013257235283987">为什么技术极强的前端，往往当不好前端 Team Leader？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683013257235283987">为什么技术极强的前端，往往当不好前端 Team Leader？</a></td>
 <td>ErpanOmer</td>
 <td>赞5&#x2F;藏6&#x2F;阅613</td>
 <td>ErpanOmer 谈「技术极强前端难当 TL」：个人英雄主义、不愿授权、用写代码速度替代管理，在 2026 缩编环境下更易拖垮团队。偏管理随笔，技术增量有限。</td>
@@ -229,7 +227,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -238,7 +236,7 @@
 </thead>
 <tbody><tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7653442979387506726">我给 AI 搭了个法庭：一个前端仔的 LangGraph 实战全记录</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7653442979387506726">我给 AI 搭了个法庭：一个前端仔的 LangGraph 实战全记录</a></td>
 <td>波棱盖卡住了</td>
 <td>赞59&#x2F;藏86&#x2F;阅4949</td>
 <td>波棱盖用 LangGraph 搭「反谣言」搜索 Agent：灵感来自知乎直答 API，模式分简单&#x2F;深度&#x2F;DeepSearch；前端作者学 Python agent 管道全记录。固定来源外技术文，作 LangGraph 实践参考。</td>
@@ -249,7 +247,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -258,7 +256,7 @@
 </thead>
 <tbody><tr>
 <td>4</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683722642071470130">DeepSeek V4.1 Flash：一次把自家旗舰送走的发布</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683722642071470130">DeepSeek V4.1 Flash：一次把自家旗舰送走的发布</a></td>
 <td>码事漫谈</td>
 <td>赞15&#x2F;藏6&#x2F;阅569</td>
 <td>码事漫谈解读 DeepSeek V4.1 Flash 正式版（9&#x2F;10 12:00）：官方称全面超越 V4 Pro，计划 9&#x2F;14 下线 Pro 并静默路由到 Flash。48h 内测名带 expires 0910，属激进自换代。</td>
@@ -266,7 +264,7 @@
 </tr>
 <tr>
 <td>5</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683347149876051977">DeepSeek 明天又降价（涵历史价格对比）</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683347149876051977">DeepSeek 明天又降价（涵历史价格对比）</a></td>
 <td>码事漫谈</td>
 <td>赞4&#x2F;藏5&#x2F;阅819</td>
 <td>同作者对照 Flash 三次调价：9&#x2F;10 起缓存命中回到 0.02、未命中 1、输出 4（高峰翻倍）。结论：输入两档退回 8&#x2F;17 前，输出只降 11% 未完全回原点。Agent&#x2F;RAG 应盯缓存命中率。</td>
@@ -274,7 +272,7 @@
 </tr>
 <tr>
 <td>7</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683353819855077412">每天白嫖 WorkBuddy 100 积分，我让WorkBuddy自己领</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683353819855077412">每天白嫖 WorkBuddy 100 积分，我让WorkBuddy自己领</a></td>
 <td>程序员晓凡</td>
 <td>赞4&#x2F;藏5&#x2F;阅477</td>
 <td>晓凡分享 WorkBuddy「积分助手」Skill：自动签到领 100 分、可定时触发，避免断签丢 7 日奖励。产品技巧文，展示 Skill 连接器做日常自动化。</td>
@@ -282,7 +280,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683072481465057323">GPT images 2.5 一手实测，这也太颠了。。。</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683072481465057323">GPT images 2.5 一手实测，这也太颠了。。。</a></td>
 <td>cxuanAI</td>
 <td>赞5&#x2F;藏1&#x2F;阅399</td>
 <td>cxuanAI 实测 ChatGPT Images 2.5（9&#x2F;8–9&#x2F;9 发布，热榜传播）：更快、更逼真、可 Sketch 草图转图与照片转艺术风。发布窗口 API 曾报错，属相邻日期产品体验文。</td>
@@ -290,7 +288,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7682634449856675867">从 ChatGPT 到 Astra：四年走完的路，AGI 真的来了吗？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7682634449856675867">从 ChatGPT 到 Astra：四年走完的路，AGI 真的来了吗？</a></td>
 <td>Cosolar</td>
 <td>赞6&#x2F;藏1&#x2F;阅364</td>
 <td>Cosolar 复盘 Astra 发布与 Brockman「AGI era」引语：从 ChatGPT→o1→Astra 时间线、Lean 数学与 benchmark 叙事。观点文，重大事实需回 OpenAI 官方页。</td>
@@ -298,7 +296,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7681626346015916068">GPT-6 Astra 发布：OpenAI 正式宣告“AGI 时代到来”</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7681626346015916068">GPT-6 Astra 发布：OpenAI 正式宣告“AGI 时代到来”</a></td>
 <td>全栈弄潮儿</td>
 <td>赞3&#x2F;藏2&#x2F;阅450</td>
 <td>全栈弄潮儿 Astra 发布解读：代际跃迁、定价与开发者影响综述。与上篇同类，作传播窗口补充。</td>
@@ -310,7 +308,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -319,7 +317,7 @@
 </thead>
 <tbody><tr>
 <td>1</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683062233580634122">会开完了，活还是没人干？我用 AiiOnly + Workbuddy 做了个「会议行动项助手」</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683062233580634122">会开完了，活还是没人干？我用 AiiOnly + Workbuddy 做了个「会议行动项助手」</a></td>
 <td>倔强的石头_</td>
 <td>赞1&#x2F;藏1&#x2F;阅435</td>
 <td>石头用 AiiOnly + WorkBuddy 做「会议行动项助手」：输入纪要输出可派工任务台账（负责人&#x2F;DDL&#x2F;完成标准），而不是摘要。适合内部办公 Agent PoC。</td>
@@ -327,7 +325,7 @@
 </tr>
 <tr>
 <td>8</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683738599201685538">Codex、Claude Code、WorkBuddy + Tabbit CLI：让 AI 操控浏览器发文章</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683738599201685538">Codex、Claude Code、WorkBuddy + Tabbit CLI：让 AI 操控浏览器发文章</a></td>
 <td>若丶相见</td>
 <td>赞1&#x2F;藏0&#x2F;阅66</td>
 <td>若丶相见 实操 Codex+Tabbit CLI 操控浏览器发掘金：AI 填正文&#x2F;传图，人工点发布。展示 browser automation + coding agent 分工，Codex&#x2F;Claude Code&#x2F;WorkBuddy 均可接 Tabbit Skill。</td>
@@ -335,7 +333,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683095604146421802">TraeCode从0.5开发微信小程序【需求-开发-测试】</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683095604146421802">TraeCode从0.5开发微信小程序【需求-开发-测试】</a></td>
 <td>夜果子</td>
 <td>赞1&#x2F;藏1&#x2F;阅40</td>
 <td>夜果子用 TraeCode 积分开发微信小程序：先让 AI 拆需求文档再修 bug。Trae 靠签到&#x2F;赠送积分计费，适合轻量小程序，不等于生产级 CI。</td>
@@ -343,7 +341,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683493984028459035">Codex 里很好用但容易被忽视的功能：Hook</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7683493984028459035">Codex 里很好用但容易被忽视的功能：Hook</a></td>
 <td>四七伵</td>
 <td>赞0&#x2F;藏0&#x2F;阅67</td>
 <td>四七伵介绍 Codex Hook：长任务（如 71 分钟）结束后汇总 skill&#x2F;子 agent&#x2F;文件 diff&#x2F;shell 调用，降低复盘成本。Hook 内置于 Codex，适合审计型 workflow。</td>
@@ -351,7 +349,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7682663370555899958">Windows MySQL8.0.44 保姆级超详细安装配置教程（含 ZIP 免安装、MSI 图形安装、完整卸载流程）</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7682663370555899958">Windows MySQL8.0.44 保姆级超详细安装配置教程（含 ZIP 免安装、MSI 图形安装、完整卸载流程）</a></td>
 <td>知码研习</td>
 <td>赞0&#x2F;藏0&#x2F;阅88</td>
 <td>知码研习 MySQL 8.0.44 Windows 安装：ZIP 免安装、MSI、卸载三套流程 + utf8mb4 + Navicat。环境搭建教程，与 AI 无关。</td>
@@ -507,90 +505,29 @@
     </div>
     <div class="foot">
       <div class="foot-inner">
-        <div class="foot__head">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
           
-            <div class="foot-line">
+            
               
-                <div class="matts">长</div>
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
               
-                <div class="matts">相</div>
-              
-                <div class="matts">知</div>
-              
-            </div>
-          
-            <div class="foot-line">
-              
-                <div class="matts">不</div>
-              
-                <div class="matts">相</div>
-              
-                <div class="matts">疑</div>
-              
-            </div>
-          
-        </div>
-        <div class="foot__body">
-          
-            <div class="foot-item">
-              <div class="foot-item__head">朋友</div>
-              <div class="foot-item__body">
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
-                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
-                  </div>
-                
-                <div class="text">
-                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
-                  <a class="foot-link"
-                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
-                  申请友链</a>
-                </div>
-              </div>
-            </div>
+            
           
           
-            <div class="foot-item">
-              <div class="foot-item__head">账号</div>
-              <div class="foot-item__body">
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
-                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
-                  </div>
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
-                    <a class="foot-link" href="">微信公众号</a>
-                  </div>
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
-                    <a class="foot-link" href="">知乎</a>
-                  </div>
-                
-              </div>
-            </div>
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
           
-          <div class="foot-item">
-            <div class="foot-item__head">联系</div>
-            <div class="foot-item__body">
-              <div class="text">
-                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
-                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="copyright">
-          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
-          <svg width="20" height="20" viewBox="0 0 725 725">
-            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
-            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
-            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
-          </svg>
-          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+          <a href="https://932687738.github.io">烟火与诗</a>
         </div>
       </div>
     </div>

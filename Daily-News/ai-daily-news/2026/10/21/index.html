@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-21 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-21</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-21</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：OpenAI 把前沿模型与 Codex 工作流放进 Google Cloud Model Garden；同一天 Claude Code &#x2F; Hermes &#x2F; OpenClaw 连续发版，企业侧多云选模与 Agent 工具链可靠性同步升温。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI、Google Cloud、Anthropic&#x2F;Claude Code、Hermes、OpenClaw、Codex、Langfuse、LangChain&#x2F;LangGraph、Spring AI &#x2F; Spring Alibaba AI、Code Graph、Loop Engineering、arXiv、TechCrunch、中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>超大规模云开始并列托管多家闭源前沿模型；编码 Agent 发布节奏以稳定性与可观测性为主；Agent 商业化（购物&#x2F;广告）与科研多 Agent 并行探索并存</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>GCP Model Garden 私有预览申请；Claude Code 2.1.306&#x2F;2.1.307 的云会话登录与 safety OTel；OpenClaw Windows Gateway 修复；Hermes v0.22.4 桌面体验补丁</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：npm 显示 2.1.306（10-21）并随后有 2.1.307 changelog。Codex：无独立稳定 tag，但 OpenAI×GCP 公告明确纳入 Codex agentic workflows。OpenClaw：v2026.10.10-beta.3 预发布。Hermes：v0.22.4。Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering：未发现可核验的本日正式重大发布（Langfuse 最近 changelog 停在 10-19）。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多云模型分发</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/openai-models-google-cloud">OpenAI models are coming to Google Cloud</a></td>
+<td>2026-10-21</td>
+<td>官方发布</td>
+<td>OpenAI 与 Google Cloud 合作，把前沿模型与 Codex agentic workflows 接入 Model Garden；经 Marketplace 计费并可抵扣 GCP commitment。Microsoft 仍为 OpenAI 主要云伙伴。GA 计划未来数周。</td>
+</tr>
+<tr>
+<td>企业平台</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers">Google Cloud brings OpenAI models to customers</a></td>
+<td>2026-10-21</td>
+<td>官方发布</td>
+<td>私有预览滚动 GPT-6 Astra &#x2F; GPT-6.1 Sol &#x2F; GPT-6 Luna；宣称成为同时提供三大闭源 LLM 的超大规模云。可把本地 Codex CLI&#x2F;Desktop 接到 Gemini 平台推理；后续进 Antigravity 与 Gemini Agent。</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code changelog（2.1.306 &#x2F; 2.1.307）</a></td>
+<td>2026-10-21</td>
+<td>开源发布</td>
+<td>2.1.306：修复云会话 <code>claude -p</code> 误报未登录、MCP 工具过多时错误被误标为 prompt too long。2.1.307：<code>/claude-api api-version</code> 指向 <code>2026-10-21</code>；新增 <code>claude_code.safety_event</code> OTel；Code Review 支持 <code>@claude review stop</code>。</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases">Hermes Agent v0.22.4</a></td>
+<td>2026-10-21</td>
+<td>开源发布</td>
+<td>去掉桌面 composer 上方无用建议 pill；无依赖插件跳过空 consent；WhatsApp 重配对；审批模式 chip 跟随 profile。同日还有 v0.22.3 大窗口稳定打包说明。</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3">openclaw 2026.10.10-beta.3</a></td>
+<td>2026-10-21</td>
+<td>开源预发布</td>
+<td>Windows Gateway 启动&#x2F;升级恢复、agent DB 所有权竞态、后台任务完成丢失、Discord slash、CLI 会话跨 cron 连续性、macOS 长命令超时等 50+ 修复。</td>
+</tr>
+<tr>
+<td>Anthropic 治理</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news">Physicist Christopher Stubbs joins Long-Term Benefit Trust</a></td>
+<td>2026-10-21</td>
+<td>官方公告</td>
+<td>信任委员会人事更新，非模型发布。</td>
+</tr>
+<tr>
+<td>科研 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/scaling-ai-research-for-complex-biological-data">Using thousands of AI agents on biological data</a></td>
+<td>2026-10-21</td>
+<td>官方案例</td>
+<td>OpenAI×PerturbAI×Scripps 用数千 GPT‑Rosalind Agent 在约 32 分钟内解读百万级脑细胞扰动数据，示范分布式生物学推理。</td>
+</tr>
+<tr>
+<td>产品商业化</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/chatgpt-ads-expands-26-new-countries">ChatGPT Ads expands to 26 new countries</a></td>
+<td>2026-10-21</td>
+<td>官方发布</td>
+<td>广告覆盖扩至 89 国；仅 Free&#x2F;Go 展示，Plus&#x2F;Pro&#x2F;Enterprise 仍无广告。</td>
+</tr>
+<tr>
+<td>媒体观察</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/">Walmart Agent Gateway vs Amazon blocking agents</a></td>
+<td>2026-10-21</td>
+<td>技术媒体</td>
+<td>Walmart 以 MCP Agent Gateway 开放授权购物 Agent，与 Amazon 限制形成对照（需结合官方文档再落地）。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多云选型</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/openai-models-google-cloud">OpenAI on Google Cloud</a></td>
+<td>Model Garden + Marketplace 结算 + 治理控件；Codex 工作流进 GCP</td>
+<td>已有 GCP 承诺、要试 OpenAI&#x2F;Codex 的企业架构师</td>
+</tr>
+<tr>
+<td>编码 Agent 运维</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code changelog</a></td>
+<td>云会话环境变量、safety OTel、API version pin</td>
+<td>跑云会话 &#x2F; self-hosted runner 的团队</td>
+</tr>
+<tr>
+<td>桌面 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3">OpenClaw beta.3 notes</a></td>
+<td>Windows Gateway、升级迁移、记忆索引冷启动</td>
+<td>Windows 主力 OpenClaw 用户</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：云厂商在拼「模型选择权 + 治理」；本地&#x2F;桌面 Agent 则继续打补丁债——会话连续性、工具目录失效、sandbox&#x2F;OTel 成为当日主线。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>多云 Codex</td>
+<td>OpenAI 明确把 Codex workflows 放进 GCP</td>
+<td>评估同一套 Codex CLI 切推理后端时的密钥、计费与数据驻留</td>
+</tr>
+<tr>
+<td>Claude Code 可观测</td>
+<td><code>claude_code.safety_event</code> 记录权限&#x2F;沙箱&#x2F;hook 拦截</td>
+<td>把 Agent 安全决策接到现有 OTel 管道，而不是只看对话日志</td>
+</tr>
+<tr>
+<td>OpenClaw 可靠性</td>
+<td>修 agent DB 双写所有权、后台完成丢失、CLI 工具目录失效</td>
+<td>长跑 Agent 要把「会话状态」和「工具目录版本」当作一等公民</td>
+</tr>
+<tr>
+<td>专项空窗</td>
+<td>Langfuse &#x2F; LangGraph &#x2F; Spring AI Alibaba &#x2F; Code Graph &#x2F; Loop Engineering 本日无新正式版</td>
+<td>继续跟踪 10-19 Langfuse Experiments 与既有 Java Graph 可观测 PR，不把旧文当成新发布</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/openai-models-google-cloud">OpenAI × Google Cloud</a></td>
+<td>改变企业「默认只在一家云上拿前沿模型」的假设</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code changelog</a></td>
+<td>云会话与安全事件是生产排障刚需</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3">OpenClaw 2026.10.10-beta.3</a></td>
+<td>Windows&#x2F;升级路径问题清单完整</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/scaling-ai-research-for-complex-biological-data">生物数据多 Agent</a></td>
+<td>大规模并行 Agent 在科研闭环中的分工样板</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-21 00:00:00 到 2026-10-21 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, cloud.google.com, code.claude.com, anthropic.com, github.com, techcrunch.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>OpenAI models are coming to Google Cloud</td>
+<td>2026-10-21</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/openai-models-google-cloud">https://openai.com/index/openai-models-google-cloud</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Google Cloud brings OpenAI models to customers</td>
+<td>2026-10-21</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers">https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code changelog</td>
+<td>2026-10-21</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">https://code.claude.com/docs/en/changelog</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>openclaw 2026.10.10-beta.3</td>
+<td>2026-10-21</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3">https://github.com/openclaw/openclaw/releases/tag/v2026.10.10-beta.3</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Hermes Agent v0.22.4</td>
+<td>2026-10-21</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent">https://github.com/NousResearch/hermes-agent</a></td>
+</tr>
+<tr>
+<td>官方案例</td>
+<td>Scaling AI research for complex biological data</td>
+<td>2026-10-21</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/scaling-ai-research-for-complex-biological-data">https://openai.com/index/scaling-ai-research-for-complex-biological-data</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>ChatGPT Ads expands to 26 new countries</td>
+<td>2026-10-21</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/chatgpt-ads-expands-26-new-countries">https://openai.com/index/chatgpt-ads-expands-26-new-countries</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>Walmart rolls out Agent Gateway</td>
+<td>2026-10-21</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/">https://techcrunch.com/2026/10/21/while-amazon-blocks-ai-agents-walmart-rolls-out-the-welcome-mat/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

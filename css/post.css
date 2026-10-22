@@ -106,7 +106,7 @@
 .post-inner,
 .post-inner--toc {
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 1200px;
 }
 .post-inner--toc,
 .post-inner--toc--toc {
@@ -208,7 +208,7 @@
   padding-left: 10px;
 }
 .post__foot {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 100px auto;
 }
 .post-nav {
@@ -279,9 +279,16 @@
 }
 .post-content__body p {
   text-align: start;
-  max-width: 38em;
-  line-height: 1.8;
+  max-width: none;
+  margin: 0 0 1.15em;
+  line-height: 1.9;
   color: #333;
+}
+.post-content__body p.story-close {
+  margin: 2.6em 0 0.2em;
+  text-align: center;
+  letter-spacing: 0.28em;
+  color: #555;
 }
 .post-content__body p a {
   color: #222;
@@ -294,8 +301,10 @@
   text-decoration-color: #222;
 }
 .post-content__body h2 {
-  max-width: 38em;
-  margin: 48px 0 16px;
+  max-width: none;
+  margin: 64px 0 16px;
+  padding-top: 24px;
+  border-top: 1px solid #eee;
   font-family: sourceHanSerif, serif;
   font-size: 28px;
   font-weight: 700;
@@ -304,26 +313,31 @@
   color: #222;
   text-wrap: balance;
 }
+.post-content__body h2:first-child {
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: 0;
+}
 .post-content__body h3 {
-  max-width: 38em;
-  margin: 36px 0 12px;
+  max-width: none;
+  margin: 36px 0 10px;
   font-family: sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.4;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   color: #222;
 }
 .post-content__body ul,
 .post-content__body ol {
-  max-width: 38em;
-  margin: 0 0 16px;
-  padding-left: 1.4em;
+  max-width: none;
+  margin: 0 0 1.15em;
+  padding-left: 1.25em;
   color: #333;
-  line-height: 1.7;
+  line-height: 1.85;
 }
 .post-content__body li {
-  margin: 8px 0;
+  margin: 0 0 0.85em;
 }
 .post-content__body li > ul,
 .post-content__body li > ol {
@@ -337,7 +351,7 @@
   border: 0;
   border-top: 1px solid #eee;
   margin: 28px 0;
-  max-width: 38em;
+  max-width: none;
 }
 .post-content__body img {
   margin: 16px 0 28px;
@@ -439,6 +453,101 @@
   outline: 1px solid #333;
   outline-offset: 3px;
 }
+.post-content--digest .post-content__body h3 {
+  max-width: none;
+  margin: 52px 0 16px;
+  padding: 20px 18px 0;
+  border-top: 1px solid #eee;
+  font-family: sourceHanSerif, serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  box-sizing: border-box;
+}
+.post-content--digest .post-content__body h3:first-child {
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: 0;
+}
+.post-content--digest .post-content__body h4 {
+  max-width: none;
+  margin: 28px 0 12px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  color: #333;
+}
+.post-content--digest .post-content__body p,
+.post-content--digest .post-content__body ul,
+.post-content--digest .post-content__body ol,
+.post-content--digest .post-content__body hr {
+  max-width: none;
+}
+.post-content--digest .post-content__body p {
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+.post-content--digest .post-content__body ul,
+.post-content--digest .post-content__body ol {
+  padding-left: calc(18px + 1.4em);
+  padding-right: 18px;
+  box-sizing: border-box;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) {
+  table-layout: fixed;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) th,
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) td {
+  box-sizing: border-box;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) th {
+  white-space: normal;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) th:nth-child(1),
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) td:nth-child(1) {
+  width: 8%;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) th:nth-child(2),
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) td:nth-child(2) {
+  width: 18%;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) th:nth-child(3),
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) td:nth-child(3) {
+  width: 12%;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) th:nth-child(4),
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) td:nth-child(4) {
+  width: 14%;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) th:nth-child(6),
+.post-content--digest .post-content__body table:has(thead th:nth-child(6)):not(:has(thead th:nth-child(7))) td:nth-child(6) {
+  width: 16%;
+  overflow-wrap: anywhere;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) {
+  table-layout: fixed;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) th,
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) td {
+  box-sizing: border-box;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) th:nth-child(1),
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) td:nth-child(1) {
+  width: 12%;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) th:nth-child(2),
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) td:nth-child(2) {
+  width: 14%;
+}
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) th:nth-child(4),
+.post-content--digest .post-content__body table:has(thead th:nth-child(4)):not(:has(thead th:nth-child(5))) td:nth-child(4) {
+  width: 28%;
+  overflow-wrap: anywhere;
+}
 .post-content--rank .post-content__body > p:not(:last-of-type) {
   max-width: none;
   margin: 0;
@@ -477,7 +586,7 @@
   background: transparent;
   box-shadow: none;
   clip-path: none;
-  max-width: 38em;
+  max-width: none;
   font-size: 15px;
   line-height: 1.7;
   color: #333;
@@ -489,6 +598,17 @@
   .post-content__body th,
   .post-content__body td {
     padding: 12px 10px;
+  }
+  .post-content--digest .post-content__body h3,
+  .post-content--digest .post-content__body h4,
+  .post-content--digest .post-content__body p {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .post-content--digest .post-content__body ul,
+  .post-content--digest .post-content__body ol {
+    padding-left: calc(10px + 1.4em);
+    padding-right: 10px;
   }
   .post-inner--toc {
     padding: 0;

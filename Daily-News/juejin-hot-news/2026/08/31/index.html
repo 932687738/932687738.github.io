@@ -28,10 +28,6 @@
             href="/images/favicon-16x16.png"/>
     
     
-      <link rel="mask-icon"
-            href="/images/logo.svg"
-            color=""/>
-    
     
     
       
@@ -65,13 +61,15 @@
     <div class="head">
       <div class="nav">
         <a href='/' class="nav-logo">
-          <img alt="logo" height="60px" width="60px" src="/images/logo.svg"/>
+          <img alt="logo" src="/images/logo.png"/>
         </a>
         <input id="navBtn" type="checkbox"/>
         <div class="nav-menu">
           
             
               <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
             
               <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
             
@@ -99,7 +97,7 @@
     </div>
     <div class="body">
       
-  <article class="post-content">
+  <article class="post-content post-content--digest">
     <div class="post-inner">
       <div class="post-content__head">
         <div class="post-title">掘金热榜 2026-08-31</div>
@@ -140,7 +138,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -149,7 +147,7 @@
 </thead>
 <tbody><tr>
 <td>3</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678975240300773428"> 「速通Shell」Shell 编程性能优化</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678975240300773428"> 「速通Shell」Shell 编程性能优化</a></td>
 <td>柒号华仔</td>
 <td>赞10&#x2F;藏12&#x2F;阅3578</td>
 <td>Shell 性能收口篇：反驳「慢就改 Python」。讲减少外部进程、避免无谓管道&#x2F;子壳、用内建与批量 I&#x2F;O。适合已经会写可维护脚本、要把 cron&#x2F;发布脚本从能跑推到不拖垮机器的人。偏系列文档。</td>
@@ -157,7 +155,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677787443072827446">别人绕过我的网关直接调用资源服务怎么办？使用 Sa-Token 解决：网关转发鉴权、RPC调用鉴权</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677787443072827446">别人绕过我的网关直接调用资源服务怎么办？使用 Sa-Token 解决：网关转发鉴权、RPC调用鉴权</a></td>
 <td>小风筝</td>
 <td>赞2&#x2F;藏2&#x2F;阅287</td>
 <td>微服务里子服务被绕过网关直打的问题。Sa-Token 用 OAuth2 凭证式做网关转发鉴权，再用内部调用鉴权挡住逻辑隔离场景。适合网关与资源服务同时暴露公网、不能只靠内网的 Java 项目。偏框架配置文。</td>
@@ -165,7 +163,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678161312638107694">小程序微信支付 V3 接入实战手册：从商户配置到前后端落地</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678161312638107694">小程序微信支付 V3 接入实战手册：从商户配置到前后端落地</a></td>
 <td>东方红杉</td>
 <td>赞5&#x2F;藏5&#x2F;阅242</td>
 <td>小程序微信支付 APIv3 从商户绑定、证书、下单到回调的 Node.js 落地手册，附参数表和联调坑。适合已有商户号、要一次接完而不是东拼官方文档的人。密钥与回调验签必须按官方，勿抄过期示例。</td>
@@ -173,7 +171,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678618274795601971">从输入 juejin.cn 到看到页面：DNS、Nginx、服务器集群与 CDN 到底在做什么？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678618274795601971">从输入 juejin.cn 到看到页面：DNS、Nginx、服务器集群与 CDN 到底在做什么？</a></td>
 <td>东风破_</td>
 <td>赞5&#x2F;藏3&#x2F;阅192</td>
 <td>从输入域名到页面：把 DNS、TCP、Nginx、负载均衡、集群、OSS、CDN 串成一条请求链，前面两篇是博客库表。适合要把「上线」从数据库设计补到流量入口的后端新手。概念串讲，少压测数据。</td>
@@ -184,7 +182,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -193,7 +191,7 @@
 </thead>
 <tbody><tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7646180958676631595">别再用MySQL了，AI时代这个数据库更香！</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7646180958676631595">别再用MySQL了，AI时代这个数据库更香！</a></td>
 <td>苏三说技术</td>
 <td>赞35&#x2F;藏55&#x2F;阅4832</td>
 <td>劝人别只会 MySQL：PostgreSQL 的 JSON、窗口函数、扩展生态。入门安利，收藏榜旧文。适合还在用 MySQL 硬撑复杂查询的人。标题党，按场景选型。</td>
@@ -204,7 +202,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -213,7 +211,7 @@
 </thead>
 <tbody><tr>
 <td>3</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678703379591708724">🤔 v-mortal 是什么？！我只知道 v-model 啊！</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678703379591708724">🤔 v-mortal 是什么？！我只知道 v-model 啊！</a></td>
 <td>xiaohe0601</td>
 <td>赞9&#x2F;藏12&#x2F;阅1417</td>
 <td>同事用 Vite 插件在编译期把自研指令 <code>v-mortal</code> 替换成 <code>v-model</code>，review 时搜不到文档。用来讲「团队私货指令要写进 README&#x2F;AST 转换说明」。趣味文，技术点就是编译替换，不要当 Vue 新 API。</td>
@@ -221,7 +219,7 @@
 </tr>
 <tr>
 <td>5</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678529068804554787">🚀苹果的液态玻璃咋做？🚀</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678529068804554787">🚀苹果的液态玻璃咋做？🚀</a></td>
 <td>我的刀盾</td>
 <td>赞22&#x2F;藏23&#x2F;阅1149</td>
 <td>复盘苹果液态玻璃：现有方案能渲图不能渲 HTML，或走 SVG。作者对比开源实现后讨论 HTML 玻璃的滤镜&#x2F;层叠代价。适合要做营销页视觉的前端。效果向，性能与无障碍需自测。</td>
@@ -229,7 +227,7 @@
 </tr>
 <tr>
 <td>8</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678646261258043428">VisActor  全新图可视化开源项目：VGraph</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678646261258043428">VisActor  全新图可视化开源项目：VGraph</a></td>
 <td>玄魂</td>
 <td>赞14&#x2F;藏14&#x2F;阅519</td>
 <td>VisActor 开源关系图库 VGraph，面向血缘、知识图谱、流程编排和图编辑器，强调可交互而不是再包一层 G6 demo。适合要做图可视化产品的前端。以发布说明为主，落地要回仓库文档。</td>
@@ -237,7 +235,7 @@
 </tr>
 <tr>
 <td>9</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678920712071168046">因为找不到好用的前端占位图，于是我自己写了个谁都能用的占位图功能</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678920712071168046">因为找不到好用的前端占位图，于是我自己写了个谁都能用的占位图功能</a></td>
 <td>菜鸟小前端在线卖艺</td>
 <td>赞9&#x2F;藏9&#x2F;阅421</td>
 <td>作者做国内可访问的占位图&#x2F;中文头像&#x2F;骨架屏&#x2F;Mock，对照 picsum 慢、DiceBear 不认中文。适合国内演示站缺图的前端。自建服务，可用性与合规自负。</td>
@@ -245,7 +243,7 @@
 </tr>
 <tr>
 <td>10</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677771411977322531">关于HBuilderX+ 微信小程序开发工具启动的问题</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677771411977322531">关于HBuilderX+ 微信小程序开发工具启动的问题</a></td>
 <td>小满zs</td>
 <td>赞5&#x2F;藏1&#x2F;阅466</td>
 <td>HBuilderX 运行到微信开发者工具时插件一直「运行中」、关了也起不来的课堂高频坑。适合教学&#x2F;刚入 uni-app 的人。步骤向，根因仍要对照当期 HBuilder 与微信工具版本。</td>
@@ -253,7 +251,7 @@
 </tr>
 <tr>
 <td>11</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7679402031226110004">公司没给活干，却因为员工看手机把人开了：法院判赔11万元</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7679402031226110004">公司没给活干，却因为员工看手机把人开了：法院判赔11万元</a></td>
 <td>勇宝趣学前端</td>
 <td>赞4&#x2F;藏1&#x2F;阅464</td>
 <td>南京工程师因离座、看手机等被开除，法院判赔约 11 万：公司没活干却用监控拼「严重违纪」。劳动法科普，不是前端技术文。可当职场风险提醒，勿当判决书全文。</td>
@@ -261,7 +259,7 @@
 </tr>
 <tr>
 <td>12</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677481658452967474">3分钟从想法到Agent上线：我们开源了一款AI可视化工作流“IDE”</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677481658452967474">3分钟从想法到Agent上线：我们开源了一款AI可视化工作流“IDE”</a></td>
 <td>徐小夕</td>
 <td>赞4&#x2F;藏4&#x2F;阅411</td>
 <td>徐小夕开源 Smart Flow：可视化编排 Agent 工作流，目标是让调模型像写代码一样可调试。适合要搭内部 Agent IDE 的前端。项目推广文，稳定性与协议兼容需自验。</td>
@@ -269,7 +267,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677865502220648494">Rspack 2.2 发布：30+ 项性能优化，拥抱 Solid 2.0</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677865502220648494">Rspack 2.2 发布：30+ 项性能优化，拥抱 Solid 2.0</a></td>
 <td>WebInfra</td>
 <td>赞7&#x2F;藏4&#x2F;阅370</td>
 <td>字节 WebInfra 发 Rspack 2.2：30+ 项性能与 HMR、更短模块 ID、<code>import.meta</code> 改进、拥抱 Solid 2.0。适合已在 Rspack&#x2F;Rsbuild 的前端升级。以官方变更说明为准。</td>
@@ -277,7 +275,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677811768106352694">Vite 1.2.0发布：自动生成pages.json</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677811768106352694">Vite 1.2.0发布：自动生成pages.json</a></td>
 <td>PedroQue99</td>
 <td>赞1&#x2F;藏3&#x2F;阅383</td>
 <td>uni-app 生态 Vite 插件 1.2.0：<code>generatePages</code> 扫 Vue 与 <code>&lt;route-config&gt;</code> 自动写 <code>pages.json</code>（分包&#x2F;tabBar）。不是 Vite 官方 1.x。适合还在手维护 pages 的小程序项目。</td>
@@ -285,7 +283,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right">[当 AI 遇见 Flutter</td>
+<td>[当 AI 遇见 Flutter</td>
 <td>打造 500+ Widget 专属Logo](<a target="_blank" rel="noopener" href="https://juejin.cn/post/7678157950377312271">https://juejin.cn/post/7678157950377312271</a>)</td>
 <td>张风捷特烈</td>
 <td>赞5&#x2F;藏3&#x2F;阅406</td>
@@ -297,7 +295,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -306,7 +304,7 @@
 </thead>
 <tbody><tr>
 <td>1</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678618678956163078">我的开源项目登顶 GitHub 趋势榜 No1 了！</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678618678956163078">我的开源项目登顶 GitHub 趋势榜 No1 了！</a></td>
 <td>苍何</td>
 <td>赞26&#x2F;藏19&#x2F;阅1698</td>
 <td>作者开源项目冲上 GitHub Trending 全球第一的经历与运营复盘。激励&#x2F;成长文，技术细节薄。适合看「怎么把项目推上榜」而不是抄架构。</td>
@@ -314,7 +312,7 @@
 </tr>
 <tr>
 <td>10</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677911015803797531">我把思考外包给了AI，三个月后我成了自己项目的文盲</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677911015803797531">我把思考外包给了AI，三个月后我成了自己项目的文盲</a></td>
 <td>用户7349913471653</td>
 <td>赞11&#x2F;藏4&#x2F;阅423</td>
 <td>把思考外包给 AI 三个月后变成本项目文盲：能交差但说不清设计。反思文，强调团队夸效率时要保留自己能讲清的架构。适合已经重度用 Agent 写业务的人。</td>
@@ -322,7 +320,7 @@
 </tr>
 <tr>
 <td>12</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677771411976847395">英伟达 H100 是啥，到底好在哪？</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677771411976847395">英伟达 H100 是啥，到底好在哪？</a></td>
 <td>陆枫Larry</td>
 <td>赞7&#x2F;藏7&#x2F;阅513</td>
 <td>科普 NVIDIA H100：Hopper、Tensor Core、FP8&#x2F;FP16、互联与为何训练&#x2F;推理抢这张卡。入门向，不是 2026 新品评测。适合要给非基建同事讲「为什么这卡贵」。</td>
@@ -330,7 +328,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678239088522313780">WorkBuddy 保姆级教程开源了！600 多篇 Agent 资料一次性放出</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678239088522313780">WorkBuddy 保姆级教程开源了！600 多篇 Agent 资料一次性放出</a></td>
 <td>AI架构师汤师爷</td>
 <td>赞10&#x2F;藏10&#x2F;阅383</td>
 <td>WorkBuddy 开源学习指南：23 篇 WorkBuddy、37 篇 Coze、628 篇编程文档，后续还要补 Codex&#x2F;豆包。适合被名词淹没、需要学习路径的人。资料集合，质量不均。</td>
@@ -338,7 +336,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678607362015477814">AI问诊5秒出结果，医生反而更忙了</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678607362015477814">AI问诊5秒出结果，医生反而更忙了</a></td>
 <td>计算机魔术师</td>
 <td>赞4&#x2F;藏4&#x2F;阅471</td>
 <td>AI 问诊 5 秒出结果但医生更忙：政策到 2027、准确率不再是壁垒，智能体能否重塑长流程才是护城河。行业观察，少代码。适合做医疗信息化的产品&#x2F;架构。</td>
@@ -346,7 +344,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7679247792172433423">看懂大模型架构术语，帮助你理解目前常见的大模型开源架构</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7679247792172433423">看懂大模型架构术语，帮助你理解目前常见的大模型开源架构</a></td>
 <td>恋猫de小郭</td>
 <td>赞9&#x2F;藏5&#x2F;阅366</td>
 <td>对照 GLM 5.3 Flash &#x2F; Qwen 3.8 Flash &#x2F; Hy4 Preview 扫 MoE、GQA、MLA、MTP、推测解码等术语。适合被发布会幻灯片砸到的工程同学。词典向，不是论文复现。</td>
@@ -358,7 +356,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -367,7 +365,7 @@
 </thead>
 <tbody><tr>
 <td>10</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7679542577527881782">Superpowers 与 Codex Harness：冲突分析与治理提示词</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7679542577527881782">Superpowers 与 Codex Harness：冲突分析与治理提示词</a></td>
 <td>Wilson王艺谋</td>
 <td>赞0&#x2F;藏2&#x2F;阅115</td>
 <td>Superpowers 与 Codex Harness 的冲突：路由、审批、文档、编排重叠。建议已有 Issue&#x2F;CI 的仓关掉全局路由，只留 TDD&#x2F;排障&#x2F;独立评审，并给审计裁剪提示词。适合同时装了两套流程 Skill 的仓库。</td>
@@ -375,7 +373,7 @@
 </tr>
 <tr>
 <td>13</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678975158596780041">一天一个开源项目（第201篇）：ntfy - 用一行 curl 把消息推到手机</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7678975158596780041">一天一个开源项目（第201篇）：ntfy - 用一行 curl 把消息推到手机</a></td>
 <td>冬奇Lab</td>
 <td>赞0&#x2F;藏1&#x2F;阅69</td>
 <td>一天一个开源：ntfy 用一行 curl 做 HTTP pub&#x2F;sub 推到手机，免注册 SDK。适合脚本结束&#x2F;备份&#x2F;磁盘告警要极简通知的人。自托管要注意主题名猜测与公网暴露。</td>
@@ -383,7 +381,7 @@
 </tr>
 <tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677883485021896747">老板说「网页上嵌个监控就行」？黑屏三小时后我才搞懂：播放器要的不是 accessToken</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677883485021896747">老板说「网页上嵌个监控就行」？黑屏三小时后我才搞懂：播放器要的不是 accessToken</a></td>
 <td>老孙讲技术</td>
 <td>赞0&#x2F;藏0&#x2F;阅64</td>
 <td>后台嵌乐橙&#x2F;Imou 监控：HMAC 换 accessToken、getKitToken 签发、Wasm 路径和隔离头。黑屏三小时多半是凭证用错而不是镜头离线。适合要嵌厂商播放器的人。</td>
@@ -391,7 +389,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677865735720976393">AI UI 测试平台从 0 到 1：8 次跑通一条 19 步用例的实战复盘</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7677865735720976393">AI UI 测试平台从 0 到 1：8 次跑通一条 19 步用例的实战复盘</a></td>
 <td>一鸣AI编程</td>
 <td>赞0&#x2F;藏0&#x2F;阅92</td>
 <td>TestStar 用一条 19 步真实用例（登录→SQL 控制台→断言）连跑 8 次才稳定，记录 demo 漂亮、上生产就碎的坑。适合做 AI UI 测试平台的人。数字来自作者项目，勿当行业基准。</td>
@@ -402,7 +400,7 @@
 <thead>
 <tr>
 <th>排名</th>
-<th align="right">标题</th>
+<th>标题</th>
 <th>作者</th>
 <th>热度&#x2F;互动</th>
 <th>内容摘要</th>
@@ -411,7 +409,7 @@
 </thead>
 <tbody><tr>
 <td>14</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7650413330092507187">别再复制旧 Flutter 工程了，真正拖慢你的不是业务代码</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7650413330092507187">别再复制旧 Flutter 工程了，真正拖慢你的不是业务代码</a></td>
 <td>TT_Close</td>
 <td>赞13&#x2F;藏20&#x2F;阅739</td>
 <td>Flu CLI V2：VS Code 右键从空目录生成 Flutter 架子，少复制旧工程改包名。收藏榜效率文。适合频繁开新 Flutter 项目的人。生成物仍要自己审依赖。</td>
@@ -419,7 +417,7 @@
 </tr>
 <tr>
 <td>15</td>
-<td align="right"><a target="_blank" rel="noopener" href="https://juejin.cn/post/7649955227479932991">Pi Agent &amp; OMP 快速上手指南：安装、配置与日常用法</a></td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7649955227479932991">Pi Agent &amp; OMP 快速上手指南：安装、配置与日常用法</a></td>
 <td>KaneLogger</td>
 <td>赞16&#x2F;藏20&#x2F;阅20677</td>
 <td>Pi Agent + OMP 入门：安装、配模型、AGENTS.md、Skill 与长任务上下文。收藏榜高阅读。适合国内网络下想先跑起来本地 Agent 的人。版本以仓库为准。</td>
@@ -616,90 +614,29 @@
     </div>
     <div class="foot">
       <div class="foot-inner">
-        <div class="foot__head">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
           
-            <div class="foot-line">
+            
               
-                <div class="matts">长</div>
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
               
-                <div class="matts">相</div>
-              
-                <div class="matts">知</div>
-              
-            </div>
-          
-            <div class="foot-line">
-              
-                <div class="matts">不</div>
-              
-                <div class="matts">相</div>
-              
-                <div class="matts">疑</div>
-              
-            </div>
-          
-        </div>
-        <div class="foot__body">
-          
-            <div class="foot-item">
-              <div class="foot-item__head">朋友</div>
-              <div class="foot-item__body">
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/icon/icon-link.svg"/>
-                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">Theme Tranquility</a>
-                  </div>
-                
-                <div class="text">
-                  <img alt="link" height="20px" width="20px" src="/images/icon/icon-link+.svg"/>
-                  <a class="foot-link"
-                     href="mailto:932687738@qq.com?subject=%E7%94%B3%E8%AF%B7%20Hozen.site%20%E7%9A%84%E5%8F%8B%E9%93%BE%E4%BD%8D%E7%BD%AE">
-                  申请友链</a>
-                </div>
-              </div>
-            </div>
+            
           
           
-            <div class="foot-item">
-              <div class="foot-item__head">账号</div>
-              <div class="foot-item__body">
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-github.svg"/>
-                    <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/">github</a>
-                  </div>
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-wx.svg"/>
-                    <a class="foot-link" href="">微信公众号</a>
-                  </div>
-                
-                  <div class="text">
-                    <img alt="link" height="20px" width="20px" src="/images/logo-zh.svg"/>
-                    <a class="foot-link" href="">知乎</a>
-                  </div>
-                
-              </div>
-            </div>
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
           
-          <div class="foot-item">
-            <div class="foot-item__head">联系</div>
-            <div class="foot-item__body">
-              <div class="text">
-                <img alt="link" height="20px" width="20px" src="/images/icon/icon-email.svg"/>
-                <a class="foot-link" href="mailto:932687738@qq.com">932687738@qq.com</a>
-              </div>
-            </div>
-          </div>
         </div>
         <div class="copyright">
-          <a href="https://932687738.github.io">烟火与诗</a> &nbsp;|&nbsp;由&nbsp;<a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>&nbsp;及&nbsp;
-          <svg width="20" height="20" viewBox="0 0 725 725">
-            <path fill-rule="evenodd" fill="rgb(221, 221, 221)" d="M145.870,236.632 L396.955,103.578 L431.292,419.44 L156.600,522.53 L145.870,236.632 Z"/>
-            <path fill-rule="evenodd" fill="rgb(159, 159, 159)" d="M396.955,103.578 L564.345,234.486 L611.558,513.469 L431.292,419.44 L396.955,103.578 Z"/>
-            <path fill-rule="evenodd" fill="rgb(0, 0, 0)" d="M431.292,419.44 L611.558,513.469 L358.327,595.18 L156.600,522.53 L431.292,419.44 Z"/>
-          </svg>
-          <a target="_blank" rel="noopener" href="https://github.com/hooozen/hexo-theme-tranquility">致远</a>&nbsp;驱动
+          <a href="https://932687738.github.io">烟火与诗</a>
         </div>
       </div>
     </div>
