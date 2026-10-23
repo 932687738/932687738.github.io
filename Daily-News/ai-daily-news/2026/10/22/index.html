@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-22 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
+            
+              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-22</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-22</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：OpenAI 把 Decisions API 推到 GA，用 GPT‑6 Luna 专打「有界小决策」；Anthropic 同日把 Agent Skills 捐给 AAIF，并用 Claude 在汇编级完成百余开源库形式化验证——Agent 互操作标准与「可证明安全」两条线同时升温。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI、Anthropic、GitHub Copilot、DeepMind、Claude Code、Codex、Hermes、OpenClaw、Spring AI &#x2F; Spring Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、企业落地、政策与论文</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>有界决策 API 进入生产热路径；Skills 标准中立化；形式化验证从专家项目走向 LLM 规模化；企业知识工作 Agent 全员铺开</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Decisions API 的 choice&#x2F;score&#x2F;predicate 与定价；AAIF 下 Agent Skills 治理；Claude 汇编级无崩溃证明与 Theorem skill；GitHub Copilot 全局默认策略与行业对标</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：生态侧显示 2.1.308（bugfix&#x2F;可靠性）。Codex：无独立新 tag，但 Uber 全员 ChatGPT Work 明确继续用 Codex 做研发。OpenClaw &#x2F; Hermes：未发现可核验的本日新正式版。Spring AI &#x2F; Spring Alibaba AI：无本日正式 release。Langfuse：changelog 最近条目停在 10-19 Experiments，本日无新文。LangChain&#x2F;LangGraph：无本日重大 changelog。Code Graph：无本日可核验发布。Loop Engineering：范式本身无新 scaffold 发布，但 Anthropic 形式化验证与 Agent Skills 捐赠强化「verifier &#x2F; 标准中立」叙事。skills：Agent Skills 捐入 AAIF 为本日主线。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>决策 API</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/decisions-api/">Build more responsive apps with the Decisions API</a></td>
+<td>2026-10-22</td>
+<td>官方发布</td>
+<td>Decisions API GA：面向分类&#x2F;路由&#x2F;打分等有界问题，最高约 10× 快于 Responses API 的 Luna；支持 JSON&#x2F;图像、prompt caching、美欧驻留、单请求最多 400 问；仅收输入 token（$0.10&#x2F;M，缓存 $0.01&#x2F;M）。Box&#x2F;Datadog&#x2F;Ramp&#x2F;Sierra 等给出热路径延迟与成本数据。</td>
+</tr>
+<tr>
+<td>Agent Skills 标准</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">Donating Agent Skills to the Agentic AI Foundation</a></td>
+<td>2026-10-22</td>
+<td>官方发布</td>
+<td>Agent Skills（SKILL.md 文件夹标准）捐给 Linux 基金会旗下 AAIF；已有 70+ 平台接入、约 100 万 skills 发布。捐赠名称&#x2F;Logo&#x2F;GitHub org&#x2F;agentskills.io；Lead Maintainer 为 David Soria Parra 与 Mahesh Murag。</td>
+</tr>
+<tr>
+<td>形式化验证</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/formal-verification">LLMs are making formal software verification feasible at a much larger scale</a></td>
+<td>2026-10-22</td>
+<td>研究报告</td>
+<td>Claude 在 RISC-V 汇编级为 123 个 OSS-Fuzz 库、239 个入口写出约 1.8 亿行 Rocq 证明；证明过程中发现多年未检出 bug；与 Theorem 合作并发布可复用 skill。</td>
+</tr>
+<tr>
+<td>企业 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/uber-chatgpt-work-rollout/">Uber brings ChatGPT Work to all employees</a></td>
+<td>2026-10-22</td>
+<td>官方案例</td>
+<td>ChatGPT Work 从 1k 试点扩至 3 万+ 员工；默认 GPT‑6.1 Sol；接 Drive&#x2F;Gmail&#x2F;Calendar&#x2F;Slack；工程侧继续用 Codex。</td>
+</tr>
+<tr>
+<td>Copilot 治理</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available/">Global default for Copilot features generally available</a></td>
+<td>2026-10-22</td>
+<td>官方发布</td>
+<td>Copilot Business&#x2F;Enterprise 全局默认策略开始强制滚动（至 10-26）；未配置的 GA 功能按 Enabled&#x2F;Disabled&#x2F;Let orgs decide 一次性落地。</td>
+</tr>
+<tr>
+<td>Copilot 对标</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/">Industry comparisons in the Copilot impact dashboard</a></td>
+<td>2026-10-22</td>
+<td>官方发布</td>
+<td>Impact Dashboard 增加行业&#x2F;规模对标（opt-in）；看 agent-first 占比与 agentic PR 合并率相对 peer median。</td>
+</tr>
+<tr>
+<td>FDE 实践</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/forward-deployed-engineering-means/">What FDE means at OpenAI</a></td>
+<td>2026-10-22</td>
+<td>官方博客</td>
+<td>Forward Deployed Engineering 如何在 Codex 时代仍解决企业最难问题并反哺产品&#x2F;研究。</td>
+</tr>
+<tr>
+<td>地球科学 AI</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/">Beyond tree cover: mapping the world’s forest types</a></td>
+<td>2026-10-22</td>
+<td>官方研究</td>
+<td>DeepMind ForTy 2020：10m 全球林型图 + 2017–2025 变化序列，开放于 Earth Engine。</td>
+</tr>
+<tr>
+<td>生命科学合作</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/open-call-guest-investigators-life-sciences">Open call for guest investigators in the life sciences</a></td>
+<td>2026-10-22</td>
+<td>官方公告</td>
+<td>邀请生命科学 PI 与 Anthropic 8–12 周合作，使用 Claude 做因果生物学&#x2F;药物发现等可公开产出的项目。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>有界决策</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/decisions-api/">Decisions API</a></td>
+<td>predicate&#x2F;choice&#x2F;score；GPT‑Live 联动；缓存与驻留</td>
+<td>要在 Agent 热路径做路由&#x2F;风控&#x2F;分类的后端</td>
+</tr>
+<tr>
+<td>Skills 治理</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">Agent Skills → AAIF</a></td>
+<td>SKILL.md 互操作；基金会治理路线图</td>
+<td>写&#x2F;分发 Skills、做 Agent 平台的团队</td>
+</tr>
+<tr>
+<td>形式化验证</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/formal-verification">Formal verification with Claude</a></td>
+<td>fuzz→spec→Rocq；汇编级语义；proof 复用</td>
+<td>安全工程、关键依赖维护者</td>
+</tr>
+<tr>
+<td>Copilot 策略</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available/">Global default policy</a></td>
+<td>AI Controls 默认策略与 MCP 设置</td>
+<td>GitHub Enterprise 管理员</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：本日工程主线是「把小决策从大模型对话里拆出来」+「把 Skills&#x2F;证明能力从厂商私有叙事推进公共治理」；框架 changelog 面相对安静，企业落地与安全证明更热闹。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Decisions 热路径</td>
+<td>OpenAI 用专用端点服务有界答案，客户报 3–40× 延迟收益</td>
+<td>Agent 编排里把「选下一步」与「写长文」拆开计费与 SLA</td>
+</tr>
+<tr>
+<td>Skills 中立化</td>
+<td>Agent Skills 进入 AAIF，与 MCP 同基金会叙事</td>
+<td>平台侧优先跟标准仓库而非单一厂商私有格式</td>
+</tr>
+<tr>
+<td>可证明安全</td>
+<td>汇编级无崩溃证明规模化</td>
+<td>安全关键路径可把「测试」升级为「可机检证明」试点</td>
+</tr>
+<tr>
+<td>企业 Skills 库</td>
+<td>Uber 全员 Work + 内部 AI skills library</td>
+<td>先建审批过的 Skills&#x2F;集成清单，再谈全员 Agent</td>
+</tr>
+<tr>
+<td>专项空窗</td>
+<td>Langfuse&#x2F;LangGraph&#x2F;Spring AI Alibaba&#x2F;Code Graph 本日无新正式版</td>
+<td>继续跟踪 10-19 Langfuse Experiments；不把旧文记成新日</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/decisions-api/">Decisions API GA</a></td>
+<td>改变 Agent 热路径的模型选型与成本模型</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">Agent Skills → AAIF</a></td>
+<td>Skills 互操作进入基金会阶段</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/formal-verification">Formal verification</a></td>
+<td>LLM×形式化验证的规模化样板与局限写得很清楚</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/uber-chatgpt-work-rollout/">Uber ChatGPT Work</a></td>
+<td>知识工作 Agent 全员化的集成与治理清单</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/">Copilot industry comparisons</a></td>
+<td>企业衡量 agentic 采用度的对标方法</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-22 00:00:00 到 2026-10-22 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, anthropic.com, github.blog, deepmind.google</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Decisions API generally available</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/decisions-api/">https://openai.com/index/decisions-api/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Donating Agent Skills to AAIF</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation">https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation</a></td>
+</tr>
+<tr>
+<td>研究报告</td>
+<td>Formal verification at scale with Claude</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/formal-verification">https://www.anthropic.com/research/formal-verification</a></td>
+</tr>
+<tr>
+<td>官方案例</td>
+<td>Uber ChatGPT Work company-wide</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/uber-chatgpt-work-rollout/">https://openai.com/index/uber-chatgpt-work-rollout/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot global default policy GA</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available/">https://github.blog/changelog/2026-10-22-global-default-for-copilot-features-generally-available/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Copilot industry comparisons</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/">https://github.blog/changelog/2026-10-22-industry-comparisons-in-the-copilot-impact-dashboard/</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>What FDE means at OpenAI</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/forward-deployed-engineering-means/">https://openai.com/index/forward-deployed-engineering-means/</a></td>
+</tr>
+<tr>
+<td>官方研究</td>
+<td>Mapping the world’s forest types</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/">https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/</a></td>
+</tr>
+<tr>
+<td>官方公告</td>
+<td>Life sciences guest investigators</td>
+<td>2026-10-22</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/open-call-guest-investigators-life-sciences">https://www.anthropic.com/news/open-call-guest-investigators-life-sciences</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
