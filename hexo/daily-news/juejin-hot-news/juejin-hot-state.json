@@ -1,6 +1,6 @@
 {
-  "last_end_date": "2026-10-23",
-  "last_sync_ymd": "2026-10-23",
+  "last_end_date": "2026-10-25",
+  "last_sync_ymd": "2026-10-25",
   "processed_dates": [
     "2026-08-12",
     "2026-08-13",
@@ -41,7 +41,8 @@
     "2026-10-20",
     "2026-10-21",
     "2026-10-22",
-    "2026-10-23"
+    "2026-10-23",
+    "2026-10-25"
   ],
   "seen_urls": [
     "https://juejin.cn/post/7638806086187565082",
@@ -1059,6 +1060,44 @@
     "https://juejin.cn/post/7699014849129726003",
     "https://juejin.cn/post/7699094123467178034",
     "https://juejin.cn/post/7699307186593300507",
-    "https://juejin.cn/post/7699320318288494630"
-  ]
+    "https://juejin.cn/post/7699320318288494630",
+    "https://juejin.cn/post/7699079109012897792",
+    "https://juejin.cn/post/7699025083108655138",
+    "https://juejin.cn/post/7699673660089729064",
+    "https://juejin.cn/post/7699033523931873306",
+    "https://juejin.cn/post/7698709811583959067",
+    "https://juejin.cn/post/7698947426488959016",
+    "https://juejin.cn/post/7698345359642542131",
+    "https://juejin.cn/post/7698546640890986496",
+    "https://juejin.cn/post/7699047775224725530",
+    "https://juejin.cn/post/7698677378389835812",
+    "https://juejin.cn/post/7698999578180747291",
+    "https://juejin.cn/post/7698268211587350554",
+    "https://juejin.cn/post/7699375396186488851",
+    "https://juejin.cn/post/7699123334672089107",
+    "https://juejin.cn/post/7698753872017899574",
+    "https://juejin.cn/post/7699017769225928744",
+    "https://juejin.cn/post/7698552541928194063",
+    "https://juejin.cn/post/7699372774716801034",
+    "https://juejin.cn/post/7699372774716997642",
+    "https://juejin.cn/post/7698930473150775350",
+    "https://juejin.cn/post/7699027015433273394",
+    "https://juejin.cn/post/7700050834004426790",
+    "https://juejin.cn/post/7699786990749253642",
+    "https://juejin.cn/post/7698315240144748607",
+    "https://juejin.cn/post/7699414277584633894",
+    "https://juejin.cn/post/7698686759043235849",
+    "https://juejin.cn/post/7698345359643000883",
+    "https://juejin.cn/post/7698293124526915625",
+    "https://juejin.cn/post/7697901649026334761",
+    "https://juejin.cn/post/7697883708061270042"
+  ],
+  "last_stats": {
+    "listing_slots": 120,
+    "unique_new_urls": 30,
+    "skipped_seen_urls": 90,
+    "detail_ok": 30,
+    "detail_fail": 0,
+    "seen_urls_in_state": 1016
+  }
 }
