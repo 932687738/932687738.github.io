@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-cn">
-  <meta charset="utf-8"/>
-  <meta name="keywords" content="{{ page.keywords }}"/>
-  <meta name="description" content="{{ page.description }}"/>
+<html lang="zh-Hans">
   <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="keywords" content="{{ page.keywords }}"/>
+    <meta name="description" content="{{ page.description }}"/>
     {% if theme.zh_font.enable %}
       {% include('./_partials/components/font.njk') %}
     {% endif %}
@@ -79,10 +80,14 @@
             </div>
             {% if chp.sections%}
               {% for sec in chp.sections %}
-                <a href="{{ sec.link or '#' }}" class="section__head">
+                {% if sec.link %}
+                <a href="{{ sec.link }}" class="section__head">
+                {% else %}
+                <div class="section__head">
+                {% endif %}
                   <div class="section-title">{{ sec.title }}</div>
                   <div class="section-title-des">{{ sec.description }}</div>
-                </a>
+                {% if sec.link %}</a>{% else %}</div>{% endif %}
                 {% for p in sec.content %}
                   <p>{{ p }}</p>
                 {% endfor %}
@@ -91,7 +96,12 @@
               {% if chp.list %}
                 <ul class="section">
                   {% for p in chp.content %}
-                    <li>{{ p }}</li>
+                    {% set parts = p.split('：') %}
+                    {% if parts.length > 1 %}
+                      <li><strong>{{ parts[0] }}</strong>：{{ parts.slice(1).join('：') }}</li>
+                    {% else %}
+                      <li>{{ p }}</li>
+                    {% endif %}
                   {% endfor %}
                 </ul>
               {% else %}
@@ -106,9 +116,6 @@
           </div>
         {% endfor %}
       </article>
-      <footer>
-        <a class="online-link" href="{{ full_url_for('/cv') }}">查看在线简历获得实时更新</a>
-      </footer>
     </div>
   </body>
 </html>

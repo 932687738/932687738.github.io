@@ -64,78 +64,94 @@ cv:
   enable: true
   showInNav: true
   iconPrefix: fas
-  keywords: 后端开发
+  keywords: Java开发
   description: YXY的简历
   title: YXY的简历
   content:
     title: YXY
     baseInfo:
-      - 2024 应届硕士
-      - JAVA,Vue,React
-    tel: 17865425326
-    email: 932687738@qq.com
+      - Java 开发 · 5 年
+      - 男 · 汉
+      - 本科 · 青岛大学软件工程
+      - 在职，期望全职，30 天内到岗
+    tel: 1786542****
+    email: 1786542****@163.com
     github: 932687738
-    #blog: hozen.site
-    #blogHref: https://hozen.site
     edu:
       title: "教育背景"
       content:
-        - 2015.9 至 2019.6，青岛大学，软件工程，学士学位
-    # chapters:
-    #   - title: "个人项目"
-    #     icon: person-digging
-    #     tips: 请点击项目名称查看项目详情
-    #     sections:
-    #       - title: picStitch
-    #         link: https://ps.hozen.site
-    #         description: 长图拼接 Web App
-    #         content:
-    #           - 2023/9 至今
-    #           - "技术栈: Vue3+ts+vite+pinia, 移动 Web, Canvas, PWA"
-    #           - 主要实现了 Web 端图片的编辑和保存、图片拖动排序等功能。在开发过程中实践了面向对象开发、移动端适配、Vue3 底层组件封装、HTML5 的 Canvas、Drag、SVG 等技术. 详情：hozen.site/archives/69/
-    #       - title: Tranquility
-    #         link: https://github.com/hooozen/hexo-theme-tranquility
-    #         description: 响应式博客网站
-    #         content:
-    #           - 2022/12 至今, 80+ stars
-    #           - "技术栈: Node, Web page"
-    #           - 主要实现了个人主页展示、博客编写和发布、网站 SEO、评论赞赏等博客系统。涉及 Node 开发、响应式页面设计及开发、页面性能优化及 SEO、字体提取压缩等技术。开发过程中调试了许多开源插件, 并贡献了部分文档和代码。
-    #       - title: 篮球裁判手势挑战
-    #         description: 微信答题挑战小程序
-    #         link: https://www.hozen.site/archives/59/
-    #         content:
-    #           - 2022/10 至今, 4k+ uv
-    #           - "技术栈: 微信小程序, Serverless"
-    #           - "主要实现小程序答题挑战的交互逻辑以及积分排名、题目难度自动学习更新等功能。涉及微信小程序开发、Serverless 应用、NoSQL 数据库、接口设计和封装、Token 管理等技术"
-    #       - title: 其他
-    #         link: https://steamcommunity.com/sharedfiles/filedetails/?id=2222111958
-    #         content:
-    #           - 基于 wallpaper engine 的桌面动态壁纸(18k订阅), 学术风博客系统, Web 你画我猜小游戏等。详情见 github.com/hooozen。
-    #   - title: 工作经验
-    #     icon: laptop-code
-    #     sections:
-    #       - title: 杭州税友软件集团有限公司
-    #         description: 2018.7 - 2019.3
-    #         content:
-    #           - 主要参与公司 B 端报税系统及员工薪税服务系统的客户端开发, 基于 CEF 和 VUE 技术栈.
-    #           - 作为主要成员参与了公司统一 UI 库的开发及文档和 Demo 开发, 基于 ElementUI 封装定制.
-    #           - 业务能力得到 leader 认可, 和同事相处愉快, 获得部门年度最佳新人奖.
-    #       - title: 兼职经验
-    #         description: 2021 - 2022
-    #         content:
-    #           - 考研结束的假期参与了若干外包项目，主要涉及 Vue 技术栈的后台管理系统以及物联网创业项目的小程序和商品配送管理系统的开发。线上和需求以及后台开发人员进行合作, 得到同事和客户认可.
-    #   - title: 奖项证书
-    #     icon: trophy
-    #     list: true
-    #     content:
-    #       - 第十八届中国研究生数学建模竞赛, 全国二等奖, 使用机器学习和神经网络解决 UWB 定位问题
-    #       - 招商银行第七届 FinTech 竞赛(数据赛道), 61/3000 名, 客户金融产品配置行为预测
-    #       - 全国计算机信息高新技术考试合格证书, 国家职业资格四级, 图形图像处理模块(Photoshop平台)
-    #   - title: 个人小结
-    #     icon: ranking-star
-    #     content:
-    #       - 软件工程和统计学交叉学科背景, 数学基础好, 学习能力强. 项目经验丰富, 善于中英文文献资料检索阅读, 解决问题的能力强. 热爱软件开发, 具备优秀的文档和制图能力, 喜欢知识分享和输出.
-    #       - 爱好阅读和学习, 积极的人生观和性格, 愿意为优秀的产品和团队付出热情和努力.
+        - 2015.09 至 2019.06，青岛大学，软件工程，本科
+    chapters:
+      - title: 求职意向
+        icon:
+          name: briefcase
+          type: fas
+        content:
+          - 期望从事 Java 开发，全职。目前在职，可在 30 天内到岗。
+      - title: 专业技能
+        icon:
+          name: code
+          type: fas
+        list: true
+        content:
+          - "Java基础：Java基础扎实，深入理解常见容器底层实现及面向对象编程思想；熟悉设计模式（单例、工厂、策略等）在实际场景中的应用"
+          - "JVM：熟悉JVM运行时原理，涵盖运行时数据区、垃圾回收算法、主流垃圾回收器及类加载机制（双亲委派模型）"
+          - "并发编程：掌握线程池、synchronized、volatile、AQS及ThreadLocal等核心并发技术，具备高并发场景优化经验"
+          - "MySQL：熟练使用MySQL，深入理解索引、事务、存储引擎及MVCC机制，具备业务SQL实战调优能力"
+          - "Redis：熟悉Redis常用数据结构及底层原理，掌握持久化策略，能有效应对缓存雪崩、穿透、击穿及分布式锁等高并发挑战"
+          - "主流框架：熟练使用Spring、SpringBoot、SpringCloud框架，深入理解IOC、AOP等核心原理"
+          - "AI 工程 / RAG / Agent：熟悉 pgvector 向量数据库与 LangChain；掌握 RAG 全链路（向量 + BM25 混合检索、RRF融合、Cross-Encoder Rerank、父子分块、HyDE），熟悉 BGE-M3 / BGE-reranker 模型选型；能基于 MCP 工具链编排 Agent 流程，用RAGAS（LLM-as-judge）搭建评测闭环"
+          - "AI工具：熟练使用 Claude Code、Cursor 等 AI 工具辅助编码，AI出码率89%"
+          - "中间件：熟练使用RocketMQ处理异步解耦、流量削峰等场景，消息可靠性保障（防丢失、防重复消费）、投递一致性及延迟队列技术"
+          - "业务方向：掌握结算、物流、仓储管理等业务，包括入库、出库、加工、盘点，以及工单客服、账单汇总、抛账和提现。"
+          - "前端开发：能使用 Vue、React、uni-app 开发；用过 WebSocket 与 React 保持长连接来管理定时任务，也用过浏览器插件处理登录态。"
+      - title: 工作经历
+        icon:
+          name: laptop-code
+          type: fas
+        sections:
+          - title: 百世信息技术有限公司
+            description: 2021.11 至今
+            content: []
+          - title: 法本信息技术有限公司
+            description: 2020.11 – 2021.11
+            content: []
+          - title: 北京柯莱特有限公司
+            description: 2018.12 – 2020.11
+            content: []
+      - title: 项目经验
+        icon:
+          name: diagram-project
+          type: fas
+        sections:
+          - title: WMS
+            description: 海外仓储 SaaS
+            content:
+              - 面向不同地域的仓储 SaaS，支持多语言、多时区。覆盖入库、出库、加工、盘点等库内作业，并按客户需要做定制，缩短操作路径。日单量从约 2 万增长到约 40 万，性能优化全程参与。
+              - 负责项目的 SaaS 改造和上线。
+              - 将重要信息迁移到 Elasticsearch，提升查询性能。
+              - 做数据清洗和归档，减轻脏数据对系统的影响。
+              - 处理大批量数据，通过分析定位项目痛点和卖点。
+              - 监控并优化慢 SQL，保障 SaaS 稳定运行。
+              - 负责技术方案设计和后续规划。
+          - title: 共享客服
+            description: 快递网点客服统一管理
+            content:
+              - 快递网点对客服质量和人数的要求上升，而客服培养难、流动大。该系统把各快递公司的客服和工单收口到一处操作。
+              - 负责需求管理、功能划分、业务梳理和项目排期。
+              - 对不同快递公司的接口做动态配置调用。
+              - 对返回数据做统一的标准化处理。
+              - 已接入韵达（YUNDA）、申通（STO）的工单和客服人员管理，工单日均约十万单，处理效率约为原来的 1.5 倍，客服操作复杂度和培养难度下降约 20%。
+              - 用前端插件解决手动获取 Cookie 的问题。
+              - 用 WebSocket 与 React 保持长连接，集中管理前端定时任务并分布式消费，避开 IP 访问次数限制。
+          - title: 结算项目
+            description: 账单汇总、抛账与提现
+            content:
+              - 汇总集团 App 使用过程中的账单金额并生成账单，核对用户发票信息，按发票把账单抛给对应用户；用户收到货款后提供提现。
+              - 用计费引擎对提现对应的计费明细做阶梯计费。
+              - 定时生成月账单和结算单。
+              - 对接支付宝，对外提供提现。
+              - 建设其余基础功能。
 
 index: # 配置首页个性化内容
   motto: "智能涌现 连接未来"
