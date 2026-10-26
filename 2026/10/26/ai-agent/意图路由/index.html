@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        一次提问如何被分到具体智能体 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">一次提问如何被分到具体智能体</div>
+        <div class="post-info">
+          
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+          
+          
+  
+    
+      <a href="/AI-Agent/tag/%E6%84%8F%E5%9B%BE%E8%B7%AF%E7%94%B1/" class="post-tag">意图路由</a>
+    
+  
+
+
+          <span class="post-date">2026-10-26</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p>智能体对话是一条 SSE：整理会话，给问题打分，选出子智能体或内置能力，再按编排计划生成回答。请求体只有会话号和消息，没有模式字段。</p>
+<span id="more"></span>
+
+<p>入口是智能体聊天接口。会话号为空时应用服务生成一个；否则去掉空白后沿用，保证多轮和后续的历史、置顶、分享指向同一次会话。</p>
+<p>路由分两段，实现都在路由计划里，不散落在控制器。</p>
+<p>第一段匹配已注册的子智能体。文本先规范化。每个子智能体自己声明关键词、排除词和优先级。命中排除词这轮分数为零；否则用关键词命中数，再加上专属词的加权：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">default</span> <span class="type">int</span> <span class="title function_">matchScore</span><span class="params">(String normalizedUserInput)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (StringUtils.isBlank(normalizedUserInput)) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (IntentMatcher.containsAny(normalizedUserInput, routingExclusions())) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">matched</span> <span class="operator">=</span> IntentMatcher.countMatches(normalizedUserInput, routingKeywords());</span><br><span class="line">    <span class="keyword">if</span> (matched == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">exclusiveMatched</span> <span class="operator">=</span> IntentMatcher.countMatches(normalizedUserInput, exclusiveRoutingKeywords());</span><br><span class="line">    <span class="keyword">return</span> matched + exclusiveMatched * EXCLUSIVE_KEYWORD_WEIGHT;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>取得分最高者；分数相同比优先级，再比名称。当前主要的子智能体是客服、数据分析和代码生成。</p>
+<p>第二段在没有子智能体命中时走内置能力。时间日期、天气、文件读写会带上对应工具；政策或知识类问题打开检索；其余走通用兜底，不带检索也不带工具。这一段的产物是同一份编排计划：能力名、子智能体名、是否检索、允许的工具名、是否允许外部工具协议。</p>
+<p>计划生成之后才检索。只有计划要求检索时，才按问题取有限条片段。然后组装对话上下文：会话号、被选中的智能体、片段、计划、可用工具。发布调用前事件，审计记下会话、智能体和能力。</p>
+<p>预处理图把路由结果写成 <code>streamRoute</code>。应用服务按这个枚举分发，不再在控制器里写 if：</p>
+<pre><code class="java">return switch (prep.streamRoute()) &#123;
+    case DIRECT_WEATHER, DIRECT_DATETIME -&gt; Flux.just(prep.directAnswer());
+    case SUB_AGENT -&gt; delegateToSubAgent(prep);          // ReactAgent
+    case ORCHESTRATOR, PLATFORM_ROUTER -&gt; streamOrchestratorDirect(prep);
+&#125;;
+```聊天服务按计划从工具注册表取出本地工具和外部回调，并绑上以会话号为键的对话记忆。
+
+有工具时同步跑完工具回路，再把完整答案变成一段流。没有工具时按令牌真流式输出。流正常结束发布调用后事件，异常发布错误事件。聊天接口把答案推回客户端，不在这条链上写向量库。
+</code></pre>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/images/avatar.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/images/qr_code.png" />
+  </div>
+  <div class="like-text">“请作者喝杯咖啡”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    喜欢作者
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2026/10/26/ai-agent/%E5%B7%A5%E5%85%B7%E6%8A%80%E8%83%BD/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">上一篇</span>
+      </div>
+      <div>工具、技能、插件和外部协议如何挂上对话</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2026/10/26/ai/%E6%A8%A1%E5%9E%8B%E6%8E%A5%E5%85%A5/">
+      <div class="text-align">
+        <span class="text-small">下一篇</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      聊天和嵌入模型怎么接入
+    </a>
+  
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>
