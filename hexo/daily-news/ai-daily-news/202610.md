@@ -2,6 +2,71 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-10-25
+
+### 今日总览
+
+**一句话结论**：周日偏「安全补丁复盘 + 产品稳定性」——第三方周报汇总 Claude Code 2.1.309/2.1.310 沙箱绕过修复与 Codex 0.164.0 凭证遮蔽；OpenAI 社区同日出现 Chat Memory Full / 会话加载 429 报告；前沿厂商官网几乎无新成文，OpenClaw 2026.10.7 落在相邻日。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI、Anthropic、GitHub Copilot、DeepMind、Claude Code、Codex、Hermes、OpenClaw、Spring AI / Spring Alibaba AI、Langfuse、LangChain/LangGraph、Code Graph、Loop Engineering、企业落地、政策与论文 |
+| 核心趋势 | 编码 Agent 本周主线是 sandbox/权限边界加固；终端侧更强调凭证遮蔽与可复用 presets；周日原创产品长文稀缺，以周报与社区故障信号为主 |
+| 可直接关注 | 升级 Claude Code ≥2.1.310 并复核 deny 规则；Codex 0.164.0 `/presets` 与 credential masking；ChatGPT 会话加载异常仅作可用性跟踪 |
+| 专项检索结论 | Claude Code：周内 2.1.303–2.1.310，重点 2.1.309 沙箱绕过修复与 2.1.310 Monitor/网关重试/清理误删修复（周报 10-25 核验）。Codex：rust-v0.164.0（10-23）含 `/presets`、inline `/model`/`/permissions`、credential masking。OpenClaw：v2026.10.7（10-24）replay-safe session recovery 等。Hermes：未发现可核验本日新正式版。Spring AI / Spring Alibaba AI：无本日正式 release。Langfuse：无本日新 changelog（最近可见 10-22 blob score 字段组）。LangChain/LangGraph：无本日重大新 changelog（1.2.17 属 10-24）。Code Graph / Loop Engineering：无本日可核验全球正式发布；Loop 范式讨论见美团 10-22 相邻文。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 编码 Agent 安全周报 | [This week in Claude Code, Codex and Gemini CLI (week of Oct 25)](https://aicoding-guide.com/en/posts/weekly-2026-10-25/) | 2026-10-25 | 技术媒体周报 | 核验本周 Claude Code 沙箱/权限绕过修复清单与 Codex 0.164.0 功能；适合作为升级检查单入口。 |
+| 产品可用性 | [Chat Memory Full 社区报告](https://community.openai.com/t/chat-memory-full-is-back/1409513) | 2026-10-25 | 社区故障 | OpenAI Support 确认在调查「少量对话即触发 Chat memory full」；不要求删除 Saved Memories。 |
+| 产品可用性 | [ChatGPT 会话跨端间歇不可用 / HTTP 429](https://community.openai.com/t/chatgpt-conversations-intermittently-inaccessible-across-devices-http-429-errors/1409578) | 2026-10-25 | 社区故障 | 多设备加载既有会话失败且伴随 429；工程侧可作「会话检索层限流」可用性参考，非 API 正式公告。 |
+| Agent 运行时 | [OpenClaw v2026.10.7](https://github.com/openclaw/openclaw/releases/tag/v2026.10.7) | 2026-10-24 | 开源发布（相邻） | replay-safe session recovery、原子补丁校验与终端态隔离；适合长跑自治会话的中断恢复。 |
+| 云集成余波 | [OpenAI models are coming to Google Cloud](https://openai.com/index/openai-models-google-cloud) | 2026-10-21 | 官方发布（相邻） | Frontier 模型与 Codex 工作流进入 GCP Model Garden；GA 仍「未来数周」。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 沙箱 hardening | [Claude Code / Codex 周报](https://aicoding-guide.com/en/posts/weekly-2026-10-25/) | 启动文件出沙箱、symlink denyWrite、MCP config 可写等绕过路径 | 依赖 deny 规则与沙箱的团队 |
+| 会话恢复 | [OpenClaw 2026.10.7](https://github.com/openclaw/openclaw/releases/tag/v2026.10.7) | 恢复 provenance、未完成工具态、终端态隔离 | 自建长跑 Agent |
+| 训练隔离（相邻） | [Securing frontier training](https://openai.com/index/securing-our-frontier-model-training-environment) | 离线世界；红队；断公网训练 | 平台安全与治理 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日工程信号集中在「边界真正生效」——沙箱/权限修复与凭证遮蔽，而不是新模型或新编排框架；周日适合做升级与规则审计，而不是追新功能。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Claude Code 沙箱 | 2.1.309+ 修复多条「配置了但未真正拦住」的路径 | 升级后重跑 deny/sandbox 回归；特别检查 Windows Git Bash 缺失时的 hook 行为 |
+| Codex 工作流 | `/presets` + credential masking | 把常用角色固化为 presets；远程 Bash/快照日志默认按「会泄漏密钥」设计 |
+| OpenClaw 恢复 | 2026.10.7 会话恢复与原子 patch | 中断恢复要保留工具执行态，避免把 terminal recovery 残渣带入下一轮 |
+| 专项空窗 | Spring AI / Spring Alibaba AI / Langfuse / LangGraph / Code Graph 本日无新正式产品文 | 诚实标注空窗；Langfuse score 导出字段组仍以 10-22 changelog 为准 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Claude Code / Codex 周报（10-25）](https://aicoding-guide.com/en/posts/weekly-2026-10-25/) | 把本周安全修复压缩成可执行升级清单 |
+| 推荐 | [OpenClaw v2026.10.7](https://github.com/openclaw/openclaw/releases/tag/v2026.10.7) | 长跑 Agent 的会话恢复与补丁安全模型 |
+| 延伸 | [OpenAI×Google Cloud](https://openai.com/index/openai-models-google-cloud) | 多云采购与 Codex 工作流入园路径（相邻） |
+
+### 来源清单
+
+- 检索范围：2026-10-25 00:00:00 到 2026-10-25 23:59:59（Asia/Shanghai）
+- 引用域名：aicoding-guide.com, community.openai.com, github.com, openai.com, anthropic.com, langfuse.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 技术媒体 | Claude Code / Codex / Gemini CLI weekly | 2026-10-25 | https://aicoding-guide.com/en/posts/weekly-2026-10-25/ |
+| 社区故障 | Chat Memory Full | 2026-10-25 | https://community.openai.com/t/chat-memory-full-is-back/1409513 |
+| 社区故障 | ChatGPT conversations 429 | 2026-10-25 | https://community.openai.com/t/chatgpt-conversations-intermittently-inaccessible-across-devices-http-429-errors/1409578 |
+| 开源发布 | OpenClaw v2026.10.7 | 2026-10-24（相邻日期） | https://github.com/openclaw/openclaw/releases/tag/v2026.10.7 |
+| 官方发布 | OpenAI models on Google Cloud | 2026-10-21（相邻日期） | https://openai.com/index/openai-models-google-cloud |
+| 官方 changelog | Langfuse score field groups | 2026-10-22（相邻日期） | https://langfuse.com/changelog/2026-10-22-blob-storage-score-field-groups |
+
 ## 2026-10-24
 
 ### 今日总览

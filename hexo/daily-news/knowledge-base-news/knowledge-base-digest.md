@@ -2,6 +2,65 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-10-25
+
+### 今日总览
+
+**一句话结论**：周日固定大厂博客面偏静；腾讯云开发者社区侧 Step 5 Preview「10-12—10-25」限免窗口收口成为可操作日历事件；Loop Engineering 专项可回溯美团 10-22 AutoResearch 从图探索替代单线程 LOOP 的长文（相邻日期）。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里技术/阿里云开发者、腾讯云+社区、字节技术博客、美团技术团队、掘金、京东/滴滴/有赞/360 等固定来源维度 |
+| 核心趋势 | 「限免旗舰模型窗口到期」比新平台发布更现实；企业 AutoResearch 仍在消化 LOOP→图探索 harness 叙事 |
+| 可直接关注 | WorkBuddy Step 5 Preview 限免结束后的 0.43x 积分策略；美团 CyclicGraph Engine 的 Spawn-Converge 与硬约束设计 |
+| 专项检索结论 | Langfuse / LangChain·LangGraph / Code Graph / Spring Alibaba AI：固定来源内未发现可确认属 2026-10-25 的新落地长文。Loop Engineering：美团《从 LOOP 到图探索》属 2026-10-22，按相邻日期收录。 |
+| 未发现更新 | 阿里技术、阿里中间件、语雀阿里干货、字节跳动技术团队、百度 FEX/EFE、美团（本日新文）、京东/凹凸、滴滴、有赞、360 等未检出可确认属 2026-10-25 的官方新长文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 模型试用窗口 | [Step 5 Preview 上线 WorkBuddy：10/12—10/25 独家限免](https://cloud.tencent.com/developer/article/2759691) | 2026-10-12（窗口截止日=本日） | 腾讯云开发者社区 | 600B MoE / ~27B 激活 / 1M 上下文；限免期不计积分，截止后 0.43x；适合排长链路任务而非浅尝。 |
+| Loop / AutoResearch | [从 LOOP 到图探索 —— AutoResearch 自进化系统架构演进](https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html) | 2026-10-22（相邻日期） | 美团技术团队 | 单线程 LOOP→CyclicGraph Engine；Spawn-Converge；状态机 + 硬约束 + 证据链；两业务项目相对人工基线耗时约 -85%/-83%。 |
+| 企业 Agent 平台（相邻） | [阿里云发布企业级 Agent 平台 AgentCore](https://developer.aliyun.com/article/1774482) | 2026-10-23（相邻日期） | 阿里云开发者社区 | 云栖语境下的企业 Agent 构建与治理平台叙事，作周末前后对照。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 限免排期 | [Step 5 Preview / WorkBuddy](https://cloud.tencent.com/developer/article/2759691) | 限免口径；积分倍率；长任务拆分检查点 | 国内 Agent 工具试用 |
+| 自进化研究系统 | [美团 LOOP→图探索](https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html) | 状态机；业务知识库；真实大闭环；Skill 晋升链 | 算法平台 / Agent harness |
+
+### 工程实践归纳
+
+**总体判断**：本日固定来源「同日新文」稀缺；最有工程含量的信号是相邻日的美团 AutoResearch harness 长文，以及腾讯云侧旗舰模型限免窗口收口——适合做试用排期与 harness 设计对照，而不是追逐新框架 release。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Loop Engineering | 美团用图探索替代 keep/reset 单线程 LOOP | 并行假设要有 Converge；评估脚本冻结；硬约束进状态文件而非只写 Prompt |
+| 模型成本窗口 | Step 5 Preview 限免于本日结束 | 免费窗口优先跑「多步、可检查」任务；结束后按倍率重新算 ROI |
+| Langfuse / LangChain / Code Graph / Spring Alibaba AI | 固定来源内本日无新核验长文 | 明确空窗，避免把跨日转载改日重记 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [美团 AutoResearch 架构演进](https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html) | 国内少见的「生产级 AutoResearch harness」完整复盘 |
+| 推荐 | [Step 5 Preview 限免说明](https://cloud.tencent.com/developer/article/2759691) | 把日历窗口换成可执行试用清单 |
+| 延伸 | [AgentCore](https://developer.aliyun.com/article/1774482) | 企业 Agent 平台能力边界对照 |
+
+### 来源清单
+
+- 检索范围：2026-10-25 00:00:00 到 2026-10-25 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：腾讯云+社区、美团技术团队、阿里云开发者社区；其余公司/组织维度已检索但未发现可核验本日新文
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 腾讯 | 腾讯云+社区 | 技术文章 | Step 5 Preview 限免 | 2026-10-12（窗口截止日/中国时间窗口） | https://cloud.tencent.com/developer/article/2759691 |
+| 美团 | 美团技术团队 | 技术文章 | LOOP→图探索 AutoResearch | 2026-10-22（相邻日期） | https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | AgentCore | 2026-10-23（相邻日期） | https://developer.aliyun.com/article/1774482 |
+
 ## 2026-10-24
 
 ### 今日总览
