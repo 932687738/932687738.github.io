@@ -38,7 +38,7 @@ subpage: # 开启“子页”功能，详见 README
       path: # 若不设置则默认使用 name
       title: Java # 菜单名，如 开发者
       icon: /images/icon/icon-code.svg # 图标的路径
-      description: # 描述
+      description: 服务端分层、模块边界与事务
     - name: React # 文章的分类（category）名，如 developer
       path: # 若不设置则默认使用 name
       title: React # 菜单名，如 开发者
@@ -53,17 +53,12 @@ subpage: # 开启“子页”功能，详见 README
       path: AI
       title: AI
       icon: /images/icon/icon-app.svg
-      description: 人工智能与大模型
-    - name: Spring Alibaba AI
-      path: Spring-Alibaba-AI
-      title: Spring Alibaba AI
-      icon: /images/icon/icon-code.svg
-      description: Spring AI 与 Alibaba 生态
-    - name: Code Graph
-      path: Code-Graph
-      title: Code Graph
+      description: 知识入库、知识问答与模型接入
+    - name: AIAgent
+      path: AI-Agent
+      title: AI Agent
       icon: /images/icon/icon-pi.svg
-      description: 代码图谱与程序分析
+      description: 意图路由、工具技能、流程编排与注册治理
 
 cv:
   enable: true
@@ -252,12 +247,8 @@ timeline:
       color: "#9b59b6"
       icon: /images/icon/icon-app.svg
       checked: false
-    - name: Spring Alibaba AI
-      color: "#e67e22"
-      icon: /images/icon/icon-code.svg
-      checked: false
-    - name: Code Graph
-      color: "#1abc9c"
+    - name: AIAgent
+      color: "#3d5a80"
       icon: /images/icon/icon-pi.svg
       checked: false
 
