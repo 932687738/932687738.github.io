@@ -1,6 +1,6 @@
 ---
 title: GitHub 本周热榜
-date: 2026-10-26 08:03:22
+date: 2026-10-27 08:05:37
 categories: GitHub
 tags:
   - 快照
@@ -8,7 +8,7 @@ tags:
 timeline: GitHub
 ---
 
-2026-10-26 抓取的 GitHub Trending 本周榜。仓库下的 Star 与 Fork 是累计值，「本周」一列才是这周新增。
+2026-10-27 抓取的 GitHub Trending 本周榜。仓库下的 Star 与 Fork 是累计值，「本周」一列才是这周新增。
 
 <!-- more -->
 
@@ -16,19 +16,20 @@ timeline: GitHub
 
 | # | 仓库 | 本周 | 简介 |
 | ---: | --- | ---: | --- |
-| 1 | [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill)<small>JavaScript<br>46840 stars · 2903 forks</small>| 15,072 | 用于多阶段安全审核的编码代理技能，具有经过独立验证的机器可读结果 |
-| 2 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo)<small>TypeScript<br>79279 stars · 9305 forks</small>| 2,987 | 🌊 原始代理线束。部署智能多玩家群体，协调自主工作流程，构建对话式人工智能系统。具有自适应记忆、自我学习智能、联合、矢量RAG集成、原生Claude Code/Codex/Hermes和许多…… |
-| 3 | [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins)<small>Python<br>32973 stars · 3633 forks</small>| 2,790 | 主要供知识工作者在Claude Cowork中使用的插件的开源存储库 |
-| 4 | [`anomalyco/opencode`](https://github.com/anomalyco/opencode)<small>TypeScript<br>221513 stars · 29615 forks</small>| 5,921 | 开源编码代理。 |
-| 5 | [`stablyai/orca`](https://github.com/stablyai/orca)<small>TypeScript<br>105792 stars · 6691 forks</small>| 9,622 | ORCA是与代理团队合作的地方（例如Grok Bot、Claude Code ）。使用您自己的订阅运行任何编码代理。可在桌面、移动和远程运行时使用。 |
-| 6 | [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes)<small>TypeScript<br>72143 stars · 6518 forks</small>| 5,612 | 编写HTML。渲染视频。专为客服代表打造。 |
-| 7 | [`android/skills`](https://github.com/android/skills)<small>Kotlin<br>9713 stars · 626 forks</small>| 1,070 | 页面上没有仓库简介。 |
-| 8 | [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify)<small>Python<br>135226 stars · 12904 forks</small>| 6,903 | 将任何代码库及其文档、SQL架构、配置和PDF转换为可查询的知识图。Claude Code、Cursor、Codex和Gemini CLI的A/graphify技能：本地确定性AST解析，解释每个边缘，没有矢量存储。 |
-| 9 | [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory)<small>Rust<br>13513 stars · 960 forks</small>| 3,254 | 针对座席编码CLI的长期记忆解决方案，以及促进不同座席供应商之间切换的解决方案 |
-| 10 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI)<small>Python<br>142928 stars · 16874 forks</small>| 4,790 | 最强大、模块化的扩散模型GUI、API和后端，具有图形/节点界面。世界上最快的本地推理引擎。 |
-| 11 | [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)<small>Python<br>44558 stars · 4663 forks</small>| 2,245 | 由Anthropic管理的高质量Claude Code插件的官方目录。 |
-| 12 | [`vllm-project/vllm`](https://github.com/vllm-project/vllm)<small>Python<br>95485 stars · 23946 forks</small>| 1,445 | LLM的高吞吐量和内存效率推断和服务引擎 |
-| 13 | [`multica-ai/andrej-karpathy-skills`](https://github.com/multica-ai/andrej-karpathy-skills)<small>223829 stars<br>22415 forks</small>| 2,937 | 一个用于改进Claude Code行为的CLAUDE.md文件，源自Andrej Karpathy对LLM编码陷阱的观察。 |
-| 14 | [`pingdotgg/t3code`](https://github.com/pingdotgg/t3code)<small>TypeScript<br>30117 stars · 8074 forks</small>| 1,770 | 页面上没有仓库简介。 |
+| 1 | [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill)<small>JavaScript<br>48536 stars · 3025 forks</small>| 16,593 | 用于多阶段安全审核的编码代理技能，具有经过独立验证的机器可读结果 |
+| 2 | [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins)<small>Python<br>33205 stars · 3659 forks</small>| 2,822 | 主要供知识工作者在Claude Cowork中使用的插件的开源存储库 |
+| 3 | [`ruvnet/ruflo`](https://github.com/ruvnet/ruflo)<small>TypeScript<br>79537 stars · 9339 forks</small>| 2,683 | 🌊 原始代理线束。部署智能多玩家群体，协调自主工作流程，构建对话式人工智能系统。具有自适应记忆、自我学习智能、联合、矢量RAG集成、原生Claude Code/Codex/Hermes和许多…… |
+| 4 | [`anomalyco/opencode`](https://github.com/anomalyco/opencode)<small>TypeScript<br>221955 stars · 29686 forks</small>| 5,070 | 开源编码代理。 |
+| 5 | [`stablyai/orca`](https://github.com/stablyai/orca)<small>TypeScript<br>107051 stars · 6754 forks</small>| 9,241 | ORCA是与代理团队合作的地方（例如Grok Bot、Claude Code ）。使用您自己的订阅运行任何编码代理。可在桌面、移动和远程运行时使用。 |
+| 6 | [`Graphify-Labs/graphify`](https://github.com/Graphify-Labs/graphify)<small>Python<br>136131 stars · 12997 forks</small>| 7,183 | 将任何代码库及其文档、SQL架构、配置和PDF转换为可查询的知识图。Claude Code、Cursor、Codex和Gemini CLI的A/graphify技能：本地确定性AST解析，解释每个边缘，没有矢量存储。 |
+| 7 | [`android/skills`](https://github.com/android/skills)<small>Kotlin<br>9831 stars · 635 forks</small>| 823 | 页面上没有仓库简介。 |
+| 8 | [`akitaonrails/ai-memory`](https://github.com/akitaonrails/ai-memory)<small>Rust<br>13795 stars · 979 forks</small>| 2,838 | 针对座席编码CLI的长期记忆解决方案，以及促进不同座席供应商之间切换的解决方案 |
+| 9 | [`multica-ai/andrej-karpathy-skills`](https://github.com/multica-ai/andrej-karpathy-skills)<small>224634 stars<br>22470 forks</small>| 3,286 | 一个用于改进Claude Code行为的CLAUDE.md文件，源自Andrej Karpathy对LLM编码陷阱的观察。 |
+| 10 | [`TauricResearch/TradingAgents`](https://github.com/TauricResearch/TradingAgents)<small>Python<br>116066 stars · 22274 forks</small>| 3,437 | TradingAgent ：多代理LLM金融交易框架 |
+| 11 | [`wshobson/agents`](https://github.com/wshobson/agents)<small>Python<br>41807 stars · 4434 forks</small>| 689 | Claude Code、Codex、Cursor、OpenCode、GitHub Copilot、Google Antigravity和Pi的多线程代理插件市场 |
+| 12 | [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes)<small>TypeScript<br>73053 stars · 6608 forks</small>| 5,540 | 编写HTML。渲染视频。专为客服代表打造。 |
+| 13 | [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo)<small>Python<br>22134 stars · 3039 forks</small>| 2,546 | 适用于Claude Code的通用SEO技能。26个子技能+ 19个子代理，涵盖技术SEO、E-E-A-T、SCHEMA、GEO/AEO、代理准备（ Lighthouse Agentic Browsing、WebMCP、llms.txt ）、反向链接、本地SEO、电子商务、国际SEO、Google API和PDF/Excel报告。9 opti… |
+| 14 | [`Comfy-Org/ComfyUI`](https://github.com/Comfy-Org/ComfyUI)<small>Python<br>143271 stars · 16920 forks</small>| 4,109 | 最强大、模块化的扩散模型GUI、API和后端，具有图形/节点界面。世界上最快的本地推理引擎。 |
+| 15 | [`pingdotgg/t3code`](https://github.com/pingdotgg/t3code)<small>TypeScript<br>30503 stars · 8153 forks</small>| 1,881 | 页面上没有仓库简介。 |
 
-同日还有 [全局 Star 榜](/2026/10/26/github/stars-snapshot/)、[今日热榜](/2026/10/26/github/trending-daily/) 和 [本月热榜](/2026/10/26/github/trending-monthly/)。
+同日还有 [全局 Star 榜](/2026/10/27/github/stars-snapshot/)、[今日热榜](/2026/10/27/github/trending-daily/) 和 [本月热榜](/2026/10/27/github/trending-monthly/)。

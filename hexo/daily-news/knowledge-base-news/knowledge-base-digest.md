@@ -2,6 +2,75 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-10-26
+
+### 今日总览
+
+**一句话结论**：周一固定来源主线是阿里云开发者社区同日落地的 Qwen3.8 系列能力解读与 SmartCall 智能体知识库工程文，叠加腾讯云侧 MiniMax M3.1 Flash 接入 ADP，以及掘金对腾讯 EVIE 视觉文档检索「精度 vs 存储」压缩路线的长文拆解。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里技术/阿里云开发者/中间件/语雀、腾讯云+社区/AlloyTeam、字节技术博客、美团技术团队、掘金、百度 FEX/EFE/开发者、京东/凹凸、滴滴、网易知乎、360、有赞 |
+| 核心趋势 | 1）旗舰 MoE + 百万上下文进入可调用/可选型清单；2）客服 Agent 把知识库升为一等公民（规则门控 + Function 触发）；3）视觉文档 RAG 从「多向量精度」走向「聚类质心 + Prefix-MRL」工程化压缩 |
+| 可直接关注 | Qwen3.8-Max 场景分层与缓存计费；SmartCall 知识库三种来源与触发通道；EVIE HAC 将每页 1024 向量压到 32 质心的部署旋钮 |
+| 专项检索结论 | Langfuse / LangChain·LangGraph / Code Graph / Spring Alibaba AI / Loop Engineering：固定来源内均未发现可确认属 2026-10-26 的新落地长文 |
+| 未发现更新 | 阿里技术门户/中间件/语雀干货、字节跳动技术博客、美团（本日新文）、百度 FEX/EFE、京东/凹凸、滴滴、网易、360、有赞、AlloyTeam 等未检出可确认属本日的官方新长文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 大模型开源/旗舰 | [阿里Qwen3.8全系开源：2.4万亿参数旗舰降临](https://developer.aliyun.com/article/1774975) | 2026-10-26 | 阿里云开发者社区 | 2.4T MoE 旗舰、27B 轻量、Flash 动态激活约 6B；原生多模态与 Apache 2.0 叙事，适合做选型入口。 |
+| 旗舰模型工程解读 | [通义千问 Qwen3.8‑Max 新版发布深度解析](https://developer.aliyun.com/article/1774957) | 2026-10-26 | 阿里云开发者社区 | 稀疏 MoE、双推理档位、百万上下文、Function Calling/长周期 Agent；含计费与「何时该用 Max」分层表。 |
+| 智能客服 / RAG | [SmartCall v1.0.9：智能体知识库上线](https://developer.aliyun.com/article/1775025) | 2026-10-26 | 阿里云开发者社区 | 系统/MaxKB/自定义接口三类知识源；规则门控 vs 模型 Function 触发；向量/全文/混合检索配置。 |
+| 模型接入 / Agent 平台 | [MiniMax M3.1 Flash 开源发布，腾讯云 ADP 已第一时间接入](https://cloud.tencent.com/developer/article/2768979) | 2026-10-26 | 腾讯云开发者社区 | 428B/激活约 23B、1M 上下文；ADP 侧可跟进 Coding/Agent 轻量模型接入与成本对照。 |
+| 视觉文档检索 / RAG | [488 GiB 变 3.81 GiB：腾讯 EVIE 视觉文档检索索引压缩](https://juejin.cn/post/7700380674944073738) | 2026-10-26 | 掘金（解读腾讯 IMA/优图 EVIE） | 假负样本治理 + Prefix-MRL 多宽度 + HAC 语义/位置聚类；百万页索引从约 488 GiB 压到 3.81 GiB。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 旗舰模型选型与成本 | [Qwen3.8-Max 深度解析](https://developer.aliyun.com/article/1774957) | reasoning_effort 档位；隐式缓存；场景分层（工程/Agent vs 高频客服） | 平台架构 / LLM 网关 |
+| 生产 Agent 知识库 | [SmartCall 智能体知识库](https://developer.aliyun.com/article/1775025) | 知识库一等公民；关键词+疑问词+排除词门控；自定义检索接口 JSON 解析 | 智能客服 / RAG 工程 |
+| 视觉文档 RAG 压缩 | [掘金 EVIE 拆解](https://juejin.cn/post/7700380674944073738) | 多模态裁判洗负样本；Prefix-MRL；分配用语义+位置、存储纯语义 | 多模态检索 / 企业知识库 |
+
+### 工程实践归纳
+
+**总体判断**：本日固定来源「同日可核验」信号集中在阿里云开发者与腾讯云/掘金侧的模型与 RAG 工程；五个专项主题均无新落地长文，不宜把促销文或跨日转载改写成专项进展。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 模型分层路由 | Qwen3.8 系列 + MiniMax Flash 同日进入中文社区可讨论清单 | Flash/轻量走高频，Max/旗舰走长周期 Agent；用缓存与预算档控成本 |
+| 客服 Agent 知识库 | SmartCall 把检索触发做成规则门控与 Function 双通道 | 高频政策走规则省 Token；长尾开放问题交给模型选库 |
+| 视觉文档索引 | EVIE 用 HAC 把每页多向量压成质心且保住 MaxSim 接口 | 压缩旋钮（d,K）可独立调；密集表格细粒度证据最易被稀释 |
+| Langfuse / LangChain·LangGraph / Code Graph / Spring Alibaba AI / Loop Engineering | 固定来源内本日无新核验长文 | 明确空窗；Loop 相关仍可回溯美团 10-22 AutoResearch（已在前序日期收录） |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Qwen3.8-Max 深度解析](https://developer.aliyun.com/article/1774957) | 把能力上限与计费/选型约束写在同一篇，可直接做网关路由表 |
+| 必读 | [SmartCall 智能体知识库](https://developer.aliyun.com/article/1775025) | 少见的「生产级客服 Agent + 知识库一等公民」配置级复盘 |
+| 推荐 | [掘金 EVIE 拆解](https://juejin.cn/post/7700380674944073738) | 视觉文档 RAG「精度 vs 存储」三条工程杠杆一次讲清 |
+| 延伸 | [MiniMax M3.1 Flash × ADP](https://cloud.tencent.com/developer/article/2768979) | 轻量 Coding/Agent 模型接入云平台的对照样本 |
+| 延伸 | [Qwen3.8 全系开源综述](https://developer.aliyun.com/article/1774975) | 系列定位与协议口径的入口文 |
+
+### 来源清单
+
+- 检索范围：2026-10-26 00:00:00 到 2026-10-26 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里、腾讯、字节、百度、美团、京东、滴滴、网易、360、有赞，以及掘金站内五个专项检索
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 阿里Qwen3.8全系开源 | 2026-10-26 | https://developer.aliyun.com/article/1774975 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | Qwen3.8‑Max 深度解析 | 2026-10-26 | https://developer.aliyun.com/article/1774957 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | SmartCall v1.0.9 智能体知识库 | 2026-10-26 | https://developer.aliyun.com/article/1775025 |
+| 腾讯 | 腾讯云+社区 | 技术文章 | MiniMax M3.1 Flash × ADP 接入 | 2026-10-26 | https://cloud.tencent.com/developer/article/2768979 |
+| 腾讯（解读） | 掘金 | 技术文章 | 腾讯 EVIE 视觉文档检索索引压缩 | 2026-10-26 | https://juejin.cn/post/7700380674944073738 |
+| 美团/字节/百度/京东/滴滴/网易/360/有赞等 | 固定来源清单 | 无新增 | 本日未检出可确认属 2026-10-26 的官方新长文 | - | - |
+| 专项五题 | Langfuse/LangChain·LangGraph/Code Graph/Spring Alibaba AI/Loop Engineering | 无新增 | 固定来源内无 10/26 可核验新文 | - | - |
+
 ## 2026-10-25
 
 ### 今日总览
@@ -168,6 +237,7 @@
 | 产品发布 | 阿里云企业级 Agent 平台 AgentCore | 2026-10-23 | https://developer.aliyun.com/article/1774482 |
 | 官方手册 | Alibaba Cloud AI Agent Handbook | 2026-10-23 | https://developer.aliyun.com/article/1774447 |
 | 官方应急 | PHP php2shell RCE 检测与防护 | 2026-10-23 | https://cloud.tencent.com/developer/article/2767838 |
+
 ## 2026-10-22
 
 ### 今日总览
@@ -224,4 +294,3 @@
 | 官方应急 | PHP 引擎层 RCE 防护指南 | 2026-10-22 | https://developer.aliyun.com/article/1773846 |
 | 产品更新 | WorkBuddy 上线 DeepSeek-V4.1-Flash-1017 | 2026-10-22 | https://cloud.tencent.com/developer/article/2766852 |
 | 技术博客 | LOOP 范式下的 CyclicGraph AutoResearch | 2026-10-22 | https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html |
-
