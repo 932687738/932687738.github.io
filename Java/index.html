@@ -83,9 +83,7 @@
             
               <a class="nav-menu-item" href="/AI">AI</a>
             
-              <a class="nav-menu-item" href="/Spring-Alibaba-AI">Spring Alibaba AI</a>
-            
-              <a class="nav-menu-item" href="/Code-Graph">Code Graph</a>
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
             
           
           
@@ -104,7 +102,11 @@
              style="background-image: url(/images/icon/icon-code.svg)"></div>
         Java
       </div>
-      <div class="wall-category-description"></div>
+      <div class="wall-category-description">服务端分层、模块边界与事务</div>
+      
+      <div class="wall-category-tags">
+        <div id="tags-outer"><canvas width="500" height="500" id="tagCanvas"><a href="/Java/tag/%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/" style="font-size: 14px;">分层架构</a> <a href="/Java/tag/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/" style="font-size: 14px;">数据存储</a> <a href="/Java/tag/%E6%A8%A1%E5%9D%97%E8%BE%B9%E7%95%8C/" style="font-size: 14px;">模块边界</a><canvas></div>
+      </div>
       
     </div>
   </div>
@@ -141,6 +143,35 @@
     </div>
     
     
+  
+    <script type="text/javascript"
+            charset="utf-8"
+            src="/js/tagcanvas.min.js"></script>
+    <script type = "text/javascript">
+        window.onload = function() {
+            try {
+                TagCanvas.Start('tagCanvas', '', {
+                    outlineThickness: 1,
+                    maxSpeed: 0.03,
+                    // freezeActive: true,
+                    // freezeDecel: true,
+                    textColour: null,
+                    textColour: null,
+                    outlineColour: "#aaa",
+                    weight: true,
+                    padding: 4,
+                    // clickToFront: 200,
+                    fadIn: 200,
+                    // pinchZoom: true,
+                    wheelZoom: false,
+                    initial: [0.1, -0.03]
+                });
+            } catch (e) {
+                // something went wrong, hide the canvas container
+                document.getElementById('tags-outer').style.display = 'none';
+            }
+        };
+    </script>
   
 
   </body>

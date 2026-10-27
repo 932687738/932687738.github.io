@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        工具、技能、插件和外部协议如何挂上对话 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">工具、技能、插件和外部协议如何挂上对话</div>
+        <div class="post-info">
+          
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+          
+          
+  
+    
+      <a href="/AI-Agent/tag/%E5%B7%A5%E5%85%B7%E6%8A%80%E8%83%BD/" class="post-tag">工具技能</a>
+    
+  
+
+
+          <span class="post-date">2026-10-26</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p>对话的扩展能力有四类：本地工具、技能、插件、外部工具协议。它们都先注册，再由编排计划裁剪之后交给同一次模型调用。</p>
+<span id="more"></span>
+
+<p>本地工具是 Spring Bean 上的公开方法。描述里写清适用场景和反例，调用前先做权限检查，再通过检索端口拿数据：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Tool(description = &quot;&quot;&quot;</span></span><br><span class="line"><span class="meta">        名称：平台知识库检索</span></span><br><span class="line"><span class="meta">        适用场景：需要从指定知识库检索 FAQ、产品手册、政策条款等文档片段时使用。</span></span><br><span class="line"><span class="meta">        反例：实时天气、当前时间、代码文件读写、订单状态查询。</span></span><br><span class="line"><span class="meta">        返回：若干 `[来源: 文档名] 内容` 片段；无命中时返回提示语。</span></span><br><span class="line"><span class="meta">        &quot;&quot;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">searchPlatformKnowledge</span><span class="params">(</span></span><br><span class="line"><span class="params">        <span class="meta">@ToolParam(description = &quot;用户问题或检索关键词&quot;)</span> String query,</span></span><br><span class="line"><span class="params">        <span class="meta">@ToolParam(description = &quot;知识库 ID&quot;)</span> Long knowledgeBaseId,</span></span><br><span class="line"><span class="params">        <span class="meta">@ToolParam(description = &quot;租户 ID，可空则 default&quot;)</span> String tenantId)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> format(searchAsToolResult(query, knowledgeBaseId, tenantId));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>技能是一组「额外系统提示 + 自带工具」。渲染提示词时把技能说明并进去，工具则并入注册表。平台里还有两种技能：一种定义在数据库里，可以发新版本并扫描冲突；一种在启动时编译成图再登记，例如先检索再汇总，或让两个子智能体按顺序做完再合并。图技能的扩展方式是提供图模板和节点，启动时自动编译，而不是在请求里临时拼流程。</p>
+<p>插件在启动时注册进系统上下文。可以是普通 Bean，也可以走 <code>spring.factories</code> 发现。插件适合接入一组相关能力，不适合在插件里重写路由。</p>
+<p>外部工具协议分客户端和服务端。客户端把别处提供的工具变成回调，并入本次调用；服务端可以把本地工具暴露给外部宿主。文件类内置能力会打开这条通道，其他能力默认关闭，避免无关工具进入上下文。</p>
+<p>一次调用看到的工具由编排计划的白名单裁剪，再按问句相关性取前五个：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">MAX_TOOLS_PER_LLM</span> <span class="operator">=</span> <span class="number">5</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> SelectedTools <span class="title function_">selectForPlan</span><span class="params">(String userInput, OrchestrationPlan plan)</span> &#123;</span><br><span class="line">    List&lt;String&gt; rankedNames = rankToolNames(userInput, plan.allowedToolNames());</span><br><span class="line">    List&lt;String&gt; selectedNames = rankedNames.size() &lt;= MAX_TOOLS_PER_LLM</span><br><span class="line">            ? rankedNames</span><br><span class="line">            : rankedNames.subList(<span class="number">0</span>, MAX_TOOLS_PER_LLM);</span><br><span class="line">    Set&lt;String&gt; selectedSet = Set.copyOf(selectedNames);</span><br><span class="line">    List&lt;Object&gt; locals = toolObjectsForNames(selectedSet);</span><br><span class="line">    ToolCallback[] externals = externalToolCallbacks.stream()</span><br><span class="line">            .filter(callback -&gt; selectedSet.contains(callback.getToolDefinition().name()))</span><br><span class="line">            .limit(MAX_TOOLS_PER_LLM)</span><br><span class="line">            .toArray(ToolCallback[]::<span class="keyword">new</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">SelectedTools</span>(locals, externals);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>聊天服务把本地工具和外部回调分两路挂上同一次调用，并用会话号隔开记忆：</p>
+<pre><code class="java">var prompt = chatClientBuilder.clone().build().prompt()
+        .advisors(a -&gt; a.param(ChatMemory.CONVERSATION_ID, context.conversationId())
+                .advisors(memoryAdvisor))
+        .system(systemPrompt)
+        .user(userInput)
+        .tools(tools.toArray());
+if (externalCallbacks.length &gt; 0) &#123;
+    prompt = prompt.toolCallbacks(externalCallbacks);
+&#125;
+```工具的返回按原意写回对话历史，下一步推理读的是这份结果。
+
+钩子不改变路由，只在旁边监听：调用前、调用后（带完整回答）、出错，以及「这段内容值不值得捕获」。审计钩子记会话、智能体、能力和回答规模。是否写入长期知识由单独的捕获判断决定，默认规则可以换成更轻的分类器，但入口仍是这个事件，而不是在聊天服务里加分支。
+</code></pre>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/images/avatar.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/images/qr_code.png" />
+  </div>
+  <div class="like-text">“请作者喝杯咖啡”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    喜欢作者
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2026/10/26/ai-agent/%E6%B5%81%E7%A8%8B%E7%BC%96%E6%8E%92/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">上一篇</span>
+      </div>
+      <div>图、推理循环和一次调用如何分工</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2026/10/26/ai-agent/%E6%84%8F%E5%9B%BE%E8%B7%AF%E7%94%B1/">
+      <div class="text-align">
+        <span class="text-small">下一篇</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      一次提问如何被分到具体智能体
+    </a>
+  
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>

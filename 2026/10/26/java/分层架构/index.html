@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        服务端四层各自做什么 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">服务端四层各自做什么</div>
+        <div class="post-info">
+          
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          
+          
+  
+    
+      <a href="/Java/tag/%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/" class="post-tag">分层架构</a>
+    
+  
+
+
+          <span class="post-date">2026-10-26</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p>后端按接口、应用、领域、基础设施四层拆开。一层只做一种事：接口层收发，应用层编排用例，领域层守规则，基础设施层接数据库和外部系统。</p>
+<span id="more"></span>
+
+<p>这是 Spring Boot 应用里每个业务模块都要靠拢的目标形状。对话、知识库、平台治理三块都按这个切，避免控制器里写检索，或在图节点里写业务判断。</p>
+<table>
+<thead>
+<tr>
+<th>层</th>
+<th>有哪些职责</th>
+<th>实现时落在哪</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>接口层</td>
+<td>校验入参、把 JSON 或文件转成用例入参、把流式结果推回客户端、统一错误码</td>
+<td><code>web</code> 里的 Controller 和 dto</td>
+</tr>
+<tr>
+<td>应用层</td>
+<td>按顺序调用预处理、路由、生成、后处理；划定事务；组装 SSE</td>
+<td><code>*ApplicationService</code></td>
+</tr>
+<tr>
+<td>领域层</td>
+<td>聚合、值对象、领域服务、仓储与检索的端口</td>
+<td><code>domain</code>，只依赖 JDK 和端口接口</td>
+</tr>
+<tr>
+<td>基础设施层</td>
+<td>MyBatis、向量库、模型与外部 HTTP 的适配、指标</td>
+<td><code>infrastructure</code> &#x2F; <code>repository</code></td>
+</tr>
+</tbody></table>
+<p>一次请求的实现逻辑是固定的。控制器不接触仓储，只调用应用服务。应用服务先跑预处理图，再按结果选流：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> Flux&lt;String&gt; <span class="title function_">streamAgentChat</span><span class="params">(String conversationId, String userInput)</span> &#123;</span><br><span class="line">    <span class="type">AgentChatPrepResult</span> <span class="variable">prep</span> <span class="operator">=</span> runPrepGraph(conversationId, userInput);</span><br><span class="line">    Flux&lt;String&gt; body = resolveBodyStream(prep);</span><br><span class="line">    Flux&lt;String&gt; withPrefixes = prependUserVisiblePrefixes(prep, body);</span><br><span class="line">    <span class="keyword">return</span> attachLifecycleHooks(withPrefixes, prep);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>预处理图在启动时编译成单例，请求里只 <code>invoke</code>。节点写入状态，应用服务读快照，不把 HTTP 的请求对象传进图。图上的节点只在「状态」和「端口」之间搬运：读入状态，调用领域服务，把结果写回新的状态。选库、去重、分段、权限这类规则留在领域里。仓储接口定义在领域，MyBatis 实现放在基础设施，由 Spring 在启动时注入。</p>
+<p>事务只包住本地落库。调用聊天模型、计算嵌入、访问外部工具协议，都放在事务提交之后或事务之外。这些调用慢，也会失败，不能和一次数据库提交绑在一起。</p>
+<p>图在进程启动时编译成单例。请求进来只是执行，不为每一次问答重新编译。节点不引用接口层的请求对象，这样编排可以脱离某一种 HTTP 形状单独测试。</p>
+<p>还在对齐的地方：部分检索和落库节点仍直接碰到仓储，业务判断有时写在节点里。目标是把规则收回领域服务，节点保持薄适配。</p>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/images/avatar.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/images/qr_code.png" />
+  </div>
+  <div class="like-text">“请作者喝杯咖啡”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    喜欢作者
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2026/10/26/java/%E6%A8%A1%E5%9D%97%E8%BE%B9%E7%95%8C/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">上一篇</span>
+      </div>
+      <div>运行时、业务模块和技术栈怎么分</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2026/08/05/stories/AI%E5%AF%B9%E9%BD%90%E5%AE%89%E5%85%A8%E4%B8%8E%E5%8F%AF%E8%A7%A3%E9%87%8A%E6%80%A7/%E5%A4%A9%E5%B0%BA%E7%9A%84%E6%9C%80%E5%90%8E%E4%B8%80%E9%A2%98/">
+      <div class="text-align">
+        <span class="text-small">下一篇</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      天尺的最后一题
+    </a>
+  
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>

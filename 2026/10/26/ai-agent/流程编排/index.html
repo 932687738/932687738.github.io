@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        图、推理循环和一次调用如何分工 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">图、推理循环和一次调用如何分工</div>
+        <div class="post-info">
+          
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+          
+          
+  
+    
+      <a href="/AI-Agent/tag/%E6%B5%81%E7%A8%8B%E7%BC%96%E6%8E%92/" class="post-tag">流程编排</a>
+    
+  
+
+
+          <span class="post-date">2026-10-26</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p>智能体侧的流程有三种实现，按「下一步能不能事先写死」来选：写得死的用编译图，必须看工具结果再决定的用有限步推理循环，单轮问答用一次聊天调用。</p>
+<span id="more"></span>
+
+<table>
+<thead>
+<tr>
+<th>形态</th>
+<th>用在哪些功能</th>
+<th>实现要点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编译图</td>
+<td>对话预处理、技能执行、会暂停的长流程</td>
+<td>启动时编译成单例；状态键事先声明</td>
+</tr>
+<tr>
+<td>推理循环</td>
+<td>子智能体上的动态工具调用</td>
+<td>有最大步数；信息足够就停止再调工具</td>
+</tr>
+<tr>
+<td>一次调用</td>
+<td>兜底回答、简单分类</td>
+<td>聊天客户端直接流式输出</td>
+</tr>
+</tbody></table>
+<p>对话预处理是一条没有分支的图，在 Bean 初始化时编译，失败就让进程起不来：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">StateGraph</span> <span class="variable">workflow</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StateGraph</span>(keyStrategyFactory)</span><br><span class="line">        .addNode(NODE_NORMALIZE, node_async(normalizeInputNode::execute))</span><br><span class="line">        .addNode(NODE_PREPARE, node_async(prepareAgentChatNode::execute))</span><br><span class="line">        .addNode(NODE_BEFORE_HOOK, node_async(emitBeforeHookNode::execute));</span><br><span class="line">workflow.addEdge(START, NODE_NORMALIZE);</span><br><span class="line">workflow.addEdge(NODE_NORMALIZE, NODE_PREPARE);</span><br><span class="line">workflow.addEdge(NODE_PREPARE, NODE_BEFORE_HOOK);</span><br><span class="line">workflow.addEdge(NODE_BEFORE_HOOK, END);</span><br><span class="line"><span class="keyword">return</span> workflow.compile(CompileConfig.builder().build());</span><br></pre></td></tr></table></figure>
+
+<p>条件边只读状态字段，返回下一个节点名。外部依赖做成独立节点，编译期登记全部跳转。节点返回新状态，不在原对象上改。</p>
+<p>推理循环嵌在子智能体里。系统提示写清角色、工具何时用、何时停止。每一跳只选一个工具，等结果回来再继续。到达步数上限时用已有观察作答，并打出告警，记下步数和工具次数。图的某个节点也可以包一层推理循环：状态转成循环的输入，最终答案写回约定的状态键，这一跳的工具同样要少，并且有超时。</p>
+<p>人工确认是图的暂停，不是另一套聊天。执行到需要人决定的节点时中断，状态存下来。外部接口提交决定后，决定写回状态，图从原处继续。决定、时间和介入点留下审计。危险操作走这条暂停，不让模型在同一次自动调用里直接落地。</p>
+<p>长流程的挂起和补偿在平台侧：快照能恢复，补偿节点能退回已做步骤。多个子任务若互不依赖，可以并发，但有超时；混合意图需要串行时，按注册表里的子智能体顺序调用再合并。</p>
+<p>步骤相对稳定的业务还可以存成流程定义，挂在对话模块下。功能包括：保存定义、发布、启用或停用、查看版本并回滚、同步执行、流式执行、调试，以及把某条流程登记成外部工具。每次执行另有记录可查。真正跑起来时，分支和暂停仍走编译图：发布后的版本在启动或发布时编译，请求只负责按状态执行。</p>
+<p>对话主路由目前仍有一段按关键词打分的手写计划，预处理已经是图。方向是固定步骤继续进图，临场选工具留在推理循环，单轮兜底保持一次调用。</p>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/images/avatar.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/images/qr_code.png" />
+  </div>
+  <div class="like-text">“请作者喝杯咖啡”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    喜欢作者
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2026/10/26/ai-agent/%E6%B3%A8%E5%86%8C%E6%B2%BB%E7%90%86/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">上一篇</span>
+      </div>
+      <div>智能体注册、权限、费用和长记忆</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2026/10/26/ai-agent/%E5%B7%A5%E5%85%B7%E6%8A%80%E8%83%BD/">
+      <div class="text-align">
+        <span class="text-small">下一篇</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      工具、技能、插件和外部协议如何挂上对话
+    </a>
+  
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>

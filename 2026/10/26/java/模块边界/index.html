@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        运行时、业务模块和技术栈怎么分 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">运行时、业务模块和技术栈怎么分</div>
+        <div class="post-info">
+          
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+          
+          
+  
+    
+      <a href="/Java/tag/%E6%A8%A1%E5%9D%97%E8%BE%B9%E7%95%8C/" class="post-tag">模块边界</a>
+    
+  
+
+
+          <span class="post-date">2026-10-26</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p>仓库先分成能离线修改的治理仓，和必须启动的应用仓。应用仓再按 Maven 模块切开：一个运行时入口、若干业务上下文、一组可复用的 AI 库、以及共享的数据和缓存。</p>
+<span id="more"></span>
+
+<p>治理仓保存架构约束和接口契约，不跑对话。后端应用仓提供 REST 和 SSE。工作台、飞书长连接、外部命令行都是入口，进到应用服务之后走同一套用例。</p>
+<p>功能按模块归位：</p>
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>对外能力</th>
+<th>实现位置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>application</code></td>
+<td>唯一可执行进程，聚合依赖，导入各模块配置</td>
+<td>启动类扫描 <code>com.yxy.deepseek</code></td>
+</tr>
+<tr>
+<td><code>agent-hub</code></td>
+<td>智能体对话、意图路由、工具、会话历史与分享、可保存的流程</td>
+<td><code>/api/agent-hub/*</code></td>
+</tr>
+<tr>
+<td><code>knowledge-hub</code></td>
+<td>知识库增删改、文档上传、检索问答</td>
+<td>同在 <code>/api/agent-hub</code> 下：<code>/chat/knowledge</code>、<code>/knowledge/upload</code>、<code>/knowledge-bases</code></td>
+</tr>
+<tr>
+<td><code>aether-platform</code></td>
+<td>智能体注册、技能版本、提示词模板、记忆、成本、追踪、平台对话</td>
+<td><code>/api/super-agents/*</code></td>
+</tr>
+<tr>
+<td><code>human-loop</code></td>
+<td>图执行到危险工具时暂停，等人做出通过、拒绝或修改后再继续</td>
+<td>恢复接口目前挂在图的演示入口上，能力本身是中断与恢复</td>
+</tr>
+<tr>
+<td><code>bot-feishu</code></td>
+<td>飞书消息接入与回发</td>
+<td>长连接事件，不单独做一套编排</td>
+</tr>
+<tr>
+<td><code>learning</code></td>
+<td>聊天、图、推理循环的对照实验</td>
+<td><code>/springai/demo/*</code>，生产模块不依赖它</td>
+</tr>
+</tbody></table>
+<p>依赖向下。业务模块使用 AI 技术栈，不反向让技术栈依赖某个控制器。技术栈里：<code>ai-core</code> 放与框架无关的端口；<code>ai-spring</code> 放聊天客户端、嵌入和检索审计的公共配置；<code>ai-alibaba</code> 放图的构建基座；向量存储先有接口，再有 pgvector 实现；机器人有单独的契约，飞书去实现它。</p>
+<p>跨模块的实现逻辑靠端口，不靠互相引用表。知识检索只有这一个出口，对话侧和平台侧各自写适配器去调用它：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">KnowledgeRetrievalPort</span> &#123;</span><br><span class="line">    KnowledgePortResponse&lt;List&lt;RetrievedChunk&gt;&gt; <span class="title function_">search</span><span class="params">(</span></span><br><span class="line"><span class="params">            String query, Long knowledgeBaseId, String tenantId)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>平台上的检索工具不自己查表，而是把参数交给适配器，适配器再进这个端口：</p>
+<pre><code class="java">return platformToolRetryExecutor.executeWithRetry(
+        &quot;searchPlatformKnowledge&quot;,
+        () -&gt; knowledgeRetrievalAdapter
+                .search(query, knowledgeBaseId, tenantId)
+                .orElse(ToolResult.fail(&quot;UNAVAILABLE&quot;, &quot;Knowledge retrieval unavailable&quot;)));
+```平台提供注册表和按任务选模型的能力，对话在编排时读取，不把平台的管理接口当成问答主路径。
+
+配置由运行时的 `application.yml` 用 `spring.config.import` 拉入各模块的 YAML。本地密钥放在环境变量或被忽略的本地配置里。旧的单体目录还在清空，新功能写进上表对应模块。
+</code></pre>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/images/avatar.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/images/qr_code.png" />
+  </div>
+  <div class="like-text">“请作者喝杯咖啡”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    喜欢作者
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2026/10/26/java/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">上一篇</span>
+      </div>
+      <div>表、迁移脚本和向量存在哪里</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2026/10/26/java/%E5%88%86%E5%B1%82%E6%9E%B6%E6%9E%84/">
+      <div class="text-align">
+        <span class="text-small">下一篇</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      服务端四层各自做什么
+    </a>
+  
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>

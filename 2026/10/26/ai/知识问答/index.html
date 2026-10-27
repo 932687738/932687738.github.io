@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        知识库问答如何召回再生成 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+  
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">知识库问答如何召回再生成</div>
+        <div class="post-info">
+          
+          
+            
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+            
+              
+                
+              
+            
+              
+            
+          
+          
+  
+    
+      <a href="/AI/tag/%E7%9F%A5%E8%AF%86%E9%97%AE%E7%AD%94/" class="post-tag">知识问答</a>
+    
+  
+
+
+          <span class="post-date">2026-10-26</span>
+        </div>
+      </div>
+      
+      <div class="post-content__body">
+        
+          <div class="post-gallery">
+            
+          </div>
+        
+        <p>知识库问答是一条流式接口：先用图把资料准备好，再让模型按准备好的提示词生成，最后补记忆和引用信息。空问题在入口就被拒绝。</p>
+<span id="more"></span>
+
+<p>预处理图按配置的节点顺序同步执行，默认七步，每步只写自己的状态字段：</p>
+<table>
+<thead>
+<tr>
+<th>步骤</th>
+<th>做什么</th>
+<th>写下的结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>整理上下文</td>
+<td>会话、用户、近期消息</td>
+<td>本次问答的身份和短时上下文</td>
+</tr>
+<tr>
+<td>选择知识库</td>
+<td>按问题意图挑库，而不是全库扫描</td>
+<td>选中的库</td>
+</tr>
+<tr>
+<td>长期记忆</td>
+<td>召回与该用户相关、允许使用的事实</td>
+<td>事实列表，和文档切片分开</td>
+</tr>
+<tr>
+<td>多路检索</td>
+<td>在选中的库里做向量召回，条数有上限</td>
+<td>候选切片</td>
+</tr>
+<tr>
+<td>重排</td>
+<td>条款、政策等场景把候选再排一次</td>
+<td>重排后的切片</td>
+</tr>
+<tr>
+<td>阈值过滤</td>
+<td>低于相似度阈值的丢掉</td>
+<td>允许进入提示词的切片</td>
+</tr>
+<tr>
+<td>组装提示词</td>
+<td>拼成系统和用户提示，并附查询元数据</td>
+<td>给模型的最终提示</td>
+</tr>
+</tbody></table>
+<p>问答图的节点和召回条数都来自配置，图在启动时编译一次：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">knowledge:</span></span><br><span class="line">  <span class="attr">retrieval:</span></span><br><span class="line">    <span class="attr">max-selected-kbs:</span> <span class="number">3</span></span><br><span class="line">    <span class="attr">top-k-per-kb:</span> <span class="number">10</span></span><br><span class="line">    <span class="attr">rerank-top-k:</span> <span class="number">5</span></span><br><span class="line">  <span class="attr">graph:</span></span><br><span class="line">    <span class="attr">query:</span></span><br><span class="line">      <span class="attr">prep-nodes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">contextPrepare</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">intentAndKBSelect</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">longTermMemoryRetrieve</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">multiRetrieval</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">rerank</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">retrievalThresholdFilter</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">promptBuild</span></span><br><span class="line">      <span class="attr">post-nodes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">memoryUpdate</span></span><br></pre></td></tr></table></figure>
+
+<p>图跑完后，应用服务用图里写出的提示词做流式生成，并把命中信息接在文本流后面。记忆更新放在流正常结束的回调里：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">OverAllState</span> <span class="variable">prepState</span> <span class="operator">=</span> graphBuilder.invoke(prepGraph, inputs);</span><br><span class="line"><span class="type">String</span> <span class="variable">systemPrompt</span> <span class="operator">=</span> prepState.value(KnowledgeGraphStateKeys.SYSTEM_PROMPT)</span><br><span class="line">        .map(String.class::cast).orElse(<span class="string">&quot;&quot;</span>);</span><br><span class="line"><span class="type">String</span> <span class="variable">userPrompt</span> <span class="operator">=</span> prepState.value(KnowledgeGraphStateKeys.USER_PROMPT)</span><br><span class="line">        .map(String.class::cast).orElse(message);</span><br><span class="line"></span><br><span class="line">Flux&lt;String&gt; tokenFlux = chatClientBuilder.build()</span><br><span class="line">        .prompt()</span><br><span class="line">        .system(systemPrompt)</span><br><span class="line">        .user(userPrompt)</span><br><span class="line">        .stream()</span><br><span class="line">        .content();</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> tokenFlux</span><br><span class="line">        .doOnNext(fullAnswer::append)</span><br><span class="line">        .concatWith(Flux.defer(() -&gt; Flux.just(objectMapper.writeValueAsString(meta))))</span><br><span class="line">        .doOnComplete(() -&gt; runMemoryUpdate(prepState, fullAnswer.toString(), traceId));</span><br></pre></td></tr></table></figure>
+
+<p>检索实现上有几条硬界限。单次召回不超过十条，真正放进提示词的通常是三到五条。分数低于配置阈值的不返回。多租户时过滤条件带租户，不能只在应用层事后筛。返回给模型的片段带上来源，回答要能指回原文。</p>
+<p>指标至少留下：查询耗时、条数、最高和最低分、有没有被阈值丢掉。空结果或分数过低要能被看见，否则库会在没有命中的情况下继续被当成可用。</p>
+<p>这条链路的入口是 <code>/api/agent-hub/chat/knowledge</code>。智能体对话若要查文档，走知识库的检索端口，和这条问答共用切片与阈值，而不是在对话模块里再做一套召回。</p>
+
+      </div>
+    </div>
+  </article>
+  <div class="post__foot">
+    
+      <div class="like-author">
+  <input type="checkbox" id="likeCode" />
+  <div class="author-face">
+    <img height="100px"
+         width="100px"
+         id="front-face"
+         alt="author face"
+         src="/images/avatar.jpg" />
+    <img height="100px"
+         width="100px"
+         id="back-face"
+         alt="like code"
+         src="/images/qr_code.png" />
+  </div>
+  <div class="like-text">“请作者喝杯咖啡”</div>
+  <label for="likeCode" class="like-btn">
+    <svg viewBox="0 0 1024 1024"
+         width="20px"
+         style="margin-right: 10px"
+         height="20px">
+      <path d="M466.88 908.96L113.824 563.296a270.08 270.08 0 0 1 0-387.392c108.8-106.56 284.896-106.56 393.696 0 1.504 1.472 2.976 2.944 4.448 4.48 1.472-1.536 2.944-3.008 4.448-4.48 108.8-106.56 284.896-106.56 393.696 0a269.952 269.952 0 0 1 34.016 347.072l-387.392 385.6a64 64 0 0 1-89.92 0.384z" p-id="13650" fill="#ee4242" />
+    </svg>
+    喜欢作者
+  </label>
+</div>
+
+    
+    <div class="post-nav">
+  
+    <a class="post-nav-item-left" href="/2026/10/26/ai/%E6%A8%A1%E5%9E%8B%E6%8E%A5%E5%85%A5/">
+      <div class="text-align">
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+        <span class="text-small">上一篇</span>
+      </div>
+      <div>聊天和嵌入模型怎么接入</div>
+    </a>
+  
+  <div class="vhr"></div>
+  
+    <a class="post-nav-item-right" href="/2026/10/26/ai/%E7%9F%A5%E8%AF%86%E5%85%A5%E5%BA%93/">
+      <div class="text-align">
+        <span class="text-small">下一篇</span>
+        <svg t="1670570876164"
+             class="icon"
+             viewBox="0 0 1024 1024"
+             transform="scale(-1,-1)"
+             width="16"
+             height="16">
+          <path d="M384 512L731.733333 202.666667c17.066667-14.933333 19.2-42.666667 4.266667-59.733334-14.933333-17.066667-42.666667-19.2-59.733333-4.266666l-384 341.333333c-10.666667 8.533333-14.933333 19.2-14.933334 32s4.266667 23.466667 14.933334 32l384 341.333333c8.533333 6.4 19.2 10.666667 27.733333 10.666667 12.8 0 23.466667-4.266667 32-14.933333 14.933333-17.066667 14.933333-44.8-4.266667-59.733334L384 512z" p-id="14596"/>
+        </svg>
+      </div>
+      知识库如何建库并写入文档
+    </a>
+  
+</div>
+
+    
+    
+  </div>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  
+
+  </body>
+</html>
