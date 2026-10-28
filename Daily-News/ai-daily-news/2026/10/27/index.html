@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-27 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-27</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-27</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：周二主线是「企业工作流进 ChatGPT + 世界模型入实时交互」——OpenAI 与 Oracle 把应用&#x2F;数据接进 ChatGPT（AI Workspace &#x2F; Security Mesh &#x2F; App Composer），DeepMind 发布 Genie 4；Anthropic 同日放出药物研发早期进展与真实软件漏洞发现研究；工程侧 Claude Code 2.1.312、Codex CLI 0.165.0、Langfuse 4.71.0 落地，专项里 Spring AI &#x2F; Spring Alibaba AI &#x2F; LangGraph &#x2F; Code Graph &#x2F; Loop &#x2F; OpenClaw &#x2F; Hermes 无本日可核验新正式版。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI、Anthropic、AWS、GitHub Copilot、DeepMind&#x2F;Google、Claude Code、Codex、Hermes、OpenClaw、Spring AI &#x2F; Spring Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、Agent Skills、企业落地、政策与论文</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>企业 Agent 入口从「对话」走向「在权限内跑业务工作流」；世界模型进入实时可舵控的多模态仿真；编码 Agent 与可观测性继续以小版本消化身份&#x2F;云厂商&#x2F;稳定性</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估 Oracle AI Workspace 与 Marketplace 采购路径；Genie 4 研究预览等待名单；升级 Claude Code ≥2.1.312、Codex ≥0.165.0、Langfuse ≥4.71.0；阅读 Anthropic 药物研发与 CVD 漏洞研究口径</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：官方 changelog 记 2.1.312（10-27），含 OIDC user_id_claim、skills 发现修复、云会话&#x2F;Remote Control&#x2F;Slack&#x2F;Code Review 等。Codex：rust-v0.165.0（10-27），内置 GCP Vertex、<code>gpt-6.1-terra</code> 进目录、memory v2 默认、会话筛选器。OpenClaw：无本日新正式版（最近可见 2026.10.7&#x2F;10.8 属相邻日社区信号）。Hermes：无本日可核验新正式版（webapp&#x2F;ElevenLabs 等属相邻日）。Spring AI：无本日正式 release（最近可见 10-23 的 2.1.0-RC1 &#x2F; 2.0.2）。Spring Alibaba AI：无本日可核验正式 release。Langfuse：v4.71.0（及 v3.225.15 回移植，10-27）。LangChain&#x2F;LangGraph：无本日新版（LangGraph 1.2.18 属 10-26）。Code Graph：无本日可核验全球正式发布。Loop Engineering：无本日可核验正式 scaffold&#x2F;PR。skills：Claude Code 修复 per-directory &#x2F; <code>paths:</code> skills 在 Bash <code>cd</code> 后找不到的问题；捐赠 AAIF 属更早相邻日。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>企业集成</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/oracle-apps-in-chatgpt">OpenAI expands partnership with Oracle to bring its apps to ChatGPT</a></td>
+<td>2026-10-27</td>
+<td>官方发布</td>
+<td>Oracle AI Workspace 把应用&#x2F;数据接到 ChatGPT；Security Mesh &#x2F; App Composer &#x2F; SMB Bundle；美区 Marketplace 可用 Universal Credits 采购 API&#x2F;Codex&#x2F;ChatGPT Work。</td>
+</tr>
+<tr>
+<td>世界模型</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4: A new generation of world simulation</a></td>
+<td>2026-10-27</td>
+<td>官方发布</td>
+<td>原生多模态实时世界模型（物理&#x2F;人物&#x2F;环境声&#x2F;对话）；自然语言实时舵控；可信测试者预览，随后面向 AI Ultra &#x2F; Gemini API 早期伙伴。</td>
+</tr>
+<tr>
+<td>药物研发</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/early-progress-drug-development">Early progress on accelerating drug development with Claude</a></td>
+<td>2026-10-27</td>
+<td>官方研究</td>
+<td>六家机构早期合作：靶点评估、lead 优化、生产文档、法规与临床规划；可作受控领域 Agent 验收样本。</td>
+</tr>
+<tr>
+<td>安全研究</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/discovering-vulnerabilities-with-claude">Discovering and exploiting vulnerabilities in critical, real-world software with Claude</a></td>
+<td>2026-10-27</td>
+<td>官方研究</td>
+<td>未发布模型发现多条关键攻击链（含 RCE），经 CVD 披露；对照 <a target="_blank" rel="noopener" href="https://red.anthropic.com/2026/cvd/">CVD dashboard</a>。</td>
+</tr>
+<tr>
+<td>编码 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code changelog 2.1.312</a></td>
+<td>2026-10-27</td>
+<td>官方 changelog</td>
+<td><code>oidc.user_id_claim</code>；skills 在仓库内 <code>cd</code> 后发现修复；云会话 Bash 编辑器；大量 MCP&#x2F;Remote Control&#x2F;Slack&#x2F;Code Review 修复。</td>
+</tr>
+<tr>
+<td>编码 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.165.0">Codex CLI 0.165.0</a></td>
+<td>2026-10-27</td>
+<td>开源发布</td>
+<td>内置 <code>model_provider = &quot;gcp&quot;</code>；Terra 进模型目录；memory v2 默认；会话按仓库筛选；marketplace URL 校验加固。</td>
+</tr>
+<tr>
+<td>可观测性</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.71.0">Langfuse v4.71.0</a></td>
+<td>2026-10-27</td>
+<td>开源发布</td>
+<td>观测栈小版本；建议对照 release notes 与 v3.225.15 回移植是否需要同步。</td>
+</tr>
+<tr>
+<td>Oracle 产品侧</td>
+<td><a target="_blank" rel="noopener" href="https://www.oracle.com/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/">Oracle reinventing enterprise computing with OpenAI</a></td>
+<td>2026-10-27</td>
+<td>官方公告</td>
+<td>与 OpenAI 同日叙事对齐：企业侧 Workspace &#x2F; Composer &#x2F; Security Mesh 产品化口径。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>企业 Agent 入口</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/oracle-apps-in-chatgpt">Oracle apps in ChatGPT</a></td>
+<td>权限内工作流、Marketplace 采购、App Composer + Codex</td>
+<td>企业架构 &#x2F; 采购</td>
+</tr>
+<tr>
+<td>世界模型预览</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4 公告</a></td>
+<td>实时舵控、原生音频、Gemini 环路规划、SynthID</td>
+<td>仿真 &#x2F; 机器人 &#x2F; 创意预览</td>
+</tr>
+<tr>
+<td>编码工具升级</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code 2.1.312</a></td>
+<td>OIDC claim、skills 路径发现、云环境 setup 脚本编辑器</td>
+<td>Claude Code 重度用户</td>
+</tr>
+<tr>
+<td>多云 Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.165.0">Codex 0.165.0</a></td>
+<td>Vertex provider、Terra、memory v2、会话导航</td>
+<td>多云编码 Agent 平台</td>
+</tr>
+<tr>
+<td>受控领域 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/early-progress-drug-development">Drug development early progress</a></td>
+<td>文档审查、靶点评估流程、人工门禁</td>
+<td>生命科学信息化 &#x2F; 合规</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>进展</th>
+<th>工程启示</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Langfuse</td>
+<td>v4.71.0（10-27）</td>
+<td>观测小版本；生产集群按 changelog 灰度，注意 v3 回移植分支</td>
+</tr>
+<tr>
+<td>LangGraph &#x2F; LangChain</td>
+<td>无本日新版（1.2.18 属 10-26）</td>
+<td>昨日 error_handler &#x2F; DeltaChannel 补丁仍适用；本日无需再升</td>
+</tr>
+<tr>
+<td>Spring AI &#x2F; Spring Alibaba AI</td>
+<td>无本日正式 release</td>
+<td>继续跟踪 2.1.0-RC1 &#x2F; 2.0.2（~10-23）与 Alibaba 侧发行说明</td>
+</tr>
+<tr>
+<td>Code Graph &#x2F; Loop Engineering</td>
+<td>无本日可核验正式发布</td>
+<td>空窗；Loop 相关可回溯美团 10-22 AutoResearch</td>
+</tr>
+<tr>
+<td>Claude Code skills</td>
+<td>修复 <code>cd</code> 后 per-directory &#x2F; <code>paths:</code> skills 丢失</td>
+<td>多工作树&#x2F;深目录会话务必升到 ≥2.1.312</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>Vertex + Terra + memory v2</td>
+<td>GCP 客户可去掉自建 provider；新 profile 默认 memory v2</td>
+</tr>
+<tr>
+<td>OpenClaw &#x2F; Hermes</td>
+<td>无本日可核验正式版</td>
+<td>仅记相邻日社区信号，不升格为当日正式发布</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/oracle-apps-in-chatgpt">Oracle apps in ChatGPT</a></td>
+<td>企业「在 ChatGPT 内跑 Oracle 工作流」的官方产品边界与采购路径</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4</a></td>
+<td>实时世界模型能力边界、限制与安全&#x2F;SynthID 口径</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code 2.1.312</a></td>
+<td>skills 发现与企业 OIDC 身份映射的直接修复清单</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.165.0">Codex 0.165.0</a></td>
+<td>Vertex &#x2F; Terra &#x2F; memory v2 一次到位</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/discovering-vulnerabilities-with-claude">Discovering vulnerabilities with Claude</a></td>
+<td>模型辅助漏洞发现 + CVD 流程的对照样本</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/early-progress-drug-development">Drug development early progress</a></td>
+<td>高合规领域如何把 Claude 嵌进文档与规划链路</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><table>
+<thead>
+<tr>
+<th>来源</th>
+<th>链接</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>OpenAI</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/oracle-apps-in-chatgpt">https://openai.com/index/oracle-apps-in-chatgpt</a></td>
+<td>官方，2026-10-27</td>
+</tr>
+<tr>
+<td>DeepMind</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/</a></td>
+<td>官方，2026-10-27</td>
+</tr>
+<tr>
+<td>Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/early-progress-drug-development">https://www.anthropic.com/research/early-progress-drug-development</a></td>
+<td>官方研究，2026-10-27</td>
+</tr>
+<tr>
+<td>Anthropic</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/research/discovering-vulnerabilities-with-claude">https://www.anthropic.com/research/discovering-vulnerabilities-with-claude</a></td>
+<td>官方研究，2026-10-27</td>
+</tr>
+<tr>
+<td>Claude Code Docs</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">https://code.claude.com/docs/en/changelog</a></td>
+<td>2.1.312，2026-10-27</td>
+</tr>
+<tr>
+<td>Codex Releases</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.165.0">https://github.com/openai/codex/releases/tag/rust-v0.165.0</a></td>
+<td>0.165.0，2026-10-27</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases/tag/v4.71.0">https://github.com/langfuse/langfuse/releases/tag/v4.71.0</a></td>
+<td>v4.71.0，2026-10-27</td>
+</tr>
+<tr>
+<td>Oracle News</td>
+<td><a target="_blank" rel="noopener" href="https://www.oracle.com/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/">https://www.oracle.com/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/</a></td>
+<td>同日企业侧公告</td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
