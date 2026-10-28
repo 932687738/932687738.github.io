@@ -2,6 +2,60 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-10-27
+
+### 今日总览
+
+**一句话结论**：周二固定来源可核验主线集中在阿里云开发者社区——DeepSeek Harness 开源底座一站式部署教程，与清华/智谱 HarnessPro（RSI + Pareto）成本-成功率权衡长文同日落库；五个专项主题及美团/字节/腾讯云官方长文等未检出属本日的新落地文。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里技术/阿里云开发者/中间件/语雀、腾讯云+社区/AlloyTeam、字节技术博客、美团技术团队、掘金、百度 FEX/EFE/开发者、京东/凹凸、滴滴、网易、360、有赞 |
+| 核心趋势 | 1）「Agent = Model + Harness」本地执行底座进入可跟练部署文；2）Harness 自我优化从「只抬成功率」转向 Pareto 保留成本-性能前沿；3）促销/双十一汇总文大量出现，本摘要刻意排除 |
+| 可直接关注 | DeepSeek Harness 的 Cordis 插件化与工作区隔离；HarnessPro 轨迹诊断→编辑→生成测试→Pareto 筛选闭环 |
+| 专项检索结论 | Langfuse / LangChain·LangGraph / Code Graph / Spring Alibaba AI / Loop Engineering：固定来源内均未发现可确认属 2026-10-27 的新落地长文（掘金侧多为跨日教程/转载，不升格为固定来源本日更新） |
+| 未发现更新 | 阿里技术门户/中间件/语雀干货、腾讯云官方技术长文（排除促销）、字节跳动技术博客、美团（本日无新文；最近可见 10-22 LOOP AutoResearch）、百度 FEX/EFE、京东/凹凸、滴滴、网易、360、有赞、AlloyTeam 等未检出可确认属本日的官方新长文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Agent Harness 部署 | [从零搭建你的 AI Agent！DeepSeek Harness 开源底座部署与配置一站式教程](https://developer.aliyun.com/article/1775434) | 2026-10-27 | 阿里云开发者社区 | Cordis 微内核 + 插件化；Profile/工作区隔离；npx/npm/源码/Python SDK 四条路径；对接百炼 OpenAI 兼容接口。 |
+| Harness 自我优化 | [从 GLM 到 GPT，HarnessPro 如何用 RSI 降低 Agent 成本](https://developer.aliyun.com/article/1775594) | 2026-10-27 | 阿里云开发者社区 | 清华/智谱 HarnessPro：轨迹诊断→Evolution Planner→Harness Editor→Test Synthesizer→Pareto Lite/Medium/Heavy；对照 RHO 成本上升问题。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 本地 Agent 底座 | [DeepSeek Harness 教程](https://developer.aliyun.com/article/1775434) | Cordis、插件热插拔、工作区沙箱、`dsh doctor` | 想本地跑 Coding Agent 的开发者 |
+| Harness 递归优化 | [HarnessPro 解读](https://developer.aliyun.com/article/1775594) | DPP 选任务、生成测试替代纯 LLM 判分、Pareto 前沿 | Agent 平台 / 评测工程 |
+
+### 工程实践归纳
+
+**总体判断**：本日固定来源「同日可核验」信号集中在阿里云开发者社区的 Harness 工程双文——一条是可跟练的开源底座，一条是论文级自我优化方法；促销类双十一汇总未收录。五个专项主题明确空窗。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Agent = Model + Harness | DeepSeek Harness 给出可部署微内核与插件边界 | 先锁工作区与 Profile，再谈模型矩阵与云端算力 |
+| Harness 成本-成功率权衡 | HarnessPro 用 Pareto 保留多预算配置 | 不要只追成功率；固定生成测试比纯 LLM 判分更稳 |
+| Langfuse / LangChain·LangGraph / Code Graph / Spring Alibaba AI / Loop Engineering | 固定来源内本日无新核验长文 | 明确空窗；Loop 仍可回溯美团 10-22 AutoResearch |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [DeepSeek Harness 一站式教程](https://developer.aliyun.com/article/1775434) | 把「能跑起来的本地 Agent 底座」步骤写全，可直接跟练 |
+| 必读 | [HarnessPro RSI 解读](https://developer.aliyun.com/article/1775594) | 把轨迹诊断、生成测试与 Pareto 筛选串成可对照实验设计的工程叙事 |
+| 延伸 | [美团 LOOP AutoResearch（10-22，相邻日）](https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html) | Loop Engineering 专项空窗时的最近固定来源对照 |
+
+### 来源清单
+
+| 来源 | 链接 | 备注 |
+| --- | --- | --- |
+| 阿里云开发者社区 | https://developer.aliyun.com/article/1775434 | 2026-10-27，DeepSeek Harness |
+| 阿里云开发者社区 | https://developer.aliyun.com/article/1775594 | 2026-10-27，HarnessPro |
+| 美团技术团队（相邻日延伸） | https://tech.meituan.com/2026/10/22/LOOP-AutoResearch.html | 非本日；专项空窗对照 |
+
 ## 2026-10-26
 
 ### 今日总览

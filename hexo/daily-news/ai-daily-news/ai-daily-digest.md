@@ -2,6 +2,78 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-10-27
+
+### 今日总览
+
+**一句话结论**：周二主线是「企业工作流进 ChatGPT + 世界模型入实时交互」——OpenAI 与 Oracle 把应用/数据接进 ChatGPT（AI Workspace / Security Mesh / App Composer），DeepMind 发布 Genie 4；Anthropic 同日放出药物研发早期进展与真实软件漏洞发现研究；工程侧 Claude Code 2.1.312、Codex CLI 0.165.0、Langfuse 4.71.0 落地，专项里 Spring AI / Spring Alibaba AI / LangGraph / Code Graph / Loop / OpenClaw / Hermes 无本日可核验新正式版。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI、Anthropic、AWS、GitHub Copilot、DeepMind/Google、Claude Code、Codex、Hermes、OpenClaw、Spring AI / Spring Alibaba AI、Langfuse、LangChain/LangGraph、Code Graph、Loop Engineering、Agent Skills、企业落地、政策与论文 |
+| 核心趋势 | 企业 Agent 入口从「对话」走向「在权限内跑业务工作流」；世界模型进入实时可舵控的多模态仿真；编码 Agent 与可观测性继续以小版本消化身份/云厂商/稳定性 |
+| 可直接关注 | 评估 Oracle AI Workspace 与 Marketplace 采购路径；Genie 4 研究预览等待名单；升级 Claude Code ≥2.1.312、Codex ≥0.165.0、Langfuse ≥4.71.0；阅读 Anthropic 药物研发与 CVD 漏洞研究口径 |
+| 专项检索结论 | Claude Code：官方 changelog 记 2.1.312（10-27），含 OIDC user_id_claim、skills 发现修复、云会话/Remote Control/Slack/Code Review 等。Codex：rust-v0.165.0（10-27），内置 GCP Vertex、`gpt-6.1-terra` 进目录、memory v2 默认、会话筛选器。OpenClaw：无本日新正式版（最近可见 2026.10.7/10.8 属相邻日社区信号）。Hermes：无本日可核验新正式版（webapp/ElevenLabs 等属相邻日）。Spring AI：无本日正式 release（最近可见 10-23 的 2.1.0-RC1 / 2.0.2）。Spring Alibaba AI：无本日可核验正式 release。Langfuse：v4.71.0（及 v3.225.15 回移植，10-27）。LangChain/LangGraph：无本日新版（LangGraph 1.2.18 属 10-26）。Code Graph：无本日可核验全球正式发布。Loop Engineering：无本日可核验正式 scaffold/PR。skills：Claude Code 修复 per-directory / `paths:` skills 在 Bash `cd` 后找不到的问题；捐赠 AAIF 属更早相邻日。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 企业集成 | [OpenAI expands partnership with Oracle to bring its apps to ChatGPT](https://openai.com/index/oracle-apps-in-chatgpt) | 2026-10-27 | 官方发布 | Oracle AI Workspace 把应用/数据接到 ChatGPT；Security Mesh / App Composer / SMB Bundle；美区 Marketplace 可用 Universal Credits 采购 API/Codex/ChatGPT Work。 |
+| 世界模型 | [Genie 4: A new generation of world simulation](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) | 2026-10-27 | 官方发布 | 原生多模态实时世界模型（物理/人物/环境声/对话）；自然语言实时舵控；可信测试者预览，随后面向 AI Ultra / Gemini API 早期伙伴。 |
+| 药物研发 | [Early progress on accelerating drug development with Claude](https://www.anthropic.com/research/early-progress-drug-development) | 2026-10-27 | 官方研究 | 六家机构早期合作：靶点评估、lead 优化、生产文档、法规与临床规划；可作受控领域 Agent 验收样本。 |
+| 安全研究 | [Discovering and exploiting vulnerabilities in critical, real-world software with Claude](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude) | 2026-10-27 | 官方研究 | 未发布模型发现多条关键攻击链（含 RCE），经 CVD 披露；对照 [CVD dashboard](https://red.anthropic.com/2026/cvd/)。 |
+| 编码 Agent | [Claude Code changelog 2.1.312](https://code.claude.com/docs/en/changelog) | 2026-10-27 | 官方 changelog | `oidc.user_id_claim`；skills 在仓库内 `cd` 后发现修复；云会话 Bash 编辑器；大量 MCP/Remote Control/Slack/Code Review 修复。 |
+| 编码 Agent | [Codex CLI 0.165.0](https://github.com/openai/codex/releases/tag/rust-v0.165.0) | 2026-10-27 | 开源发布 | 内置 `model_provider = "gcp"`；Terra 进模型目录；memory v2 默认；会话按仓库筛选；marketplace URL 校验加固。 |
+| 可观测性 | [Langfuse v4.71.0](https://github.com/langfuse/langfuse/releases/tag/v4.71.0) | 2026-10-27 | 开源发布 | 观测栈小版本；建议对照 release notes 与 v3.225.15 回移植是否需要同步。 |
+| Oracle 产品侧 | [Oracle reinventing enterprise computing with OpenAI](https://www.oracle.com/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/) | 2026-10-27 | 官方公告 | 与 OpenAI 同日叙事对齐：企业侧 Workspace / Composer / Security Mesh 产品化口径。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 企业 Agent 入口 | [Oracle apps in ChatGPT](https://openai.com/index/oracle-apps-in-chatgpt) | 权限内工作流、Marketplace 采购、App Composer + Codex | 企业架构 / 采购 |
+| 世界模型预览 | [Genie 4 公告](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) | 实时舵控、原生音频、Gemini 环路规划、SynthID | 仿真 / 机器人 / 创意预览 |
+| 编码工具升级 | [Claude Code 2.1.312](https://code.claude.com/docs/en/changelog) | OIDC claim、skills 路径发现、云环境 setup 脚本编辑器 | Claude Code 重度用户 |
+| 多云 Codex | [Codex 0.165.0](https://github.com/openai/codex/releases/tag/rust-v0.165.0) | Vertex provider、Terra、memory v2、会话导航 | 多云编码 Agent 平台 |
+| 受控领域 Agent | [Drug development early progress](https://www.anthropic.com/research/early-progress-drug-development) | 文档审查、靶点评估流程、人工门禁 | 生命科学信息化 / 合规 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+| 项目 | 进展 | 工程启示 |
+| --- | --- | --- |
+| Langfuse | v4.71.0（10-27） | 观测小版本；生产集群按 changelog 灰度，注意 v3 回移植分支 |
+| LangGraph / LangChain | 无本日新版（1.2.18 属 10-26） | 昨日 error_handler / DeltaChannel 补丁仍适用；本日无需再升 |
+| Spring AI / Spring Alibaba AI | 无本日正式 release | 继续跟踪 2.1.0-RC1 / 2.0.2（~10-23）与 Alibaba 侧发行说明 |
+| Code Graph / Loop Engineering | 无本日可核验正式发布 | 空窗；Loop 相关可回溯美团 10-22 AutoResearch |
+| Claude Code skills | 修复 `cd` 后 per-directory / `paths:` skills 丢失 | 多工作树/深目录会话务必升到 ≥2.1.312 |
+| Codex | Vertex + Terra + memory v2 | GCP 客户可去掉自建 provider；新 profile 默认 memory v2 |
+| OpenClaw / Hermes | 无本日可核验正式版 | 仅记相邻日社区信号，不升格为当日正式发布 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Oracle apps in ChatGPT](https://openai.com/index/oracle-apps-in-chatgpt) | 企业「在 ChatGPT 内跑 Oracle 工作流」的官方产品边界与采购路径 |
+| 必读 | [Genie 4](https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/) | 实时世界模型能力边界、限制与安全/SynthID 口径 |
+| 必读 | [Claude Code 2.1.312](https://code.claude.com/docs/en/changelog) | skills 发现与企业 OIDC 身份映射的直接修复清单 |
+| 推荐 | [Codex 0.165.0](https://github.com/openai/codex/releases/tag/rust-v0.165.0) | Vertex / Terra / memory v2 一次到位 |
+| 推荐 | [Discovering vulnerabilities with Claude](https://www.anthropic.com/research/discovering-vulnerabilities-with-claude) | 模型辅助漏洞发现 + CVD 流程的对照样本 |
+| 延伸 | [Drug development early progress](https://www.anthropic.com/research/early-progress-drug-development) | 高合规领域如何把 Claude 嵌进文档与规划链路 |
+
+### 来源清单
+
+| 来源 | 链接 | 备注 |
+| --- | --- | --- |
+| OpenAI | https://openai.com/index/oracle-apps-in-chatgpt | 官方，2026-10-27 |
+| DeepMind | https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/ | 官方，2026-10-27 |
+| Anthropic | https://www.anthropic.com/research/early-progress-drug-development | 官方研究，2026-10-27 |
+| Anthropic | https://www.anthropic.com/research/discovering-vulnerabilities-with-claude | 官方研究，2026-10-27 |
+| Claude Code Docs | https://code.claude.com/docs/en/changelog | 2.1.312，2026-10-27 |
+| Codex Releases | https://github.com/openai/codex/releases/tag/rust-v0.165.0 | 0.165.0，2026-10-27 |
+| Langfuse | https://github.com/langfuse/langfuse/releases/tag/v4.71.0 | v4.71.0，2026-10-27 |
+| Oracle News | https://www.oracle.com/news/announcement/ai-world-oracle-reinvents-enterprise-computing-for-the-ai-era-with-openai-2026-10-27/ | 同日企业侧公告 |
+
 ## 2026-10-26
 
 ### 今日总览
