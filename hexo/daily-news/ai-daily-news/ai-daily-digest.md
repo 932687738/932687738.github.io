@@ -2,6 +2,69 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-10-28
+
+### 今日总览
+
+**一句话结论**：周三主线是「安全/长程 Agent 能力进前沿模型 + 企业工作流深嵌」——Google 发布 Gemini 4 Carbon（网络安全与长程工程优先、受控放量）；OpenAI 扩展 ServiceNow 伙伴关系并把 Codex/ChatGPT Work 铺进企业员工与产品面；Anthropic 扩大 AI for Science 机构合作；工具链侧 Codex 仅有 0.166.0-alpha 预发布、Claude Code / Spring AI / Langfuse / LangGraph / Code Graph / Loop / OpenClaw / Hermes 无本日可核验正式版。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI、Anthropic、Google/DeepMind、Claude Code、Codex、OpenClaw、Hermes、Spring AI / Spring Alibaba AI、Langfuse、LangChain/LangGraph、Code Graph、Loop Engineering、Agent Skills、企业落地、论文与政策 |
+| 核心趋势 | 1）前沿模型把网络安全攻防评测与长程工程工作流绑在一起，并走政府预发布测试/受控放量；2）企业 Agent 继续从「对话」走向「在权限内驱动 IT/安全/开发工作流」（ServiceNow MCP 已上架）；3）科学领域 Claude 信用额度从个人扩展到基金与机构 |
+| 可直接关注 | 评估 Fairwind / cyber defender 试用路径与 Carbon 价位；验证 ServiceNow MCP plugin；阅读 AI for Science 机构合作清单；关注 Codex 0.166 alpha 变更是否进入稳定版 |
+| 专项检索结论 | Claude Code：无本日新正式版（最近可见 2.1.312，10-27）。Codex：本日仅 rust-v0.166.0-alpha.5 / alpha.5.1 预发布，稳定版仍为 0.165.0（10-27）。OpenClaw：无本日新正式版。Hermes：无本日可核验新正式版。Spring AI：无本日正式 release（最近可见 10-23 的 2.1.0-RC1 / 2.0.2）。Spring Alibaba AI：无本日可核验正式 release。Langfuse：无本日新 changelog（最近可见 v4.71.0，10-27）。LangChain/LangGraph：无本日新版（LangGraph 1.2.18 属 10-26）。Code Graph：无本日可核验全球正式发布（colbymchenry/codegraph 最近可见 v1.6.2 属更早）。Loop Engineering：无本日可核验正式 scaffold/PR。skills：无本日可核验正式 marketplace 更新。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 前沿模型 | [Introducing Gemini 4 Carbon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/) | 2026-10-28 | 官方发布 | AAII v5.0 #1（59）；SEC-bench Pro 88.2% / ExploitGym 54.8% / CWE-bench 71.0%；长程工程可跑多日；先向 cyber defenders / Fairwind 伙伴放量，参与美政府自愿预发布测试；入门价同 Argon $2/$10 per M tokens。 |
+| 企业工作流 | [OpenAI and ServiceNow expand partnership across enterprise workflows](https://openai.com/index/openai-servicenow-partnership-expansion/) | 2026-10-28 | 官方发布 | ChatGPT 内嵌 ServiceNow 业务上下文与 Action Fabric；计划 Codex→AI Workflow Factory、联合安全方案、Control Tower 语音；全员 ChatGPT Work/Codex；ServiceNow MCP plugin 已上架 Marketplace。 |
+| 科学合作 | [AI for Science expands to foundations and research institutions](https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions) | 2026-10-28 | 官方公告 | 20 家基金/机构获免费 Claude credits；含 HHMI Janelia MHS（Agent 操作实验仪器规范预览）、Allen Institute 多 Agent 数据分析等。 |
+| 行业案例 | [Legora is building the agentic operating system for legal work](https://openai.com/index/legora-agentic-operating-system-for-legal-work/) | 2026-10-28 | 官方案例 | 法律 Agentic OS：NDA 耗时降至 <1%；客户合同周转 -90%、周均回收 9.5h；内部广泛用 Codex/ChatGPT Work 加速原型与排障。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 模型安全放量 | [Gemini 4 Carbon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/) | 网络安全评测、长程 agentic、IPI 0.0%、Fairwind | 安全工程 / Agent 平台 |
+| 企业 MCP 集成 | [ServiceNow × OpenAI](https://openai.com/index/openai-servicenow-partnership-expansion/) | MCP plugin、Action Fabric 权限、Codex 进 Workflow Factory | ITSM / 平台工程 |
+| 科学 Agent 规范 | [AI for Science 扩展](https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions) | MHS 仪器操作标准、机构级 credits | 科研信息化 / 实验室自动化 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日工程信号主要来自「模型能力×企业工作流入口」与「科学领域 Agent 操作规范」，框架发行版本身安静。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 企业 Agent 入口 | ServiceNow MCP + ChatGPT 内嵌动作 | 优先把权限与业务规则留在既有工作流引擎，Agent 只做编排与解释 |
+| 长程/安全 Agent | Carbon 强调多日工程任务与网络安全评测 | 评测集从通用 coding 扩到漏洞发现/利用/补丁闭环；放量策略值得借鉴 |
+| 科学仪器 Agent | Janelia MHS 研究预览 | Agent 操作物理设备需要共享安全规范，不能只靠 prompt |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Gemini 4 Carbon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/) | 网络安全与长程能力的官方口径与放量策略 |
+| 必读 | [ServiceNow 伙伴关系扩展](https://openai.com/index/openai-servicenow-partnership-expansion/) | 企业工作流 + MCP + Codex 落地时间表 |
+| 推荐 | [AI for Science 扩展](https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions) | 机构级 Claude 合作与 MHS 仪器标准 |
+| 延伸 | [Legora 案例](https://openai.com/index/legora-agentic-operating-system-for-legal-work/) | 垂直行业 Agentic OS 与可量化 ROI |
+
+### 来源清单
+
+- 检索范围：2026-10-28 00:00:00 到 2026-10-28 23:59:59（Asia/Shanghai）
+- 引用域名：blog.google, openai.com, anthropic.com, github.com, deepmind.google, langfuse.com, spring.io
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Introducing Gemini 4 Carbon | 2026-10-28 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/ |
+| 官方发布 | OpenAI and ServiceNow expand partnership | 2026-10-28 | https://openai.com/index/openai-servicenow-partnership-expansion/ |
+| 官方公告 | AI for Science expands to foundations and research institutions | 2026-10-28 | https://www.anthropic.com/news/ai-for-science-expands-foundations-research-institutions |
+| 官方案例 | Legora agentic OS for legal work | 2026-10-28 | https://openai.com/index/legora-agentic-operating-system-for-legal-work/ |
+| 开源预发布 | Codex rust-v0.166.0-alpha.5 | 2026-10-28 | https://github.com/openai/codex/releases/tag/rust-v0.166.0-alpha.5 |
+
 ## 2026-10-27
 
 ### 今日总览
@@ -426,4 +489,3 @@
 | 官方博客 | What FDE means at OpenAI | 2026-10-22 | https://openai.com/index/forward-deployed-engineering-means/ |
 | 官方研究 | Mapping the world’s forest types | 2026-10-22 | https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/ |
 | 官方公告 | Life sciences guest investigators | 2026-10-22 | https://www.anthropic.com/news/open-call-guest-investigators-life-sciences |
-

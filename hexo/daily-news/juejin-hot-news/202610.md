@@ -2,6 +2,112 @@
 
 按 Asia/Shanghai 时区汇总掘金文章热榜与收藏热榜（后端 / 前端 / 人工智能 / 开发工具），按文章链接去重并归纳正文。
 
+## 2026-10-29
+
+### 今日总览
+
+**一句话结论**：四标签×双榜扫描后，新文集中在「Java/Python 后端基建、前端事故与 AI 三维大屏、DeepSeek/Kimi 模型实测、Agent 架构漂移与专用浏览器」；榜上多数条目仍是历史已见 URL。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 文章热榜 + 收藏热榜 × 后端/前端/人工智能/开发工具 |
+| 榜单规模 | 每槽最多 15 条；列表槽位约 120；去重后新 URL 17；跳过已见 103；详情失败 0 |
+| 核心趋势 | 1）后端继续挖 OCR/知识库/免费模型接入；2）前端强调副作用事故与 AI 三维实战边界；3）AI/工具侧讨论模型预告、交叉 review、架构漂移与 Agent 浏览器 |
+| 可直接关注 | [console.log 事故](https://juejin.cn/post/7701290557268951066)、[Clover/三维大屏 Codex 实战](https://juejin.cn/post/7700887980140429322)、[架构漂移](https://juejin.cn/post/7700846756351180810)、[ego-lite](https://juejin.cn/post/7701258021997625353)、[企业知识库 FastAPI](https://juejin.cn/post/7700790717106847754) |
+
+### 后端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 1 | [Python 面向对象编程：类、继承、多态与组合](https://juejin.cn/post/7701269657706315811) | vipxieliang | 赞1/藏5/阅11475 | 系统梳理 Python 类/实例、属性方法、继承多态与组合；面向后端入门把 OOP 基础一次讲清，适合当速查笔记。 | https://juejin.cn/post/7701269657706315811 |
+| 10 | [又找到一个纯Java的OCR项目，识别的格式还挺多](https://juejin.cn/post/7700962023287128115) | SimonKing | 赞5/藏12/阅398 | 介绍一款纯 Java、零 Python 依赖、可离线无 GPU 的 OCR 方案，强调多格式识别与 Java 后端集成便利，可对照 RapidOCR 选型。 | https://juejin.cn/post/7700962023287128115 |
+| 12 | [企业智能知识库 Python 后端实战：FastAPI + RAG + KAG 企业级 AI 项目](https://juejin.cn/post/7700790717106847754) | 苏三说技术 | 赞3/藏10/阅389 | 以 FastAPI 模块化路由搭建企业知识库后端，串联文档管理、分布式存储、全文检索与 RAG/KAG，适合做企业 AI 知识平台脚手架。 | https://juejin.cn/post/7700790717106847754 |
+| 13 | [OpenCode免费模型直接给`Workbuddy`用，一键导入](https://juejin.cn/post/7699427841725988915) | SimonKing | 赞0/藏3/阅414 | 把 OpenCode 近期扩到约 10 个免费模型一键导入 Workbuddy，解决 Agent 客户端不好用、免费模型不够的痛点。 | https://juejin.cn/post/7699427841725988915 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 前端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 5 | [删了一个没用的 console.log，生产环境直接崩了!](https://juejin.cn/post/7701290557268951066) | ErpanOmer | 赞12/藏9/阅670 | 生产事故：删 console.log 触发惰性 getter，商品价格变 undefined；剖析属性访问副作用，给出显式初始化、构建剥离与 ESLint 约束。 | https://juejin.cn/post/7701290557268951066 |
+| 11 | [栗子前端技术周刊第 151 期 - ViteConf 2026、React Router 8.5、React Native 0.88...](https://juejin.cn/post/7700215375997075497) | 晓得迷路了 | 赞5/藏4/阅559 | 栗子前端周刊第 151 期汇总 ViteConf 2026、React Router 8.5、RN 0.88 等一周资讯，适合扫读选型变化。 | https://juejin.cn/post/7700215375997075497 |
+| 13 | [Three.js 医院三维大屏实战：Codex + Blender MCP + React 从建模到交互全流程](https://juejin.cn/post/7700887980140429322) | 夏天要喝冰可乐 | 赞8/藏12/阅486 | 用 Codex + Blender MCP + React/Three.js 做医院三维大屏（约 800 行、18 万面），讨论哪些前端活可全交 AI、哪些必须人手控。 | https://juejin.cn/post/7700887980140429322 |
+| 14 | [微信小程序做 PDA 扫码出入库：库存并发控制与 4 个坑](https://juejin.cn/post/7699411361327415339) | baiyunfan | 赞9/藏13/阅428 | 小微仓用微信小程序替代工业 PDA 做扫码出入库，重点讲库存并发控制与四个实战坑。 | https://juejin.cn/post/7699411361327415339 |
+| 15 | [用AI做了一款微信小游戏，却发现上传不了](https://juejin.cn/post/7699321083548696616) | 亿元程序员 | 赞8/藏8/阅407 | AI 做微信小游戏却因包体超限无法上传，分享包体优化与分包处理经验。 | https://juejin.cn/post/7699321083548696616 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 人工智能
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 4 | [Deepseek v5 来了](https://juejin.cn/post/7701541249069383706) | 码事漫谈 | 赞12/藏3/阅1688 | 社区观察到 DeepSeek Harness 代码里出现 deepseek-v5 标识，辨析其为内部模型名而非官方正式发布，提示勿当官宣。 | https://juejin.cn/post/7701541249069383706 |
+| 13 | [我让 4 个 AI 互相 review 代码，最温柔的那个下手最狠](https://juejin.cn/post/7700798335889031183) | kyriewen | 赞3/藏4/阅492 | 用埋了 5 雷的 50 行 Hook 让 4 个互不通气的 AI 交叉 review，20 次挖雷全中，反驳「AI 互审会放水」。 | https://juejin.cn/post/7700798335889031183 |
+| 14 | [PR 没被合并，我把 Tauri 版自己做出来了：安装包从 100MB 砍到 33MB](https://juejin.cn/post/7700152107848351753) | 雨夜寻晴天 | 赞8/藏2/阅370 | 独立做出掘金 AI 用量统计的 Tauri 版，macOS 包从约 100MB 砍到 33MB，功能对齐 Electron 版。 | https://juejin.cn/post/7700152107848351753 |
+| 15 | [Kimi K3.1 Pro 编程实测：3个月27万行代码，每年1.7万预算下如何9分钟修好顽固Bug](https://juejin.cn/post/7700627964493447210) | 孟健AI编程 | 赞2/藏1/阅406 | Kimi K3.1 Pro 编程实测：SWE Marathon 约 51.7% 与 Token 成本账单，演示约 9 分钟零人工修顽固 Bug。 | https://juejin.cn/post/7700627964493447210 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 开发工具
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 7 | [AI 改完代码，人却不知道它改了什么：架构漂移才是真正的成本](https://juejin.cn/post/7700846756351180810) | 张一凡93 | 赞4/藏2/阅229 | Agent 小改动牵出十多文件 diff，测试通过但架构意图难读；指出架构漂移才是真正成本，呼吁结构化变更说明。 | https://juejin.cn/post/7700846756351180810 |
+| 9 | [太实用了！推荐一款 AI Agent 的浏览器 ego-lite，跑Web 自动化太爽了！](https://juejin.cn/post/7701258021997625353) | 狂师 | 赞4/藏2/阅266 | 推荐面向 Claude Code/Codex/Cursor 的人机协同浏览器 ego-lite，降低 Web 自动化与 Agent 操作网页的摩擦。 | https://juejin.cn/post/7701258021997625353 |
+| 10 | [GitHub 日榜趋势速报 | 2026-10-27](https://juejin.cn/post/7700857041943904282) | miofly | 赞2/藏1/阅279 | GitHub 日榜速报（2026-10-27）：VoiceStudio、hallmark、impeccable 等 24h Star 增速项目速览。 | https://juejin.cn/post/7700857041943904282 |
+| 11 | [GitHub 周榜趋势速报 | 2026-10-25](https://juejin.cn/post/7700055962984366089) | miofly | 赞0/藏0/阅257 | GitHub 周榜速报（2026-10-25）：rea、cleanyourtv、DeepInfer 等近 7 天增速项目速览。 | https://juejin.cn/post/7700055962984366089 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 跨榜重复与去重说明
+
+- 本轮新摘要 URL 数：17
+- 因 `seen_urls` 跳过：103（只给数量；不要把已见文再展开成表行）
+- 同文多标签/双榜出现：无（本轮每条仅一个主出现位置写入表格）
+
+### 来源清单
+
+- 快照日：2026-10-29（Asia/Shanghai）
+- 页面：https://juejin.cn/hot/articles 、 https://juejin.cn/hot/collected-articles
+- 抓取：`tools/juejin_hot_fetch.py` → `_staging_latest.json`
+
+| 标签 | 榜单 | 标题 | 链接 |
+| --- | --- | --- | --- |
+| 后端 | 文章热榜 | Python 面向对象编程：类、继承、多态与组合 | https://juejin.cn/post/7701269657706315811 |
+| 后端 | 文章热榜 | 又找到一个纯Java的OCR项目，识别的格式还挺多 | https://juejin.cn/post/7700962023287128115 |
+| 后端 | 文章热榜 | 企业智能知识库 Python 后端实战：FastAPI + RAG + KAG 企业级 AI 项目 | https://juejin.cn/post/7700790717106847754 |
+| 后端 | 文章热榜 | OpenCode免费模型直接给`Workbuddy`用，一键导入 | https://juejin.cn/post/7699427841725988915 |
+| 前端 | 文章热榜 | 删了一个没用的 console.log，生产环境直接崩了! | https://juejin.cn/post/7701290557268951066 |
+| 前端 | 文章热榜 | 栗子前端技术周刊第 151 期 - ViteConf 2026、React Router 8.5、React Native 0.88... | https://juejin.cn/post/7700215375997075497 |
+| 前端 | 文章热榜 | Three.js 医院三维大屏实战：Codex + Blender MCP + React 从建模到交互全流程 | https://juejin.cn/post/7700887980140429322 |
+| 前端 | 文章热榜 | 微信小程序做 PDA 扫码出入库：库存并发控制与 4 个坑 | https://juejin.cn/post/7699411361327415339 |
+| 前端 | 文章热榜 | 用AI做了一款微信小游戏，却发现上传不了 | https://juejin.cn/post/7699321083548696616 |
+| 人工智能 | 文章热榜 | Deepseek v5 来了 | https://juejin.cn/post/7701541249069383706 |
+| 人工智能 | 文章热榜 | 我让 4 个 AI 互相 review 代码，最温柔的那个下手最狠 | https://juejin.cn/post/7700798335889031183 |
+| 人工智能 | 文章热榜 | PR 没被合并，我把 Tauri 版自己做出来了：安装包从 100MB 砍到 33MB | https://juejin.cn/post/7700152107848351753 |
+| 人工智能 | 文章热榜 | Kimi K3.1 Pro 编程实测：3个月27万行代码，每年1.7万预算下如何9分钟修好顽固Bug | https://juejin.cn/post/7700627964493447210 |
+| 开发工具 | 文章热榜 | AI 改完代码，人却不知道它改了什么：架构漂移才是真正的成本 | https://juejin.cn/post/7700846756351180810 |
+| 开发工具 | 文章热榜 | 太实用了！推荐一款 AI Agent 的浏览器 ego-lite，跑Web 自动化太爽了！ | https://juejin.cn/post/7701258021997625353 |
+| 开发工具 | 文章热榜 | GitHub 日榜趋势速报 | 2026-10-27 | https://juejin.cn/post/7700857041943904282 |
+| 开发工具 | 文章热榜 | GitHub 周榜趋势速报 | 2026-10-25 | https://juejin.cn/post/7700055962984366089 |
+
 ## 2026-10-28
 
 ### 今日总览
@@ -120,11 +226,9 @@
 | 13 | [纯Rust重写Photoshop，一个月7.2万Star](https://juejin.cn/post/7699725807237677082) | leo在掘金 | 赞4/藏3/阅307/热度171 | 介绍 storytold/photocraft：纯 Rust 原生重写 Photoshop，约一个月近 7.2 万 Star，并延伸到同一作者对 Acrobat/Premiere/Word/Lightroom 的重写矩阵。文章强调护城河中「历史包袱」可被 AI 编码压低成本，真难点在 PSD 双向兼容；顺带推荐 magpie 本地模型网关与 Strata 本地推理引擎。适合关心桌面软件 Rust 化与本地 AI 成本账的开发者。 | https://juejin.cn/post/7699725807237677082 |
 | 15 | [JDK 21 规模化落地实践](https://juejin.cn/post/7699680016263905318) | 货拉拉技术 | 赞4/藏3/阅256/热度153 | 货拉拉分享上千微服务从 JDK 8 迁 JDK 21 的规模化路径：主张「底座先动、业务后动」——JAF/Hermes/Monitor 框架 BOM 统一收口，Jakarta/中间件适配在框架层完成，javax→jakarta 等重复改动交给 AI 批量改写。文中给出依赖抬升对照、自动配置从 spring.factories 切 AutoConfiguration.imports 的坑，以及 STG→PRE→生产可回滚灰度。适合大厂 Java 栈升级负责人对照检查单。 | https://juejin.cn/post/7699680016263905318 |
 
-
 #### 收藏热榜
 
 本槽无新增。
-
 
 ### 前端
 
@@ -138,11 +242,9 @@
 | 11 | [花了3个月，我们做了一款 AI 版的“飞书文档”](https://juejin.cn/post/7699738861139689526) | 徐小夕 | 赞5/藏5/阅585/热度306 | 徐小夕团队介绍 Mindlink「灵语文档」：面向开发者、可私有化、原生实时协同的 AI 文档。技术上弃 HTML 字符串改块式数据树，协同采用 CRDT + 增量帧 + 房间分片支持离线编辑与秒级同步，并按表现/内核/协同/服务四层解耦便于嵌入与替换。适合需要内网部署与二次开发的企业文档场景；文偏产品叙事，可结合演示站验证。 | https://juejin.cn/post/7699738861139689526 |
 | 15 | [前端转Agent开发 \| JavaScript 从 0 到 1 完全指南](https://juejin.cn/post/7699025957739397163) | 码上趣学 | 赞6/藏15/阅484/热度270 | 面向「前端转 Agent」读者的 JavaScript 语言内核长文：从 V8/调用栈、类型与隐式转换、作用域闭包、this/原型、到事件循环与模块化，主张用零依赖 Node 示例把黑盒讲透，再衔接到 TS/Node/Nest/Agent。适合补语言底子而非只背框架 API 的转栈同学；篇幅长，宜按目录拆读。 | https://juejin.cn/post/7699025957739397163 |
 
-
 #### 收藏热榜
 
 本槽无新增。
-
 
 ### 人工智能
 
@@ -153,11 +255,9 @@
 | 9 | [天涯神贴《2027年以后，你要活成这个样子》有感，希望 2027 年可以活成自己想要的样子](https://juejin.cn/post/7700522130220023862) | XiaoLei_Liu | 赞4/藏4/阅759/热度414 | 作者结合 2026 年离职创业、自媒体与入职安全公司做 FDE 的经历，拆解天涯神贴四条铁律：英语打通一手信息、把付费前沿模型当外接大脑、打造个人 IP 与自动化节点、构建多元收入抗单点风险。偏个人成长随笔而非技术教程，适合在 AI 时代焦虑转型路径的开发者对照自检。 | https://juejin.cn/post/7700522130220023862 |
 | 13 | [别照抄网上的 php2shell 复现脚本：PHP 内核这次到底碎在哪，4 个真相（2026）](https://juejin.cn/post/7699300052456652800) | BX760 | 赞3/藏2/阅682/热度333 | 针对 2026-10-21 PHP 紧急修复的 php2shell（CVE-2026-109618/109619，CVSS 9.2），纠正网上错误复现结论：根因是致命错误路径 longjmp 跳过 C 栈展开导致内存破坏/跨请求陈旧全局，与业务代码、框架、认证无关。给出 30 分钟自查升级（必须重启 worker）、检测高保真信号与临时缓解，并强调影子 PHP 资产与补丁窗口缩短。适合安全与运维应急，勿照抄不可靠 PoC。 | https://juejin.cn/post/7699300052456652800 |
 
-
 #### 收藏热榜
 
 本槽无新增。
-
 
 ### 开发工具
 
@@ -170,11 +270,9 @@
 | 10 | [用 Rust + GPUI 重做数据库客户端](https://juejin.cn/post/7699645097805479972) | FluxDB | 赞2/藏1/阅143/热度99 | FluxDB（Rust + GPUI 原生库客户端）工程拆解：查询默认限行 + 结果内存预算、虚拟列表只画可见行、单元格展示截断但详情/复制取全量；编辑走本地 ChangeSet 再事务提交并校验影响行数；SQL 补全按语法槽位而非纯前缀联想，残句掩码解析。支持多库与 Redis。适合做桌面数据工具或关注原生性能的开发者。 | https://juejin.cn/post/7699645097805479972 |
 | 13 | [GitHub 日榜趋势速报 \| 2026-10-26](https://juejin.cn/post/7700194552506466331) | miofly | 赞1/藏2/阅198/热度90 | 汇总 2026-10-26 GitHub 日榜近 24h Star 增速 Top20，领涨含 cloudflare/security-audit-skill、VoiceStudio、gpu-unlock-ada、hallmark/impeccable 设计技能包、TradingAgents 等，并附一句话能力速读。适合快速扫开源脉冲；具体能力以仓库为准。 | https://juejin.cn/post/7700194552506466331 |
 
-
 #### 收藏热榜
 
 本槽无新增。
-
 
 ### 跨榜重复与去重说明
 

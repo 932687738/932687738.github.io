@@ -2,6 +2,66 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-10-28
+
+### 今日总览
+
+**一句话结论**：周三固定来源可核验主线仍在阿里云开发者社区——智算 HPN 获奖解读、Clover 块扩散 Agent 模型拆解、Hermes Agent 云端部署长文同日落库；五个专项中 Hermes/Loop 相关实践有信号，Langfuse / LangChain·LangGraph / Code Graph / Spring Alibaba AI 未检出属本日的固定来源新落地文。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里技术/阿里云开发者/中间件/语雀、腾讯云+社区/AlloyTeam、字节技术博客、美团技术团队、掘金、百度 FEX/EFE/开发者、京东/凹凸、滴滴、网易、360、有赞 |
+| 核心趋势 | 1）万卡集群把网络协同效率抬到与算力同等重要；2）块扩散+GDN 改造瞄准低并发长上下文 Agent 吞吐；3）开源终端 Agent（Hermes）进入「云服务器 7×24 + Cron」实操教程阶段 |
+| 可直接关注 | HPN「双层扁平多轨」与秒级根因定位；Clover `block_size=32` / `threshold=0.95` / 128K 状态上下文；Hermes 百炼 Coding/Token Plan 双套餐接入与沙箱白名单 |
+| 专项检索结论 | Langfuse：固定来源内未发现可确认属本日的新落地文。LangChain/LangGraph：未发现。Code Graph：未发现。Spring Alibaba AI：未发现可确认属本日的新正式文。Loop Engineering：无直接以 loop-engineering 为题的新文；Hermes 云端 Cron/自进化部署文可作相邻工程实践参考（属 Hermes/Agent 部署，非全球 loop scaffold 官方更新）。 |
+| 未发现更新 | 阿里技术门户/中间件/语雀干货、腾讯云官方技术长文（排除促销/外汇数据类）、字节跳动技术博客、美团（本日无新文；最近可见 10-22 LOOP AutoResearch）、百度 FEX/EFE、京东/凹凸、滴滴、网易、360、有赞、AlloyTeam 等未检出可确认属本日的官方新长文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 智算网络 | [万卡集群的“隐形瓶颈”：当AI开始干活，网络为什么成了比算力更稀缺的东西](https://developer.aliyun.com/article/1776286) | 2026-10-28 | 阿里云开发者社区 | 阿里云×清华 HPN 获 CCF 科技进步一等奖；双层扁平多轨、动态路径、秒级根因；有效带宽约 +30%、利用率 97%。 |
+| 块扩散 Agent 模型 | [块扩散 + GDN 改造：Clover 把「并行生成」塞进了 Agent 的长上下文里](https://developer.aliyun.com/article/1776267) | 2026-10-28 | 阿里云开发者社区 | Clover-35B-A3B-Preview：块扩散 32-token、LowConfidence 0.95、GDN 状态化历史；面向低并发 Agent 吞吐。 |
+| Hermes 部署 | [Hermes Agent 自进化智能体实操教程（ECS/Cron/Python）](https://developer.aliyun.com/article/1776249) | 2026-10-28 | 阿里云开发者社区 | 持久记忆/技能沉淀/沙箱；轻量服务器镜像与百炼 Coding/Token Plan；`hermes cron` 与 Python 调用示例。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 智算网络 | [HPN 解读](https://developer.aliyun.com/article/1776286) | 双层扁平多轨、动态调度、秒级定位 | 基础设施 / 平台 SRE |
+| 并行 decode | [Clover 拆解](https://developer.aliyun.com/article/1776267) | block diffusion、GDN、置信度写死 | 推理工程 / Agent 平台 |
+| 云端 Coding Agent | [Hermes 教程](https://developer.aliyun.com/article/1776249) | 记忆文件、Cron、沙箱白名单、百炼接入 | 想 7×24 跑 Agent 的开发者 |
+
+### 工程实践归纳
+
+**总体判断**：本日固定来源信号集中在「底层网络效率 × 推理侧并行生成 × 云端 Agent 常驻」三层；五个专项里仅 Hermes/云端 Agent 部署有强可核验文，Langfuse/LangChain/Code Graph/Spring Alibaba AI/Loop 官方范式文安静。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 智算网络 | HPN 获奖与指标公开 | Agent 长任务对网络稳定性的依赖不亚于模型分 |
+| 块扩散推理 | Clover 面向 Agent 低并发 | 并发上不去时，用每步多 token 提高算术强度 |
+| Hermes 云端常驻 | ECS + Cron + 沙箱 | 把记忆/技能/审批做成文件化资产，再谈无人值守 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Clover 块扩散拆解](https://developer.aliyun.com/article/1776267) | 把并行生成机制拆到可测算的工程账本 |
+| 推荐 | [HPN 万卡网络](https://developer.aliyun.com/article/1776286) | 理解 Agent「能干」对基础设施的真实约束 |
+| 推荐 | [Hermes 云端教程](https://developer.aliyun.com/article/1776249) | 可跟练的 7×24 Coding Agent 部署路径 |
+
+### 来源清单
+
+- 检索范围：2026-10-28 00:00:00 到 2026-10-28 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里云开发者社区为主；其余公司/组织维度已检索但无本日可核验新长文
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 万卡集群的“隐形瓶颈”… | 2026-10-28 | https://developer.aliyun.com/article/1776286 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 块扩散 + GDN 改造：Clover… | 2026-10-28 | https://developer.aliyun.com/article/1776267 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | Hermes Agent 自进化智能体实操教程… | 2026-10-28 | https://developer.aliyun.com/article/1776249 |
+
 ## 2026-10-27
 
 ### 今日总览
