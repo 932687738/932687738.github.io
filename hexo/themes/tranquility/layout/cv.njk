@@ -89,7 +89,12 @@
                   <div class="section-title-des">{{ sec.description }}</div>
                 {% if sec.link %}</a>{% else %}</div>{% endif %}
                 {% for p in sec.content %}
-                  <p>{{ p }}</p>
+                  {% set parts = p.split('：') %}
+                  {% if parts.length > 1 and parts[0].length <= 6 %}
+                    <p><strong>{{ parts[0] }}</strong>：{{ parts.slice(1).join('：') }}</p>
+                  {% else %}
+                    <p>{{ p }}</p>
+                  {% endif %}
                 {% endfor %}
               {% endfor %}
             {% elif chp.content %}
