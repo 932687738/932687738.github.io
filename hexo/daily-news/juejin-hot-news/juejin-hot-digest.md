@@ -2,6 +2,44 @@
 
 按 Asia/Shanghai 时区汇总掘金文章热榜与收藏热榜（后端 / 前端 / 人工智能 / 开发工具），按文章链接去重并归纳正文。
 
+## 2026-10-30
+
+### 今日总览
+
+**一句话结论**：今日增量 15 篇 (skip seen), hot x4 cats; collect 无新.
+
+| cat | board | new |
+| --- | --- | --- |
+| ai | hot | 4 |
+| backend | hot | 5 |
+| devtools | hot | 2 |
+| frontend | hot | 4 |
+
+### 新增文章
+
+| cat | board | rank | title |
+| --- | --- | --- | --- |
+| backend | hot | 2 | [PHP Swoole 协程模型详解](https://juejin.cn/post/7701591870955012111) |
+| backend | hot | 11 | [2026 Windows 11 终端美化完全指南](https://juejin.cn/post/7700077216746733611) |
+| backend | hot | 13 | [PHP2Shell 事件复盘](https://juejin.cn/post/7699425309146349610) |
+| backend | hot | 14 | [14款大模型 Java编码能力横评](https://juejin.cn/post/7699685792612302883) |
+| backend | hot | 15 | [同一份知识库 4x3 切分召回](https://juejin.cn/post/7700790222851440640) |
+| frontend | hot | 10 | [别再用防抖做懒加载](https://juejin.cn/post/7701269925750947855) |
+| frontend | hot | 11 | [用 Codex 完成智慧高速 3D 可视化大屏](https://juejin.cn/post/7700627964493971498) |
+| frontend | hot | 14 | [10 MB 桌面 AI 客户端: 仓颉 + WebView](https://juejin.cn/post/7700165668347559963) |
+| frontend | hot | 15 | [模型吐半截JSON边收边渲染](https://juejin.cn/post/7700510231650844715) |
+| ai | hot | 10 | [GPT-6.1 Terra 上线](https://juejin.cn/post/7701352628311392297) |
+| ai | hot | 11 | [史诗级封号收入](https://juejin.cn/post/7701870817483259958) |
+| ai | hot | 14 | [文档摄取: 92% 页面不需 OCR](https://juejin.cn/post/7700267917769818162) |
+| ai | hot | 15 | [AI 生图五个破绻](https://juejin.cn/post/7700985536521551914) |
+| devtools | hot | 11 | [HelloGitHub #127](https://juejin.cn/post/7701499928404705322) |
+| devtools | hot | 14 | [服务器管理工具哪个好用](https://juejin.cn/post/7699727325760553011) |
+
+### 来源
+
+- snap 2026-10-30 Asia/Shanghai; mode 1; boards hot+collect x4; top15
+- new 15 / skipped seen
+
 ## 2026-10-29
 
 ### 今日总览
