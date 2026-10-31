@@ -18,6 +18,10 @@ p {
   line-height: 1.75;
   color: var(--ink-soft);
 }
+p strong {
+  color: var(--ink);
+  font-weight: 700;
+}
 body {
   font-size: 16px;
   font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
