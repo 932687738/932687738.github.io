@@ -2,6 +2,68 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-10-30
+
+### 今日总览
+
+**一句话结论**：周五主线是「数据训练偏好信号 + 未成年人安全边界 + Coding Agent 写权限收紧」——OpenAI 宣布将尊重 robots.txt 中面向多厂商的共用 AI 训练偏好信号，并发布青少年枪支/暴力相关更严限制与 Community Safety Report 承诺；Anthropic Claude Code 2.1.314 新增 permissions.blockWritesOutsideWorkingDirectories 与空闲压缩。专项检索：Codex / OpenClaw / Hermes / Spring AI / spring-ai-alibaba / Langfuse / LangGraph / Code Graph / Loop Engineering / Agent Skills 均无本日可核验新正式版。中文侧量子位同日报道智元创新日（GO-3 Preview、WITA-OMNI、Worken、灵渠 OS）。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI 官方博客、Anthropic Claude Code changelog、GitHub Releases、量子位/中文科技媒体、Spring AI / spring-ai-alibaba / Langfuse / LangGraph / Code Graph / Loop / skills 专项 |
+| 核心趋势 | 1）网页出版方可用共用 robots.txt 信号一次表达训练偏好；2）产品安全从「拒绝暴力指令」延伸到未成年人武器实务信息与会话中断；3）Coding Agent 把工作区外写操作做成可配置硬拒绝 |
+| 可直接关注 | 对照 [AI training preferences](https://openai.com/index/helping-websites-express-ai-training-preferences/) 与现有 GPTBot 规则；评估是否开启 Claude Code lockWritesOutsideWorkingDirectories |
+| 专项检索结论 | Claude Code：2.1.314（2026-10-30）可核验。Codex/OpenClaw/Hermes/Spring AI/Langfuse/LangGraph/Code Graph/Loop/skills：无本日可核验新正式版。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 训练数据偏好 | [Making it easier for websites to express AI training preferences](https://openai.com/index/helping-websites-express-ai-training-preferences/) | 2026-10-30 | 官方发布 | 共用 robots.txt 信号；不替代现有爬虫规则；数月内落地 |
+| 社区安全 | [Community safety report and new protections for teens](https://openai.com/index/community-safety-report-and-new-protections-for-teens/) | 2026-10-30 | 官方安全 | 青少年武器信息限制；暴力执念可中断会话；首份报告计划 2027 年初 |
+| Coding Agent | [Claude Code 2.1.314](https://code.claude.com/docs/en/changelog) | 2026-10-30 | Changelog | lockWritesOutsideWorkingDirectories；idle compaction；gateway groups |
+| 具身智能（中文） | [智元双模型与 Worken 绩效单位](https://www.qbitai.com/2026/10/506819.html) | 2026-10-30 | 媒体报道 | GO-3 / WITA-OMNI / 灵渠 OS；需对照厂商原文 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 爬虫与训练合规 | [OpenAI AI training preferences](https://openai.com/index/helping-websites-express-ai-training-preferences/) | robots.txt 共用信号 / IETF AI Preferences | 站长、法务、数据工程 |
+| 青少年安全策略 | [Community Safety Report 公告](https://openai.com/index/community-safety-report-and-new-protections-for-teens/) | 年龄预测、家长通知、暴力会话中断 | 产品安全、政策 |
+| Agent 写权限 | [Claude Code changelog 2.1.314](https://code.claude.com/docs/en/changelog) | 工作区外 Write/Edit 拒绝；不限制 shell/MCP | 平台工程、IDE Agent |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：框架发行版安静；工程信号集中在「数据偏好协议化」与「Agent 工具写边界」。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 训练偏好信号 | OpenAI 加入共用 robots.txt 信号 | 爬虫合规配置可一次声明、多厂商复用 |
+| Coding 写沙箱 | Claude Code blockWritesOutsideWorkingDirectories | 把路径越界写成默认拒绝，而非仅靠提示词 |
+| 空闲压缩 | idle compaction（VS Code / Desktop Code tab） | 长会话缓存过期后用摘要续聊，降成本 |
+| 专项框架 | Spring AI / Langfuse / LangGraph / Code Graph / Loop | 本日无新正式版可核验 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [AI training preferences](https://openai.com/index/helping-websites-express-ai-training-preferences/) | 训练数据合规新约定 |
+| 必读 | [Community safety / teens](https://openai.com/index/community-safety-report-and-new-protections-for-teens/) | 产品安全边界扩展 |
+| 必读 | [Claude Code 2.1.314 changelog](https://code.claude.com/docs/en/changelog) | Agent 写权限硬闸门 |
+| 延伸 | [量子位·智元创新日](https://www.qbitai.com/2026/10/506819.html) | 具身智能中文传播；交叉核验厂商 |
+
+### 来源清单
+
+- 检索范围：2026-10-30 00:00:00 到 2026-10-30 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, code.claude.com, github.com, qbitai.com
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | AI training preferences | 2026-10-30 | https://openai.com/index/helping-websites-express-ai-training-preferences/ |
+| 官方安全 | Community safety report and teen protections | 2026-10-30 | https://openai.com/index/community-safety-report-and-new-protections-for-teens/ |
+| Changelog | Claude Code 2.1.314 | 2026-10-30 | https://code.claude.com/docs/en/changelog |
+| 媒体报道 | 智元双模型杀穿多榜 | 2026-10-30 | https://www.qbitai.com/2026/10/506819.html |
+
 ## 2026-10-29
 
 ### 今日总览

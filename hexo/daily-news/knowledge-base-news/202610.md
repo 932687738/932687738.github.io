@@ -2,6 +2,61 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-10-30
+
+### 今日总览
+
+**一句话结论**：周五知识库主线偏「外溢官方安全/合规信号 + 中文具身智能传播」——固定中文源（美团/阿里云/腾讯云/掘金专栏）当日几乎无专项主题（Langfuse / LangChain / spring-ai-alibaba / Code Graph / Loop Engineering）可核验新文；可交叉引用 OpenAI 训练偏好与青少年安全公告，以及量子位对智元创新日的报道。GitHub 榜单脚本需单独跑 	ools/update_github_topz.py。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索 | tech.meituan.com / developer.aliyun.com / cloud.tencent.com / juejin.cn / qbitai.com + OpenAI 官方外溢 |
+| 核心 | 1) 固定源专项主题安静；2) OpenAI robots.txt 训练偏好与青少年安全外溢；3) 智元具身智能创新日中文报道 |
+| 专项主题 | Langfuse/LangChain/spring-ai-alibaba/Code Graph/Loop：固定源内无 2026-10-30 可核验新文 |
+
+### 重要文章与更新
+
+| 标题 | 日期 | 类型 | 价值 |
+| --- | --- | --- | --- |
+| [OpenAI：网站表达 AI 训练偏好](https://openai.com/index/helping-websites-express-ai-training-preferences/) | 2026-10-30 | 官方外溢 | 站长/数据合规共用信号 |
+| [OpenAI：Community Safety 与青少年保护](https://openai.com/index/community-safety-report-and-new-protections-for-teens/) | 2026-10-30 | 官方外溢 | 产品安全策略参考 |
+| [量子位：智元双模型与 Worken](https://www.qbitai.com/2026/10/506819.html) | 2026-10-30 | 中文媒体 | 具身智能；需对照厂商 |
+| 美团技术博客 | 2026-10-30 | 固定源 | 无当日新文（近文为 10-29 AI Coding） |
+
+### 技术文档与实践
+
+| 方向 | 资料 | 要点 |
+| --- | --- | --- |
+| 训练数据合规 | OpenAI preferences | robots.txt 共用信号，不替代 GPTBot 等既有规则 |
+| 青少年安全产品 | OpenAI Community Safety | 武器实务信息限制、会话中断、家长通知 |
+| 具身智能工程 | 量子位智元报道 | GO-3 / WITA-OMNI / 灵渠 OS / Worken 指标 |
+
+### 工程实践归纳
+
+- 固定中文知识库在 10-30 对 Agent 观测（Langfuse）、编排（LangGraph/LangChain）、Java Agent（spring-ai-alibaba）、代码图谱与 Loop Engineering 无新正式稿，避免把相邻日期文章误记为当日。
+- 合规信号值得同步进爬虫与数据集管线：共用偏好 ≠ 立刻生效（OpenAI 称数月内实现）。
+- 具身智能报道热度高，工程落地仍应以厂商文档与评测榜为准。
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 推荐 | [AI training preferences](https://openai.com/index/helping-websites-express-ai-training-preferences/) | 中文站也可对照配置 |
+| 推荐 | [Community safety / teens](https://openai.com/index/community-safety-report-and-new-protections-for-teens/) | 安全产品边界 |
+| 延伸 | [量子位智元](https://www.qbitai.com/2026/10/506819.html) | 中文传播线索 |
+| 背景 | [美团 10-29 AI Coding](https://tech.meituan.com/2026/10/29/AI-Coding-IN-Distributed-Storage-System.html) | 相邻日高可靠闸门（非当日） |
+
+### 来源清单
+
+- 检索范围：2026-10-30（Asia/Shanghai）
+- openai.com, qbitai.com, tech.meituan.com, developer.aliyun.com, cloud.tencent.com, juejin.cn
+
+| 标题 | URL |
+| --- | --- |
+| OpenAI AI training preferences | https://openai.com/index/helping-websites-express-ai-training-preferences/ |
+| OpenAI Community Safety | https://openai.com/index/community-safety-report-and-new-protections-for-teens/ |
+| 量子位智元 | https://www.qbitai.com/2026/10/506819.html |
+
 ## 2026-10-29
 
 ### 今日总览

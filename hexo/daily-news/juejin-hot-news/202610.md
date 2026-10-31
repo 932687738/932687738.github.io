@@ -2,6 +2,105 @@
 
 按 Asia/Shanghai 时区汇总掘金文章热榜与收藏热榜（后端 / 前端 / 人工智能 / 开发工具），按文章链接去重并归纳正文。
 
+## 2026-10-31
+
+### 今日总览
+
+**一句话结论**：今日增量 17 篇（skip seen 103），文章热榜覆盖后端/前端/人工智能/开发工具；收藏热榜无新 URL。主线偏工程实战：ValidX 校验、百亿写 MySQL、纯 Go GUI/PDF、uni-app x 组件、货拉拉 AI 叫车、DeepSeek Harness vs Pi Agent、腾讯 Buddy One、Service Mesh 可观测。
+
+| cat | board | new |
+| --- | --- | --- |
+| backend | hot | 6 |
+| frontend | hot | 5 |
+| ai | hot | 4 |
+| freebie | hot | 2 |
+
+### 新增文章
+
+| cat | board | rank | title | author |
+| --- | --- | --- | --- | --- |
+| backend | hot | 1 | [ValidX vs 正则表达式：可读性与维护性对比](https://juejin.cn/post/7701250481567039528) | vipxieliang |
+| backend | hot | 11 | [WorkBuddy中调用本地ComfyUi工作流免费生图](https://juejin.cn/post/7701022375387267115) | 当时只道是寻常_ |
+| backend | hot | 12 | [100 亿条数据如何快速写入 MySQL？从 231 天到 3.5 小时，我把面试官问懵了](https://juejin.cn/post/7701269179118845988) | Rain的Java大神之路 |
+| backend | hot | 13 | [从零手搓 RAG 之 Embedding 技术](https://juejin.cn/post/7700764385023180810) | 我是Allen |
+| backend | hot | 14 | [不引 Ghostscript：我用纯 Go 给 PDF 做了一场「压缩手术」](https://juejin.cn/post/7699989560453709859) | 沙蒿同学 |
+| backend | hot | 15 | [PHP2Shell 漏洞拆解：WordPress 与 nginx 为何中招](https://juejin.cn/post/7699033523931725850) | 程序员天天困 |
+| frontend | hot | 7 | [Go-Gui:一套 无限接近 现代化UI的 GPU绘制界面组件框架](https://juejin.cn/post/7701703182474248211) | 陌离 |
+| frontend | hot | 8 | [uView Pro X 1.0.0 发布：全面支持 uni-app x 蒸汽模式，80+ 组件](https://juejin.cn/post/7701525643872321571) | 前端梦工厂 |
+| frontend | hot | 12 | [做了三年 ProseMirror 后，我用四个月自研排版引擎实现 WPS / Google Docs 替代品，整套框架 MIT 开源](https://juejin.cn/post/7701285133392199690) | king王一帅 |
+| frontend | hot | 13 | [AI友好的可视化图形引擎自我革命：Meta2d.js 2.0 历时一年全新重写，性能与多人协作全面升级](https://juejin.cn/post/7701604765431873545) | alsmile |
+| frontend | hot | 14 | [一句话叫车：货拉拉小程序 AI 叫车实战](https://juejin.cn/post/7701490621295607849) | 货拉拉技术 |
+| ai | hot | 9 | [DeepSeek Harness 和 Pi Agent 怎么选？先想想你愿意折腾什么](https://juejin.cn/post/7701490621295935529) | jerrywus |
+| ai | hot | 13 | [腾讯 Buddy One 来了，办公全家桶一键打通WorkBuddy（附教程）](https://juejin.cn/post/7701870817484210230) | 苍何 |
+| ai | hot | 14 | [一个人，带着一群 AI：一个 10 年前端如何做出几十个团队在用的在线文档](https://juejin.cn/post/7700215375997370409) | AN |
+| ai | hot | 15 | [doc2docx方案，开源！](https://juejin.cn/post/7700603865700663336) | 徐小夕 |
+| freebie | hot | 1 | [Service Mesh 可观测性：分布式追踪、指标与日志的统一方案](https://juejin.cn/post/7701971738456752162) | vipxieliang |
+| freebie | hot | 13 | [GitHub 日榜趋势速报 \| 2026-10-29](https://juejin.cn/post/7701566014480597030) | miofly |
+
+### 后端
+
+#### 文章热榜
+
+- **#1** [ValidX vs 正则表达式：可读性与维护性对比](https://juejin.cn/post/7701250481567039528)（vipxieliang）：ValidX vs 正则表达式：可读性与维护性对比 📋 目录 引言 一、正则表达式：验证领域的双刃剑 1.1 正则表达式的优势 1.2 正则表达式的三大痛点 1.3 本文的目标 二、典型场景对比：同一
+- **#11** [WorkBuddy中调用本地ComfyUi工作流免费生图](https://juejin.cn/post/7701022375387267115)（当时只道是寻常_）：在上一篇文章 AI小白如何使用并创建自己的skill 中，在WorkBuddy中直接自己创建生成skill，方便按照自己的风格画插画，用了几天之后发现，这个skill虽然执行文字阶段的时候可以使用免费
+- **#12** [100 亿条数据如何快速写入 MySQL？从 231 天到 3.5 小时，我把面试官问懵了](https://juejin.cn/post/7701269179118845988)（Rain的Java大神之路）：100亿数据写入MySQL，从逐条插入231天优化至3.5小时内。拆解B+树原理，详解分片并行、LOAD DATA、JDBC真批量、断点幂等、影子表切换，附带面试口述模板与避坑要点。
+- **#13** [从零手搓 RAG 之 Embedding 技术](https://juejin.cn/post/7700764385023180810)（我是Allen）：从零手搓 RAG 之 Embedding 技术 前言 上一篇介绍了如何把 markdown 格式的文件切片，接下来要把每个片段交给嵌入模型（embedding model），编码成一组高维浮点数。
+- **#14** [不引 Ghostscript：我用纯 Go 给 PDF 做了一场「压缩手术」](https://juejin.cn/post/7699989560453709859)（沙蒿同学）：不引 Ghostscript：我用纯 Go 给 PDF 做了一场「压缩手术」 先从一个具体场景说起。 内网办公的电脑上，一份材料要交：对面系统只收 5MB 以内的附件，手里这份十几页的扫描件 PDF
+- **#15** [PHP2Shell 漏洞拆解：WordPress 与 nginx 为何中招](https://juejin.cn/post/7699033523931725850)（程序员天天困）：PHP2Shell 双 RCE 已遭在野利用：WordPress、Drupal 全在射程内，nginx 其实另有洞。拆成因与修复顺序
+
+#### 收藏热榜
+
+- 无新增（本快照未见新 URL）
+
+### 前端
+
+#### 文章热榜
+
+- **#7** [Go-Gui:一套 无限接近 现代化UI的 GPU绘制界面组件框架](https://juejin.cn/post/7701703182474248211)（陌离）：纯 Go、零 CGO：我手写了一个不用 WebView 的 Web 风格 GUI 框架 仓库地址：https://github.com/2252688138/Go-gui 规模：129 个 Go 源文
+- **#8** [uView Pro X 1.0.0 发布：全面支持 uni-app x 蒸汽模式，80+ 组件](https://juejin.cn/post/7701525643872321571)（前端梦工厂）：80+精选UI组件，蒸汽模式优先、多主题、暗黑模式、多语言配置，一套代码覆盖App(安卓/iOS/鸿蒙)、H5与微信小程序
+- **#12** [做了三年 ProseMirror 后，我用四个月自研排版引擎实现 WPS / Google Docs 替代品，整套框架 MIT 开源](https://juejin.cn/post/7701285133392199690)（king王一帅）：做了三年 ProseMirror 后，自研排版引擎做出浏览器里真正分页的文档编辑器，还有块编辑器、Markdown 编辑器，背后两套 Tiptap 风格的编辑器框架 MIT 开源，附在线体验。
+- **#13** [AI友好的可视化图形引擎自我革命：Meta2d.js 2.0 历时一年全新重写，性能与多人协作全面升级](https://juejin.cn/post/7701604765431873545)（alsmile）：Meta2d.js 一个国产开源的 2D 可视化引擎，快速搭建 Web 组态、SCADA、监控大屏、流程图、中控可视化以及图形编辑与交互等应用 —— 接入实时数据，设置动画和条件，事件交互等
+- **#14** [一句话叫车：货拉拉小程序 AI 叫车实战](https://juejin.cn/post/7701490621295607849)（货拉拉技术）：一句话叫一辆货拉拉，背后需要怎样的产品和技术架构？本文完整复盘货拉拉小程序 AI 下单的实战路径：微信AI提供的三种模式对比、货拉拉 7 个原子能力如何自由组合、Handoff 机制如何守住交易安全。
+
+#### 收藏热榜
+
+- 无新增（本快照未见新 URL）
+
+### 人工智能
+
+#### 文章热榜
+
+- **#9** [DeepSeek Harness 和 Pi Agent 怎么选？先想想你愿意折腾什么](https://juejin.cn/post/7701490621295935529)（jerrywus）：想要 Web 界面、MCP、子 Agent 这些现成能力，可以先试 DeepSeek Harness；习惯在终端里干活，想保留一个小核心，用到什么再加什么，可以先试 Pi Agent。 它们的出发点不
+- **#13** [腾讯 Buddy One 来了，办公全家桶一键打通WorkBuddy（附教程）](https://juejin.cn/post/7701870817484210230)（苍何）：大家好，我是苍何。 兄弟们，腾讯这次憋了个大招。 正式推出了跨应用 AI 协同体系 Buddy One，把 WorkBuddy、腾讯会议、腾讯文档、ima 和腾讯网盘一键打通了。 说实话，这几个 Ap
+- **#14** [一个人，带着一群 AI：一个 10 年前端如何做出几十个团队在用的在线文档](https://juejin.cn/post/7700215375997370409)（AN）：一个人，带着一群 AI：一个 10 年前端如何做出几十个团队在用的在线文档 去年有人问我：AI 这么猛，你一个写前端的还卷得动吗。
+- **#15** [doc2docx方案，开源！](https://juejin.cn/post/7700603865700663336)（徐小夕）：​ 最近我们 JitWord 协同AI文档团队开源了一个方案，能一键把 Word 中老旧格式（.doc格式）文件转换为通用的 .docx 格式，从而能在 Web 端实现对 Word 老旧格式的预览。
+
+#### 收藏热榜
+
+- 无新增（本快照未见新 URL）
+
+### 开发工具
+
+#### 文章热榜
+
+- **#1** [Service Mesh 可观测性：分布式追踪、指标与日志的统一方案](https://juejin.cn/post/7701971738456752162)（vipxieliang）：1. 引言：为什么 Mesh 层是可观测性的最佳切入点 微服务架构把单体拆成了几十上百个服务，随之而来的是调用链路变长、故障定位变难。传统做法是在每个业务服务里埋点、打日志、上报指标，但这种方式有三个
+- **#13** [GitHub 日榜趋势速报 | 2026-10-29](https://juejin.cn/post/7701566014480597030)（miofly）：GitHub 日榜 2026-10-29：rea、dsh-our-free-model、cleanyourtv 等 20 个开源项目 24 小时 Star 增速领先，每日更新的开源趋势速报。
+
+#### 收藏热榜
+
+- 无新增（本快照未见新 URL）
+
+### 跨榜重复与去重说明
+
+- 按文章 URL 去重后新增 17 篇；本快照每篇仅出现在单一分类文章热榜。
+- listing_slots=120，detail_ok=17，detail_fail=0。
+
+### 来源清单
+
+- snap 2026-10-31 Asia/Shanghai；mode 拉取1 增量；boards 文章热榜+收藏热榜 × 后端/前端/人工智能/开发工具；top15
+- new 17 / skipped seen 103；generated_at 2026-10-31T08:05:13
+- 工具：`tools/juejin_hot_fetch.py --limit 15 --date 2026-10-31`
+
 ## 2026-10-30
 
 ### 今日总览
