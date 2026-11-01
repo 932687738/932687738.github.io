@@ -2,6 +2,112 @@
 
 按 Asia/Shanghai 时区汇总掘金文章热榜与收藏热榜（后端 / 前端 / 人工智能 / 开发工具），按文章链接去重并归纳正文。
 
+## 2026-11-01
+
+### 今日总览
+
+**一句话结论**：今日增量 13 篇（skip seen 107），文章热榜覆盖后端/前端/人工智能/开发工具；收藏热榜仅前端图片压缩 1 篇新 URL。主线偏工具与 Agent 工程：Rspack 2.3、Markdown 编辑器底层、subagent 折叠主循环讨论、Epic+Claude/Codex、AI 安全测试工具盘点、本地优先 API 调试、开源 AI 剪辑。
+
+| cat | board | new |
+| --- | --- | --- |
+| backend | hot | 3 |
+| frontend | hot | 2 |
+| ai | hot | 2 |
+| freebie | hot | 5 |
+| freebie | collect | 1 |
+
+### 新增文章
+
+| cat | board | rank | title | author |
+| --- | --- | --- | --- | --- |
+| backend | hot | 13 | [AI剪辑工具降低创作门槛](https://juejin.cn/post/7701652199176863778) | 馒头不想说话 |
+| backend | hot | 14 | [LeetCode 21 合并两个有序链表：一道 Easy 题，凭什么刷掉一半候选人？](https://juejin.cn/post/7701559825634344996) | Rain的Java大神之路 |
+| backend | hot | 15 | [为什么 2026 年了，我又写了一个 API 调试工具](https://juejin.cn/post/7700156802533834803) | 小奏技术 |
+| frontend | hot | 11 | [Rspack 2.3 发布：联手 SWC 团队带来全新编译器](https://juejin.cn/post/7701932169296003082) | WebInfra |
+| frontend | hot | 15 | [AI 时代一群人在卷笔记软件，我想先把 Markdown 编辑器的底层做好](https://juejin.cn/post/7701625236325154826) | king王一帅 |
+| ai | hot | 14 | [别学 subagent 了，很可能要凉了。](https://juejin.cn/post/7702012705843232810) | cxuanAI |
+| ai | hot | 15 | [Epic 摊牌了：Claude 和 Codex 在写 UE6 的代码，十年没修掉的 bug 被 AI 扫光](https://juejin.cn/post/7701637989949751315) | 深蓝AI |
+| freebie | hot | 11 | [magpie：让薅到的 AI 羊毛物尽其用](https://juejin.cn/post/7701591870954094607) | KaneLogger |
+| freebie | hot | 12 | [GitHub 日榜趋势速报 | 2026-10-28](https://juejin.cn/post/7701256742281887754) | miofly |
+| freebie | hot | 13 | [2026年AI安全测试工具大全，14款大模型与Agent安全工具一次配齐](https://juejin.cn/post/7700359102766727178) | 狂师 |
+| freebie | hot | 14 | [我开源了个免费的 Markdown 编辑器：Lumin](https://juejin.cn/post/7699888899713499177) | 杨白白_yangbaibai |
+| freebie | hot | 15 | [GitHub 日榜趋势速报 | 2026-10-31](https://juejin.cn/post/7702409212484206618) | miofly |
+| freebie | collect | 15 | [纯前端图片压缩怎么做？不用上传服务器，浏览器里跑完所有逻辑](https://juejin.cn/post/7669733200704798739) | 果然_ |
+
+### 后端
+
+#### 文章热榜
+
+- **#13** [AI剪辑工具降低创作门槛](https://juejin.cn/post/7701652199176863778)（馒头不想说话）：# 会打字就能剪视频？国产开源AI剪辑工具，正在把创作门槛打下来 最近有条新闻挺有意思——外媒预测中国到2030年将在AI模型等领域领先。说实话，这种预测听听就好，但有一点是实打实的：国内AI工具的
+- **#14** [LeetCode 21 合并两个有序链表：一道 Easy 题，凭什么刷掉一半候选人？](https://juejin.cn/post/7701559825634344996)（Rain的Java大神之路）：LeetCode21合并有序链表，看似Easy却很考验边界与指针功底。迭代哨兵O(1)空间，对比递归爆栈隐患，附带10个高频坑、面试官9连问，直通23题k路合并，秋招刷题必看｜算法198题系列持续更新
+- **#15** [为什么 2026 年了，我又写了一个 API 调试工具](https://juejin.cn/post/7700156802533834803)（小奏技术）：起因：一次被迫登录 去年底的一个下午，我在调试一个网关接口，Postman 弹了个更新提示。更新完，它让我登录。我看着进度条装完的 300 多 MB 应用，突然意识到一件事：我只是想发一个 HTTP
+
+#### 收藏热榜
+
+- 无新增（本快照未见新 URL）
+
+### 前端
+
+#### 文章热榜
+
+- **#11** [Rspack 2.3 发布：联手 SWC 团队带来全新编译器](https://juejin.cn/post/7701932169296003082)（WebInfra）：Rspack 2.3 现已发布！本次更新集成了 SWC Next 解析器，提升构建速度，降低内存占用和产物体积。同时推出实验性的新版缓存，支持为 loader 单独缓存转换结果。
+- **#15** [AI 时代一群人在卷笔记软件，我想先把 Markdown 编辑器的底层做好](https://juejin.cn/post/7701625236325154826)（king王一帅）：大家都在卷 AI 编辑器，底层却还是那几个老问题：Markdown 来回转换会改写源码、所见即所得要塞两套编辑器、协同一来就丢内容。这篇对照十几款流行笔记软件的技术路线，讲清 Markdown 真正的限制，介绍源码优先的开源编辑器框架 MSFE。
+
+#### 收藏热榜
+
+- 无新增（本快照未见新 URL）
+
+### 人工智能
+
+#### 文章热榜
+
+- **#14** [别学 subagent 了，很可能要凉了。](https://juejin.cn/post/7702012705843232810)（cxuanAI）：前两天，Claude 发了一篇文章叫《Building agents: When to fold subagents into your main agent loop》，意为《构建代理：何时把子代理
+- **#15** [Epic 摊牌了：Claude 和 Codex 在写 UE6 的代码，十年没修掉的 bug 被 AI 扫光](https://juejin.cn/post/7701637989949751315)（深蓝AI）：一类缺陷，Epic 的工程师追了整整十年，没有清干净。换成 AI 工具上场，几个月就被扫掉了。 这不是宣传话术。Epic 开发副总裁 Marcus Wassmer 在回应媒体求证时亲口确认，像 Cla
+
+#### 收藏热榜
+
+- 无新增（本快照未见新 URL）
+
+### 开发工具
+
+#### 文章热榜
+
+- **#11** [magpie：让薅到的 AI 羊毛物尽其用](https://juejin.cn/post/7701591870954094607)（KaneLogger）：手里有多个 AI 订阅和模型额度，怎么在编程时用起来？从接入供应商到配置路由组，再用意图规则把不同任务分给合适的模型。
+- **#12** [GitHub 日榜趋势速报 | 2026-10-28](https://juejin.cn/post/7701256742281887754)（miofly）：GitHub 日榜 2026-10-28：hallmark、DeepTutor、ai-design-skills 等 20 个开源项目 24 小时 Star 增速领先，每日更新的开源趋势速报。
+- **#13** [2026年AI安全测试工具大全，14款大模型与Agent安全工具一次配齐](https://juejin.cn/post/7700359102766727178)（狂师）：前面盘完接口、性能、APP、UI、安全五篇传统工具，群里果然有人来问，那 AI 呢，测大模型用什么，测 Agent 用什么。 问得正是时候。
+- **#14** [我开源了个免费的 Markdown 编辑器：Lumin](https://juejin.cn/post/7699888899713499177)（杨白白_yangbaibai）：Lumin是一款基于Electron 39、Vue3与TypeScript开发的所见即所得Markdown编辑器，支持原位渲染、KaTeX公式、Mermaid流程图、CodeMirror6代码块等。
+- **#15** [GitHub 日榜趋势速报 | 2026-10-31](https://juejin.cn/post/7702409212484206618)（miofly）：GitHub 日榜 2026-10-31：rea、jailbreaks、dsh-our-free-model 等 20 个开源项目 24 小时 Star 增速领先，每日更新的开源趋势速报。
+
+#### 收藏热榜
+
+- **#15** [纯前端图片压缩怎么做？不用上传服务器，浏览器里跑完所有逻辑](https://juejin.cn/post/7669733200704798739)（果然_）：纯前端图片压缩怎么做？不用上传服务器，浏览器里跑完所有逻辑 先说结论：浏览器能做，但要知道边界 很多人觉得图片压缩必须走服务端，其实不一定。浏览器端压缩有明显的优势： 隐私安全：图片不离开设备，不存在
+
+### 跨榜重复与去重说明
+
+- 按文章 URL 去重后新增 13 篇；部分文章仅出现在单一分类榜。
+- listing_slots=120，detail_ok=13，detail_fail=0。
+
+### 来源清单
+
+- snap 2026-11-01 Asia/Shanghai；mode 拉取1 增量；boards 文章热榜+收藏热榜 × 后端/前端/人工智能/开发工具；top15
+- 抓取脚本：tools/juejin_hot_fetch.py
+
+| 标题 | URL |
+| --- | --- |
+| AI剪辑工具降低创作门槛 | https://juejin.cn/post/7701652199176863778 |
+| LeetCode 21 合并两个有序链表：一道 Easy 题，凭什么刷掉一半候选人？ | https://juejin.cn/post/7701559825634344996 |
+| 为什么 2026 年了，我又写了一个 API 调试工具 | https://juejin.cn/post/7700156802533834803 |
+| Rspack 2.3 发布：联手 SWC 团队带来全新编译器 | https://juejin.cn/post/7701932169296003082 |
+| AI 时代一群人在卷笔记软件，我想先把 Markdown 编辑器的底层做好 | https://juejin.cn/post/7701625236325154826 |
+| 别学 subagent 了，很可能要凉了。 | https://juejin.cn/post/7702012705843232810 |
+| Epic 摊牌了：Claude 和 Codex 在写 UE6 的代码，十年没修掉的 bug 被 AI 扫光 | https://juejin.cn/post/7701637989949751315 |
+| magpie：让薅到的 AI 羊毛物尽其用 | https://juejin.cn/post/7701591870954094607 |
+| GitHub 日榜趋势速报 | 2026-10-28 | https://juejin.cn/post/7701256742281887754 |
+| 2026年AI安全测试工具大全，14款大模型与Agent安全工具一次配齐 | https://juejin.cn/post/7700359102766727178 |
+| 我开源了个免费的 Markdown 编辑器：Lumin | https://juejin.cn/post/7699888899713499177 |
+| GitHub 日榜趋势速报 | 2026-10-31 | https://juejin.cn/post/7702409212484206618 |
+| 纯前端图片压缩怎么做？不用上传服务器，浏览器里跑完所有逻辑 | https://juejin.cn/post/7669733200704798739 |
+
 ## 2026-10-31
 
 ### 今日总览

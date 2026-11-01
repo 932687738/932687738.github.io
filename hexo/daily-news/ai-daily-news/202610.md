@@ -2,6 +2,68 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-10-31
+
+### 今日总览
+
+**一句话结论**：周六主线是「Coding Agent 成本/策略旋钮 + 旧评测平台退役 + 自主 Agent 底座公开」——Anthropic Claude Code 2.1.316（10-31）新增 ultrathink 关闭开关、subagent 独立 effort、网关 pooled budget 与 Bedrock guardrail 输入打标，并弃用 Opus 4.8 fast mode；OpenAI 托管 Evals 平台按计划于 10-31 转为只读；量子位同日报道 DeepSeek 公开 Super-agent（Router/Worker、投机执行、Watchdog）原型。专项：Codex / OpenClaw / Hermes / Spring AI / spring-ai-alibaba / Langfuse / LangGraph / Code Graph / Loop / Agent Skills 无本日可核验新正式版（Agents API auto-review/compaction 属相邻窗口工程信号）。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | Claude Code changelog、OpenAI Evals/Agents、量子位、GitHub Releases、专项框架 |
+| 核心趋势 | 1）Coding Agent 把 effort/预算/安全策略做成可运维开关；2）评测资产应迁出即将关闭的托管 Evals；3）中文侧 DeepSeek 推动「连续/主动/持久」多任务 Agent 架构叙事 |
+| 可直接关注 | 升级 Claude Code ≥2.1.316；评估 `CLAUDE_CODE_SUBAGENT_EFFORT` / `DISABLE_ULTRATHINK`；Evals 用例改存自有仓库 |
+| 专项检索结论 | Claude Code：2.1.316 可核验。Codex/OpenClaw/Hermes/Spring AI/Langfuse/LangGraph/Code Graph/Loop/skills：无本日新正式版。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Coding Agent | [Claude Code 2.1.316](https://code.claude.com/docs/en/changelog) | 2026-10-31 | Changelog | DISABLE_ULTRATHINK；SUBAGENT_EFFORT；pooled_budget；Bedrock input_tagging；Opus 4.8 fast mode 弃用（11-30 移除） |
+| 评测平台 | [OpenAI Evals → read-only](https://developers.openai.com/api/docs/guides/evals) | 2026-10-31 | 平台变更 | 托管 Evals 只读；计划 11-30 关闭；用例/门禁迁自建 CI |
+| 自主 Agent（中文） | [DeepSeek Super-agent 架构](https://www.qbitai.com/2026/10/506904.html) | 2026-10-31 | 媒体/开源线索 | Router+Worker、订阅直通、投机执行、Watchdog；原型仓库需对照 |
+| Agents API（相邻） | Agents API auto-review / compaction | ~2026-10-30 | API/SDK | `review: auto_review`；异步上下文压缩；非本日独立产品博客 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Agent 运行时旋钮 | [Claude Code 2.1.316 changelog](https://code.claude.com/docs/en/changelog) | ultrathink / subagent effort / pooled budget / layered policy | 平台工程、IDE Agent 运维 |
+| Agent 评测门禁 | [Working with evals](https://developers.openai.com/api/docs/guides/evals) | 托管平台只读后如何自建数据集与断言 | 测试、Agent QA |
+| 多任务 Agent 架构 | [量子位·DeepSeek Super-agent](https://www.qbitai.com/2026/10/506904.html) | Router/Worker、事件过滤、异步 ReAct、状态分离 | Agent 架构、产品 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：发行版安静；信号在「Coding Agent 策略可配置」与「评测/多任务编排工程化」。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Subagent effort | `CLAUDE_CODE_SUBAGENT_EFFORT` 可独立于会话 effort | 子代理不必继承主会话高成本档 |
+| Ultrathink 开关 | `CLAUDE_CODE_DISABLE_ULTRATHINK` | 团队可全局关掉关键词抬档，控账单 |
+| Pooled budgets | 网关 group 共享月度预算 | 企业配额从「单人」扩展到「组」 |
+| Evals 退役 | 10-31 只读 / 11-30 关闭 | YAML 业务契约 + 硬断言优先于托管平台分数 |
+| Super-agent | DeepSeek 公开 Router/Worker 与 Watchdog | 多会话上下文合并 + 异常自愈成为一等设计 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Claude Code 2.1.316](https://code.claude.com/docs/en/changelog) | 当日可核验的 Coding Agent 正式变更 |
+| 必读 | [OpenAI Evals 指南](https://developers.openai.com/api/docs/guides/evals) | 平台只读后的迁移窗口 |
+| 推荐 | [DeepSeek Super-agent（量子位）](https://www.qbitai.com/2026/10/506904.html) | 中文侧自主 Agent 架构叙事；对照原型仓 |
+| 延伸 | Agents API auto-review / compaction 报道 | 相邻窗口的会话治理能力 |
+
+### 来源清单
+
+- 检索范围：2026-10-31 00:00:00 到 2026-10-31 23:59:59（Asia/Shanghai）
+- 引用域名：code.claude.com, developers.openai.com, qbitai.com, github.com
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| Changelog | Claude Code 2.1.316 | 2026-10-31 | https://code.claude.com/docs/en/changelog |
+| 文档 | Working with evals | 2026-10-31 生效只读 | https://developers.openai.com/api/docs/guides/evals |
+| 媒体 | DeepSeek Super-agent | 2026-10-31 | https://www.qbitai.com/2026/10/506904.html |
+
 ## 2026-10-30
 
 ### 今日总览

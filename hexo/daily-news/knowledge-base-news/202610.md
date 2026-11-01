@@ -2,6 +2,65 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-10-31
+
+### 今日总览
+
+**一句话结论**：周六知识库主线是「自主 Agent 底座中文传播 + 前端构建器版本信号 + 固定企业博客安静」——量子位报道 DeepSeek Super-agent；掘金热榜可见 Rspack 2.3（SWC Next）与 Agent/安全工具盘点；美团技术博客 / 阿里云开发者 / 腾讯云开发者当日无专项主题（Langfuse / LangChain / spring-ai-alibaba / Code Graph / Loop Engineering）可核验新正式文。GitHub 榜单已由 `tools/update_github_topz.py` 刷新至 `hexo/source/_posts/github/`。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索 | qbitai.com / juejin.cn / tech.meituan.com / developer.aliyun.com / cloud.tencent.com + GitHub ranking |
+| 核心 | 1) DeepSeek Super-agent 架构中文稿；2) Rspack 2.3 / 编辑器与工具链热议；3) 固定企业源专项主题安静 |
+| 专项主题 | Langfuse/LangChain/spring-ai-alibaba/Code Graph/Loop：固定源内无 2026-10-31 可核验新文（相邻日掘金 create_agent 实战可作背景） |
+
+### 重要文章与更新
+
+| 标题 | 日期 | 类型 | 价值 |
+| --- | --- | --- | --- |
+| [量子位：DeepSeek Super-agent](https://www.qbitai.com/2026/10/506904.html) | 2026-10-31 | 中文媒体/开源线索 | Router/Worker、投机执行、Watchdog；对照原型仓 |
+| [Rspack 2.3：联手 SWC 团队带来全新编译器](https://juejin.cn/post/7701932169296003082) | 热榜快照日 | 工具链 | SWC Next 解析器；实验性缓存；内置 CSS |
+| [2026年AI安全测试工具大全](https://juejin.cn/post/7700359102766727178) | 热榜快照日 | 工程盘点 | Promptfoo/garak 等 LLM/Agent 安全工具索引 |
+| [GitHub 日榜趋势速报 \| 2026-10-31](https://juejin.cn/post/7702409212484206618) | 2026-10-31 | 开源雷达 | 24h Star 增速线索（需对照官方榜） |
+| 美团技术博客 / 阿里云 / 腾讯云开发者 | 2026-10-31 | 固定源 | 无当日可核验专项主题新文 |
+
+### 技术文档与实践
+
+| 方向 | 资料 | 要点 |
+| --- | --- | --- |
+| 多任务 Agent 架构 | DeepSeek Super-agent | 连续/高效/主动/持久；事件过滤 + 异步 ReAct |
+| 前端构建 | Rspack 2.3 | SWC Next；loader 级缓存；产物体积 |
+| Agent 安全测试 | 掘金工具盘点 | 红队/越狱/提示注入工具选型入口 |
+| GitHub 榜单 | `_posts/github/*` | stars-snapshot + trending daily/weekly/monthly 已更新 |
+
+### 工程实践归纳
+
+- 固定中文企业博客（美团/阿里云/腾讯云）在 10-31 对 Langfuse、LangGraph/LangChain、spring-ai-alibaba、Code Graph、Loop Engineering 无新正式稿；避免把相邻日期文章记为当日。
+- DeepSeek Super-agent 是架构叙事与原型公开，落地应以仓库与内部评测为准，不宜直接当作生产 SLA。
+- 构建器侧 Rspack 2.3 值得前端基建跟进 changelog；安全测试工具盘点适合作为 Agent 上线前的红队清单起点。
+- GitHub ranking 脚本已跑通（本机需临时放宽 SSL 校验方可拉取）。
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 推荐 | [DeepSeek Super-agent](https://www.qbitai.com/2026/10/506904.html) | 当日中文主线 |
+| 推荐 | [Rspack 2.3](https://juejin.cn/post/7701932169296003082) | 构建器版本信号 |
+| 延伸 | [AI 安全测试工具大全](https://juejin.cn/post/7700359102766727178) | Agent 安全工具索引 |
+| 背景 | [LangGraph vs create_agent（10-27）](https://juejin.cn/post/7701257148912107571) | 相邻日选型背景（非当日） |
+
+### 来源清单
+
+- 检索范围：2026-10-31（Asia/Shanghai）
+- qbitai.com, juejin.cn, tech.meituan.com, developer.aliyun.com, cloud.tencent.com, github.com
+
+| 标题 | URL |
+| --- | --- |
+| DeepSeek Super-agent | https://www.qbitai.com/2026/10/506904.html |
+| Rspack 2.3 | https://juejin.cn/post/7701932169296003082 |
+| AI 安全测试工具大全 | https://juejin.cn/post/7700359102766727178 |
+| GitHub 日榜 10-31 | https://juejin.cn/post/7702409212484206618 |
+
 ## 2026-10-30
 
 ### 今日总览
