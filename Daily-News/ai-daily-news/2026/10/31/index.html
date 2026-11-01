@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-10-31 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-10-31</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/10/">2026-10</a>
+          <span class="post-date">2026-10-31</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：周六主线是「Coding Agent 成本&#x2F;策略旋钮 + 旧评测平台退役 + 自主 Agent 底座公开」——Anthropic Claude Code 2.1.316（10-31）新增 ultrathink 关闭开关、subagent 独立 effort、网关 pooled budget 与 Bedrock guardrail 输入打标，并弃用 Opus 4.8 fast mode；OpenAI 托管 Evals 平台按计划于 10-31 转为只读；量子位同日报道 DeepSeek 公开 Super-agent（Router&#x2F;Worker、投机执行、Watchdog）原型。专项：Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; spring-ai-alibaba &#x2F; Langfuse &#x2F; LangGraph &#x2F; Code Graph &#x2F; Loop &#x2F; Agent Skills 无本日可核验新正式版（Agents API auto-review&#x2F;compaction 属相邻窗口工程信号）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>Claude Code changelog、OpenAI Evals&#x2F;Agents、量子位、GitHub Releases、专项框架</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）Coding Agent 把 effort&#x2F;预算&#x2F;安全策略做成可运维开关；2）评测资产应迁出即将关闭的托管 Evals；3）中文侧 DeepSeek 推动「连续&#x2F;主动&#x2F;持久」多任务 Agent 架构叙事</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>升级 Claude Code ≥2.1.316；评估 <code>CLAUDE_CODE_SUBAGENT_EFFORT</code> &#x2F; <code>DISABLE_ULTRATHINK</code>；Evals 用例改存自有仓库</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：2.1.316 可核验。Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;Langfuse&#x2F;LangGraph&#x2F;Code Graph&#x2F;Loop&#x2F;skills：无本日新正式版。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Coding Agent</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code 2.1.316</a></td>
+<td>2026-10-31</td>
+<td>Changelog</td>
+<td>DISABLE_ULTRATHINK；SUBAGENT_EFFORT；pooled_budget；Bedrock input_tagging；Opus 4.8 fast mode 弃用（11-30 移除）</td>
+</tr>
+<tr>
+<td>评测平台</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/evals">OpenAI Evals → read-only</a></td>
+<td>2026-10-31</td>
+<td>平台变更</td>
+<td>托管 Evals 只读；计划 11-30 关闭；用例&#x2F;门禁迁自建 CI</td>
+</tr>
+<tr>
+<td>自主 Agent（中文）</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/10/506904.html">DeepSeek Super-agent 架构</a></td>
+<td>2026-10-31</td>
+<td>媒体&#x2F;开源线索</td>
+<td>Router+Worker、订阅直通、投机执行、Watchdog；原型仓库需对照</td>
+</tr>
+<tr>
+<td>Agents API（相邻）</td>
+<td>Agents API auto-review &#x2F; compaction</td>
+<td>~2026-10-30</td>
+<td>API&#x2F;SDK</td>
+<td><code>review: auto_review</code>；异步上下文压缩；非本日独立产品博客</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent 运行时旋钮</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code 2.1.316 changelog</a></td>
+<td>ultrathink &#x2F; subagent effort &#x2F; pooled budget &#x2F; layered policy</td>
+<td>平台工程、IDE Agent 运维</td>
+</tr>
+<tr>
+<td>Agent 评测门禁</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/evals">Working with evals</a></td>
+<td>托管平台只读后如何自建数据集与断言</td>
+<td>测试、Agent QA</td>
+</tr>
+<tr>
+<td>多任务 Agent 架构</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/10/506904.html">量子位·DeepSeek Super-agent</a></td>
+<td>Router&#x2F;Worker、事件过滤、异步 ReAct、状态分离</td>
+<td>Agent 架构、产品</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：发行版安静；信号在「Coding Agent 策略可配置」与「评测&#x2F;多任务编排工程化」。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Subagent effort</td>
+<td><code>CLAUDE_CODE_SUBAGENT_EFFORT</code> 可独立于会话 effort</td>
+<td>子代理不必继承主会话高成本档</td>
+</tr>
+<tr>
+<td>Ultrathink 开关</td>
+<td><code>CLAUDE_CODE_DISABLE_ULTRATHINK</code></td>
+<td>团队可全局关掉关键词抬档，控账单</td>
+</tr>
+<tr>
+<td>Pooled budgets</td>
+<td>网关 group 共享月度预算</td>
+<td>企业配额从「单人」扩展到「组」</td>
+</tr>
+<tr>
+<td>Evals 退役</td>
+<td>10-31 只读 &#x2F; 11-30 关闭</td>
+<td>YAML 业务契约 + 硬断言优先于托管平台分数</td>
+</tr>
+<tr>
+<td>Super-agent</td>
+<td>DeepSeek 公开 Router&#x2F;Worker 与 Watchdog</td>
+<td>多会话上下文合并 + 异常自愈成为一等设计</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code 2.1.316</a></td>
+<td>当日可核验的 Coding Agent 正式变更</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/evals">OpenAI Evals 指南</a></td>
+<td>平台只读后的迁移窗口</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/10/506904.html">DeepSeek Super-agent（量子位）</a></td>
+<td>中文侧自主 Agent 架构叙事；对照原型仓</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td>Agents API auto-review &#x2F; compaction 报道</td>
+<td>相邻窗口的会话治理能力</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-10-31 00:00:00 到 2026-10-31 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：code.claude.com, developers.openai.com, qbitai.com, github.com</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Changelog</td>
+<td>Claude Code 2.1.316</td>
+<td>2026-10-31</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">https://code.claude.com/docs/en/changelog</a></td>
+</tr>
+<tr>
+<td>文档</td>
+<td>Working with evals</td>
+<td>2026-10-31 生效只读</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/evals">https://developers.openai.com/api/docs/guides/evals</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>DeepSeek Super-agent</td>
+<td>2026-10-31</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/10/506904.html">https://www.qbitai.com/2026/10/506904.html</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
