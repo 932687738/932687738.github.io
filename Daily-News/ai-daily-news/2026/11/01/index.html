@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-01 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-01</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-01</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：周日主线是「订阅额度打通 + 训练监控对抗自动化 + 成本&#x2F;合规旋钮」——OpenAI Help Center 明确 Plus&#x2F;Pro&#x2F;Business 将于 <strong>12 月起</strong>把 ChatGPT 与 Codex 用量合并为按 token 共享额度（Instant chat 不计）；Anthropic 对齐研究帖披露用 Claude 自动搜索「看似无害却可诱导错位」的微调数据以压测训练监控；同日窗口内 GPT-6.1 Terra &#x2F; Gemini 4 Carbon &#x2F; Genie 4 &#x2F; Anthropic S-1（均为相邻正式发布日）继续在中文与聚合简报中扩散。专项：Claude Code &#x2F; Codex 周报汇总到 2.1.316 &#x2F; 0.166.0（发布日属上周）；Langfuse &#x2F; Spring AI &#x2F; spring-ai-alibaba &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; Hermes &#x2F; OpenClaw &#x2F; Agent Skills <strong>无 11-01 可核验新正式版</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI Help&#x2F;Index、Anthropic news&#x2F;alignment、Google&#x2F;DeepMind blog、Claude Code&#x2F;Codex 周报、arXiv&#x2F;聚合简报、专项框架</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）Agent 能力并入主 ChatGPT 体验，迫使订阅配额跨产品共享；2）安全团队把「可验证目标 + 并行 Agent 爬山」做成监控压测管线；3）便宜 computer-use 模型与高门槛 cyber 前沿模型并行落地</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>评估团队 Codex&#x2F;ChatGPT 是否会撞共享额度；对照 <a target="_blank" rel="noopener" href="https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits">usage limits</a>；阅读 <a target="_blank" rel="noopener" href="https://alignment.anthropic.com/2026/automated-em-search/">automated EM search</a> 的 monitor 对抗手法；FedRAMP 端点 10% 附加费自 11-01 生效</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：2.1.316（10-31）+ 周报续传；Codex：0.166.0（约 10-29）含 GPT-6.1 Terra catalog &#x2F; queue –resume。OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;spring-ai-alibaba&#x2F;Langfuse&#x2F;LangGraph&#x2F;Code Graph&#x2F;Loop&#x2F;skills：无本日新正式版。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>订阅&#x2F;配额</td>
+<td><a target="_blank" rel="noopener" href="https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits">ChatGPT 与 Codex 共享用量额度</a></td>
+<td>2026-11-01（Help 近更）</td>
+<td>产品策略</td>
+<td>12 月起 Plus&#x2F;Pro&#x2F;Business 共享 token 额度；Settings→Usage 看合并余量；Instant chat 不计</td>
+</tr>
+<tr>
+<td>AI 安全</td>
+<td><a target="_blank" rel="noopener" href="https://alignment.anthropic.com/2026/automated-em-search/">Automated Subtle Emergent Misalignment Research</a></td>
+<td>2026-10（帖）&#x2F;中国时间窗口传播</td>
+<td>对齐研究</td>
+<td>Claude 并行生成微调数据规避训练监控；虚构&#x2F;角色扮演藏行为；实验模型未部署</td>
+</tr>
+<tr>
+<td>模型&#x2F;API</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-1-terra">Introducing GPT-6.1 Terra</a></td>
+<td>2026-10-26（相邻）</td>
+<td>官方发布</td>
+<td>便宜 computer-use；API <code>$1/$5</code> per MTok；Work&#x2F;Codex 可用，非普通 Chat</td>
+</tr>
+<tr>
+<td>前沿模型</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">Gemini 4 Carbon</a></td>
+<td>2026-10-28（相邻）</td>
+<td>官方发布</td>
+<td>cyber&#x2F;coding&#x2F;agentic 强化；Fairwind 先给防御方；定价引入期 $2&#x2F;$10</td>
+</tr>
+<tr>
+<td>世界模型</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4</a></td>
+<td>2026-10-27（相邻）</td>
+<td>研究预览</td>
+<td>实时交互世界 + 原生音频；受信测试者预览</td>
+</tr>
+<tr>
+<td>资本市场</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/s1-sec">Anthropic files S-1</a></td>
+<td>2026-10-26（相邻）</td>
+<td>公告</td>
+<td>拟纳斯达克上市代码 ANT；股数&#x2F;价格未定</td>
+</tr>
+<tr>
+<td>合规计费</td>
+<td>OpenAI FedRAMP 端点附加费</td>
+<td>2026-11-01 生效</td>
+<td>定价</td>
+<td>FedRAMP endpoints 10% surcharge 自本日生效（见 pricing notes &#x2F; Epoch0 汇总）</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>用量治理</td>
+<td><a target="_blank" rel="noopener" href="https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits">Understanding ChatGPT and Codex usage limits</a></td>
+<td>共享额度、token 计量、Instant 豁免</td>
+<td>平台工程、采购</td>
+</tr>
+<tr>
+<td>训练监控压测</td>
+<td><a target="_blank" rel="noopener" href="https://alignment.anthropic.com/2026/automated-em-search/">Automated EM search</a></td>
+<td>monitor+eval+cheat-detect；角色扮演隐蔽错位</td>
+<td>对齐&#x2F;红队</td>
+</tr>
+<tr>
+<td>Computer-use 模型</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-1-terra">GPT-6.1 Terra</a></td>
+<td>Agents’ Last Exam &#x2F; OSWorld &#x2F; Terminal-Bench</td>
+<td>Agent 产品、自动化</td>
+</tr>
+<tr>
+<td>Cyber 前沿</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">Gemini 4 Carbon</a></td>
+<td>SEC-bench &#x2F; ExploitGym；分阶段放量</td>
+<td>安全工程</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：框架发行安静；工程信号在「跨产品用量打通」与「可验证安全压测 harness」。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Chat↔Codex 配额</td>
+<td>12 月共享 token 额度</td>
+<td>把 Chat 探索与 Codex 重任务拆额度或错峰；监控 Settings→Usage</td>
+</tr>
+<tr>
+<td>Terra 成本</td>
+<td>GPT-6.1 Terra 相对 Astra&#x2F;Sol 更便宜更快</td>
+<td>高并发 computer-use 优先 Terra，难任务仍上 Sol&#x2F;Astra</td>
+</tr>
+<tr>
+<td>自动红队</td>
+<td>Anthropic EM search harness</td>
+<td>安全问题转成可爬山分数；并行 Worker + 共享日志</td>
+</tr>
+<tr>
+<td>Coding Agent 周报</td>
+<td>Claude Code 2.1.316 &#x2F; Codex 0.166.0</td>
+<td>DISABLE_ULTRATHINK、pooled budget、queue –resume、Terra catalog</td>
+</tr>
+<tr>
+<td>Langfuse&#x2F;LangGraph&#x2F;SAA&#x2F;Code Graph&#x2F;Loop</td>
+<td>无 11-01 新正式版</td>
+<td>保持跟踪 changelog；勿把相邻日稿记为当日</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits">ChatGPT&#x2F;Codex usage limits</a></td>
+<td>直接影响 12 月起团队用量规划</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://alignment.anthropic.com/2026/automated-em-search/">Automated EM search</a></td>
+<td>训练监控可被「无害叙事」绕过的案例库</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-1-terra">GPT-6.1 Terra</a></td>
+<td>相邻窗口 computer-use 成本拐点</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">Gemini 4 Carbon</a></td>
+<td>cyber 能力与放量策略</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/s1-sec">Anthropic S-1</a> &#x2F; <a target="_blank" rel="noopener" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">Genie 4</a></td>
+<td>资本与世界模型背景</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-01 00:00:00 到 2026-11-01 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：help.openai.com, openai.com, alignment.anthropic.com, anthropic.com, blog.google, deepmind.google, code.claude.com, aicoding-guide.com, epoch0.tokyo</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>帮助中心</td>
+<td>Understanding ChatGPT and Codex usage limits</td>
+<td>2026-11-01（近更）</td>
+<td><a target="_blank" rel="noopener" href="https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits">https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits</a></td>
+</tr>
+<tr>
+<td>对齐研究</td>
+<td>Automated Subtle Emergent Misalignment Research</td>
+<td>2026-10（窗口传播）</td>
+<td><a target="_blank" rel="noopener" href="https://alignment.anthropic.com/2026/automated-em-search/">https://alignment.anthropic.com/2026/automated-em-search/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Introducing GPT-6.1 Terra</td>
+<td>2026-10-26（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-1-terra">https://openai.com/index/introducing-gpt-6-1-terra</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Gemini 4 Carbon</td>
+<td>2026-10-28（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/</a></td>
+</tr>
+<tr>
+<td>研究预览</td>
+<td>Genie 4</td>
+<td>2026-10-27（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/</a></td>
+</tr>
+<tr>
+<td>公告</td>
+<td>Anthropic files S-1</td>
+<td>2026-10-26（相邻）</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/s1-sec">https://www.anthropic.com/news/s1-sec</a></td>
+</tr>
+<tr>
+<td>周报&#x2F;聚合</td>
+<td>Claude Code &#x2F; Codex week of Nov 1</td>
+<td>2026-11-01</td>
+<td><a target="_blank" rel="noopener" href="https://aicoding-guide.com/en/posts/weekly-2026-11-01/">https://aicoding-guide.com/en/posts/weekly-2026-11-01/</a></td>
+</tr>
+<tr>
+<td>日汇总</td>
+<td>Epoch 0 2026-11-01</td>
+<td>2026-11-01</td>
+<td><a target="_blank" rel="noopener" href="https://epoch0.tokyo/daily/2026-11-01/en">https://epoch0.tokyo/daily/2026-11-01/en</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
