@@ -1,6 +1,6 @@
 {
-  "last_end_date": "2026-11-01",
-  "last_sync_ymd": "2026-11-01",
+  "last_end_date": "2026-11-02",
+  "last_sync_ymd": "2026-11-02",
   "processed_dates": [
     "2026-08-12",
     "2026-08-13",
@@ -49,7 +49,8 @@
     "2026-10-29",
     "2026-10-30",
     "2026-10-31",
-    "2026-11-01"
+    "2026-11-01",
+    "2026-11-02"
   ],
   "seen_urls": [
     "https://juejin.cn/post/7638806086187565082",
@@ -1157,6 +1158,7 @@
     "https://juejin.cn/post/7700798335889031183",
     "https://juejin.cn/post/7700803425820049434",
     "https://juejin.cn/post/7700846756351180810",
+    "https://juejin.cn/post/7700846756351459338",
     "https://juejin.cn/post/7700857041943904282",
     "https://juejin.cn/post/7700887980139036682",
     "https://juejin.cn/post/7700887980140429322",
@@ -1166,6 +1168,7 @@
     "https://juejin.cn/post/7701250481567039528",
     "https://juejin.cn/post/7701256742281887754",
     "https://juejin.cn/post/7701258021997625353",
+    "https://juejin.cn/post/7701269136323723299",
     "https://juejin.cn/post/7701269179118845988",
     "https://juejin.cn/post/7701269657706315811",
     "https://juejin.cn/post/7701269925750947855",
@@ -1188,17 +1191,24 @@
     "https://juejin.cn/post/7701703182474248211",
     "https://juejin.cn/post/7701870817483259958",
     "https://juejin.cn/post/7701870817484210230",
+    "https://juejin.cn/post/7701912747434754099",
+    "https://juejin.cn/post/7701912747434999859",
     "https://juejin.cn/post/7701932169296003082",
     "https://juejin.cn/post/7701971738456752162",
     "https://juejin.cn/post/7702012705843232810",
-    "https://juejin.cn/post/7702409212484206618"
+    "https://juejin.cn/post/7702064982632824866",
+    "https://juejin.cn/post/7702284306036998144",
+    "https://juejin.cn/post/7702402013539336242",
+    "https://juejin.cn/post/7702409212484206618",
+    "https://juejin.cn/post/7702438435248160804",
+    "https://juejin.cn/post/7702759616728088611"
   ],
   "last_stats": {
     "listing_slots": 120,
-    "unique_new_urls": 13,
-    "skipped_seen_urls": 107,
-    "detail_ok": 13,
+    "unique_new_urls": 9,
+    "skipped_seen_urls": 111,
+    "detail_ok": 9,
     "detail_fail": 0,
-    "seen_urls_in_state": 1140
+    "seen_urls_in_state": 1149
   }
 }
