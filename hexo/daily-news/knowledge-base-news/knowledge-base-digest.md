@@ -2,6 +2,77 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-02
+
+### 今日总览
+
+**一句话结论**：周一固定中文企业源对 Langfuse / LangChain·LangGraph / Code Graph / Spring Alibaba AI / Loop Engineering **无新可核验正式稿**；可收录信号集中在掘金——DeepSeek Super-agent / dsh-superagent 架构解读、AI 代码审查召回率实测、前端基础与开源讨论，以及标注 2026-11-02 的社区 AI/GitHub 日榜速报。GitHub 榜单由同批 `tools/update_github_topz.py` 刷新前端四文。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里/腾讯/字节/百度/美团/京东/滴滴/网易/360/有赞固定源 + 掘金专项关键词 + GitHub ranking |
+| 核心趋势 | 1）大厂官方博客安静；2）社区把 Super-agent 编排层与「AI 审代码召回率」做成可复现实验；3）前端基础语法/隐私/库选型文回流热榜 |
+| 可直接关注 | [通了个宵，终于把 Super-Agent 架构玩明白了](https://juejin.cn/post/7703387329880408114)；[AI 代码审查召回率实测](https://juejin.cn/post/7702064982633152546)；[Jev 轻量决策层（得物）](https://juejin.cn/post/7701614603223203881)；对照 AI 日报 Hermes/LifeVal |
+| 专项检索结论 | Langfuse / LangChain·LangGraph / Code Graph / spring-ai-alibaba / Loop Engineering：固定源内 **未发现 2026-11-02 可核验新文**（历史系列与相邻日稿仅作背景） |
+| 未发现更新 | 美团技术博客、阿里技术 102、中间件博客、腾讯 AlloyTeam、字节官方 techblog、百度 FEX/EFE、京东开发者、滴滴、有赞、360 安全博客、语雀阿里干货等当日无专项主题新文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Agent 架构 | [通了个宵，终于把 Super-Agent 架构玩明白了](https://juejin.cn/post/7703387329880408114) | 热榜窗口 | 掘金 | 消化 DeepSeek Super-agent：Router+隔离 Worker、注意力预算 |
+| AI 工程 | [AI 代码审查召回率实测：20 个骗过单元测试的变异体，抓到 13 个](https://juejin.cn/post/7702064982633152546) | 热榜窗口 | 掘金 | 变异注入盲测召回率；漏检多为「少写一句」 |
+| 流式接口 | [Python 中使用 SSE 实现大模型流式输出](https://juejin.cn/post/7703370591587762203) | 热榜窗口 | 掘金 | yield + StreamingResponse 对接 agent.execute_stream |
+| 决策层 | [Jev 实战：为AI工作流引入轻量决策层](https://juejin.cn/post/7701614603223203881) | 热榜窗口 | 掘金/得物技术 | 分类/选择任务用轻量决策层降本 |
+| 安全 | [EMBRACE 攻击打穿五个 AI 编程工具的浏览器](https://juejin.cn/post/7702407629825654810) | 热榜窗口 | 掘金 | 本地 AI 助手浏览器面成攻击面；补丁滞后风险 |
+| 开源雷达 | [GitHub 日榜趋势速报 \| 2026-11-02](https://juejin.cn/post/7702828258124365851) | 2026-11-02 | 掘金 | dsh-superagent-prototype / rea / t3code 等增速 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Super-agent | [Super-Agent 架构解读](https://juejin.cn/post/7703387329880408114) | Router/Worker、观察/自动模式 | Agent 平台、架构 |
+| 审查评测 | [召回率实测](https://juejin.cn/post/7702064982633152546) | 变异体注入、盲测、漏检类型 | 平台工程、QA |
+| SSE 流式 | [Python SSE](https://juejin.cn/post/7703370591587762203) | 生成器流、前端逐字渲染 | 后端、全栈 |
+| 诊断工具 | [为什么越来越多人用 Arthas 4](https://juejin.cn/post/7703086266371964938) | 无异常但 P99 恶化时的运行时诊断 | Java 后端 |
+| GitHub 榜单 | `hexo/source/_posts/github/*` | stars-snapshot + trending 三周期 | 开源雷达 |
+
+### 工程实践归纳
+
+**总体判断**：固定企业源专项主题安静；社区焦点是「编排层开源解读 + 审查可量化 + 本地 Agent 安全面」。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Langfuse | 固定源无 11-02 新文 | 继续既有 OTel/Java SDK；对照 AI 日报上游 changelog |
+| LangChain/LangGraph | 无当日新文 | 相邻 LangGraph 流式修复见 AI 日报，勿标为知识库当日 |
+| Code Graph | 无当日新文 | 图谱/MCP 逆向工具（rea）仅作相邻兴趣点 |
+| Spring Alibaba AI | 无当日新文 | 历史 MultiAgent/Graph 文作选型背景 |
+| Loop Engineering | 无当日新文 | Super-agent 的「少占人注意力」与 loop/verifier 理念可对照 AI 日报 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 推荐 | [Super-Agent 架构解读](https://juejin.cn/post/7703387329880408114) | 把官方长文压成可落地的架构笔记 |
+| 推荐 | [AI 审查召回率实测](https://juejin.cn/post/7702064982633152546) | 把「AI 会不会漏」做成可抄作业的实验 |
+| 推荐 | [Jev 轻量决策层](https://juejin.cn/post/7701614603223203881) | 工作流里不必事事上大模型 |
+| 延伸 | [EMBRACE 攻击](https://juejin.cn/post/7702407629825654810) / [GitHub 日榜 11-02](https://juejin.cn/post/7702828258124365851) | 本地助手安全与开源热度 |
+
+### 来源清单
+
+- 检索范围：2026-11-02 00:00:00 到 2026-11-02 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里云开发者、掘金、美团/腾讯云/字节/百度/京东/滴滴/有赞/360 等已检索；多数无新增技术文
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 社区 | 掘金 | 技术文章 | Super-Agent 架构解读 | 热榜窗口 | https://juejin.cn/post/7703387329880408114 |
+| 社区 | 掘金 | 技术文章 | AI 代码审查召回率实测 | 热榜窗口 | https://juejin.cn/post/7702064982633152546 |
+| 社区 | 掘金 | 技术文章 | Python SSE 流式输出 | 热榜窗口 | https://juejin.cn/post/7703370591587762203 |
+| 社区 | 掘金/得物技术 | 技术文章 | Jev 轻量决策层 | 热榜窗口 | https://juejin.cn/post/7701614603223203881 |
+| 社区 | 掘金 | 技术文章 | EMBRACE 攻击五助手 | 热榜窗口 | https://juejin.cn/post/7702407629825654810 |
+| 社区 | 掘金 | 日榜速报 | GitHub 日榜 2026-11-02 | 2026-11-02 | https://juejin.cn/post/7702828258124365851 |
+| 全部 | 固定来源清单 | 无专项新增 | Langfuse/LangGraph/Code Graph/SAA/Loop 无当日新文 | - | - |
+
 ## 2026-11-01
 
 ### 今日总览
