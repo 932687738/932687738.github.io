@@ -2,6 +2,81 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-03
+
+### 今日总览
+
+**一句话结论**：周二主线是「物理世界工程 Agent + 终端 CLI 硬化 + 可观测性/技能中心化」——OpenAI 发布 [Accelerating engineering for the physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world)（Astra 端到端 CAD/PCB/固件、BenchCAD、与 Chip Ganassi Racing / Mazda 协作）；Anthropic [Claude Code v2.1.317](https://github.com/anthropics/claude-code/releases/tag/v2.1.317) 强化 `/schedule` 连接器提示、邮箱外发确认、Agent SDK `onFailure: "block"`、网关成本 API 与 OTel 属性；Langfuse 同日上线 [Skill management](https://langfuse.com/changelog/2026-11-03-skill-management) 与 Observations API continuation。专项：Codex 仅有 prerelease `0.167.0-alpha.4`（stable 仍 0.166.0）；Hermes / OpenClaw / Spring AI / spring-ai-alibaba / Code Graph / Loop Engineering **无 11-03 可核验新正式版**（IBM [CUGA vs Hermes vs Deep Agents](https://huggingface.co/blog/ibm-research/cuga-harness) 为 harness 选型对照）。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI Index、Claude Code/Codex Releases、DeepMind/Google Education、Langfuse changelog、HF blog、LangChain/Spring AI/Code Graph/Loop/skills、中文补充 |
+| 核心趋势 | 1）前沿模型叙事从软件编码扩到机电/制造闭环；2）编码 Agent 发行线偏安全与治理（邮箱外发、hook 阻断、成本报表）；3）可观测平台把 Agent Skills 提升到与 Prompt 同级的中心化资产 |
+| 可直接关注 | 对照 Astra 物理工程案例设计内部 CAD/仿真验收；升级 Claude Code 2.1.317 并审阅 `/schedule` 连接器与 OTel 字段；在 Langfuse 试用 Skill management + trace 关联；企业 harness 选型读 CUGA 对比文 |
+| 专项检索结论 | Claude Code：**v2.1.317**（11-03）。Codex：stable 仍 **0.166.0**；存在 **0.167.0-alpha.4**（11-03，prerelease）。OpenClaw / Hermes / Spring AI / spring-ai-alibaba / Code Graph / Loop Engineering：未发现 11-03 新正式发布。Langfuse：Skill management + Observations API continuation（11-03）。LangChain/LangGraph：无独立正式 changelog；IBM 文以 Deep Agents 作对照。Agent Skills：Langfuse 中心化技能管理 + DeepMind Antigravity Cheminformatics Skills。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 物理工程/模型 | [Accelerating engineering for the physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world) | 2026-11-03 | 官方发布 | Astra 端到端设备设计（外壳/PCB/固件）；硬件团队 token 用量自 2 月增约 23×；BenchCAD 2.0；CGR/Mazda 协作 |
+| 编码 Agent | [Claude Code v2.1.317](https://github.com/anthropics/claude-code/releases/tag/v2.1.317) | 2026-11-03 | GitHub Release | `/schedule` 连接器告警、邮箱外发确认、SDK hook `onFailure: "block"`、成本 API、OTel plan/seat/provider |
+| LLM 可观测 | [Skill management in Langfuse](https://langfuse.com/changelog/2026-11-03-skill-management) | 2026-11-03 | Changelog | 技能中心化存储/迭代；API/CLI/MCP/SDK；trace 关联技能版本与文件读取 |
+| LLM 可观测 | [Observations API continuation](https://langfuse.com/changelog/2026-11-03-observations-api-continuation) | 2026-11-03 | Changelog | 长查询跨请求续拉；以 `meta.cursor` 为准勿因空页提前停 |
+| 科学 Agent | [Agentic Cheminformatics with Google Antigravity](https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/) | 2026-11-03 | DeepMind 博客 | Cheminformatics Skills：文献/化合物策展、MMPA、分子建模与合成路线提议 |
+| 教育产品 | [Guided Learning / Classroom AI updates](https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/) | 2026-11-03 | Google 博客 | Guided Learning 扩到 Search/Classroom；逐步引导而非直接给答案 |
+| Harness 评测 | [Same Model, Different Harness: CUGA vs Hermes vs Deep Agents](https://huggingface.co/blog/ibm-research/cuga-harness) | 2026-11-03 | HF 博客 | 同模型 AppWorld：CUGA 81% / Hermes 47% / Deep Agents 30%；强调策略强制与主权部署 |
+| CLI prerelease | [Codex rust-v0.167.0-alpha.4](https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.4) | 2026-11-03 | GitHub Pre-release | 仅 alpha；生产继续盯 0.166.0 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 物理工程 Agent | [OpenAI physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world) | CAD/PCB/仿真闭环、BenchCAD、制造公差缺口 | 硬件/机电、Agent 产品 |
+| Claude Code 治理 | [v2.1.317 notes](https://github.com/anthropics/claude-code/releases/tag/v2.1.317) | schedule 连接器、邮箱提示、hook block、成本报表 | 平台工程、安全 |
+| 技能可观测 | [Langfuse Skill management](https://langfuse.com/changelog/2026-11-03-skill-management) | 技能版本、trace 关联、Usage tab | LLMOps、Agent 平台 |
+| 分页续拉 | [Observations continuation](https://langfuse.com/changelog/2026-11-03-observations-api-continuation) | cursor 分页、空页不停 | 数据工程、评测管线 |
+| Harness 选型 | [CUGA harness blog](https://huggingface.co/blog/ibm-research/cuga-harness) | 同模型换 harness、政策强制点、适用边界 | 架构、企业 AI |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：框架发行线仍偏安静；工程信号落在「物理世界闭环」「CLI 安全/成本旋钮」「Skills 成为可观测一等公民」以及「harness 比模型更能决定任务完成率」。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 物理工程 | OpenAI Astra CAD/PCB/制造协作 | 把制造公差/装配约束写进 verifier，勿止于生成图纸 |
+| Claude Code | 2.1.317 安全与 OTel/成本 | 升级后复测 schedule 任务与网关成本报表；生产 hook 失败默认阻断 |
+| Codex | 仅 alpha.4 | 生产锁 0.166.0；alpha 只做冒烟 |
+| Langfuse Skills | 中心化技能 + trace | 把 skills 当版本化资产，与 prompt 一并评审 |
+| Harness | CUGA/Hermes/Deep Agents 对照 | 按 workload 选 harness；企业规则放 runtime 而非 system prompt |
+| Hermes / OpenClaw / Spring AI / SAA / Code Graph / Loop | 无 11-03 新正式版 | 继续跟踪 changelog；勿把对照实验写成当日 release |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Accelerating engineering for the physical world](https://openai.com/index/accelerating-engineering-for-the-physical-world) | 官方把 Agent 能力边界推进到机电制造，并坦诚制造公差缺口 |
+| 必读 | [Claude Code v2.1.317](https://github.com/anthropics/claude-code/releases/tag/v2.1.317) | 当日最完整的编码 Agent 正式版变更清单 |
+| 推荐 | [Langfuse Skill management](https://langfuse.com/changelog/2026-11-03-skill-management) | Skills 进入可观测与协作中心 |
+| 推荐 | [CUGA vs Hermes vs Deep Agents](https://huggingface.co/blog/ibm-research/cuga-harness) | 用同模型实验说明 harness 选型逻辑 |
+| 延伸 | [Antigravity Cheminformatics](https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/) / [Guided Learning](https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/) | 科学 Agent Skills 与教育引导式 AI |
+
+### 来源清单
+
+- 检索范围：2026-11-03 00:00:00 到 2026-11-03 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, github.com, langfuse.com, deepmind.google, blog.google, huggingface.co, anthropic.com
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Accelerating engineering for the physical world | 2026-11-03 | https://openai.com/index/accelerating-engineering-for-the-physical-world |
+| 开源发布 | Claude Code v2.1.317 | 2026-11-03 | https://github.com/anthropics/claude-code/releases/tag/v2.1.317 |
+| Changelog | Skill management in Langfuse | 2026-11-03 | https://langfuse.com/changelog/2026-11-03-skill-management |
+| Changelog | Observations API continuation | 2026-11-03 | https://langfuse.com/changelog/2026-11-03-observations-api-continuation |
+| 官方博客 | Agentic Cheminformatics with Google Antigravity | 2026-11-03 | https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/ |
+| 官方博客 | Responsible AI for schools with Guided Learning | 2026-11-03 | https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/ |
+| 技术博客 | CUGA, Hermes, and Deep Agents | 2026-11-03 | https://huggingface.co/blog/ibm-research/cuga-harness |
+| 开源预发布 | Codex rust-v0.167.0-alpha.4 | 2026-11-03 | https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.4 |
+
 ## 2026-11-02
 
 ### 今日总览
@@ -147,3 +222,4 @@
 | 公告 | Anthropic files S-1 | 2026-10-26（相邻） | https://www.anthropic.com/news/s1-sec |
 | 周报/聚合 | Claude Code / Codex week of Nov 1 | 2026-11-01 | https://aicoding-guide.com/en/posts/weekly-2026-11-01/ |
 | 日汇总 | Epoch 0 2026-11-01 | 2026-11-01 | https://epoch0.tokyo/daily/2026-11-01/en |
+
