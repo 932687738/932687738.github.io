@@ -2,6 +2,143 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-05
+
+### 今日总览
+
+**一句话结论**：周四主线是「对齐网络安全 Agent + 视频生成降本加长 + 企业治理旋钮」——OpenAI 发布 [GPT‑6 Cyber](https://openai.com/index/introducing-gpt-6-cyber)（ExploitGym 相对提升约 51%，Critical 级网络能力，Daybreak Red/Blue）；Google 推出 [Gemini Omni 1.2 Flash](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/)（原生 15 秒视频、多轮编辑、降价约 30%）；Anthropic Console 增加 [IP allowlist / 全处签出](https://platform.claude.com/docs/en/release-notes/overview)（beta）；Hugging Face 发布 [NVIDIA Cosmos 3](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation) 四款开源交互仿真权重。专项：LangChain 生态有 langchain-core **1.7.6**（11-05）信号；Claude Code/Codex/OpenClaw/Hermes/Spring AI/SAA/Code Graph/Loop **无 11-05 新正式 CLI/框架版**。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI Index、Google DeepMind/Cloud 博客、Claude Platform release notes、HF/NVIDIA Cosmos、openai-node release、LangChain、专项主题 |
+| 核心趋势 | 1）防御向网络 Agent 进入 Critical 能力带并强调 scope alignment；2）视频生成强调更长镜头、多轮改与单价下降；3）企业 API 治理补 IP 允许列表与远程强制登出；4）具身/驾驶世界模型继续开源权重 |
+| 可直接关注 | Daybreak 申请与沙箱红队流程；Omni 1.2 Flash 15s 多轮改广告素材；Console 启用 IP allowlist；评估 Cosmos3-Nano-* 对驾驶/双臂仿真数据管线 |
+| 专项检索结论 | Claude Code：无 11-05 新版（仍 2.1.318）。Codex：无新 stable；openai-node **v7.51.0** 含图像 complexity/GIF/SVG 与 GPT-6 Rosalind 目录项。OpenClaw / Hermes / Spring AI / spring-ai-alibaba / Code Graph / Loop：未发现 11-05 新正式发布。Langfuse：无 11-05 新 changelog（承接 11-04 Gateway）。LangChain/LangGraph：langchain-core **1.7.6**（11-05）。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 网络安全 Agent | [GPT‑6 Cyber](https://openai.com/index/introducing-gpt-6-cyber) | 2026-11-05 | 官方发布 | ExploitGym 48.5% vs 32.1%；越界利用抑制显著提升；Firefox/Linux 实战披露；Daybreak Red 受限开放 |
+| 视频生成 | [Gemini Omni 1.2 Flash](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/) | 2026-11-05 | 官方博客 | 原生最长 15s；多轮对话编辑；相对 1.1 降价约 30%（720p $0.07/s） |
+| 平台治理 | [Claude Platform RN 11-05](https://platform.claude.com/docs/en/release-notes/overview) | 2026-11-05 | 官方 Release Notes | Console IP allowlist（beta）；Admin API 将成员从 Claude 全处签出（beta） |
+| 世界模型 | [NVIDIA Cosmos 3 Open Models](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation) | 2026-11-05 | HF 博客 | Transfer-Auto / Sim-Auto / Sim-Transfer / Sim-Bimanual；OpenMDW1.1 |
+| SDK | [openai-node v7.51.0](https://github.com/openai/openai-node/releases/tag/v7.51.0) | 2026-11-05 | GitHub Release | 图像 complexity/GIF/SVG；居住地选项；模型目录扩展 |
+| Agent 框架 | langchain-core 1.7.6 | 2026-11-05 | 开源发布 | LangChain 核心库日更（对照生产锁版本） |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 网络 Agent | [GPT‑6 Cyber](https://openai.com/index/introducing-gpt-6-cyber) | scope alignment、Daybreak Blue/Red、系统卡与滥用监测 | 安全研究、平台治理 |
+| 视频 API | [Omni 1.2 Flash](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/) | 15s、多轮改、参考一致性、定价 | 创意工程、广告/电商视频 |
+| 企业治理 | [Claude Platform RN](https://platform.claude.com/docs/en/release-notes/overview) | IP allowlist、全处签出 | 安全运营、合规 |
+| 仿真数据 | [Cosmos 3](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation) | 多视角驾驶、LiDAR、双臂动作→视频 | 自动驾驶、机器人 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：能力叙事从「写代码」扩到「对齐的进攻性安全研究」与「可编辑长视频」；框架侧仅有 core 小版本信号，工程重点在访问控制与沙箱。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| GPT‑6 Cyber | Critical + Daybreak | 只在授权环境跑；强制 IP allowlist 与人工复核 |
+| Omni 1.2 | 15s + 多轮 + 降价 | 用低清草稿+多轮改再升采样，控成本 |
+| Claude 治理 | IP allowlist / 远程签出 | 泄露 Key 时缩小可用网络面 |
+| Cosmos 3 | 四开源检查点 | 先按传感器/构型 post-train，再蒸馏流式 Sim |
+| LangChain core 1.7.6 | 小版本 | 锁依赖并跑回归；勿当重大 API 变更 |
+| Claude Code / Codex CLI / Hermes / OpenClaw / Spring AI / SAA / Code Graph / Loop | 无新正式版 | 继续跟踪 changelog |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [GPT‑6 Cyber](https://openai.com/index/introducing-gpt-6-cyber) | 对齐网络 Agent 的能力、边界与防护设计一次讲清 |
+| 必读 | [Gemini Omni 1.2 Flash](https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/) | 视频生成生产参数与定价 |
+| 推荐 | [Claude Platform 11-05](https://platform.claude.com/docs/en/release-notes/overview) | 企业侧立即可开的治理开关 |
+| 推荐 | [Cosmos 3](https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation) | 开源世界模型与后训练配方 |
+| 延伸 | [openai-node v7.51.0](https://github.com/openai/openai-node/releases/tag/v7.51.0) | 跟上 Images 2.6 API 表面 |
+
+### 来源清单
+
+- 检索范围：2026-11-05 00:00:00 到 2026-11-05 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, blog.google, platform.claude.com, huggingface.co, github.com
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | GPT‑6 Cyber | 2026-11-05 | https://openai.com/index/introducing-gpt-6-cyber |
+| 官方博客 | Gemini Omni 1.2 Flash | 2026-11-05 | https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/ |
+| 官方 Release Notes | Claude Platform November 5, 2026 | 2026-11-05 | https://platform.claude.com/docs/en/release-notes/overview |
+| 技术博客 | NVIDIA Cosmos 3 Open Models | 2026-11-05 | https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation |
+| 开源发布 | openai-node v7.51.0 | 2026-11-05 | https://github.com/openai/openai-node/releases/tag/v7.51.0 |
+
+## 2026-11-04
+
+### 今日总览
+
+**一句话结论**：周三主线是「图像生成加速落地 + 编码 Agent 可靠性硬化 + LLM 网关/可观测收口」——OpenAI 发布 [Images 2.6](https://openai.com/index/introducing-images-2-6/)（ChatGPT/Codex/API，Flare/Sunburst、GIF/SVG、复杂度参数）；Anthropic [Claude Code 2.1.318](https://github.com/anthropics/claude-code/releases/tag/v2.1.318) 强化登录过期可见性与大量会话/MCP/云会话修复；Langfuse 上线 [AI Gateway 公测](https://langfuse.com/changelog/2026-11-04-ai-gateway-public-beta)。MCP 安全与生态论文同日集中出现。专项：Codex/OpenClaw/Hermes/Spring AI/spring-ai-alibaba/Code Graph/Loop Engineering **无 11-04 可核验新正式版**。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI Index、Claude Code changelog/GitHub、Langfuse changelog、Gemini/Computer Use 核验、arXiv MCP、Dify/Langflow/ComfyUI release、专项主题 |
+| 核心趋势 | 1）多模态创作从静图扩到可控动画与 API 精细编辑；2）编码 Agent 发行线继续偏会话恢复、凭证过期与共享主目录可靠性；3）可观测平台把多厂商 LLM 调用收进统一网关；4）MCP 研究转向供应链信任与破坏性工具审批缺口 |
+| 可直接关注 | 评估 Images 2.6 Flare vs Sunburst 与 complexity 参数对海报/商品图工作流；升级 Claude Code 2.1.318 并复测 `-p`/网络盘登录；试用 Langfuse AI Gateway 统一凭证与成本归因；审阅 MCP 工具签名之外的数据隔离 |
+| 专项检索结论 | Claude Code：**v2.1.318**（11-04）。Codex：未发现 11-04 新 stable。OpenClaw / Hermes / Spring AI / spring-ai-alibaba / Code Graph / Loop Engineering：未发现 11-04 新正式发布。Langfuse：**AI Gateway public beta**（11-04）。LangChain/LangGraph：无独立 11-04 正式 changelog（langchain-core 1.7.6 落在 11-05）。Agent Skills：Claude Code mods/`effort` fork 与 IDE 扩展安装策略变更。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 图像生成 | [Introducing Images 2.6](https://openai.com/index/introducing-images-2-6/) | 2026-11-04 | 官方发布 | 生成提速约 50%；API Flare/Sunburst；GIF 动画、markup 编辑、SVG 导出、complexity 参数 |
+| 编码 Agent | [Claude Code v2.1.318](https://github.com/anthropics/claude-code/releases/tag/v2.1.318) | 2026-11-04 | GitHub Release | `loginExpiresAt`/`credential_expires_at`、10 天过期警告；会话恢复/MCP/云会话大量修复；IDE 终端内不再自动装扩展 |
+| LLM 网关 | [Launching the Langfuse AI Gateway](https://langfuse.com/changelog/2026-11-04-ai-gateway-public-beta) | 2026-11-04 | Changelog | OpenAI/Anthropic 请求经 Langfuse 统一凭证、用量、成本与 tracing（公测） |
+| 工作流 | [Dify 1.19.0](https://github.com/langgenius/dify/releases) / [Langflow v1.13.1](https://github.com/langflow-ai/langflow/releases) | 2026-11-04 | 开源发布 | Agent/工作流低代码栈同步迭代（可对照生产升级窗口） |
+| 扩散 GUI | [ComfyUI v0.44.0](https://github.com/Comfy-Org/ComfyUI/releases) | 2026-11-04 | 开源发布 | 节点式图像/视频生成工作流更新 |
+| MCP 研究 | [MCP-Eco](https://arxiv.org/abs/2611.06897) / [Signed, Sealed, Leaked](https://arxiv.org/abs/2611.06585) | 2026-11-04 | 论文 | MCP 生态数据集；签名工具仍可外泄数据，需数据隔离执行 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 图像 API | [Images 2.6](https://openai.com/index/introducing-images-2-6/) | Flare/Sunburst、quality/complexity、GIF/SVG、markup | 多媒体工程、设计系统 |
+| Claude Code | [v2.1.318 changelog](https://code.claude.com/docs/en/changelog) | 登录过期、网络盘配置、MCP handshake、云会话无仓库选项 | 平台工程、Agent 运维 |
+| LLM 网关 | [Langfuse AI Gateway](https://langfuse.com/changelog/2026-11-04-ai-gateway-public-beta) | 多厂商路由、成本归因、tracing | LLMOps |
+| MCP 安全 | [Signed, Sealed, Leaked](https://arxiv.org/abs/2611.06585) | 签名≠安全、germline 隔离 | 安全、MCP 平台 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：框架 release 偏安静；工程信号落在「多模态创作 API 化」「编码 Agent 凭证/会话硬化」「可观测网关收口」与「MCP 供应链信任」。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Images 2.6 | ChatGPT/Codex/API 同步 | 用 complexity 区分快改与复杂构图；商品图优先 Sunburst |
+| Claude Code | 2.1.318 | 无值守任务关注登录过期告警；共享 NFS home 优先升级 |
+| Langfuse Gateway | 公测 | 把多 Key 与成本报表收到一处，再接现有 trace |
+| MCP 论文 | Eco + 签名泄漏 | 工具审批不能只看签名；破坏性调用要宿主侧确认 |
+| LangChain/Spring AI/SAA/Code Graph/Loop/Codex/Hermes/OpenClaw | 无 11-04 新正式版 | 继续跟踪；勿把周边开源日更写成专项正式版 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Images 2.6](https://openai.com/index/introducing-images-2-6/) | 官方多模态创作能力与 API 控制面一次说清 |
+| 必读 | [Claude Code v2.1.318](https://github.com/anthropics/claude-code/releases/tag/v2.1.318) | 当日最完整的编码 Agent 正式版变更 |
+| 推荐 | [Langfuse AI Gateway](https://langfuse.com/changelog/2026-11-04-ai-gateway-public-beta) | 可观测与调用面合并的关键一步 |
+| 推荐 | [Signed, Sealed, Leaked](https://arxiv.org/abs/2611.06585) | 纠正「签名即可信」的 MCP 误区 |
+| 延伸 | [MCP-Eco](https://arxiv.org/abs/2611.06897) / Dify·Langflow·ComfyUI releases | 生态数据与周边工作流栈 |
+
+### 来源清单
+
+- 检索范围：2026-11-04 00:00:00 到 2026-11-04 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, github.com, code.claude.com, langfuse.com, arxiv.org
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Introducing Images 2.6 | 2026-11-04 | https://openai.com/index/introducing-images-2-6/ |
+| 开源发布 | Claude Code v2.1.318 | 2026-11-04 | https://github.com/anthropics/claude-code/releases/tag/v2.1.318 |
+| Changelog | Langfuse AI Gateway public beta | 2026-11-04 | https://langfuse.com/changelog/2026-11-04-ai-gateway-public-beta |
+| 论文原文 | MCP-Eco | 2026-11-04 | https://arxiv.org/abs/2611.06897 |
+| 论文原文 | Signed, Sealed, Leaked | 2026-11-04 | https://arxiv.org/abs/2611.06585 |
+
 ## 2026-11-03
 
 ### 今日总览

@@ -2,6 +2,136 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-05
+
+### 今日总览
+
+**一句话结论**：固定来源延续「个人/企业 Agent 工程化」——阿里云开发者社区给出控制面/数据面分离的个人 Agent 架构文，并配套模型路由与多入口接入成本讨论；掘金出现 Anthropic Agent 指南精译与本地模型路由工具更新。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里/腾讯/字节/百度/美团/京东/滴滴/网易/360/有赞；专项五主题 |
+| 核心趋势 | 1）控制面与数据面、权限分级成为个人 Agent 标配叙事；2）企业侧强调统一执行权限与模型路由可观测；3）社区继续消化官方 Agent 方法论 |
+| 可直接关注 | 用 L1–L4 权限表约束资金/外发；模型路由上线前做能力/降级/成本测试；对照 Anthropic Building Effective Agents |
+| 专项检索结论 | Langfuse：腾讯云侧有可观测/MCP 相关页面信号，无 11-05 深度专文。LangChain/LangGraph：出现于 Agent 方法论译文语境。Code Graph：未发现。Spring Alibaba AI：未发现新专文。Loop Engineering：控制面/事件驱动文与 loop 工程同构，非专名 release。 |
+| 未发现更新 | 美团、字节官网博客、百度 FEX/EFE、滴滴、有赞、360、京东凹凸等未检出可核验 11-05 原文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Agent 架构 | [个人 Agent：控制面与数据面分离](https://developer.aliyun.com/article/1779350) | 2026-11-05 | 阿里云开发者社区 | Router-Worker、事件订阅、状态持久化、上下文预算、L1–L4 权限 |
+| 企业接入 | [企业接入 AI，真正贵的可能是第二次、第三次](https://developer.aliyun.com/article/1779331) | 2026-11-05 | 阿里云开发者社区 | 多入口规则分散的成本 |
+| 模型路由 | [模型路由上线前该测什么](https://developer.aliyun.com/article/1779517) | 2026-11-05 | 阿里云开发者社区 | 能力/格式/降级/成本/延迟测试清单 |
+| Agent 方法论 | [构建高效的智能体（Anthropic 精译）](https://juejin.cn/post/7704498630917636105) | 2026-11-05 | 掘金 | 官方 Building Effective Agents 图解 |
+| 本地路由 | [HiRoute 新版本](https://juejin.cn/post/7704542913921597474) | 2026-11-05 | 掘金 | 本地按工作负载选模型 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 个人 Agent | [1779350](https://developer.aliyun.com/article/1779350) | 控/数分离、权限分级、前缀缓存 | 架构、安全 |
+| 路由评测 | [1779517](https://developer.aliyun.com/article/1779517) | 上线前测试矩阵 | 平台工程 |
+| 方法论 | [Anthropic 精译](https://juejin.cn/post/7704498630917636105) | 透明编排、工具与人工审批 | Agent 产品 |
+
+### 工程实践归纳
+
+**总体判断**：固定来源把「能聊」升级为「能落系统」；权限与路由测试比追新模型更紧迫。五专项中仅 LangChain 语境与可观测弱信号，无 Spring Alibaba AI / Code Graph / Langfuse 深度新文。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 控/数分离 | 阿里云长文 | Router 不代做；线索事件直投 |
+| 权限 | L1–L4 | 资金与对外发言延迟授权 |
+| 模型路由 | 测试清单文 | 先可观测再切流 |
+| 专项五主题 | 弱/无新专文 | 保持检索记录，不硬凑 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [个人 Agent 系统架构](https://developer.aliyun.com/article/1779350) | 固定来源内最完整的控/数面与权限模型 |
+| 推荐 | [模型路由测试](https://developer.aliyun.com/article/1779517) | 可直接变成上线检查表 |
+| 推荐 | [Anthropic Agent 精译](https://juejin.cn/post/7704498630917636105) | 对齐官方方法论 |
+| 延伸 | [企业接入成本](https://developer.aliyun.com/article/1779331) / [HiRoute](https://juejin.cn/post/7704542913921597474) | 组织与本地路由补充 |
+
+### 来源清单
+
+- 检索范围：2026-11-05 00:00:00 到 2026-11-05 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里云开发者社区、掘金；其余维度已检索
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 个人 Agent 的系统架构 | 2026-11-05 | https://developer.aliyun.com/article/1779350 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 企业接入 AI 的二次成本 | 2026-11-05 | https://developer.aliyun.com/article/1779331 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 模型路由上线前该测什么 | 2026-11-05 | https://developer.aliyun.com/article/1779517 |
+| （社区） | 掘金 | 技术文章 | 构建高效的智能体精译 | 2026-11-05 | https://juejin.cn/post/7704498630917636105 |
+| （社区） | 掘金 | 技术文章 | HiRoute 新版本 | 2026-11-05 | https://juejin.cn/post/7704542913921597474 |
+
+## 2026-11-04
+
+### 今日总览
+
+**一句话结论**：固定来源日内主线是 DeepSeek Super-agent（Router/Worker、事件驱动、Thread 订阅）在阿里云开发者社区与掘金的集中解读，并延伸到生产 Agent 的记忆/任务调度与 Memory–Skill 分工。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里/腾讯/字节/百度/美团/京东/滴滴/网易/360/有赞固定来源；专项 Langfuse/LangChain·LangGraph/Code Graph/Spring Alibaba AI/Loop |
+| 核心趋势 | 1）持续运行多任务 Agent 架构成为中文社区热点；2）工程文强调错误熔断、记忆分层与规则外置到 Skill；3）Spring AI Alibaba + RAG/MCP 导购类落地文出现 |
+| 可直接关注 | 对照 Router-Worker 与现有 multi-agent；把规则迁出 Memory；评估 Thread 订阅对 Token 成本的消融结论 |
+| 专项检索结论 | Langfuse：未发现固定来源内 11-04 可核验专文。LangChain/LangGraph：有对照/实践讨论，无官方新版专文。Code Graph：未发现。Spring Alibaba AI：掘金导购 Agent 文基于 Spring AI（Alibaba）+ RAG/MCP/Graph。Loop Engineering：Super-agent/Harness 长文与 loop 工程高度同构（相邻传播）。 |
+| 未发现更新 | 美团技术团队、腾讯 AlloyTeam、百度 FEX/EFE、滴滴、有赞、360、京东凹凸等站内未检出可核验 11-04 原文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Agent 架构 | [DeepSeek Super-agent 架构解析](https://developer.aliyun.com/article/1779111) | 2026-11-04 | 阿里云开发者社区 | Router/Worker、事件驱动、Thread 订阅、上下文与 Watchdog |
+| Agent 实践 | [DeepSeek 的 Super-agent 设计与工程实践](https://juejin.cn/post/7704153197188169728) | 2026-11-04 | 掘金 | 对照 LobeHub 任务分派与事件触发 |
+| Agent 解读 | [Router 动嘴，Worker 干活](https://juejin.cn/post/7704197912935252002) | 2026-11-04 | 掘金 | 分层职责与适用边界讨论 |
+| Agent 工程 | [记忆机制 + 任务拆解 + 自动执行](https://juejin.cn/post/7704226087846412303) | 2026-11-04 | 掘金 | Planner/Memory/Executor 与 Token 压缩 |
+| Spring AI / RAG | [对话式导购 + RAG + MCP](https://juejin.cn/post/7703772628574486579) | 2026-11-04 | 掘金 | Spring AI（Alibaba）+ Milvus/PgVector + Graph/SSE |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Super-agent | [阿里云 1779111](https://developer.aliyun.com/article/1779111) | 双层编排、Thread 直通、存算分离 | 架构、Agent 平台 |
+| 生产 Agent | [三层架构精简](https://juejin.cn/post/7704226087846412303) | DAG 调度、熔断、可观测 | 后端工程 |
+| Java AI | [导购 Agent](https://juejin.cn/post/7703772628574486579) | RAG + MCP + Graph 工作流 | Java/Spring 团队 |
+
+### 工程实践归纳
+
+**总体判断**：中文固定来源把「会话型 Agent」升级为「持续运行的任务系统」；Spring Alibaba AI 有落地样例，Langfuse/Code Graph/Loop 专名原文偏少，需靠相邻 Harness/Loop 文补认知。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Super-agent | 阿里云 + 掘金多篇 | Router 只调度；同线索事件直投 Worker |
+| Memory/Skill | 规则外置讨论升温 | Memory 做索引，规则放 Skill，控上下文 |
+| Spring Alibaba AI | 导购 Agent 文 | 以 Graph + MCP 串推荐与下单工具 |
+| Langfuse / Code Graph / Loop 专名 | 固定来源内弱信号 | 继续盯阿里云/掘金；Loop 看 Harness 长文 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [DeepSeek Super-agent 架构解析](https://developer.aliyun.com/article/1779111) | 固定来源内最完整的双层编排拆解 |
+| 推荐 | [苍何工程实践](https://juejin.cn/post/7704153197188169728) | 把架构映射到真实任务分派 |
+| 推荐 | [三层架构精简](https://juejin.cn/post/7704226087846412303) | 可直接抄的生产清单 |
+| 延伸 | [导购 + RAG + MCP](https://juejin.cn/post/7703772628574486579) | Java 栈落地参考 |
+
+### 来源清单
+
+- 检索范围：2026-11-04 00:00:00 到 2026-11-04 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里云开发者社区、掘金；其余公司维度已检索但无新增可核验原文
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | DeepSeek Super-agent 架构解析 | 2026-11-04 | https://developer.aliyun.com/article/1779111 |
+| （社区） | 掘金 | 技术文章 | DeepSeek 的 Super-agent 设计与工程实践 | 2026-11-04 | https://juejin.cn/post/7704153197188169728 |
+| （社区） | 掘金 | 技术文章 | Router 动嘴，Worker 干活 | 2026-11-04 | https://juejin.cn/post/7704197912935252002 |
+| （社区） | 掘金 | 技术文章 | 记忆机制 + 任务拆解 + 自动执行 | 2026-11-04 | https://juejin.cn/post/7704226087846412303 |
+| （社区） | 掘金 | 技术文章 | 对话式导购 + RAG + MCP | 2026-11-04 | https://juejin.cn/post/7703772628574486579 |
+
 ## 2026-11-03
 
 ### 今日总览
