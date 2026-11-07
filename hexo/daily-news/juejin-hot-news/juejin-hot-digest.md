@@ -2,6 +2,95 @@
 
 按 Asia/Shanghai 时区汇总掘金文章热榜与收藏热榜（后端 / 前端 / 人工智能 / 开发工具），按文章链接去重并归纳正文。
 
+## 2026-11-07
+
+### 今日总览
+
+**一句话结论**：四标签×双榜扫描后新增 8 条未见 URL——后端/前端偏 AI 工程串讲与本地 Markdown 编辑器开源，人工智能侧 Buddy One 跨应用协同升温，开发工具侧集中在 GitHub 趋势速报、桌面 Agent（agent-desktop）与 QQ 机器人自建迁移。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 文章热榜 + 收藏热榜 × 后端/前端/人工智能/开发工具 |
+| 榜单规模 | 列表总条数 120；去重后新 URL 8；跳过已见 112；详情失败 0 |
+| 核心趋势 | 1）Java 工程师把 LLM/RAG/Agent/MCP 串成可落地链路；2）办公 Agent 从单应用走向 Buddy One 协同；3）桌面 Agent 讨论从截图坐标转向无障碍树 ref |
+| 可直接关注 | [Java AI 串讲](https://juejin.cn/post/7703872149400453156)；[Buddy One](https://juejin.cn/post/7703780916560396323)；[agent-desktop](https://juejin.cn/post/7703818887570407450)；[XJ-Editor](https://juejin.cn/post/7703823130586316800) |
+
+### 后端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 14 | [面试官让你把 LLM、RAG、Agent、MCP 串起来讲清楚，90% 的 Java 工程师当场露馅](https://juejin.cn/post/7703872149400453156) | Rain的Java大神之路 | 赞2/藏9/阅352 | 用电商客服“订单为何未发货”串起 LLM→Embedding→向量库→RAG→Tool→MCP→Agent；给五层架构、余弦相似度易错点、float 存 double 累加、ReAct 四道防护与 Spring Boot 变 MCP Server 的生产向代码。强调 RAG 瓶颈常在检索而非生成。 | https://juejin.cn/post/7703872149400453156 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 前端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 13 | [我用 AI 给自己写了一个 Markdown 编辑器，然后把它开源了](https://juejin.cn/post/7703823130586316800) | 修己xj | 赞5/藏5/阅487 | 非前端作者用 AI 做本地优先 XJ-Editor：Markdown/HTML/JSON、PDF/Office 预览、文档转 Markdown、多厂商 AI 助手与 Git 一体窗口，目标是减少写作时的工具切换。 | https://juejin.cn/post/7703823130586316800 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 人工智能
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 15 | [腾讯 Buddy One 来了，办公生态一键打通 WorkBuddy（附教程）](https://juejin.cn/post/7703780916560396323) | 苍何 | 赞6/藏3/阅432 | 介绍 Buddy One 将 WorkBuddy、腾讯会议、腾讯文档、ima、腾讯网盘与积分池打通，并整理若干跨应用协同玩法与授权步骤。 | https://juejin.cn/post/7703780916560396323 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 开发工具
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 11 | [GitHub 日榜趋势速报 \| 2026-11-05](https://juejin.cn/post/7704165786370588723) | miofly | 赞2/藏1/阅233 | 日榜速报：NVIDIA/auto-ontology 近 24h +2265 Star，定位企业元数据→语义图谱上下文层。 | https://juejin.cn/post/7704165786370588723 |
+| 12 | [放弃 QQ 官方机器人：用 SnowLuma + AstrBot 自建 QQ 机器人](https://juejin.cn/post/7703531021346963510) | 时早玖沐 | 赞0/藏1/阅259 | 因官方机器人能力分级/私聊限制/TIM 卡片失效，迁移到 SnowLuma（容器真客户端+ptrace）+ AstrBot；强调非官方注入风险，勿用主号。 | https://juejin.cn/post/7703531021346963510 |
+| 13 | [GitHub 周榜趋势速报 \| 2026-11-01](https://juejin.cn/post/7702948457379659785) | miofly | 赞0/藏1/阅245 | 周榜速报，覆盖 rea、cleanyourtv、dsh-our-free-model 等近 7 日增速项目。 | https://juejin.cn/post/7702948457379659785 |
+| 14 | [桌面 Agent 缺的不是视觉：Vercel 开源 agent-desktop，用无障碍树 ref 替代截图坐标](https://juejin.cn/post/7703818887570407450) | 深蓝AI | 赞1/藏2/阅201 | 解读 vercel-labs/agent-desktop：把“看”和“点”拆成可验证步骤，失败原因写入 JSON 契约，便于无人值守流水线调用。 | https://juejin.cn/post/7703818887570407450 |
+| 15 | [美团龙猫发布 LongCat-2.5：1.6T 参数原生多模态模型，主攻长程智能体任务](https://juejin.cn/post/7702984654098612233) | miofly | 赞0/藏0/阅239 | 社区速读 LongCat-2.5：约 1.6T 总参、单 token 激活约 480B，强化原生视觉与智能体编程；细节以美团技术原文为准。 | https://juejin.cn/post/7702984654098612233 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 跨榜重复与去重说明
+
+- 本轮新摘要 URL 数：8
+- 因 `seen_urls` 跳过：112（只给数量；不把已见文再展开成表行）
+- 同文多标签/双榜出现：无（每条新 URL 仅单一 appearances）
+- 详情失败：0
+
+### 来源清单
+
+- 快照日：2026-11-07（Asia/Shanghai）
+- 页面：https://juejin.cn/hot/articles 、 https://juejin.cn/hot/collected-articles
+- 抓取：`tools/juejin_hot_fetch.py` → `_staging_latest.json`
+
+| 标签 | 榜单 | 标题 | 链接 |
+| --- | --- | --- | --- |
+| 后端 | 文章热榜 | LLM/RAG/Agent/MCP 串讲 | https://juejin.cn/post/7703872149400453156 |
+| 前端 | 文章热榜 | AI 写 Markdown 编辑器开源 | https://juejin.cn/post/7703823130586316800 |
+| 人工智能 | 文章热榜 | Buddy One | https://juejin.cn/post/7703780916560396323 |
+| 开发工具 | 文章热榜 | GitHub 日榜 2026-11-05 | https://juejin.cn/post/7704165786370588723 |
+| 开发工具 | 文章热榜 | SnowLuma + AstrBot | https://juejin.cn/post/7703531021346963510 |
+| 开发工具 | 文章热榜 | GitHub 周榜 2026-11-01 | https://juejin.cn/post/7702948457379659785 |
+| 开发工具 | 文章热榜 | agent-desktop | https://juejin.cn/post/7703818887570407450 |
+| 开发工具 | 文章热榜 | LongCat-2.5 速读 | https://juejin.cn/post/7702984654098612233 |
+
 ## 2026-11-06
 
 ### 今日总览
@@ -546,4 +635,3 @@
 | 我开源了个免费的 Markdown 编辑器：Lumin | https://juejin.cn/post/7699888899713499177 |
 | GitHub 日榜趋势速报 | 2026-10-31 | https://juejin.cn/post/7702409212484206618 |
 | 纯前端图片压缩怎么做？不用上传服务器，浏览器里跑完所有逻辑 | https://juejin.cn/post/7669733200704798739 |
-
