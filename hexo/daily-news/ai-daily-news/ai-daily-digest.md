@@ -2,6 +2,82 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-07
+
+### 今日总览
+
+**一句话结论**：周六官方产品博客整体偏静——OpenAI Index/News、Anthropic Newsroom 均未检出可核验的 11-07 新稿；主线落在 Hugging Face Daily Papers 的 Agent 工程论文，以及融资、数据中心政治在技术媒体层的传播：HF 日刊收录 [Harness-S](https://arxiv.org/abs/2611.04277)（兄弟 Harness 救援训练）、[EvoMemState](https://arxiv.org/abs/2611.03743)（个人 Agent 状态记忆）、[Coca-Cola](https://arxiv.org/abs/2611.06500)（工具观察潜空间压缩）与 [Drex](https://arxiv.org/abs/2611.07854)（决策模型家族）；量子位转述彭博社报道 [OpenAI 新一轮首笔约 110 亿美元交割](https://www.qbitai.com/2026/11/508344.html)；TechCrunch 讨论[中期选举后数据中心阻力](https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/)，并转述[针对英伟达 CEO 的情报备忘录报道](https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/)。专项工具链仅 Codex `0.169.0-alpha.2` 预发布落入中国时间窗口，页面无功能说明。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI Index/News、Anthropic Newsroom、Claude Code changelog、Codex Releases、Langfuse changelog、LangChain/LangGraph、Spring AI / Spring Alibaba AI、Hugging Face Daily Papers、TechCrunch、量子位，以及 Claude Code / Codex / OpenClaw / Hermes / Spring AI / Spring Alibaba AI / Langfuse / LangChain-LangGraph / Code Graph / Loop Engineering / skills 专项检索 |
+| 核心趋势 | 1）Agent 研究把「Harness 多样性」和「记忆状态」写成可训练对象；2）工具观察不必以全文回灌上下文（潜空间压缩可同时降 token 与时延）；3）判别式决策模型强调校准、选项顺序稳健与可审计分数；4）算力基建政治化，融资规模与社区许可同步承压 |
+| 可直接关注 | Harness-S 的失败救援与能力迁回原 Harness；EvoMemState 的 Persistent Facts / Relational States / Reasoning State；Coca-Cola 的工具观察压缩数字；OpenAI 融资节奏与数据中心地方阻力的媒体讨论 |
+| 专项检索结论 | Claude Code：无 11-07 新正式版（changelog 仍写 2.1.319，日期 2026-11-06，已计入昨日日报，不重复展开）。Codex：预发布 [0.169.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2) 发布时间 2026-11-06 22:13 UTC（= 2026-11-07 06:13 Asia/Shanghai），页面仅有标题、无功能说明；后续 [0.169.0-alpha.3](https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3) 发布于 2026-11-07 19:31 UTC（= 2026-11-08 03:31 Asia/Shanghai），超出本日中国时间窗口，不计入。OpenClaw：无 11-07 新正式版（v2026.11.1 落在 11-05）。Hermes：无 11-07 新正式版（v0.23.0 仍为 11-05）。Spring AI / Spring Alibaba AI：无 11-07 新正式 release。Langfuse：未核验到 11-07 changelog 条目。LangChain / LangGraph：无 11-07 新正式版。Code Graph：未发现 11-07 可核验新正式发布（近期公开信号仍约在 2026-10-03 的 v1.6.2 量级）。Loop Engineering：无专名产品发布；与 harness/loop 最接近的可核验信号是当日 HF 日刊的 Harness-S 论文。skills / Agent Skills / Codex Skills / Claude Skills / Cursor Skills：未检出独立 marketplace 大版本或官方技能规范的 11-07 新发布。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Agent Harness | [Harness-S: Learning to Rescue Failures via Sibling Harnesses](https://arxiv.org/abs/2611.04277) | 2026-11-07（Hugging Face Daily Papers 收录） | 论文原文 | 多个异构 Harness 组成救援池：仅当原 Harness H0 判定任务失败时才切到兄弟 Harness，成功轨迹再蒸馏回 H0。9B 模型在 AppWorld 上 Pass@3 约 72.52、Avg@3 约 62.34，高于同设置 GRPO 的约 64.89 / 53.31；SWE-Gym Pass@3 约 40.00，DBBench Pass@3 约 76.33。代码：[DeepExperience/Harness-S](https://github.com/DeepExperience/Harness-S) |
+| Agent 记忆 | [EvoMemState: Evolving Memory States for Personalized LLM Agents](https://arxiv.org/abs/2611.03743) | 2026-11-07（Hugging Face Daily Papers 收录） | 论文原文 | 把个人 Agent 记忆拆成 Persistent Facts、Relational States 与请求级 Reasoning State；强调完整检索不等于正确使用。论文报告 Qwen3-8B 总体平均约 59.9，高于 SimpleMem 的约 53.6。代码：[XMUDeepLIT/EvoMemState](https://github.com/XMUDeepLIT/EvoMemState) |
+| 上下文压缩 | [Tools Need Not Speak in Text (Coca-Cola)](https://arxiv.org/abs/2611.06500) | 2026-11-07（Hugging Face Daily Papers 收录；arXiv 提交约 2026-11-04，标注相邻日期传播） | 论文原文 | 把工具观察压成潜空间 token，而不是把原始文本整段回灌上下文。论文摘要称 token 用量下降约 70.01%–89.24%，运行时间下降约 24.45%–55.97%，且 EM/F1 上升。代码：[THU-Agent/Coca-cola](https://github.com/THU-Agent/Coca-cola) |
+| 决策模型 | [Drex: A Family of Open Decision Models](https://arxiv.org/abs/2611.07854) | 2026-11-07（Hugging Face Daily Papers 收录；arXiv 提交约 2026-11-05，标注相邻日期传播） | 论文原文 | 四款开源决策模型（Mini/Base/Max/Reasoning），强调校准、选项顺序稳健与可审计分数。Decision Index 0.4.1 公开套件上 Max 27B 约 67.52，对比稿给出 Jev 1.14.0 约 60.70；文中典型请求时延约 183 ms，对比 GPT-6 Sol 约 2.0 s、Claude Opus 5.5 约 3.5 s。Decision Bench v4 上带图像编码器的 Max 约 94.0%。代码：[nace-ai/drex-decision-models](https://github.com/nace-ai/drex-decision-models) |
+| 融资（媒体） | [OpenAI 新融资到账 110 亿美元](https://www.qbitai.com/2026/11/508344.html) | 2026-11-07（量子位发稿；彭博社原文日期为 2026-11-06，标注相邻日期/中国时间窗口传播） | 技术媒体转述 | 量子位转述彭博社：本轮首笔约 110 亿美元已交割，投后估值约 1.25 万亿美元，领投包括 Coatue、T. Rowe Price；整轮规模最高可能约 200 亿美元，低于 9 月底以约 1.4 万亿美元估值融资至少约 300 亿美元的计划。属资本市场稿，非产品发布 |
+| 政策/基建（媒体） | [After the midterms, things are looking rocky for Elon Musk and data centers](https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/) | 2026-11-07（约 14:07 PT） | 技术媒体 | 讨论美国中期选举后地方选票与州长竞选对数据中心的阻力，并回顾 OpenAI 于 2026-11-05 发布的 Compute Campus Policy Blueprint（该蓝图本身已计入更早日期，本稿按 11-07 媒体讨论收录） |
+| 安全（媒体） | [Chinese exec was recruited to spy on Nvidia CEO, according to US intelligence memo](https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/) | 2026-11-07（约 13:17 PT） | 技术媒体转述 | TechCrunch 转述《纽约时报》《金融时报》：一份美国情报备忘录称 Megaspeed 高管 Alice Huang 被招募监视黄仁勋；Nvidia 回应称相关往来「并不异常」。属未在官方博客核实的媒体报道，宜对照原报 |
+| Codex | [rust-v0.169.0-alpha.2](https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2) | 2026-11-07（发布 2026-11-06 22:13 UTC = 11-07 06:13 Asia/Shanghai） | 开源预发布 | GitHub Releases 仅有 “Release 0.169.0-alpha.2”，无功能 changelog；非正式稳定版，研发价值有限 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 多脚手架 Agent | [Harness-S](https://arxiv.org/abs/2611.04277) | 仅在 H0 失败时救援；成功轨迹迁回原 Harness | Agent 运行时、评测与强化学习 |
+| 个人 Agent 记忆 | [EvoMemState](https://arxiv.org/abs/2611.03743) | Persistent Facts / Relational States / 请求级 Reasoning State | 长期记忆、个性化助手 |
+| 工具观察压缩 | [Coca-Cola](https://arxiv.org/abs/2611.06500) | 工具结果写入潜空间 token，而不是原文回灌 | 上下文工程、工具调用链路 |
+| 决策模型 | [Drex](https://arxiv.org/abs/2611.07854) | 校准、选项顺序稳健、可审计分数与 Decision Index | 偏好/决策、评测对比 |
+| 世界模型（延伸） | [量子位：MoWorld 2.0](https://www.qbitai.com/2026/11/508236.html) | 量子位 11-07 发稿，活动本身为 2026-11-04 乌镇发布会（标注相邻日期传播）；稿件称可覆盖十几种物理要素，昇腾上实时生成约 70 FPS（前代约 50 FPS），并称同规模推理成本可降至 GPU 的约 30%。细节以厂商披露为准 | 世界模型、端侧生成 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：周六几乎没有厂商级产品更新，工程信号主要来自论文——把 Harness、记忆状态和工具观察表示变成可训练或可压缩的对象；媒体层则在讨论融资节奏与算力基建的外部约束。专项工具链除 Codex 预发布标签外均为空窗。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Harness-S | HF Daily Papers 收录兄弟 Harness 救援训练 | 多脚手架不要把能力锁死在某一个运行时；失败后再救援，并把成功经验迁回原环境 |
+| EvoMemState | 记忆拆成事实、关系状态与推理状态 | 检索完整仍可能用错；需要区分长期事实与当次推理状态 |
+| Coca-Cola | 工具观察潜空间压缩 | 上下文膨胀时优先压缩工具回传，而不是只截断对话历史 |
+| Drex | 开源决策模型家族与 Decision Index | 看校准和选项顺序敏感性，而不只看正确率 |
+| Codex | `0.169.0-alpha.2` 预发布无说明 | 不建议把无 changelog 的 alpha 标签当正式升级依据 |
+| 专项其余项 | Claude Code / OpenClaw / Hermes / Spring AI / SAA / Langfuse / LangChain-LangGraph / Code Graph / skills 均无 11-07 新正式版 | 保持检索记录，不把 11-05/11-06 已报条目重复计入 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Harness-S](https://arxiv.org/abs/2611.04277) | 失败救援与「能力迁回原 Harness」的训练设计，对多脚手架 Agent 工程有直接启发 |
+| 必读 | [EvoMemState](https://arxiv.org/abs/2611.03743) | 把记忆拆成事实、关系状态与推理状态，便于对照现有个人 Agent 的记忆实现 |
+| 推荐 | [Coca-Cola](https://arxiv.org/abs/2611.06500) | 工具观察的潜空间压缩，是上下文膨胀问题的一条可量化路径 |
+| 推荐 | [Drex](https://arxiv.org/abs/2611.07854) | 开源决策模型家族，可对照校准、顺序稳健与审计分数三项主张 |
+| 延伸 | [量子位：OpenAI 新融资到账 110 亿美元](https://www.qbitai.com/2026/11/508344.html) | 便于对照估值下修与本轮节奏；原始事实源为彭博社 11-06 报道 |
+
+### 来源清单
+
+- 检索范围：2026-11-07 00:00:00 到 2026-11-07 23:59:59（Asia/Shanghai）
+- 覆盖：OpenAI、Anthropic、Claude Code changelog、Codex Releases、Langfuse、LangChain/LangGraph、Spring AI / Spring Alibaba AI、Hugging Face Daily Papers、TechCrunch、量子位及专项主题检索
+
+| 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- |
+| arXiv / HF Daily Papers | 论文 | Harness-S | 2026-11-07（日刊收录） | https://arxiv.org/abs/2611.04277 |
+| arXiv / HF Daily Papers | 论文 | EvoMemState | 2026-11-07（日刊收录） | https://arxiv.org/abs/2611.03743 |
+| arXiv / HF Daily Papers | 论文 | Coca-Cola | 2026-11-07（日刊收录；提交约 11-04） | https://arxiv.org/abs/2611.06500 |
+| arXiv / HF Daily Papers | 论文 | Drex | 2026-11-07（日刊收录；提交约 11-05） | https://arxiv.org/abs/2611.07854 |
+| 量子位（转述彭博社） | 技术媒体 | OpenAI 新融资到账 110 亿美元 | 2026-11-07（原文 11-06） | https://www.qbitai.com/2026/11/508344.html |
+| TechCrunch | 技术媒体 | After the midterms... data centers | 2026-11-07 | https://techcrunch.com/2026/11/07/after-the-midterms-things-are-looking-rocky-for-elon-musk-and-data-centers/ |
+| TechCrunch | 技术媒体 | ...spy on Nvidia CEO... | 2026-11-07 | https://techcrunch.com/2026/11/07/chinese-exec-was-recruited-to-spy-on-nvidia-ceo-according-to-us-intelligence-memo/ |
+| Codex GitHub Releases | 开源预发布 | rust-v0.169.0-alpha.2 | 2026-11-07（CST） | https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.2 |
+| 量子位 | 技术媒体（延伸） | MoWorld 2.0 | 2026-11-07（活动 11-04） | https://www.qbitai.com/2026/11/508236.html |
+
 ## 2026-11-06
 
 ### 今日总览

@@ -2,6 +2,66 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-07
+
+### 今日总览
+
+**一句话结论**：周六固定来源数量偏少——阿里云开发者社区有一篇 [Qwen3.8 社区抢先体验](https://developer.aliyun.com/article/1780325)，以及一篇 [DeepSeek Harness 安装指南](https://developer.aliyun.com/article/1780327)（日期均为 2026-11-07）；腾讯云+社区有一篇用 [WorkBuddy 做 2000 年互联网泡沫情景推演](https://cloud.tencent.com/developer/article/2778444) 的文章。美团、字节跳动技术博客、百度 FEX/EFE、京东、滴滴、网易、360、有赞、阿里中间件等固定来源未检出可核验的 11-07 深度新文；五个专项主题（Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering）在固定来源内均未检出可核验深度专文。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里/腾讯/字节/百度/美团/京东/滴滴/网易/360/有赞固定技术博客与开发者社区，以及技能列出的掘金来源 |
+| 核心趋势 | 1）阿里云社区继续围绕 Qwen3.8 与 DeepSeek Harness 做落地解读/安装指南；2）腾讯云社区出现把 WorkBuddy 用于宏观泡沫情景推演的长文；3）专项主题在固定来源内暂无深度新专文 |
+| 可直接关注 | 对照官方模型卡阅读 Qwen3.8 社区文；把 1780327 当作昨日 1779880 的同题安装指南对照；WorkBuddy 推文看情景拆解而非产品发版 |
+| 专项检索结论 | Langfuse：固定来源内无 11-07 深度新专文。LangChain / LangGraph：固定来源内无 11-07 深度新专文。Code Graph：固定来源内无 11-07 深度新专文。Spring Alibaba AI：固定来源内无 11-07 深度新专文。Loop Engineering：固定来源内无以该专名发布的深度新专文；阿里云 1780327 为 DeepSeek Harness 安装指南，属 harness 相邻内容，不记作 Loop Engineering 专名发布。 |
+| 未发现更新 | 美团官网、字节 techblog、百度 FEX/EFE、滴滴、有赞、360、京东凹凸、网易、阿里中间件 / 102.alibaba.com，以及技能列出的掘金固定来源，未检出可核验 11-07 深度新文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 模型资讯 | [Qwen3.8抢先体验！大家要心理准备了，最新版发布并开源了？](https://developer.aliyun.com/article/1780325) | 2026-11-07 | 阿里云开发者社区 | 社区解读/体验向。页面简介称 Qwen3.8 系列含约 2.4 万亿参数的旗舰 Max、约 27B 端侧模型及全模态 Omni-Flash，并提到 Dynamic MoE、Sparse-Tiled Attention 与 CoT++、Apache 2.0 等说法。重大能力与是否正式开源应以阿里云 / Qwen 官方发布为准。注意：昨日日报已收录同主题社区文 [1779857](https://developer.aliyun.com/article/1779857)，本稿为 11-07 的另一篇 1780325，勿与昨日条目混淆 |
+| Agent 运行时 | [DeepSeek Harness下载、安装、配置一篇搞定（2026整理，送常用插件）](https://developer.aliyun.com/article/1780327) | 2026-11-07 | 阿里云开发者社区 | 页面简介称覆盖桌面端/CLI 下载安装、API 与工作区配置、四大运行模式，以及 Subagent、Web Search 等插件，并支持 Windows/macOS/Linux。注意：昨日日报已收录同题安装向文章 [1779880](https://developer.aliyun.com/article/1779880)，本稿为 11-07 日期的 1780327，视为同题再刊/更新文，细节以原文步骤为准 |
+| 办公 Agent 应用 | [WorkBuddy推演：2000年互联网泡沫破裂能否再现？](https://cloud.tencent.com/developer/article/2778444) | 2026-11-07 10:55:19 | 腾讯云+社区 | 刘宗斌撰写。开篇回顾 2000 年纳斯达克 100 从顶峰到谷底约下跌 83%，并用「层压传导」框架讨论政治监管、经济衰退、融资困难、美债等因素；给出基准、下行与接近 2000 年级别三种后续路径。属用 WorkBuddy 做宏观情景推演的应用分享，不是 WorkBuddy 官方新版本说明 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 模型资讯核对 | [1780325](https://developer.aliyun.com/article/1780325) | 社区口径中的 Max / 27B / Omni-Flash 与开源许可说法 | 需要跟踪 Qwen 社区讨论、但会回到官方模型卡核对的人 |
+| Harness 安装 | [1780327](https://developer.aliyun.com/article/1780327) | 桌面端/CLI、API 与工作区、运行模式与常用插件 | 想快速试 DeepSeek Agent 栈的人；可与昨日 1779880 对照 |
+| 办公 Agent 推演 | [2778444](https://cloud.tencent.com/developer/article/2778444) | 把宏观情景拆成层压假设与三种路径 | 关注 WorkBuddy 非研发场景用法的人 |
+
+### 工程实践归纳
+
+**总体判断**：固定来源在周六没有厂商级正式发版，主要是社区安装指南、模型体验文和一篇宏观推演长文。五个专项主题均无固定来源深度新文，不硬凑。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Qwen3.8 社区文 | 1780325 继续传播参数规模与开源叙事 | 把社区标题当线索，规格以官方 release / 模型卡为准 |
+| DeepSeek Harness | 1780327 与昨日 1779880 同题 | 安装指南可对照阅读；与生产 Spring AI / SAA 栈隔离评估 |
+| WorkBuddy 推演 | 用办公 Agent 做泡沫情景拆解 | 适合观察 Agent 如何组织假设，不适合当成宏观预测本身 |
+| 专项五主题 | 无新专文 | 保持检索记录 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 推荐 | [DeepSeek Harness 安装指南 1780327](https://developer.aliyun.com/article/1780327) | 可作为昨日 1779880 的同题对照阅读 |
+| 推荐 | [WorkBuddy 泡沫推演 2778444](https://cloud.tencent.com/developer/article/2778444) | 看办公 Agent 如何被用于宏观情景的假设拆解 |
+| 延伸 | [Qwen3.8 抢先体验 1780325](https://developer.aliyun.com/article/1780325) | 关注社区对参数规模与对比口径的写法，并对照官方模型卡 |
+
+### 来源清单
+
+- 检索范围：2026-11-07 00:00:00 到 2026-11-07 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里云开发者社区、腾讯云+社区；其余维度已检索
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | Qwen3.8抢先体验！大家要心理准备了，最新版发布并开源了？ | 2026-11-07 | https://developer.aliyun.com/article/1780325 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | DeepSeek Harness下载、安装、配置一篇搞定（2026整理，送常用插件） | 2026-11-07 | https://developer.aliyun.com/article/1780327 |
+| 腾讯 | 腾讯云+社区 | 技术文章 | WorkBuddy推演：2000年互联网泡沫破裂能否再现？ | 2026-11-07 | https://cloud.tencent.com/developer/article/2778444 |
+
 ## 2026-11-06
 
 ### 今日总览
