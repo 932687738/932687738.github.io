@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-08 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-08</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-08</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：周日官方产品博客整体偏静——OpenAI Index、Anthropic Newsroom、GitHub Changelog、Claude Code &#x2F; Langfuse &#x2F; LangChain &#x2F; Spring AI 均未检出可核验的 11-08 新正式稿；主线落在 Hugging Face Daily Papers 的 Agent 进化搜索与 RAG 完整性论文，以及量子位对端侧 MoE 智能体的报道：HF 日刊新上榜 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08483">SwarmEvolve</a>（潜空间 Agent 群做进化程序搜索）、<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08089">SAE Interprets MoE</a>（用 SAE 解释 MoE expert 细粒度分工）与 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.06498">Signed but Steerable</a>（离线 RAG 签名知识包的文本–向量完整性缺口）；量子位报道<a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/508478.html">高通进博会端侧 MoE 智能体演示</a>。专项工具链仅 Codex <code>0.169.0-alpha.3</code> 预发布落入中国时间窗口，页面无功能说明。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI Index&#x2F;News、Anthropic Newsroom、Claude Code changelog、Codex Releases、OpenClaw Releases、Hermes Releases、Langfuse changelog、LangChain&#x2F;LangGraph、Spring AI &#x2F; Spring Alibaba AI、Hugging Face Daily Papers、GitHub Changelog、MCP SDK、TechCrunch&#x2F;The Verge、量子位，以及 Claude Code &#x2F; Codex &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; Spring Alibaba AI &#x2F; Langfuse &#x2F; LangChain-LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills 专项检索</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）进化搜索把「文本 CoT」换成潜空间推理 + KV cache 通信，小模型群即可提高程序搜索吞吐；2）MoE expert 的真实分工要用特征空间贡献来度量，而不能只看 gate 选择次数；3）离线 RAG 的签名只能证明发布者，不能证明向量编码了对应文本，容忍度检查本身就是攻击预算；4）端侧 AI 叙事从单点能力转向 MoE 智能体，但产业演示仍依赖模型&#x2F;推理&#x2F;存储&#x2F;芯片的协同</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>SwarmEvolve 的 10×45 潜空间 swarm 与 novelty filter；Signed but Steerable 的 margin law 与量化码级校验；SAE Interprets MoE 对 Qwen3-30B-A3B 的 expert 解释；量子位对端侧 MoE 预取&#x2F;带宽瓶颈的描述</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：无 11-08 新正式版（changelog 仍写 2.1.319，日期 2026-11-06，已计入更早日报，不重复展开）。Codex：预发布 <a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3">0.169.0-alpha.3</a> 发布时间 2026-11-07 19:31 UTC（&#x3D; 2026-11-08 03:31 Asia&#x2F;Shanghai），页面仅有标题、无功能说明。OpenClaw：<a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.11.2">v2026.11.2</a> 发布于 2026-11-08 19:31 UTC（&#x3D; 2026-11-09 03:31 Asia&#x2F;Shanghai），超出本日中国时间窗口，不计入。Hermes：无 11-08 新正式版（v0.23.0 仍为 11-05）。Spring AI &#x2F; Spring Alibaba AI：无 11-08 新正式 release（Spring AI 2.1.0-RC2 仍为 11-05）。Langfuse：未核验到 11-08 changelog 条目（近期条目停在 11-06 的 tokenization &#x2F; S3 IAM）。LangChain &#x2F; LangGraph：无 11-08 新正式版。Code Graph：未发现 11-08 可核验新正式发布（近期公开信号仍约在 2026-10-03 的 v1.6.2 量级）。Loop Engineering：无专名产品发布；与 loop&#x2F;swarm 最接近的可核验信号是当日 HF 日刊的 SwarmEvolve 论文。skills &#x2F; Agent Skills &#x2F; Codex Skills &#x2F; Claude Skills &#x2F; Cursor Skills：未检出独立 marketplace 大版本或官方技能规范的 11-08 新发布。MCP：未检出 11-08 新正式 SDK 发布。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Agent 进化搜索</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08483">SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization</a></td>
+<td>2026-11-08（Hugging Face Daily Papers 收录）</td>
+<td>论文原文</td>
+<td>每轮 10 个 swarm、各 45 个低成本 agent（共 450）在潜空间推理 40 步，不解码文本，而用 KV cache 通信；novelty filter 按 hidden state 距离每群保留 30 个最不相似的轨迹，summarizer 读取拼接后的 KV cache 写出新程序。21 道数学发现与科学计算题上平均分高于 OpenEvolve &#x2F; ShinkaEvolve &#x2F; CodeEvolve；中位数约 3–8 分钟达到基线框架 60 分钟的成绩，吞吐约为 5–13 倍。Qwen3 8B 在若干题上改进了 AlphaEvolve 用前沿模型得到的构造。代码：<a target="_blank" rel="noopener" href="https://github.com/Qile-J/SwarmEvolve">Qile-J&#x2F;SwarmEvolve</a></td>
+</tr>
+<tr>
+<td>MoE 可解释性</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08089">SAE Interprets MoE</a></td>
+<td>2026-11-08（Hugging Face Daily Papers 收录；arXiv 提交 2026-11-05，标注相邻日期传播）</td>
+<td>论文原文</td>
+<td>在 Qwen3-30B-A3B 的第 4&#x2F;30&#x2F;46 层 MoE 输出上训练 SAE：因为层输出是 router 加权的 expert 之和且 SAE encoder 是仿射的，每个 latent 的预激活可以对 expert 精确分解。贡献比 gating 更集中，多数 latent 只有 1–2 个主导 expert；自动解释显示分工细于粗领域标签（如 Java vs 前端代码、几何 vs 算术&#x2F;多项式）。代码：<a target="_blank" rel="noopener" href="https://github.com/ByteDance-Seed/SAE-interprets-MoE">ByteDance-Seed&#x2F;SAE-interprets-MoE</a></td>
+</tr>
+<tr>
+<td>RAG 安全</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.06498">Signed but Steerable</a></td>
+<td>2026-11-08（Hugging Face Daily Papers 收录）</td>
+<td>论文原文</td>
+<td>离线 RAG 的签名知识包能证明「谁发布了包」，不能证明「向量编码了对应文本」。若校验器按余弦容忍度接受重算结果，劫持率等于该容忍度下的检索角裕度分布（margin law）。INT8 量级阈值会使 98–100% 查询暴露；在 Raspberry Pi 5 上，攻击把本地模型正确率从约 0.75 降到约 0.39。FAISS PQ 上通过审计的篡改向量能让攻击文档在 25% 目标上排到第一。建议校验量化码并由校验器做 canonicalization。代码：<a target="_blank" rel="noopener" href="https://github.com/securagenai/signed-but-steerable">securagenai&#x2F;signed-but-steerable</a></td>
+</tr>
+<tr>
+<td>端侧 Agent（媒体）</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/508478.html">终端侧AI：从单点应用走向智能体体验</a></td>
+<td>2026-11-08（量子位 19:05 Asia&#x2F;Shanghai）</td>
+<td>技术媒体</td>
+<td>报道高通在第九届进博会展示端侧 MoE 智能体，合作方包括 Infris AI、江波龙、阶跃星辰。核心工程点是：在端侧内存&#x2F;功耗约束下用 MoE 提升复杂任务完成度，并通过对将调用 expert 的预测与预取缓解 DDR 带宽瓶颈。属展会演示报道，细节以厂商披露为准</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3">rust-v0.169.0-alpha.3</a></td>
+<td>2026-11-08（发布 2026-11-07 19:31 UTC &#x3D; 11-08 03:31 Asia&#x2F;Shanghai）</td>
+<td>开源预发布</td>
+<td>GitHub Releases 仅有 “Release 0.169.0-alpha.3”，无功能 changelog；非正式稳定版，研发价值有限</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>潜空间多 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08483">SwarmEvolve</a></td>
+<td>潜空间推理、KV cache 通信、hidden-state novelty filter、swarm 角色（refine &#x2F; hybridize &#x2F; explore &#x2F; fresh-start）</td>
+<td>Agent 运行时、进化搜索、科学计算程序搜索</td>
+</tr>
+<tr>
+<td>RAG 完整性</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.06498">Signed but Steerable</a></td>
+<td>margin law、量化存储审计暴露面、码级校验与 canonicalization</td>
+<td>端侧&#x2F;离线 RAG、向量库治理、安全审计</td>
+</tr>
+<tr>
+<td>MoE 解释</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08089">SAE Interprets MoE</a></td>
+<td>把 SAE latent 预激活分解到 expert，用贡献而非 gate 次数看分工</td>
+<td>模型可解释性、MoE 路由与评测</td>
+</tr>
+<tr>
+<td>端侧 MoE（延伸）</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/508478.html">量子位：终端侧AI</a></td>
+<td>expert 预取、UFS 到内存加载、端云协同</td>
+<td>端侧推理与芯片软件栈</td>
+</tr>
+<tr>
+<td>产业观察（延伸）</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/508466.html">量子位：资本正在撤离“世界模型”</a></td>
+<td>2026-11-08 12:09 发稿，讨论世界模型一级市场降温与少数团队仍能融资；非产品&#x2F;论文发布</td>
+<td>关注具身&#x2F;世界模型融资节奏的读者</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：周日几乎没有厂商级产品更新，工程信号主要来自论文——把多 Agent 通信从文本换成 KV cache，并把离线 RAG 的「签名」与「文本–向量一致性」拆开；媒体层则在讨论端侧 MoE 智能体。专项工具链除 Codex 预发布标签外均为空窗。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>SwarmEvolve</td>
+<td>HF Daily Papers 收录潜空间 Agent swarm 进化搜索</td>
+<td>文本 CoT 是进化搜索的主要耗时项；潜空间推理 + KV cache 汇总可以提高单位时间内的程序评估次数</td>
+</tr>
+<tr>
+<td>Signed but Steerable</td>
+<td>签名知识包无法绑定「文本 ↔ 向量」</td>
+<td>不要把 pack 签名当成检索完整性；压缩向量库应校验量化码并在校验器侧重写（canonicalization）</td>
+</tr>
+<tr>
+<td>SAE Interprets MoE</td>
+<td>用 SAE 分解 MoE 层输出</td>
+<td>评估 expert 专长时看它对特征的贡献，而不是只统计被路由次数</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td><code>0.169.0-alpha.3</code> 预发布无说明</td>
+<td>不建议把无 changelog 的 alpha 标签当正式升级依据</td>
+</tr>
+<tr>
+<td>专项其余项</td>
+<td>Claude Code &#x2F; OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; SAA &#x2F; Langfuse &#x2F; LangChain-LangGraph &#x2F; Code Graph &#x2F; skills &#x2F; MCP 均无落入本日窗口的新正式版</td>
+<td>保持检索记录；OpenClaw v2026.11.2 已发布但时间落入 11-09 中国窗口，不提前计入</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08483">SwarmEvolve</a></td>
+<td>把大规模低成本 agent 和潜空间通信写成可复现的进化搜索框架，对多 Agent &#x2F; loop 吞吐有直接启发</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.06498">Signed but Steerable</a></td>
+<td>给出可测量的 RAG 向量完整性缺口，以及跨硬件可落地的码级校验方案</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08089">SAE Interprets MoE</a></td>
+<td>用可分解的 SAE 预激活解释 MoE expert，补上「gate 次数 ≠ 贡献」这一层</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/508478.html">量子位：终端侧AI</a></td>
+<td>便于对照端侧 MoE 智能体演示中的预取与带宽问题</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/508466.html">量子位：资本正在撤离“世界模型”</a></td>
+<td>产业资金面观察，不是当天的模型或框架发布</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-08 00:00:00 到 2026-11-08 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：arxiv.org, huggingface.co, github.com, qbitai.com</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>来源</th>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>arXiv &#x2F; HF Daily Papers</td>
+<td>论文</td>
+<td>SwarmEvolve</td>
+<td>2026-11-08（日刊收录）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08483">https://arxiv.org/abs/2611.08483</a></td>
+</tr>
+<tr>
+<td>arXiv &#x2F; HF Daily Papers</td>
+<td>论文</td>
+<td>SAE Interprets MoE</td>
+<td>2026-11-08（日刊收录；提交 11-05）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.08089">https://arxiv.org/abs/2611.08089</a></td>
+</tr>
+<tr>
+<td>arXiv &#x2F; HF Daily Papers</td>
+<td>论文</td>
+<td>Signed but Steerable</td>
+<td>2026-11-08（日刊收录）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.06498">https://arxiv.org/abs/2611.06498</a></td>
+</tr>
+<tr>
+<td>量子位</td>
+<td>技术媒体</td>
+<td>终端侧AI：从单点应用走向智能体体验</td>
+<td>2026-11-08</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/508478.html">https://www.qbitai.com/2026/11/508478.html</a></td>
+</tr>
+<tr>
+<td>量子位</td>
+<td>技术媒体（延伸）</td>
+<td>资本正在撤离“世界模型”</td>
+<td>2026-11-08</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/508466.html">https://www.qbitai.com/2026/11/508466.html</a></td>
+</tr>
+<tr>
+<td>Codex GitHub Releases</td>
+<td>开源预发布</td>
+<td>rust-v0.169.0-alpha.3</td>
+<td>2026-11-08（CST）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3">https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
