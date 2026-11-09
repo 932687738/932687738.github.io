@@ -2,6 +2,75 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-08
+
+### 今日总览
+
+**一句话结论**：周日官方产品博客整体偏静——OpenAI Index、Anthropic Newsroom、GitHub Changelog、Claude Code / Langfuse / LangChain / Spring AI 均未检出可核验的 11-08 新正式稿；主线落在 Hugging Face Daily Papers 的 Agent 进化搜索与 RAG 完整性论文，以及量子位对端侧 MoE 智能体的报道：HF 日刊新上榜 [SwarmEvolve](https://arxiv.org/abs/2611.08483)（潜空间 Agent 群做进化程序搜索）、[SAE Interprets MoE](https://arxiv.org/abs/2611.08089)（用 SAE 解释 MoE expert 细粒度分工）与 [Signed but Steerable](https://arxiv.org/abs/2611.06498)（离线 RAG 签名知识包的文本–向量完整性缺口）；量子位报道[高通进博会端侧 MoE 智能体演示](https://www.qbitai.com/2026/11/508478.html)。专项工具链仅 Codex `0.169.0-alpha.3` 预发布落入中国时间窗口，页面无功能说明。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI Index/News、Anthropic Newsroom、Claude Code changelog、Codex Releases、OpenClaw Releases、Hermes Releases、Langfuse changelog、LangChain/LangGraph、Spring AI / Spring Alibaba AI、Hugging Face Daily Papers、GitHub Changelog、MCP SDK、TechCrunch/The Verge、量子位，以及 Claude Code / Codex / OpenClaw / Hermes / Spring AI / Spring Alibaba AI / Langfuse / LangChain-LangGraph / Code Graph / Loop Engineering / skills 专项检索 |
+| 核心趋势 | 1）进化搜索把「文本 CoT」换成潜空间推理 + KV cache 通信，小模型群即可提高程序搜索吞吐；2）MoE expert 的真实分工要用特征空间贡献来度量，而不能只看 gate 选择次数；3）离线 RAG 的签名只能证明发布者，不能证明向量编码了对应文本，容忍度检查本身就是攻击预算；4）端侧 AI 叙事从单点能力转向 MoE 智能体，但产业演示仍依赖模型/推理/存储/芯片的协同 |
+| 可直接关注 | SwarmEvolve 的 10×45 潜空间 swarm 与 novelty filter；Signed but Steerable 的 margin law 与量化码级校验；SAE Interprets MoE 对 Qwen3-30B-A3B 的 expert 解释；量子位对端侧 MoE 预取/带宽瓶颈的描述 |
+| 专项检索结论 | Claude Code：无 11-08 新正式版（changelog 仍写 2.1.319，日期 2026-11-06，已计入更早日报，不重复展开）。Codex：预发布 [0.169.0-alpha.3](https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3) 发布时间 2026-11-07 19:31 UTC（= 2026-11-08 03:31 Asia/Shanghai），页面仅有标题、无功能说明。OpenClaw：[v2026.11.2](https://github.com/openclaw/openclaw/releases/tag/v2026.11.2) 发布于 2026-11-08 19:31 UTC（= 2026-11-09 03:31 Asia/Shanghai），超出本日中国时间窗口，不计入。Hermes：无 11-08 新正式版（v0.23.0 仍为 11-05）。Spring AI / Spring Alibaba AI：无 11-08 新正式 release（Spring AI 2.1.0-RC2 仍为 11-05）。Langfuse：未核验到 11-08 changelog 条目（近期条目停在 11-06 的 tokenization / S3 IAM）。LangChain / LangGraph：无 11-08 新正式版。Code Graph：未发现 11-08 可核验新正式发布（近期公开信号仍约在 2026-10-03 的 v1.6.2 量级）。Loop Engineering：无专名产品发布；与 loop/swarm 最接近的可核验信号是当日 HF 日刊的 SwarmEvolve 论文。skills / Agent Skills / Codex Skills / Claude Skills / Cursor Skills：未检出独立 marketplace 大版本或官方技能规范的 11-08 新发布。MCP：未检出 11-08 新正式 SDK 发布。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Agent 进化搜索 | [SwarmEvolve: Latent Agent Swarms for Evolutionary Discovery and Optimization](https://arxiv.org/abs/2611.08483) | 2026-11-08（Hugging Face Daily Papers 收录） | 论文原文 | 每轮 10 个 swarm、各 45 个低成本 agent（共 450）在潜空间推理 40 步，不解码文本，而用 KV cache 通信；novelty filter 按 hidden state 距离每群保留 30 个最不相似的轨迹，summarizer 读取拼接后的 KV cache 写出新程序。21 道数学发现与科学计算题上平均分高于 OpenEvolve / ShinkaEvolve / CodeEvolve；中位数约 3–8 分钟达到基线框架 60 分钟的成绩，吞吐约为 5–13 倍。Qwen3 8B 在若干题上改进了 AlphaEvolve 用前沿模型得到的构造。代码：[Qile-J/SwarmEvolve](https://github.com/Qile-J/SwarmEvolve) |
+| MoE 可解释性 | [SAE Interprets MoE](https://arxiv.org/abs/2611.08089) | 2026-11-08（Hugging Face Daily Papers 收录；arXiv 提交 2026-11-05，标注相邻日期传播） | 论文原文 | 在 Qwen3-30B-A3B 的第 4/30/46 层 MoE 输出上训练 SAE：因为层输出是 router 加权的 expert 之和且 SAE encoder 是仿射的，每个 latent 的预激活可以对 expert 精确分解。贡献比 gating 更集中，多数 latent 只有 1–2 个主导 expert；自动解释显示分工细于粗领域标签（如 Java vs 前端代码、几何 vs 算术/多项式）。代码：[ByteDance-Seed/SAE-interprets-MoE](https://github.com/ByteDance-Seed/SAE-interprets-MoE) |
+| RAG 安全 | [Signed but Steerable](https://arxiv.org/abs/2611.06498) | 2026-11-08（Hugging Face Daily Papers 收录） | 论文原文 | 离线 RAG 的签名知识包能证明「谁发布了包」，不能证明「向量编码了对应文本」。若校验器按余弦容忍度接受重算结果，劫持率等于该容忍度下的检索角裕度分布（margin law）。INT8 量级阈值会使 98–100% 查询暴露；在 Raspberry Pi 5 上，攻击把本地模型正确率从约 0.75 降到约 0.39。FAISS PQ 上通过审计的篡改向量能让攻击文档在 25% 目标上排到第一。建议校验量化码并由校验器做 canonicalization。代码：[securagenai/signed-but-steerable](https://github.com/securagenai/signed-but-steerable) |
+| 端侧 Agent（媒体） | [终端侧AI：从单点应用走向智能体体验](https://www.qbitai.com/2026/11/508478.html) | 2026-11-08（量子位 19:05 Asia/Shanghai） | 技术媒体 | 报道高通在第九届进博会展示端侧 MoE 智能体，合作方包括 Infris AI、江波龙、阶跃星辰。核心工程点是：在端侧内存/功耗约束下用 MoE 提升复杂任务完成度，并通过对将调用 expert 的预测与预取缓解 DDR 带宽瓶颈。属展会演示报道，细节以厂商披露为准 |
+| Codex | [rust-v0.169.0-alpha.3](https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3) | 2026-11-08（发布 2026-11-07 19:31 UTC = 11-08 03:31 Asia/Shanghai） | 开源预发布 | GitHub Releases 仅有 “Release 0.169.0-alpha.3”，无功能 changelog；非正式稳定版，研发价值有限 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 潜空间多 Agent | [SwarmEvolve](https://arxiv.org/abs/2611.08483) | 潜空间推理、KV cache 通信、hidden-state novelty filter、swarm 角色（refine / hybridize / explore / fresh-start） | Agent 运行时、进化搜索、科学计算程序搜索 |
+| RAG 完整性 | [Signed but Steerable](https://arxiv.org/abs/2611.06498) | margin law、量化存储审计暴露面、码级校验与 canonicalization | 端侧/离线 RAG、向量库治理、安全审计 |
+| MoE 解释 | [SAE Interprets MoE](https://arxiv.org/abs/2611.08089) | 把 SAE latent 预激活分解到 expert，用贡献而非 gate 次数看分工 | 模型可解释性、MoE 路由与评测 |
+| 端侧 MoE（延伸） | [量子位：终端侧AI](https://www.qbitai.com/2026/11/508478.html) | expert 预取、UFS 到内存加载、端云协同 | 端侧推理与芯片软件栈 |
+| 产业观察（延伸） | [量子位：资本正在撤离“世界模型”](https://www.qbitai.com/2026/11/508466.html) | 2026-11-08 12:09 发稿，讨论世界模型一级市场降温与少数团队仍能融资；非产品/论文发布 | 关注具身/世界模型融资节奏的读者 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：周日几乎没有厂商级产品更新，工程信号主要来自论文——把多 Agent 通信从文本换成 KV cache，并把离线 RAG 的「签名」与「文本–向量一致性」拆开；媒体层则在讨论端侧 MoE 智能体。专项工具链除 Codex 预发布标签外均为空窗。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| SwarmEvolve | HF Daily Papers 收录潜空间 Agent swarm 进化搜索 | 文本 CoT 是进化搜索的主要耗时项；潜空间推理 + KV cache 汇总可以提高单位时间内的程序评估次数 |
+| Signed but Steerable | 签名知识包无法绑定「文本 ↔ 向量」 | 不要把 pack 签名当成检索完整性；压缩向量库应校验量化码并在校验器侧重写（canonicalization） |
+| SAE Interprets MoE | 用 SAE 分解 MoE 层输出 | 评估 expert 专长时看它对特征的贡献，而不是只统计被路由次数 |
+| Codex | `0.169.0-alpha.3` 预发布无说明 | 不建议把无 changelog 的 alpha 标签当正式升级依据 |
+| 专项其余项 | Claude Code / OpenClaw / Hermes / Spring AI / SAA / Langfuse / LangChain-LangGraph / Code Graph / skills / MCP 均无落入本日窗口的新正式版 | 保持检索记录；OpenClaw v2026.11.2 已发布但时间落入 11-09 中国窗口，不提前计入 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [SwarmEvolve](https://arxiv.org/abs/2611.08483) | 把大规模低成本 agent 和潜空间通信写成可复现的进化搜索框架，对多 Agent / loop 吞吐有直接启发 |
+| 必读 | [Signed but Steerable](https://arxiv.org/abs/2611.06498) | 给出可测量的 RAG 向量完整性缺口，以及跨硬件可落地的码级校验方案 |
+| 推荐 | [SAE Interprets MoE](https://arxiv.org/abs/2611.08089) | 用可分解的 SAE 预激活解释 MoE expert，补上「gate 次数 ≠ 贡献」这一层 |
+| 延伸 | [量子位：终端侧AI](https://www.qbitai.com/2026/11/508478.html) | 便于对照端侧 MoE 智能体演示中的预取与带宽问题 |
+| 延伸 | [量子位：资本正在撤离“世界模型”](https://www.qbitai.com/2026/11/508466.html) | 产业资金面观察，不是当天的模型或框架发布 |
+
+### 来源清单
+
+- 检索范围：2026-11-08 00:00:00 到 2026-11-08 23:59:59（Asia/Shanghai）
+- 引用域名：arxiv.org, huggingface.co, github.com, qbitai.com
+
+| 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- |
+| arXiv / HF Daily Papers | 论文 | SwarmEvolve | 2026-11-08（日刊收录） | https://arxiv.org/abs/2611.08483 |
+| arXiv / HF Daily Papers | 论文 | SAE Interprets MoE | 2026-11-08（日刊收录；提交 11-05） | https://arxiv.org/abs/2611.08089 |
+| arXiv / HF Daily Papers | 论文 | Signed but Steerable | 2026-11-08（日刊收录） | https://arxiv.org/abs/2611.06498 |
+| 量子位 | 技术媒体 | 终端侧AI：从单点应用走向智能体体验 | 2026-11-08 | https://www.qbitai.com/2026/11/508478.html |
+| 量子位 | 技术媒体（延伸） | 资本正在撤离“世界模型” | 2026-11-08 | https://www.qbitai.com/2026/11/508466.html |
+| Codex GitHub Releases | 开源预发布 | rust-v0.169.0-alpha.3 | 2026-11-08（CST） | https://github.com/openai/codex/releases/tag/rust-v0.169.0-alpha.3 |
+
 ## 2026-11-07
 
 ### 今日总览
