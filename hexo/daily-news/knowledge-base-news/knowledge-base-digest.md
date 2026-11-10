@@ -2,6 +2,64 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-09
+
+### 今日总览
+
+**一句话结论**：固定来源里可核验的深度新文主要落在掘金——一篇把 LangChain `ToolRuntime` 的 `context` / `state` / `store` 讲清楚的实践文，以及一篇对 Anthropic Agent 评测长文的 8 步拆解；阿里云开发者社区当天多见百炼/双十一选购与低门槛教程，按规则过滤为营销或浅层导流，不收入正文。美团、字节官方技术博客、百度 FEX/EFE、京东、滴滴、网易、360、有赞、阿里中间件 / 102.alibaba.com / 语雀阿里技术等未检出可核验的 11-09 深度新文。专项上，LangChain 有明确新文，Langfuse 只作为评测工具被提及，Code Graph / Spring Alibaba AI / Loop Engineering 无专名深度新文。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里/腾讯/字节/百度/美团/京东/滴滴/网易/360/有赞固定技术博客与开发者社区，以及技能列出的掘金来源；并在固定来源内专项检索 Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering |
+| 核心趋势 | 1）LangChain 工具运行时开始被写成可落地的三分法：本次运行条件、当前流程状态、跨请求持久数据；2）中文社区把 Anthropic 的 Agent 评测方法翻译成可执行的 8 步，强调“看环境结果而不是听模型自我汇报”；3）大厂官方技术博客整体仍偏空窗，阿里云社区则以活动/套餐内容为主 |
+| 可直接关注 | [LangChain ToolRuntime](https://juejin.cn/post/7705623263632457738) 的 context/state/store 选择；[Agent 评测 8 步](https://juejin.cn/post/7706016269737558054) 里的 pass@k / pass^k 与三类评分器组合 |
+| 专项检索结论 | Langfuse：固定来源内无 11-09 深度新专文；仅在掘金对 Anthropic 评测文的转述里作为可自托管的追踪/评测工具被点名，不记作 Langfuse 产品更新。LangChain / LangGraph：掘金有 [ToolRuntime 入门](https://juejin.cn/post/7705623263632457738)，覆盖 `context`、`state`、`store` 与中间件扩展 state。Code Graph：固定来源内无 11-09 深度新专文。Spring Alibaba AI：固定来源内无 11-09 深度新专文。Loop Engineering：固定来源内无以该专名发布的深度新专文。 |
+| 未发现更新 | 美团官网、字节 techblog.toutiao.com、百度 FEX/EFE、滴滴、有赞、360、京东凹凸 / 京东云开发者、网易传媒知乎专栏、腾讯 AlloyTeam / 腾讯大讲堂 / Tencent_TEG、阿里技术 102.alibaba.com / 阿里中间件 / 语雀·阿里技术干货；阿里云开发者社区当日可见内容多为双十一/Token Plan/低门槛营销教程，已按过滤规则排除 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| LangChain 工具运行时 | [LangChain ToolRuntime 入门：context、state 与 store 的实际用法](https://juejin.cn/post/7705623263632457738) | 2026-11-09 | 掘金 | 把工具参数分成模型可填的普通参数和框架自动注入、模型不能填的 `runtime`。`context` 放本次运行的用户身份、权限和依赖，必须由登录系统传入而不是让模型自己报用户 ID；`state` 放当前流程的消息、步骤和临时计数，可用中间件在 `after_model` 里累加 `model_call_count`；`store` 按 `(user, user_id)` 命名空间保存跨请求偏好，并提醒 `InMemoryStore` 重启即丢。适合拿来统一 Agent 工具里的身份、限次和长期记忆接口 |
+| Agent 评测 | [为什么你的 AI Agent“越改越差”？Anthropic 总结了 8 步评测方法](https://juejin.cn/post/7706016269737558054) | 2026-11-09 | 掘金 | 社区对 Anthropic Engineering《Demystifying evals for AI agents》的拆解，不是 Anthropic 官方原文。核心观点是：Agent 评测要看任务、多次试验、评分器、完整轨迹和环境最终状态，不要只信模型说“已经订好票”。文中区分代码/模型/人工三类评分器，以及能力评测与回归评测；并给出 pass@k 与 pass^k 来处理非确定性。8 步路线从真实失败里抽出 20–50 个无歧义任务，强调评产出不评路径、环境每次独立启动、并且要读 transcript。文末把 LangSmith / Langfuse 列为追踪与评测工具，后者可自托管 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| LangChain 工具接口 | [ToolRuntime：context / state / store](https://juejin.cn/post/7705623263632457738) | 自动注入 runtime、按生命周期选择存储、用中间件扩展 AgentState | 正在给 LangChain/LangGraph 工具加权限、限次或长期记忆的人 |
+| Agent 评测体系 | [8 步评测方法](https://juejin.cn/post/7706016269737558054) | 能力评测 vs 回归评测、pass@k / pass^k、组合评分器、读轨迹 | 已经上线 Agent、开始觉得“越改越差”的团队 |
+
+### 工程实践归纳
+
+**总体判断**：知识库侧的可复用信号集中在 LangChain 工具运行时和 Agent 评测方法；Langfuse / Code Graph / Spring Alibaba AI / Loop Engineering 未发现可核验的固定来源深度新文。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| LangChain ToolRuntime | 掘金实践文把 context、state、store 按数据生命周期分开，并给出权限与持久化注意点 | 用户身份只能从已验证的 context 读取；跨请求数据必须按用户/租户隔离命名空间 |
+| Agent 评测 | 中文社区把 Anthropic 的评测长文收成 8 步，并强调环境最终状态重于模型口头结果 | 先把线上真实失败写成无歧义任务，再区分“一次成功即可”和“每次都得稳定” |
+| 专项其余项 | Langfuse 仅被点名为可选工具；Code Graph / Spring Alibaba AI / Loop Engineering 无 11-09 固定来源深度新专文 | 保持检索记录，不把工具点名或营销教程记成专项发版 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [LangChain ToolRuntime 入门](https://juejin.cn/post/7705623263632457738) | 当天固定来源里对 LangChain 工具运行时讲得最清楚、可直接对照代码的一篇 |
+| 推荐 | [Agent“越改越差”的 8 步评测](https://juejin.cn/post/7706016269737558054) | 适合把“感觉变笨了”落成可回归的任务编号；阅读时应回到 Anthropic 原文核对细节 |
+
+### 来源清单
+
+- 检索范围：2026-11-09 00:00:00 到 2026-11-09 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里（阿里云开发者社区/阿里技术/中间件/语雀）、腾讯（腾讯云+社区/AlloyTeam/大讲堂/Tencent_TEG）、字节跳动技术博客、掘金、百度 FEX/EFE/开发者中心、美团技术团队、京东云开发者/凹凸实验室、滴滴技术博客、网易传媒知乎专栏、360 核心安全、有赞技术团队
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| （社区/泛前端） | 掘金 | 技术文章 | LangChain ToolRuntime 入门：context、state 与 store 的实际用法 | 2026-11-09 | https://juejin.cn/post/7705623263632457738 |
+| （社区/泛前端） | 掘金 | 技术文章 | 为什么你的 AI Agent“越改越差”？Anthropic 总结了 8 步评测方法 | 2026-11-09 | https://juejin.cn/post/7706016269737558054 |
+| 阿里巴巴 | 阿里云开发者社区 | 已过滤 | 当日可见内容多为双十一/Token Plan/低门槛营销教程 | 2026-11-09 | - |
+| 其余固定来源 | 固定来源清单 | 无新增 | 未发现可核验的 11-09 深度新文 | - | - |
+
 ## 2026-11-08
 
 ### 今日总览

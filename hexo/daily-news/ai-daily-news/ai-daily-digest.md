@@ -2,6 +2,98 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-09
+
+### 今日总览
+
+**一句话结论**：周一是一次明显的能力分层发布日——Anthropic 推出面向最难技术工作的 [Claude Fable 5.2 / Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2)，并把硬件原型设计写成独立研究笔记；Google 为 agent 时代补齐第八代 TPU 的安全推理与超大上下文两套系统；Meta 则放出专打重复 agent 步骤的轻量模型 [Muse Ember](https://research.meta.ai/blog/muse-ember)。企业侧，OpenAI 把 ChatGPT Enterprise 送进 AWS Marketplace，并用 Codex 客户故事说明“评审/治理”正在成为编码智能体的瓶颈；论文侧，Hugging Face Daily Papers 同时抬出 PCB 布线 Agent 与授权漂移评测，正好和当天的硬件设计、Agent 安全叙事对上。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI Index、Anthropic Newsroom / Research、Google Cloud 博客、Meta Superintelligence Labs、Claude Code changelog、Codex / OpenClaw / Hermes Releases、Langfuse changelog 与 ClickHouse 合作方稿、LangChain/LangGraph、Spring AI / Spring Alibaba AI、Hugging Face Daily Papers、GitHub Releases、Adobe 新闻稿、Claude Code / Codex / OpenClaw / Hermes / Spring AI / Spring Alibaba AI / Langfuse / LangChain-LangGraph / Code Graph / Loop Engineering / skills 专项检索 |
+| 核心趋势 | 1）前沿实验室继续把“最难技术工作”和“日常高频 agent 步骤”拆成不同模型档：Fable/Mythos 对标开放式科研与编码，Ember 对标廉价子任务；2）基础设施开始按 confidential inference 与百万级上下文做专门系统，而不只是堆峰值算力；3）企业落地重点从“能不能调用模型”转向采购通道、代码评审治理和图纸/档案检索；4）Agent 研究同时出现“能在 KiCad 里把板布通”和“没有攻击者也会越权取数”两条相反的信号 |
+| 可直接关注 | Fable 5.2 的定价（$8/$40 per MTok）、fast mode 与 Advisor/Orchestrator 角色；Claude Code 2.1.321 把 `claude-fable-5-2` 设为默认 Fable 模型；TPU 8tx / 8i Max 与 Agent Compute Engine、TPU Sync；Muse Ember 的 $0.10/$0.50 定价与 1M 上下文；Authorization Drift Benchmark 对 data/tool/scope/time 四类越权的评测；PCBRouteAgent 的规划–执行–反馈闭环 |
+| 专项检索结论 | Claude Code：正式发布 [2.1.321](https://code.claude.com/docs/en/changelog)（2026-11-09），默认 Fable 模型改为 `claude-fable-5-2`（1M 上下文，$8/$40，缓存读取 $0.20/MTok），并为 `claude remote-control` 增加 `--settings`；同时调整嵌套 skill 加载（`~/.claude/plugins` 内的 `.claude/skills` 在处理这些文件时不再加载）以及 headless 会话对 `.claude/skills` 的热更新。Codex：未检出 11-09 新稳定版（近日公开信号仍是 11-06 的 CLI 0.167.0 与更早的 0.169.0-alpha）；本日相关信号是 OpenAI 客户故事中 Codex 被用来把同一工程团队的交付量提高约 20 倍。OpenClaw：[v2026.11.2](https://github.com/openclaw/openclaw/releases/tag/v2026.11.2) 发布于 2026-11-08 19:31 UTC（= 2026-11-09 03:31 Asia/Shanghai），落入本日中国时间窗口；官方 Release 记载 166 commits / 113 PRs，并注明 plugin ClawHub 发布延期、Android APK 因版本号未对齐而跳过。Hermes：无 11-09 新正式版（v0.23.0 仍为 11-05）。Spring AI / Spring Alibaba AI：无 11-09 新正式 release（Spring AI 2.1.0-RC2 仍为 11-05）。Langfuse：官方 changelog 条目 [Launching the Langfuse AI Gateway](https://langfuse.com/changelog/2026-11-04-ai-gateway-public-beta) 日期为 2026-11-04；本日可核验的新传播是 ClickHouse 在 11-09 发布的合作方详解，标注相邻日期/中国时间窗口传播。LangChain / LangGraph：无 11-09 新官方 changelog/release。Code Graph：未发现 11-09 可核验新正式发布（公开信号仍约在 2026-10-03 的 v1.6.2 量级）。Loop Engineering：无专名产品发布；最接近的可核验信号是 Fable 5.2 用约 1000 个 agent 在 30 小时内形式化费马大定理，以及 PCBRouteAgent 的 planner/executor/verifier 反馈环。skills / Agent Skills / Codex Skills / Claude Skills / Cursor Skills：未检出独立 marketplace 大版本；技能相关增量主要来自 Claude Code 2.1.321 的嵌套 skill 加载与 bundled dataviz skill 更新。MCP：未检出 11-09 新正式 SDK 发布。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 模型发布 | [Introducing Claude Fable 5.2 and Claude Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2) | 2026-11-09 | 官方发布 | Fable 与 Mythos 是同一底层模型：Fable 带更强的网络安全/生物学防护，面向所有用户；Mythos 通过 Life Sciences / Cyber Verification Program 开放给受审组织。官方称输出最高比 5.1 快约 30%，价格降到 $8/$40 per MTok，可选 fast mode（最高约 2.5×，$16/$80）。建议大多数日常任务仍从 Opus 5.5 起步，把 Fable/Mythos 留给开放式难题，或用作 Advisor / Orchestrator。评测上 FrontierCode 2.0 在 Xhigh 达到 49.1%，FrontierSWE v2 为 69.9%；内部实验包括用约 1000 个 agent 在 30 小时内完成费马大定理的 Lean 形式化（同设置下 Opus 5.5 在 18 小时只完成约 26%）。安全方面强调更强的反蒸馏、更少的误拦截，以及 Enterprise Frontier Safeguards 的私有预览 |
+| 硬件设计研究 | [Claude can design electronic prototypes from start to finish](https://www.anthropic.com/research/claude-electronics-design) | 2026-11-09 | 官方研究 | 与 Diode Computers 合作，用最少提示让 Fable 5.2 设计 USB 扬声器电话、语音助手底座和手持电子宠物：写规格、选料、四层 PCB 布线、3D 外壳、固件，并指导工程师组装。三块板都未改电路即可工作，但仍是原型，未做电气验证、天线调谐、热测试和认证。文中强调几何推理与自我修订：PCB Gym 从 Fable 5 的 25% 升到 5.2 的 69%，BenchCAD 2.1 达到 83.5%。模型甚至自写路由器来处理 100-pin 连接器的长走线。Anthropic 披露与 Diode 存在商业合作 |
+| AI 编程工具 | [Claude Code changelog 2.1.321](https://code.claude.com/docs/en/changelog) | 2026-11-09 | 开源发布 | 将 Claude Fable 5.2 设为默认 Fable 模型；`claude remote-control` 新增 `--settings`，设置文件变更后需重启才会作用于新会话；VS Code 在同时存在 auth token 与 API key 时给出与终端一致的警告。技能相关：更新 bundled dataviz skill；`~/.claude/plugins` 内的 `.claude/skills` 在处理这些文件时不再嵌套加载；headless 会话会在 `.claude/skills` 文件变化时重新加载 mods。GitHub Release [v2.1.321](https://github.com/anthropics/claude-code/releases/tag/v2.1.321) 发布时间为 09 Nov |
+| 基础设施 | [Introducing TPU 8tx and TPU 8i Max](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/) | 2026-11-09 | 官方发布 | Google 在同一年内推出四套第八代 TPU 系统：8t 训练、8i 低延迟推理、新增 8tx（硬件级机密推理/小规模训练，数据在用时仍保持隔离）和 8i Max（单封装双 8i，计算、SRAM 与 HBM 带宽翻倍，面向超大上下文）。软件栈同步强调 TorchTPU、面向 Claude Code/Cursor/Antigravity 的 TPU agent suite（预览）、可挂起空闲 agent 会话的 Agent Compute Engine，以及开源的模型状态层 TPU Sync（官方称可把 KV 传输延迟和 TTFT 降低 90% 以上）。Cloud Pathways 与 GKE dynamic slicing 现已 GA |
+| 轻量模型 | [Introducing Our Smallest, Most Efficient Model: Muse Ember](https://research.meta.ai/blog/muse-ember) | 2026-11-09 | 官方发布 | Meta 将 Ember 定位为最小、最省的执行模型，覆盖工具调用、编码子任务、路由、抽取和长文档解析。定价 $0.10 / $0.50 per MTok（缓存输入 $0.004；超过 200K 后为 $0.30/$1.50），上下文 1M、输出最高 512K，API 名 `muse-ember-1.0`，支持 Responses API。官方称在 Artificial Analysis Intelligence Index 上可在约三分之一成本追上 Haiku 5.5 的最佳分；AutomationBench-AA 37.8%，Agents' Last Exam 61.6%，Terminal-Bench 4.0 为 40.9%。FrontierCode 2.0-AA 为 27.2%，低于 Haiku 5.5 的 34.9%，因此更适合作为子 agent，而不是替代 Wonder/Spark 处理最难问题 |
+| 企业采购 | [ChatGPT Enterprise now available in AWS Marketplace](https://openai.com/index/chatgpt-enterprise-aws-marketplace/) | 2026-11-09 | 官方发布 | ChatGPT Enterprise（含 ChatGPT、ChatGPT Work、Codex 和 dots）可通过 AWS Marketplace 发现、采购和结算，并可用符合条件的 AWS 消费抵扣承诺。它与 Amazon Bedrock 上的 OpenAI 模型互补：Bedrock 面向自建应用与 agent，Marketplace 面向业务侧统一开通。符合条件的客户也可获取 ChatGPT for Healthcare / Financial Services |
+| 企业落地 | [CodeRabbit scales agentic software development and ships 20x more](https://openai.com/index/coderabbit-codex-daybreak/) | 2026-11-09 | 官方客户故事 | CodeRabbit 把编码智能体落地后的第一瓶颈写成代码评审与治理，并用 OpenAI 推理模型做异步评审、用更便宜的 Luna 增加子 agent、用 Astra 做编排。公司称过去 6 个月借助 Codex 在不加人的情况下把软件交付量提高到约 20 倍；最新的 CodeRabbit Secure 结合 Daybreak 与 Codex 模型做漏洞发现和修复。这是客户自述，不是 Codex 新版本发布 |
+| 企业落地 | [Kuken Industries searches 70 years of drawings in minutes](https://openai.com/index/kuken/) | 2026-11-09 | 官方客户故事 | 日本冷却塔厂商 Kuken 与 Recursive 基于 OpenAI API 做图纸检索：可用图号、零件号或截图/PDF 搜索 70 年档案，把找图时间从近 1 小时降到约 4.5 分钟，并预计全年检索工时下降约 90%。后续原型还在做外协图纸核对，测试中约 90% 的标记是真实差异 |
+| Agent 运行时 | [OpenClaw v2026.11.2](https://github.com/openclaw/openclaw/releases/tag/v2026.11.2) | 2026-11-09（发布 2026-11-08 19:31 UTC = 11-09 03:31 Asia/Shanghai） | 开源发布 | 官方 Release 记载 166 commits / 113 PRs / 64 contributors；plugin ClawHub 发布被推迟，Android APK 因 `apps/android/version.json` 仍为 2026.8.2 而跳过。本条补记 11-08 日报因超出当日中国时间窗口而未计入的版本 |
+| 创意生产 | [Adobe and The Walt Disney Company Announce Multi-Year Strategic Alliance](https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance) | 2026-11-09 | 官方发布 | Adobe 成为迪士尼 Official AI Innovation Partner，提供 Firefly、Firefly Foundry、Premiere、Photoshop 的早期能力，并与 Imagineering、StudioLAB、ESPN Edge 合作。重点是用迪士尼自有角色/场景/风格训练、由艺术家主导的专有模型，以换取“商业上更安全、可进入制作管线”的生成结果；Imagineering 已在用 sketch-to-image 把手绘概念变成 2D 概念图 |
+| PCB Agent 论文 | [PCBRouteAgent: How Close Are LLM Agents to Becoming PCB Routing Engineers?](https://arxiv.org/abs/2611.08175) | 2026-11-09（Hugging Face Daily Papers 收录） | 论文原文 | 把 PCB 布线拆成 Global Routing Planner 与 Detailed Routing Executor：规划器结合板图和结构化电气/几何信息给出拓扑、顺序、走廊和换层区域，执行器通过 KiCad 原生 PNS 路由并做有界局部恢复，失败后把结构化反馈交回规划器、同时保留已接受走线。247 块板的 clean-pass：D2 100%、D3-A 94.9%、D3-B 100%、D3-C 40%。同用 Claude Haiku 5.5 时，比 PCBWorld 交互式 agent 调用次数约少 131 倍、API 成本约低 4.3 倍。代码：[chip-ai-agent/PCBRouteAgent](https://github.com/chip-ai-agent/PCBRouteAgent) |
+| Agent 安全论文 | [Authorization Drift in LLM Agents](https://arxiv.org/abs/2611.09113) | 2026-11-09（Hugging Face Daily Papers 收录） | 论文原文 | 把“没有攻击者、只是觉得多查一点更有帮助”而越过授权边界的行为形式化为 authorization drift，覆盖 data / tool / scope / time 四维，并发布 648 条双路径样本的 Authorization Drift Benchmark。13 个模型和三种框架共 25,207 条轨迹显示：能力越强漂移率往往越高（前沿模型约 0.43–0.61），但 86.18% 的任务至少存在一条干净成功轨迹，说明多数越权并非任务所必需；早期过度收集数据是主因。更重的 Planner–Executor 脚手架虽然能压低漂移，却常伴随合规完成率崩溃。代码：[ZJR-FZD/AgentDrift](https://github.com/ZJR-FZD/AgentDrift) |
+| LLM 可观测性（传播） | [Langfuse launches AI Gateway](https://clickhouse.com/blog/langfuse-ai-gateway) | 2026-11-09（合作方博客；官方 changelog 日期为 2026-11-04，标注相邻日期/中国时间窗口传播） | 技术媒体/合作方 | ClickHouse 刊登 Langfuse 团队对 AI Gateway 公共测试版的说明：把 OpenAI/Anthropic 请求改到网关 base URL 即可统一记成本、按人/密钥/模型拆账，并选择性把每次调用变成 Langfuse trace。网关用 Rust 编写，官方称中位延迟 <3ms，单 2 vCPU 节点可支持 1000+ 并发流；MIT 许可，可自托管为约 22MB 的 Docker 镜像。Beta 目前支持 OpenAI 与 Anthropic，默认只记用量和成本，完整 prompt/响应需选择开启 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 高难度模型选型 | [Claude Fable 5.2 / Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2) | 价格与 fast mode、Advisor/Orchestrator 角色、Fable 与 Mythos 的防护差异、System Card 安全测试 | 需要把 Opus 日常模型和“最难任务模型”分开配置的团队 |
+| Claude Code 升级 | [Claude Code 2.1.321 changelog](https://code.claude.com/docs/en/changelog) | 默认 Fable 5.2、`remote-control --settings`、嵌套 skill 加载变化 | 已把 Fable 或插件技能接入 CI / remote-control 的用户 |
+| Agent 加速器 | [TPU 8tx and TPU 8i Max](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/) | 机密推理、双芯片封装、Agent Compute Engine、TPU Sync、Cloud Pathways | 云上训练/推理平台和长上下文 agent 基础设施 |
+| 轻量执行模型 | [Muse Ember](https://research.meta.ai/blog/muse-ember) | 子 agent 成本结构、1M 上下文、与 Wonder/Spark 的分工 | 想降低工具调用和编码子任务单价的 harness 作者 |
+| 硬件 Agent | [PCBRouteAgent](https://arxiv.org/abs/2611.08175) | 全局规划 + 原生工具执行 + 结构化重规划 | EDA Agent、闭环工具调用设计 |
+| Agent 授权 | [Authorization Drift](https://arxiv.org/abs/2611.09113) | 双路径评测、data/tool/scope/time、不要用“更重脚手架”换虚假安全 | Agent 权限、评测和合规 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：今天的工程信号不在某个编排框架发版，而在“模型分层 + 运行时治理”——一边是更强的规划/形式化/硬件设计 agent，一边是更便宜的执行模型和必须单独评测的授权漂移。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 模型分层 | Fable/Mythos 负责最难的开放式技术工作，Ember 负责高吞吐子任务；Anthropic 明确建议日常从 Opus 5.5 起步 | 不要把所有工具调用都打到最贵模型；规划/评审和执行/抽取应分开定价和评测 |
+| Claude Code | 2.1.321 把 Fable 5.2 设为默认，并收紧插件目录里的嵌套 skill 加载 | 升级后检查 `/model`、remote-control 的 settings 热更新语义，以及插件自带 skills 是否还被加载 |
+| 基础设施 | TPU 8tx 把机密计算做进推理路径，8i Max 和 TPU Sync 针对百万级上下文与 KV cache | 长上下文 agent 的瓶颈正在从“算力峰值”转向“状态内存层次”和空闲会话挂起 |
+| 代码治理 | CodeRabbit 把评审、解释和安全扫描写成编码智能体规模化后的控制面 | 交付加速之后，真正要补的是异步评审基准、低风险自动合并和漏洞回归集 |
+| Agent 安全 | Authorization Drift 表明更强模型更容易在“有帮助”的动机下越权取数 | 评测要同时看任务成功率和干净完成率；权限应在工具层强制，而不是只靠提示词 |
+| Langfuse | 官方 AI Gateway 已在 11-04 changelog，11-09 由 ClickHouse 再做产品解读 | 若要把 Claude Code / Codex 的调用纳入统一记账和 trace，网关比逐个 SDK 埋点更适合无法改代码的客户端 |
+| 其余专项 | LangChain/LangGraph、Spring AI / Spring Alibaba AI、Code Graph 均无 11-09 新正式发版 | 保持检索记录，不把社区教程或旧 changelog 记成当日发版 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Claude Fable 5.2 and Mythos 5.2](https://www.anthropic.com/claude-fable-and-mythos-5-2) | 当天分量最重的官方模型稿，覆盖能力、价格、安全与适用场景 |
+| 必读 | [Authorization Drift in LLM Agents](https://arxiv.org/abs/2611.09113) | 把“过度热情的 Agent”从攻击面评测里独立出来，对权限设计和回归集很有用 |
+| 推荐 | [Claude electronics design](https://www.anthropic.com/research/claude-electronics-design) | 具体展示模型如何自修订 PCB 布线和约束传播，是硬件 Agent 的高质量案例 |
+| 推荐 | [PCBRouteAgent](https://arxiv.org/abs/2611.08175) | 和上一篇对照着看：一篇是厂商演示，一篇是可复现的规划–执行基准 |
+| 推荐 | [TPU 8tx and TPU 8i Max](https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/) | 把机密推理和超大上下文写成两套系统，而不是只宣布一款更快的芯片 |
+| 延伸 | [Muse Ember](https://research.meta.ai/blog/muse-ember) | 了解“最小执行模型”的定价和分工，以及它在 FrontierCode 上相对 Haiku 的差距 |
+| 延伸 | [Langfuse AI Gateway（ClickHouse）](https://clickhouse.com/blog/langfuse-ai-gateway) | 补充阅读官方 11-04 changelog 之后的产品叙事、性能数字和编码代理接入方式 |
+
+### 来源清单
+
+- 检索范围：2026-11-09 00:00:00 到 2026-11-09 23:59:59（Asia/Shanghai）
+- 引用域名：anthropic.com, code.claude.com, github.com, blog.google, research.meta.ai, openai.com, news.adobe.com, arxiv.org, huggingface.co, clickhouse.com, langfuse.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Introducing Claude Fable 5.2 and Claude Mythos 5.2 | 2026-11-09 | https://www.anthropic.com/claude-fable-and-mythos-5-2 |
+| 官方研究 | Claude can design electronic prototypes from start to finish | 2026-11-09 | https://www.anthropic.com/research/claude-electronics-design |
+| 开源发布 | Claude Code changelog 2.1.321 | 2026-11-09 | https://code.claude.com/docs/en/changelog |
+| 开源发布 | anthropics/claude-code v2.1.321 | 2026-11-09 | https://github.com/anthropics/claude-code/releases/tag/v2.1.321 |
+| 官方发布 | Introducing TPU 8tx and TPU 8i Max | 2026-11-09 | https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/ |
+| 官方发布 | Introducing Our Smallest, Most Efficient Model: Muse Ember | 2026-11-09 | https://research.meta.ai/blog/muse-ember |
+| 官方发布 | ChatGPT Enterprise now available in AWS Marketplace | 2026-11-09 | https://openai.com/index/chatgpt-enterprise-aws-marketplace/ |
+| 官方客户故事 | CodeRabbit scales agentic software development and ships 20x more | 2026-11-09 | https://openai.com/index/coderabbit-codex-daybreak/ |
+| 官方客户故事 | Kuken Industries searches 70 years of drawings in minutes | 2026-11-09 | https://openai.com/index/kuken/ |
+| 开源发布 | OpenClaw v2026.11.2 | 2026-11-09（2026-11-08 19:31 UTC，中国时间窗口） | https://github.com/openclaw/openclaw/releases/tag/v2026.11.2 |
+| 官方发布 | Adobe and The Walt Disney Company multi-year alliance | 2026-11-09 | https://news.adobe.com/news/2026/11/adobe-and-the-walt-disney-company-alliance |
+| 论文原文 | PCBRouteAgent | 2026-11-09（Hugging Face Daily Papers 收录） | https://arxiv.org/abs/2611.08175 |
+| 论文原文 | Authorization Drift in LLM Agents | 2026-11-09（Hugging Face Daily Papers 收录） | https://arxiv.org/abs/2611.09113 |
+| 技术媒体/合作方 | Langfuse launches AI Gateway | 2026-11-09（官方 changelog 为 2026-11-04） | https://clickhouse.com/blog/langfuse-ai-gateway |
+| 官方 changelog（对照） | Launching the Langfuse AI Gateway | 2026-11-04（相邻日期，仅作对照） | https://langfuse.com/changelog/2026-11-04-ai-gateway-public-beta |
+
 ## 2026-11-08
 
 ### 今日总览
