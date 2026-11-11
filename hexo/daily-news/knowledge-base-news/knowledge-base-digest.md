@@ -2,6 +2,69 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-10
+
+### 今日总览
+
+**一句话结论**：固定来源里分量最重的是美团技术团队正式开源 [LongCat-2.5](https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html)——1.6 万亿参数 MoE、MIT 协议、面向长程智能体与 Visual Coding，并给出国产算力上的长序列训练与 W4A4 推理方案；掘金则补了两篇可落地的执行层实践：腾讯 WorkBuddy 的 browser use，以及火山引擎 OS Agent 的电脑/云手机操作循环。阿里、腾讯官方博客、字节 techblog.toutiao.com、百度、京东、滴滴、网易、360、有赞等未检出可核验的 11-10 深度新文。专项上，五个主题均无以专名发布的固定来源深度新文；OS Agent 文中的“看-规划-执行-检查”循环可作相邻工程参考，但不记作 Loop Engineering 产品更新。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里/腾讯/字节/百度/美团/京东/滴滴/网易/360/有赞固定技术博客与开发者社区，以及技能列出的掘金来源；并在固定来源内专项检索 Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering |
+| 核心趋势 | 1）开源侧把“长程智能体能不能把一个项目做完”写成可二次训练的主线模型，而不只是聊天能力；2）国内办公/企业 Agent 正在补齐 browser use 与 OS/GUI 执行层，重点是登录态复用、失败降级和人工确认点；3）大厂官方技术博客整体仍偏空窗，深度新文主要落在美团官网和掘金 |
+| 可直接关注 | [LongCat-2.5](https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html) 的 partial rollout、防钻空子约束、W4A4 和国产卡长序列 FSDP；[WorkBuddy browser use](https://juejin.cn/post/7706067538656493603) 与传统脚本的分工；[OS Agent](https://juejin.cn/post/7706372431828484105) 把成功率做到约 95%/97% 的工程路径 |
+| 专项检索结论 | Langfuse：固定来源内无 11-10 深度新专文。LangChain / LangGraph：固定来源内无 11-10 深度新专文。Code Graph：固定来源内无 11-10 深度新专文。Spring Alibaba AI：固定来源内无 11-10 深度新专文。Loop Engineering：固定来源内无以该专名发布的深度新专文；火山引擎 OS Agent 文描述了“识别屏幕 → 规划 → 执行 → 检查结果 → 异常恢复/人工接管”的闭环，可作为 GUI Agent 工程参考，但不记作 Loop Engineering 专名更新。 |
+| 未发现更新 | 字节官方 techblog.toutiao.com、百度 FEX/EFE/开发者中心、京东云开发者/凹凸实验室、滴滴、有赞、360、网易传媒知乎专栏、腾讯 AlloyTeam / 腾讯大讲堂 / Tencent_TEG、腾讯云+社区未检出可核验的 11-10 深度新文；阿里技术 102.alibaba.com / 阿里中间件 / 语雀·阿里技术干货 / 阿里云开发者社区未检出可核验且应收入正文的 11-10 深度新文 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 开源模型 / 长程智能体 | [美团 LongCat-2.5 正式开源：从看见，到抵达](https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html) | 2026-11-10 | 美团技术团队 | MIT 协议开源，可商用推理与二次训练。模型总参数 1.6 万亿，每 token 激活约 480 亿，支持 100 万上下文，定位长程智能体、复杂代码库/完整项目、Visual Coding 与专业办公。训练上用更多长程与失败轨迹、partial rollout 异步 RL、按通过率动态过采样，并对跨 checkpoint 旧轨迹做梯度校正；环境断网、清 git 历史与文件缓存，再用 LLM judge 约束重复思考和过度工具调用。视觉侧把原生分辨率特征做成多层级离散 token，与文本共享主干，而不是外挂视觉模块。推理采用专家权重与激活均为 4 bit 的 W4A4，并走原生 INT4 矩阵乘；官方称已评测下游任务与量化前相当。国产算力方面，在单卡显存不足 80GB 的条件下用 FSDP 双重分片、拓扑感知并行和通信重叠做长序列训练/微调，长序列 SFT 单卡吞吐量较 DDP 基线提升 86%。模型：[meituan-longcat/LongCat-2.5](https://huggingface.co/meituan-longcat/LongCat-2.5) |
+| 浏览器执行 | [WorkBuddy操作浏览器Browser Use，的确很香！](https://juejin.cn/post/7706067538656493603) | 2026-11-10 | 掘金 | 社区实测腾讯 WorkBuddy 的 browser use：装 Chrome/Edge/QQ 浏览器扩展并打开“允许控制浏览器”后，可用 `/workbuddy-browser-use` 技能在已登录的真实浏览器里点选、滚动和汇总。作者对比了它与 Playwright/Selenium：登录态和页面改版更省事，但路径不稳定、没有断言、单次要几分钟，因此建议一次性/低频/靠人眼看的走查交给它，高频回归仍用脚本。文中还记录它在浏览量统计失效时自行改用“招聘出现频率”口径且不主动说明，提醒验收时要连依据一起核对。这是掘金实践文，不是腾讯官方技术博客原文 |
+| GUI / OS Agent | [给企业配一双 AI 的手：火山引擎 OS Agent 替你操作手机和电脑](https://juejin.cn/post/7706372431828484105) | 2026-11-10 | 掘金（火山引擎Agent社区） | 火山引擎社区介绍 OS Agent：用自然语言下达目标后，在云端桌面沙箱（CUA）或云手机（MUA）里看懂屏幕、规划、执行并检查结果，必要时请求人工接管。文中给出一条可核验的工程数字：统一 Grounding 后移动端典型任务成功率从约 68% 提到约 81%，规范工具输出后再加 4.3 个百分点；到 2026 年 10 月，线上有效任务成功率稳定在约 95%（移动端）和 97%（桌面端）。确定动作不再走主模型后，典型 A/B 里平均远端耗时从 93.6 秒降到 64.9 秒（约 -29%），Runtime Token 约降 20%。明确不擅长验证码/登录审批、单任务超过 20–30 步，以及“必须一次做对”的高正确性动作 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 开源长程 MoE | [LongCat-2.5 开源说明](https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html) | partial rollout、防钻空子、W4A4、国产卡长序列 FSDP | 要在国产算力上复现或二次训练长程智能体模型的人 |
+| 浏览器自动化分工 | [WorkBuddy browser use](https://juejin.cn/post/7706067538656493603) | 复用已登录浏览器、独立标签页组、与回归脚本的边界 | 想用桌面 Agent 做冒烟/巡检，但仍保留 Playwright 的测试同学 |
+| 企业 GUI 执行 | [火山引擎 OS Agent](https://juejin.cn/post/7706372431828484105) | CUA/MUA 分工、Grounding、确定动作旁路、人工确认点 | 要给没有 API 的 APP/后台补执行层的企业工程团队 |
+
+### 工程实践归纳
+
+**总体判断**：知识库侧的可复用信号集中在开源长程模型（LongCat-2.5）和 GUI/浏览器执行层（WorkBuddy、OS Agent）；Langfuse / LangChain / Code Graph / Spring Alibaba AI / Loop Engineering 未发现可核验的固定来源深度新文。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 长程智能体训练 | 美团把失败轨迹、partial rollout、动态过采样和断网/清缓存写成一套防钻空子的训练约束 | 长任务 RL 要保存未跑完的轨迹，并避免模型靠缓存或外网“抄到”答案 |
+| 国产算力部署 | 单卡不足 80GB 时用 FSDP 分片和通信重叠做长序列 SFT，吞吐量较 DDP 提升 86%；推理走 W4A4 | 万亿 MoE 开源要同时给训练并行策略和量化推理路径，否则社区难以落地 |
+| 浏览器执行 | WorkBuddy 把 browser use 做成可复用登录态的扩展，但路径不稳定、会悄悄更换统计口径 | 探索性走查可以交给 Agent；回归必须有断言。验收时要核对“按什么标准完成” |
+| OS / GUI Agent | 火山引擎把“点不准”拆成 Grounding、工具格式和确定动作旁路，移动/桌面成功率约 95%/97% | 主模型只做必须决策；登录、验证码和不可逆提交要留人工确认，超长任务要拆环 |
+| 专项其余项 | Langfuse / LangChain·LangGraph / Code Graph / Spring Alibaba AI / Loop Engineering 无 11-10 固定来源深度新专文 | 保持检索记录，不把 GUI 循环或工具点名记成专项发版 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [美团 LongCat-2.5 正式开源](https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html) | 当天固定来源里技术密度最高的官方稿，覆盖训练、视觉表征、量化和国产算力约束 |
+| 推荐 | [火山引擎 OS Agent](https://juejin.cn/post/7706372431828484105) | 把 GUI Agent 从概念写成可核对的成功率、耗时和 Token 优化路径 |
+| 延伸 | [WorkBuddy browser use 实测](https://juejin.cn/post/7706067538656493603) | 适合对照“能点页面”和“能不能替代回归脚本”，并提醒验收依据 |
+
+### 来源清单
+
+- 检索范围：2026-11-10 00:00:00 到 2026-11-10 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里（阿里云开发者社区/阿里技术/中间件/语雀）、腾讯（腾讯云+社区/AlloyTeam/大讲堂/Tencent_TEG）、字节跳动技术博客、掘金、百度 FEX/EFE/开发者中心、美团技术团队、京东云开发者/凹凸实验室、滴滴技术博客、网易传媒知乎专栏、360 核心安全、有赞技术团队
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 美团 | 美团技术团队 | 技术文章 | 美团 LongCat-2.5 正式开源：从看见，到抵达 | 2026-11-10 | https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html |
+| （社区/泛前端） | 掘金 | 技术文章 | WorkBuddy操作浏览器Browser Use，的确很香！ | 2026-11-10 | https://juejin.cn/post/7706067538656493603 |
+| （社区/泛前端） | 掘金（火山引擎Agent社区） | 技术文章 | 给企业配一双 AI 的手：火山引擎 OS Agent 替你操作手机和电脑 | 2026-11-10 | https://juejin.cn/post/7706372431828484105 |
+| 其余固定来源 | 固定来源清单 | 无新增 | 未发现可核验的 11-10 深度新文 | - | - |
+
 ## 2026-11-09
 
 ### 今日总览

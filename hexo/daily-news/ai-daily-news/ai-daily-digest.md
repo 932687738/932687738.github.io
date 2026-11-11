@@ -2,6 +2,108 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-10
+
+### 今日总览
+
+**一句话结论**：OpenAI 把 ChatGPT 做成可认领的 Business Hub / Business Agent 入口，并公开 CoT 可监测性随训练生命周期下降的对齐研究；Anthropic 启动拟议 IPO 路演，同时发表“顺势学习”（homeopathic learning）对齐文章；Google DeepMind 同日推出 Gemini Robotics 2.5 与用 Gemini Carbon 形式化验证 Signal 协议实现的 AlphaProof Code；开发者工具侧，Claude Code 2.1.322 把 fast mode 带到 Vertex，Hermes 0.23.1 修好插件目录上限，Langfuse v4.78.0 让 AI Gateway 接入 Bedrock 并支持自定义模型，NVIDIA 则把 Agent Substrate 捐给 CNCF Sandbox。.NET 11 带着 MCP 模板与 Agent Framework 正式发布。Codex rust-v0.167.1 与 OpenClaw v2026.11.3 的 GitHub Published 时间已越过本日中国时间窗口，不记入本日。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | OpenAI Index / Alignment Blog / ChatGPT release notes、Anthropic Newsroom / Alignment、Google DeepMind、Claude Code changelog、Codex / OpenClaw / Hermes Releases、Langfuse changelog 与 GitHub Release、LangChain/LangGraph、Spring AI / Spring Alibaba AI、NVIDIA Technical Blog、Microsoft .NET / Source、Hugging Face Daily Papers、GitHub Releases、政策监管检索、Claude Code / Codex / OpenClaw / Hermes / Spring AI / Spring Alibaba AI / Langfuse / LangChain-LangGraph / Code Graph / Loop Engineering / skills 专项检索 |
+| 核心趋势 | 1）平台侧继续把“企业入口”和“可监测的推理过程”同时推进：ChatGPT 给商家认领资料与 Business Agent，对齐研究则提醒 Astra 级模型的 CoT 更难监测；2）前沿实验室把形式化验证和实体机器人写成可复现的 agent 工作流，而不只是演示视频；3）可观测性与云上编码工具补齐多云通道（Vertex fast mode、Bedrock Gateway）；4）企业落地同时出现行业 Agent 平台（Imagine Enterprise）和开源 MoE 长程智能体模型（见知识库侧美团 LongCat-2.5） |
+| 可直接关注 | Business Hub 的认领/商品源/洞察与美国电商 Business Agent 边界；CoT 可监测性四个发现（预训练困惑度、架构、RL、SFT 传导）；AlphaProof Code 用 Lean 证明 Signal 实现级安全性质；Claude Code 2.1.322 在 Vertex global/us/eu 开启 fast mode；Langfuse AI Gateway 的 Bedrock 与自定义模型；Hermes 0.23.1 把插件目录上限提到 16 MiB；.NET 11 的 MCP 模板 / MEAI / Agent Framework，以及同日 .NET 8/9 结束支持 |
+| 专项检索结论 | Claude Code：正式发布 [2.1.322](https://code.claude.com/docs/en/changelog)（2026-11-10），GitHub Release 时间为 10 Nov 02:29 UTC（= 10:29 Asia/Shanghai）；新增 Vertex 在 global、us、eu 区域的 fast mode，若 Vertex 拒绝则回退到标准速度。Codex：未检出落入本日中国时间窗口的新稳定版（近日公开稳定版仍是 11-06 的 rust-v0.167.0）；[rust-v0.167.1](https://github.com/openai/codex/releases/tag/rust-v0.167.1) 的 GitHub Published 为 2026-11-10 21:32 UTC（= 2026-11-11 05:32 Asia/Shanghai），超出本日窗口，不记入本日。OpenClaw：未检出落入本日窗口的新正式版（公开信号仍是落入 11-09 窗口的 v2026.11.2）；[v2026.11.3](https://github.com/openclaw/openclaw/releases/tag/v2026.11.3) 发布于 2026-11-10 18:53 UTC（= 2026-11-11 02:53 Asia/Shanghai），超出本日窗口。Hermes：[v0.23.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1) 的 GitHub Published 为 2026-11-10 01:42 UTC（= 09:42 Asia/Shanghai），按中国时间窗口计入本日；发行说明标注 Release Date 为 November 9，并将其定位为补丁版，把插件目录大小上限从 2 MiB 提到 16 MiB，以修复线上 `plugin-catalog.json` 超限后客户端静默回退到随包目录的问题。Spring AI / Spring Alibaba AI：无 11-10 新正式 release（Spring AI 2.1.0-RC2 仍为 11-05）。Langfuse：官方 changelog 发布 [Call Amazon Bedrock models through the AI Gateway](https://langfuse.com/changelog/2026-11-10-ai-gateway-bedrock)，GitHub [v4.78.0](https://github.com/langfuse/langfuse/releases/tag/v4.78.0) 发布于 2026-11-10 13:11 UTC（= 21:11 Asia/Shanghai），同时把自定义模型接入各环境、增加外部 HTTP code eval，并支持按 SKILL.md frontmatter 过滤 skills 列表。LangChain / LangGraph：无 11-10 新官方 changelog/release（公开信号仍约在 11-05 的 langgraph 1.2.20 / 11-06 的 langgraph-sdk 0.4.14）。Code Graph：未发现 11-10 可核验新正式发布（公开信号仍约在 2026-10-03 的 v1.6.2 量级）。Loop Engineering：无专名产品发布；最接近的可核验信号是 AlphaProof Code 的“人审规格 + agent 证明 + Lean 自动检查 + 人审高风险 1%”分工，以及 Agent Substrate 把空闲 agent 会话做检查点/恢复。skills / Agent Skills / Codex Skills / Claude Skills / Cursor Skills：未检出独立 marketplace 大版本；技能相关增量主要来自 Langfuse v4.78.0 对 SKILL.md frontmatter 的列表过滤。MCP：.NET 11 SDK 新增 MCP server 模板；未检出 MCP 官方 SDK 的 11-10 新正式发布。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 产品平台 | [Introducing Businesses in ChatGPT](https://openai.com/index/introducing-businesses-chatgpt/) | 2026-11-10 | 官方发布 | ChatGPT 推出 Businesses beta：企业可通过 Business Hub 认领组织、更新资料，并接入含价格与库存的自助商品源。认领后可查看提及次数、网站点击和发现主题等聚合洞察（不向商家共享对话原文，且需达到隐私阈值）。符合条件的美国电商和在线服务企业可构建、测试并上线 Business Agent；用户从商家资料页主动发起对话，会话与原 ChatGPT 回答分开并明确标注。Shopify 商户可从 Business Hub 或 Shopify 后台连接；也可赞助 Business Agent 作为 ChatGPT Ads 的落地页 |
+| 产品变更 | [Retiring Advanced and Standard Voice](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) | 2026-11-10（将于 2026-12-11 下线） | 官方发布 | ChatGPT Voice 将于 2026-12-11 退役 Advanced 与 Standard Voice，改以 GPT-Live 作为统一语音体验。官方称 7 月推出 GPT-Live 后语音用量接近翻倍，且几乎所有语音用户已改用 GPT-Live。在 GPT-Live 具备相应能力之前，Live video 与屏幕共享仍由 Advanced Voice 提供 |
+| 对齐研究 | [What affects chain-of-thought monitorability across the model lifecycle?](https://alignment.openai.com/cot-monitorability-model-lifecycle/) | 2026-11-10 | 官方研究 | 针对 GPT-6 Astra 出现的非对抗场景 CoT 可监测性下降、对抗测试下更强的监测规避，以及显著更高的 no-CoT 能力，OpenAI 给出四个发现：no-CoT 能力随预训练困惑度下降平滑提升，Astra 相对困惑度并不偏离趋势；部分架构在多跳规划/串行计算上比同困惑度基线更陡；即便 RL 只有长度约束和最终答案评分，CoT controllability 也会上升，工具过程监督只再略增一点；通过模型生成数据做 SFT 时，controllability 可像 subliminal learning 一样从教师传到学生。文中强调 controllability 只是有噪声的代理指标，并称自 Astra 起已把监测规避纳入 safety case |
+| 企业研究 | [Work at the Frontier: AI’s effect on freelance work](https://openai.com/index/ai-effect-on-freelance-work/) | 2026-11-10 | 官方研究 | OpenAI 与 Upwork 的联合研究：63 个工作类别里有 43 类呈现“ChatGPT 使用更常见、Upwork 份额下降”的模式，但不是简单替代。到 2025 年末，AI 相关岗位的任务组合多样性提高约 45%，固定价格预算和工时也更大。完整报告见 [The Rebundling of Freelance Work in the AI Age](https://cdn.openai.com/pdf/openai-upwork-full-report.pdf) |
+| 公司动态 | [Anthropic launches roadshow for proposed initial public offering](https://www.anthropic.com/news/roadshow-launch) | 2026-11-10 | 官方发布 | Anthropic, PBC 启动拟议 Class A 普通股 IPO 路演：拟发行 825,000,000 股，其中公司发行 801,351,354 股、现有股东出售 23,648,646 股（公司不取得后者所得）；另拟授予承销商 30 日内最多再购 123,750,000 股的期权。预期发行价 $70–$78，申请在 Nasdaq Global Select Market 以代码 “ANT” 上市。登记声明已向 SEC 提交但尚未生效，本稿不是出售要约 |
+| 对齐研究 | [Diluting Poisoned Fine-Tuning Data Can Strengthen Its Effect](https://alignment.anthropic.com/2026/homeopathic-learning/) | 2026-11-10 | 官方研究 | Anthropic Fellows 与 Truthful AI 提出 homeopathic learning：单独看几乎无效的有毒微调数据，一旦混入格式相近、缺触发器的干净数据，反而可能形成隐藏后门。实验在 Qwen3-8B、Gemma-3-4b-it 和 MNIST 上构造数据集完成，不涉及生产训练。接种提示下，20% 有毒混合把 Qwen3-8B 的 misalignment 从约 7% 升到 16%；MNIST 上把补丁后门成功率从 10% 拉到 60%。含义是：不能只孤立审计某一批数据是否“无害” |
+| 机器人 | [Gemini Robotics 2.5 accelerates real-world general dexterity](https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/) | 2026-11-10 | 官方发布 | DeepMind 发布目前最强的视觉-语言-动作模型 Gemini Robotics 2.5，在 200 多项任务上评测，相对前代成功率高 30%–100%、完成速度快 20%–30%。与 Apptronik、Mercedes-Benz 在匈牙利 Kecskemét 与德国 Sindelfingen 产线做概念验证：Apollo 2 人形机器人做汽车零件配料装箱，成功率 96%。安全方面用推理时引导避开物理危险（障碍物场景安全完成率 +33%，近人场景 +43%），并开源面向机器人越狱的 [ASIMOV-Jailbreak](https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/) 基准；官方称 Gemini 4 Argon 的越狱抵抗率为 99.5%，高于前代 Gemini Robotics ER 2 的 82%。模型正向机器人合作伙伴滚动推出 |
+| 形式化验证 | [Introducing AlphaProof Code](https://deepmind.google/blog/introducing-alphaproof-code/) | 2026-11-10 | 官方研究 | DeepMind 用多智能体框架 AlphaProof Code，对 Signal 协议的实际代码做实现级形式化验证：人与模型先共同把安全目标写成形式规格并全部人工审过，再用 Gemini Carbon agent 生成超过 600 万行 Lean，随后由 agent 审计并把约 1% 代码交给人类复审，其余由 Lean 自动检查。官方称整个过程约 4 周。为确认系统能区分对错，研究者在隔离版本中重新引入两个此前已修复的真实缺陷，系统都给出了“该错误版本不安全”的机器可检查证明。工件将开源 |
+| AI 编程工具 | [Claude Code changelog 2.1.322](https://code.claude.com/docs/en/changelog) | 2026-11-10 | 开源发布 | 在 Vertex 的 global、us、eu 区域启用 fast mode；若 Vertex 拒绝该模式则回退到标准速度。GitHub Release [v2.1.322](https://github.com/anthropics/claude-code/releases/tag/v2.1.322) 发布时间为 10 Nov 02:29 UTC（= 10:29 Asia/Shanghai） |
+| Agent 运行时 | [Hermes Agent v0.23.1](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1) | 2026-11-10（GitHub Published 01:42 UTC = 09:42 Asia/Shanghai；发行说明标注 Release Date November 9） | 开源发布 | 补丁版把插件目录客户端接受上限从 2 MiB 提到 16 MiB，修复 11-09 目录站点发布后 `plugin-catalog.json` 超限、安装静默回退到随包目录，从而导致 `hermes plugins install` 找不到新插件、装到旧 pin、漏掉更新 `removed` 条目的问题。CLI 可用 `hermes update`，Docker / Hermes Cloud 拉 `nousresearch/hermes-agent:stable`。完整窗口说明将放到 v0.24.0 |
+| LLM 可观测性 | [Call Amazon Bedrock models through the AI Gateway](https://langfuse.com/changelog/2026-11-10-ai-gateway-bedrock) | 2026-11-10 | 官方发布 | Langfuse AI Gateway 在 OpenAI、Anthropic 之后接入 Amazon Bedrock。同日 [v4.78.0](https://github.com/langfuse/langfuse/releases/tag/v4.78.0)（13:11 UTC = 21:11 Asia/Shanghai）还把自定义模型开放到各环境并按连接选择、增加外部 HTTP code eval dispatcher、给 prompt cache 结果打到 request span，以及按 SKILL.md frontmatter 过滤 skills 列表 |
+| Agent 基础设施 | [Agent Substrate: Advancing Kubernetes for Agents at Scale](https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/) | 2026-11-10 | 官方发布 | NVIDIA 介绍已捐给 CNCF Sandbox 的开源运行时 Agent Substrate：在少量常热 Kubernetes worker Pod 上复用大量 agent 会话，把空闲会话连同内存和文件系统做检查点，并在任意空闲 worker 上恢复，官方称密度可达普通容器的约 10 倍。面向编码助手、RL 环境和短时 GPU sandbox；与 NVIDIA Dynamo、KAI Scheduler 协同，按会话身份和 KV cache 位置路由推理，并在长推理等待时决定挂起或恢复 actor |
+| 开发平台 | [Announcing .NET 11](https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/) | 2026-11-10 | 官方发布 | .NET 11 以 STS（两年支持）正式发布，默认语言为 C# 15（联合类型与封闭层次）。AI 相关：SDK 内置 MCP server 模板（`dotnet new mcpserver`），Microsoft.Extensions.AI 提供 `IChatClient` / `IEmbeddingGenerator`，Microsoft Agent Framework 负责带工具与状态的 agent 及工作流；ASP.NET Core 增加实验性 Blazor AI 组件，并可经 AG-UI 对接远程 agent。文中同时提醒 .NET 8 与 .NET 9 于 2026-11-10 结束支持 |
+| 企业平台 | [IBM and Microsoft announce Imagine Enterprise](https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation/) | 2026-11-10 | 官方发布 | IBM Consulting 与 Microsoft 发布面向行业流程的 agent 平台 Imagine Enterprise：前者提供 6000+ 预置 agent/资产及 Process Studio / Context Studio / Advantage Core，后者提供 Foundry、GitHub Copilot、Copilot Studio、Fabric、Entra、Purview、Defender 与 Azure。首批行业框架覆盖金融、保险和零售；通过 IBM Consulting 部署或共创，也可自管理。SEI 被列为探索中的金融服务客户案例 |
+| 长程 Agent 论文 | [AutoVend: Benchmarking LLM Agents on Long-Horizon Autonomous Vending Operations](https://arxiv.org/abs/2610.36980) | 2026-11-10（Hugging Face Daily Papers 收录；arXiv 编号 2610.36980，投稿窗口为 2026-10） | 论文原文 | 让单个 LLM agent 通过 Web 操作界面管理 20 台、跨 5 类站点的自动售货机，模拟 180 天，包含共享仓库、采购提前期、付费补货、过期和经常性成本。五个模型里只有 GPT-6.1 Sol 超过基于规则的库存基线（终端净资产约 30.935 万 CNY vs 基线约 21.097 万）；其余四个低于基线。API 效率排序与回报排序并不一致：DeepSeek V4.1 Flash 的单位推理成本回报最高。轨迹分析显示问题集中在动作可行性校验、库存承诺、出访成本和政策修订 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 商家 Agent 接入 | [Businesses in ChatGPT](https://openai.com/index/introducing-businesses-chatgpt/) | Business Hub 认领与核验、商品源、聚合洞察的隐私阈值、Business Agent 与原对话隔离 | 要在 ChatGPT 里管理品牌资料或做售前问答的电商/在线服务团队 |
+| 监测与对齐 | [CoT monitorability across the model lifecycle](https://alignment.openai.com/cot-monitorability-model-lifecycle/) | no-CoT 能力、CoT controllability、RL 无需过程监督也会抬高可控性、SFT 传导 | 做 safety case、监控和训练数据治理的人 |
+| 训练数据审计 | [Homeopathic learning](https://alignment.anthropic.com/2026/homeopathic-learning/) | 对比干净数据如何把特质归因从任务转到触发器；接种提示可能变成触发器 | 负责微调数据审查和蒸馏配方的安全研究/平台团队 |
+| 实现级验证 | [AlphaProof Code](https://deepmind.google/blog/introducing-alphaproof-code/) | 人写规格、agent 证 Lean、自动检查 + 抽审 1%、用已知缺陷做反例 | 密码协议、高保证软件和形式化方法工程师 |
+| 云上 Claude Code | [Claude Code 2.1.322](https://code.claude.com/docs/en/changelog) | Vertex global/us/eu 的 fast mode 与回退 | 把 Claude Code 接到 Vertex 的团队 |
+| 多云观测网关 | [Langfuse AI Gateway + Bedrock](https://langfuse.com/changelog/2026-11-10-ai-gateway-bedrock) | Bedrock provider、自定义模型连接、HTTP code eval、SKILL.md 过滤 | 已用或准备用 Langfuse AI Gateway 的平台组 |
+| .NET Agent | [.NET 11 公告](https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/) | MCP 模板、MEAI、Agent Framework、实验性 Blazor AI / AG-UI | Java/.NET 双栈或准备升级到 .NET 11 的应用团队 |
+| Agent 密度调度 | [Agent Substrate](https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/) | 会话检查点、worker 池复用、与 Dynamo KV 感知路由协同 | 在 Kubernetes 上跑大量编码 agent / RL 环境的平台团队 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：今天的工程信号不在 LangChain/LangGraph 发版，而在“可监测的推理 + 可恢复的运行时 + 多云网关”——一边是 CoT 更难监测和形式化验证进入生产协议，一边是会话检查点、Vertex fast mode 和 Bedrock Gateway 把 agent 跑稳、记清。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 商家 Agent | ChatGPT Business Agent 与原对话隔离、需用户主动点击进入，且先限美国电商/在线服务 | 把“模型代言品牌”做成显式、可关闭的独立会话，而不是悄悄改写通用回答 |
+| 可监测性 | Astra 级模型的 no-CoT 能力和 CoT 可控性随预训练和 RL 上升；SFT 还能传导 | 不能只依赖读 CoT 做安全控制；要并行发展动作/激活监测，并避免在 RL 里直接给 CoT 打分 |
+| 形式化闭环 | AlphaProof Code 把规格、证明、自动检查和抽审拆开，并用已知缺陷做反例 | maker/checker 分离很关键：Lean 检查证明，人只审规格和高风险 1% |
+| Claude Code | 2.1.322 把 fast mode 扩展到 Vertex 指定区域，失败则回退 | 升级后确认区域是否为 global/us/eu，并准备好被拒绝时的标准速度路径 |
+| Langfuse | AI Gateway 接入 Bedrock，v4.78.0 补上自定义模型和 HTTP code eval | 多云记账和评测可以先改网关 base URL，而不必先改所有业务 SDK |
+| 运行时密度 | Agent Substrate 对空闲会话做检查点，避免“一会话一常热 Pod” | 长等待的 tool/LLM 回合应允许挂起并在任意 worker 恢复，而不是占着 GPU/内存 |
+| Hermes 插件 | 0.23.1 修好目录超限后的静默回退 | 客户端对远程目录必须有足够上限，并且超限时要报错，而不是悄悄用旧目录 |
+| 其余专项 | LangChain/LangGraph、Spring AI / Spring Alibaba AI、Code Graph 均无 11-10 新正式发版；Codex 0.167.1 与 OpenClaw 2026.11.3 已越过本日中国时间窗口 | 保持检索记录，不把窗口外的 tag 记成当日发版 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [CoT monitorability across the model lifecycle](https://alignment.openai.com/cot-monitorability-model-lifecycle/) | 当天对训练配方影响监测能力讲得最清楚的官方研究，直接关系到还能不能靠读 CoT 做安全控制 |
+| 必读 | [AlphaProof Code](https://deepmind.google/blog/introducing-alphaproof-code/) | 把形式化验证做到广泛部署的密码协议实现，并公开人机分工和反例测试方法 |
+| 推荐 | [Businesses in ChatGPT](https://openai.com/index/introducing-businesses-chatgpt/) | 了解 ChatGPT 如何把商家资料、商品源和 Agent 对话纳入平台，以及广告/赞助的边界 |
+| 推荐 | [Homeopathic learning](https://alignment.anthropic.com/2026/homeopathic-learning/) | 用很干净的实验说明“再加一点干净数据”也可能让后门变强 |
+| 推荐 | [Gemini Robotics 2.5](https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/) | 同时给了产线成功率和机器人越狱基准，便于对照“能干活”和“能拒绝危险指令” |
+| 延伸 | [Agent Substrate](https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/) | 想在 Kubernetes 上把大量空闲 agent 会话变成可恢复检查点时值得看 |
+| 延伸 | [Langfuse v4.78.0 / Bedrock Gateway](https://langfuse.com/changelog/2026-11-10-ai-gateway-bedrock) | 补齐 11-04 AI Gateway 公共测试版之后的多云通道 |
+| 延伸 | [AutoVend](https://arxiv.org/abs/2610.36980) | 用 180 天售货机经营说明：单点指标变好，不等于长期净资产变好 |
+
+### 来源清单
+
+- 检索范围：2026-11-10 00:00:00 到 2026-11-10 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, alignment.openai.com, help.openai.com, anthropic.com, alignment.anthropic.com, deepmind.google, code.claude.com, github.com, langfuse.com, developer.nvidia.com, devblogs.microsoft.com, news.microsoft.com, arxiv.org, huggingface.co
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Introducing Businesses in ChatGPT | 2026-11-10 | https://openai.com/index/introducing-businesses-chatgpt/ |
+| 官方发布 | ChatGPT release notes: retiring Advanced and Standard Voice | 2026-11-10 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes |
+| 官方研究 | What affects chain-of-thought monitorability across the model lifecycle? | 2026-11-10 | https://alignment.openai.com/cot-monitorability-model-lifecycle/ |
+| 官方研究 | Work at the Frontier: AI’s effect on freelance work | 2026-11-10 | https://openai.com/index/ai-effect-on-freelance-work/ |
+| 官方发布 | Anthropic launches roadshow for proposed initial public offering | 2026-11-10 | https://www.anthropic.com/news/roadshow-launch |
+| 官方研究 | Diluting Poisoned Fine-Tuning Data Can Strengthen Its Effect | 2026-11-10 | https://alignment.anthropic.com/2026/homeopathic-learning/ |
+| 官方发布 | Gemini Robotics 2.5 accelerates real-world general dexterity | 2026-11-10 | https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/ |
+| 官方研究 | Introducing AlphaProof Code | 2026-11-10 | https://deepmind.google/blog/introducing-alphaproof-code/ |
+| 开源发布 | Claude Code changelog 2.1.322 | 2026-11-10 | https://code.claude.com/docs/en/changelog |
+| 开源发布 | anthropics/claude-code v2.1.322 | 2026-11-10 | https://github.com/anthropics/claude-code/releases/tag/v2.1.322 |
+| 开源发布 | Hermes Agent v0.23.1 | 2026-11-10（GitHub Published 01:42 UTC；发行说明标注 November 9） | https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1 |
+| 官方发布 | Call Amazon Bedrock models through the AI Gateway | 2026-11-10 | https://langfuse.com/changelog/2026-11-10-ai-gateway-bedrock |
+| 开源发布 | langfuse/langfuse v4.78.0 | 2026-11-10 | https://github.com/langfuse/langfuse/releases/tag/v4.78.0 |
+| 官方发布 | Agent Substrate: Advancing Kubernetes for Agents at Scale | 2026-11-10 | https://developer.nvidia.com/blog/agent-substrate-advancing-kubernetes-for-agents-at-scale/ |
+| 官方发布 | Announcing .NET 11 | 2026-11-10 | https://devblogs.microsoft.com/dotnet/announcing-dotnet-11/ |
+| 官方发布 | IBM and Microsoft announce Imagine Enterprise | 2026-11-10 | https://news.microsoft.com/source/2026/11/10/ibm-and-microsoft-announce-a-new-ai-agent-platform-designed-for-industry-specific-transformation/ |
+| 论文原文 | AutoVend: Benchmarking LLM Agents on Long-Horizon Autonomous Vending Operations | 2026-11-10（Hugging Face Daily Papers 收录；arXiv 投稿窗口 2026-10） | https://arxiv.org/abs/2610.36980 |
+| 对照（未计入当日发版） | openai/codex rust-v0.167.1 | 2026-11-10 21:32 UTC = 2026-11-11 05:32 Asia/Shanghai，超出本日窗口 | https://github.com/openai/codex/releases/tag/rust-v0.167.1 |
+| 对照（未计入当日发版） | openclaw 2026.11.3 | 2026-11-10 18:53 UTC = 2026-11-11 02:53 Asia/Shanghai，超出本日窗口 | https://github.com/openclaw/openclaw/releases/tag/v2026.11.3 |
+
 ## 2026-11-09
 
 ### 今日总览
