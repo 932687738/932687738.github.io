@@ -1,6 +1,6 @@
 ---
 title: GitHub 本月热榜
-date: 2026-11-11 08:20:19
+date: 2026-11-12 08:05:44
 categories: GitHub
 tags:
   - 快照
@@ -8,7 +8,7 @@ tags:
 timeline: GitHub
 ---
 
-2026-11-11 抓取的 GitHub Trending 本月榜。仓库下的 Star 与 Fork 是累计值，「本月」一列才是本月新增。
+2026-11-12 抓取的 GitHub Trending 本月榜。仓库下的 Star 与 Fork 是累计值，「本月」一列才是本月新增。
 
 <!-- more -->
 
@@ -16,19 +16,21 @@ timeline: GitHub
 
 | # | 仓库 | 本月 | 简介 |
 | ---: | --- | ---: | --- |
-| 1 | [`morluto/rea`](https://github.com/morluto/rea)<small>TypeScript<br>449950 stars · 110744 forks</small>| 389,832 | 使用代理对任何内容进行反向工程，从应用行为到本机二进制文件。 |
-| 2 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark)<small>CSS<br>52592 stars · 2800 forks</small>| 22,624 | Claude Code、Cursor和Codex的防AI倾斜设计技能。 |
-| 3 | [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill)<small>JavaScript<br>69305 stars · 4579 forks</small>| 41,811 | 用于多阶段安全审核的编码代理技能，具有经过独立验证的机器可读结果 |
-| 4 | [`pingdotgg/t3code`](https://github.com/pingdotgg/t3code)<small>TypeScript<br>55732 stars · 10348 forks</small>| 28,609 | 页面上没有仓库简介。 |
-| 5 | [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem)<small>TypeScript<br>115814 stars · 10049 forks</small>| 17,223 | 每个座席跨会话的持久上下文–捕获座席在会话期间执行的所有操作，使用AI对其进行压缩，并将相关上下文注入到未来的会话中。适用于Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode等 |
-| 6 | [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes)<small>TypeScript<br>82311 stars · 7610 forks</small>| 22,380 | 编写HTML。渲染视频。专为客服代表打造。 |
-| 7 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)<small>Python<br>57980 stars · 7058 forks</small>| 17,107 | DeepTutor ：终身个性化辅导。https://deeptutor.info/。 |
-| 8 | [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio)<small>Python<br>107267 stars · 11889 forks</small>| 50,753 | VoiceStudio是开源、完全本地的ElevenLabs替代品--语音克隆、语音设计、视频配音、听写、转录和有声读物创作，支持646种语言。 |
-| 9 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable)<small>Rust<br>107592 stars · 6397 forks</small>| 28,598 | 您的编码代理的设计词汇。大胆引导，通过批评和审核进行评审，在AI SLOP出货前抓住它。 |
-| 10 | [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)<small>Python<br>46770 stars · 4866 forks</small>| 9,346 | 由Anthropic管理的高质量Claude Code插件的官方目录。 |
-| 11 | [`NationalSecurityAgency/ghidra`](https://github.com/NationalSecurityAgency/ghidra)<small>Java<br>99359 stars · 11281 forks</small>| 17,106 | Ghidra是一个软件逆向工程（ SRE ）框架 |
-| 12 | [`ranxianglei/billion-context`](https://github.com/ranxianglei/billion-context)<small>TypeScript<br>6303 stars · 527 forks</small>| 5,300 | A context-compression plugin for month-long single sessions (billions of tokens) ,small context windows (a 100K context is enough) and token savings (5x fewer tokens) .上下文压缩插件，月级长会话会话， 兼顾小窗口(100k上下文足矣)省token(省5倍token) . billion-context is all you need |
-| 13 | [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins)<small>Python<br>35363 stars · 3917 forks</small>| 6,844 | 主要供知识工作者在Claude Cowork中使用的插件的开源存储库 |
-| 14 | [`tashfeenahmed/freellmapi`](https://github.com/tashfeenahmed/freellmapi)<small>TypeScript<br>50267 stars · 6974 forks</small>| 17,591 | 每月74亿个代币。34个免费LLM提供商。635个免费模型端点。全部在一个/v1端点后面，加上任何与OpenAI兼容的自定义端点。智能路由、自动故障转移、加密密钥。仅限个人实验。 |
+| 1 | [`morluto/rea`](https://github.com/morluto/rea)<small>TypeScript<br>452688 stars · 111290 forks</small>| 366,818 | 使用代理对任何内容进行逆向工程，从应用程序行为到原生二进制文件。 |
+| 2 | [`Nutlope/hallmark`](https://github.com/Nutlope/hallmark)<small>CSS<br>53390 stars · 2841 forks</small>| 23,478 | 适用于 Claude Code、Cursor 和 Codex 的防 AI 敷衍设计技巧。 |
+| 3 | [`cloudflare/security-audit-skill`](https://github.com/cloudflare/security-audit-skill)<small>JavaScript<br>70354 stars · 4666 forks</small>| 42,138 | 一种用于多阶段安全审计的编码代理技能，提供经过独立验证、可由机器读取的审计结果 |
+| 4 | [`thedotmack/claude-mem`](https://github.com/thedotmack/claude-mem)<small>TypeScript<br>116225 stars · 10087 forks</small>| 17,247 | 为每个代理提供跨会话的持久上下文 – 捕捉代理在会话期间所做的所有操作，使用 AI 进行压缩，并将相关上下文注入到未来的会话中。可与 Claude Code、OpenClaw、Codex、Gemini、Hermes、Copilot、OpenCode 等工具配合使用 |
+| 5 | [`pingdotgg/t3code`](https://github.com/pingdotgg/t3code)<small>TypeScript<br>57002 stars · 10517 forks</small>| 29,814 | 页面上没有仓库简介。 |
+| 6 | [`heygen-com/hyperframes`](https://github.com/heygen-com/hyperframes)<small>TypeScript<br>82899 stars · 7655 forks</small>| 22,422 | 编写 HTML。渲染视频。专为代理而打造。 |
+| 7 | [`pbakaus/impeccable`](https://github.com/pbakaus/impeccable)<small>Rust<br>108292 stars · 6438 forks</small>| 28,902 | 您的编码代理的设计词汇。使用“润色”和“大胆”进行引导，使用“点评”和“审核”进行审阅，在交付之前发现 AI 瑕疵。 |
+| 8 | [`HKUDS/DeepTutor`](https://github.com/HKUDS/DeepTutor)<small>Python<br>58323 stars · 7085 forks</small>| 17,406 | DeepTutor：终身个性化辅导。https://deeptutor.info/。 |
+| 9 | [`debpalash/VoiceStudio`](https://github.com/debpalash/VoiceStudio)<small>Python<br>108325 stars · 12002 forks</small>| 50,619 | VoiceStudio 是一款开源的、完全本地化的 ElevenLabs 替代产品，支持 646 种语言的语音克隆、语音设计、视频配音、听写、转录和有声读物制作。 |
+| 10 | [`anthropics/claude-plugins-official`](https://github.com/anthropics/claude-plugins-official)<small>Python<br>46915 stars · 4876 forks</small>| 9,448 | 由 Anthropic 管理的高质量 Claude 代码插件官方目录。 |
+| 11 | [`anthropics/skills`](https://github.com/anthropics/skills)<small>Python<br>193113 stars · 22730 forks</small>| 13,018 | 客服代表技能的公开存储库 |
+| 12 | [`sherlock-project/sherlock`](https://github.com/sherlock-project/sherlock)<small>Python<br>110060 stars · 12745 forks</small>| 16,350 | 跨社交网络按用户名搜索社交媒体账号 |
+| 13 | [`Leonxlnx/taste-skill`](https://github.com/Leonxlnx/taste-skill)<small>JavaScript<br>113552 stars · 7642 forks</small>| 19,310 | 让编码代理更具特色的技能：艺术指导、参考图像和浏览器检查，而非通用 AI 页面 |
+| 14 | [`anthropics/knowledge-work-plugins`](https://github.com/anthropics/knowledge-work-plugins)<small>Python<br>35476 stars · 3926 forks</small>| 6,534 | 主要面向知识工作者在 Claude Cowork 中使用的开源插件库 |
+| 15 | [`AgriciDaniel/claude-seo`](https://github.com/AgriciDaniel/claude-seo)<small>Python<br>28255 stars · 3647 forks</small>| 9,470 | 适用于 Claude Code 的通用 SEO 技能。26 项子技能 + 19 个子代理，涵盖技术 SEO、E-E-A-T、结构化数据、GEO/AEO、代理就绪性（Lighthouse Agentic Browsing、WebMCP、llms.txt）、反向链接、本地 SEO、电子商务、国际 SEO、Google API 和 PDF/Excel 报告。9 项优化…… |
+| 16 | [`NationalSecurityAgency/ghidra`](https://github.com/NationalSecurityAgency/ghidra)<small>Java<br>99616 stars · 11294 forks</small>| 16,749 | Ghidra是一个软件逆向工程（SRE）框架 |
 
-同日还有 [全局 Star 榜](/2026/11/11/github/stars-snapshot/)、[今日热榜](/2026/11/11/github/trending-daily/) 和 [本周热榜](/2026/11/11/github/trending-weekly/)。
+同日还有 [全局 Star 榜](/2026/11/12/github/stars-snapshot/)、[今日热榜](/2026/11/12/github/trending-daily/) 和 [本周热榜](/2026/11/12/github/trending-weekly/)。

@@ -2,6 +2,86 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-11
+
+### 今日总览
+
+**一句话结论**：中国实验室同日放出可试用的新旗舰：阿里云百炼 Token Plan 在 10:00（UTC+8）上线 Qwen4-Max-Preview（百万上下文、预览至 11 月 25 日 24:00），百度发布 ERNIE 5.5 Flash Preview（280B/14B，权重将以 Apache 2.0 开源），MiniMax 开源 H3-Image 并把 4K 生成压到 10 秒内；工具链上，Langfuse 为 AI Gateway 补上自定义 Base URL、OpenAI Decisions 与 MCP 批量评估，OpenClaw 2026.11.3 与 Codex rust-v0.167.1 的 GitHub Published 时间落入本日中国时区窗口，Google Cloud 则把 Gemini 4 Carbon 以预览形式接进 CodeMender。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里云百炼/通义文档、文心官方发布页、MiniMax Research、Langfuse changelog、OpenClaw / Codex GitHub Releases、Google Cloud 发布说明、Claude Code 官方 changelog、Hermes Releases、Hugging Face Daily Papers、Spring AI / Spring Alibaba AI / LangChain·LangGraph / Code Graph / Loop Engineering / skills 专项检索、政策监管检索 |
+| 核心趋势 | 1）旗舰模型把「百万上下文 + 长程 Agent 任务」写成可订阅/可开源的产品形态，而不是只发评测数字；2）可观测性把网关、评测模型和 MCP 连成同一条控制面，方便把流量打到内部代理并回放历史轨迹；3）编码 Agent 运行时继续补安全与交接：子任务隔离、凭证收口、沙箱构建；4）开源图像生成把 4K 速度与多参考图作为默认能力 |
+| 可直接关注 | Qwen4-Max-Preview 仅 Token Plan、预览期结束后下线，迁移时注意思考与最终回答共享 `max_tokens` 预算；ERNIE 5.5 Flash Preview 仍是后训练中间检查点，权重开源节点与官方页「soon / Apache 2.0」表述；Langfuse AI Gateway 的自定义 Base URL 与 `/openai/v1/decisions`；OpenClaw 2026.11.3 的私有子任务结果、取消后交接与凭证隔离；CodeMender v0.21.0 沙箱隔离及 `--model gemini-4-carbon`；H3-Image 的开源权重与区域/商用许可限制需回仓库 LICENSE 核对 |
+| 专项检索结论 | Claude Code：官方 changelog 截至核验时最新为 2026-11-10 的 2.1.322，未发现可确认属于 2026-11-11 的新版本。Codex：`rust-v0.167.1` 于 2026-11-10 21:32:01 UTC（2026-11-11 05:32 Asia/Shanghai）发布，发行说明仅给出与 0.167.0 的 compare 链接，不扩写未列出的功能点。OpenClaw：`v2026.11.3` 于 2026-11-10 18:53:07 UTC（2026-11-11 02:53 Asia/Shanghai）发布，焦点是更安全的任务交接与凭证隔离。Hermes：未发现 11-11 新版本（已知最近版本 0.23.1 标注 2026-11-10）。Langfuse：官方 changelog 同日三条。LangChain/LangGraph、Spring AI、Spring Alibaba AI、Code Graph、Loop Engineering、Agent Skills 市场：未发现可确认属于该日的官方发布。Gemini 4 Carbon 面向开发者与企业的 GA 官方英文博客标注 2026-11-10，中文「Google 黑板报」标注 2026-11-11，按相邻日期/中国时间窗口记录，不作为本日新发布主条。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 国产旗舰模型 | [qwen4-max-preview（阿里云百炼文档）](https://help.aliyun.com/zh/model-studio/qwen4-max-preview) | 2026-11-11 | 官方文档/产品上线 | 预览期 11-11 10:00 至 11-25 24:00（UTC+8），仅 Token Plan、不支持按量；1M 上下文，默认思考，兼容 OpenAI / Anthropic API；思考与最终回答共享输出预算 |
+| 开源模型 | [Introducing ERNIE 5.5 Flash Preview](https://ernie.baidu.com/release/ernie-5-5-flash-preview/) | 2026-11-11 | 官方发布 | 基于此前 Flash Base 的首个后训练预览：总参 280B、激活 14B、1M 上下文，强调编程、3D、知识工作与内容创作；API 上线千帆，权重将以 Apache 2.0 开源。官方写明仍是中间检查点，后训练未结束 |
+| 开源图像模型 | [MiniMax H3-Image: Bringing 4K Image Generation into the 10-Second Era](https://www.minimax.io/blog/minimax-h3-image) | 2026-11-11 | 官方发布 | 基于 H3 的开源权重图像生成/编辑模型，宣称 4K（4096×4096）10 秒内出图、最多 16 张参考图；同时提供 API、MiniMax Code 与 Hailuo。权重与许可以 Hugging Face / LICENSE 为准 |
+| 可观测性 | [Route AI Gateway connections through your own endpoint](https://langfuse.com/changelog/2026-11-11-ai-gateway-custom-base-url) | 2026-11-11 | 官方 changelog | OpenAI / Anthropic 连接可把请求打到自定义 Base URL（如内部 LLM 代理），需遵循官方允许的 host 规则 |
+| 可观测性 | [Call decision models through the AI Gateway](https://langfuse.com/changelog/2026-11-11-ai-gateway-openai-decisions) | 2026-11-11 | 官方 changelog | 新增 `POST /openai/v1/decisions`，支持 OpenAI 或 Vercel AI Gateway 连接，调用按 generation 追踪 |
+| 可观测性 / MCP | [Set the default evaluation model and run batch evaluations via MCP](https://langfuse.com/changelog/2026-11-11-default-evaluation-model-and-batch-evaluation-via-mcp) | 2026-11-11 | 官方 changelog | MCP 工具可读写项目默认评测模型，并对已有数据跑批量评估，便于 Agent 换 judge 后回放上周生产轨迹 |
+| 开源 Agent 运行时 | [openclaw 2026.11.3](https://github.com/openclaw/openclaw/releases/tag/v2026.11.3) | 2026-11-11（Published 2026-11-10 18:53:07 UTC，落入本日 Asia/Shanghai 窗口） | 开源发布 | 私有子任务结果不再混入流式回复、取消子任务后可交接、工具失败不再被当成成功；同时收紧凭证隔离、沙箱图片访问与工作区证书校验。发行说明写明无新配置项 |
+| 编码 Agent | [Codex rust-v0.167.1](https://github.com/openai/codex/releases/tag/rust-v0.167.1) | 2026-11-11（Published 2026-11-10 21:32:01 UTC，落入本日 Asia/Shanghai 窗口） | 开源发布 | 0.167.0 之后的补丁发布；GitHub 发行页只提供 Full Changelog compare 链接，本条不推断具体修复项 |
+| 开发者工具 / 安全 | Google Cloud 发布说明：CodeMender v0.21.0 与 Gemini 4 Carbon in CodeMender（Preview） | 2026-11-11 | 官方发布说明 | 沙箱内执行 `cm build` / `cm fix`、只读挂载主机工具链、隔离 Git hook 与缓存，并为静默会话设置 30 分钟超时；可用 `--model gemini-4-carbon`。详见 [Google Cloud 发布说明（2026-11-11）](https://docs.cloud.google.cn/release-notes) |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 模型接入 | [Qwen4-Max-Preview 百炼文档](https://help.aliyun.com/zh/model-studio/qwen4-max-preview) | Token Plan 专用 Base URL、思考模式与 `max_tokens` 预算合并、多轮需回传 `reasoning_content` | 准备试用预览旗舰或从旧 Qwen API 迁移的开发者 |
+| 网关与评测 | [Langfuse 2026-11-11 changelog（自定义 Base URL / Decisions / MCP 评估）](https://langfuse.com/changelog/2026-11-11-ai-gateway-custom-base-url) | 内部代理、决策接口追踪、用 MCP 改默认 judge 并批跑历史数据 | 已接入 Langfuse AI Gateway 或要把评测交给 Agent 的平台团队 |
+| 开源图像 | [H3-Image 官方博客](https://www.minimax.io/blog/minimax-h3-image) 与 [Hugging Face 权重](https://huggingface.co/MiniMaxAI/MiniMax-H3-Image) | 开源权重、4K 速度、多参考图；部署与许可需读仓库 LICENSE | 要在本地或 API 接入开源图像模型的工程与创意团队 |
+| 论文入口 | [Hugging Face Daily Papers（2026-11-11）](https://huggingface.co/papers/date/2026-11-11) | 当日列表出现 Evidence-Linked Memory、World In-Context Learning for Agentic Robot Manipulation、MMDM、FINCOSMOS、LEASH、Micius-Flash 等 Agent / 机器人 / 决策评估方向论文 | 需要按日浏览论文标题与入口的研究与工程同学（本条未逐篇精读全文） |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日更值得落地的是「网关可指到自己的代理 + 用 MCP 回放评测」，以及 OpenClaw 把子任务交接和凭证隔离写进稳定版；LangChain / LangGraph 本身未发现可核验的当日新版本。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Langfuse AI Gateway | 自定义 Base URL、Decisions 接口、MCP 管理默认评测模型并批跑 | 把官方 API 兼容层留在网关内，评测模型变更后先对历史 observation 回放，再切生产 |
+| OpenClaw 运行时安全 | 私有子任务、失败可见、认证截止、凭证按连接隔离 | 多插件 / 多凭证网关必须把缓存结果和子进程环境与凭据绑定，避免串租户 |
+| 长上下文旗舰预览 | Qwen4-Max-Preview 与 ERNIE 5.5 Flash Preview 都把 1M 上下文和长程任务写进产品说明 | 预览模型要单独跟踪下线日期与计费通道（Token Plan / 千帆），不要按旧的按量假设做容量规划 |
+| LangChain / LangGraph / Spring AI / Code Graph / Loop Engineering | 专项检索未发现可确认属于 2026-11-11 的官方发布 | 无新版本时不要用过期发行说明填日报 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [qwen4-max-preview 文档](https://help.aliyun.com/zh/model-studio/qwen4-max-preview) | 预览期、接入方式和输出预算变化会直接影响现有客户端是否被截断 |
+| 必读 | [ERNIE 5.5 Flash Preview 官方页](https://ernie.baidu.com/release/ernie-5-5-flash-preview/) | 讲清能力边界与「后训练尚未结束」的定位，避免把预览检查点当成最终开源件 |
+| 推荐 | [Langfuse MCP 批量评估 changelog](https://langfuse.com/changelog/2026-11-11-default-evaluation-model-and-batch-evaluation-via-mcp) | 把「换 judge」和「回放生产轨迹」收成 Agent 可调用的工具 |
+| 推荐 | [OpenClaw 2026.11.3 Release](https://github.com/openclaw/openclaw/releases/tag/v2026.11.3) | 对正在跑 Gateway / 子任务编排的团队，交接与凭证修复比新功能更紧急 |
+| 延伸 | [MiniMax H3-Image](https://www.minimax.io/blog/minimax-h3-image) | 看开源 4K 图像模型的产品化口径，落地前核对许可与区域限制 |
+| 延伸 | [HF Daily Papers 2026-11-11](https://huggingface.co/papers/date/2026-11-11) | 作为当日论文索引，而不是已精读清单 |
+
+### 来源清单
+
+- 检索范围：2026-11-11 00:00:00 到 2026-11-11 23:59:59（Asia/Shanghai）
+- 引用域名：help.aliyun.com, ernie.baidu.com, minimax.io, huggingface.co, langfuse.com, github.com, docs.cloud.google.cn, code.claude.com, blog.google, china.googleblog.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方文档 | qwen4-max-preview | 2026-11-11 | https://help.aliyun.com/zh/model-studio/qwen4-max-preview |
+| 官方发布 | Introducing ERNIE 5.5 Flash Preview | 2026-11-11 | https://ernie.baidu.com/release/ernie-5-5-flash-preview/ |
+| 官方发布 | MiniMax H3-Image | 2026-11-11 | https://www.minimax.io/blog/minimax-h3-image |
+| 开源发布 | MiniMax-H3-Image 权重 | 2026-11-11（随官方博客） | https://huggingface.co/MiniMaxAI/MiniMax-H3-Image |
+| 官方 changelog | Langfuse AI Gateway custom base URL | 2026-11-11 | https://langfuse.com/changelog/2026-11-11-ai-gateway-custom-base-url |
+| 官方 changelog | Langfuse AI Gateway OpenAI Decisions | 2026-11-11 | https://langfuse.com/changelog/2026-11-11-ai-gateway-openai-decisions |
+| 官方 changelog | Langfuse default evaluation model and batch evaluation via MCP | 2026-11-11 | https://langfuse.com/changelog/2026-11-11-default-evaluation-model-and-batch-evaluation-via-mcp |
+| 开源发布 | openclaw 2026.11.3 | 2026-11-11（Published 2026-11-10T18:53:07Z，中国时间窗口） | https://github.com/openclaw/openclaw/releases/tag/v2026.11.3 |
+| 开源发布 | Codex rust-v0.167.1 | 2026-11-11（Published 2026-11-10T21:32:01Z，中国时间窗口） | https://github.com/openai/codex/releases/tag/rust-v0.167.1 |
+| 官方发布说明 | Google Cloud release notes（CodeMender / Carbon preview） | 2026-11-11 | https://docs.cloud.google.cn/release-notes |
+| 官方 changelog | Claude Code changelog（核验无 11-11 新版本） | 检索于 2026-11-12；页面最新条目为 2026-11-10 的 2.1.322 | https://code.claude.com/docs/en/changelog |
+| 论文列表 | Hugging Face Daily Papers | 2026-11-11 | https://huggingface.co/papers/date/2026-11-11 |
+| 官方发布（相邻日期/中国时间窗口传播，不作为本日主条） | Gemini 4 Carbon is now available | 官方英文博客 2026-11-10；中文黑板报标注 2026-11-11 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/ |
+
 ## 2026-11-10
 
 ### 今日总览
