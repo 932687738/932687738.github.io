@@ -2,6 +2,79 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-12
+
+### 今日总览
+
+**一句话结论**：Google 正式推出面向日常编码与 Agent 工作流的 Gemini 4 Hydrogen（官方博客标注 2026-11-12），在 100 万 token 窗口内按统一单价计费，并提供 low / medium / high（默认）/ xhigh 四档思考深度；可观测性方面，Langfuse 把 Microsoft Azure（Foundry）与 Google AI Studio 接入 AI Gateway。工具链上，Codex `rust-v0.167.2` 的 GitHub Published 时间落入本日中国时区窗口，OpenClaw 则放出预发布版 `2026.11.5-beta.2`；政策侧，美联社报道多家倡导组织在旧金山起诉五家 AI 公司，要求冻结新模型开发，本案尚无判决。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | Google 官方博客与 Gemini 4 Hydrogen 文档、Langfuse changelog、Codex / OpenClaw GitHub Releases、Claude Code 官方 changelog、Hermes Releases、Hugging Face Daily Papers、Spring AI / Spring Alibaba AI / LangChain·LangGraph / Code Graph / Loop Engineering / skills 专项检索、政策监管检索 |
+| 核心趋势 | 1）中端编码模型把「更快的执行层」和「与旗舰模型搭配的编排」写成可订阅产品，而不是只发跑分；2）观测网关继续补齐云厂商连接，降低把 Azure / Gemini 流量接到同一控制面的成本；3）编码 Agent 运行时仍在打补丁：Vertex 工具流式更新、会话恢复与输入去重；4）安全与监管争议以诉讼形式进入公开记录，但目前只是起诉主张 |
+| 可直接关注 | Hydrogen 的统一 1,048,576 token 限额（输入+输出含思考）、短周期 GA 与至少 45 天退役通知、默认隐式缓存与不支持显式 context cache；Langfuse AI Gateway 的 Azure Foundry / Google AI Studio 连接；Codex 0.167.2 在 Vertex AI 上默认增量推送工具更新，退出方式以 GitHub 发行说明中的 `config.toml` 项为准；OpenClaw `2026.11.5-beta.2` 为 pre-release，生产环境需单独评估 |
+| 专项检索结论 | Claude Code：官方 changelog 截至核验时最新仍为 2026-11-10 的 2.1.322，未发现可确认属于 2026-11-12 的新版本。Codex：`rust-v0.167.2` 于 2026-11-11 22:44:46 UTC（2026-11-12 06:44 Asia/Shanghai）发布。OpenClaw：`v2026.11.5-beta.2` 于 2026-11-12 00:43:25 UTC（2026-11-12 08:43 Asia/Shanghai）发布，且标记为预发布。Hermes：未发现 11-12 新版本。Langfuse：官方 changelog 有 2026-11-12 一条。LangChain/LangGraph：GitHub 上的 LangGraph 1.2.21 发布时间为 2026-11-12 18:06 UTC（2026-11-13 02:06 Asia/Shanghai），不落入本日窗口，不作为本日主条。Spring AI、Spring Alibaba AI、Code Graph、Loop Engineering、Agent Skills 市场：未发现可确认属于该日的官方发布。Gemini Decisions API 与 AlphaGenome 2 官方英文博客标注 2026-11-11，Qwen4-Max-Preview 已计入 11-11 日报，均不作为本日新发布主条。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 中端模型 / 编码 Agent | [Introducing Gemini 4 Hydrogen](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/) | 2026-11-12 | 官方发布 | 定位日常编码与 Agent 执行，可单独使用或与 Carbon / Argon 搭配；官方给出四档思考深度，以及 $1.50 / $7.50（每百万 input / output token）且在 1M 窗口内统一计价。Antigravity 的 Orchestrator 可在同一会话中切换模型；官方称其在 Terminal-Bench 4.0 上接近 Carbon 的任务成功率，同时平均少消耗 24% quota、快 19%。开发者文档还写明统一 1,048,576 token 限额、短周期 GA 与 45 天退役通知 |
+| 开发者入口 | [Gemini 4 Hydrogen: everyday coding and agentic workflows for developers](https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/) | 2026-11-12 | 官方博客 | 重申可在 Google AI Studio、Gemini API、Android Studio、Gemini for business 以及付费 Google AI Pro / Ultra 的 Antigravity 中使用 |
+| 可观测性 | [Microsoft Azure and Google AI Studio in the AI Gateway](https://langfuse.com/changelog/2026-11-12-ai-gateway-azure-google-ai-studio) | 2026-11-12 | 官方 changelog | AI Gateway 可连接 Microsoft Azure（Foundry）与 Google AI Studio，把这两类模型接到现有网关路由 |
+| 编码 Agent | [Codex rust-v0.167.2](https://github.com/openai/codex/releases/tag/rust-v0.167.2) | 2026-11-12（Published 2026-11-11 22:44:46 UTC，落入本日 Asia/Shanghai 窗口） | 开源发布 | 发行说明写明：在 Google Cloud Vertex AI 上默认增量发送工具更新；若要退出，以该页给出的 `config.toml` 配置项为准，不转述第三方博客中的不同键名。其余变更仅提供 compare 链接，本条不推断未列出的修复项 |
+| 开源 Agent 运行时 | [openclaw 2026.11.5-beta.2](https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2) | 2026-11-12 | 预发布 | 分页会话历史、配置保存失败时保留密钥与 Gateway 认证、Android 结束 Talk 不再取消 Gateway 已接受的任务；并修复畸形 URI、消息投递去重、聊天恢复与工具超时结果保留等。官方 endpoint 上的 Gemini Flash 改走 Interactions API，自定义 endpoint 仍可覆盖。此标签为 pre-release |
+| 政策与诉讼 | [Advocacy groups sue AI giants to freeze new models, warning of 'catastrophic' risks](https://apnews.com/article/artificial-intelligence-ai-lawsuit-cyberattacks-anthropic-openai-03ece37b96979fe834f60976648504ba) | 2026-11-12 | 技术媒体（AP） | 报道称倡导组织在旧金山起诉 Anthropic、Google、Meta、OpenAI 与 SpaceXSI，寻求阻止继续开发或部署新模型。这是起诉主张，不是已生效禁令 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 模型接入与迁移 | [Gemini 4 Hydrogen 开发者文档](https://docs.cloud.google.cn/gemini-enterprise-agent-platform/models/guides/gemini-4-hydrogen) | 模型 ID `gemini-4-hydrogen`；思考档位 LOW/MEDIUM/HIGH/XHIGH；输入输出共享 1,048,576 token；长解码需 `v1beta1` 与 `continuation_token`；前缀满 4,096 token 自动隐式缓存，不支持显式 context cache；可接受 Office / OpenDocument 文件 | 从 Gemini 3.8 Flash 迁移，或准备把 Hydrogen 接到 API / Agent 平台的团队 |
+| 网关接入 | [Langfuse 2026-11-12 changelog](https://langfuse.com/changelog/2026-11-12-ai-gateway-azure-google-ai-studio) | Azure Foundry 与 Google AI Studio 作为网关提供方 | 已使用 Langfuse AI Gateway、希望把 Azure / Gemini 流量并入同一路由的平台团队 |
+| 论文入口 | [Hugging Face Daily Papers（2026-11-12）](https://huggingface.co/papers/date/2026-11-12) | 当日列表出现 Scaling Mathematical Proof Supervision、SteerDistill、Read Less, Solve More、Ensemble Routing、Evolving Infra、ScrapeBench 等证明监督 / Agent 蒸馏 / 路由与评测方向论文 | 需要按日浏览论文标题与入口的研究与工程同学（本条未逐篇精读全文） |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日更值得落地的是 Hydrogen 作为「执行层模型」的接入约束，以及 Langfuse 把 Azure / Google AI Studio 收进同一网关；LangChain / LangGraph 本身未发现落入本日中国时区窗口的官方新版本。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Gemini 4 Hydrogen | 四档思考、统一百万 token 预算、短周期 GA、Antigravity Orchestrator 可在会话中切换 Carbon / Hydrogen | 不要把 Hydrogen 的输出预算和思考预算分开估；上线前要核对生命周期与缓存策略（隐式缓存可用，显式 cache 不可用） |
+| Langfuse AI Gateway | 新增 Azure Foundry 与 Google AI Studio 连接 | 把多云模型入口收在网关内，便于沿用已有路由、追踪和评测，而不是在业务代码里再写一套客户端 |
+| Codex / OpenClaw 运行时 | Codex 在 Vertex 上默认增量推送工具更新；OpenClaw 预发布版强化历史分页、投递去重与恢复 | 依赖批处理工具事件的下游要先看官方退出项；OpenClaw 此版本是 beta，不要当作稳定版升级 |
+| LangChain / LangGraph / Spring AI / Code Graph / Loop Engineering | 专项检索未发现可确认属于 2026-11-12（Asia/Shanghai）的官方发布 | 无新版本时不要用过期发行说明填日报 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Introducing Gemini 4 Hydrogen](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/) | 官方对定位、定价、思考档位和 Orchestrator 的口径，是评估是否替换 3.8 Flash 的起点 |
+| 必读 | [Gemini 4 Hydrogen 开发者文档](https://docs.cloud.google.cn/gemini-enterprise-agent-platform/models/guides/gemini-4-hydrogen) | 写清了 token 限额、长解码 API 版本和缓存限制，避免按旧 Flash 假设接入 |
+| 推荐 | [Langfuse Azure / Google AI Studio changelog](https://langfuse.com/changelog/2026-11-12-ai-gateway-azure-google-ai-studio) | 用较短的官方说明确认网关新增了哪些提供方 |
+| 推荐 | [Codex rust-v0.167.2](https://github.com/openai/codex/releases/tag/rust-v0.167.2) | 对正在用 Vertex AI 跑多步工具调用的团队，流式工具更新会改变延迟特征 |
+| 延伸 | [OpenClaw 2026.11.5-beta.2](https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2) | 预发布版的恢复与安全修复清单，适合已跟踪 OpenClaw 的同学，不建议作为首次生产升级依据 |
+| 延伸 | [HF Daily Papers 2026-11-12](https://huggingface.co/papers/date/2026-11-12) | 作为当日论文索引，而不是已精读清单 |
+| 延伸 | [AP：倡导组织起诉五家 AI 公司](https://apnews.com/article/artificial-intelligence-ai-lawsuit-cyberattacks-anthropic-openai-03ece37b96979fe834f60976648504ba) | 了解监管诉讼主张；后续进展需以法院记录为准 |
+
+### 来源清单
+
+- 检索范围：2026-11-12 00:00:00 到 2026-11-12 23:59:59（Asia/Shanghai）
+- 引用域名：blog.google, docs.cloud.google.cn, langfuse.com, github.com, huggingface.co, code.claude.com, apnews.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Introducing Gemini 4 Hydrogen | 2026-11-12 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/ |
+| 官方博客 | Gemini 4 Hydrogen: everyday coding and agentic workflows for developers | 2026-11-12 | https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/ |
+| 官方文档 | Gemini 4 Hydrogen developer guide | 2026-11-12（随模型发布） | https://docs.cloud.google.cn/gemini-enterprise-agent-platform/models/guides/gemini-4-hydrogen |
+| 官方 changelog | Langfuse: Microsoft Azure and Google AI Studio in the AI Gateway | 2026-11-12 | https://langfuse.com/changelog/2026-11-12-ai-gateway-azure-google-ai-studio |
+| 开源发布 | Codex rust-v0.167.2 | 2026-11-12（Published 2026-11-11T22:44:46Z，中国时间窗口） | https://github.com/openai/codex/releases/tag/rust-v0.167.2 |
+| 开源预发布 | openclaw 2026.11.5-beta.2 | 2026-11-12（Published 2026-11-12T00:43:25Z） | https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.2 |
+| 技术媒体 | Advocacy groups sue AI giants to freeze new models | 2026-11-12 | https://apnews.com/article/artificial-intelligence-ai-lawsuit-cyberattacks-anthropic-openai-03ece37b96979fe834f60976648504ba |
+| 官方 changelog | Claude Code changelog（核验无 11-12 新版本） | 检索于 2026-11-13；页面最新条目为 2026-11-10 的 2.1.322 | https://code.claude.com/docs/en/changelog |
+| 论文列表 | Hugging Face Daily Papers | 2026-11-12 | https://huggingface.co/papers/date/2026-11-12 |
+
 ## 2026-11-11
 
 ### 今日总览
