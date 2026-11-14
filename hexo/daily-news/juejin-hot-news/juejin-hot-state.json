@@ -1,6 +1,6 @@
 {
-  "last_end_date": "2026-11-13",
-  "last_sync_ymd": "2026-11-13",
+  "last_end_date": "2026-11-14",
+  "last_sync_ymd": "2026-11-14",
   "processed_dates": [
     "2026-08-12",
     "2026-08-13",
@@ -60,7 +60,8 @@
     "2026-11-10",
     "2026-11-11",
     "2026-11-12",
-    "2026-11-13"
+    "2026-11-13",
+    "2026-11-14"
   ],
   "seen_urls": [
     "https://juejin.cn/post/7638806086187565082",
@@ -1331,12 +1332,14 @@
     "https://juejin.cn/post/7704864028611706915",
     "https://juejin.cn/post/7704869487623405611",
     "https://juejin.cn/post/7704870732920258623",
+    "https://juejin.cn/post/7704870732921552959",
     "https://juejin.cn/post/7704893278949179402",
     "https://juejin.cn/post/7704905366240673832",
     "https://juejin.cn/post/7704923158558621750",
     "https://juejin.cn/post/7704923158558703670",
     "https://juejin.cn/post/7704935347230408755",
     "https://juejin.cn/post/7704935347230965811",
+    "https://juejin.cn/post/7704939033012928547",
     "https://juejin.cn/post/7704947965462315035",
     "https://juejin.cn/post/7704967079333609522",
     "https://juejin.cn/post/7704995965740728360",
@@ -1346,10 +1349,13 @@
     "https://juejin.cn/post/7705232032440713242",
     "https://juejin.cn/post/7705249934229078059",
     "https://juejin.cn/post/7705291560008531977",
+    "https://juejin.cn/post/7705293635864100900",
     "https://juejin.cn/post/7705330413946060815",
     "https://juejin.cn/post/7705330413946093583",
     "https://juejin.cn/post/7705412224672366627",
+    "https://juejin.cn/post/7705412224673234979",
     "https://juejin.cn/post/7705412224673366051",
+    "https://juejin.cn/post/7705621037060423695",
     "https://juejin.cn/post/7705623263632457738",
     "https://juejin.cn/post/7705651336889696310",
     "https://juejin.cn/post/7705683246910734363",
@@ -1362,6 +1368,7 @@
     "https://juejin.cn/post/7705911807923322943",
     "https://juejin.cn/post/7705955493567021090",
     "https://juejin.cn/post/7705961716425490447",
+    "https://juejin.cn/post/7705971511971479594",
     "https://juejin.cn/post/7705976844432457766",
     "https://juejin.cn/post/7705988547135717386",
     "https://juejin.cn/post/7705995320547770408",
@@ -1378,22 +1385,31 @@
     "https://juejin.cn/post/7706366346229858339",
     "https://juejin.cn/post/7706394247621443599",
     "https://juejin.cn/post/7706418656682803200",
+    "https://juejin.cn/post/7706428851019481142",
+    "https://juejin.cn/post/7706456581143494698",
     "https://juejin.cn/post/7706474677127921673",
     "https://juejin.cn/post/7706534471420461098",
     "https://juejin.cn/post/7706583027480723496",
     "https://juejin.cn/post/7706583027481018408",
     "https://juejin.cn/post/7706584659240452115",
+    "https://juejin.cn/post/7706725892766253119",
     "https://juejin.cn/post/7706740769264566322",
+    "https://juejin.cn/post/7706743522150187043",
     "https://juejin.cn/post/7706788877558939663",
     "https://juejin.cn/post/7706807603482361907",
-    "https://juejin.cn/post/7706833656823906330"
+    "https://juejin.cn/post/7706833656823906330",
+    "https://juejin.cn/post/7706833656825004058",
+    "https://juejin.cn/post/7707100499275546666",
+    "https://juejin.cn/post/7707106224123166755",
+    "https://juejin.cn/post/7707194766860025907",
+    "https://juejin.cn/post/7707231949409026058"
   ],
   "last_stats": {
     "listing_slots": 120,
-    "unique_new_urls": 14,
-    "skipped_seen_urls": 106,
-    "detail_ok": 14,
+    "unique_new_urls": 15,
+    "skipped_seen_urls": 105,
+    "detail_ok": 15,
     "detail_fail": 0,
-    "seen_urls_in_state": 1324
+    "seen_urls_in_state": 1339
   }
 }

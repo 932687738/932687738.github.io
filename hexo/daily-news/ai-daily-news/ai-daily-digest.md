@@ -2,6 +2,83 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-13
+
+### 今日总览
+
+**一句话结论**：11 月 13 日（Asia/Shanghai）的主线，是代理开始进入「可支付、可攻防」的产品化，同时 Gemini 4 Hydrogen 等高速执行模型在官方页更新与中文传播窗口中继续扩散；基础设施层则被英伟达创始人交棒放大了不确定性，观测侧 Langfuse 同日给出两项可落地的官方更新。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | AI / LLM / Agent / RAG / MCP / Claude Code / Codex / OpenClaw / Hermes / Spring AI / Spring Alibaba AI / Langfuse / LangChain·LangGraph / Code Graph / Loop Engineering / skills / 模型基础设施 / 论文 / 政策监管 |
+| 核心趋势 | 1）OpenAI 以 ChatGPT Wallet 把代理购物做成「用户逐笔审批 + 支付 Token、不暴露真实卡号」的闭环；2）Google 的 Hydrogen 把 Gemini 4 级能力铺到 Search / API / 编程工作流，定位为与 Carbon/Argon 搭配的高速执行模型；3）英伟达 CEO 交接与 OpenAI Daybreak 安全产品，把算力供给和 AI 攻防同时推到台前；4）Langfuse 在 AI Gateway 与决策模型评测上给出可立即配置的更新。 |
+| 可直接关注 | ChatGPT Wallet 的授权与风控设计；Hydrogen 在 Antigravity Orchestrator 中的多模型分工；Daybreak Red Team / Defense Factory 的「先验证再补丁、补丁不自动合入」；Langfuse 按密钥限制模型与接入 Gemini Decisions；英伟达交棒对供给与路线图沟通的影响。 |
+| 专项检索结论 | **Langfuse**：11-13 官方 changelog 发布 AI Gateway 按密钥限制模型，以及基于 `gemini-decision-1` 的决策模型评测器。**Claude Code / Codex / OpenClaw / Hermes / Spring AI / Spring Alibaba AI / LangChain·LangGraph / Code Graph / Loop Engineering / skills**：已按日期与站点检索，未发现可确认为该日的官方发布或 changelog；不将仅出现在聚合简报、且未经官方页核对的传闻写入正文。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 代理支付 | [Introducing ChatGPT Wallet](https://openai.com/index/introducing-chatgpt-wallet/) | 2026-11-13 | 官方发布 | 代理可代为下单，但每笔需用户生物识别等安全校验；网络侧下发支付 Token，不向商家或代理暴露真实卡号。初期仅向美国 ChatGPT Pro（dots）开放，并同步给出商家接入与风控指引。 |
+| 高速执行模型 | [Introducing Gemini 4 Hydrogen](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/) | 2026-11-12（官方页 11-13 更新 / 中国时间窗口传播） | 官方发布 | 定位日常编码与 agentic 工作流；默认 high 思考档在 Artificial Analysis Intelligence Index 上 51，高于 Argon 的 50；1M 上下文统一定价 $1.50 / $7.50（百万 input/output tokens）。官方称较 3.8 Flash 默认完成速度快 2.5 倍，Terminal-Bench 4.1 为 57% 对 18.2%。Antigravity 新增多模型 Orchestrator，Carbon 可协调、Hydrogen 可执行与校验。 |
+| 芯片与治理 | [NVIDIA Announces CEO Transition](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition) | 2026-11-12（相邻日期 / 中国时间窗口传播） | 官方发布 | Jensen Huang 辞任总裁、CEO 及董事，即时生效；CFO Colette Kress 任临时 CEO 并继续兼任 CFO；Harvey C. Jones 出任董事会首位 Chair。官方强调客户承诺与产品路线图将不中断，三季度财报仍按 11 月 17 日举行。对依赖 NVIDIA 供给的训练/推理规划，需跟踪交接期沟通与政策环境，而不要把媒体衍生叙事当成官方结论。 |
+| AI 安全产品 | [OpenAI Unveils Daybreak Red Team, Defense Factory Security Tools](https://www.securityweek.com/openai-unveils-daybreak-red-team-defense-factory-security-tools/)（产品页：[Red Team](https://openai.com/daybreak/red-team/)、[Defense Factory](https://openai.com/daybreak/defense-factory/)） | 2026-11-12（Cyber at the Frontier 活动宣布；11-13 技术媒体报道 / 中国时间窗口传播） | 官方产品页 + 技术媒体 | Red Team 用隔离环境中的多智能体对 Web 应用做授权渗透与漏洞验证，并由 Guardian review 约束测试边界；Defense Factory 调查发现并准备补丁，工程师审阅测试后方可合并，不会自动部署。可导入 Wiz / Snyk / Endor Labs 发现，并扫描已连接的 GitHub 仓库。 |
+| 企业 Agent 部署 | [Self-hosted Claude Managed Agents keeps agent credentials in your environment](https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/) | 2026-11-12（相邻日期 / 中国时间窗口传播） | 技术媒体 | 报道称自托管私有预览于 11 月 12 日开放：客户可自行运行 Managed Agents 服务、PostgreSQL 与 worker，将会话历史与凭据留在自有环境；模型请求仍可指向 Anthropic、Bedrock 等，ZDR 协议覆盖 Messages API 调用。本稿未检索到同期 Anthropic 官方博文，重大结论以官方后续文档为准，此处仅作背景。 |
+| 开源模型与提示隔离 | [LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B](https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite) | 2026-11-12（相邻日期 / 中国时间窗口传播） | 开源发布 | IBM 发布 granite-4.1-3b/8b-LLMON-preview：用保留特殊 token 显式标记 instruction/data/requirement，并在 exec 块中绑定执行关系，以降低间接提示注入成功率。官方强调仍是实验预览，不建议直接上生产。 |
+| 政策监管 | [工业和信息化部办公厅关于加强智能体终端设备进网管理的通知](https://www.miit.gov.cn/jgsj/xgj/wjfb/art/2026/art_5066b9dffa93405a988e266ff12bf674.html) | 2026-11-06（相邻日期 / 中国时间窗口传播） | 政策标准 | 对预置智能体的手机、平板、可穿戴等电信终端提出进网与适配要求；应用分发侧应推动开发者以电子签名声明是否同意被智能体调用，未经声明同意不得强制调用。11-13 中文技术社区继续解读对 Agent 权限、声明与数据链路的工程影响。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| LLM 可观测 / 评测 | [Restrict models per AI Gateway key](https://langfuse.com/changelog/2026-11-13-ai-gateway-key-model-restrictions) | 创建或编辑 AI Gateway API key 时可设置模型通配（如 `openai-prod:*`），按密钥收紧可调用模型。 | 已把多模型流量接到 Langfuse AI Gateway、需要做环境/团队隔离的平台团队 |
+| LLM 可观测 / 评测 | [Evaluate with Gemini decision models](https://langfuse.com/changelog/2026-11-13-gemini-decision-model-evaluators) | 评测器可选用 Google AI Studio 的 `gemini-decision-1`；Choice / Score / Yes-no 会写入分数、概率与置信度。Google 对 decision 只计 input tokens；暂不支持 Vertex AI 连接。 | 要在生产上对政策符合性、分流、回答质量做在线评分的应用团队 |
+| 安全编码 Agent | [Daybreak Defense Factory](https://openai.com/daybreak/defense-factory/) | 从代码追踪漏洞、准备补丁并支持用 Codex 修改，再以草稿 PR 交工程师审核；强调补丁不自动合入。 | 安全与平台工程中已有扫描器、需要把「发现」接到「修复」的团队 |
+| 上下文与注入防护 | [LLMON 预览模型与工具仓](https://github.com/generative-computing/llmon) | 以 LLM 原生标记代替把 JSON 直接塞进上下文；可将现有 JSON 无损转换为 LLMON。 | 小模型 RAG / 工具调用场景中饱受间接注入困扰的研发 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：这一天更像「代理运行时的商业与安全外壳」在加厚，而不是 LangChain/LangGraph 编排层本身放出新版本；可复用的工程信号集中在授权边界、密钥级模型门禁，以及评测与生产行为是否一致。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Langfuse / 可观测 | 官方同日更新：Gateway 密钥可限制模型；评测器可接 Gemini Decisions API。 | 把「谁能调哪些模型」从应用配置上收到网关密钥；决策类评测适合政策一致性、路由和有限档打分，而不是替代完整生成式裁判。 |
+| 代理支付与权限 | ChatGPT Wallet 要求每笔用户审批，并用网络 Token 隔离真实卡数据。 | 代理若要碰资金或副作用，默认应是「参数化授权 + 独立凭证 + 可审计记录」，而不是把原凭证交给模型或工具沙箱。 |
+| 多模型工作流 | Hydrogen 被明确写成与 Carbon/Argon 搭配的执行引擎，Orchestrator 可在同一会话中切换。 | 架构评审、编码、测试可拆给不同模型；要用配额和时延而不是单一基准，决定谁当 coordinator、谁当 worker/verifier。 |
+| 安全 Agent | Daybreak 把红队验证与补丁生成分开，且补丁必须人工审核。 | 内部安全 Agent 也应把「发现」和「变更」分成两个权限域，并保留证据链。 |
+| LangChain / LangGraph / Claude Code / Codex / OpenClaw / Hermes / Spring AI / Code Graph / Loop Engineering | 本日未发现可核验的官方版本或文档更新。 | 专项主题已检索；无结果不代表生态停滞，只说明 11-13 窗口没有可引用的官方源。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Introducing ChatGPT Wallet](https://openai.com/index/introducing-chatgpt-wallet/) | 把代理商务的信任问题写成了可落地的支付流程，对任何要让 Agent 产生真实副作用的系统设计都有直接参考。 |
+| 必读 | [Introducing Gemini 4 Hydrogen](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/) | 官方把「旗舰推理模型」和「高速执行模型」的分工写清楚，并给出定价、基准和 Orchestrator 的配额/时延变化。 |
+| 推荐 | [Langfuse：按密钥限制模型](https://langfuse.com/changelog/2026-11-13-ai-gateway-key-model-restrictions) 与 [Gemini 决策评测器](https://langfuse.com/changelog/2026-11-13-gemini-decision-model-evaluators) | 当天最具体、可立即试验的工程更新，覆盖网关治理和在线评测两条线。 |
+| 推荐 | [NVIDIA Announces CEO Transition](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition) | 以官方声明核对交棒事实，避免把同步传播的市场传闻写进技术判断。 |
+| 延伸 | [Hugging Face Daily Papers（2026-11-13）](https://huggingface.co/papers/date/2026-11-13) | 当日论文墙覆盖决策模型、搜索 Agent 压测、多模态记忆与 Agent 生产力数据合成等方向，适合按题挑选，不必逐篇当作已核实结论。 |
+| 延伸 | [LLMON 与 Granite 4.1 预览](https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite) | 提供一条与「用提示词约定角色」不同的结构隔离思路，适合评估小模型防注入方案。 |
+
+### 来源清单
+
+- 检索范围：2026-11-13 00:00:00 到 2026-11-13 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, blog.google, nvidianews.nvidia.com, langfuse.com, huggingface.co, securityweek.com, helpnetsecurity.com, miit.gov.cn
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Introducing ChatGPT Wallet | 2026-11-13 | https://openai.com/index/introducing-chatgpt-wallet/ |
+| 官方发布 | Introducing Gemini 4 Hydrogen | 2026-11-12（官方页 11-13 更新 / 中国时间窗口传播） | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/ |
+| 官方发布 | NVIDIA Announces CEO Transition | 2026-11-12（相邻日期 / 中国时间窗口传播） | https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition |
+| 官方发布 | Daybreak Red Team / Defense Factory 产品页 | 2026-11-12（相邻日期 / 中国时间窗口传播） | https://openai.com/daybreak/red-team/ |
+| 技术媒体 | OpenAI Unveils Daybreak Red Team, Defense Factory Security Tools | 2026-11-13 | https://www.securityweek.com/openai-unveils-daybreak-red-team-defense-factory-security-tools/ |
+| 技术媒体 | Self-hosted Claude Managed Agents… | 2026-11-12（相邻日期 / 中国时间窗口传播） | https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/ |
+| 开源发布 | LLMON in Granite 4.1 3B and 8B | 2026-11-12（相邻日期 / 中国时间窗口传播） | https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite |
+| 官方发布 | Restrict models per AI Gateway key | 2026-11-13 | https://langfuse.com/changelog/2026-11-13-ai-gateway-key-model-restrictions |
+| 官方发布 | Evaluate with Gemini decision models | 2026-11-13 | https://langfuse.com/changelog/2026-11-13-gemini-decision-model-evaluators |
+| 政策标准 | 工业和信息化部办公厅关于加强智能体终端设备进网管理的通知 | 2026-11-06（相邻日期 / 中国时间窗口传播） | https://www.miit.gov.cn/jgsj/xgj/wjfb/art/2026/art_5066b9dffa93405a988e266ff12bf674.html |
+| 论文原文 | Hugging Face Daily Papers | 2026-11-13 | https://huggingface.co/papers/date/2026-11-13 |
+
 ## 2026-11-12
 
 ### 今日总览
