@@ -2,6 +2,80 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-14
+
+### 今日总览
+
+**一句话结论**：11 月 14 日（Asia/Shanghai）的主线，是 DeepSeek 在 13 日把 App 级搜索、读链、文件与语音能力开放给 API 后，于 14 日的中文窗口被广泛拆解；同时本地推理运行时（llama.cpp 1.0.0）和 GitHub Copilot 对 Gemini 4 Hydrogen 的接入，把「可复现的工具层」又推近一步，评测侧则切换到更难的 Coding Agent Index v2.1。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | AI / LLM / Agent / RAG / MCP / Claude Code / Codex / OpenClaw / Hermes / Spring AI / Spring Alibaba AI / Langfuse / LangChain·LangGraph / Code Graph / Loop Engineering / skills / 模型基础设施 / 论文 / 政策监管 |
+| 核心趋势 | 1）DeepSeek 用服务端内置工具把联网搜索、读 URL、文件解析、OCR、ASR/TTS 和安全审核接到 `deepseek-flash`，并开源可导入官方聊天记录的前端演示；2）编码助手侧，GitHub Copilot 把 Hydrogen 铺到多端模型选择器，llama.cpp 则以 v1.0.0 明确 C API/ABI 的主版本边界；3）Langfuse AI Gateway 补上 Vertex AI 通道（11-13，昨日专项未单独列出）；4）Artificial Analysis 公开指数切到 v2.1，纵向对比旧分时需谨慎。 |
+| 可直接关注 | DeepSeek 内置工具的协议兼容与中间结果必须回传；文件解析的免费/按页计费边界；Copilot 中 Hydrogen 的企业模型策略开关；llama.cpp/ggml 后续以主版本标记破坏性变更；用官方图表而不是旧版分数读 Coding Agent Index。 |
+| 专项检索结论 | **Langfuse**：11-13 changelog 增加经 AI Gateway 调用 Vertex AI（Gemini 及 Google 托管的开源模型；Claude on Vertex 尚不可用），可作为昨日「按密钥限制模型 / Gemini Decisions 评测器」的补充。**Hermes**：11-14 仅有 canary 预发布安装包（`v0.23.1+canary.20261114T064334Z`），公告未列出功能变更，macOS/Windows 安装冒烟通过。**Claude Code / Codex / OpenClaw / Spring AI / Spring Alibaba AI / LangChain·LangGraph / Code Graph / Loop Engineering / skills**：已按日期与站点检索，未发现可确认属于 11-14 的官方发布或 changelog；不把未经官方页核对的聚合简报写入正文。ChatGPT Wallet 与 Langfuse 另两项 11-13 更新已在昨日章节覆盖，本日不再重复展开。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 开源模型 API | [The full DeepSeek App experience, now via API](https://api-docs.deepseek.com/news/news261113/)（中文：[DeepSeek 发布全家桶应用 API](https://api-docs.deepseek.com/zh-cn/news/news261113/)） | 2026-11-13（相邻日期 / 中国时间窗口传播） | 官方发布 | 在 Messages / Responses / Chat Completions 上为 `deepseek-flash`（V4.1-Flash）提供服务端内置工具：网页与深度思考搜索、文件输入、URL 读取、安全审核，以及独立的 Search / Fetch / OCR / ASR / TTS 接口。官方开源前端演示 [deepseek-ai/chat-demo](https://github.com/deepseek-ai/chat-demo)，并可导入官网导出的对话记录。公开材料写明目前仅 Flash 支持这套工具，V4-Pro 尚未跟上。 |
+| 编码助手 | [Gemini 4 Hydrogen in GitHub Copilot](https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot/) | 2026-11-13（相邻日期 / 中国时间窗口传播） | 官方发布 | Hydrogen 以 Google 最新 Flash 定位进入 Copilot，面向更快的 agentic 编码与多步工具使用，并按提供商目录价计入用量计费。已在 VS Code / Visual Studio / Copilot CLI / coding agent 及 JetBrains、Xcode、Eclipse 等处的模型选择器中逐步放出；Business/Enterprise 管理员可通过模型策略开关控制访问。 |
+| 本地推理运行时 | [llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem](https://huggingface.co/blog/ggml-org/llama-cpp-v1) | 2026-11-13（相邻日期 / 中国时间窗口传播） | 开源发布 | 同时发布 `libllama` 与 `libggml` 的 v1.0.0，承诺之后以主版本号标记对公开 C API/ABI 的不兼容变更。对已经把 llama.cpp 嵌进产品的团队，这是把「跟提交」改成「跟语义化版本」的信号。 |
+| 评测基准 | [Artificial Analysis Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents)（方法说明见 [Methodology](https://artificialanalysis.ai/methodology/coding-agents-benchmarking)） | 2026-11-14（公开页已切换到 v2.1；分数细节以官网图表为准） | 开源/评测 | v2.1 由 FrontierCode-AA 2.0（132 题）、Terminal-Bench 4.1（66 题）与 SWE-Atlas-QnA-AA（124 题）等权组成，比较的是「模型 + 特定 Agent harness」而非裸模型。独立综述称部分 Claude 配置在该版指数上出现并列领先，并提醒与 v2.0 分数不可直接纵向比较。 |
+| 政策监管 | [Facebook: il Garante Privacy sanziona Meta per 805 milioni di euro](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10321080) | 2026-11-14 | 政策标准 | 意大利数据保护局认定 Facebook Android 端「从相册获取建议」功能在未取得充分、单独同意的情况下读取相册与元数据，处罚 8.05 亿欧元，并要求 60 日内默认关闭该功能、改为单独征得同意。官方写明本次程序**未涵盖**内容是否用于训练人工智能（Meta 否认），该部分另案评估。不宜把本罚单直接写成「AI 训练监管」。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Agent 工具 API | [DeepSeek 官方公告](https://api-docs.deepseek.com/news/news261113/) 与 [阿里云开发者社区对接入细节的拆解](https://developer.aliyun.com/article/1783452) | 搜索/读链在服务端完成；思考、搜索和抓页结果块必须在下一轮原样回传，否则模型会「忘页」。开启工具调用等能力后，部分采样参数会被服务端忽略。纯文本/CSV/代码等可走免费解析，PDF/Office/图片才按页计费；要保留图表需版面识别，并额外消耗图像 token。 | 打算复刻 DeepSeek 风格助手、或把搜索/读页从自建管线换成厂商工具的后端团队 |
+| LLM 网关 | [Call Google Vertex AI models through the AI Gateway](https://langfuse.com/changelog/2026-11-13-ai-gateway-vertex-ai) | 经 Langfuse AI Gateway 对接 Vertex 的 OpenAI 兼容 Chat Completions 端点，可调用 Gemini 以及 Google 托管的 Llama、DeepSeek、Qwen、gpt-oss 等；官方写明 Claude on Vertex 暂不可用。 | 已使用 Langfuse Gateway、希望把 Vertex 模型纳入同一套密钥与路由的平台团队 |
+| 本地推理版本治理 | [llama.cpp v1.0.0](https://huggingface.co/blog/ggml-org/llama-cpp-v1) | MAJOR/MINOR/PATCH 与公开头文件变更绑定；发行渠道覆盖源码构件、Docker、发行版包与移动 XCFramework。 | 把 llama.cpp/ggml 作为产品依赖、需要稳定 ABI 的工程团队 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：这一天更像「厂商把已经在 App 里跑通的工具层开放给开发者」以及「编码/本地运行时把版本与模型入口补齐」，而不是 LangChain/LangGraph 编排层放出新版本。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| DeepSeek 工具协议 | 官方把搜索、读页、文件和语音做成服务端工具，并要求中间结果块在多轮中原样回传。 | 自建网关不要过滤「看起来不像最终答案」的 tool/thinking 块；协议兼容不等于可以改写中间态。把工具费用（按次）和 token 费用分开估，避免只看模型单价。 |
+| 编码助手模型选择 | Copilot 将 Hydrogen 作为高速执行模型接入多端，管理员可按策略关闭。 | 与昨日 Gemini 4 的 Carbon/Argon/Hydrogen 分工一致：执行层模型上线后，要用时延、配额和指令遵循，而不是只用旗舰榜分数做默认选择。 |
+| 本地运行时 | llama.cpp/ggml 进入 1.0 语义化版本。 | 下游集成应开始按版本号而不是「跟 main」规划升级窗口。 |
+| Langfuse / 可观测 | AI Gateway 增加 Vertex AI 通道，补齐云上 Google 模型入口。 | 网关层把多云模型收口后，再叠昨日的「按密钥限制模型」和决策评测，比在每个应用里分别接 Vertex 更易治理。 |
+| LangChain / LangGraph / Claude Code / Codex / OpenClaw / Spring AI / Code Graph / Loop Engineering | 本日未发现可核验的官方版本或文档更新。Hermes 仅有无功能说明的 canary 包。 | 专项主题已检索；无结果只说明 11-14 窗口没有可引用的官方源。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [The full DeepSeek App experience, now via API](https://api-docs.deepseek.com/news/news261113/) | 这是当日（含 13 日官方、14 日中文窗口）最具体的开发者接口变更，直接改变「要不要自建搜索/读页/文件管线」的评估。 |
+| 推荐 | [Gemini 4 Hydrogen in GitHub Copilot](https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot/) | 把昨日的 Hydrogen 模型发布接到真实编码工作流入口，并写清计费与企业开关。 |
+| 推荐 | [llama.cpp v1.0.0](https://huggingface.co/blog/ggml-org/llama-cpp-v1) | 对本地推理依赖给出可执行的版本治理承诺，而不是一次功能炫技。 |
+| 推荐 | [Langfuse：经 Gateway 调用 Vertex AI](https://langfuse.com/changelog/2026-11-13-ai-gateway-vertex-ai) | 昨日评测/密钥更新的自然补丁，适合已经把流量接到 Langfuse 的团队立刻验证。 |
+| 延伸 | [Artificial Analysis Coding Agent Index](https://artificialanalysis.ai/agents/coding-agents) | 用官方 v2.1 页面看「模型 + harness」而不是只看模型卡；更换组件后不要拿旧分做同比。 |
+| 延伸 | [Hugging Face Daily Papers（2026-11-14）](https://huggingface.co/papers/date/2026-11-14) | 当日论文墙可见决策模型在长程 Agent 中的角色、DeepStress 搜索 Agent 压测、世界模型与具身相关工作，适合按题挑选，不必逐篇当作已核实结论。 |
+| 延伸 | [意大利 Garante 对 Meta 的处罚说明](https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10321080) | 可用官方文本核对处罚对象与「未覆盖 AI 训练」这一界限，避免把隐私罚单误写成模型训练禁令。 |
+
+### 来源清单
+
+- 检索范围：2026-11-14 00:00:00 到 2026-11-14 23:59:59（Asia/Shanghai）
+- 引用域名：api-docs.deepseek.com, github.com, github.blog, huggingface.co, langfuse.com, artificialanalysis.ai, garanteprivacy.it, developer.aliyun.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | The full DeepSeek App experience, now via API | 2026-11-13（相邻日期 / 中国时间窗口传播） | https://api-docs.deepseek.com/news/news261113/ |
+| 开源发布 | deepseek-ai/chat-demo | 2026-11-13（相邻日期 / 中国时间窗口传播） | https://github.com/deepseek-ai/chat-demo |
+| 官方发布 | Gemini 4 Hydrogen in GitHub Copilot | 2026-11-13（相邻日期 / 中国时间窗口传播） | https://github.blog/changelog/2026-11-13-gemini-4-hydrogen-in-github-copilot/ |
+| 开源发布 | llama.cpp v1.0.0 | 2026-11-13（相邻日期 / 中国时间窗口传播） | https://huggingface.co/blog/ggml-org/llama-cpp-v1 |
+| 官方发布 | Call Google Vertex AI models through the AI Gateway | 2026-11-13（相邻日期 / 中国时间窗口传播） | https://langfuse.com/changelog/2026-11-13-ai-gateway-vertex-ai |
+| 开源发布/评测 | Artificial Analysis Coding Agent Index v2.1 | 2026-11-14 | https://artificialanalysis.ai/agents/coding-agents |
+| 政策标准 | Facebook: il Garante Privacy sanziona Meta per 805 milioni di euro | 2026-11-14 | https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10321080 |
+| 技术媒体（固定来源补充，中文传播） | DeepSeek 把 App 能力开放给开发者，连聊天前端也开源了 | 2026-11-14 | https://developer.aliyun.com/article/1783452 |
+| 论文原文 | Hugging Face Daily Papers | 2026-11-14 | https://huggingface.co/papers/date/2026-11-14 |
+| 开源发布 | Hermes Agent canary v0.23.1+canary.20261114T064334Z | 2026-11-14（预发布，无功能说明） | https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1%2Bcanary.20261114T064334Z |
+
 ## 2026-11-13
 
 ### 今日总览
