@@ -2,6 +2,119 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-15
+
+### 今日总览
+
+**一句话结论**：11 月 15 日（周日，Asia/Shanghai）可核验的新发，主线是 OpenAI 开通科学博客并刊出 GPT-6 Astra 辅助的标准模型格点定义候选，以及 NVIDIA 对 AI Day Seoul 的官方综述与 SC26 开幕；产品与框架层没有一线大模型正式发布，开发者侧可见 OpenClaw 预发布版、Hermes canary 和 Ultralytics 稳定补丁。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | AI / LLM / Agent / RAG / MCP / Claude Code / Codex / OpenClaw / Hermes / Spring AI / Spring Alibaba AI / Langfuse / LangChain·LangGraph / Code Graph / Loop Engineering / skills / 模型基础设施 / 论文 / 政策监管 |
+| 核心趋势 | 1）AI for Science 被 OpenAI 单独开出传播渠道，且博文把自己的格点构造明确写成「候选定义 / 仍待专家检验」；2）产业叙事仍被 NVIDIA 11-12 领导层过渡主导，11-15 主要是官方活动综述和媒体复盘，不宜把复盘写成新的人事公告；3）编码 Agent 当日更新以预发布/canary 和工具补丁为主，一线 IDE 无 11-15 官方 changelog；4）美国西岸 15 日晚间部分媒体稿对应北京时间 16 日凌晨，已按相邻日期标注。 |
+| 可直接关注 | OpenAI 科学博客与格点定义博文的限定条件；NVIDIA SC26 教程日与 Seoul 综述；OpenClaw 2026.11.5-beta.3 的大会话与重启安全修复；先读 NVIDIA 11-12 官方声明，再看 The Verge 11-15 复盘。 |
+| 专项检索结论 | **OpenClaw**：有预发布 `2026.11.5-beta.3`（00:31 UTC）。**Hermes**：有 canary `v0.23.1+canary.20261115T064406Z`，以插件目录更新为主，未见 `/goal` / `/loop` 新范式。**Claude Code / Codex / Spring AI / Spring Alibaba AI / Langfuse / LangChain·LangGraph / Code Graph / Loop Engineering / skills**：已按日期与站点检索，未发现可确认属于 11-15 窗口的官方正式发布或 changelog。论文页存在但抽查提交日均早于 11-15；政策监管与中文补充未发现可核验重大更新。 |
+
+### 重要事件与发布
+
+| 主题 | 标题（链接） | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 官方厂商 / OpenAI | [Our new blog for science](https://openai.com/index/our-new-blog-for-science/) | 2026-11-15 | 官方发布 | 高。OpenAI 开通面向科研人员的科学博客，汇总近期数学与生物学方向进展，并讨论证明核验、实验优先级与署名等科研规范问题。 |
+| 官方厂商 / 科学研究 | [A step toward defining the Standard Model on a lattice](https://openai.com/index/step-toward-defining-the-standard-model/) | 2026-11-15 | 官方博文 / 研究通信 | 高。UCSB 物理学家 Nathaniel Craig 作为访问科学家，描述与 GPT-6 Astra 合作给出标准模型非微扰格点定义的候选构造；文中明确这是原则性方案，仍需专家检验，且距可做现实格点模拟尚远。 |
+| 官方厂商 / NVIDIA | [AI Day Seoul Brings Together Korea’s Industry Leaders, Startups and Developer Communities](https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/) | 2026-11-15（博文日期；活动为此前两日 COEX） | 官方活动综述 | 中高。官方称两日活动超过 2,000 人，聚焦物理 AI 与 AI Agent；含 Agentic AI 训练营、韩语 DLI 工作坊及新的 AI Model and Application Development 认证考试。 |
+| 官方厂商 / NVIDIA | [NVIDIA at Supercomputing 2026 (SC26)](https://www.nvidia.com/en-us/events/supercomputing/) | 2026-11-15 起至 11-20（芝加哥） | 官方活动开幕 | 中。11-15 为教程日，主题包括加速量子超算、大规模深度学习、科学 Agent 系统（Academy）等；特别演讲安排在 11-16。 |
+| 产业 / NVIDIA 领导层过渡 | [NVIDIA Announces CEO Transition](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition)（官方，11-12）；当日媒体复盘：[An overview of Jensen Huang’s messy days](https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation) | 官方 2026-11-12；The Verge 2026-11-15 13:00 UTC（北京时间 21:00，落在窗口内） | 官方声明 + 媒体综述 | 高（产业影响）。官方确认黄仁勋辞去总裁、CEO 及董事，CFO Colette Kress 任临时 CEO，Harvey C. Jones 出任公司首任董事会主席；Q3 FY2027 财报仍定于 11-17。媒体复盘其经过与潜在产业链影响，细节需以官方声明和具名报道区分。 |
+| Agent 框架 / OpenClaw | [openclaw 2026.11.5-beta.3](https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.3) | 2026-11-15 00:31 UTC（北京时间 08:31） | GitHub 预发布 | 中高。官方 release notes 强调大会话可靠性、重启与投递安全、冷启动/工作区恢复，以及 MCP 工具去重与可配置摘要长度。 |
+| 开发者工具 / 视觉模型库 | [Ultralytics v8.4.214](https://github.com/ultralytics/ultralytics/releases/tag/v8.4.214) | 2026-11-15 14:25 UTC（北京时间 22:25） | GitHub 稳定发布 | 中。统一按 EXIF 方向读取图像，避免标签/预测与显示方向不一致；并更新 OpenVINO 文档与若干平台兼容修复。同窗口内还有 [v8.4.213](https://github.com/ultralytics/ultralytics/releases/tag/v8.4.213)（2026-11-14 18:48 UTC，北京时间 11-15 02:48）。 |
+| 模型开源传播（非当日首发） | [Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU](https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/) | 媒体 2026-11-15；官方开源 [美团 LongCat-2.5 正式开源](https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html) 为 2026-11-10 | 媒体报道 / 相邻日期传播 | 中。美团官方已于 11-10 以 MIT 协议开源 LongCat-2.5（1.6T 总参、约 480 亿激活、百万上下文，并介绍国产算力与 W4A4 推理）。The Decoder 11-15 报道属对既有开源的二次传播，基准数字以官方博客为准。 |
+
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 科学计算活动 | [NVIDIA at Supercomputing 2026 (SC26)](https://www.nvidia.com/en-us/events/supercomputing/) | 11-15 为教程日，主题包括加速量子超算、大规模深度学习，以及面向科学的 Agent 系统（Academy）。 | 关注高性能计算和科学 Agent 的研究/平台团队 |
+| Agent 安全 | [Securing AI Agents: Lessons From Real-World Deployment](https://www.uber.com/blog/securing-ai-agents/)（官方 11-06；InfoQ 11-15 报道） | Agent 注册、persona/intent/约束、MCP 与工具校验、运行时行为授权，以及可观测、审计、回放等持续保证。 | 要把生产 Agent 的权限和工具调用管起来的平台与安全团队 |
+| 代码评审流程 | [How the Claude Code team does code review](https://claude.dev/blog/solving-code-review-at-anthropic/)（官方 10-15；InfoQ 11-15 报道） | 按风险分级的人机评审、自动化检查前置，以及「减少人工审阅时间但不抬高回滚/事故率」的度量。 | 正在提高 Agent 产码量、需要配套评审门禁的工程团队 |
+| 相邻学习资料 | [Spring AI 2.1.0-RC2](https://spring.io/blog/2026/11/09/spring-ai-2-1-0-RC2-available-now/) 与 [LangChain 1.5.0 changelog](https://docs.langchain.com/oss/python/releases/changelog) | DecisionModel / 决策中间件、tool-call 流式，以及 Spring AI 对 MCP “modern” 协议的服务端支持。二者均属 11 月上旬，不计入 11-15 新发。 | 已在跟 Spring AI 或 LangChain 决策层 API 的同学 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：这一天更像「科学传播渠道和产业复盘」加上「运行时预发布补丁」，而不是 LangChain/LangGraph 编排层或一线 IDE 放出新版本。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| LangChain / LangGraph | 当日无新官方 changelog。最近为 LangChain 1.5.0（11-11）与 LangGraph 1.2.22（11-14 01:43 UTC）。 | 专项无结果只说明 11-15 窗口没有可引用的官方源，不必把相邻版本算进当日新发。 |
+| OpenClaw | 预发布 2026.11.5-beta.3 聚焦大会话可靠性、重启与投递安全、冷启动/工作区恢复，以及 MCP 工具去重与可配置摘要长度。 | 跟预发布版本时优先看会话恢复和权限在重启过程中是否被保留，而不是期待新范式。 |
+| Hermes | canary `v0.23.1+canary.20261115T064406Z`（07:52 UTC）以插件目录变更为主，未见 `/goal` 或 `/loop` 新说明。 | canary 适合观察插件生态，不宜当成 Loop Engineering 的正式更新。 |
+| Agent 安全与 MCP | InfoQ 11-15 传播了 Uber 11-06 框架和 Cohere 10-26 关于开源权重模型出站风险的既有发现。VentureBeat MCP 分析稿标注 11-15 12:00 PT（北京时间 11-16 04:00，相邻日期）。 | 把「当日媒体传播」和「当日新规范」分开；生产设计仍应回到 Uber/Cohere/OWASP 原文。 |
+| 开发者工具 | Cursor、GitHub Copilot changelog、JetBrains、Windsurf 均未发现可核验的 11-15 官方更新；Copilot 最近相关条目仍是 11-13 的 Hydrogen。 | 编码助手侧本日没有新的默认模型或 IDE 入口变更可写。 |
+| Langfuse | 当日无新 release。最近为 v4.80.0 及 11-13 的 Vertex AI 网关等更新。 | 可观测性变更已在 11-13/11-14 章节覆盖，本日不再重复展开。 |
+| RAG / 向量数据库 / MCP 规范 | 未发现 Pinecone、Weaviate、Chroma、Milvus 或 MCP 规范的可核验重大新发。 | 无结果已检索，不省略该组。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [A step toward defining the Standard Model on a lattice](https://openai.com/index/step-toward-defining-the-standard-model/) | 当日最具体的科学研究通信，同时写清这是候选定义、距可做现实格点模拟尚远，适合看 AI 如何介入基础物理，以及作者如何自我限定。 |
+| 必读 | [Our new blog for science](https://openai.com/index/our-new-blog-for-science/) | 说明 OpenAI 为何单独开设科学博客，以及希望公开哪些方法学与合作规范。 |
+| 推荐 | [NVIDIA Announces CEO Transition](https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition) 与 [The Verge 11-15 复盘](https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation) | 先核对 11-12 官方事实（临时 CEO、董事会主席、11-17 财报安排），再看 11-15 媒体对产业外溢的分析。 |
+| 推荐 | [openclaw 2026.11.5-beta.3](https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.3) | 窗口内最完整的 Agent 运行时官方更新（预发布），可直接对照大会话、重启安全与 MCP 相关修复。 |
+| 延伸 | [Securing AI Agents: Lessons From Real-World Deployment](https://www.uber.com/blog/securing-ai-agents/) | 11-15 被 InfoQ 再次传播的生产级 Agent 治理原文，不是当天新发布，但材料密度高。 |
+| 延伸 | [How the Claude Code team does code review](https://claude.dev/blog/solving-code-review-at-anthropic/) | 同样是旧文新传播，适合看高 Agent 产码量下的评审分层与度量。 |
+
+Hugging Face 存在 [Daily Papers 2026-11-15 页面](https://huggingface.co/papers/date/2026-11-15)，但抽查 SO-Arena（[arXiv:2611.15777](https://arxiv.org/abs/2611.15777)，提交 11-11）、Actor, Judge, or Teacher?（[arXiv:2611.17167](https://arxiv.org/abs/2611.17167)，提交 11-12）、PhysLoop（[arXiv:2611.16748](https://arxiv.org/abs/2611.16748)，提交 11-12）等，提交日均早于 11-15。11-15 为周日，arXiv 通常无独立公告。结论：未发现可核验为该中国时间窗口新提交或新公布的重大论文。
+
+### 来源清单
+
+- 检索范围：2026-11-15 00:00:00 到 2026-11-15 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, blogs.nvidia.com, nvidia.com, nvidianews.nvidia.com, theverge.com, techcrunch.com, infoq.com, uber.com, claude.dev, cohere.com, venturebeat.com, the-decoder.com, tech.meituan.com, github.com, huggingface.co, code.claude.com, spring.io, docs.langchain.com, langfuse.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方博客 | Our new blog for science | 2026-11-15（页面标注，精确时刻未公布） | https://openai.com/index/our-new-blog-for-science/ |
+| 官方博客 | A step toward defining the Standard Model on a lattice | 2026-11-15（页面标注，精确时刻未公布） | https://openai.com/index/step-toward-defining-the-standard-model/ |
+| 官方新闻页 | OpenAI Newsroom \| Science（收录上述两篇） | 2026-11-15 | https://openai.com/news/science/ |
+| 官方博客 | AI Day Seoul wrapup | 2026-11-15（页面标注；活动为此前两日） | https://blogs.nvidia.com/blog/ai-day-seoul-wrapup/ |
+| 官方活动页 | NVIDIA at Supercomputing 2026 (SC26) | 2026-11-15 至 11-20 | https://www.nvidia.com/en-us/events/supercomputing/ |
+| 官方新闻稿 | NVIDIA Announces CEO Transition | 2026-11-12（11-15 媒体综述所依据的官方原文） | https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition |
+| 技术媒体 | An overview of Jensen Huang’s messy days | 2026-11-15 13:00 UTC（北京时间 21:00） | https://www.theverge.com/column/1033943/jensen-huang-nvidia-china-spying-scandal-resignation |
+| 技术媒体 | Jensen Huang might be plotting a return and more of the latest Nvidia drama | 2026-11-15 20:43 UTC（北京时间 11-16 04:43，相邻日期） | https://www.theverge.com/tech/1033999/jensen-huang-return-nvidia-megaspeed |
+| 技术媒体 | Is bad news for Jensen Huang also bad news for the AI industry? | 2026-11-15 1:56 PM PST（北京时间 11-16 05:56，相邻日期） | https://techcrunch.com/2026/11/15/is-bad-news-for-jensen-huang-also-bad-news-for-the-ai-industry/ |
+| 技术媒体 | Uber's Secure AI Framework Governs Autonomous AI Agents Across Their Lifecycle | 2026-11-15（InfoQ 标注；官方原文 11-06） | https://www.infoq.com/news/2026/11/uber-secure-ai-framework/ |
+| 官方博客 | Securing AI Agents: Lessons From Real-World Deployment | 2026-11-06 | https://www.uber.com/blog/securing-ai-agents/ |
+| 技术媒体 | Anthropic Outlines Its AI-Powered Code Review Process for Claude Code | 2026-11-15（InfoQ 标注；官方原文 10-15） | https://www.infoq.com/news/2026/11/claude-code-review/ |
+| 官方博客 | How the Claude Code team does code review | 2026-10-15 | https://claude.dev/blog/solving-code-review-at-anthropic/ |
+| 技术媒体 | Cohere Finding Shows Self-Hosted Open-Weight Models Still Need Egress Controls | 2026-11-15（InfoQ 标注；官方原文 10-26） | https://www.infoq.com/news/2026/11/cohere-open-weight-egress-risk/ |
+| 官方博客 | Concerning behavior from a popular open-weight AI model | 2026-10-26 | https://cohere.com/blog/concerning-behaviour-popular-open-weight-ai-model |
+| 技术媒体 | One compromised MCP server can trick an AI agent into misusing tools you already trust | 2026-11-15 12:00 PT（北京时间 11-16 04:00，相邻日期） | https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust |
+| 技术媒体 | Meituan releases a 1.6-trillion-parameter agent model that never touched an Nvidia GPU | 2026-11-15（媒体日期；官方开源 11-10） | https://the-decoder.com/meituan-releases-a-1-6-trillion-parameter-agent-model-that-never-touched-an-nvidia-gpu/ |
+| 官方博客 | 美团 LongCat-2.5 正式开源：从看见，到抵达 | 2026-11-10 | https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html |
+| GitHub Release | openclaw 2026.11.5-beta.3 | 2026-11-15 00:31 UTC（北京时间 08:31） | https://github.com/openclaw/openclaw/releases/tag/v2026.11.5-beta.3 |
+| GitHub Release | Hermes Agent canary v0.23.1+canary.20261115T064406Z | 2026-11-15 07:52 UTC（北京时间 15:52） | https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.1%2Bcanary.20261115T064406Z |
+| GitHub Release | Ultralytics v8.4.214 | 2026-11-15 14:25 UTC（北京时间 22:25） | https://github.com/ultralytics/ultralytics/releases/tag/v8.4.214 |
+| GitHub Release | Ultralytics v8.4.213 | 2026-11-14 18:48 UTC（北京时间 11-15 02:48，窗口内） | https://github.com/ultralytics/ultralytics/releases/tag/v8.4.213 |
+| 官方 changelog | Claude Code 2.1.325 | 2026-11-13（相邻日期，专项检索引用） | https://code.claude.com/docs/en/changelog |
+| GitHub Release | Codex rust-v0.169.0 | 2026-11-13（相邻日期，专项检索引用） | https://github.com/openai/codex/releases/tag/rust-v0.169.0 |
+| GitHub Release | Langfuse v4.80.0 | 2026-11-13（相邻日期，专项检索引用） | https://github.com/langfuse/langfuse/releases/tag/v4.80.0 |
+| 官方博客 | Spring AI 2.1.0-RC2 Available Now | 2026-11-09（相邻日期，专项检索引用） | https://spring.io/blog/2026/11/09/spring-ai-2-1-0-RC2-available-now/ |
+| 论文日刊页 | Hugging Face Daily Papers 2026-11-15（抽查论文提交日均早于 11-15，不记为当日新发） | 页面日期 2026-11-15 | https://huggingface.co/papers/date/2026-11-15 |
+
+#### 专项主题结论（即使当日无结果也给出）
+
+- **Claude Code**：11-15 窗口内无新官方版本。最近官方 changelog 为 2.1.325（2026-11-13），含 sandbox 下 Bash 默认走权限流、不信任仓库中只读 git 需先询问、`/loop` 与定时任务在运行声明了 `allowed-tools` 或 hooks 的 skill 前需询问，以及 zstd 解码等问题修复。InfoQ 11-15 报道的是 10-15 官方评审博文，不是新版本。
+- **Codex**：11-15 窗口内无稳定版。最近稳定版为 0.169.0（2026-11-13 08:37 页面时间），含侧边对话标签、任务搜索、终端内自定义供应商，以及在不信任目录中即使 `--sandbox workspace-write` 也禁用项目配置与 MCP、需显式 `--trust`。`0.171.0-alpha.6`（18:58 UTC）与 `alpha.7`（23:13 UTC）对应北京时间 11-16 凌晨，不计入本窗口。
+- **OpenClaw**：有可核验更新。`2026.11.5-beta.3` 于 2026-11-15 00:31 UTC 发布（预发布）。
+- **Hermes**：有 canary。`v0.23.1+canary.20261115T064406Z` 于 07:52 UTC 发布，以插件目录变更为主，未见 `/goal`、`/loop` 新范式说明。
+- **Spring AI**：当日无新版本。最近官方为 2.1.0-RC2（博客 2026-11-09），新 API 包括 `DecisionModel`、部分工具参数流式、MCP 2026-07-28 “modern” 协议服务端支持。
+- **Spring Alibaba AI**：当日 `github.com/alibaba/spring-ai-alibaba` 与 java2ai.com 未发现可核验新 release 或官方博文。最近公开节点（如 v1.1.2.2、v2.0.0-M1.1）均不属于 11-15 窗口。
+- **Langfuse**：当日无新版本。最近为 v4.80.0 及 11-13 changelog（Vertex AI 网关、Gemini decision evaluators、skills 相关改进）。
+- **LangChain / LangGraph**：当日无新官方 changelog 或在窗口内的新 release。最近为 LangChain 1.5.0（11-11）与 LangGraph 1.2.22（11-14）。
+- **Code Graph**：`colbymchenry/codegraph` 与 `codegraph-ai` 在 11-15 窗口内未发现可核验的新 release。
+- **Loop Engineering**：Addy Osmani 博客、`cobusgreyling/loop-engineering` 与 Hermes `/goal` `/loop` 文档，均未发现 11-15 新发文。相邻可参考 Claude Code 2.1.325 对 `/loop` 与 skill 权限的交互调整（11-13）。
+- **skills / Agent Skills / Codex Skills / Claude Skills / Cursor Skills**：未发现 11-15 新的官方规范或产品发布。相邻可见 Claude Code 2.1.325 的 skill 权限变化，以及 Langfuse v4.80.0（11-13）中 skills 大小限制可配置、Halo 创建/编辑入口等。
+
 ## 2026-11-14
 
 ### 今日总览
@@ -1078,3 +1191,4 @@
 | 公告 | Anthropic files S-1 | 2026-10-26（相邻） | https://www.anthropic.com/news/s1-sec |
 | 周报/聚合 | Claude Code / Codex week of Nov 1 | 2026-11-01 | https://aicoding-guide.com/en/posts/weekly-2026-11-01/ |
 | 日汇总 | Epoch 0 2026-11-01 | 2026-11-01 | https://epoch0.tokyo/daily/2026-11-01/en |
+

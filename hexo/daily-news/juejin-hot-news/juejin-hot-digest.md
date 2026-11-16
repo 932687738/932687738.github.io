@@ -2,6 +2,97 @@
 
 按 Asia/Shanghai 时区汇总掘金文章热榜与收藏热榜（后端 / 前端 / 人工智能 / 开发工具），按文章链接去重并归纳正文。
 
+## 2026-11-16
+
+### 今日总览
+
+**一句话结论**：11 月 16 日快照的 9 条新链接几乎都落在文章热榜，主线是把编码 Agent 的模型、订阅和本地工具收口到本机网关或组件套件里；前端同时出现 Chrome 官方给 AI 助手补的现代 Web 技能，收藏热榜则补上腾讯微信团队 WeKnora 这篇「知识库要能干活」的长文。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 文章热榜 + 收藏热榜 × 后端/前端/人工智能/开发工具 |
+| 榜单规模 | 每槽最多 15 条；列表总条数 120；去重后新 URL 9；跳过已见 111；详情失败 0 |
+| 核心趋势 | 1）模型与订阅管理从「改各 Agent 配置文件」走向「本机网关做协议翻译和额度池化」，Magpie 与掘金用量网关都在讲这件事；2）前端一边是 Chrome 用 skill 把 `<dialog>`、Popover、Baseline 兼容性塞进编码 Agent，一边是视频生成轻游戏平台的产品体验；3）知识库讨论从「能问答」转向「能检索、读技能、在沙箱里交付文件」。 |
+| 可直接关注 | Magpie 与 CC Switch 的职责边界；[Chrome Modern Web Guidance](https://developer.chrome.com/docs/modern-web-guidance) 的安装入口；Claude Fable 5.2 长任务的 5 小时配额与费用断点；[WeKnora](https://github.com/Tencent/WeKnora) 的 RAG / ReAct / Auto-Wiki 分工；MiniWho 与 TinyRobot 两个可自部署开源工具。 |
+
+### 后端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 3 | [卸载cc-switch，强烈推荐Magpie](https://juejin.cn/post/7707904657305665546) | 苏三说技术 | 赞 16 / 藏 11 / 阅 502 | 对比 CC Switch 与 Magpie：前者主要改写 Claude Code、Codex 等客户端的供应商 Key/Endpoint 配置；后者在本机跑网关，读取已登录订阅（含 macOS Keychain），把 OpenAI Chat/Responses、Anthropic Messages、Gemini 协议互译后转发，从而让一个订阅被多个 Agent 复用。文中强调它会原子改写 Agent 配置、保留注释与格式。适合同时用多个编码 Agent、想共享订阅额度的人；需要接受本机多一个网关，并自行判断把登录态交给第三方工具的风险。 | https://juejin.cn/post/7707904657305665546 |
+| 14 | [Workbuddy太占C盘空间了，写个迁移工具迁走10G的数据](https://juejin.cn/post/7707218987331567667) | SimonKing | 赞 1 / 藏 4 / 阅 257 | 作者发现 `.workbuddy` 占用十多 GB 导致 C 盘告急，用 Windows NTFS 目录联接把可迁移目录转到其他盘：程序仍访问原路径，数据只保留一份，联接本身几乎不占空间。文中做了带扫描、预演、日志、验证和回滚的图形化迁移工具，称迁移后该目录只剩约 1.25 GB。仓库为 https://github.com/simonking-ws/workbuddy-migrator。适合 Windows 上被 Agent 工作目录撑满系统盘的人；迁移前需退出 WorkBuddy，并先预演、保留回滚手段。 | https://juejin.cn/post/7707218987331567667 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 前端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 10 | [太牛了！这AI做出来的游戏，居然还能变现！](https://juejin.cn/post/7707235507143491624) | 亿元程序员 | 赞 4 / 藏 4 / 阅 753 | 作者用极逸人工智能的 SoonPlay 平台，把先前伪 3D 音乐球球视频上传生成 3D 轻游戏，再通过对话和「游玩中选中对象」两种方式改 UI 与玩法，并介绍平台把创作、试玩、分发和变现放在同一处。体验上接近「刷视频 + 玩游戏 + 做游戏」。这是产品体验文，偏营销，略读即可；若评估该类工具，应以其实际生成质量和分成规则为准，本文没有给出可核验的分成数据。 | https://juejin.cn/post/7707235507143491624 |
+| 15 | [AI 写的前端代码为什么总像 5 年前的？Chrome 官方出手了](https://juejin.cn/post/7706732586618306598) | parade岁月 | 赞 5 / 藏 4 / 阅 548 | 整理 Chrome 官方 Modern Web Guidance：一组可装进编码 Agent 的 skill，把 Web 平台最佳实践和浏览器兼容性数据提供给助手，减少手搓弹窗、滥用第三方 tooltip、忽略 `<dialog>` / Popover / 锚点定位等现代 API 的情况。安装示例包括 `npx modern-web-guidance@latest install`、Claude Code 插件和 `npx skills add GoogleChrome/modern-web-guidance`。配套有 Codelab 与开源仓库 GoogleChrome/modern-web-guidance-src。适合正在用 Claude Code / Copilot 写前端的人；本文是文档整理，具体能力以 [官方文档](https://developer.chrome.com/docs/modern-web-guidance) 为准。 | https://juejin.cn/post/7706732586618306598 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 人工智能
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 14 | [用 Claude Fable 5.2 重构官网：85分钟烧52美元，撞上配额上限中断](https://juejin.cn/post/7706577325618921491) | 孟健AI编程 | 赞 4 / 藏 1 / 阅 484 | 作者用 Claude Code（文中为 v2.1.322）把思考档位调到 `/effort high`，用一段「中途不要问我」的结构化提示词，让 11 月 9 日发布的 Claude Fable 5.2 自主重构 ShipSite 官网。过程跑了 85 分钟，派生子 Agent 做了 3 个首页方向，改 20 个文件、写 4320 行代码，花费 52.55 美元后撞上 5 小时配额上限中断。文中建议把「比选方向」和「定向落地」拆开，以避免长任务中途被配额打断。这是单次个人实测，费用与中断点不能外推成官方 SLA。 | https://juejin.cn/post/7706577325618921491 |
+| 15 | [掘金用量重要更新来了!全新本地 AI 网关正式上线：一站式掌控你的模型、用量与工具!TRAE用量支持](https://juejin.cn/post/7706396464942972954) | XCaptain | 赞 7 / 藏 0 / 阅 405 | 介绍掘金用量 v1.1.0 桌面端本地 AI 网关：独立面板与托盘里切换默认模型、自定义供应商、局域网共享和连通性测试；凭据主密钥改为本地 `~/.ai-usage/agent-router/vault.key`；协议覆盖 Messages / Responses / Chat / Gemini，并声称可探测接入 Claude Code、Codex、OpenCode 等运行工具。用量侧新增 Trae 国际账号读取、独立 Grok Bot 订阅卡片，以及 models.dev 定价同步。发布页为 https://github.com/juejin-cn/juejin-usage/releases/tag/v1.1.0。偏产品更新说明，略读；是否安装需自行评估其读取本地登录态和改写工具配置的范围。 | https://juejin.cn/post/7706396464942972954 |
+
+#### 收藏热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 15 | [AI 知识库 WeKnora（腾讯微信团队出品）](https://juejin.cn/post/7688530195554140194) | 怕浪猫 | 赞 35 / 藏 57 / 阅 2681 | 以「什么是人形机器人？把结果写到 Docx」为演示，记录 WeKnora v0.8.0 用 17 轮思考、20 次工具调用，在知识库检索后读取 docx 技能、于沙箱写脚本并交付 Word。作者将其定位为腾讯微信团队开源（MIT，Go + Vue）的「活知识」产品：RAG 问答、ReAct Agent（MCP、技能目录、沙箱、联网）和把文档蒸馏成互链 Markdown 的 Wiki 模式。官网 https://weknora.weixin.qq.com/ ，仓库 https://github.com/Tencent/WeKnora。适合评估私有化知识库+Agent 的人；本文是体验长文，版本能力以仓库与官方文档为准。 | https://juejin.cn/post/7688530195554140194 |
+
+### 开发工具
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 13 | [极简简历：开源免费，希望帮助到更多求职者](https://juejin.cn/post/7707469507003334690) | Cosolar | 赞 3 / 藏 0 / 阅 213 | 介绍开源可自部署简历工作台 MiniWho（Apache-2.0）：18 种结构化模块与 60 套 A4 模板分离存储，服务端导出可选中文字的 PDF，分享链接可收回；默认 SQLite，可切 MySQL。前端 Vue 3.5 + Vite 6，后端 Java 17 + Spring Boot 3.3。模板包只含受约束 CSS，导入时拒绝 `@import`、`expression()` 等，降低第三方模板的执行面。仓库 https://github.com/cosolar/miniwho ，演示 https://who.minims.cn 。适合想把简历数据留在自建实例的求职者和团队；官方演示站只是一个实例，不等于默认把内容交给作者。 | https://juejin.cn/post/7707469507003334690 |
+| 15 | [AI Agent场景组件库 TinyRobot v1.0 正式发布：一站式打造您的AI助手](https://juejin.cn/post/7707300643656368137) | OpenTiny社区 | 赞 3 / 藏 2 / 阅 191 | OpenTiny 开源的 Vue 3 AI 组件库 TinyRobot 发布 v1.0：新增开箱即用的 TrChat 聊天套件、模型选择器、统一扩展面板、工具调用确认和会话持久化。架构拆成 Chat 套件、界面组件、会话/请求 Kit 和 CLI，既可整页接入，也可用 `TrChatUI` 保留应用自己的会话逻辑。仓库 https://github.com/opentiny/tiny-robot ，文档 https://opentiny.design/tiny-robot 。适合要在 Vue 3 业务里嵌助手 UI 的前端；鉴权、上传和具体业务工具仍由应用实现。 | https://juejin.cn/post/7707300643656368137 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 跨榜重复与去重说明
+
+- 本轮新摘要 URL 数：9
+- 因 `seen_urls` 跳过：111
+- 同文多标签/双榜出现：无（9 条新 URL 均只出现在各自单一标签与单一榜单槽位）
+
+### 来源清单
+
+- 快照日：2026-11-16（Asia/Shanghai）
+- 页面：https://juejin.cn/hot/articles 、 https://juejin.cn/hot/collected-articles
+- 抓取：`tools/juejin_hot_fetch.py` → `_staging_latest.json`
+
+| 标签 | 榜单 | 标题 | 链接 |
+| --- | --- | --- | --- |
+| 后端 | 文章热榜 | 卸载cc-switch，强烈推荐Magpie | https://juejin.cn/post/7707904657305665546 |
+| 后端 | 文章热榜 | Workbuddy太占C盘空间了，写个迁移工具迁走10G的数据 | https://juejin.cn/post/7707218987331567667 |
+| 前端 | 文章热榜 | 太牛了！这AI做出来的游戏，居然还能变现！ | https://juejin.cn/post/7707235507143491624 |
+| 前端 | 文章热榜 | AI 写的前端代码为什么总像 5 年前的？Chrome 官方出手了 | https://juejin.cn/post/7706732586618306598 |
+| 人工智能 | 文章热榜 | 用 Claude Fable 5.2 重构官网：85分钟烧52美元，撞上配额上限中断 | https://juejin.cn/post/7706577325618921491 |
+| 人工智能 | 文章热榜 | 掘金用量重要更新来了!全新本地 AI 网关正式上线：一站式掌控你的模型、用量与工具!TRAE用量支持 | https://juejin.cn/post/7706396464942972954 |
+| 人工智能 | 收藏热榜 | AI 知识库 WeKnora（腾讯微信团队出品） | https://juejin.cn/post/7688530195554140194 |
+| 开发工具 | 文章热榜 | 极简简历：开源免费，希望帮助到更多求职者 | https://juejin.cn/post/7707469507003334690 |
+| 开发工具 | 文章热榜 | AI Agent场景组件库 TinyRobot v1.0 正式发布：一站式打造您的AI助手 | https://juejin.cn/post/7707300643656368137 |
+
 ## 2026-11-15
 
 ### 今日总览
@@ -1457,3 +1548,4 @@
 | 我开源了个免费的 Markdown 编辑器：Lumin | https://juejin.cn/post/7699888899713499177 |
 | GitHub 日榜趋势速报 | 2026-10-31 | https://juejin.cn/post/7702409212484206618 |
 | 纯前端图片压缩怎么做？不用上传服务器，浏览器里跑完所有逻辑 | https://juejin.cn/post/7669733200704798739 |
+
