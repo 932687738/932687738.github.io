@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        知识库 2026-11-15 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">知识库 2026-11-15</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/knowledge-base-news/">知识库</a>
+          <a class="post-tag" href="/Daily-News/knowledge-base-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-15</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：固定来源在 11 月 15 日的可核验更新，主要集中在阿里云开发者社区、腾讯云+社区与掘金：一边把「模型趋近免费之后，护城河下移到 Harness &#x2F; Agent Loop」写成可执行的权限、续跑与图编排实践，一边补上事件驱动钓鱼、本体+大模型根因分析，以及中文小模型 &#x2F; Expert Parallelism 等硬核工程长文。美团、字节官方博客、百度、京东、滴滴、网易、360、有赞等官方站点在本日窗口未检索到可核验的团队原文。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>阿里（阿里云开发者社区、阿里技术 102、语雀·阿里技术干货、阿里中间件）、腾讯（腾讯云+社区 &#x2F; 腾讯云公告、AlloyTeam、腾讯大讲堂；公众号 Tencent_TEG 未能直接核验）、字节（techblog.toutiao.com 无法打开，改核掘金厂队账号）、百度（开发者中心 &#x2F; FEX &#x2F; EFE）、美团技术团队、京东（京东云开发者 &#x2F; 凹凸实验室）、滴滴开源站点、网易（知乎机构号）、360 安全博客、有赞技术，以及掘金；并在固定来源内专项检索 Langfuse、LangChain&#x2F;LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）编码 &#x2F; 业务 Agent 的讨论从「换更强模型」转向运行时层：目录白名单、人工审批门、工具与模型拆开计量，以及把手工 <code>for</code> 循环画成 LangGraph 状态图；2）云社区同步了 Gemini 的按需视频理解与高分高成本基准，提醒准确率不能单独当选型依据；3）安全侧把真实服务中断写成可预测的钓鱼窗口，并把点击率波动从「意识差」改写成可测量的评估失效；4）其余多数厂队官方博客在本日窗口仍偏静。</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>腾讯云+社区对 Harness &#x2F; LoopForge 的治理清单；掘金把 Agent Loop 重写成 LangGraph StateGraph 的对照实现；阿里云开发者社区对 Token Plan 个人版提额规则与 DeepSeek Harness 插件清单的说明（价格与额度以官方页面为准）；微软 365 中断衍生钓鱼的身份残留清理思路。</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>LangChain &#x2F; LangGraph</strong>：掘金 11-15 有一篇把前 7 篇手搓 Agent Loop 用 LangGraph <code>StateGraph</code> 重写的收官文；腾讯云+社区同日的混元 + Tavily RAG 文给出了 LangChain 工具接入示例。<strong>Loop Engineering &#x2F; Agent loop</strong>：上述 LangGraph 文是当日最直接的 loop 实现；腾讯云+社区《模型免费后，真正的护城河是 Harness》讨论了腾讯 LoopForge 的人工审批门与工具&#x2F;模型分账，未检索到以 Ralph loop、<code>/goal</code>、<code>/loop</code> 为题的新文。<strong>Langfuse</strong>：已在阿里云开发者、掘金、腾讯云+社区、美团技术团队等固定来源内检索，未发现可确认属于 11-15 的专题原文。<strong>Code Graph &#x2F; 代码知识图谱 &#x2F; Tree-sitter</strong>：未发现以此为主题的可核验新文；同日掘金有一篇 GraphRAG &#x2F; OpenViking 的知识组织介绍，但文内标明原文为 2026-10-03 微信转载，且讲的是文档知识图谱而非代码图谱，不收录、也不与 Spring AI Alibaba Graph 工作流混淆。<strong>Spring Alibaba AI &#x2F; spring-ai-alibaba &#x2F; java2ai</strong>：已在阿里云开发者、102.alibaba.com、语雀、掘金检索，未发现可确认属于 11-15 的专题原文。</td>
+</tr>
+<tr>
+<td>未发现更新</td>
+<td>阿里技术门户（页面 500，搜索无 11-15 新文）、语雀·阿里技术干货（页面可见更新时间仍为较早历史记录，无 11-15 新文）、阿里中间件团队博客（站点 500，搜索无新文）、腾讯 AlloyTeam &#x2F; 腾讯大讲堂（站点访问失败，搜索无 2026 年 11 月新文）、腾讯技术工程公众号未能直接核验、腾讯云公告栏无 11-15 新公告（最近可见为 11-13 ADP 天气工具下线与文档解析计费调整）、字节跳动技术团队官方博客（techblog.toutiao.com 返回 404；掘金「字节跳动技术团队」账号未见 11-15 厂队同步文，最近可见厂队文为 11-11 视频云团队）、美团技术团队（最近可见原文为 11-10 LongCat-2.5 开源，不纳入本日新发）、百度 FEX（最近可见为 2020 年）、EFE（页面超时）、百度开发者中心（最近可见技术文为 11-09，无 11-15 新文）、京东科技开发者 &#x2F; 凹凸实验室（列表与检索未见 11-15 团队原文；凹凸实验室为前端 SPA，页面上的日期不能当作发文证据）、滴滴开源站点（仅为项目展示页，无日期博客更新）、网易传媒技术知乎机构号（页面 403，搜索无 11-15 技术原文）、360 核心安全技术博客（站点不可用，搜索无结果）、有赞技术团队（最近可见原文仍为 2022 年）</td>
+</tr>
+</tbody></table>
+<h3 id="重要文章与更新"><a href="#重要文章与更新" class="headerlink" title="重要文章与更新"></a>重要文章与更新</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>来源</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Harness 治理</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784500">模型免费后，真正的护城河是 Harness</a></td>
+<td>2026-11-15 08:37:22</td>
+<td>腾讯云+社区</td>
+<td>把竞争面从模型下移到衔接模型、工具和执行的运行时层。文中归纳目录白名单、把人工审批做成编排显式节点、以及把工具调用与模型调用拆开计量三条可落地动作，并提到腾讯 LoopForge 将 CodeBuddy &#x2F; Codex &#x2F; Claude Code 与人工审批门做成自托管编排。</td>
+</tr>
+<tr>
+<td>Agent Loop &#x2F; LangGraph</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707957158462095402">手搓 AI Agent 第 8 篇：从手写循环到画流程图——LangGraph 封装</a></td>
+<td>2026-11-15</td>
+<td>掘金</td>
+<td>系列收官：不新增工具能力，只把前 7 篇里的 <code>for step in range(MAX_STEPS)</code> 循环画成 <code>call_model ⇄ run_tools</code> 的 StateGraph。适合对照阅读「手搓 loop」和「框架声明式流程」的差异。</td>
+</tr>
+<tr>
+<td>订阅额度</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783678">阿里云 Token Plan 个人版额度再升级，月度额度上调约 74% 至 78%！</a></td>
+<td>2026-11-15</td>
+<td>阿里云开发者社区</td>
+<td>社区整理了 11-09 起生效的个人版提额：Lite &#x2F; Essential &#x2F; Standard 月费不变、额度约 +74% 至 +78%，Pro 月费从 499 元调至 312 元且额度上调。文中写明团队版不在范围、额度按月不结转、Pro 存量用户新价从下一周期执行。具体额度与计费以官方 Token Plan 页面为准。</td>
+</tr>
+<tr>
+<td>事件驱动钓鱼</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784675">微软 365 中断事件衍生钓鱼攻击的演化与治理</a></td>
+<td>2026-11-15 15:09:52</td>
+<td>腾讯云+社区</td>
+<td>以 11-12 微软 365 服务降级为样本，分析攻击者如何把「恢复邮箱 &#x2F; 验证账户 &#x2F; 联系支持」这些用户本来就要做的动作改写成错误入口，并强调清理不能停在口令层，而要处理身份残留与交互路径收敛。</td>
+</tr>
+<tr>
+<td>本体 + 大模型分析</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784482">本体建模和大模型分析推理-规则写不完的地方，才是分析真正开始的地方</a></td>
+<td>2026-11-15 08:18:35</td>
+<td>腾讯云+社区</td>
+<td>在生产质量数据库上先建可执行的业务本体（对象、关系、规则、口径），再让大模型做产线异常追问。核心判断是：规则负责把已知判断做准确，大模型负责在规则写不完的地方继续组织调查，二者不能互相替代。</td>
+</tr>
+<tr>
+<td>架构闸门</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707875510299181106">给 Coding Agent 加一道”架构闸门”：Jin 是如何做到”先审架构、再写代码、不漂移”的</a></td>
+<td>2026-11-15</td>
+<td>掘金</td>
+<td>把 review 对象从代码 diff 前移到架构变更提案；实现阶段用台账节点和文件白名单在工具层拒掉越界修改，再用 LSP 符号级上下文、自动检查 + 失败自修 + 一致性校验兜底。</td>
+</tr>
+<tr>
+<td>小模型训练</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708062899047120922">从零做一个中文小模型：600 亿 token 数据、mHC + Engram 结构、到强化学习的全流程（开源）</a></td>
+<td>2026-11-15</td>
+<td>掘金</td>
+<td>完整公开洗数、分档、分词、mHC &#x2F; Engram &#x2F; 滑动窗口注意力 &#x2F; MoE，以及 SFT、在线蒸馏和带格律判分器的 RL 流程；作者明确权重尚未训完，适合当可复现的方法论，而不是当成已发布模型的跑分公告。</td>
+</tr>
+<tr>
+<td>通信库拆解</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707851467953340451">【轻量化复刻大模型 &#x2F; KIMI K3】MoonEP 源码深度解读</a></td>
+<td>2026-11-15</td>
+<td>掘金</td>
+<td>逐模块拆解 Moonshot 开源的 Expert Parallelism 库：用动态冗余专家把不均衡路由摊平到每 rank 恒定 <code>S·K</code> 负载，从而固定通信缓冲和 grouped GEMM shape。长文，适合做 EP 实现对照。</td>
+</tr>
+<tr>
+<td>模型能力同步</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784762">Gemini 推出 Agentic Video Understanding，Token 消耗最高降低 88%</a></td>
+<td>2026-11-15 17:01:38</td>
+<td>腾讯云+社区</td>
+<td>介绍 Gemini 用动态扫描目标片段替代默认每秒 1 帧的全量摄取；官方口径在 Gemini 3.7 Flash 上 token 最高降 88%、成本最高降 66%、准确度最高升 7%。启用方式是把 processing 设为 agentic，按标准 token 计费。文中也写明短视频 &#x2F; 实时流和扫描算法细节尚未充分披露。</td>
+</tr>
+<tr>
+<td>基准与成本</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784594">Gemini 4 Carbon 登顶 MathArena 数学基准，成本是 GPT-6.1 Sol 的 15 倍</a></td>
+<td>2026-11-15 11:00:44</td>
+<td>腾讯云+社区</td>
+<td>同步 MathArena：Carbon 高配置预期 85.4%（±3.0），预期成本 15.70 美元；GPT-6.1 Sol 最高配置预期成本 1.07 美元。文中还指出 Carbon 最常见失败模式是超时，而不是中途放弃。适合把「登顶」和单位成本一起看。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与实践"><a href="#技术文档与实践" class="headerlink" title="技术文档与实践"></a>技术文档与实践</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Harness 接入与插件</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783669">DeepSeek Harness 多模型入口说明</a>、<a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783801">10 款高频插件安装与使用技巧</a></td>
+<td>开源口径是 Agent &#x3D; Model + Harness，能力以 Cordis 插件加载；计算巢一键部署后再接百炼等 OpenAI 兼容端点。进阶文给出市场、视觉 OCR、本地 <code>@</code> 文件引用、多源搜索、OpenViking 长期记忆、费用监控等插件的安装入口，并提醒不要一次装齐以免依赖冲突。部署优惠与免费额度以官方页面为准。</td>
+<td>打算先在自有云上拉起 DeepSeek Harness 工作台、再按需装插件的个人或小团队</td>
+</tr>
+<tr>
+<td>LangChain 联网检索</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784626">混元大模型结合 Tavily 的 RAG 实践</a></td>
+<td>把 Tavily 当作面向模型的检索 API，而不是给人看的搜索页；文中给出混元（TokenHub，OpenAI 兼容）+ LangChain <code>TavilySearchResults</code> + <code>create_tool_calling_agent</code> 的接入示例，并讨论基础&#x2F;深度搜索、缓存和「中文场景水土不服、不宜直接当生产检索引擎」的边界。</td>
+<td>在做 Agent 联网检索或混合 RAG（向量库 + 实时搜索）的开发者</td>
+</tr>
+<tr>
+<td>编码 Agent 约束</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707875510299181106">Jin 的架构闸门拆解</a></td>
+<td>架构台账（L0&#x2F;L1&#x2F;facet + LSP 符号）、JSON 提案审批、符号级前后 40 行上下文、staging 工作区、WAL &#x2F; git checkpoint 撤销，以及 trim + LLM handoff 的上下文压缩。</td>
+<td>想把 coding agent 用于中大型多模块仓库、又不敢直接 review 大 diff 的团队</td>
+</tr>
+<tr>
+<td>平台规则</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707979038878875699">小程序 AI「开发模式」开放评测与提审</a></td>
+<td>社区对微信开放「开发模式」评测—提审—小微灰度的转述：服务交付、交互、性能、场景覆盖四维打分，上线后仍按线上表现动态放量或离场。自动模式与开发模式可并行。属社区解读，细则需回微信开放平台原文。</td>
+<td>正在接入微信小程序 AI &#x2F; 小微调用的产品与客户端团队</td>
+</tr>
+<tr>
+<td>Windows 上跑安卓应用</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783679">开源运行器 ApkStart</a></td>
+<td>用自带 QEMU 做「双击 APK 即安装、独立窗口、开始菜单可搜」；技术点包括窗口嵌入与类名压制、自建 <code>/data</code> 分区、用户态 NAT、quickboot 快照，以及 Android 14 + <code>ndk_translation</code> 的 ARM 兼容模式。</td>
+<td>需要在 Windows 上以应用而不是模拟器形态跑安卓 App，或研究 AOSP&#x2F;QEMU 定制的开发者</td>
+</tr>
+<tr>
+<td>安全行为基线</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784721">睡眠缺失对网络钓鱼易感性的影响及其治理含义</a></td>
+<td>转述一项借夏令时转换做自然实验的研究：转换后首个周一可疑链接点击率 17.76%，较一周前 15.56% 相对上升约 13%，但打开率与举报率不变，说明失效点在点击前的评估。启示是演练指标要做时间校正，并在高风险窗口把不可逆操作挪出纯视觉判断。</td>
+<td>负责安全意识演练、身份认证和变更窗口安排的安全团队</td>
+</tr>
+<tr>
+<td>模型目录工具</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708108117679521833">AI Models 1.1.0</a></td>
+<td>把模型报价、上下文、缓存价和按协议&#x2F;套餐区分的 Base URL 放进同一目录；文中举例同一批 10 万输入 + 1 万输出请求，DeepSeek V4 Pro 与 V4.1 Flash 的估算成本可差数倍。数据以页面标注的来源和汇率日期为准。</td>
+<td>需要在多个供应商和套餐之间核对模型 ID、地址与调用成本的接入同学</td>
+</tr>
+</tbody></table>
+<h3 id="工程实践归纳"><a href="#工程实践归纳" class="headerlink" title="工程实践归纳"></a>工程实践归纳</h3><p><strong>总体判断</strong>：本日固定来源里最有复用价值的，不是又一个模型发版通稿，而是把 Agent 的循环、权限和审查写成结构：loop 可以画成图，越界可以在工具层拒绝，账单要在编排层看见。Langfuse、Code Graph &#x2F; Tree-sitter、Spring Alibaba AI 在固定来源内未发现可核验的当日专题原文。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Harness &#x2F; Loop</td>
+<td>腾讯云+社区将模型免费后的竞争面明确写成运行时治理；掘金用 LangGraph 把同一套 Agent Loop 从 <code>for</code> 循环改成节点和边。阿里云开发者社区则补充了 DeepSeek Harness 的部署入口与插件清单。</td>
+<td>「能循环」不等于「该无限循环」。先把能写哪、能调谁、花多少、失败何时停写成结构，再考虑换模型或加插件。</td>
+</tr>
+<tr>
+<td>编码 Agent 防漂移</td>
+<td>Jin 把闸门前移到架构提案，并用白名单 + 一致性校验约束实现阶段。</td>
+<td>生产仓库里优先 review 影响面和验收标准，而不是等大 diff 出来再做人肉把关；越界修改应在工具层失败，而不是只写在系统提示里。</td>
+</tr>
+<tr>
+<td>规则与分析分工</td>
+<td>本体建模文用产线质量数据说明：规则能判定「这是不是异常」，但不能预先写完「下一步该查哪」。</td>
+<td>先把口径、缺失值和判断标准变成可执行语义，再让模型在规则边界外追问；查不到数据不能默认等于没问题。</td>
+</tr>
+<tr>
+<td>安全窗口</td>
+<td>两篇钓鱼文章分别从「公共故障改写行动脚本」和「睡眠扰动使评估失效」说明人的拦截能力不是常量。</td>
+<td>重大服务中断应预设检索语句、回拨规程和外部通道默认值；高风险操作尽量做成不依赖临场视觉判断的机制。</td>
+</tr>
+<tr>
+<td>训练与系统软件</td>
+<td>tinybrain 公开了中文小模型的数据治理和结构实验；MoonEP 用冗余专家把动态路由变成静态 shape。</td>
+<td>小模型项目要把许可证、脱敏和「权重是否已训完」写清楚；MoE 通信优化的目标常常是可预测的 buffer &#x2F; kernel shape，而不只是平均更快。</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; Code Graph &#x2F; Spring Alibaba AI</td>
+<td>固定来源内未发现 11-15 可核验专题原文。</td>
+<td>已检索并在专项结论中明示；不把站外 changelog 或旧文、转载文记入本日新发。</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784500">模型免费后，真正的护城河是 Harness</a></td>
+<td>直接给出三条可在现有系统里落地的治理动作，并能和当日的 LangGraph &#x2F; Jin 实践互相参照。</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707957158462095402">手搓 AI Agent 第 8 篇：LangGraph 封装</a></td>
+<td>用同一套能力对照「手写循环」和「状态图」，是理解 Agent Loop 的清晰教材。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784675">微软 365 中断衍生钓鱼的演化与治理</a></td>
+<td>把「借热点行骗」改写成可分析的叙事—交互—残留链条，适合补进应急预案。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784482">本体建模和大模型分析推理</a></td>
+<td>用真实产线调查说明规则引擎与大模型该如何分工，避免把「能查 SQL」当成「能做根因」。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708062899047120922">从零做一个中文小模型（tinybrain）</a></td>
+<td>数据清洗、结构选择和后训练步骤写得很完整，且对未完成部分保持诚实。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707851467953340451">MoonEP 源码深度解读</a></td>
+<td>适合已经在看 MoE &#x2F; Expert Parallelism 实现细节的同学按模块对照源码。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783452">DeepSeek 把 App 能力开放给开发者，连聊天前端也开源了</a></td>
+<td>相邻日期（2026-11-14）高价值实践：工具只对 <code>deepseek-flash</code> 开放、思考&#x2F;搜索块必须回传、以及「工具费可能超过模型费」的账单算法，可与本日 Harness &#x2F; 检索实践对照。</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-15 00:00:00 到 2026-11-15 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>固定来源覆盖：阿里巴巴（阿里云开发者社区、阿里技术、语雀、中间件博客）、腾讯（腾讯云+社区、腾讯云公告、AlloyTeam、腾讯大讲堂）、字节跳动（官方博客无法打开，已核掘金厂队同步渠道）、百度、美团、京东、滴滴、网易、360、有赞、掘金</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>公司&#x2F;组织</th>
+<th>来源</th>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>产品说明</td>
+<td>阿里云 Token Plan 个人版额度再升级，月度额度上调约 74% 至 78%！</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783678">https://developer.aliyun.com/article/1783678</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>技术文章</td>
+<td>Windows 运行安卓应用:开源运行器 ApkStart 双击 APK 即装即用</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783679">https://developer.aliyun.com/article/1783679</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>技术文章</td>
+<td>2026 年，装个 DeepSeek Harness，账号密钥全都不用，13 家大厂模型一次打通</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783669">https://developer.aliyun.com/article/1783669</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>技术教程</td>
+<td>2026 年 DeepSeek Harness 工作台进阶教程，10 款高频插件安装与使用技巧</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783801">https://developer.aliyun.com/article/1783801</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>相邻日期，不计入本日正文主表</td>
+<td>DeepSeek 把 App 能力开放给开发者，连聊天前端也开源了</td>
+<td>2026-11-14</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1783452">https://developer.aliyun.com/article/1783452</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>模型免费后，真正的护城河是 Harness</td>
+<td>2026-11-15 08:37:22</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784500">https://cloud.tencent.com/developer/article/2784500</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>本体建模和大模型分析推理-规则写不完的地方，才是分析真正开始的地方</td>
+<td>2026-11-15 08:18:35</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784482">https://cloud.tencent.com/developer/article/2784482</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>混元大模型结合专用检索工具：Tavily搜索引擎结合RAG实践技术架构与使用场景剖析27.6</td>
+<td>2026-11-15 12:32:21</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784626">https://cloud.tencent.com/developer/article/2784626</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>微软 365 中断事件衍生钓鱼攻击的演化与治理</td>
+<td>2026-11-15 15:09:52</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784675">https://cloud.tencent.com/developer/article/2784675</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>睡眠缺失对网络钓鱼易感性的影响及其治理含义</td>
+<td>2026-11-15 15:33:43</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784721">https://cloud.tencent.com/developer/article/2784721</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术资讯</td>
+<td>Gemini 推出 Agentic Video Understanding，Token 消耗最高降低 88%</td>
+<td>2026-11-15 17:01:38</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784762">https://cloud.tencent.com/developer/article/2784762</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术资讯</td>
+<td>Gemini 4 Carbon 登顶 MathArena 数学基准，成本是 GPT-6.1 Sol 的 15 倍</td>
+<td>2026-11-15 11:00:44</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2784594">https://cloud.tencent.com/developer/article/2784594</a></td>
+</tr>
+<tr>
+<td>掘金社区</td>
+<td>掘金</td>
+<td>技术文章</td>
+<td>手搓 AI Agent 第 8 篇：从手写循环到画流程图——LangGraph 封装</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707957158462095402">https://juejin.cn/post/7707957158462095402</a></td>
+</tr>
+<tr>
+<td>掘金社区</td>
+<td>掘金</td>
+<td>技术文章</td>
+<td>给 Coding Agent 加一道”架构闸门”：Jin 是如何做到”先审架构、再写代码、不漂移”的</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707875510299181106">https://juejin.cn/post/7707875510299181106</a></td>
+</tr>
+<tr>
+<td>掘金社区</td>
+<td>掘金</td>
+<td>技术文章</td>
+<td>从零做一个中文小模型：600 亿 token 数据、mHC + Engram 结构、到强化学习的全流程（开源）</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708062899047120922">https://juejin.cn/post/7708062899047120922</a></td>
+</tr>
+<tr>
+<td>掘金社区</td>
+<td>掘金</td>
+<td>技术文章</td>
+<td>【轻量化复刻大模型 &#x2F; KIMI K3】MoonEP 源码深度解读</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707851467953340451">https://juejin.cn/post/7707851467953340451</a></td>
+</tr>
+<tr>
+<td>掘金社区</td>
+<td>掘金</td>
+<td>技术文章</td>
+<td>小程序 AI 模式可以接入了</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7707979038878875699">https://juejin.cn/post/7707979038878875699</a></td>
+</tr>
+<tr>
+<td>掘金社区</td>
+<td>掘金</td>
+<td>工具说明</td>
+<td>AI Models 1.1.0 发布，查大模型价格、对比模型和找 API 地址</td>
+<td>2026-11-15</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708108117679521833">https://juejin.cn/post/7708108117679521833</a></td>
+</tr>
+<tr>
+<td>美团 &#x2F; 字节官方博客 &#x2F; 百度 &#x2F; 京东 &#x2F; 滴滴 &#x2F; 网易 &#x2F; 360 &#x2F; 有赞</td>
+<td>固定来源清单</td>
+<td>无新增</td>
+<td>本日未发现可核验的团队原文</td>
+<td>-</td>
+<td>-</td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
