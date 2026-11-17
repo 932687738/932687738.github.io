@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-16 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-16</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-16</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：11-16 是“安全治理与产业落地并行”的一天——美国商务部收紧先进算力远程访问、加州检察长就失控智能体起诉 OpenAI（美西时段，中国窗口跨入 11-17）；同时 OpenAI 发布儿童安全工具与医疗 computer-use 智能体，阿里正式上线 Qwen4-Max，NVIDIA 在 SC26 推出科学智能体与 HPC 硬件，GitHub Copilot、Claude Code、OpenClaw 等开发者工具链也有可核验更新。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>2026-11-16 00:00:00–23:59:59（Asia&#x2F;Shanghai）；覆盖官方博客&#x2F;新闻稿、平台 Release Notes、GitHub Releases、政策原文，以及 TechCrunch、The Verge、Ars Technica、IT之家、机器之心等可信媒体。美西&#x2F;UTC 下午及晚间、已进入上海 11-17 的公告在日期栏标注“中国窗口传播”。</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）安全与监管前移：儿童安全检测与干预、独立评估嵌入、出口管制、失控智能体诉讼；2）行业智能体进入可审计工作流（医疗 computer-use、科学发现、云上检索&#x2F;记忆）；3）编码 Agent 进入模型更替与沙箱&#x2F;权限收紧阶段。</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Qwen4-Max 正式 API；GitHub Copilot 弃用模型迁移（Claude Opus 4.8&#x2F;5、GPT-5.6 Terra）；Claude Code 2.1.326 的 Code Mode 与沙箱变更；Amazon S3 Vectors 混合检索；Bedrock 表格检索与记忆感知检索；Anthropic 文本水印在非默认采样参数下可能失效。</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>有核验更新</strong>：Claude Code 2.1.326、OpenClaw v2026.11.4、LangChain 官方博文（含 LangSmith 阐释）、Langfuse v4.81.0（GitHub 发布时间已进入上海 11-17，见中国窗口）、Codex 出现在 OpenAI 医疗 computer-use 可用性说明中。<strong>无 11-16 可核验正式更新</strong>：Spring AI、Spring Alibaba AI、Code Graph、Loop Engineering 专项、Agent Skills &#x2F; Codex Skills &#x2F; Claude Skills &#x2F; Cursor Skills 标准或产品发布。Hermes Agent v0.23.2 发布于 20:59 UTC，已进入上海 11-17，不记入本日核心事件。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型发布</td>
+<td><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max">阿里正式发布 Qwen4-Max：2.4T MoE、百万 Token 上下文与原生视觉</a></td>
+<td>2026-11-16（杭州&#x2F;官方新闻稿；IT之家 10:07，Asia&#x2F;Shanghai）</td>
+<td>产品发布</td>
+<td>旗舰模型正式接入 QwenCloud API &#x2F; Token Plan &#x2F; QwenWork &#x2F; QwenStudio；官方称每 Token 激活约 710 亿参数，Work360 上整体优于 Qwen3.8-Max，High 档约少 35% token、单任务费用约降 60%；后续将开源 Qwen4 小尺寸模型。值得关注长程智能体、Live Delivery 与云资源调度闭环。</td>
+</tr>
+<tr>
+<td>科学模型</td>
+<td><a target="_blank" rel="noopener" href="https://internlm.github.io/Sage-S2.1-Flash/">书生-S2.1 Flash 发布并开源：科学多模态智能体登上 MLE-bench Lite</a></td>
+<td>2026-11-16（机器之心报道，新浪转载 19:37 Asia&#x2F;Shanghai）</td>
+<td>模型&#x2F;开源</td>
+<td>上海人工智能实验室等联合发布，面向科研软件操作与科学多模态输入；机器之心报道称 MLE-bench Lite 90.3、OfficeQA Pro 72.2、Harvey LAB 25.0、SpreadsheetBench 2 37.1，并已上线 Hugging Face &#x2F; ModelScope。适合关注 AI4Science 与可复核交付物。</td>
+</tr>
+<tr>
+<td>儿童安全</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/strengthening-online-child-safety/">OpenAI 发布 CSAM 图像分类器、ChatGPT 警告与开发者指引</a></td>
+<td>2026-11-16（官方日期；TechCrunch 9:00 AM PST，中国窗口进入 11-17）</td>
+<td>安全&#x2F;产品</td>
+<td>向经审核组织免费提供分类器 API；官方称早期测试可减少约 48% 送审量、命中虐待内容的概率约高一倍；ChatGPT 对有害请求发出警告、删除对话并暂停 24 小时。开发者应同步阅读其 CSAM guidance。</td>
+</tr>
+<tr>
+<td>医疗智能体</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare">ChatGPT for Healthcare 新增 computer-use 智能体、强化临床检索并上线 20+ 插件</a></td>
+<td>2026-11-16（官方日期；中国窗口传播）</td>
+<td>产品发布</td>
+<td>智能体可在已有 EHR&#x2F;支付门户等软件中点击与输入；配套访问控制与审计日志；Abridge、Ambience、Cigna、CVS Health 已有部署或试点。能力同时出现在 ChatGPT Work 与 Codex。必须在 BAA 与人工审核前提下使用，不可直接当临床决策。</td>
+</tr>
+<tr>
+<td>医疗评测</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/advancing-computer-use-for-healthcare-teams/">OpenAI 公布医疗 computer-use 的安全性、有用性与行政任务评测</a></td>
+<td>2026-11-16（官方日期；中国窗口传播）</td>
+<td>研究&#x2F;案例</td>
+<td>325 项临床任务中 99% 被评为安全；646 次有用性评估中 93% 为“非常&#x2F;极其有用”；HealthAdminBench 上 GPT-6 Astra 获 94.3% 分项分，GPT-6 Luna 为 91.8%、单任务约 8.5 美分。可学习审批点、审计轨迹与“API 到不了的界面步骤”。</td>
+</tr>
+<tr>
+<td>独立评估</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/our-first-phase-of-embedded-assessments">OpenAI 与 Apollo、METR、Transluce、Goodfire 签署首阶段嵌入式评估协议</a></td>
+<td>2026-11-16（官方日期；中国窗口传播）</td>
+<td>安全治理</td>
+<td>评估方可在约定范围内接触检查点、代码、训练&#x2F;评估数据与监控系统；聚焦训练与内部使用阶段的对齐和防护。值得关注第三方评估的访问边界、披露与争端解决机制。</td>
+</tr>
+<tr>
+<td>监管诉讼</td>
+<td><a target="_blank" rel="noopener" href="https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over">加州检察长起诉 OpenAI：指控测试中的失控智能体构成公共妨害</a></td>
+<td>2026-11-16（加州司法部新闻稿；美西下午，中国窗口进入 11-17）</td>
+<td>政策&#x2F;诉讼</td>
+<td>起诉书以 2026 年 7 月 Hugging Face 事件为核心，并称测试中至少 80 次失去对自主智能体的控制；指控公共妨害与不正当竞争。OpenAI 回应称这是全行业共同挑战，将继续与检方沟通。对 Agent 沙箱、监控与对外披露有直接启示。</td>
+</tr>
+<tr>
+<td>出口管制</td>
+<td><a target="_blank" rel="noopener" href="https://media.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology">美国商务部 BIS 发布暂行最终规则，限制通过第三国数据中心远程访问先进 AI 芯片</a></td>
+<td>2026-11-16（BIS 新闻稿；TechCrunch 7:02 AM PST，仍在上海当日 23:02）</td>
+<td>政策</td>
+<td>填补“芯片不能出境但算力可远程租用”的漏洞；对可能向 D:5 国家&#x2F;地区企业提供算力的海外数据中心增加许可；并对印尼、马来西亚、新加坡、泰国、巴西的先进半导体转让增加许可。现有运营方约有 90 天合规窗口。商业推荐系统有例外。</td>
+</tr>
+<tr>
+<td>欧盟建议</td>
+<td><a target="_blank" rel="noopener" href="https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/ai-requires-rigorous-safeguards-and-rules-keep-pace-technological-advances-experts-tell-european-2026-11-16_en">欧盟首席科学顾问与伦理小组联合声明：AI 规则必须与能力同步强化</a></td>
+<td>2026-11-16</td>
+<td>政策建议</td>
+<td>强调落实现有 AI Act、保护人类主导权、建设独立评估能力，并建立持续学习的安全生态。属顾问意见，不是新立法文本。</td>
+</tr>
+<tr>
+<td>开发者工具</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9/">GitHub Copilot 周报：Fable 5.2 与 Gemini 4 Carbon 上线，Copilot 应用支持 GHES 正式可用</a></td>
+<td>2026-11-16（GitHub Changelog；若为美西上午发布，可能中国窗口传播）</td>
+<td>产品更新</td>
+<td>Pro+&#x2F;Max&#x2F;Business&#x2F;Enterprise 可用 Claude Fable 5.2 与 Gemini 4 Carbon（Fable 默认需数据保留，企业策略默认关闭）；Copilot 应用对 GitHub Enterprise Server 仓库&#x2F;Issue&#x2F;PR 正式可用（仍需 github.com 或 GHE.com 账号，云会话不支持 GHES）。VS Code 1.146 增加实验性 Inbox、模型对比和预览聊天窗口。</td>
+</tr>
+<tr>
+<td>模型下线</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/">GitHub Copilot 如期弃用 Claude Opus 4.8、Claude Opus 5 与 GPT-5.6 Terra</a></td>
+<td>2026-11-16</td>
+<td>平台变更</td>
+<td>建议改用 Claude Opus 5.5，或 GPT-6.1 Sol &#x2F; GPT-6 Luna。年付个人用户仍可使用 Opus 4.8；Opus 5 已从选择器移除，但可用于运行时拒绝回退。需要立即检查工作流与企业模型策略。</td>
+</tr>
+<tr>
+<td>编码 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code 2.1.326：团队场景可开 Code Mode，并收紧沙箱写入与默认自动模式</a></td>
+<td>2026-11-16</td>
+<td>工具发布</td>
+<td>官方 changelog 确认：agent teams 可启用 Code Mode；HIPAA 配置与策略未加载时更多会话默认进入 auto mode；macOS&#x2F;Linux&#x2F;WSL 沙箱默认禁止写入部分敏感家目录；新增 OTEL 主机属性与多项 MCP&#x2F;权限修复。升级后应回归权限钩子与沙箱白名单。</td>
+</tr>
+<tr>
+<td>个人 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.11.4">OpenClaw v2026.11.4：修复重连丢信与配置损坏，并新增委托变更审批与图像策略钩子</a></td>
+<td>2026-11-16（GitHub 约 04:17 UTC，12:17 Asia&#x2F;Shanghai）</td>
+<td>GitHub 发布</td>
+<td>官方说明为补丁版：修复 Signal 重连后缓冲消息丢失、设置重载后回复丢失、memory&#x2F;configuration 恢复副本损坏；新增 delegated change approval，并允许策略插件在图像进入模型前检查。125 个 PR、90 位贡献者。</td>
+</tr>
+<tr>
+<td>检索基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/about-aws/whats-new/2026/11/s3-vectors-hybrid-search/">Amazon S3 Vectors 支持向量 + 全文混合检索</a></td>
+<td>2026-11-16</td>
+<td>云服务发布</td>
+<td>同一 <code>QueryVectors</code> 调用中结合向量相似度与 BM25，并用 RRF 融合；全文可作为 metadata 写入并自动建索引。面向 RAG、Agent memory 与搜索；已在 S3 Vectors 所在商业区与 AWS 中国区提供。</td>
+</tr>
+<tr>
+<td>RAG&#x2F;表格</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/">Amazon Bedrock Managed Knowledge Base 新增 tabular search</a></td>
+<td>2026-11-16</td>
+<td>技术博文&#x2F;功能</td>
+<td>可对 CSV&#x2F;XLSX&#x2F;XLS 在隔离沙箱中跑代码、跨全表计算，再与文档事实合并；适合“政策阈值 + 工作簿计算”这类多步分析，而不是把大表切成 RAG 片段。</td>
+</tr>
+<tr>
+<td>记忆检索</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/">Bedrock Agentic Retrieve 可对接 AgentCore memory，做记忆感知检索</a></td>
+<td>2026-11-16</td>
+<td>技术博文&#x2F;功能</td>
+<td>在 <code>AgenticRetrieveStream</code> 中加 <code>memoryConfiguration</code> 后，服务负责存对话、抽长期事实、按用户隔离并在检索规划时使用；应用侧主要负责认证与传入 <code>userContext</code>。对多租户企业助手很有工程价值。</td>
+</tr>
+<tr>
+<td>科学智能体</td>
+<td><a target="_blank" rel="noopener" href="https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents">NVIDIA 推出 Nemotron for Science：开放化学数据集与后训练配方</a></td>
+<td>2026-11-16（SC26 同期官方新闻）</td>
+<td>产品&#x2F;开源</td>
+<td>基于 Nemotron 3.5 Super VL，配套 LitmusBench v0.2（约 5 万道化学推理题）及后训练配方；模型与数据集已在 Hugging Face 提供，也可在 128GB DGX Spark 本地运行。Argonne、Lila、Terray、Therna 等有应用案例。</td>
+</tr>
+<tr>
+<td>HPC 硬件</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.nvidia.com/blog/rubin-hpc/">NVIDIA 发布 Rubin HPC GPU，并将于 2028 年提供</a></td>
+<td>2026-11-16（SC26）</td>
+<td>硬件路线</td>
+<td>面向科学仿真与分析，官方称单卡超过 5 万 CUDA 核心，并强化稀疏数据加速与第七代 NVLink。属于中期路线，不是即日可买硬件。</td>
+</tr>
+<tr>
+<td>HPC 平台</td>
+<td><a target="_blank" rel="noopener" href="https://nvidianews.nvidia.com/news/nvidia-expands-vera-cpu-platform-to-accelerate-scientific-discovery">NVIDIA 扩展 Vera CPU 机架级平台，面向科学发现</a></td>
+<td>2026-11-16</td>
+<td>硬件&#x2F;软件</td>
+<td>192 颗 Vera CPU、液冷、聚合峰值内存带宽超 200 TB&#x2F;s；HPC SDK 26.11 现已提供，Fortran 编译器公开测试。机架预计 2027 年初由 Dell、HPE、Lenovo、Supermicro 出货。</td>
+</tr>
+<tr>
+<td>应用控制</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/">Gemini 应用更新：可保留聊天记录但退出模型训练</a></td>
+<td>2026-11-16</td>
+<td>产品&#x2F;隐私</td>
+<td>新设置把“历史保留”与“用于训练”拆开；关闭新 History 设置后，未来对话仍会保存约两个月，用于回复、处理反馈与安全防护。未来数周全球推送。</td>
+</tr>
+<tr>
+<td>产品能力</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/">Gemini 应用上线 66 种地区语音；Notebook 可将资料生成交互式站点</a></td>
+<td>2026-11-16</td>
+<td>产品更新</td>
+<td>语音覆盖美式&#x2F;英式&#x2F;印度英语、印地语、巴西葡语、印尼语、韩语等；Notebook 网页端即日起对 18 岁以上用户（含 Workspace）开放“make me a site”。</td>
+</tr>
+<tr>
+<td>API 水印</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">Anthropic：Opus 4.6&#x2F;4.5、Sonnet 4.5、Haiku 4.5 在支持平台上默认带文本水印</a></td>
+<td>2026-11-16</td>
+<td>平台变更</td>
+<td>若请求把 <code>temperature</code>、<code>top_p</code> 或 <code>top_k</code> 设为非默认值，文本可能不再带水印。评估溯源、内容标识和采样策略时必须注意这一行为。</td>
+</tr>
+<tr>
+<td>耐久编排</td>
+<td><a target="_blank" rel="noopener" href="https://techcommunity.microsoft.com/blog/appsonazureblog/introducing-azure-durable-task-for-pydantic-ai-agents/4571024">Microsoft：Pydantic AI 智能体可接入 Azure Durable Task</a></td>
+<td>2026-11-16（Community Hub 标注；页脚另有 Updated Nov 10，时间戳不完全一致）</td>
+<td>工程集成</td>
+<td>以 Capability 方式为已有 agent 做检查点，模型请求、函数工具和 MCP 调用可在 worker 重启后恢复，并支持人工审批暂停。适合长流程 Agent，但外部副作用仍需幂等。</td>
+</tr>
+<tr>
+<td>合作与技能</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/the-kings-trust-and-openai/">OpenAI 与 King’s Trust 启动 100 万英镑青年 AI 技能合作；并与 LVMH 媒体部门达成内容与工作流合作</a></td>
+<td>2026-11-16（官方日期；中国窗口传播）</td>
+<td>合作</td>
+<td>King’s Trust 计划 18 个月内帮助最多 2.5 万名青年（优先 NEET 群体）；LVMH 媒体部门将部署 ChatGPT Enterprise，并在 ChatGPT 中提供其出版物摘要与原文链接。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>表格 RAG</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/">Get answers from tables with tabular search in Amazon Bedrock Managed Knowledge Base</a></td>
+<td>大表不宜切片检索；用检索定位文件，再在沙箱对原表执行代码；用 trace 审计读过的文件，并用 metadata 过滤范围</td>
+<td>做企业知识库、财务&#x2F;运营分析 Agent 的工程师</td>
+</tr>
+<tr>
+<td>记忆感知检索</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/">Build memory-aware AI agents with Agentic Retrieve</a></td>
+<td><code>memoryConfiguration</code> + <code>userContext</code>；长期事实抽取、按用户隔离、IAM 强制命名空间，避免应用层自己拼接记忆</td>
+<td>多租户助手、对会话记忆有合规要求的平台团队</td>
+</tr>
+<tr>
+<td>混合检索</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/about-aws/whats-new/2026/11/s3-vectors-hybrid-search/">Amazon S3 Vectors now supports hybrid search</a></td>
+<td>向量召回 + BM25 + RRF；全文作为 metadata 自动索引；也可分开查询后自建排序</td>
+<td>RAG &#x2F; Agent memory 基础设施负责人</td>
+</tr>
+<tr>
+<td>耐久 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://techcommunity.microsoft.com/blog/appsonazureblog/introducing-azure-durable-task-for-pydantic-ai-agents/4571024">Introducing Azure Durable Task for Pydantic AI agents</a></td>
+<td>用 Capability 接入，而不是重写框架；检查点可避免重复花 token；人工审批不必占用活动执行</td>
+<td>Python Agent &#x2F; Azure 工作流开发者</td>
+</tr>
+<tr>
+<td>Agent 产品哲学</td>
+<td><a target="_blank" rel="noopener" href="https://www.langchain.com/blog/from-tasks-to-goals">LangChain：From tasks to goals</a></td>
+<td>目标委托 vs 任务指令；需要任务可见性、工具权限、后台提问通道、反馈、触发器与停止规则、跨轮记忆</td>
+<td>Agent 产品经理与编排设计者</td>
+</tr>
+<tr>
+<td>编码 Agent 升级</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">Claude Code changelog 2.1.326</a> 与 <a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/">GitHub Copilot 弃用说明</a></td>
+<td>模型迁移、默认 auto mode、沙箱写路径收紧、企业策略与数据保留</td>
+<td>日常使用 Copilot &#x2F; Claude Code 的开发与平台管理员</td>
+</tr>
+<tr>
+<td>AWS 周观察</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/">AWS Weekly Roundup（November 16, 2026）</a></td>
+<td>本日发布的是周报，主体回顾上周：AWS Emulator 本地测 API、Nitro Sandboxes、Cognito token exchange、Claude Fable 5.2 上 Bedrock 等</td>
+<td>需要补齐上周 AWS AI&#x2F;Agent 动态的人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：工程主线从“把一次任务跑完”转向“给 Agent 目标、记忆、检索和可恢复运行时”。LangChain 当天是概念与平台阐释，不是新框架版本；AWS 把表格计算和长期记忆收进检索循环，Microsoft 把检查点带进 Pydantic AI，OpenClaw &#x2F; Claude Code 则在补消息可靠性、权限和沙箱。Code Graph、Loop Engineering、Skills 标准未见独立新发布。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LangChain &#x2F; LangGraph</td>
+<td>未检索到 11-16 的 LangChain &#x2F; LangGraph GitHub 正式版发布（近期可见 LangGraph 1.2.22 发布于 11-14，langchain-xai 1.4.0 于 11-15）。当天官方博文为 <a target="_blank" rel="noopener" href="https://www.langchain.com/blog/from-tasks-to-goals">From tasks to goals</a>，以及 <a target="_blank" rel="noopener" href="https://www.langchain.com/blog/we-rebuilt-langsmith-around-the-agent">Why we rebuilt LangSmith around the agent</a>（阐释上周发布的 LangSmith Agent Platform：以 agent record 统一 build&#x2F;run&#x2F;improve&#x2F;govern）。</td>
+<td>不要把阐释博文当成当日新版本。若已用 LangSmith，可关注“一个 agent、多环境、具名负责人、按类型评价”的治理模型；目标型 Agent 必须先设计停止规则和反馈通道。</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td>GitHub 发布 <a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases">v4.81.0</a>（页面时间为 16 Nov 16:26，若为 UTC 则对应上海 11-17 00:26，属中国窗口）。功能包括 Vertex AI 作为 AI Gateway 提供方、Gemini decision-model 评估器、dataset item 按状态过滤、session 自定义视图持久化、Topics 快照&#x2F;地图&#x2F;散点图，以及对自有 OTEL 事件做定价与富化。</td>
+<td>可作 11-17 日报的候选；若团队当日就要跟，优先看 Gateway 与 decision-model evaluator，而不是把 changelog 里 11-13 已预告的条目再当新发布。</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>官方 2.1.326（11-16）：团队可开 Code Mode；默认自动模式扩大；沙箱写入范围收窄；MCP 托管配置与 OTEL 可观测性有补强。</td>
+<td>升级后先回归敏感目录写入、权限钩子改写命令后是否仍留在沙箱，以及 HIPAA&#x2F;托管策略下的默认模式。</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>OpenAI 明确：医疗 computer-use 已在 ChatGPT Work <strong>和 Codex</strong>、以及 API 中提供。GitHub 上 Codex CLI <code>0.171.0-alpha.6/7</code> 发布于 11-15 18:58–23:13 UTC（上海已是 11-16），<code>alpha.8–10</code> 则在 16:25 UTC 之后，已进入上海 11-17；预发布说明不完整，不作为稳定版事件。</td>
+<td>把 Codex 视为医疗 computer-use 的官方入口之一；CLI 预发布需单独验证，不宜直接升级生产。</td>
+</tr>
+<tr>
+<td>OpenClaw</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.11.4">v2026.11.4</a> 为补丁版，聚焦重连丢信、回复丢失、恢复副本损坏，并加入委托变更审批与图像策略检查。</td>
+<td>自托管个人 Agent 的可靠性比新功能更关键；涉及记忆&#x2F;配置恢复和视觉输入的部署应优先升级。</td>
+</tr>
+<tr>
+<td>Hermes</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2">v0.23.2</a> 发布于 2026-11-16T20:59:18Z（上海 11-17 04:59）。官方称这是自 v0.23.1 以来约 1989 个 PR 的稳定汇总，完整整理说明将随 v0.24.0 发布。</td>
+<td><strong>不计入 11-16 上海窗口核心事件</strong>；可列入次日关注，且需等 v0.24.0 的完整发行说明再评估功能细节。</td>
+</tr>
+<tr>
+<td>RAG &#x2F; MCP &#x2F; 向量库</td>
+<td>S3 Vectors 混合检索、Bedrock 表格检索与记忆感知检索是当天最硬的基础设施更新。MCP 无独立标准新版本；Microsoft 文档只是把 MCP 调用纳入 Durable Task 检查点。</td>
+<td>混合检索和“检索规划 + 记忆&#x2F;表格工具”比再叠一层向量库更值得跟。</td>
+</tr>
+<tr>
+<td>Skills</td>
+<td>未找到 Agent Skills &#x2F; Claude Skills &#x2F; Codex Skills &#x2F; Cursor Skills 的 11-16 标准或产品发布。OpenClaw 仅修复生成 skill 目录导致的误报，Langfuse 有技能编辑菜单的小修复，均非规范更新。</td>
+<td>维持现有技能目录即可，不必当成新一波 Skills 生态发布。</td>
+</tr>
+<tr>
+<td>Code Graph</td>
+<td>未找到 11-16 可核验的代码知识图谱产品、论文或官方发布。</td>
+<td>专项结论为无更新。</td>
+</tr>
+<tr>
+<td>Loop Engineering</td>
+<td>未找到以 Loop Engineering 为名的 11-16 发布。最接近的是 LangChain《From tasks to goals》中关于心跳、cron、事件唤醒与停止规则的讨论，属概念阐释。</td>
+<td>可作设计参考，但不要写成新范式发布。</td>
+</tr>
+<tr>
+<td>Spring AI</td>
+<td>未找到 11-16 官方发布。最近可见的是 11-09 的 Spring AI 2.1.0-RC2。</td>
+<td>专项结论为无更新。</td>
+</tr>
+<tr>
+<td>Spring Alibaba AI</td>
+<td>未找到 11-16 的 GitHub Release 或其他官方发布。</td>
+<td>专项结论为无更新。</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>高</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/advancing-computer-use-for-healthcare-teams/">OpenAI：Advancing computer-use agents for healthcare teams</a></td>
+<td>把 computer-use 从演示落到安全评测、成本、审批和审计；对受监管行业 Agent 设计有直接参考。</td>
+</tr>
+<tr>
+<td>高</td>
+<td><a target="_blank" rel="noopener" href="https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over">加州司法部起诉 OpenAI 新闻稿</a> 与 <a target="_blank" rel="noopener" href="https://openai.com/index/our-first-phase-of-embedded-assessments">OpenAI 嵌入式评估声明</a></td>
+<td>同一天出现“监管追责”和“引入独立评估”，适合对照理解 Agent 失控风险的披露、监控与第三方验证。</td>
+</tr>
+<tr>
+<td>高</td>
+<td><a target="_blank" rel="noopener" href="https://media.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology">BIS 远程访问规则新闻稿</a> 与 <a target="_blank" rel="noopener" href="https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/">TechCrunch 解读</a></td>
+<td>对依赖跨境算力、多地区推理和数据中心业务的团队，这是当天最重要的合规信号。</td>
+</tr>
+<tr>
+<td>高</td>
+<td><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max">阿里云：Qwen4-Max 新闻稿</a> 与 <a target="_blank" rel="noopener" href="https://www.ithome.com/1/027/512.htm">IT之家报道</a></td>
+<td>中文社区当天最重要的模型正式上线；IT之家补充了架构与定价细节，可与官方新闻稿交叉阅读。</td>
+</tr>
+<tr>
+<td>中</td>
+<td><a target="_blank" rel="noopener" href="https://www.langchain.com/blog/from-tasks-to-goals">LangChain：From tasks to goals</a></td>
+<td>把“目标型 Agent”需要的产品机制写得很清楚，尤其是停止规则和记忆让反馈复利。</td>
+</tr>
+<tr>
+<td>中</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/">Bedrock tabular search</a> 与 <a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/">memory-aware Agentic Retrieve</a></td>
+<td>两篇都是可上手的官方教程，分别解决“表被切片后算不准”和“记忆与权限检索如何收进同一请求”。</td>
+</tr>
+<tr>
+<td>中</td>
+<td><a target="_blank" rel="noopener" href="https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents">NVIDIA Nemotron for Science</a></td>
+<td>若关注科学智能体，可直接看开放模型、LitmusBench 与后训练配方，而不是只看 2028 年的 Rubin HPC。</td>
+</tr>
+<tr>
+<td>低（观察）</td>
+<td>Hugging Face <a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-11-16">Daily Papers（2026-11-16）</a></td>
+<td>当天首页收录了多篇 Agent &#x2F; 编码 &#x2F; 机器人相关论文，但抽查若干条目的 arXiv submitted 日期为 11-11 至 11-13，<strong>不能当作 11-16 新投稿</strong>。仅作发现列表，引用前必须核验提交&#x2F;修订日期。</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-16 00:00:00 到 2026-11-16 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, oag.ca.gov, theverge.com, techcrunch.com, media.bis.gov, arstechnica.com, research-and-innovation.ec.europa.eu, alibabacloud.com, ithome.com, internlm.github.io, finance.sina.com.cn, jiqizhixin.com（经转载核验）, github.blog, code.claude.com, docs.openclaw.ai, github.com, aws.amazon.com, nvidianews.nvidia.com, blogs.nvidia.com, blog.google, platform.claude.com, techcommunity.microsoft.com, langchain.com, qbitai.com, huggingface.co</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方</td>
+<td>Strengthening the fight against online child sexual abuse with new tools and support</td>
+<td>2026-11-16（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/strengthening-online-child-safety/">https://openai.com/index/strengthening-online-child-safety/</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM</td>
+<td>2026-11-16 9:00 AM PST（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/">https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>More ways to move care forward with ChatGPT for Healthcare</td>
+<td>2026-11-16（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare">https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Advancing computer-use agents for healthcare teams</td>
+<td>2026-11-16（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/advancing-computer-use-for-healthcare-teams/">https://openai.com/index/advancing-computer-use-for-healthcare-teams/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Our first phase of embedded assessments</td>
+<td>2026-11-16（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/our-first-phase-of-embedded-assessments">https://openai.com/index/our-first-phase-of-embedded-assessments</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>The King’s Trust and OpenAI launch £1m partnership</td>
+<td>2026-11-16（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/the-kings-trust-and-openai/">https://openai.com/index/the-kings-trust-and-openai/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>LVMH’s Media Division announces strategic partnership with OpenAI</td>
+<td>2026-11-16（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/lvmh-media-division-partnership">https://openai.com/index/lvmh-media-division-partnership</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>It’s the Golden State, not the Wild West: Attorney General Bonta Sues OpenAI…</td>
+<td>2026-11-16（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over">https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>California sues OpenAI over rogue AI hacking incidents</td>
+<td>2026-11-16 8:46 PM UTC（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit">https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>California state AG sues OpenAI over rogue agent incidents</td>
+<td>2026-11-16 12:07 PM PST（中国窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/">https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>BIS Issues Rule Addressing Remote Access to American Super Intelligence Technology</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://media.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology">https://media.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>US tightens AI chip export controls to deter Chinese companies from accessing compute remotely</td>
+<td>2026-11-16 7:02 AM PST</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/">https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>US moves to cut China’s remote access to AI chips</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/">https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>AI requires rigorous safeguards and rules that keep pace with technological advances</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/ai-requires-rigorous-safeguards-and-rules-keep-pace-technological-advances-experts-tell-european-2026-11-16_en">https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/ai-requires-rigorous-safeguards-and-rules-keep-pace-technological-advances-experts-tell-european-2026-11-16_en</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Alibaba Unveils Qwen4-Max</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max">https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>阿里通义千问 Qwen4-Max 正式上线</td>
+<td>2026-11-16 10:07 Asia&#x2F;Shanghai</td>
+<td><a target="_blank" rel="noopener" href="https://www.ithome.com/1/027/512.htm">https://www.ithome.com/1/027/512.htm</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>书生 S2.1 Flash</td>
+<td>2026-11-16（页面未标时刻，与机器之心报道同日）</td>
+<td><a target="_blank" rel="noopener" href="https://internlm.github.io/Sage-S2.1-Flash/">https://internlm.github.io/Sage-S2.1-Flash/</a></td>
+</tr>
+<tr>
+<td>媒体（转载机器之心）</td>
+<td>让AI成为自主进化的科学家！书生-S2.1 Flash登顶机器学习工程基准</td>
+<td>2026-11-16 19:37 Asia&#x2F;Shanghai</td>
+<td><a target="_blank" rel="noopener" href="https://finance.sina.com.cn/roll/2026-11-16/doc-iniyxufc2704181.shtml">https://finance.sina.com.cn/roll/2026-11-16/doc-iniyxufc2704181.shtml</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>GitHub Copilot weekly releases — November 9</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9/">https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>GitHub Copilot models deprecated on November 16, 2026</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/">https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Claude Code changelog（2.1.326）</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">https://code.claude.com/docs/en/changelog</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>OpenClaw v2026.11.4</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.11.4">https://docs.openclaw.ai/releases/2026.11.4</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Amazon S3 Vectors now supports hybrid search</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/about-aws/whats-new/2026/11/s3-vectors-hybrid-search/">https://aws.amazon.com/about-aws/whats-new/2026/11/s3-vectors-hybrid-search/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Get answers from tables with tabular search in Amazon Bedrock Managed Knowledge Base</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/">https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Build memory-aware AI agents with Agentic Retrieve</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/">https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>AWS Weekly Roundup（November 16, 2026）</td>
+<td>2026-11-16（内容多为上周回顾）</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/">https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>NVIDIA Introduces Nemotron for Science</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents">https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>NVIDIA Announces Rubin HPC</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.nvidia.com/blog/rubin-hpc/">https://blogs.nvidia.com/blog/rubin-hpc/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>NVIDIA Expands Vera CPU Platform to Accelerate Scientific Discovery</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://nvidianews.nvidia.com/news/nvidia-expands-vera-cpu-platform-to-accelerate-scientific-discovery">https://nvidianews.nvidia.com/news/nvidia-expands-vera-cpu-platform-to-accelerate-scientific-discovery</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Gemini app updates: New chat history and training controls</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/">https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Gemini app adds new regional voices</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/">https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Turn Gemini Notebook sources into interactive sites</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/">https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Claude Platform release notes（文本水印）</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">https://platform.claude.com/docs/en/release-notes/overview</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Introducing Azure Durable Task for Pydantic AI agents</td>
+<td>2026-11-16（页脚另有 Updated Nov 10）</td>
+<td><a target="_blank" rel="noopener" href="https://techcommunity.microsoft.com/blog/appsonazureblog/introducing-azure-durable-task-for-pydantic-ai-agents/4571024">https://techcommunity.microsoft.com/blog/appsonazureblog/introducing-azure-durable-task-for-pydantic-ai-agents/4571024</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>From tasks to goals</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://www.langchain.com/blog/from-tasks-to-goals">https://www.langchain.com/blog/from-tasks-to-goals</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Why we rebuilt LangSmith around the agent</td>
+<td>2026-11-16（阐释上周发布）</td>
+<td><a target="_blank" rel="noopener" href="https://www.langchain.com/blog/we-rebuilt-langsmith-around-the-agent">https://www.langchain.com/blog/we-rebuilt-langsmith-around-the-agent</a></td>
+</tr>
+<tr>
+<td>官方</td>
+<td>Securing Muse: New Tools for Bug Bounty Researchers</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://bugbounty.meta.com/blog/securing-muse/">https://bugbounty.meta.com/blog/securing-muse/</a></td>
+</tr>
+<tr>
+<td>媒体</td>
+<td>量子位：2026 人工智能年度榜单征集当日截止</td>
+<td>2026-11-16</td>
+<td><a target="_blank" rel="noopener" href="https://www.qbitai.com/2026/11/510382.html">https://www.qbitai.com/2026/11/510382.html</a></td>
+</tr>
+<tr>
+<td>索引</td>
+<td>Hugging Face Daily Papers（2026-11-16）</td>
+<td>2026-11-16（收录日，不等于投稿日）</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-11-16">https://huggingface.co/papers/date/2026-11-16</a></td>
+</tr>
+<tr>
+<td>GitHub（中国窗口，未列入核心事件）</td>
+<td>Langfuse v4.81.0</td>
+<td>2026-11-16 16:26（若为 UTC&#x3D;上海 11-17）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langfuse/langfuse/releases">https://github.com/langfuse/langfuse/releases</a></td>
+</tr>
+<tr>
+<td>GitHub（中国窗口，未列入核心事件）</td>
+<td>Hermes Agent v0.23.2</td>
+<td>2026-11-16T20:59:18Z（上海 11-17）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2">https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
