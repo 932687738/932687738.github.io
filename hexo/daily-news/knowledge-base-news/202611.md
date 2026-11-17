@@ -2,6 +2,103 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-16
+
+### 今日总览
+**一句话结论**：当日可验证增量集中在「模型上线 + Agent 工程化」——阿里云 Qwen4-Max 上线并出现接入实测与数据智能体/多模态湖检索实践，京东发布 JoyCode（Agent Loop + CodeGraph）与一套可验收的 Agent 研发工作系统，字节开源团队更新 OpenViking 的 3D 理解能力；腾讯固定来源未见 TEG 官方博文，但开发者社区对混元 Hy4 flash 上线及生产级 Agent 边界有较完整实践文。Langfuse、LangGraph、Spring AI Alibaba 当日无专文。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 仅覆盖固定来源，时间窗为 2026-11-16 00:00:00–23:59:59（Asia/Shanghai）；掘金只收录公司/团队技术文。已用 `2026-11-16` / `2026/11/16` / `2026年11月16日` / `11月16日` 检索，并抽查标题、日期与 URL。 |
+| 核心趋势 | 重点从「模型能不能写」转向「怎么验收、怎么续跑、怎么控制副作用」：规划—执行—验证闭环、任务状态跨会话续接、工具调用幂等与 dry-run、CodeGraph/领域图谱为 Agent 提供可检索上下文。 |
+| 可直接关注 | ① Qwen4-Max 的 `bl` CLI / HTTP `reasoning_effort` 接入与分层验证；② 京东 JoyCode 的 Agent Loop + CodeGraph，以及八模块 Agent 研发工作系统；③ 腾讯云社区关于工具副作用分级与生产级 Agent Loop（Checkpoint/熔断/trace）；④ 阿里云 Stella×Paimon 用 SQL 做多模态检索与分析。 |
+| 专项检索结论 | Langfuse：未发现当日专文。LangChain / LangGraph：未发现当日专文；京东 Agent 文将 LangSmith Evaluation 列为相关工作，不计入专文命中。Code Graph：京东云 JoyCode 官方文明确提到结合 CodeGraph 与 CodeWiki 理解任务（产品能力叙述，非 Tree-sitter 实现详解）。Spring Alibaba AI（spring-ai-alibaba / java2ai）：未发现当日专文，亦未与 Spring AI 或 Spring AI Alibaba Graph 工作流混淆。Loop Engineering：有命中——JoyCode 的 Agent Loop，京东八模块工具调用循环，腾讯云社区生产级 Agent Loop 与工具边界；腾讯 LoopForge 官方开源文发布于 2026-11-09，16 日仅见掘金非官方账号对 GitHub Trending 的传播，按相邻日期/传播处理，不计入腾讯当日官方更新。 |
+| 未发现更新 | 百度（FEX / EFE / 开发者中心）、美团技术博客、滴滴开源平台、网易云知乎机构号、360 博客、有赞技术博客；腾讯 AlloyTeam、腾讯大学视频、Tencent_TEG 公众号未能核到当日技术博文；阿里 102.alibaba.com、jm.taobao.org、语雀 alidoc/dry 无当日命中。美团最近可验证更新为 2026-11-10《LongCat-2.5 正式开源》，属相邻日期，不纳入当日主表。 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 大模型发布 | [阿里Qwen4-Max首发上线千问AI平台，API服务、Token Plan同步开放](https://developer.aliyun.com/article/1783997) | 2026-11-16 | 阿里云开发者社区 | 给出当日可核对的规格口径：约 2.4T 参数、百万上下文、原生视觉；文称编程评测提升 28%、Token 消耗降 50%、任务成本降 58%。适合对照 API/模型目录做接入，文中亦夹杂领用权益，需与促销信息分开看。 |
+| 模型接入实测 | [qwen4-max 用 bl text chat 一句话生成网页小游戏](https://developer.aliyun.com/article/1784214) | 2026-11-16 | 阿里云开发者社区 | 当日上线后的可复现实测：CLI 无法设思考档位，需 HTTP `reasoning_effort=none/high`；思考预算不得大于 `--max-tokens`，否则 400；带图输入增加 token 但不提升玩法密度。价值在分层验证（静态结构、错误正则已废弃、假画布跑 600 帧），强调「生成不是终点，验证才是」。 |
+| 多模态数据湖 | [阿里云 EMR Serverless StarRocks（Stella）× Paimon：让多模态数据湖从“存得下”走向“找得到、用得上”](https://juejin.cn/post/7708627348664844314) | 2026-11-16 | 阿里云大数据AI技术（掘金官方团队号） | 把 OSS 原对象、DLF Paimon 湖表（样本/标签/向量/版本）与 Stella SQL 检索分析分成三层；给出标量过滤 + 全文 + 向量检索的可改造 SQL，以及一致性/召回/延迟/成本验收表。适合湖仓与多模态评测数据平台。 |
+| 数据智能体落地 | [孩子王基于阿里云Data Agent的智能体实践：300+Agent 覆盖400+业务场景](https://juejin.cn/post/7708613679314518054) | 2026-11-16 | 阿里云大数据AI技术（掘金官方团队号） | 案例级实践：用 DataWorks Data Agent 的官方 Skill/专家套件沉淀经营规则，云托管调度保证实例停机后定时任务仍跑，Context Graph 对齐指标口径与零售术语，并强调数据不出域、行为审计与成本管控。业务数字来自案例陈述，需审慎引用。 |
+| 产品动态周报 | [【2026.11.09~11.15】阿里云百炼最新产品动态周报](https://developer.aliyun.com/article/1783931) | 2026-11-16（内容窗口为 11.09–11.15） | 阿里云开发者社区 | 发布日在 16 日，但综述的是上一周：Token Plan 提额、知识库 Metadata 抽取将按量计费、10+ MCP 服务，以及 Qwen4-Max 上线。适合做产品变更清单，不宜当成 16 日当天才发生的全部变更。 |
+| AI Coding 平台 | [京东云推出全新JoyCode智能编码工具，让AI Coding从代码生成走向成果交付](https://juejin.cn/post/7708572722204393507) | 2026-11-16 | 京东云开发者（掘金官方团队号） | 官方升级说明：结合项目上下文、CodeGraph 与 CodeWiki，用 Agent Loop 做规划—执行—验证—迭代；计划模式与目标模式分工；Git Worktree 隔离多智能体并行，Git Diff 审查。文中还给出内部贡献率、SWE-Bench Verified 74.6% 等口径，属官方宣传数字，需与评测条件对照。 |
+| Agent 系统设计 | [Agent 研发工作系统：面向多需求并行端到端开发的设计与实践](https://developer.jdcloud.com/article/4613) | 2026-11-16 | 京东云开发者社区 | 当日技术深度最高的系统设计文之一。用本地文件、SQLite、Python/Node CLI 实现 M1–M8（主 Agent、规则技能、上下文检索、任务状态、平台适配、动作策略、证据质量、方法治理）；强调跨会话续接、目标身份贯穿验收、方法反馈绑定版本、可计算规则接入真实入口（含 Claude Code Hooks / LangSmith Evaluation 等对照）。 |
+| 3D 内容理解 | [OpenViking 3D理解模型上线轴测八视图及PMI解析](https://juejin.cn/post/7708613679314583590) | 2026-11-16 | 字节跳动开源（掘金官方团队号） | 说明仅靠正交六视图会漏掉内壁结构差异，轴测八视图可让 Agent 定位隐藏特征；并将 PMI（尺寸/公差/装配/工艺）结构化写入 Summary.md 供检索。适合关注 3D/制造上下文进入 Agent 的同学，文中「信息还原率 100%」需谨慎看待。 |
+| 工具调用边界 | [把 Agent 的工具调用关进可回滚的边界：幂等键、dry-run 与执行审计](https://cloud.tencent.com/developer/article/2785349) | 2026-11-16 | 腾讯云开发者社区（社区作者，非 TEG 官方号） | 可直接落地的工程清单：按 `read/plan/write_idempotent/write_unsafe` 分级；`plan()` 纯函数与 `apply()` 分离；幂等键 = 业务标识 + 目标标识 + 内容指纹；审计只记指纹不记正文；并给出 7 条自测。是当日 Loop Engineering 相关的高质量实践。 |
+| 生产级 Agent 框架 | [高可靠智能体搭建：生产级 Agent 框架的设计与实现](https://cloud.tencent.com/developer/article/2785404) | 2026-11-16 | 腾讯云开发者社区（社区作者，非 TEG 官方号） | 给出 Agent Loop + Checkpoint 的骨架：请求/工具/单飞三级并发、超时分层、重试与按工具熔断、每步落盘续跑、`trace_id` 贯穿 LLM/工具调用，并监控步数分布以发现死循环。示例代码可作起始骨架，不是某一官方框架发布。 |
+| 验证工程 | [GPT-6 Astra 帮物理学家写证明，这事跟你的代码库有什么关系](https://cloud.tencent.com/developer/article/2785437) | 2026-11-16 | 腾讯云开发者社区（社区作者） | 把「长链条生成之后谁来复算」落到代码评审：一次只改一个函数/分支，把切分粒度写成提示词与流程。作者明确区分了公开信息与推断，适合作为验证方法论，而不是物理结果报道。 |
+| 模型上线解读 | [Hy4 flash 上线、Hy3 下线，一个酒店人聊聊：AI 从“偶尔用”到“天天用”的临界点](https://cloud.tencent.com/developer/article/2785636) | 2026-11-16 | 腾讯云开发者社区（社区作者，非 TEG 官方号） | 可用于核实当日混元 Hy4 flash 上线、WorkBuddy 接入、Hy3 下线等事实，并记录社区转述的规格（总参 224B、激活 12B、解码超 150 tokens/s 等）。正文偏行业解读与免费窗口，官方参数请再对产品文档，不作为深度实现文。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Qwen4-Max 接入与验收 | [首发说明](https://developer.aliyun.com/article/1783997)、[bl text chat 实测](https://developer.aliyun.com/article/1784214) | 模型 ID `qwen4-max`；CLI 与 HTTP 能力差（档位只能走接口）；预算与 `max-tokens` 硬校验；结构断言 + 运行时桩，避免用脆弱正则判行为 | 准备接百炼/千问 API 的应用与编程助手开发者 |
+| 多模态湖仓检索 | [Stella × Paimon](https://juejin.cn/post/7708627348664844314) | OSS 存原文件、Paimon 管元数据/向量/快照，Stella 用同一条 SQL 做过滤、召回与关联分析；用 EXPLAIN/Profile 区分「过滤后不够」「索引召回不足」「候选预算过小」 | 数据平台、自动驾驶/多模态评测与湖仓团队 |
+| 企业数据 Agent | [孩子王 Data Agent 实践](https://juejin.cn/post/7708613679314518054) | Skill 化业务规则、Context Graph 统一口径、云端定时调度与安全审计；数据留在 DLF，避免多引擎搬迁 | 要在业务系统里规模化铺 Agent 的数据/中台团队 |
+| Agent 研发系统与 Code Graph | [JoyCode 升级](https://juejin.cn/post/7708572722204393507)、[Agent 研发工作系统](https://developer.jdcloud.com/article/4613) | Agent Loop 贯通规划/执行/验证；CodeGraph + CodeWiki 提供仓库地图；任务状态进 `tasks/*.md`；动作策略进执行前钩子；方法库按版本累计正反例 | AI Coding、平台工程、需要多需求并行的研发团队 |
+| 生产级 Agent 可靠性 | [工具调用边界](https://cloud.tencent.com/developer/article/2785349)、[生产级 Agent 骨架](https://cloud.tencent.com/developer/article/2785404) | 副作用分级、幂等键、dry-run 对照同一计划对象、Checkpoint 续跑、工具级熔断、trace/metric/log 共用 `trace_id` | 要把 Agent 接到写操作、定时任务或线上流量的工程团队 |
+| 3D/制造上下文进入 Agent | [OpenViking 轴测八视图与 PMI](https://juejin.cn/post/7708613679314583590) | 用轴测视图补正交投影盲区；将 PMI 拆成几何/尺寸/公差/装配/工艺供 Agent 检索 | 工业软件、3D 资产检索、制造知识库相关开发者 |
+
+### 工程实践归纳
+**总体判断**：16 日固定来源里，最有迁移价值的不是新模型口号，而是把 Agent 工作变成「可续接、可验收、可重放」的工程系统；模型发布只提供新能力，真正可学的是验证台、状态机、图谱上下文和副作用边界。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 模型上线与分层使用 | Qwen4-Max 在百炼上线；社区记录混元 Hy4 flash 同日上线、Hy3 下线，定位为低成本日常模型 | 旗舰模型只放在复杂规划/长文档/关键编码，日常高频任务用更便宜的 flash 档；接入前先核对 CLI/API 能力差和硬校验，避免把演示配置直接送进生产。 |
+| Agent Loop 与交付闭环 | JoyCode 明确以 Agent Loop 连接规划、执行、验证、修正；京东八模块系统把「做到哪了、运行的是什么、凭什么验收、经验能否复用」写成模块职责 | 不要停在一次工具调用。任务要有稳定身份，测试/镜像/证据必须对应该身份；计划模式与执行模式分开，人只在目标、约束和验收处拍板。 |
+| 副作用、重试与续跑 | 腾讯云社区两篇实践文分别给出工具分级 + 幂等账本，以及 Checkpoint/熔断/背压骨架 | 读操作可重试，写操作必须带同一幂等键或先查后补；dry-run 要复用真实计划对象，而不是只打印标题；崩溃时账本应留下 `failed/begun`，不能假装没发生。 |
+| 上下文结构化（代码/数据/3D） | JoyCode 使用 CodeGraph/CodeWiki；Stella×Paimon 把样本、标签、向量和评测版本放进湖表；OpenViking 把 3D 结构与 PMI 变成 Agent 可读摘要；孩子王用 Context Graph 对齐指标口径 | 先把「Agent 要查的对象」变成稳定、可过滤、带版本的资产，再谈提示词。否则模型再强也只能在文件堆里盲搜。 |
+| 验证先于展示 | Qwen4-Max 小游戏文用三层验证台推翻「看起来写完了」；GPT-6 相关社区文把证明/代码的关键都落在「每一步能否被复算」 | 静态检查几乎区分不出差异，运行时桩和人工复算才有信息量；提示词里应要求一次只改可审查的粒度，超规模改动必须拆分。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| S | [Agent 研发工作系统：面向多需求并行端到端开发的设计与实践](https://developer.jdcloud.com/article/4613) | 当天最完整的系统设计：模块职责、状态续接、验收绑定目标身份、方法按版本治理，均可映射到自建 Agent 平台。 |
+| S | [qwen4-max 用 bl text chat 一句话生成网页小游戏](https://developer.aliyun.com/article/1784214) | 少见的「当天上线当天拆接入坑」实测，验证方法论（含失败的正则层）比游戏本身更有用。 |
+| S | [把 Agent 的工具调用关进可回滚的边界](https://cloud.tencent.com/developer/article/2785349) | 幂等键、dry-run、审计字段和自测清单可以直接改进行内自动化，和 Loop Engineering 直接相关。 |
+| A | [京东云推出全新JoyCode智能编码工具](https://juejin.cn/post/7708572722204393507) | 是当日 Code Graph 与 Agent Loop 的官方产品表述，适合了解企业级 AI Coding 的闭环设计；其中贡献率/榜单数字需单独核对。 |
+| A | [Stella × Paimon 多模态数据湖检索](https://juejin.cn/post/7708627348664844314) | 把「找得到」和「解释得清」放进同一条 SQL 链路，并给出上线前验收表，可操作性高。 |
+| A | [高可靠智能体搭建：生产级 Agent 框架的设计与实现](https://cloud.tencent.com/developer/article/2785404) | 把 Agent Loop、Checkpoint、熔断和可观测性收成一套可运行骨架，适合作为生产化讨论的共同语言。 |
+| B | [OpenViking 3D理解模型上线轴测八视图及PMI解析](https://juejin.cn/post/7708613679314583590) | 领域场景清楚，能启发「给 Agent 补上人类视图/规格上下文」；宣称口径需保留质疑。 |
+| B | [孩子王基于阿里云Data Agent的智能体实践](https://juejin.cn/post/7708613679314518054) | 适合看规模化落地时的 Skill、语义图谱与调度/安全，而非可复制的代码教程。 |
+| B | [Hy4 flash 上线、Hy3 下线…](https://cloud.tencent.com/developer/article/2785636) | 仅作当日腾讯混元产品切换的社区旁证与分层用量思路，不是官方技术深文。 |
+
+### 来源清单
+- 检索范围：2026-11-16 00:00:00 到 2026-11-16 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里（102.alibaba.com、developer.aliyun.com、jm.taobao.org、yuque.com/alidoc/dry，以及掘金官方团队转载）；腾讯（Tencent_TEG、cloud.tencent.com/developer、alloyteam.com、djt.qq.com）；字节（techblog.toutiao.com、掘金官方/开源团队号）；百度（fex.baidu.com、efe.baidu.com、developer.baidu.com）；美团（tech.meituan.com）；京东（developer.jdcloud.com、aotu.io，以及掘金官方团队号）；滴滴（didi.github.io）；网易（zhihu.com/org/wang-yi-yun-54-1/posts）；360（blogs.360.cn）；有赞（tech.youzan.com）
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 阿里 | 阿里云开发者社区 | 产品发布 | 阿里Qwen4-Max首发上线千问AI平台，API服务、Token Plan同步开放 | 2026-11-16 | https://developer.aliyun.com/article/1783997 |
+| 阿里 | 阿里云开发者社区 | 接入实测 | qwen4-max 用 bl text chat 一句话生成网页小游戏 | 2026-11-16 | https://developer.aliyun.com/article/1784214 |
+| 阿里 | 阿里云开发者社区 | 产品周报 | 【2026.11.09~11.15】阿里云百炼最新产品动态周报 | 2026-11-16（窗口 11.09–11.15） | https://developer.aliyun.com/article/1783931 |
+| 阿里 | 掘金 / 阿里云大数据AI技术 | 官方团队实践 | 阿里云 EMR Serverless StarRocks（Stella）× Paimon | 2026-11-16 | https://juejin.cn/post/7708627348664844314 |
+| 阿里 | 掘金 / 阿里云大数据AI技术 | 官方团队案例 | 孩子王基于阿里云Data Agent的智能体实践 | 2026-11-16 | https://juejin.cn/post/7708613679314518054 |
+| 京东 | 京东云开发者社区 | 系统设计 | Agent 研发工作系统：面向多需求并行端到端开发的设计与实践 | 2026-11-16 | https://developer.jdcloud.com/article/4613 |
+| 京东 | 掘金 / 京东云开发者 | 官方团队产品更新 | 京东云推出全新JoyCode智能编码工具 | 2026-11-16 | https://juejin.cn/post/7708572722204393507 |
+| 字节 | 掘金 / 字节跳动开源 | 官方团队产品更新 | OpenViking 3D理解模型上线轴测八视图及PMI解析 | 2026-11-16 | https://juejin.cn/post/7708613679314583590 |
+| 腾讯 | 腾讯云开发者社区 | 社区实践（非 TEG 官方） | 把 Agent 的工具调用关进可回滚的边界 | 2026-11-16 | https://cloud.tencent.com/developer/article/2785349 |
+| 腾讯 | 腾讯云开发者社区 | 社区实践（非 TEG 官方） | 高可靠智能体搭建：生产级 Agent 框架的设计与实现 | 2026-11-16 | https://cloud.tencent.com/developer/article/2785404 |
+| 腾讯 | 腾讯云开发者社区 | 社区实践 | GPT-6 Astra 帮物理学家写证明，这事跟你的代码库有什么关系 | 2026-11-16 | https://cloud.tencent.com/developer/article/2785437 |
+| 腾讯 | 腾讯云开发者社区 | 社区产品解读（非 TEG 官方） | Hy4 flash 上线、Hy3 下线… | 2026-11-16 | https://cloud.tencent.com/developer/article/2785636 |
+| 腾讯 | 腾讯云开发者社区 | 相邻日期（不计入当日官方更新） | 当 Coding Agent 走进研发团队：我们开源了云端自进化研发平台 LoopForge | 2026-11-09 | https://cloud.tencent.com/developer/article/2779233 |
+| 腾讯 | 掘金（非官方用户号，仅作传播记录） | 相邻/传播 | 腾讯把 AI 写代码做成“流水线”：LoopForge 开源… | 2026-11-16（介绍的是已于 11-09 开源的项目在当日 GitHub Trending 的传播） | https://juejin.cn/post/7708372402200444955 |
+| 美团 | tech.meituan.com | 相邻日期（不纳入当日主表） | 美团 LongCat-2.5 正式开源：从看见，到抵达 | 2026-11-10 | https://tech.meituan.com/2026/11/10/Meituan-LongCat-2.5-Open-Source.html |
+| 百度 | FEX / EFE / 开发者中心 | 未发现更新 | — | 2026-11-16 | — |
+| 滴滴 | didi.github.io | 未发现更新 | — | 2026-11-16 | — |
+| 网易 | 知乎机构号 posts | 未发现更新（页面 403，检索无日期命中） | — | 2026-11-16 | — |
+| 360 | blogs.360.cn | 未发现更新（站点 500，检索无命中） | — | 2026-11-16 | — |
+| 有赞 | tech.youzan.com | 未发现更新（最近可见文章仍为 2022 年） | — | 2026-11-16 | — |
+| 京东 | aotu.io | 未发现更新（首页日期水印不能当作发文日期） | — | 2026-11-16 | — |
+| 腾讯 | AlloyTeam / 腾讯大学视频 / Tencent_TEG | 未发现可核验的当日技术博文 | — | 2026-11-16 | — |
+| 阿里 | 102.alibaba.com / jm.taobao.org / 语雀 alidoc/dry | 未发现更新 | — | 2026-11-16 | — |
+| 字节 | techblog.toutiao.com | 未发现更新 | — | 2026-11-16 | — |
+
 ## 2026-11-15
 
 ### 今日总览

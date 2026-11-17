@@ -2,6 +2,121 @@
 
 按 Asia/Shanghai 时区汇总掘金文章热榜与收藏热榜（后端 / 前端 / 人工智能 / 开发工具），按文章链接去重并归纳正文。
 
+## 2026-11-17
+
+### 今日总览
+
+**一句话结论**：11 月 17 日快照的 21 条新链接全部落在文章热榜，收藏热榜四个标签均无新增；主线是 AI 生成代码撞上性能、验收和历史约定，同时本机 Agent 工作台、官方多 Agent 并行，以及鸿蒙原生跨端与音视频基座构成另外两簇热点。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 文章热榜 + 收藏热榜 × 后端/前端/人工智能/开发工具 |
+| 榜单规模 | 每槽最多 15 条；列表总条数 120 / 去重后新 URL 数 21 / 跳过已见数 99 |
+| 核心趋势 | 1）AI 编码从「十分钟出 Demo」转向审查与验收：3D 大屏在真实数据量下丢失 WebGL 上下文，过干净的 PR 重复造了财务舍入函数，SoduWork 里工作目录有文件也不等于本轮交付清单已收录；2）多 Agent 并行开始产品化：Claude Code Projects 用独立分支/副本和普通 PR 冲突来隔离，Playwright 则强调浏览器上下文隔离、重试不要掩盖会话缺陷；3）本机工具链变厚：跨 Agent 会话桌面巡检、Trae 的 rules/commands/skills 分层、Vibe 工具组合，以及把发布/求职做成可调用 CLI 的 wm 与 recruitment-cli；4）鸿蒙原生出现连续实践（cj-tauri 形近字游戏、硬解 FFmpeg 基座、端云协同 Agent 的 Day 1），底层仍有 JVM 帧与 Redis Set 源码长文。 |
+| 可直接关注 | Three.js 大屏的 `InstancedMesh` / `dispose()` / 更新节流；[SoduWork](https://github.com/mdiri-ai/SoduWork) 里「工作目录」与「固定交付版本」的差别；Claude Code Projects 的协调者-线程模型；Trae `.trae` 三层配置；财务类工具函数的既有约定与银行家舍入测试表；ffmpeg-for-HarmonyOS 与 cj-tauri 的鸿蒙跨端实践。 |
+
+### 后端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 11 | [离谱，AI 大佬顺手搓了个 YouTube ，而我顺手给他搓了个中文插件](https://juejin.cn/post/7707194766859124787) | cxuanAI | 赞2/藏3/阅255 | Andrej Karpathy 因不满 YouTube 推荐算法，用 Opus 5.5 约两小时做出 HackerTube：从 HN 20 年来 4300 万条评论中筛出 6454 个持续被推荐的视频，无需登录即可观看，但片源多为十几年前的英文内容。作者用 Opus 5.5 和 Fable 5.2 做了中文翻译插件，支持在线翻译和中文搜索，用 `npx hackertube-zh` 安装。插件尚未上架 Chrome 应用商店，需在 `chrome://extensions` 打开开发者模式后加载已解压目录。适合想看精选技术视频、需要中文界面的人；这是第三方扩展，安装时需自行评估来源。 | https://juejin.cn/post/7707194766859124787 |
+| 13 | [带您看懂字节码指令（一）：一帧里有什么](https://juejin.cn/post/7707290791690076179) | 金銀銅鐵 | 赞1/藏4/阅245 | 以 `Demo.java` 中 `SimpleAdder.add(int, int)` 的四条字节码为线索，对照 JVM 规范 2.6 节说明「每次调用新建一帧」，以及编译期写入 Code 属性的 `max_locals` / `max_stack`（`javap -v` 显示为 `locals=` 和 `stack=`）。实例方法里 slot 0 放 `this`，两个 `int` 参数各占一槽故 `locals=3`，操作数栈峰值 `stack=2`；指令左侧数字是字节偏移而非指令序号。适合想从规范读懂 `javap` 输出的 Java/JVM 读者；文中还附可单步演示的 Swing 工具与完整代码，本篇主要讲清帧结构，指令逐步推演在续篇。 | https://juejin.cn/post/7707290791690076179 |
+| 14 | [用《实践论》分析前沿部署工程师：AI时代听见炮声的人](https://juejin.cn/post/7707483315461537846) | JAVA前线 | 赞1/藏2/阅220 | 用《实践论》里实践与认识、感性与理性、直接与间接经验，以及两次飞跃和循环往复，来解释前沿部署工程师（Forward Deployed Engineer, FDE）。作者认为 AI 模型变强却常未在客户生产中兑现价值，缺的是一个驻点现场、把真实业务流程接进 AI 并拿到可量化结果的角色：FDE 侧重从现场得到感性认识，开发从多家反馈里抽象共性完成理性认识，再交由 FDE 回现场验证，形成一轮认识循环。适合思考 AI 落地分工和岗位定位的人；这是概念梳理，不是招聘 JD 或能力模型清单。 | https://juejin.cn/post/7707483315461537846 |
+| 15 | [用仓颉语言 cj-tauri 框架，五分钟给娃做了个鸿蒙形近字游戏](https://juejin.cn/post/7707927071724896265) | 特立独行的猫A | 赞2/藏1/阅216 | 作者为有 ADHD 和阅读障碍的女儿做辨字训练，用仓颉语言的 cj-tauri（仓颉后端 + 系统 WebView 前端）做一个周末做出形近字游戏，同一套源码可出 Windows 桌面和鸿蒙平板。第一坑是 `PageSource.Asset` 在 Windows 上走 `NavigateToString`，相对路径的 CSS/JS 全部加载失败且几乎无错误日志；解法是构建时把分文件 UI 内联成自包含 HTML，并向上游提了 [issue #9](https://atomgit.com/qq8864/cj-tauri/issues/9)。字库 102 组覆盖一至五年级，五种玩法。适合关注仓颉/鸿蒙跨端或 WebView 资源加载问题的人；这是个人项目踩坑记录，框架能力以 cj-tauri 上游为准。 | https://juejin.cn/post/7707927071724896265 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 前端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 9 | [AI帮我生成了一个炫酷的3D大屏，上线3天就卡崩了](https://juejin.cn/post/7708639137272102966) | 涛涛ing | 赞7/藏5/阅575 | 作者用 Cursor + Claude 生成 Vue 3 + Three.js 仓储 3D 大屏，Demo 很炫，上线第三天早高峰接到约 10 万条数据后出现 `WebGL context lost`。复盘发现生成代码在 `requestAnimationFrame` 里反复 `new THREE.Mesh()` 且不销毁、每个货架独立 Draw Call、组件卸载时未 `dispose()` 导致泄漏。后来改成 `InstancedMesh`、在 `onBeforeUnmount` 手动清理材质和几何体，并把 WebSocket 更新节流到约 16ms 合并一次，帧率回到 60、内存约 300MB。适合做 Three.js 数据大屏的前端；这是单次项目复盘，数据量和机器环境不能直接外推。 | https://juejin.cn/post/7708639137272102966 |
+| 11 | [不会后期的我，发现了一个开源胶片神器😍😍😍](https://juejin.cn/post/7706865424746758198) | Moment | 赞3/藏5/阅564 | 介绍开源照片工具 SpektraLab：先选胶片再选相纸/印相组合（反转片则走直接扫描），选项预览的是当前照片处理后的效果，比一上来调曲线更容易上手。胶片模型来自开源项目 [spektrafilm](https://github.com/andreavolpato/spektrafilm) 的光谱计算，模拟曝光显影、印相和扫描；SpektraLab 在此之上做了 C++ 和 Metal 渲染的 Mac 应用，并支持 MCP 供外部 Agent 调用部分处理能力，Mac 版免费开源。适合想尝试胶片模拟、又不太会后期的人；文首有作者其他项目的推广段落，许可证与非 Mac 平台支持以项目仓库为准。 | https://juejin.cn/post/7706865424746758198 |
+| 12 | [Vibe coding工具使用心得](https://juejin.cn/post/7706430401102987299) | 卸任 | 赞2/藏8/阅608 | 作者按排查、方案、打磨 UI 三段推荐三个工具：[CodeGraph](https://github.com/colbymchenry/codegraph) 给代码库整理可查询的关系图，方便 AI 顺着调用关系定位问题（官方也强调省 token）；[OpenSpec](https://github.com/Fission-AI/OpenSpec) 用 `/opsx:explore`、`propose`、`apply`、`sync`、`archive` 把「为什么做、怎么做、做完如何归档」写下，作者认为要全团队使用才有意义；[Impeccable](https://github.com/pbakaus/impeccable) 用于功能落到页面后继续调整层级和布局。适合正在用编码 Agent 做完整功能闭环的前端/全栈；本文是个人使用心得，具体命令与能力以各仓库文档为准。 | https://juejin.cn/post/7706430401102987299 |
+| 13 | [面向 Schema 编程，Vue 3 页面级渲染引擎！轻松玩转各场景 Validation！](https://juejin.cn/post/7707109094009454642) | 全栈小卷 | 赞2/藏4/阅504 | 介绍作者的 Vue 3 schema 渲染库 [vue-juan-form](https://www.npmjs.com/package/vue-juan-form)：初版仅支持 Element Plus，字段用 `validation` 字符串（竖线分隔规则、冒号分隔参数）做基础校验，编辑时只校验当前字段，提交时检查整表，重置会清数据和错误提示。自定义规则可在字段上写 `validationRules` 并抛 `RuleError`，或用 `defineRule` 复用，示例包括确认密码的 `same`，以及用户名/邮箱/手机号不能全部为空；跨层可读 `$parent`、`$root`。配套示例见 [vue-juan-form-examples](https://github.com/PongpongXu/vue-juan-form-examples)。适合用 Vue 3 + Element Plus 做动态表单的人；这是作者自己的库的教程，对其他 UI 框架的支持需以后续版本为准。 | https://juejin.cn/post/7707109094009454642 |
+| 14 | [不只命令行：我把跨 Agent 会话同步做成了桌面应用](https://juejin.cn/post/7707462833181753353) | code_Bo | 赞7/藏3/阅386 | 继 npm/MCP 包 [cross-agent-sync](https://www.npmjs.com/package/cross-agent-sync)（命令 `ass`）之后，作者发布桌面应用 Agent Session Sync 1.3.2，用来看本机各 Agent 的会话数和磁盘占用、按项目回看历史，并可选把文件型会话移到废纸篓。桌面端不重写解析器，而是子进程调用 CLI；对 Agent 原始会话只读，写入只进 `~/.local/share/agent-session-sync`；Cursor / OpenCode / Trae / 灵码等共享 SQLite 来源不会在桌面里删除。提供 macOS arm64 DMG 与 Windows x64 安装包，见 [Releases v1.3.2](https://github.com/lhbDesign/cross-agent-sync/releases/tag/v1.3.2)。适合本机装了多个编码 Agent、需要巡检和回看的人；清理前仍需确认来源类型，避免误伤。 | https://juejin.cn/post/7707462833181753353 |
+| 15 | [那个PR太干净了，干净到我差点直接点了合并](https://juejin.cn/post/7706723901010886697) | 涛涛ing | 赞6/藏6/阅456 | 作者差点合并一个结账页 PR：AI 新建了类型完整、测试全绿的 `formatMoneyCents()`，却不知道仓库里已有承担真实分币事故、使用银行家舍入的 `formatCurrency()`。单元测试都是整数金额，没有覆盖 `0.005` 这类分叉点，因为测试和实现出自同一个模型，只能证明「函数和自己一致」。作者把原因归结为局部上下文、命名不匹配、完成度奖励和桶导出掩盖来源，并建议每次先搜同动词的既有函数、把金额边界写成固定测试表。适合做 Code Review、尤其是财务和公共工具函数的人；这是单次审查复盘，不是对所有 AI PR 的统计结论。 | https://juejin.cn/post/7706723901010886697 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 人工智能
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 3 | [文件明明在本地，为什么自动验收仍说没交？我的 SoduWork 使用记录](https://juejin.cn/post/7708478489645285402) | 一只牛博 | 赞2/藏0/阅2199 | 作者在 Apple 芯片 Mac 上从源码（commit `5dd7fd9`）启动 [SoduWork](https://github.com/mdiri-ai/SoduWork) Hub，再用下载版桌面客户端 1.13.15 连回 `127.0.0.1:18989`，走完订单 CSV 校验的需求创建、安排执行、验收和返修。源码拉起的客户端因钥匙串「无法访问设备凭据」无法登录，改用下载版继续；首轮自动验收退回，不是脚本没写，而是固定交付版本的主清单只列了 CSV，`manifest` 未收录脚本和测试、`evidence` 为空——工作目录有文件不等于本轮交付已提交。返修时还要分清历史轮次与当前主交付，最终页面显示固定版本 v8、7 项主成果、状态「已验收」，但未标明最后一次是自动还是手动验收。适合评估需求池+验收工作流的人；Keychain 问题作者已补到仓库讨论，多人协同等能力本文未完整体验。 | https://juejin.cn/post/7708478489645285402 |
+| 9 | [面试官问你：“AI 能写 80% 的代码了，公司为什么还需要你？”](https://juejin.cn/post/7707191707507130377) | 怕浪猫 | 赞14/藏9/阅622 | 针对这道面试题，作者建议先不要纠缠「80%」的口径（字符、行数、任务数还是最终合并进生产，结论会差出数倍），而回答：若实现真的变便宜，你打算怎样重新分工。文中引用 2026 年《Management Science》对微软、埃森哲和另一家财富 100 强共 4867 名开发者的三项随机试验：代码补全助手使完成任务数增加约 26.08%，初级收益更大；并提醒这项研究测的是补全助手，不是今天的编程 Agent。接着盘点截至 2026-11-12 的 Codex、Claude Code Review、Gemini、Copilot cloud agent、Cursor Projects/Rollouts 以及国内产品的公开能力与边界，指出若回答仍停留在「AI 只会写 CRUD」会被视为脱节。适合准备面试或思考职业定位的人；产品能力以各官方说明为准，研究数字不能外推成 Agent 时代的生产力。 | https://juejin.cn/post/7707191707507130377 |
+| 10 | [我用 REA 逆向自己的 Electron 桌面端，扒出 178 个 IPC 通道后我反而放心了](https://juejin.cn/post/7707510918535659561) | 孟健AI编程 | 赞7/藏6/阅585 | 介绍开源逆向工具 REA（Reverse Engineer Anything）：在本地运行，并把发现标成 Seen（硬证据）、Inferred（推断）和 Unknown（未知），思路是让 AI 顺着反编译去读现成软件，把成品当作需求文档。作者用 WorkBuddy 拉取 REA（并安装 asar、wakaru 1.16.0）后，对自己的「字流」Electron 桌面端做审计；简要结论是扒出 178 个 IPC 通道，但核心密钥为 0、语义未知项超过 4 万，据此划清防御边界。适合关心桌面端暴露面的独立开发者；这是作者对自有软件的一次审计，流程绑定了 WorkBuddy，并非使用 REA 的唯一方式，量化细节以文内报告为准。 | https://juejin.cn/post/7707510918535659561 |
+| 15 | [大一独立开发鸿蒙原生 AI Agent：聊聊我为什么死磕端侧模型与“技术平权”](https://juejin.cn/post/7707128656847536162) | WHMONY | 赞6/藏2/阅398 | 一名大一学生记录鸿蒙原生 AI Agent 的第一天：不想只做云端套壳，而计划端云协同——云端接 DeepSeek 等处理复杂推理，端侧在手机 NPU 跑 Qwen2.5-0.5B 级量化模型以支持离线和隐私，并用 `IModelProvider` 让 UI 可切换。当天踩了四坑：系统 hdc 与 DevEco 自带 hdc 抢 8710 端口；ArkTS 禁止无类型对象字面量；`decodeWithStream` 已废弃，改用 `buffer`；SSE 需自建 `textBuffer` 处理跨块中文和残缺 JSON。目前已在真机跑通 `http.requestInStream` 流式对话，后续计划加记忆和工具。适合鸿蒙/端侧模型学习者；端侧小模型当时尚未落地，本文是 Day 1 日记而非成品评测。 | https://juejin.cn/post/7707128656847536162 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 开发工具
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 9 | [认识 WeMedia：从多平台发布到可扩展 CLI 的架构设计](https://juejin.cn/post/7707151816107458611) | 浪遏 | 赞1/藏2/阅211 | 介绍开源多平台发布 CLI wm（WeMedia，[Ganzhib/wemedia-cli](https://github.com/Ganzhib/wemedia-cli)）：人提供内容和发布意图，AI 助手理解需求并调用工具，wm 负责准备平台内容、管理账号会话、执行上传/保存/发表和回查。当前接入掘金、微信公众号、小红书和知乎，但能力并不整齐，例如小红书面向图文笔记、不提供保存草稿与视频发布，知乎可创建和发表专栏草稿、尚未提供已有草稿更新。架构上先把各平台共性（内容准备、账号识别、执行记录、失败核对）与必须由平台自己决定的字段、排版和接口分开。适合需要一稿多发、想把发布交给 CLI/Agent 的创作者；平台审核与登录验证仍需人处理，具体能力以仓库为准。 | https://juejin.cn/post/7707151816107458611 |
+| 10 | [一份鸿蒙原生支持硬解的 ffmpeg 开发基座](https://juejin.cn/post/7708219159427792959) | Sirius_Ji | 赞4/藏1/阅114 | 介绍 ffmpeg-for-HarmonyOS v0.2.2：面向 HarmonyOS NEXT / OpenHarmony 的音视频基础库，不是成品播放器。作者针对「Linux/Android 的 so 改后缀编不过、只编了部分组件、能软解却没接鸿蒙硬解」等现状，把完整 FFmpeg 能力与 `OH_AudioCodec` / `OH_VideoDecoder` 封装放在一起，提供 HAR 和 C++ SDK，arm64-v8a 与 x86_64 双 ABI，动态库按 16KB 页对齐，许可证为 LGPL-2.1-or-later，未启用 GPL、nonfree、x264、x265。已支持常见音视频格式、硬解不可用时回退软解、基础 H.264 硬编、水印和部分滤镜。作者明确这是公测初版，复杂滤镜组合、更多编码器/容器，以及图片水印的透明通道等细节仍不完善。适合鸿蒙音视频开发者。 | https://juejin.cn/post/7708219159427792959 |
+| 11 | [一个项目五个 AI 同时干活，Claude Code 怎么让它们不互相打架](https://juejin.cn/post/7708023020069601295) | 深蓝AI | 赞1/藏2/阅192 | 解读 2026 年 11 月 15 日后 Claude Code 重新设计的 Projects：由协调者拆任务并路由线程，每条线程是带独立分支和仓库副本的完整云端会话，冲突按普通 PR 合并冲突处理，而不是另造协议。动机是 multi-Claude 已普遍，但人在多会话间调度会造成注意力灾难，同时仍要保留单线程深钻。线程还可再拆子代理，形成协调者-线程-子代理三层；官方例子包括把 API、网页、移动三个仓库连进同一项目，退役废弃接口并汇总合并顺序。适合开始并行使用 Claude Code 的人；这是对官方产品形态的解读，权限、计费和实际隔离行为以 Anthropic 当时文档为准。 | https://juejin.cn/post/7708023020069601295 |
+| 12 | [两个任务同时跑，B 的登录态为什么被踢回登录页](https://juejin.cn/post/7706397976554373129) | 楠风测开 | 赞1/藏1/阅175 | 《AI 重塑测试 · 90 天实测日记》第 42 篇：作者强调 Playwright 的 `browser.new_context()` 已提供独立 Cookie、缓存和 localStorage，不必再维护一套清 cookie 的代码，并在本机（Windows / Python 3.11.8 / Playwright 1.62.0）验证 A 登录后 B 看不到其登录态。真正要权衡的是：系统若无「同一账号只能一个会话」，就不必做账号池；用例不多时按任务固定分配账号即可；登录态复用能省时间，但状态已变的用例不能复用，也不要用 `storage_state` 文件在任务间共享以免身份串台；检测到未登录就多次重登会掩盖会话管理缺陷，建议重试上限为 1。适合用 Playwright 做并行 UI 测试的人；结论基于作者本机环境和示例页，需对照自己系统是否有互踢/单点登录规则。 | https://juejin.cn/post/7706397976554373129 |
+| 13 | [《Redis 8.10.3 深度剖析》系列 ·第 13 章 Set：三种编码、集合运算与随机采样](https://juejin.cn/post/7706073526894084147) | 鶴哥只手遮天 | 赞1/藏1/阅173 | Redis 8.10.3 源码系列第 13 章指出：Set 是唯一「三种编码之间没有单一大小优先级」的类型——`intset` 与 `listpack` 的边界是元素是否全为整数，`listpack` 与 `hashtable` 的边界才是大小，且从 `intset` 出发后不能回去。三种内部顺序分别是严格升序、插入序和散列无序；`intset` 用有序换二分查找，插入需 `memmove`，这正是 `set-max-intset-entries` 存在的原因。作者还要回答 `SPOP`/`SRANDMEMBER` 的两套采样策略，以及为何 `SINTERCARD` 的 `LIMIT` 能提前退出而 `SUNIONCARD` 不能，并比较 8.10 新增的 `SUNIONCARD`/`SDIFFCARD` 与 7.0 `SINTERCARD` 的实现路径。适合读 Redis 源码或要理解集合命令代价的人。 | https://juejin.cn/post/7706073526894084147 |
+| 14 | [recruitment-cli：让 AI 接手求职招聘，从架构到一次发送超时](https://juejin.cn/post/7707544803336863779) | 浪遏 | 赞1/藏0/阅160 | 介绍开源求职招聘 CLI [recruitment-cli](https://github.com/Ganzhib/recruitment-cli)（命令 `recruit`）：把搜索、筛选、沟通计划和执行回执做成可被 Agent 调用的工作流，支持命令行、本地对话 Demo，以及把工具定义接入已有系统。沟通使用 BOSS 当前配置的预制招呼语，执行成功只表示平台接口返回了成功证据，不代表对方已读或愿意继续；账号在本地浏览器登录，不要求用户手工提取 Cookie。产品把任务拆成明确范围、整理对象、准备沟通、执行与查看四段，并用计划快照、写前记录和回执确认来处理「发送超时后下次该做什么」，减少重复联系。适合想把求职/招聘中的重复点选交给工具的人；当前招聘侧是对推荐列表筛选而非全站搜索，平台与合规边界需自行判断。 | https://juejin.cn/post/7707544803336863779 |
+| 15 | [Trae 的 .trae 目录到底怎么用：rules、commands、skills 三层机制与一棵典型目录树的落地拆解](https://juejin.cn/post/7707226332463169545) | ENCI | 赞1/藏1/阅146 | 说明 `.trae` 不是把 Markdown 扔进去就生效：`rules` 由 `alwaysApply` 决定全文常驻或只挂一行 `description` 按需读取，写的是约束和禁止项；`commands` 只做斜杠入口和流程骨架；`skills` 在任务匹配或被 command 引用时才加载完整 SOP 和脚本。判断放哪一层只看「是不是每次对话都必须在场」，以免常驻规则挤占上下文。示例树里还有没有 `SKILL.md`、只放专用脚本的资源目录；文中目录还列出 specs/sessions/handover 与 `mcp.json`，需与三层机制分开理解。适合在 Trae 里配置项目规范的人；机制以 [TRAE 官方文档](https://docs.trae.ai/ide/rules?_lang=zh) 为准。 | https://juejin.cn/post/7707226332463169545 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 跨榜重复与去重说明
+
+- 本轮新摘要 URL 数：21
+- 因 `seen_urls` 跳过：99
+- 同文多标签/双榜出现：无（21 条新 URL 均只出现在各自单一标签与单一榜单槽位，且全部位于文章热榜）
+- 详情失败：0
+
+### 来源清单
+
+- 快照日：2026-11-17（Asia/Shanghai）
+- 页面：https://juejin.cn/hot/articles 、 https://juejin.cn/hot/collected-articles
+- 抓取：`tools/juejin_hot_fetch.py` → `_staging_latest.json`
+
+| 标签 | 榜单 | 标题 | 链接 |
+| --- | --- | --- | --- |
+| 后端 | 文章热榜 | 离谱，AI 大佬顺手搓了个 YouTube ，而我顺手给他搓了个中文插件 | https://juejin.cn/post/7707194766859124787 |
+| 后端 | 文章热榜 | 带您看懂字节码指令（一）：一帧里有什么 | https://juejin.cn/post/7707290791690076179 |
+| 后端 | 文章热榜 | 用《实践论》分析前沿部署工程师：AI时代听见炮声的人 | https://juejin.cn/post/7707483315461537846 |
+| 后端 | 文章热榜 | 用仓颉语言 cj-tauri 框架，五分钟给娃做了个鸿蒙形近字游戏 | https://juejin.cn/post/7707927071724896265 |
+| 前端 | 文章热榜 | AI帮我生成了一个炫酷的3D大屏，上线3天就卡崩了 | https://juejin.cn/post/7708639137272102966 |
+| 前端 | 文章热榜 | 不会后期的我，发现了一个开源胶片神器😍😍😍 | https://juejin.cn/post/7706865424746758198 |
+| 前端 | 文章热榜 | Vibe coding工具使用心得 | https://juejin.cn/post/7706430401102987299 |
+| 前端 | 文章热榜 | 面向 Schema 编程，Vue 3 页面级渲染引擎！轻松玩转各场景 Validation！ | https://juejin.cn/post/7707109094009454642 |
+| 前端 | 文章热榜 | 不只命令行：我把跨 Agent 会话同步做成了桌面应用 | https://juejin.cn/post/7707462833181753353 |
+| 前端 | 文章热榜 | 那个PR太干净了，干净到我差点直接点了合并 | https://juejin.cn/post/7706723901010886697 |
+| 人工智能 | 文章热榜 | 文件明明在本地，为什么自动验收仍说没交？我的 SoduWork 使用记录 | https://juejin.cn/post/7708478489645285402 |
+| 人工智能 | 文章热榜 | 面试官问你：“AI 能写 80% 的代码了，公司为什么还需要你？” | https://juejin.cn/post/7707191707507130377 |
+| 人工智能 | 文章热榜 | 我用 REA 逆向自己的 Electron 桌面端，扒出 178 个 IPC 通道后我反而放心了 | https://juejin.cn/post/7707510918535659561 |
+| 人工智能 | 文章热榜 | 大一独立开发鸿蒙原生 AI Agent：聊聊我为什么死磕端侧模型与“技术平权” | https://juejin.cn/post/7707128656847536162 |
+| 开发工具 | 文章热榜 | 认识 WeMedia：从多平台发布到可扩展 CLI 的架构设计 | https://juejin.cn/post/7707151816107458611 |
+| 开发工具 | 文章热榜 | 一份鸿蒙原生支持硬解的 ffmpeg 开发基座 | https://juejin.cn/post/7708219159427792959 |
+| 开发工具 | 文章热榜 | 一个项目五个 AI 同时干活，Claude Code 怎么让它们不互相打架 | https://juejin.cn/post/7708023020069601295 |
+| 开发工具 | 文章热榜 | 两个任务同时跑，B 的登录态为什么被踢回登录页 | https://juejin.cn/post/7706397976554373129 |
+| 开发工具 | 文章热榜 | 《Redis 8.10.3 深度剖析》系列 ·第 13 章 Set：三种编码、集合运算与随机采样 | https://juejin.cn/post/7706073526894084147 |
+| 开发工具 | 文章热榜 | recruitment-cli：让 AI 接手求职招聘，从架构到一次发送超时 | https://juejin.cn/post/7707544803336863779 |
+| 开发工具 | 文章热榜 | Trae 的 .trae 目录到底怎么用：rules、commands、skills 三层机制与一棵典型目录树的落地拆解 | https://juejin.cn/post/7707226332463169545 |
+
 ## 2026-11-16
 
 ### 今日总览

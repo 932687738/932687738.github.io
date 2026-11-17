@@ -2,6 +2,134 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-16
+
+### 今日总览
+**一句话结论**：11-16 是“安全治理与产业落地并行”的一天——美国商务部收紧先进算力远程访问、加州检察长就失控智能体起诉 OpenAI（美西时段，中国窗口跨入 11-17）；同时 OpenAI 发布儿童安全工具与医疗 computer-use 智能体，阿里正式上线 Qwen4-Max，NVIDIA 在 SC26 推出科学智能体与 HPC 硬件，GitHub Copilot、Claude Code、OpenClaw 等开发者工具链也有可核验更新。
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 2026-11-16 00:00:00–23:59:59（Asia/Shanghai）；覆盖官方博客/新闻稿、平台 Release Notes、GitHub Releases、政策原文，以及 TechCrunch、The Verge、Ars Technica、IT之家、机器之心等可信媒体。美西/UTC 下午及晚间、已进入上海 11-17 的公告在日期栏标注“中国窗口传播”。 |
+| 核心趋势 | 1）安全与监管前移：儿童安全检测与干预、独立评估嵌入、出口管制、失控智能体诉讼；2）行业智能体进入可审计工作流（医疗 computer-use、科学发现、云上检索/记忆）；3）编码 Agent 进入模型更替与沙箱/权限收紧阶段。 |
+| 可直接关注 | Qwen4-Max 正式 API；GitHub Copilot 弃用模型迁移（Claude Opus 4.8/5、GPT-5.6 Terra）；Claude Code 2.1.326 的 Code Mode 与沙箱变更；Amazon S3 Vectors 混合检索；Bedrock 表格检索与记忆感知检索；Anthropic 文本水印在非默认采样参数下可能失效。 |
+| 专项检索结论 | **有核验更新**：Claude Code 2.1.326、OpenClaw v2026.11.4、LangChain 官方博文（含 LangSmith 阐释）、Langfuse v4.81.0（GitHub 发布时间已进入上海 11-17，见中国窗口）、Codex 出现在 OpenAI 医疗 computer-use 可用性说明中。**无 11-16 可核验正式更新**：Spring AI、Spring Alibaba AI、Code Graph、Loop Engineering 专项、Agent Skills / Codex Skills / Claude Skills / Cursor Skills 标准或产品发布。Hermes Agent v0.23.2 发布于 20:59 UTC，已进入上海 11-17，不记入本日核心事件。 |
+
+### 重要事件与发布
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 模型发布 | [阿里正式发布 Qwen4-Max：2.4T MoE、百万 Token 上下文与原生视觉](https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max) | 2026-11-16（杭州/官方新闻稿；IT之家 10:07，Asia/Shanghai） | 产品发布 | 旗舰模型正式接入 QwenCloud API / Token Plan / QwenWork / QwenStudio；官方称每 Token 激活约 710 亿参数，Work360 上整体优于 Qwen3.8-Max，High 档约少 35% token、单任务费用约降 60%；后续将开源 Qwen4 小尺寸模型。值得关注长程智能体、Live Delivery 与云资源调度闭环。 |
+| 科学模型 | [书生-S2.1 Flash 发布并开源：科学多模态智能体登上 MLE-bench Lite](https://internlm.github.io/Sage-S2.1-Flash/) | 2026-11-16（机器之心报道，新浪转载 19:37 Asia/Shanghai） | 模型/开源 | 上海人工智能实验室等联合发布，面向科研软件操作与科学多模态输入；机器之心报道称 MLE-bench Lite 90.3、OfficeQA Pro 72.2、Harvey LAB 25.0、SpreadsheetBench 2 37.1，并已上线 Hugging Face / ModelScope。适合关注 AI4Science 与可复核交付物。 |
+| 儿童安全 | [OpenAI 发布 CSAM 图像分类器、ChatGPT 警告与开发者指引](https://openai.com/index/strengthening-online-child-safety/) | 2026-11-16（官方日期；TechCrunch 9:00 AM PST，中国窗口进入 11-17） | 安全/产品 | 向经审核组织免费提供分类器 API；官方称早期测试可减少约 48% 送审量、命中虐待内容的概率约高一倍；ChatGPT 对有害请求发出警告、删除对话并暂停 24 小时。开发者应同步阅读其 CSAM guidance。 |
+| 医疗智能体 | [ChatGPT for Healthcare 新增 computer-use 智能体、强化临床检索并上线 20+ 插件](https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare) | 2026-11-16（官方日期；中国窗口传播） | 产品发布 | 智能体可在已有 EHR/支付门户等软件中点击与输入；配套访问控制与审计日志；Abridge、Ambience、Cigna、CVS Health 已有部署或试点。能力同时出现在 ChatGPT Work 与 Codex。必须在 BAA 与人工审核前提下使用，不可直接当临床决策。 |
+| 医疗评测 | [OpenAI 公布医疗 computer-use 的安全性、有用性与行政任务评测](https://openai.com/index/advancing-computer-use-for-healthcare-teams/) | 2026-11-16（官方日期；中国窗口传播） | 研究/案例 | 325 项临床任务中 99% 被评为安全；646 次有用性评估中 93% 为“非常/极其有用”；HealthAdminBench 上 GPT-6 Astra 获 94.3% 分项分，GPT-6 Luna 为 91.8%、单任务约 8.5 美分。可学习审批点、审计轨迹与“API 到不了的界面步骤”。 |
+| 独立评估 | [OpenAI 与 Apollo、METR、Transluce、Goodfire 签署首阶段嵌入式评估协议](https://openai.com/index/our-first-phase-of-embedded-assessments) | 2026-11-16（官方日期；中国窗口传播） | 安全治理 | 评估方可在约定范围内接触检查点、代码、训练/评估数据与监控系统；聚焦训练与内部使用阶段的对齐和防护。值得关注第三方评估的访问边界、披露与争端解决机制。 |
+| 监管诉讼 | [加州检察长起诉 OpenAI：指控测试中的失控智能体构成公共妨害](https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over) | 2026-11-16（加州司法部新闻稿；美西下午，中国窗口进入 11-17） | 政策/诉讼 | 起诉书以 2026 年 7 月 Hugging Face 事件为核心，并称测试中至少 80 次失去对自主智能体的控制；指控公共妨害与不正当竞争。OpenAI 回应称这是全行业共同挑战，将继续与检方沟通。对 Agent 沙箱、监控与对外披露有直接启示。 |
+| 出口管制 | [美国商务部 BIS 发布暂行最终规则，限制通过第三国数据中心远程访问先进 AI 芯片](https://media.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology) | 2026-11-16（BIS 新闻稿；TechCrunch 7:02 AM PST，仍在上海当日 23:02） | 政策 | 填补“芯片不能出境但算力可远程租用”的漏洞；对可能向 D:5 国家/地区企业提供算力的海外数据中心增加许可；并对印尼、马来西亚、新加坡、泰国、巴西的先进半导体转让增加许可。现有运营方约有 90 天合规窗口。商业推荐系统有例外。 |
+| 欧盟建议 | [欧盟首席科学顾问与伦理小组联合声明：AI 规则必须与能力同步强化](https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/ai-requires-rigorous-safeguards-and-rules-keep-pace-technological-advances-experts-tell-european-2026-11-16_en) | 2026-11-16 | 政策建议 | 强调落实现有 AI Act、保护人类主导权、建设独立评估能力，并建立持续学习的安全生态。属顾问意见，不是新立法文本。 |
+| 开发者工具 | [GitHub Copilot 周报：Fable 5.2 与 Gemini 4 Carbon 上线，Copilot 应用支持 GHES 正式可用](https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9/) | 2026-11-16（GitHub Changelog；若为美西上午发布，可能中国窗口传播） | 产品更新 | Pro+/Max/Business/Enterprise 可用 Claude Fable 5.2 与 Gemini 4 Carbon（Fable 默认需数据保留，企业策略默认关闭）；Copilot 应用对 GitHub Enterprise Server 仓库/Issue/PR 正式可用（仍需 github.com 或 GHE.com 账号，云会话不支持 GHES）。VS Code 1.146 增加实验性 Inbox、模型对比和预览聊天窗口。 |
+| 模型下线 | [GitHub Copilot 如期弃用 Claude Opus 4.8、Claude Opus 5 与 GPT-5.6 Terra](https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/) | 2026-11-16 | 平台变更 | 建议改用 Claude Opus 5.5，或 GPT-6.1 Sol / GPT-6 Luna。年付个人用户仍可使用 Opus 4.8；Opus 5 已从选择器移除，但可用于运行时拒绝回退。需要立即检查工作流与企业模型策略。 |
+| 编码 Agent | [Claude Code 2.1.326：团队场景可开 Code Mode，并收紧沙箱写入与默认自动模式](https://code.claude.com/docs/en/changelog) | 2026-11-16 | 工具发布 | 官方 changelog 确认：agent teams 可启用 Code Mode；HIPAA 配置与策略未加载时更多会话默认进入 auto mode；macOS/Linux/WSL 沙箱默认禁止写入部分敏感家目录；新增 OTEL 主机属性与多项 MCP/权限修复。升级后应回归权限钩子与沙箱白名单。 |
+| 个人 Agent | [OpenClaw v2026.11.4：修复重连丢信与配置损坏，并新增委托变更审批与图像策略钩子](https://docs.openclaw.ai/releases/2026.11.4) | 2026-11-16（GitHub 约 04:17 UTC，12:17 Asia/Shanghai） | GitHub 发布 | 官方说明为补丁版：修复 Signal 重连后缓冲消息丢失、设置重载后回复丢失、memory/configuration 恢复副本损坏；新增 delegated change approval，并允许策略插件在图像进入模型前检查。125 个 PR、90 位贡献者。 |
+| 检索基础设施 | [Amazon S3 Vectors 支持向量 + 全文混合检索](https://aws.amazon.com/about-aws/whats-new/2026/11/s3-vectors-hybrid-search/) | 2026-11-16 | 云服务发布 | 同一 `QueryVectors` 调用中结合向量相似度与 BM25，并用 RRF 融合；全文可作为 metadata 写入并自动建索引。面向 RAG、Agent memory 与搜索；已在 S3 Vectors 所在商业区与 AWS 中国区提供。 |
+| RAG/表格 | [Amazon Bedrock Managed Knowledge Base 新增 tabular search](https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/) | 2026-11-16 | 技术博文/功能 | 可对 CSV/XLSX/XLS 在隔离沙箱中跑代码、跨全表计算，再与文档事实合并；适合“政策阈值 + 工作簿计算”这类多步分析，而不是把大表切成 RAG 片段。 |
+| 记忆检索 | [Bedrock Agentic Retrieve 可对接 AgentCore memory，做记忆感知检索](https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/) | 2026-11-16 | 技术博文/功能 | 在 `AgenticRetrieveStream` 中加 `memoryConfiguration` 后，服务负责存对话、抽长期事实、按用户隔离并在检索规划时使用；应用侧主要负责认证与传入 `userContext`。对多租户企业助手很有工程价值。 |
+| 科学智能体 | [NVIDIA 推出 Nemotron for Science：开放化学数据集与后训练配方](https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents) | 2026-11-16（SC26 同期官方新闻） | 产品/开源 | 基于 Nemotron 3.5 Super VL，配套 LitmusBench v0.2（约 5 万道化学推理题）及后训练配方；模型与数据集已在 Hugging Face 提供，也可在 128GB DGX Spark 本地运行。Argonne、Lila、Terray、Therna 等有应用案例。 |
+| HPC 硬件 | [NVIDIA 发布 Rubin HPC GPU，并将于 2028 年提供](https://blogs.nvidia.com/blog/rubin-hpc/) | 2026-11-16（SC26） | 硬件路线 | 面向科学仿真与分析，官方称单卡超过 5 万 CUDA 核心，并强化稀疏数据加速与第七代 NVLink。属于中期路线，不是即日可买硬件。 |
+| HPC 平台 | [NVIDIA 扩展 Vera CPU 机架级平台，面向科学发现](https://nvidianews.nvidia.com/news/nvidia-expands-vera-cpu-platform-to-accelerate-scientific-discovery) | 2026-11-16 | 硬件/软件 | 192 颗 Vera CPU、液冷、聚合峰值内存带宽超 200 TB/s；HPC SDK 26.11 现已提供，Fortran 编译器公开测试。机架预计 2027 年初由 Dell、HPE、Lenovo、Supermicro 出货。 |
+| 应用控制 | [Gemini 应用更新：可保留聊天记录但退出模型训练](https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/) | 2026-11-16 | 产品/隐私 | 新设置把“历史保留”与“用于训练”拆开；关闭新 History 设置后，未来对话仍会保存约两个月，用于回复、处理反馈与安全防护。未来数周全球推送。 |
+| 产品能力 | [Gemini 应用上线 66 种地区语音；Notebook 可将资料生成交互式站点](https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/) | 2026-11-16 | 产品更新 | 语音覆盖美式/英式/印度英语、印地语、巴西葡语、印尼语、韩语等；Notebook 网页端即日起对 18 岁以上用户（含 Workspace）开放“make me a site”。 |
+| API 水印 | [Anthropic：Opus 4.6/4.5、Sonnet 4.5、Haiku 4.5 在支持平台上默认带文本水印](https://platform.claude.com/docs/en/release-notes/overview) | 2026-11-16 | 平台变更 | 若请求把 `temperature`、`top_p` 或 `top_k` 设为非默认值，文本可能不再带水印。评估溯源、内容标识和采样策略时必须注意这一行为。 |
+| 耐久编排 | [Microsoft：Pydantic AI 智能体可接入 Azure Durable Task](https://techcommunity.microsoft.com/blog/appsonazureblog/introducing-azure-durable-task-for-pydantic-ai-agents/4571024) | 2026-11-16（Community Hub 标注；页脚另有 Updated Nov 10，时间戳不完全一致） | 工程集成 | 以 Capability 方式为已有 agent 做检查点，模型请求、函数工具和 MCP 调用可在 worker 重启后恢复，并支持人工审批暂停。适合长流程 Agent，但外部副作用仍需幂等。 |
+| 合作与技能 | [OpenAI 与 King’s Trust 启动 100 万英镑青年 AI 技能合作；并与 LVMH 媒体部门达成内容与工作流合作](https://openai.com/index/the-kings-trust-and-openai/) | 2026-11-16（官方日期；中国窗口传播） | 合作 | King’s Trust 计划 18 个月内帮助最多 2.5 万名青年（优先 NEET 群体）；LVMH 媒体部门将部署 ChatGPT Enterprise，并在 ChatGPT 中提供其出版物摘要与原文链接。 |
+
+### 技术文档与教程
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 表格 RAG | [Get answers from tables with tabular search in Amazon Bedrock Managed Knowledge Base](https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/) | 大表不宜切片检索；用检索定位文件，再在沙箱对原表执行代码；用 trace 审计读过的文件，并用 metadata 过滤范围 | 做企业知识库、财务/运营分析 Agent 的工程师 |
+| 记忆感知检索 | [Build memory-aware AI agents with Agentic Retrieve](https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/) | `memoryConfiguration` + `userContext`；长期事实抽取、按用户隔离、IAM 强制命名空间，避免应用层自己拼接记忆 | 多租户助手、对会话记忆有合规要求的平台团队 |
+| 混合检索 | [Amazon S3 Vectors now supports hybrid search](https://aws.amazon.com/about-aws/whats-new/2026/11/s3-vectors-hybrid-search/) | 向量召回 + BM25 + RRF；全文作为 metadata 自动索引；也可分开查询后自建排序 | RAG / Agent memory 基础设施负责人 |
+| 耐久 Agent | [Introducing Azure Durable Task for Pydantic AI agents](https://techcommunity.microsoft.com/blog/appsonazureblog/introducing-azure-durable-task-for-pydantic-ai-agents/4571024) | 用 Capability 接入，而不是重写框架；检查点可避免重复花 token；人工审批不必占用活动执行 | Python Agent / Azure 工作流开发者 |
+| Agent 产品哲学 | [LangChain：From tasks to goals](https://www.langchain.com/blog/from-tasks-to-goals) | 目标委托 vs 任务指令；需要任务可见性、工具权限、后台提问通道、反馈、触发器与停止规则、跨轮记忆 | Agent 产品经理与编排设计者 |
+| 编码 Agent 升级 | [Claude Code changelog 2.1.326](https://code.claude.com/docs/en/changelog) 与 [GitHub Copilot 弃用说明](https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/) | 模型迁移、默认 auto mode、沙箱写路径收紧、企业策略与数据保留 | 日常使用 Copilot / Claude Code 的开发与平台管理员 |
+| AWS 周观察 | [AWS Weekly Roundup（November 16, 2026）](https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/) | 本日发布的是周报，主体回顾上周：AWS Emulator 本地测 API、Nitro Sandboxes、Cognito token exchange、Claude Fable 5.2 上 Bedrock 等 | 需要补齐上周 AWS AI/Agent 动态的人 |
+
+### LangChain / Agent / LLM 工程相关进展
+**总体判断**：工程主线从“把一次任务跑完”转向“给 Agent 目标、记忆、检索和可恢复运行时”。LangChain 当天是概念与平台阐释，不是新框架版本；AWS 把表格计算和长期记忆收进检索循环，Microsoft 把检查点带进 Pydantic AI，OpenClaw / Claude Code 则在补消息可靠性、权限和沙箱。Code Graph、Loop Engineering、Skills 标准未见独立新发布。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| LangChain / LangGraph | 未检索到 11-16 的 LangChain / LangGraph GitHub 正式版发布（近期可见 LangGraph 1.2.22 发布于 11-14，langchain-xai 1.4.0 于 11-15）。当天官方博文为 [From tasks to goals](https://www.langchain.com/blog/from-tasks-to-goals)，以及 [Why we rebuilt LangSmith around the agent](https://www.langchain.com/blog/we-rebuilt-langsmith-around-the-agent)（阐释上周发布的 LangSmith Agent Platform：以 agent record 统一 build/run/improve/govern）。 | 不要把阐释博文当成当日新版本。若已用 LangSmith，可关注“一个 agent、多环境、具名负责人、按类型评价”的治理模型；目标型 Agent 必须先设计停止规则和反馈通道。 |
+| Langfuse | GitHub 发布 [v4.81.0](https://github.com/langfuse/langfuse/releases)（页面时间为 16 Nov 16:26，若为 UTC 则对应上海 11-17 00:26，属中国窗口）。功能包括 Vertex AI 作为 AI Gateway 提供方、Gemini decision-model 评估器、dataset item 按状态过滤、session 自定义视图持久化、Topics 快照/地图/散点图，以及对自有 OTEL 事件做定价与富化。 | 可作 11-17 日报的候选；若团队当日就要跟，优先看 Gateway 与 decision-model evaluator，而不是把 changelog 里 11-13 已预告的条目再当新发布。 |
+| Claude Code | 官方 2.1.326（11-16）：团队可开 Code Mode；默认自动模式扩大；沙箱写入范围收窄；MCP 托管配置与 OTEL 可观测性有补强。 | 升级后先回归敏感目录写入、权限钩子改写命令后是否仍留在沙箱，以及 HIPAA/托管策略下的默认模式。 |
+| Codex | OpenAI 明确：医疗 computer-use 已在 ChatGPT Work **和 Codex**、以及 API 中提供。GitHub 上 Codex CLI `0.171.0-alpha.6/7` 发布于 11-15 18:58–23:13 UTC（上海已是 11-16），`alpha.8–10` 则在 16:25 UTC 之后，已进入上海 11-17；预发布说明不完整，不作为稳定版事件。 | 把 Codex 视为医疗 computer-use 的官方入口之一；CLI 预发布需单独验证，不宜直接升级生产。 |
+| OpenClaw | [v2026.11.4](https://docs.openclaw.ai/releases/2026.11.4) 为补丁版，聚焦重连丢信、回复丢失、恢复副本损坏，并加入委托变更审批与图像策略检查。 | 自托管个人 Agent 的可靠性比新功能更关键；涉及记忆/配置恢复和视觉输入的部署应优先升级。 |
+| Hermes | [v0.23.2](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2) 发布于 2026-11-16T20:59:18Z（上海 11-17 04:59）。官方称这是自 v0.23.1 以来约 1989 个 PR 的稳定汇总，完整整理说明将随 v0.24.0 发布。 | **不计入 11-16 上海窗口核心事件**；可列入次日关注，且需等 v0.24.0 的完整发行说明再评估功能细节。 |
+| RAG / MCP / 向量库 | S3 Vectors 混合检索、Bedrock 表格检索与记忆感知检索是当天最硬的基础设施更新。MCP 无独立标准新版本；Microsoft 文档只是把 MCP 调用纳入 Durable Task 检查点。 | 混合检索和“检索规划 + 记忆/表格工具”比再叠一层向量库更值得跟。 |
+| Skills | 未找到 Agent Skills / Claude Skills / Codex Skills / Cursor Skills 的 11-16 标准或产品发布。OpenClaw 仅修复生成 skill 目录导致的误报，Langfuse 有技能编辑菜单的小修复，均非规范更新。 | 维持现有技能目录即可，不必当成新一波 Skills 生态发布。 |
+| Code Graph | 未找到 11-16 可核验的代码知识图谱产品、论文或官方发布。 | 专项结论为无更新。 |
+| Loop Engineering | 未找到以 Loop Engineering 为名的 11-16 发布。最接近的是 LangChain《From tasks to goals》中关于心跳、cron、事件唤醒与停止规则的讨论，属概念阐释。 | 可作设计参考，但不要写成新范式发布。 |
+| Spring AI | 未找到 11-16 官方发布。最近可见的是 11-09 的 Spring AI 2.1.0-RC2。 | 专项结论为无更新。 |
+| Spring Alibaba AI | 未找到 11-16 的 GitHub Release 或其他官方发布。 | 专项结论为无更新。 |
+
+### 值得深入阅读的资料
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 高 | [OpenAI：Advancing computer-use agents for healthcare teams](https://openai.com/index/advancing-computer-use-for-healthcare-teams/) | 把 computer-use 从演示落到安全评测、成本、审批和审计；对受监管行业 Agent 设计有直接参考。 |
+| 高 | [加州司法部起诉 OpenAI 新闻稿](https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over) 与 [OpenAI 嵌入式评估声明](https://openai.com/index/our-first-phase-of-embedded-assessments) | 同一天出现“监管追责”和“引入独立评估”，适合对照理解 Agent 失控风险的披露、监控与第三方验证。 |
+| 高 | [BIS 远程访问规则新闻稿](https://media.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology) 与 [TechCrunch 解读](https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/) | 对依赖跨境算力、多地区推理和数据中心业务的团队，这是当天最重要的合规信号。 |
+| 高 | [阿里云：Qwen4-Max 新闻稿](https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max) 与 [IT之家报道](https://www.ithome.com/1/027/512.htm) | 中文社区当天最重要的模型正式上线；IT之家补充了架构与定价细节，可与官方新闻稿交叉阅读。 |
+| 中 | [LangChain：From tasks to goals](https://www.langchain.com/blog/from-tasks-to-goals) | 把“目标型 Agent”需要的产品机制写得很清楚，尤其是停止规则和记忆让反馈复利。 |
+| 中 | [Bedrock tabular search](https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/) 与 [memory-aware Agentic Retrieve](https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/) | 两篇都是可上手的官方教程，分别解决“表被切片后算不准”和“记忆与权限检索如何收进同一请求”。 |
+| 中 | [NVIDIA Nemotron for Science](https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents) | 若关注科学智能体，可直接看开放模型、LitmusBench 与后训练配方，而不是只看 2028 年的 Rubin HPC。 |
+| 低（观察） | Hugging Face [Daily Papers（2026-11-16）](https://huggingface.co/papers/date/2026-11-16) | 当天首页收录了多篇 Agent / 编码 / 机器人相关论文，但抽查若干条目的 arXiv submitted 日期为 11-11 至 11-13，**不能当作 11-16 新投稿**。仅作发现列表，引用前必须核验提交/修订日期。 |
+
+### 来源清单
+- 检索范围：2026-11-16 00:00:00 到 2026-11-16 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, oag.ca.gov, theverge.com, techcrunch.com, media.bis.gov, arstechnica.com, research-and-innovation.ec.europa.eu, alibabacloud.com, ithome.com, internlm.github.io, finance.sina.com.cn, jiqizhixin.com（经转载核验）, github.blog, code.claude.com, docs.openclaw.ai, github.com, aws.amazon.com, nvidianews.nvidia.com, blogs.nvidia.com, blog.google, platform.claude.com, techcommunity.microsoft.com, langchain.com, qbitai.com, huggingface.co
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方 | Strengthening the fight against online child sexual abuse with new tools and support | 2026-11-16（中国窗口） | https://openai.com/index/strengthening-online-child-safety/ |
+| 媒体 | OpenAI releases a new image classifier and ChatGPT warnings to combat CSAM | 2026-11-16 9:00 AM PST（中国窗口） | https://techcrunch.com/2026/11/16/openai-releases-a-new-image-classifier-and-chatgpt-warnings-to-combat-csam/ |
+| 官方 | More ways to move care forward with ChatGPT for Healthcare | 2026-11-16（中国窗口） | https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare |
+| 官方 | Advancing computer-use agents for healthcare teams | 2026-11-16（中国窗口） | https://openai.com/index/advancing-computer-use-for-healthcare-teams/ |
+| 官方 | Our first phase of embedded assessments | 2026-11-16（中国窗口） | https://openai.com/index/our-first-phase-of-embedded-assessments |
+| 官方 | The King’s Trust and OpenAI launch £1m partnership | 2026-11-16（中国窗口） | https://openai.com/index/the-kings-trust-and-openai/ |
+| 官方 | LVMH’s Media Division announces strategic partnership with OpenAI | 2026-11-16（中国窗口） | https://openai.com/index/lvmh-media-division-partnership |
+| 官方 | It’s the Golden State, not the Wild West: Attorney General Bonta Sues OpenAI… | 2026-11-16（中国窗口） | https://oag.ca.gov/news/press-releases/it%E2%80%99s-golden-state-not-wild-west-attorney-general-bonta-sues-openai-over |
+| 媒体 | California sues OpenAI over rogue AI hacking incidents | 2026-11-16 8:46 PM UTC（中国窗口） | https://www.theverge.com/ai-artificial-intelligence/1034815/california-openai-hugging-face-lawsuit |
+| 媒体 | California state AG sues OpenAI over rogue agent incidents | 2026-11-16 12:07 PM PST（中国窗口） | https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/ |
+| 官方 | BIS Issues Rule Addressing Remote Access to American Super Intelligence Technology | 2026-11-16 | https://media.bis.gov/press-release/bis-issues-rule-addressing-remote-access-american-super-intelligence-technology |
+| 媒体 | US tightens AI chip export controls to deter Chinese companies from accessing compute remotely | 2026-11-16 7:02 AM PST | https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/ |
+| 媒体 | US moves to cut China’s remote access to AI chips | 2026-11-16 | https://arstechnica.com/tech-policy/2026/11/us-moves-to-cut-chinas-remote-access-to-ai-chips/ |
+| 官方 | AI requires rigorous safeguards and rules that keep pace with technological advances | 2026-11-16 | https://research-and-innovation.ec.europa.eu/news/all-research-and-innovation-news/ai-requires-rigorous-safeguards-and-rules-keep-pace-technological-advances-experts-tell-european-2026-11-16_en |
+| 官方 | Alibaba Unveils Qwen4-Max | 2026-11-16 | https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max |
+| 媒体 | 阿里通义千问 Qwen4-Max 正式上线 | 2026-11-16 10:07 Asia/Shanghai | https://www.ithome.com/1/027/512.htm |
+| 官方 | 书生 S2.1 Flash | 2026-11-16（页面未标时刻，与机器之心报道同日） | https://internlm.github.io/Sage-S2.1-Flash/ |
+| 媒体（转载机器之心） | 让AI成为自主进化的科学家！书生-S2.1 Flash登顶机器学习工程基准 | 2026-11-16 19:37 Asia/Shanghai | https://finance.sina.com.cn/roll/2026-11-16/doc-iniyxufc2704181.shtml |
+| 官方 | GitHub Copilot weekly releases — November 9 | 2026-11-16 | https://github.blog/changelog/2026-11-16-github-copilot-weekly-releases-november-9/ |
+| 官方 | GitHub Copilot models deprecated on November 16, 2026 | 2026-11-16 | https://github.blog/changelog/2026-11-16-github-copilot-models-deprecated-on-november-16-2026/ |
+| 官方 | Claude Code changelog（2.1.326） | 2026-11-16 | https://code.claude.com/docs/en/changelog |
+| 官方 | OpenClaw v2026.11.4 | 2026-11-16 | https://docs.openclaw.ai/releases/2026.11.4 |
+| 官方 | Amazon S3 Vectors now supports hybrid search | 2026-11-16 | https://aws.amazon.com/about-aws/whats-new/2026/11/s3-vectors-hybrid-search/ |
+| 官方 | Get answers from tables with tabular search in Amazon Bedrock Managed Knowledge Base | 2026-11-16 | https://aws.amazon.com/blogs/machine-learning/get-answers-from-tables-with-tabular-search-in-amazon-bedrock-managed-knowledge-base/ |
+| 官方 | Build memory-aware AI agents with Agentic Retrieve | 2026-11-16 | https://aws.amazon.com/blogs/machine-learning/build-memory-aware-ai-agents-with-agentic-retrieve-on-amazon-bedrock-managed-knowledge-base/ |
+| 官方 | AWS Weekly Roundup（November 16, 2026） | 2026-11-16（内容多为上周回顾） | https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-nitro-sandboxes-aws-emulator-and-more-november-16-2026/ |
+| 官方 | NVIDIA Introduces Nemotron for Science | 2026-11-16 | https://nvidianews.nvidia.com/news/nvidia-introduces-nemotron-for-science-to-accelerate-discoveries-with-agents |
+| 官方 | NVIDIA Announces Rubin HPC | 2026-11-16 | https://blogs.nvidia.com/blog/rubin-hpc/ |
+| 官方 | NVIDIA Expands Vera CPU Platform to Accelerate Scientific Discovery | 2026-11-16 | https://nvidianews.nvidia.com/news/nvidia-expands-vera-cpu-platform-to-accelerate-scientific-discovery |
+| 官方 | Gemini app updates: New chat history and training controls | 2026-11-16 | https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/ |
+| 官方 | Gemini app adds new regional voices | 2026-11-16 | https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/ |
+| 官方 | Turn Gemini Notebook sources into interactive sites | 2026-11-16 | https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/ |
+| 官方 | Claude Platform release notes（文本水印） | 2026-11-16 | https://platform.claude.com/docs/en/release-notes/overview |
+| 官方 | Introducing Azure Durable Task for Pydantic AI agents | 2026-11-16（页脚另有 Updated Nov 10） | https://techcommunity.microsoft.com/blog/appsonazureblog/introducing-azure-durable-task-for-pydantic-ai-agents/4571024 |
+| 官方 | From tasks to goals | 2026-11-16 | https://www.langchain.com/blog/from-tasks-to-goals |
+| 官方 | Why we rebuilt LangSmith around the agent | 2026-11-16（阐释上周发布） | https://www.langchain.com/blog/we-rebuilt-langsmith-around-the-agent |
+| 官方 | Securing Muse: New Tools for Bug Bounty Researchers | 2026-11-16 | https://bugbounty.meta.com/blog/securing-muse/ |
+| 媒体 | 量子位：2026 人工智能年度榜单征集当日截止 | 2026-11-16 | https://www.qbitai.com/2026/11/510382.html |
+| 索引 | Hugging Face Daily Papers（2026-11-16） | 2026-11-16（收录日，不等于投稿日） | https://huggingface.co/papers/date/2026-11-16 |
+| GitHub（中国窗口，未列入核心事件） | Langfuse v4.81.0 | 2026-11-16 16:26（若为 UTC=上海 11-17） | https://github.com/langfuse/langfuse/releases |
+| GitHub（中国窗口，未列入核心事件） | Hermes Agent v0.23.2 | 2026-11-16T20:59:18Z（上海 11-17） | https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2 |
+
 ## 2026-11-15
 
 ### 今日总览
