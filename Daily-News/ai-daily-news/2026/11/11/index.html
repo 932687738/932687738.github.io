@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-11 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-11</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-11</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：中国实验室同日放出可试用的新旗舰：阿里云百炼 Token Plan 在 10:00（UTC+8）上线 Qwen4-Max-Preview（百万上下文、预览至 11 月 25 日 24:00），百度发布 ERNIE 5.5 Flash Preview（280B&#x2F;14B，权重将以 Apache 2.0 开源），MiniMax 开源 H3-Image 并把 4K 生成压到 10 秒内；工具链上，Langfuse 为 AI Gateway 补上自定义 Base URL、OpenAI Decisions 与 MCP 批量评估，OpenClaw 2026.11.3 与 Codex rust-v0.167.1 的 GitHub Published 时间落入本日中国时区窗口，Google Cloud 则把 Gemini 4 Carbon 以预览形式接进 CodeMender。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>阿里云百炼&#x2F;通义文档、文心官方发布页、MiniMax Research、Langfuse changelog、OpenClaw &#x2F; Codex GitHub Releases、Google Cloud 发布说明、Claude Code 官方 changelog、Hermes Releases、Hugging Face Daily Papers、Spring AI &#x2F; Spring Alibaba AI &#x2F; LangChain·LangGraph &#x2F; Code Graph &#x2F; Loop Engineering &#x2F; skills 专项检索、政策监管检索</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）旗舰模型把「百万上下文 + 长程 Agent 任务」写成可订阅&#x2F;可开源的产品形态，而不是只发评测数字；2）可观测性把网关、评测模型和 MCP 连成同一条控制面，方便把流量打到内部代理并回放历史轨迹；3）编码 Agent 运行时继续补安全与交接：子任务隔离、凭证收口、沙箱构建；4）开源图像生成把 4K 速度与多参考图作为默认能力</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Qwen4-Max-Preview 仅 Token Plan、预览期结束后下线，迁移时注意思考与最终回答共享 <code>max_tokens</code> 预算；ERNIE 5.5 Flash Preview 仍是后训练中间检查点，权重开源节点与官方页「soon &#x2F; Apache 2.0」表述；Langfuse AI Gateway 的自定义 Base URL 与 <code>/openai/v1/decisions</code>；OpenClaw 2026.11.3 的私有子任务结果、取消后交接与凭证隔离；CodeMender v0.21.0 沙箱隔离及 <code>--model gemini-4-carbon</code>；H3-Image 的开源权重与区域&#x2F;商用许可限制需回仓库 LICENSE 核对</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：官方 changelog 截至核验时最新为 2026-11-10 的 2.1.322，未发现可确认属于 2026-11-11 的新版本。Codex：<code>rust-v0.167.1</code> 于 2026-11-10 21:32:01 UTC（2026-11-11 05:32 Asia&#x2F;Shanghai）发布，发行说明仅给出与 0.167.0 的 compare 链接，不扩写未列出的功能点。OpenClaw：<code>v2026.11.3</code> 于 2026-11-10 18:53:07 UTC（2026-11-11 02:53 Asia&#x2F;Shanghai）发布，焦点是更安全的任务交接与凭证隔离。Hermes：未发现 11-11 新版本（已知最近版本 0.23.1 标注 2026-11-10）。Langfuse：官方 changelog 同日三条。LangChain&#x2F;LangGraph、Spring AI、Spring Alibaba AI、Code Graph、Loop Engineering、Agent Skills 市场：未发现可确认属于该日的官方发布。Gemini 4 Carbon 面向开发者与企业的 GA 官方英文博客标注 2026-11-10，中文「Google 黑板报」标注 2026-11-11，按相邻日期&#x2F;中国时间窗口记录，不作为本日新发布主条。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>国产旗舰模型</td>
+<td><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/model-studio/qwen4-max-preview">qwen4-max-preview（阿里云百炼文档）</a></td>
+<td>2026-11-11</td>
+<td>官方文档&#x2F;产品上线</td>
+<td>预览期 11-11 10:00 至 11-25 24:00（UTC+8），仅 Token Plan、不支持按量；1M 上下文，默认思考，兼容 OpenAI &#x2F; Anthropic API；思考与最终回答共享输出预算</td>
+</tr>
+<tr>
+<td>开源模型</td>
+<td><a target="_blank" rel="noopener" href="https://ernie.baidu.com/release/ernie-5-5-flash-preview/">Introducing ERNIE 5.5 Flash Preview</a></td>
+<td>2026-11-11</td>
+<td>官方发布</td>
+<td>基于此前 Flash Base 的首个后训练预览：总参 280B、激活 14B、1M 上下文，强调编程、3D、知识工作与内容创作；API 上线千帆，权重将以 Apache 2.0 开源。官方写明仍是中间检查点，后训练未结束</td>
+</tr>
+<tr>
+<td>开源图像模型</td>
+<td><a target="_blank" rel="noopener" href="https://www.minimax.io/blog/minimax-h3-image">MiniMax H3-Image: Bringing 4K Image Generation into the 10-Second Era</a></td>
+<td>2026-11-11</td>
+<td>官方发布</td>
+<td>基于 H3 的开源权重图像生成&#x2F;编辑模型，宣称 4K（4096×4096）10 秒内出图、最多 16 张参考图；同时提供 API、MiniMax Code 与 Hailuo。权重与许可以 Hugging Face &#x2F; LICENSE 为准</td>
+</tr>
+<tr>
+<td>可观测性</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-11-ai-gateway-custom-base-url">Route AI Gateway connections through your own endpoint</a></td>
+<td>2026-11-11</td>
+<td>官方 changelog</td>
+<td>OpenAI &#x2F; Anthropic 连接可把请求打到自定义 Base URL（如内部 LLM 代理），需遵循官方允许的 host 规则</td>
+</tr>
+<tr>
+<td>可观测性</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-11-ai-gateway-openai-decisions">Call decision models through the AI Gateway</a></td>
+<td>2026-11-11</td>
+<td>官方 changelog</td>
+<td>新增 <code>POST /openai/v1/decisions</code>，支持 OpenAI 或 Vercel AI Gateway 连接，调用按 generation 追踪</td>
+</tr>
+<tr>
+<td>可观测性 &#x2F; MCP</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-11-default-evaluation-model-and-batch-evaluation-via-mcp">Set the default evaluation model and run batch evaluations via MCP</a></td>
+<td>2026-11-11</td>
+<td>官方 changelog</td>
+<td>MCP 工具可读写项目默认评测模型，并对已有数据跑批量评估，便于 Agent 换 judge 后回放上周生产轨迹</td>
+</tr>
+<tr>
+<td>开源 Agent 运行时</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.11.3">openclaw 2026.11.3</a></td>
+<td>2026-11-11（Published 2026-11-10 18:53:07 UTC，落入本日 Asia&#x2F;Shanghai 窗口）</td>
+<td>开源发布</td>
+<td>私有子任务结果不再混入流式回复、取消子任务后可交接、工具失败不再被当成成功；同时收紧凭证隔离、沙箱图片访问与工作区证书校验。发行说明写明无新配置项</td>
+</tr>
+<tr>
+<td>编码 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.167.1">Codex rust-v0.167.1</a></td>
+<td>2026-11-11（Published 2026-11-10 21:32:01 UTC，落入本日 Asia&#x2F;Shanghai 窗口）</td>
+<td>开源发布</td>
+<td>0.167.0 之后的补丁发布；GitHub 发行页只提供 Full Changelog compare 链接，本条不推断具体修复项</td>
+</tr>
+<tr>
+<td>开发者工具 &#x2F; 安全</td>
+<td>Google Cloud 发布说明：CodeMender v0.21.0 与 Gemini 4 Carbon in CodeMender（Preview）</td>
+<td>2026-11-11</td>
+<td>官方发布说明</td>
+<td>沙箱内执行 <code>cm build</code> &#x2F; <code>cm fix</code>、只读挂载主机工具链、隔离 Git hook 与缓存，并为静默会话设置 30 分钟超时；可用 <code>--model gemini-4-carbon</code>。详见 <a target="_blank" rel="noopener" href="https://docs.cloud.google.cn/release-notes">Google Cloud 发布说明（2026-11-11）</a></td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>模型接入</td>
+<td><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/model-studio/qwen4-max-preview">Qwen4-Max-Preview 百炼文档</a></td>
+<td>Token Plan 专用 Base URL、思考模式与 <code>max_tokens</code> 预算合并、多轮需回传 <code>reasoning_content</code></td>
+<td>准备试用预览旗舰或从旧 Qwen API 迁移的开发者</td>
+</tr>
+<tr>
+<td>网关与评测</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-11-ai-gateway-custom-base-url">Langfuse 2026-11-11 changelog（自定义 Base URL &#x2F; Decisions &#x2F; MCP 评估）</a></td>
+<td>内部代理、决策接口追踪、用 MCP 改默认 judge 并批跑历史数据</td>
+<td>已接入 Langfuse AI Gateway 或要把评测交给 Agent 的平台团队</td>
+</tr>
+<tr>
+<td>开源图像</td>
+<td><a target="_blank" rel="noopener" href="https://www.minimax.io/blog/minimax-h3-image">H3-Image 官方博客</a> 与 <a target="_blank" rel="noopener" href="https://huggingface.co/MiniMaxAI/MiniMax-H3-Image">Hugging Face 权重</a></td>
+<td>开源权重、4K 速度、多参考图；部署与许可需读仓库 LICENSE</td>
+<td>要在本地或 API 接入开源图像模型的工程与创意团队</td>
+</tr>
+<tr>
+<td>论文入口</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-11-11">Hugging Face Daily Papers（2026-11-11）</a></td>
+<td>当日列表出现 Evidence-Linked Memory、World In-Context Learning for Agentic Robot Manipulation、MMDM、FINCOSMOS、LEASH、Micius-Flash 等 Agent &#x2F; 机器人 &#x2F; 决策评估方向论文</td>
+<td>需要按日浏览论文标题与入口的研究与工程同学（本条未逐篇精读全文）</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：本日更值得落地的是「网关可指到自己的代理 + 用 MCP 回放评测」，以及 OpenClaw 把子任务交接和凭证隔离写进稳定版；LangChain &#x2F; LangGraph 本身未发现可核验的当日新版本。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Langfuse AI Gateway</td>
+<td>自定义 Base URL、Decisions 接口、MCP 管理默认评测模型并批跑</td>
+<td>把官方 API 兼容层留在网关内，评测模型变更后先对历史 observation 回放，再切生产</td>
+</tr>
+<tr>
+<td>OpenClaw 运行时安全</td>
+<td>私有子任务、失败可见、认证截止、凭证按连接隔离</td>
+<td>多插件 &#x2F; 多凭证网关必须把缓存结果和子进程环境与凭据绑定，避免串租户</td>
+</tr>
+<tr>
+<td>长上下文旗舰预览</td>
+<td>Qwen4-Max-Preview 与 ERNIE 5.5 Flash Preview 都把 1M 上下文和长程任务写进产品说明</td>
+<td>预览模型要单独跟踪下线日期与计费通道（Token Plan &#x2F; 千帆），不要按旧的按量假设做容量规划</td>
+</tr>
+<tr>
+<td>LangChain &#x2F; LangGraph &#x2F; Spring AI &#x2F; Code Graph &#x2F; Loop Engineering</td>
+<td>专项检索未发现可确认属于 2026-11-11 的官方发布</td>
+<td>无新版本时不要用过期发行说明填日报</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/model-studio/qwen4-max-preview">qwen4-max-preview 文档</a></td>
+<td>预览期、接入方式和输出预算变化会直接影响现有客户端是否被截断</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://ernie.baidu.com/release/ernie-5-5-flash-preview/">ERNIE 5.5 Flash Preview 官方页</a></td>
+<td>讲清能力边界与「后训练尚未结束」的定位，避免把预览检查点当成最终开源件</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-11-default-evaluation-model-and-batch-evaluation-via-mcp">Langfuse MCP 批量评估 changelog</a></td>
+<td>把「换 judge」和「回放生产轨迹」收成 Agent 可调用的工具</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.11.3">OpenClaw 2026.11.3 Release</a></td>
+<td>对正在跑 Gateway &#x2F; 子任务编排的团队，交接与凭证修复比新功能更紧急</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.minimax.io/blog/minimax-h3-image">MiniMax H3-Image</a></td>
+<td>看开源 4K 图像模型的产品化口径，落地前核对许可与区域限制</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-11-11">HF Daily Papers 2026-11-11</a></td>
+<td>作为当日论文索引，而不是已精读清单</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-11 00:00:00 到 2026-11-11 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：help.aliyun.com, ernie.baidu.com, minimax.io, huggingface.co, langfuse.com, github.com, docs.cloud.google.cn, code.claude.com, blog.google, china.googleblog.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方文档</td>
+<td>qwen4-max-preview</td>
+<td>2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://help.aliyun.com/zh/model-studio/qwen4-max-preview">https://help.aliyun.com/zh/model-studio/qwen4-max-preview</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Introducing ERNIE 5.5 Flash Preview</td>
+<td>2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://ernie.baidu.com/release/ernie-5-5-flash-preview/">https://ernie.baidu.com/release/ernie-5-5-flash-preview/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>MiniMax H3-Image</td>
+<td>2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://www.minimax.io/blog/minimax-h3-image">https://www.minimax.io/blog/minimax-h3-image</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>MiniMax-H3-Image 权重</td>
+<td>2026-11-11（随官方博客）</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/MiniMaxAI/MiniMax-H3-Image">https://huggingface.co/MiniMaxAI/MiniMax-H3-Image</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Langfuse AI Gateway custom base URL</td>
+<td>2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-11-ai-gateway-custom-base-url">https://langfuse.com/changelog/2026-11-11-ai-gateway-custom-base-url</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Langfuse AI Gateway OpenAI Decisions</td>
+<td>2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-11-ai-gateway-openai-decisions">https://langfuse.com/changelog/2026-11-11-ai-gateway-openai-decisions</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Langfuse default evaluation model and batch evaluation via MCP</td>
+<td>2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-11-default-evaluation-model-and-batch-evaluation-via-mcp">https://langfuse.com/changelog/2026-11-11-default-evaluation-model-and-batch-evaluation-via-mcp</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>openclaw 2026.11.3</td>
+<td>2026-11-11（Published 2026-11-10T18:53:07Z，中国时间窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.11.3">https://github.com/openclaw/openclaw/releases/tag/v2026.11.3</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Codex rust-v0.167.1</td>
+<td>2026-11-11（Published 2026-11-10T21:32:01Z，中国时间窗口）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.167.1">https://github.com/openai/codex/releases/tag/rust-v0.167.1</a></td>
+</tr>
+<tr>
+<td>官方发布说明</td>
+<td>Google Cloud release notes（CodeMender &#x2F; Carbon preview）</td>
+<td>2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://docs.cloud.google.cn/release-notes">https://docs.cloud.google.cn/release-notes</a></td>
+</tr>
+<tr>
+<td>官方 changelog</td>
+<td>Claude Code changelog（核验无 11-11 新版本）</td>
+<td>检索于 2026-11-12；页面最新条目为 2026-11-10 的 2.1.322</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">https://code.claude.com/docs/en/changelog</a></td>
+</tr>
+<tr>
+<td>论文列表</td>
+<td>Hugging Face Daily Papers</td>
+<td>2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-11-11">https://huggingface.co/papers/date/2026-11-11</a></td>
+</tr>
+<tr>
+<td>官方发布（相邻日期&#x2F;中国时间窗口传播，不作为本日主条）</td>
+<td>Gemini 4 Carbon is now available</td>
+<td>官方英文博客 2026-11-10；中文黑板报标注 2026-11-11</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/">https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

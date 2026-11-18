@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-05 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-05</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-05</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：周四主线是「对齐网络安全 Agent + 视频生成降本加长 + 企业治理旋钮」——OpenAI 发布 <a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-cyber">GPT‑6 Cyber</a>（ExploitGym 相对提升约 51%，Critical 级网络能力，Daybreak Red&#x2F;Blue）；Google 推出 <a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">Gemini Omni 1.2 Flash</a>（原生 15 秒视频、多轮编辑、降价约 30%）；Anthropic Console 增加 <a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">IP allowlist &#x2F; 全处签出</a>（beta）；Hugging Face 发布 <a target="_blank" rel="noopener" href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation">NVIDIA Cosmos 3</a> 四款开源交互仿真权重。专项：LangChain 生态有 langchain-core <strong>1.7.6</strong>（11-05）信号；Claude Code&#x2F;Codex&#x2F;OpenClaw&#x2F;Hermes&#x2F;Spring AI&#x2F;SAA&#x2F;Code Graph&#x2F;Loop <strong>无 11-05 新正式 CLI&#x2F;框架版</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI Index、Google DeepMind&#x2F;Cloud 博客、Claude Platform release notes、HF&#x2F;NVIDIA Cosmos、openai-node release、LangChain、专项主题</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）防御向网络 Agent 进入 Critical 能力带并强调 scope alignment；2）视频生成强调更长镜头、多轮改与单价下降；3）企业 API 治理补 IP 允许列表与远程强制登出；4）具身&#x2F;驾驶世界模型继续开源权重</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Daybreak 申请与沙箱红队流程；Omni 1.2 Flash 15s 多轮改广告素材；Console 启用 IP allowlist；评估 Cosmos3-Nano-* 对驾驶&#x2F;双臂仿真数据管线</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：无 11-05 新版（仍 2.1.318）。Codex：无新 stable；openai-node <strong>v7.51.0</strong> 含图像 complexity&#x2F;GIF&#x2F;SVG 与 GPT-6 Rosalind 目录项。OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; spring-ai-alibaba &#x2F; Code Graph &#x2F; Loop：未发现 11-05 新正式发布。Langfuse：无 11-05 新 changelog（承接 11-04 Gateway）。LangChain&#x2F;LangGraph：langchain-core <strong>1.7.6</strong>（11-05）。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>网络安全 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-cyber">GPT‑6 Cyber</a></td>
+<td>2026-11-05</td>
+<td>官方发布</td>
+<td>ExploitGym 48.5% vs 32.1%；越界利用抑制显著提升；Firefox&#x2F;Linux 实战披露；Daybreak Red 受限开放</td>
+</tr>
+<tr>
+<td>视频生成</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">Gemini Omni 1.2 Flash</a></td>
+<td>2026-11-05</td>
+<td>官方博客</td>
+<td>原生最长 15s；多轮对话编辑；相对 1.1 降价约 30%（720p $0.07&#x2F;s）</td>
+</tr>
+<tr>
+<td>平台治理</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">Claude Platform RN 11-05</a></td>
+<td>2026-11-05</td>
+<td>官方 Release Notes</td>
+<td>Console IP allowlist（beta）；Admin API 将成员从 Claude 全处签出（beta）</td>
+</tr>
+<tr>
+<td>世界模型</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation">NVIDIA Cosmos 3 Open Models</a></td>
+<td>2026-11-05</td>
+<td>HF 博客</td>
+<td>Transfer-Auto &#x2F; Sim-Auto &#x2F; Sim-Transfer &#x2F; Sim-Bimanual；OpenMDW1.1</td>
+</tr>
+<tr>
+<td>SDK</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/openai-node/releases/tag/v7.51.0">openai-node v7.51.0</a></td>
+<td>2026-11-05</td>
+<td>GitHub Release</td>
+<td>图像 complexity&#x2F;GIF&#x2F;SVG；居住地选项；模型目录扩展</td>
+</tr>
+<tr>
+<td>Agent 框架</td>
+<td>langchain-core 1.7.6</td>
+<td>2026-11-05</td>
+<td>开源发布</td>
+<td>LangChain 核心库日更（对照生产锁版本）</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>网络 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-cyber">GPT‑6 Cyber</a></td>
+<td>scope alignment、Daybreak Blue&#x2F;Red、系统卡与滥用监测</td>
+<td>安全研究、平台治理</td>
+</tr>
+<tr>
+<td>视频 API</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">Omni 1.2 Flash</a></td>
+<td>15s、多轮改、参考一致性、定价</td>
+<td>创意工程、广告&#x2F;电商视频</td>
+</tr>
+<tr>
+<td>企业治理</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">Claude Platform RN</a></td>
+<td>IP allowlist、全处签出</td>
+<td>安全运营、合规</td>
+</tr>
+<tr>
+<td>仿真数据</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation">Cosmos 3</a></td>
+<td>多视角驾驶、LiDAR、双臂动作→视频</td>
+<td>自动驾驶、机器人</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：能力叙事从「写代码」扩到「对齐的进攻性安全研究」与「可编辑长视频」；框架侧仅有 core 小版本信号，工程重点在访问控制与沙箱。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>GPT‑6 Cyber</td>
+<td>Critical + Daybreak</td>
+<td>只在授权环境跑；强制 IP allowlist 与人工复核</td>
+</tr>
+<tr>
+<td>Omni 1.2</td>
+<td>15s + 多轮 + 降价</td>
+<td>用低清草稿+多轮改再升采样，控成本</td>
+</tr>
+<tr>
+<td>Claude 治理</td>
+<td>IP allowlist &#x2F; 远程签出</td>
+<td>泄露 Key 时缩小可用网络面</td>
+</tr>
+<tr>
+<td>Cosmos 3</td>
+<td>四开源检查点</td>
+<td>先按传感器&#x2F;构型 post-train，再蒸馏流式 Sim</td>
+</tr>
+<tr>
+<td>LangChain core 1.7.6</td>
+<td>小版本</td>
+<td>锁依赖并跑回归；勿当重大 API 变更</td>
+</tr>
+<tr>
+<td>Claude Code &#x2F; Codex CLI &#x2F; Hermes &#x2F; OpenClaw &#x2F; Spring AI &#x2F; SAA &#x2F; Code Graph &#x2F; Loop</td>
+<td>无新正式版</td>
+<td>继续跟踪 changelog</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-cyber">GPT‑6 Cyber</a></td>
+<td>对齐网络 Agent 的能力、边界与防护设计一次讲清</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">Gemini Omni 1.2 Flash</a></td>
+<td>视频生成生产参数与定价</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">Claude Platform 11-05</a></td>
+<td>企业侧立即可开的治理开关</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation">Cosmos 3</a></td>
+<td>开源世界模型与后训练配方</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/openai-node/releases/tag/v7.51.0">openai-node v7.51.0</a></td>
+<td>跟上 Images 2.6 API 表面</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-05 00:00:00 到 2026-11-05 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, blog.google, platform.claude.com, huggingface.co, github.com</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>GPT‑6 Cyber</td>
+<td>2026-11-05</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-gpt-6-cyber">https://openai.com/index/introducing-gpt-6-cyber</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>Gemini Omni 1.2 Flash</td>
+<td>2026-11-05</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/">https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/</a></td>
+</tr>
+<tr>
+<td>官方 Release Notes</td>
+<td>Claude Platform November 5, 2026</td>
+<td>2026-11-05</td>
+<td><a target="_blank" rel="noopener" href="https://platform.claude.com/docs/en/release-notes/overview">https://platform.claude.com/docs/en/release-notes/overview</a></td>
+</tr>
+<tr>
+<td>技术博客</td>
+<td>NVIDIA Cosmos 3 Open Models</td>
+<td>2026-11-05</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation">https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>openai-node v7.51.0</td>
+<td>2026-11-05</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/openai-node/releases/tag/v7.51.0">https://github.com/openai/openai-node/releases/tag/v7.51.0</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

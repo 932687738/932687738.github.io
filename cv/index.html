@@ -708,6 +708,16 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                   
                     
                     
+                      <li><strong>MCP</strong>：熟悉 Spring AI MCP 的 Tool 装配。按只读、写入、诊断分包，统一命名、入参 Schema 和副作用标注；身份走请求头，Tool 只转调既有接口并复用数据权限。</li>
+                    
+                  
+                    
+                    
+                      <li><strong>Agent 编排</strong>：基于 LangChain4j 做工具调用与 ReAct。Skill 绑定实时工具目录，主控做意图理解与单助理委派；Redis 存会话上下文，MySQL 存公开历史。写操作人工确认后按固定参数执行，身份取自 JWT，并用 Langfuse 追踪调用。</li>
+                    
+                  
+                    
+                    
                       <li><strong>AI工具</strong>：熟练使用 Claude Code、Cursor 等 AI 工具辅助编码，AI出码率89%</li>
                     
                   
@@ -758,6 +768,16 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                   
                   
                     <p>负责 SaaS 化改造与上线，完成检索拆分、数据归档与慢 SQL 治理，保障单量增长期间的在线作业。</p>
+                  
+                
+                  
+                  
+                    <p>负责仓储 MCP 接入。把主数据、出入库、工单和订单池规则收口为标准 Tool，统一命名与副作用标注，身份走请求头并复用原有数据权限。</p>
+                  
+                
+                  
+                  
+                    <p>负责实施助理。按 Skill 绑定工具并做意图委派，会话上下文放 Redis、公开历史落 MySQL；规则改写经人工确认后执行，调用链用 Langfuse 追踪。</p>
                   
                 
               
@@ -862,6 +882,34 @@ svg:not(:root).svg-inline--fa, svg:not(:host).svg-inline--fa {
                   
                   
                     <p>依据作业数据定位瓶颈，将重复需求沉淀为规则与可复用能力。</p>
+                  
+                
+              
+                
+                <div class="section__head">
+                
+                  <div class="section-title">WMS 智能实施助理</div>
+                  <div class="section-title-des">MCP 工具接入与 Agent 编排</div>
+                </div>
+                
+                  
+                  
+                    <p><strong>工具接入</strong>：把主数据、出入库、工单和订单池规则收口为 25 个 MCP Tool。按只读、写入、诊断分包，统一命名、入参和副作用标注；身份走请求头，只转调既有接口并复用数据权限。</p>
+                  
+                
+                  
+                  
+                    <p><strong>任务编排</strong>：实施助理按 Skill 绑定实时工具目录，主数据 11 个只读，订单池 13 个工具并覆盖 31 种条件。主控只理解意图并委派一个助理；新工具只换地址和绑定，不写逐工具 Java 包装。</p>
+                  
+                
+                  
+                  
+                    <p><strong>记忆管理</strong>：会话上下文放 Redis，公开历史落 MySQL，会话、消息、附件各五张分表。按会话分区，过期后从历史回载；同会话互斥执行，审批快照独立保存，停止后保留已生成正文。</p>
+                  
+                
+                  
+                  
+                    <p><strong>评测护栏</strong>：仅订单池规则改写需人工确认，同意后按原参数执行，拒绝不调用且不重复执行。身份取自已验签 JWT，模型不能改写用户与仓库。对话用例覆盖 31 种条件，Langfuse 按会话追踪调用。</p>
                   
                 
               

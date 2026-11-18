@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-03 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-03</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-03</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：周二主线是「物理世界工程 Agent + 终端 CLI 硬化 + 可观测性&#x2F;技能中心化」——OpenAI 发布 <a target="_blank" rel="noopener" href="https://openai.com/index/accelerating-engineering-for-the-physical-world">Accelerating engineering for the physical world</a>（Astra 端到端 CAD&#x2F;PCB&#x2F;固件、BenchCAD、与 Chip Ganassi Racing &#x2F; Mazda 协作）；Anthropic <a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.317">Claude Code v2.1.317</a> 强化 <code>/schedule</code> 连接器提示、邮箱外发确认、Agent SDK <code>onFailure: &quot;block&quot;</code>、网关成本 API 与 OTel 属性；Langfuse 同日上线 <a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-03-skill-management">Skill management</a> 与 Observations API continuation。专项：Codex 仅有 prerelease <code>0.167.0-alpha.4</code>（stable 仍 0.166.0）；Hermes &#x2F; OpenClaw &#x2F; Spring AI &#x2F; spring-ai-alibaba &#x2F; Code Graph &#x2F; Loop Engineering <strong>无 11-03 可核验新正式版</strong>（IBM <a target="_blank" rel="noopener" href="https://huggingface.co/blog/ibm-research/cuga-harness">CUGA vs Hermes vs Deep Agents</a> 为 harness 选型对照）。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>OpenAI Index、Claude Code&#x2F;Codex Releases、DeepMind&#x2F;Google Education、Langfuse changelog、HF blog、LangChain&#x2F;Spring AI&#x2F;Code Graph&#x2F;Loop&#x2F;skills、中文补充</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）前沿模型叙事从软件编码扩到机电&#x2F;制造闭环；2）编码 Agent 发行线偏安全与治理（邮箱外发、hook 阻断、成本报表）；3）可观测平台把 Agent Skills 提升到与 Prompt 同级的中心化资产</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>对照 Astra 物理工程案例设计内部 CAD&#x2F;仿真验收；升级 Claude Code 2.1.317 并审阅 <code>/schedule</code> 连接器与 OTel 字段；在 Langfuse 试用 Skill management + trace 关联；企业 harness 选型读 CUGA 对比文</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Claude Code：<strong>v2.1.317</strong>（11-03）。Codex：stable 仍 <strong>0.166.0</strong>；存在 <strong>0.167.0-alpha.4</strong>（11-03，prerelease）。OpenClaw &#x2F; Hermes &#x2F; Spring AI &#x2F; spring-ai-alibaba &#x2F; Code Graph &#x2F; Loop Engineering：未发现 11-03 新正式发布。Langfuse：Skill management + Observations API continuation（11-03）。LangChain&#x2F;LangGraph：无独立正式 changelog；IBM 文以 Deep Agents 作对照。Agent Skills：Langfuse 中心化技能管理 + DeepMind Antigravity Cheminformatics Skills。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>物理工程&#x2F;模型</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/accelerating-engineering-for-the-physical-world">Accelerating engineering for the physical world</a></td>
+<td>2026-11-03</td>
+<td>官方发布</td>
+<td>Astra 端到端设备设计（外壳&#x2F;PCB&#x2F;固件）；硬件团队 token 用量自 2 月增约 23×；BenchCAD 2.0；CGR&#x2F;Mazda 协作</td>
+</tr>
+<tr>
+<td>编码 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.317">Claude Code v2.1.317</a></td>
+<td>2026-11-03</td>
+<td>GitHub Release</td>
+<td><code>/schedule</code> 连接器告警、邮箱外发确认、SDK hook <code>onFailure: &quot;block&quot;</code>、成本 API、OTel plan&#x2F;seat&#x2F;provider</td>
+</tr>
+<tr>
+<td>LLM 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-03-skill-management">Skill management in Langfuse</a></td>
+<td>2026-11-03</td>
+<td>Changelog</td>
+<td>技能中心化存储&#x2F;迭代；API&#x2F;CLI&#x2F;MCP&#x2F;SDK；trace 关联技能版本与文件读取</td>
+</tr>
+<tr>
+<td>LLM 可观测</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-03-observations-api-continuation">Observations API continuation</a></td>
+<td>2026-11-03</td>
+<td>Changelog</td>
+<td>长查询跨请求续拉；以 <code>meta.cursor</code> 为准勿因空页提前停</td>
+</tr>
+<tr>
+<td>科学 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/">Agentic Cheminformatics with Google Antigravity</a></td>
+<td>2026-11-03</td>
+<td>DeepMind 博客</td>
+<td>Cheminformatics Skills：文献&#x2F;化合物策展、MMPA、分子建模与合成路线提议</td>
+</tr>
+<tr>
+<td>教育产品</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/">Guided Learning &#x2F; Classroom AI updates</a></td>
+<td>2026-11-03</td>
+<td>Google 博客</td>
+<td>Guided Learning 扩到 Search&#x2F;Classroom；逐步引导而非直接给答案</td>
+</tr>
+<tr>
+<td>Harness 评测</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/ibm-research/cuga-harness">Same Model, Different Harness: CUGA vs Hermes vs Deep Agents</a></td>
+<td>2026-11-03</td>
+<td>HF 博客</td>
+<td>同模型 AppWorld：CUGA 81% &#x2F; Hermes 47% &#x2F; Deep Agents 30%；强调策略强制与主权部署</td>
+</tr>
+<tr>
+<td>CLI prerelease</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.4">Codex rust-v0.167.0-alpha.4</a></td>
+<td>2026-11-03</td>
+<td>GitHub Pre-release</td>
+<td>仅 alpha；生产继续盯 0.166.0</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>物理工程 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/accelerating-engineering-for-the-physical-world">OpenAI physical world</a></td>
+<td>CAD&#x2F;PCB&#x2F;仿真闭环、BenchCAD、制造公差缺口</td>
+<td>硬件&#x2F;机电、Agent 产品</td>
+</tr>
+<tr>
+<td>Claude Code 治理</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.317">v2.1.317 notes</a></td>
+<td>schedule 连接器、邮箱提示、hook block、成本报表</td>
+<td>平台工程、安全</td>
+</tr>
+<tr>
+<td>技能可观测</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-03-skill-management">Langfuse Skill management</a></td>
+<td>技能版本、trace 关联、Usage tab</td>
+<td>LLMOps、Agent 平台</td>
+</tr>
+<tr>
+<td>分页续拉</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-03-observations-api-continuation">Observations continuation</a></td>
+<td>cursor 分页、空页不停</td>
+<td>数据工程、评测管线</td>
+</tr>
+<tr>
+<td>Harness 选型</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/ibm-research/cuga-harness">CUGA harness blog</a></td>
+<td>同模型换 harness、政策强制点、适用边界</td>
+<td>架构、企业 AI</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：框架发行线仍偏安静；工程信号落在「物理世界闭环」「CLI 安全&#x2F;成本旋钮」「Skills 成为可观测一等公民」以及「harness 比模型更能决定任务完成率」。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>物理工程</td>
+<td>OpenAI Astra CAD&#x2F;PCB&#x2F;制造协作</td>
+<td>把制造公差&#x2F;装配约束写进 verifier，勿止于生成图纸</td>
+</tr>
+<tr>
+<td>Claude Code</td>
+<td>2.1.317 安全与 OTel&#x2F;成本</td>
+<td>升级后复测 schedule 任务与网关成本报表；生产 hook 失败默认阻断</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>仅 alpha.4</td>
+<td>生产锁 0.166.0；alpha 只做冒烟</td>
+</tr>
+<tr>
+<td>Langfuse Skills</td>
+<td>中心化技能 + trace</td>
+<td>把 skills 当版本化资产，与 prompt 一并评审</td>
+</tr>
+<tr>
+<td>Harness</td>
+<td>CUGA&#x2F;Hermes&#x2F;Deep Agents 对照</td>
+<td>按 workload 选 harness；企业规则放 runtime 而非 system prompt</td>
+</tr>
+<tr>
+<td>Hermes &#x2F; OpenClaw &#x2F; Spring AI &#x2F; SAA &#x2F; Code Graph &#x2F; Loop</td>
+<td>无 11-03 新正式版</td>
+<td>继续跟踪 changelog；勿把对照实验写成当日 release</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/accelerating-engineering-for-the-physical-world">Accelerating engineering for the physical world</a></td>
+<td>官方把 Agent 能力边界推进到机电制造，并坦诚制造公差缺口</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.317">Claude Code v2.1.317</a></td>
+<td>当日最完整的编码 Agent 正式版变更清单</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-03-skill-management">Langfuse Skill management</a></td>
+<td>Skills 进入可观测与协作中心</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/ibm-research/cuga-harness">CUGA vs Hermes vs Deep Agents</a></td>
+<td>用同模型实验说明 harness 选型逻辑</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/">Antigravity Cheminformatics</a> &#x2F; <a target="_blank" rel="noopener" href="https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/">Guided Learning</a></td>
+<td>科学 Agent Skills 与教育引导式 AI</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-03 00:00:00 到 2026-11-03 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：openai.com, github.com, langfuse.com, deepmind.google, blog.google, huggingface.co, anthropic.com</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Accelerating engineering for the physical world</td>
+<td>2026-11-03</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/accelerating-engineering-for-the-physical-world">https://openai.com/index/accelerating-engineering-for-the-physical-world</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Claude Code v2.1.317</td>
+<td>2026-11-03</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.317">https://github.com/anthropics/claude-code/releases/tag/v2.1.317</a></td>
+</tr>
+<tr>
+<td>Changelog</td>
+<td>Skill management in Langfuse</td>
+<td>2026-11-03</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-03-skill-management">https://langfuse.com/changelog/2026-11-03-skill-management</a></td>
+</tr>
+<tr>
+<td>Changelog</td>
+<td>Observations API continuation</td>
+<td>2026-11-03</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-03-observations-api-continuation">https://langfuse.com/changelog/2026-11-03-observations-api-continuation</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>Agentic Cheminformatics with Google Antigravity</td>
+<td>2026-11-03</td>
+<td><a target="_blank" rel="noopener" href="https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/">https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>Responsible AI for schools with Guided Learning</td>
+<td>2026-11-03</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/">https://blog.google/products-and-platforms/products/education/ai-learning-era-updates-2026/</a></td>
+</tr>
+<tr>
+<td>技术博客</td>
+<td>CUGA, Hermes, and Deep Agents</td>
+<td>2026-11-03</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/ibm-research/cuga-harness">https://huggingface.co/blog/ibm-research/cuga-harness</a></td>
+</tr>
+<tr>
+<td>开源预发布</td>
+<td>Codex rust-v0.167.0-alpha.4</td>
+<td>2026-11-03</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.4">https://github.com/openai/codex/releases/tag/rust-v0.167.0-alpha.4</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

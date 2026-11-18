@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-17 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-17</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-17</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：上海时间 11 月 17 日，窗口内的主线是把 Agent 接到销售、法律、科研与桌面工作流，并同步收紧权限、安全评测与监管；开源端 OpenClaw 2026.11.5 与 Hermes v0.23.2 补齐会话恢复与运行时稳定性。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商（OpenAI、Google、Anthropic、Microsoft、阿里云）、模型&#x2F;产品、开发者工具、Agent 框架、RAG&#x2F;MCP&#x2F;向量数据库、Spring AI &#x2F; Spring Alibaba AI、Langfuse、LangChain&#x2F;LangGraph、Code Graph、Loop Engineering、Claude Code &#x2F; Codex &#x2F; OpenClaw &#x2F; Hermes、skills &#x2F; Agent Skills、论文（arXiv &#x2F; Hugging Face Papers）、GitHub Releases &#x2F; GitHub Changelog、技术媒体、政策监管、中文补充来源</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）企业插件、行业模型和公共部门合作，把模型从对话推到可交接的工作流。2）开源编码&#x2F;桌面 Agent 继续补权限、会话恢复与崩溃回滚（OpenClaw、Hermes、Proton Lumo）。3）安全评测从通用红队转向日常网络安全建议、工具调用注入和自主武器相关拒止。4）企业 RAG 与向量检索出现托管化选项（Oracle Autonomous AI Vector Database）。</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>1）ChatGPT 销售插件与法律配置如何把技能、检索索引和 CRM&#x2F;合同工具接到同一工作区。2）Proton Lumo Desktop 的 Connectors &#x2F; Schedules &#x2F; Skills &#x2F; MCP 权限模型。3）OpenClaw 2026.11.5 与 Hermes v0.23.2 的会话恢复与破坏性变更。4）Google HelpBench、Vals 自主武器评测对产品安全回归的启示。5）Oracle Autonomous AI Vector Database 的托管向量检索路径。</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：窗口内无新发版需展开；v2.1.326 已在 11-16 日报收录（GitHub 发布时刻虽落入本窗口，为避免重复不再单列）。v2.1.327 于 11-17 23:17 UTC（上海 11-18 07:17）发布，留待次日增量处理。<strong>Codex</strong>：窗口内未见独立 CLI 版本；OpenAI 与北约&#x2F;盟国网络防御文提及 ENISA&#x2F;CERT-EU 评审使用了 Codex security plug-in。<strong>OpenClaw</strong>：稳定版 2026.11.5 于 10:47 UTC 发布（窗口内）。<strong>Hermes</strong>：稳定版 v0.23.2 于 11-16 20:59 UTC（上海 11-17 04:59）发布，属窗口内；同日另有 canary <code>v0.23.2+canary.20261117T064624Z</code>。<strong>Spring AI &#x2F; Spring Alibaba AI</strong>：未发现 11-17 窗口内正式发版。<strong>Langfuse</strong>：11-17 未见新 changelog；文档写明 Cloud 于 11-16 切为 v4-only，已在前日说明。<strong>LangChain &#x2F; LangGraph</strong>：未见框架本体 11-17 发版；LangSmith CLI v0.5.0 于 19:52 UTC（上海 11-18 03:52）发布，留待次日增量处理。<strong>Code Graph</strong>：未发现当日更新。<strong>Loop Engineering</strong>：未发现 Ralph loop、<code>/goal</code> 或 Loop Engineering 范式的当日新规范。<strong>skills &#x2F; Agent Skills</strong>：窗口内 Proton Lumo Desktop 将 Custom Lumos 迁移为可复用 Skills。未见 Cursor Skills &#x2F; Claude Skills 规范本身的新版本。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>法律行业模型</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/astra-law-6-2/">Astra for Law leads in legal intelligence</a></td>
+<td>2026-11-17</td>
+<td>官方发布</td>
+<td>GPT-6.2 Astra 的法律配置在 Harvey LAB-AA 取得全额通过率 20.8%，Vals Legal Research Bench 全额通过率升至 53.8%；Enterprise 可经 Trusted Access Program 申请，适合评估「基座模型 + 专业检索索引 + 写作规程」的行业配置路线。</td>
+</tr>
+<tr>
+<td>公共部门合作</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-openai-for-chile">Introducing OpenAI for Chile</a></td>
+<td>2026-11-17</td>
+<td>官方发布</td>
+<td>与智利科技部签署 MoU，覆盖政务采用、公务员培训与本地创业支持；备忘录本身不构成投资或采购承诺，可对照「OpenAI for Countries」的治理与落地边界。</td>
+</tr>
+<tr>
+<td>网络安全与 Codex</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/strengthening-nato-allied-cyber-defences-ai/">Strengthening NATO and allied cyber defenses with AI</a></td>
+<td>2026-11-17</td>
+<td>官方发布</td>
+<td>Daybreak 向北约及盟国防御方提供授权安全工作能力；ENISA&#x2F;CERT-EU 对 27 个软件项目的联合评审提到 Codex security plug-in，维护者确认 88 个潜在问题中 95% 为真实问题，说明人机协同漏洞复核仍是关键。</td>
+</tr>
+<tr>
+<td>企业销售 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-chatgpt-for-sales">Introducing ChatGPT for Sales</a></td>
+<td>2026-11-17</td>
+<td>官方发布</td>
+<td>新 Sales 插件提供面向销售的 skills，并接入 30 余个合作方插件（CRM、外呼、合同等）；可观察「插件 + 技能 + 常驻 dot 代理」如何把线索研究、会议纪要和跟进写成工作流。</td>
+</tr>
+<tr>
+<td>科研访问</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/expanding-chatgpt-for-academic-researchers">Broadening access to AI for scientists</a></td>
+<td>2026-11-17</td>
+<td>官方发布</td>
+<td>学术研究者计划目标扩至 20 万人；11 月 23 日起再发放 5 万份 Plus 名额（含最多两名合作者）。窗口对应 RSS 时间为 11-16 17:00 UTC。</td>
+</tr>
+<tr>
+<td>安全评测</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/security/how-google-is-making-cybersecurity-advice-from-ai-more-helpful/">How Google is Making Cybersecurity Advice from AI More Helpful</a></td>
+<td>2026-11-17</td>
+<td>官方发布 &#x2F; 论文配套</td>
+<td>与 UCL 发布 HelpBench（450 题）：18 个模型平均达到专家建议的 82%，但约 1&#x2F;10 回复低于 65% 并可能给出有风险建议；同一问题多次询问标准差最高达 12%。适合纳入日常安全建议回归。</td>
+</tr>
+<tr>
+<td>政策监管</td>
+<td><a target="_blank" rel="noopener" href="https://ag.ny.gov/press-release/2026/attorney-general-james-announces-creation-ai-safety-standards-enforcement-and">NY AG 宣布成立 ASSET 单元</a></td>
+<td>2026-11-17</td>
+<td>政策标准</td>
+<td>纽约州检察长办公室新设 AI Safety, Standards, Enforcement, and Transparency 单元，负责 2027-01-01 生效的 RAISE Act 及聊天机器人、合成表演者披露等执法，是美国州层面安全治理的直接信号。</td>
+</tr>
+<tr>
+<td>隐私优先桌面 Agent</td>
+<td><a target="_blank" rel="noopener" href="https://proton.me/blog/lumo-desktop-features">Proton launches Lumo Desktop</a></td>
+<td>2026-11-17</td>
+<td>官方发布</td>
+<td>Windows&#x2F;macOS&#x2F;Linux 桌面上线 Connectors、Schedules 与 Skills，支持本地&#x2F;远程 MCP；用户可按动作设置自动执行、审批或阻断，是权限最小化桌面 Agent 的可对照实现。</td>
+</tr>
+<tr>
+<td>开源 Agent 运行时</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.11.5">openclaw 2026.11.5</a></td>
+<td>2026-11-17</td>
+<td>开源发布</td>
+<td>稳定版强化重启安全会话、失败更新回滚、Telegram widgets 与模型回退；含 harness&#x2F;plugin 会话控制的破坏性变更，自托管方需按 changelog 迁移。</td>
+</tr>
+<tr>
+<td>开源 Agent 运行时</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2">Hermes Agent v0.23.2</a></td>
+<td>2026-11-17</td>
+<td>开源发布</td>
+<td>稳定补丁汇总自 v0.23.1 以来的变更，修复 Desktop&#x2F;流式回复恢复与重复消息问题；GitHub 发布于 11-16 20:59 UTC，已落入上海 11-17 窗口。同日 canary 增加 OpenDockit 插件。</td>
+</tr>
+<tr>
+<td>向量数据库</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.oracle.com/database/announcing-oracle-autonomous-ai-vector-database">Announcing Oracle Autonomous AI Vector Database</a></td>
+<td>2026-11-17（官方日戳，精确时刻未核验；按相邻日期&#x2F;中国时间窗口传播）</td>
+<td>官方发布</td>
+<td>托管向量库面向语义检索、RAG 知识库与 agentic 应用，提供 Python SDK &#x2F; REST &#x2F; SQL，以及 HNSW、IVF 与元数据过滤，补齐企业合规与自主运维路径。</td>
+</tr>
+<tr>
+<td>安全评测</td>
+<td><a target="_blank" rel="noopener" href="https://www.vals.ai/blogs/autonomous-warfare">Frontier models have few guardrails around autonomous weapons</a></td>
+<td>2026-11-17（官方日戳；媒体稿 17:20 UTC，按相邻日期&#x2F;中国时间窗口传播）</td>
+<td>评测报告</td>
+<td>Vals 称在无人机&#x2F;卫星影像目标识别设定中，分类器未拦截请求，拒止少见，且「当作游戏」可绕过拒止；作者明确未评估真实武器系统有效性。TechCrunch 记录了 Anthropic 与 OpenAI 的回应。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>日常安全建议评测</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/security/how-google-is-making-cybersecurity-advice-from-ai-more-helpful/">HelpBench 博客</a> 与 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.24819">arXiv:2606.24819</a></td>
+<td>450 道真实隐私&#x2F;安全问题、专家量规与自动打分；关注低分有害建议与多次采样波动</td>
+<td>安全与评测、面向消费者的助手团队</td>
+</tr>
+<tr>
+<td>桌面 Agent 权限</td>
+<td><a target="_blank" rel="noopener" href="https://proton.me/blog/lumo-desktop-features">Lumo Desktop 公告</a></td>
+<td>Connectors 分权、Schedules 独立权限、Skills 复用、本地与远程 MCP</td>
+<td>要在本地文件&#x2F;邮件上跑 Agent 的个人与安全团队</td>
+</tr>
+<tr>
+<td>向量检索落地</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.oracle.com/database/announcing-oracle-autonomous-ai-vector-database">Oracle Autonomous AI Vector Database</a></td>
+<td>托管向量 API、元数据与空间过滤、HNSW&#x2F;IVF、从 Always Free 升到生产</td>
+<td>企业 RAG &#x2F; Agent 记忆架构师</td>
+</tr>
+<tr>
+<td>编码 Agent 协作评测</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.20218">SWE-CoWork</a></td>
+<td>101 个真实仓库与模拟同事设定；关注「问对人、跟完需求、通过隐藏测试」而不只是单次补丁</td>
+<td>编码 Agent 产品与评测负责人</td>
+</tr>
+<tr>
+<td>工具调用放行</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.07222">SPILLWAY v2</a></td>
+<td>用类型化来源做确定性放行与清洗，而不是让模型做最终放行</td>
+<td>MCP &#x2F; 工具调用安全设计者</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：窗口内更突出的是运行时稳定性、权限边界和把 skills&#x2F;MCP 接到现有工作工具，而不是 LangGraph 核心框架发版。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>行业 Agent 配置</td>
+<td>OpenAI 推出 Astra for Law，并推出带 skills 的 Sales 插件与 30 余个合作方插件</td>
+<td>行业落地可优先做「基座模型 + 专用检索&#x2F;工具 + 可请求的访问控制」，而不是只换一个通用模型名。</td>
+</tr>
+<tr>
+<td>开源 Agent 运行时</td>
+<td>OpenClaw 2026.11.5 强调重启安全会话与失败回滚，并改变 harness&#x2F;plugin 会话控制；Hermes 0.23.2 修复桌面与流式恢复</td>
+<td>长会话 Agent 要把排队消息、发送权限和崩溃恢复当成产品功能，第三方插件需随破坏性变更迁移。</td>
+</tr>
+<tr>
+<td>桌面 MCP 与 Skills</td>
+<td>Proton Lumo 将 Skills 标准化，并为每个 connector&#x2F;定时任务设置自动、审批或阻断</td>
+<td>Skills 正在从各产品自定义格式收敛到可移植的说明+工具包；权限应下沉到动作级，而不是只给「整个连接器」。</td>
+</tr>
+<tr>
+<td>Agent 安全评测</td>
+<td>HelpBench 显示日常安全建议并不稳定；Vals 报告指出目标识别类任务拒止不足，且游戏框架可越狱；SPILLWAY v2 用确定性目标放行 + 清洗，而不是让模型做最终放行</td>
+<td>除了通用安全策略，要对「建议质量波动」和「副作用目标是否来自类型化工具返回」做回归。</td>
+</tr>
+<tr>
+<td>编码 Agent 评测</td>
+<td>SWE-CoWork（arXiv 11-17 交叉列表）显示领先模型 F2P 约 63%，完整交付不足 8%；提前给全量需求可提高 F2P，但不能提高完整成功率</td>
+<td>组织内编码 Agent 的瓶颈是持续跟踪需求、核对冲突证据并完成验收，而不是单次补丁生成。</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/astra-law-6-2/">Astra for Law 官方公告</a></td>
+<td>给出可复核的法律基准数字、检索索引扩容和 Enterprise 开通方式，是行业模型配置的完整案例。</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/security/how-google-is-making-cybersecurity-advice-from-ai-more-helpful/">Google HelpBench 博客</a></td>
+<td>把「日常网络安全建议」做成可复用基准，并公开 1&#x2F;10 有风险建议与高方差这一关键风险。</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://www.vals.ai/blogs/autonomous-warfare">Vals：Frontier models have few guardrails around autonomous weapons</a></td>
+<td>官方报告与媒体交叉验证；结论需连同「未评估真实武器有效性」的边界一起读。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://proton.me/blog/lumo-desktop-features">Proton Lumo Desktop</a></td>
+<td>少见的、把 Skills、MCP 和动作级审批写清楚的隐私优先桌面 Agent 说明。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.20218">SWE-CoWork</a></td>
+<td>用 101 个真实仓库和 26 个模拟同事，量化「问对人、跟完需求、通过隐藏测试」的缺口。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.07222">SPILLWAY v2</a></td>
+<td>11-17 arXiv 替换更新；用类型化来源做确定性放行，适合对照 MCP 工具调用防护设计。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-chatgpt-for-sales">ChatGPT for Sales</a></td>
+<td>观察「插件 + 技能 + 常驻代理」如何把销售工作流接到现有 CRM 与合同工具。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-11-17">Hugging Face Daily Papers 2026-11-17</a></td>
+<td>当日论文目录（85 篇），可按主题继续筛选，避免把列表页日期误当成每篇提交日。</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-17 00:00:00 到 2026-11-17 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>对应 UTC：2026-11-16 16:00:00Z 到 2026-11-17 15:59:59Z</li>
+<li>引用域名：openai.com, blog.google, ag.ny.gov, proton.me, techcrunch.com, github.com, blogs.oracle.com, vals.ai, arxiv.org, huggingface.co, langfuse.com, anthropic.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方发布</td>
+<td>Astra for Law leads in legal intelligence</td>
+<td>2026-11-17（RSS 00:00 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/astra-law-6-2/">https://openai.com/index/astra-law-6-2/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Introducing OpenAI for Chile</td>
+<td>2026-11-17（RSS 00:00 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-openai-for-chile">https://openai.com/index/introducing-openai-for-chile</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Strengthening NATO and allied cyber defenses with AI</td>
+<td>2026-11-17（RSS 00:00 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/strengthening-nato-allied-cyber-defences-ai/">https://openai.com/index/strengthening-nato-allied-cyber-defences-ai/</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Introducing ChatGPT for Sales</td>
+<td>2026-11-17（RSS 08:00 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-chatgpt-for-sales">https://openai.com/index/introducing-chatgpt-for-sales</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Broadening access to AI for scientists</td>
+<td>2026-11-17（RSS 11-16 17:00 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/expanding-chatgpt-for-academic-researchers">https://openai.com/index/expanding-chatgpt-for-academic-researchers</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>How Google is Making Cybersecurity Advice from AI More Helpful</td>
+<td>2026-11-17（07:00 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/security/how-google-is-making-cybersecurity-advice-from-ai-more-helpful/">https://blog.google/security/how-google-is-making-cybersecurity-advice-from-ai-more-helpful/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>HelpBench: Assessing the Ability of LLMs to Provide Privacy, Safety, and Security Advice</td>
+<td>提交 2026-06-23；本日为官方博客传播</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.24819">https://arxiv.org/abs/2606.24819</a></td>
+</tr>
+<tr>
+<td>政策标准</td>
+<td>Attorney General James Announces Creation of ASSET Unit</td>
+<td>2026-11-17（12:00 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://ag.ny.gov/press-release/2026/attorney-general-james-announces-creation-ai-safety-standards-enforcement-and">https://ag.ny.gov/press-release/2026/attorney-general-james-announces-creation-ai-safety-standards-enforcement-and</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Proton launches Lumo Desktop</td>
+<td>2026-11-17（11:52 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://proton.me/blog/lumo-desktop-features">https://proton.me/blog/lumo-desktop-features</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>openclaw 2026.11.5</td>
+<td>2026-11-17（10:47 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.11.5">https://github.com/openclaw/openclaw/releases/tag/v2026.11.5</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Hermes Agent v0.23.2</td>
+<td>2026-11-17（发布 11-16 20:59 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2">https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2</a></td>
+</tr>
+<tr>
+<td>开源发布</td>
+<td>Hermes Agent canary v0.23.2+canary.20261117T064624Z</td>
+<td>2026-11-17（07:54 UTC）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2%2Bcanary.20261117T064624Z">https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2%2Bcanary.20261117T064624Z</a></td>
+</tr>
+<tr>
+<td>官方发布</td>
+<td>Announcing Oracle Autonomous AI Vector Database</td>
+<td>2026-11-17（官方日戳，精确时刻未核验；按相邻日期&#x2F;中国时间窗口传播）</td>
+<td><a target="_blank" rel="noopener" href="https://blogs.oracle.com/database/announcing-oracle-autonomous-ai-vector-database">https://blogs.oracle.com/database/announcing-oracle-autonomous-ai-vector-database</a></td>
+</tr>
+<tr>
+<td>评测报告</td>
+<td>Frontier models have few guardrails around autonomous weapons</td>
+<td>2026-11-17（官方日戳；媒体 17:20 UTC，相邻日期&#x2F;中国时间窗口传播）</td>
+<td><a target="_blank" rel="noopener" href="https://www.vals.ai/blogs/autonomous-warfare">https://www.vals.ai/blogs/autonomous-warfare</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>AI models can be tricked into identifying civilians as military targets</td>
+<td>2026-11-17（17:20 UTC，相邻日期&#x2F;中国时间窗口传播）</td>
+<td><a target="_blank" rel="noopener" href="https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/">https://techcrunch.com/2026/11/17/ai-models-can-be-tricked-into-identifying-civilians-as-military-targets-by-telling-them-its-a-game/</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>SWE-CoWork</td>
+<td>提交 2026-11-15；arXiv cs.AI 2026-11-17 交叉列表</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.20218">https://arxiv.org/abs/2611.20218</a></td>
+</tr>
+<tr>
+<td>论文原文</td>
+<td>SPILLWAY v2</td>
+<td>提交 2026-11-04，v2 修订 2026-11-16；arXiv cs.AI 2026-11-17 替换列表</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.07222">https://arxiv.org/abs/2611.07222</a></td>
+</tr>
+<tr>
+<td>论文目录</td>
+<td>Hugging Face Daily Papers</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-11-17">https://huggingface.co/papers/date/2026-11-17</a></td>
+</tr>
+<tr>
+<td>论文目录</td>
+<td>arXiv cs.AI catchup</td>
+<td>2026-11-17（135 篇新提交 &#x2F; 295 交叉 &#x2F; 289 替换）</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/catchup/cs.AI/2026-11-17">https://arxiv.org/catchup/cs.AI/2026-11-17</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>Langfuse Versions &amp; Compatibility（v4-only 切日 11-16）</td>
+<td>2026-11-16（相邻日期，11-17 无新 changelog）</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/docs/compatibility">https://langfuse.com/docs/compatibility</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
