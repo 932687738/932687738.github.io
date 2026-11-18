@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        知识库 2026-11-17 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">知识库 2026-11-17</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/knowledge-base-news/">知识库</a>
+          <a class="post-tag" href="/Daily-News/knowledge-base-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-17</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：当天固定来源的主线，是旗舰&#x2F;轻量模型把单位任务成本打下来，同时把 Agent 从「能跑」推进到「可评测、可核验、可审计」——美团给出业务 Benchmark 与双闭环评测实践，字节用统一语义层补上查数口径，阿里云与腾讯云则分别补齐 Qwen4-Max、Hy4 flash 的规格、接入与工具调用回填要点。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>已覆盖阿里巴巴（102.alibaba.com、阿里云开发者社区、阿里中间件博客、语雀·阿里技术干货）、腾讯（腾讯技术工程&#x2F;Tencent_TEG、腾讯云+社区、AlloyTeam、腾讯大讲堂）、字节跳动（字节跳动技术团队站点、掘金厂队文章）、百度（FEX、EFE、百度开发者中心）、美团技术团队、京东（京东云开发者社区、凹凸实验室）、滴滴开源平台、网易云知乎组织页、360 博客、有赞技术团队；并在上述固定来源内完成 Langfuse、LangChain&#x2F;LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering 五组专项检索。</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）新模型发布把重点放在激活参数、KV cache 与缓存命中价，而不是只报总参数；2）业务 Agent 的正确率瓶颈，更多在口径&#x2F;规则&#x2F;证据，而不只在 SQL 或提示词；3）思考模式下的多轮工具调用，必须完整回填 <code>reasoning_content</code>，Qwen4-Max 与 Hy4 flash 当天文章都踩到同一类坑；4）AI Coding 与推理集群开始补「可度量、可切片、可覆盖」的工程底座。</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>业务 Agent 评测应把 Benchmark 与评测器校准分成两条闭环；查数&#x2F;问数类 Agent 先治理文档和代码里的业务口径；接入思考模型时检查 <code>max_tokens</code>&#x2F;<code>reasoning_content</code> 回填；Token 工厂里的小模型优先评估 GPU 切片，而不是整卡独占；AI Coding 度量先解决采集覆盖率，再谈跨工具对比。</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td>Langfuse：当天未发现以 Langfuse&#x2F;OTel 导出到 Langfuse 为题的固定来源原文；最接近的可核验信号是阿里云云原生《LoongSuite Pilot × Qoder》讨论 AI Coding 遥测归一化与采集覆盖率，但并未等同于 Langfuse 产品更新。LangChain&#x2F;LangGraph：掘金有一篇可核验的 LangGraph + 多 FastMCP 接入踩坑文，核心是多 server 下工具名被自动加前缀。Code Graph：当天未发现以代码知识图谱、Tree-sitter、MCP 代码探索或 impact analysis 为题的固定来源原文；字节 ContextSearch 会从代码库提取字段口径，属于业务语义层，不计入 Code Graph。Spring Alibaba AI：当天未发现 spring-ai-alibaba、Graph Core、ReactAgent&#x2F;DataAgent 或 java2ai 的可核验原文。Loop Engineering：当天未发现以 <code>/goal</code>、<code>/loop</code>、Ralph loop、worktrees 或 verifier 为题的固定来源原文；相关信号是阿里云 DeepSeek Harness（含 Agent Loop 插件运行时）部署教程，以及阿里云 AgentLoop 通过信通院 FDE 评估的综述（技术实现细节有限）。全球官方 loop 命令更新未作为固定来源收录。</td>
+</tr>
+<tr>
+<td>未发现更新</td>
+<td>102.alibaba.com（检索无 2026-11-17 结果，站点抓取返回 500）、阿里中间件博客 jm.taobao.org（检索无结果，站点抓取 404）、语雀·阿里技术干货（检索无结果，页面未返回可用目录）、腾讯技术工程官方号在腾讯云专栏未见当天新文、AlloyTeam（检索无结果，站点抓取 503）、腾讯大讲堂（检索无 2026 结果）、字节跳动技术团队 techblog.toutiao.com（检索无结果，站点抓取 404）、百度 FEX（公开列表最新仍为 2020 年）、百度 EFE（检索无结果，站点抓取 500）、百度开发者中心未见 2026-11-17 可核验新文、凹凸实验室未见当天技术文章、滴滴开源平台首页无当天更新、网易云知乎组织页检索无结果、360 博客（检索无结果，站点抓取 503）、有赞技术团队首页最新仍为 2022 年文章。</td>
+</tr>
+</tbody></table>
+<h3 id="重要文章与更新"><a href="#重要文章与更新" class="headerlink" title="重要文章与更新"></a>重要文章与更新</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>来源</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>业务 Agent 评测</td>
+<td><a target="_blank" rel="noopener" href="https://tech.meituan.com/2026/11/17/Agent-Evaluation-White-Paper-02.html">《Agent评测白皮书》系列02：商家 AI 助手的评测与优化闭环实践</a></td>
+<td>2026-11-17</td>
+<td>美团技术团队 &#x2F; 图灵评测×商增</td>
+<td>以商家广告助手巡检为贯穿案例，说明如何从业务任务构建 Benchmark、校准评测器、做错误分析，并借助图灵做持续回归与模型选型；明确「尺子变准」和「能力变强」是两条闭环。</td>
+</tr>
+<tr>
+<td>基座模型规格与迁移</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1784370">阿里云Qwen4-Max能力与活动：激活降至71B、单任务11.16元，Token省47.8%，Lite首月19.5元</a></td>
+<td>2026-11-17</td>
+<td>阿里云开发者社区</td>
+<td>补齐 11 月 16 日正式版发布后的关键规格：2.4T 总参数、每 Token 激活 71B、QSA&#x2F;GDN 稀疏注意力、1M 上下文、API 单价与缓存命中价；并提示 <code>max_tokens</code> 已包含思考 Token、多轮需回传 <code>reasoning_content</code>。官方与第三方的降本幅度并不一致，文中已并列给出。</td>
+</tr>
+<tr>
+<td>轻量模型发布</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2785919">Hy4 flash来了！价格比Hy4大幅降低</a></td>
+<td>2026-11-17</td>
+<td>腾讯云+社区 &#x2F; 小腾资讯君（文末标注转载）</td>
+<td>给出混元 Hy4 flash 的可核对规格：总参数 224B（含 64B Engram）、激活 12B、1M 上下文、解码超 150 tps，KV cache 约为 Hy3 的 1&#x2F;24、Hy4 的 1&#x2F;6；日常办公任务推荐 flash，长程软件工程仍建议 Hy4。</td>
+</tr>
+<tr>
+<td>模型接入实践</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2786341">Hy4 flash 上手实测：只改一个 model 参数接入 TokenHub</a></td>
+<td>2026-11-17</td>
+<td>腾讯云+社区 &#x2F; gavin1024</td>
+<td>记录 TokenHub 切换 <code>hy4-flash</code> 的最小改动，以及工具调用时漏回填 <code>reasoning_content</code> 会导致推理断档；与 Qwen4-Max 文中的思考内容回传要求形成对照。</td>
+</tr>
+<tr>
+<td>GPU 切片与推理成本</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2785964">如何利用 HAMi 来提升 Token 工厂的 GPU 利用率</a></td>
+<td>2026-11-17</td>
+<td>腾讯云+社区 &#x2F; 宅蓝三木</td>
+<td>讲清 HAMi 的调度、资源模型和隔离边界：显存可硬隔离，算力只是尽力而为；并给出 2×RTX 4090 实测——切片能增加同卡模型数，但同并发下每卡 tokens&#x2F;s 会下降，接近满卡或有硬 SLO 时不应切片。</td>
+</tr>
+<tr>
+<td>业务语义层 &#x2F; Query Agent</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708733679305375794">案例实践 | 让 Agent 读懂业务口径：ContextSearch 在广告数据查询中的实践</a></td>
+<td>2026-11-17</td>
+<td>掘金 &#x2F; 字节跳动数据库</td>
+<td>只声明业务文档和代码库两类来源，由统一语义层把口径映射到字段；76 道广告查数题上，SQL 业务正确率从 36.8% 升至 98.7%，典型题目的工具调用从 19 次降到 4 次、耗时下降 85%。</td>
+</tr>
+<tr>
+<td>AI Coding 可观测性</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7709044258997321754">LoongSuite Pilot × Qoder：一次配置，全员可审计</a></td>
+<td>2026-11-17</td>
+<td>掘金 &#x2F; 阿里云云原生（林润骑 &#x2F; 太业）</td>
+<td>把企业级 AI Coding 度量拆成「跨 Agent 事件归一化」和「采集覆盖率」两个前置条件，并给出用 LoongSuite Pilot 做本地采集、再用 Qoder 企业市场做静默下发的路径。</td>
+</tr>
+<tr>
+<td>LangGraph &#x2F; MCP</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708761649999446070">「踩坑实录」给 LangGraph Agent 接两个 FastMCP，我被 langchain 偷偷改了工具名</a></td>
+<td>2026-11-17</td>
+<td>掘金 &#x2F; 锋行天下</td>
+<td>验证了 LangChain <code>MCPAdapter</code> 的多 server stdio 接法，以及多服务模式下工具名会被加上 <code>&lt;server&gt;_</code> 前缀，导致写死在 SYSTEM_PROMPT 里的工具名失效。</td>
+</tr>
+<tr>
+<td>Super Agent 协同</td>
+<td><a target="_blank" rel="noopener" href="https://developer.jdcloud.com/article/4609">【11.11大促系列】Super Agent 进群：今年11.11，多了个会主动干活的”数字人队长”</a></td>
+<td>2026-11-13（相邻日期&#x2F;中国时间窗口传播：2026-11-17 由「京东云开发者」在<a target="_blank" rel="noopener" href="https://juejin.cn/post/7708772612320460800">掘金同步</a>）</td>
+<td>京东云开发者社区（原文转自京东零售技术）</td>
+<td>介绍大促保障 Super Agent 进入京 Me 群聊、跨群聚合证据并主动协同；同时划定人机边界——回滚、切流、定责仍由人决策，强调结论可验证、证据可追溯。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与实践"><a href="#技术文档与实践" class="headerlink" title="技术文档与实践"></a>技术文档与实践</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>思考模型接入与迁移</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1784370">Qwen4-Max 规格与迁移要点</a>、<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2786341">Hy4 flash TokenHub 接入</a></td>
+<td><code>max_tokens</code>&#x2F;<code>max_completion_tokens</code> 可能同时限制思考与最终回答；多轮和工具调用需完整回传 <code>reasoning_content</code>，不要把它拼进 <code>content</code>。</td>
+<td>正在把预览版&#x2F;思考模型接入生产 API 的后端与 Agent 开发者</td>
+</tr>
+<tr>
+<td>Agent 运行时 &#x2F; Harness</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1784743">DeepSeek Harness 是什么？阿里云ECS+计算巢3分钟部署超详细实操教程</a></td>
+<td>DSH 把模型、工具、Skills、沙箱、Agent Loop 和 Web UI 都做成可替换插件；计算巢通过安全代理访问，避免把 Web 端口直接暴露公网，启动后还需配置模型和选择工作区。</td>
+<td>想快速自建 Agent 运行时、评估 Harness 形态的开发者</td>
+</tr>
+<tr>
+<td>对话式数据分析</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7709021467455668250">AI 原生大数据服务 ADA 快速入门：完成首次对话式数据分析</a></td>
+<td>以 Ada 主智能体调度底层引擎 Agent；强调先核对执行计划与中间计算，再把验证过的分析固化成定时任务；复杂口径需要知识库，而不是只靠表结构推断。</td>
+<td>数据平台、分析工程和要做「过程可核对」取数 Agent 的团队</td>
+</tr>
+<tr>
+<td>跨平台客户端升级</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708953356710641699">跨平台开发地图 | 2026年11月</a></td>
+<td>按官方发布页整理至 11 月 17 日：Flutter 3.50 让原生互操作进入稳定，RN 0.88.1 为当前稳定版、0.89 RC 开始删除旧架构 API，并给出「大版本先观察、安全补丁单独评估」的升级顺序。</td>
+<td>客户端 &#x2F; 跨平台团队</td>
+</tr>
+<tr>
+<td>Agent 观测平台综述</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708969711213215754">阿里云 AgentLoop 通过中国信通院《企业级 FDE 交付能力要求》标准评估</a></td>
+<td>概述 AgentLoop 的观测、评估、资产管理与 Trace2Dataset 等能力，以及该项标准评估的角色&#x2F;知识资产&#x2F;组织机制框架；本文偏标准通过说明，实现细节有限。</td>
+<td>需要了解企业级 Agent 观测产品定位的架构与治理同学</td>
+</tr>
+</tbody></table>
+<h3 id="工程实践归纳"><a href="#工程实践归纳" class="headerlink" title="工程实践归纳"></a>工程实践归纳</h3><p><strong>总体判断</strong>：当天可复用的工程变化，集中在「评测闭环、口径知识、思考内容回填、采集覆盖率和 GPU 切片」；五个专项里，仅 LangChain&#x2F;LangGraph 有直接可核验实践，Loop Engineering 只有 Harness&#x2F;AgentLoop 的间接信号，Langfuse、Code Graph、Spring Alibaba AI 均未发现可核验更新。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>业务 Agent 评测</td>
+<td>美团以商家 AI 助手巡检任务，把真实业务流程落实为 Task、执行环境、判定机制和评测协议，并用图灵支撑回归与选型。</td>
+<td>先从业务风险推导指标，再让指标可下钻到原子检查项；评测器校准和 Agent 优化不要算成同一类收益。</td>
+</tr>
+<tr>
+<td>业务口径与语义层</td>
+<td>字节跳动数据库用 ContextSearch 把文档和代码中的口径变成可检索上下文，查数正确率显著提升。</td>
+<td>自然语言查数失败，常常不是模型不会写 SQL，而是缺少「在投 &#x2F; 实际花费 &#x2F; 并列取值」这类未写在列名里的规则。</td>
+</tr>
+<tr>
+<td>思考模型工具调用</td>
+<td>Qwen4-Max 与 Hy4 flash 的当天文章都强调：思考模式下，历史 <code>reasoning_content</code> 必须按轮回填。</td>
+<td>把「完整回写 assistant 消息（content + reasoning_content + tool_calls）」做成接入清单里的必测项，而不是上线后再排障。</td>
+</tr>
+<tr>
+<td>推理集群 GPU 切片</td>
+<td>HAMi 被接入 Go TaaS，用于把一张卡切给多个 embedding&#x2F;rerank 小模型，文中给出可复现基准和反例。</td>
+<td>切片解决的是「小模型占不满卡、卡不够用」，不是让单卡吐出更多 token；<code>gpumem</code> 必须写 MiB 整数，写成 <code>6Gi</code> 会静默失效。</td>
+</tr>
+<tr>
+<td>AI Coding 度量</td>
+<td>LoongSuite Pilot 先做跨 Agent 事件归一化，再靠企业下发通道把采集覆盖率从「请大家手动安装」里救出来。</td>
+<td>没有覆盖率，归一化只是把有偏抽样算得更精确；安装、保活和配置变更必须能幂等下发。</td>
+</tr>
+<tr>
+<td>LangGraph 多 MCP</td>
+<td>掘金实践验证：一个 <code>mcpServers</code> 字典可并行拉起多个 stdio MCP，但工具名会被自动加 server 前缀。</td>
+<td>提示词里不要写死未加前缀的工具名；默认可去前缀以兼容旧提示词，额外 MCP 保留前缀以防冲突。</td>
+</tr>
+<tr>
+<td>Loop &#x2F; Harness</td>
+<td>阿里云给出 DeepSeek Harness 的插件化运行时与云上部署路径；AgentLoop 仅有标准评估综述，未见 <code>/goal</code>、Ralph loop 或 worktrees 的当天原文。</td>
+<td>可把「一切皆插件」的运行时和安全代理访问当作 Harness 入门参考，但不要把产品发布综述写成 Loop Engineering 方法更新。</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; Code Graph &#x2F; Spring Alibaba AI</td>
+<td>当天固定来源内未发现可核验专项原文。</td>
+<td>这三项不宜用旧文或邻近日不确定条目充数；如需补齐，应等待固定来源的新原文。</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://tech.meituan.com/2026/11/17/Agent-Evaluation-White-Paper-02.html">《Agent评测白皮书》系列02：商家 AI 助手的评测与优化闭环实践</a></td>
+<td>当天技术密度最高的厂队实践，可直接迁移到其他业务 Agent 的评测体系建设。</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708733679305375794">案例实践 | 让 Agent 读懂业务口径：ContextSearch 在广告数据查询中的实践</a></td>
+<td>用可复核的正确率、调用次数和错例，说明「补业务知识」比「让 Agent 多试几次 SQL」更有效。</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1784370">阿里云Qwen4-Max能力与活动</a></td>
+<td>正式版关键规格、短板和两套降本口径写在同一篇里，适合做选型和迁移检查，而不是只看发布会数字。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2785964">如何利用 HAMi 来提升 Token 工厂的 GPU 利用率</a></td>
+<td>少见地把收益和「不该用」的边界一起用基准测清楚，对推理平台排障很有帮助。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7709044258997321754">LoongSuite Pilot × Qoder：一次配置，全员可审计</a></td>
+<td>把 AI Coding 度量从工具对比，拉回到采集覆盖率和配置下发这个更容易被忽略的工程问题上。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2786341">Hy4 flash TokenHub 上手实测</a></td>
+<td>篇幅不长，但把思考模型工具调用的回填坑写清楚了，可直接对照自有客户端实现。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708761649999446070">「踩坑实录」给 LangGraph Agent 接两个 FastMCP</a></td>
+<td>是当天唯一可核验的 LangGraph&#x2F;MCP 专项实践，对多工具 Agent 的命名和提示词维护有直接启发。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708953356710641699">跨平台开发地图 | 2026年11月</a></td>
+<td>适合做 11 月客户端升级清单；需注意文中 Flutter 3.50、.NET 11 等发布本身发生在 11 月上旬，本文是 11 月 17 日的月度整理。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7709021467455733786">热点速递 | Agent 交付没人敢合？GitHub 榜在补验收</a></td>
+<td>对 2026-11-17 GitHub Trending 快照做了「可复用、可审查、可评估」的解读；这是掘金二次分析，不能代替官方榜单或仓库 README。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1784743">DeepSeek Harness 阿里云 ECS+计算巢部署教程</a></td>
+<td>可作为 Harness&#x2F;Agent Loop 运行时的入门操作说明，产品引导色彩较重，适合快速搭环境，而不是作为架构深读。</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-17 00:00:00 到 2026-11-17 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>固定来源覆盖：阿里巴巴（102.alibaba.com、阿里云开发者社区、jm.taobao.org、语雀·阿里技术干货）、腾讯（腾讯技术工程、腾讯云+社区、AlloyTeam、腾讯大讲堂）、字节跳动（techblog.toutiao.com、掘金厂队文章）、百度（FEX、EFE、百度开发者中心）、美团技术团队、京东（京东云开发者社区、凹凸实验室）、滴滴开源平台、网易云知乎组织页、360 博客、有赞技术团队；以及五个专项在上述来源内的定向检索。</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>公司&#x2F;组织</th>
+<th>来源</th>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>美团</td>
+<td>美团技术团队</td>
+<td>技术文章</td>
+<td>《Agent评测白皮书》系列02：商家 AI 助手的评测与优化闭环实践</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://tech.meituan.com/2026/11/17/Agent-Evaluation-White-Paper-02.html">https://tech.meituan.com/2026/11/17/Agent-Evaluation-White-Paper-02.html</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>技术文章</td>
+<td>阿里云Qwen4-Max能力与活动：激活降至71B、单任务11.16元，Token省47.8%，Lite首月19.5元</td>
+<td>2026-11-17（文中说明正式版发布于 2026-11-16）</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1784370">https://developer.aliyun.com/article/1784370</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>技术文章</td>
+<td>DeepSeek Harness 是什么？阿里云ECS+计算巢3分钟部署超详细实操教程</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1784743">https://developer.aliyun.com/article/1784743</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>掘金 &#x2F; 阿里云云原生</td>
+<td>技术文章</td>
+<td>LoongSuite Pilot × Qoder：一次配置，全员可审计</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7709044258997321754">https://juejin.cn/post/7709044258997321754</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>掘金 &#x2F; 阿里云云原生</td>
+<td>文档&#x2F;综述</td>
+<td>阿里云 AgentLoop 通过中国信通院《企业级 FDE 交付能力要求》标准评估</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708969711213215754">https://juejin.cn/post/7708969711213215754</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>掘金 &#x2F; 阿里云大数据AI技术</td>
+<td>文档</td>
+<td>AI 原生大数据服务 ADA 快速入门：完成首次对话式数据分析</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7709021467455668250">https://juejin.cn/post/7709021467455668250</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>102.alibaba.com</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新；页面抓取返回 500</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://102.alibaba.com/tech/index/">https://102.alibaba.com/tech/index/</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里中间件团队博客</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新；页面抓取返回 404</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="http://jm.taobao.org/">http://jm.taobao.org/</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>语雀·阿里技术干货</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新；页面未返回可用目录</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://www.yuque.com/alidoc/dry">https://www.yuque.com/alidoc/dry</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>Hy4 flash来了！价格比Hy4大幅降低</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2785919">https://cloud.tencent.com/developer/article/2785919</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>Hy4 flash 上手实测：只改一个 model 参数接入 TokenHub</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2786341">https://cloud.tencent.com/developer/article/2786341</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>如何利用 HAMi 来提升 Token 工厂的 GPU 利用率</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2785964">https://cloud.tencent.com/developer/article/2785964</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯技术工程（Tencent_TEG &#x2F; 腾讯云官方号专栏）</td>
+<td>无新增</td>
+<td>检索及专栏列表未发现 2026-11-17 可核验新文</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/user/170434/articles">https://cloud.tencent.com/developer/user/170434/articles</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>AlloyTeam</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新；页面抓取返回 503</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="http://www.alloyteam.com/">http://www.alloyteam.com/</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯大讲堂</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="http://djt.qq.com/videos/">http://djt.qq.com/videos/</a></td>
+</tr>
+<tr>
+<td>字节跳动</td>
+<td>掘金 &#x2F; 字节跳动数据库</td>
+<td>技术文章</td>
+<td>案例实践 | 让 Agent 读懂业务口径：ContextSearch 在广告数据查询中的实践</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708733679305375794">https://juejin.cn/post/7708733679305375794</a></td>
+</tr>
+<tr>
+<td>字节跳动</td>
+<td>字节跳动技术团队</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新；站点抓取返回 404</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://techblog.toutiao.com/">https://techblog.toutiao.com/</a></td>
+</tr>
+<tr>
+<td>京东</td>
+<td>京东云开发者社区</td>
+<td>技术文章</td>
+<td>【11.11大促系列】Super Agent 进群：今年11.11，多了个会主动干活的”数字人队长”</td>
+<td>2026-11-13（相邻日期&#x2F;中国时间窗口传播：2026-11-17 掘金同步）</td>
+<td><a target="_blank" rel="noopener" href="https://developer.jdcloud.com/article/4609">https://developer.jdcloud.com/article/4609</a></td>
+</tr>
+<tr>
+<td>京东</td>
+<td>凹凸实验室</td>
+<td>无新增</td>
+<td>检索与新闻列表未发现 2026-11-17 可核验技术文章</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://aotu.io/">https://aotu.io/</a></td>
+</tr>
+<tr>
+<td>百度</td>
+<td>FEX</td>
+<td>无新增</td>
+<td>公开列表最新文章仍为 2020 年，未见 2026-11-17 更新</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="http://fex.baidu.com/">http://fex.baidu.com/</a></td>
+</tr>
+<tr>
+<td>百度</td>
+<td>EFE</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新；页面抓取返回 500</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="http://efe.baidu.com/">http://efe.baidu.com/</a></td>
+</tr>
+<tr>
+<td>百度</td>
+<td>百度开发者中心</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://developer.baidu.com/">https://developer.baidu.com/</a></td>
+</tr>
+<tr>
+<td>滴滴</td>
+<td>滴滴开源平台</td>
+<td>无新增</td>
+<td>首页未发现 2026-11-17 可核验更新</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://didi.github.io/">https://didi.github.io/</a></td>
+</tr>
+<tr>
+<td>网易</td>
+<td>网易云知乎组织页</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://www.zhihu.com/org/wang-yi-yun-54-1/posts">https://www.zhihu.com/org/wang-yi-yun-54-1/posts</a></td>
+</tr>
+<tr>
+<td>360</td>
+<td>360 博客</td>
+<td>无新增</td>
+<td>检索未发现 2026-11-17 可核验更新；页面抓取返回 503</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="http://blogs.360.cn/">http://blogs.360.cn/</a></td>
+</tr>
+<tr>
+<td>有赞</td>
+<td>有赞技术团队</td>
+<td>无新增</td>
+<td>首页可见最新文章仍为 2022 年，未见 2026-11-17 更新</td>
+<td>—</td>
+<td><a target="_blank" rel="noopener" href="https://tech.youzan.com/">https://tech.youzan.com/</a></td>
+</tr>
+<tr>
+<td>掘金（跨厂）</td>
+<td>掘金</td>
+<td>技术文章</td>
+<td>「踩坑实录」给 LangGraph Agent 接两个 FastMCP，我被 langchain 偷偷改了工具名</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708761649999446070">https://juejin.cn/post/7708761649999446070</a></td>
+</tr>
+<tr>
+<td>掘金（跨厂）</td>
+<td>掘金</td>
+<td>技术文章</td>
+<td>跨平台开发地图 | 2026年11月</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7708953356710641699">https://juejin.cn/post/7708953356710641699</a></td>
+</tr>
+<tr>
+<td>掘金（跨厂）</td>
+<td>掘金</td>
+<td>技术文章</td>
+<td>热点速递 | Agent 交付没人敢合？GitHub 榜在补验收</td>
+<td>2026-11-17</td>
+<td><a target="_blank" rel="noopener" href="https://juejin.cn/post/7709021467455733786">https://juejin.cn/post/7709021467455733786</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
