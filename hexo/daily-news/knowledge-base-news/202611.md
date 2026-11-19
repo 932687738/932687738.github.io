@@ -2,6 +2,70 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-18
+
+### 今日总览
+
+**一句话结论**：当天固定来源里，最可核验的技术增量是美团把 EMNLP 2026 主会长文按「流式语音智能体、内在奖励、指令遵循评测」等方向整理出来；阿里云开发者社区则继续补 Qwen4-Max 预览版的定位、窗口期和 Token Plan 计价说明，并出现一篇以 Session Store 支撑 Agent 自进化数据闭环的云原生短文。五组工程框架专项在固定来源内均未发现可核验新文。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 已覆盖阿里巴巴（102.alibaba.com、阿里云开发者社区、阿里中间件博客、语雀·阿里技术干货）、腾讯（腾讯技术工程/Tencent_TEG、腾讯云+社区、AlloyTeam、腾讯大讲堂）、字节跳动（字节跳动技术团队站点、掘金厂队文章）、百度（FEX、EFE、百度开发者中心）、美团技术团队、京东（京东云开发者社区、凹凸实验室）、滴滴开源平台、网易云知乎组织页、360 博客、有赞技术团队；并在上述固定来源内完成 Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering 五组专项检索。 |
+| 核心趋势 | 1）大厂知识库的「可学习信号」仍集中在评测与训练方法，而不是新框架发版——美团 12 篇 EMNLP 主会论文覆盖流式语音、潜空间奖励和评测基准。2）阿里云侧 11-18 文章多在解释已于 11 月 11 日开启预览窗口的 Qwen4-Max（\`qwen4-max-preview\`）如何走 Token Plan、窗口何时下线，属于产品接入说明，不宜理解成 18 日首次发布。3）Agent 数据底座开始被写成「标准轨迹连接执行、评估与迭代」，但当日可抓到的正文深度有限。 |
+| 可直接关注 | 美团 LTS-Agent 把「何时思考」和「如何增量推理」拆开的流式语音框架；Latent-GRPO 用潜空间几何做免外挂验证器的强化学习；接入 Qwen4-Max 预览版时先核对窗口期（11-11 至 11-25）和模型 ID 会替换这一点。 |
+| 专项检索结论 | Langfuse：固定来源内未发现以 Langfuse、OTel 导出到 Langfuse、Java SDK 或 MCP Server 为题的 11-18 原文。LangChain / LangGraph：未发现以 LangChain、LangGraph 或 MCPAdapter 为题的当日固定来源原文。Code Graph：未发现以代码知识图谱、Tree-sitter、MCP 代码探索或 impact analysis 为题的当日原文。Spring Alibaba AI：未发现 spring-ai-alibaba、Graph Core、ReactAgent/DataAgent 或 java2ai 的可核验原文。Loop Engineering：未发现以 \`/goal\`、\`/loop\`、Ralph loop、worktrees 或 verifier 为题的固定来源原文。 |
+| 未发现更新 | 102.alibaba.com 未见 2026-11-18 技术新文；阿里中间件博客 jm.taobao.org 未见更新；语雀·阿里技术干货未见可核验新文；腾讯技术工程/Tencent_TEG、AlloyTeam、腾讯大讲堂未见当天技术新文；腾讯云+社区当天检索到的多为 GPT-6.2 转述/评测，缺乏可独立核验的官方规格，不作为重要更新展开；字节跳动技术团队 techblog.toutiao.com 未见当天更新；百度 FEX / EFE / 开发者中心未见 2026-11-18 可核验新文；京东云开发者、凹凸实验室、滴滴开源平台、网易云知乎组织页、360 博客、有赞技术团队均未见当天可核验技术更新。 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 顶会论文精选 | [EMNLP 2026 \| 美团技术团队学术论文精选](https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html) | 2026-11-18 | 美团技术团队 | 从 20 余篇录用论文中精选 12 篇主会长文。开篇两篇最有工程对照价值：LTS-Agent 用动态语义触发器和双角色编排（Thinker / Speaker）做流式语音「边说边想」，并配 Pause-and-Repair 基准；Latent-GRPO 观察正确轨迹终端表示在潜空间聚成紧密簇，用 IRCE 估质心作为内在奖励，减少对外部验证器的依赖。适合做语音 Agent 与推理 RL 的同学按论文原文深读。 |
+| 模型接入与计价 | [2026年阿里云Qwen4-Max 首发 Token Plan 低至 5 折](https://developer.aliyun.com/article/1785294) | 2026-11-18 | 阿里云开发者社区 | 说明百炼上 Qwen4-Max 预览版走 Token Plan 订阅、新客套餐低至 5 折，并强调预览阶段暂不开放单独按量通道。需注意：预览窗口在文中与配套解析文均写为 11 月 11 日 10:00 至 11 月 25 日 24:00（UTC+8），因此这是 11-18 的产品/计价说明，不是模型首发日。 |
+| 模型定位解析 | [阿里云最新Qwen4-Max预览版深度解析](https://developer.aliyun.com/article/1785296) | 2026-11-18 | 阿里云开发者社区 | 给出预览标识 \`qwen4-max-preview\`，入口包括千问办公、Qoder、千问 APP、QwenStudio；把定位写成复杂推理与编程的多模态智能体基座，并明确窗口结束后该 ID 会下线、正式版将换新标识，不适合把预览 API 直接用于不可中断的生产。营销信息较多，核心价值是版本边界和迁移提醒。 |
+| Agent 数据底座 | [Agent 自进化的数据底座：阿里云 SLS Session Store](https://developer.aliyun.com/article/1785236) | 2026-11-18 | 阿里云开发者社区 / 阿里云云原生 | 页面可核验标题、日期与导语「用标准轨迹连接执行、评估与迭代改进，为 Agent 自进化持续积累数据」。本次抓取到的正文较薄，未展开接口与数据模型，适合作为线索跟进，不宜写成已验证的架构细节。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 流式语音 Agent | [美团 EMNLP 2026 论文精选 · LTS-Agent](https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html) | 把「何时思考」与「如何增量推理」分开；语义饱和前缀触发；Thinker 维护状态、Speaker 做前台投机求解 | 做实时语音助手、被 ASR-LLM-TTS 串行延迟卡住的团队 |
+| 免外挂验证器的 RL | [美团 EMNLP 2026 论文精选 · Latent-GRPO](https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html) | 正确轨迹终端表示高余弦相似度；IRCE 估「真值质心」作为密集奖励 | 做推理强化学习、想降低外部 judge 成本的人 |
+| 预览模型接入 | [Qwen4-Max 预览版深度解析](https://developer.aliyun.com/article/1785296) | 预览 ID、窗口期、正式版将换标识；预览不宜直接承载生产 SLA | 已在百炼/Qoder 试用 Qwen4-Max 的开发者 |
+
+### 工程实践归纳
+
+**总体判断**：固定来源里可复用的工程启发主要来自美团论文精选（流式编排与内在奖励），以及阿里云对预览模型生命周期的提醒；Langfuse / LangChain / Code Graph / Spring Alibaba AI / Loop Engineering 当日未发现可核验更新。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 流式 Agent 编排 | LTS-Agent 不用固定分块或纯投机生成，而是在语义饱和处触发思考，并让说话与思考并行 | 实时系统要把「何时调用重推理」做成可学习/可配置的触发器，避免把每个音频块都送进完整推理。 |
+| 奖励与验证器 | Latent-GRPO 用潜空间几何替代昂贵外部验证器 | 若外部 judge 成为训练瓶颈，可先检验「正确轨迹是否真的更聚集」，再决定是否引入内在奖励。 |
+| 预览 API 生命周期 | Qwen4-Max 预览窗口有明确起止，结束后模型 ID 下线 | 试用代码和线上配置要分开；预览期可以做评测和体验，但要把切换正式 ID 当成必做的迁移项。 |
+| 五个专项 | 固定来源内均无 11-18 可核验新文 | 不要把其他日期或非固定来源的框架更新记入本日知识库。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [EMNLP 2026 \| 美团技术团队学术论文精选](https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html) | 当天固定来源中技术密度最高的原文入口，12 篇主会论文可按方向选读，并应回到对应论文 PDF。 |
+| 推荐 | [阿里云最新Qwen4-Max预览版深度解析](https://developer.aliyun.com/article/1785296) | 把预览版和正式版的边界写得比较清楚，避免把活动价和临时模型 ID 带进生产。 |
+| 延伸 | [Agent 自进化的数据底座：阿里云 SLS Session Store](https://developer.aliyun.com/article/1785236) | 题目和导语指向「标准轨迹」数据闭环，值得之后用完整正文或官方文档补读。 |
+
+### 来源清单
+
+- 检索范围：2026-11-18 00:00:00 到 2026-11-18 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：已覆盖固定来源清单中的 10 个公司/组织维度，以及五个工程框架专项
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 美团 | 美团技术团队 | 技术文章 | EMNLP 2026 \| 美团技术团队学术论文精选 | 2026-11-18 | https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html |
+| 阿里巴巴 | 阿里云开发者社区 | 技术/产品说明 | 2026年阿里云Qwen4-Max 首发 Token Plan 低至 5 折 | 2026-11-18 | https://developer.aliyun.com/article/1785294 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术/产品说明 | 阿里云最新Qwen4-Max预览版深度解析 | 2026-11-18 | https://developer.aliyun.com/article/1785296 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章（正文较薄） | Agent 自进化的数据底座：阿里云 SLS Session Store | 2026-11-18 | https://developer.aliyun.com/article/1785236 |
+| 腾讯 / 字节 / 百度 / 京东 / 滴滴 / 网易 / 360 / 有赞等 | 固定来源清单其余站点 | 无新增 | 未发现可确认属于该日期且具备可靠出处的重大技术更新 | - | - |
+
 ## 2026-11-17
 
 ### 今日总览
@@ -1188,4 +1252,3 @@
 | 社区 | 掘金 | 技术文章 | Obsidian + Claude Code | 热榜窗口 | https://juejin.cn/post/7701269136323723299 |
 | 阿里巴巴 | 阿里云开发者社区 | 营销（过滤） | 双 11 大促相关文 | 2026-11 窗口 | https://developer.aliyun.com/ |
 | 全部 | 固定来源清单 | 无专项新增 | Langfuse/LangGraph/Code Graph/SAA/Loop 无当日新文 | - | - |
-

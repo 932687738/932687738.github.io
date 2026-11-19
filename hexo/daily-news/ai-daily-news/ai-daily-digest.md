@@ -2,6 +2,99 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-18
+
+### 今日总览
+
+**一句话结论**：上海时间 11 月 18 日，主线是 Google 把「更快的前沿模型」和「可交互世界模型」同时推到可用窗口——Gemini 4 Neon 以更低单价进入 API / Antigravity / GitHub Copilot，Genie 4 为 Ultra 用户补上实时改世界与原生音频；OpenAI 则用研究加速数据、芯片设计实践和生命周期安全流程说明 Agent 提效仍呈锯齿状，Anthropic 完成 IPO 定价。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商（Google / DeepMind、OpenAI、Anthropic、NVIDIA、AWS、GitHub）、模型/产品、开发者工具、Agent 框架、RAG/MCP/向量与记忆层、Spring AI / Spring Alibaba AI、Langfuse、LangChain/LangGraph、Code Graph、Loop Engineering、Claude Code / Codex / OpenClaw / Hermes、skills / Agent Skills、论文（arXiv / Hugging Face Papers）、GitHub Releases / Changelog、技术媒体、政策监管、中文补充来源 |
+| 核心趋势 | 1）模型竞争从「更大」转向「同样难的任务、更低时延与单价」，并把同一代模型接入 IDE / Copilot / 企业 API。2）OpenAI 用内部测量承认编码 Agent 提效是不均匀的：监控训练已较高，写推理服务代码仍低，安全与对齐投入在加大。3）编程 Agent 运行时继续补协商、可观测性和恢复（Codex 语音与 OTel、OpenClaw 扩展稳定版、Claude Code 安装确认与 MCP stdin）。4）基础设施侧出现可直接接入的 Agent 记忆托管（OpenSearch Memory）以及面向本地 Agent 的紧凑桌面（RTX Spark）。 |
+| 可直接关注 | 1）Gemini 4 Neon 在 API 与 Copilot 中的定价、时延和「少编造、少擅自改代码」表现。2）OpenAI 研究加速报告中 2–8 小时任务的成功率拆分，以及安全/对齐工时变化。3）Codex CLI 0.170.0 的 WebRTC 语音、OTel 刷新头和同名 MCP 实验。4）OpenClaw 2026.10.33 扩展稳定版的会话导出/更新恢复边界。5）Amazon OpenSearch Memory 如何把事件、派生记忆和跨会话检索做成无服务器能力。 |
+| 专项检索结论 | **Claude Code**：v2.1.327 于 11-17 23:17 UTC（上海 11-18 07:17）发布，属本窗口；官方 changelog 标注日期为 Nov 17，按 GitHub 发布时间计入本日。新增 \`/install-github-app\` 改仓库前确认、\`claude mcp add-json -\` 从 stdin 读 MCP JSON（会话内不可用）、\`/status\` 列出损坏的 agent/skill/command 文件，以及 \`ExitWorktree\` 在可能有未保存修改时先询问。**Codex**：官方 GitHub 发布 rust-v0.170.0（11-18 03:40 UTC）。**OpenClaw**：发布网关扩展稳定版 2026.10.33（11-18 04:15 UTC），定位接近 LTS，不含原生应用包。**Hermes**：窗口内未见新的稳定版；v0.23.2 已在 11-16/11-17 日报收录。**Spring AI**：spring.io 当日《This Week in Spring》是周报，提到的 Spring AI 2.1.0-RC2 等已在此前日期发布，不作为 11-18 新发版。**Spring Alibaba AI**：未发现 spring-ai-alibaba / java2ai 当日官方 release。**Langfuse**：changelog 最近条目停在 11-13（Vertex AI Gateway、Gemini 评测器、按 key 限模型），本日无新条目。**LangChain / LangGraph**：框架本体未见当日发版；LangSmith CLI v0.5.0 于 11-17 19:52 UTC（上海 11-18 03:52）发布，按时间窗口收录，含破坏性变更（sandbox 委托需显式权限）。**Code Graph**：未发现 11-18 窗口内新 release；colbymchenry/codegraph v1.6.3 发布于 11-17 15:37 UTC（上海 11-17 23:37），属前一日窗口。**Loop Engineering**：未发现 \`/goal\`、\`/loop\`、Ralph loop 或 loop-engineering 仓库/官方文章的当日更新。**skills / Agent Skills**：未见 Cursor / Claude / Codex Skills 规范本身的新版本；相关信号是 Claude Code \`/status\` 开始汇总损坏 skill 文件，GitHub Copilot 团队默认插件一般可用，以及 LangSmith CLI \`langsmith setup\` 可向编码 Agent 安装 LangSmith skills 与 MCP。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 模型发布 | [Introducing Gemini 4 Neon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) | 2026-11-18 | 官方发布 | 面向工程、知识工作与科学工作流的快速前沿模型：1M 上下文，输入 \$3 / 百万 token（缓存输入 \$0.15，95% 折扣）、输出 \$15 / 百万 token；Artificial Analysis Intelligence Index xhigh 得分 61（总榜第 3），Vals Index 第 2 并落在 Pareto 前沿，Agent Arena 可操纵性第 2，并称 Antigravity 内测编造率最低。今日起在 Gemini API / AI Studio、Gemini for business、付费 Pro/Ultra 的 Antigravity 与 Gemini 应用滚动上线。 |
+| 世界模型 | [Genie 4 is now available](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/) | 2026-11-18 | 官方发布 | 向符合条件的 Google AI Ultra 用户开放 Project Genie 新体验：Genie 4 支持会话中途用自然语言改世界，并首次搭配实时原生音频；Genie 3 单次探索延长到 3 分钟（原 60 秒），可 360° 全景图种子生成，并加入 Project Genie agent 与社区画廊。Pro 用户可在同一页面排队。 |
+| 研究加速 | [Research acceleration: The jagged frontier](https://openai.com/index/research-acceleration-jagged-frontier/) | 2026-11-18 | 官方发布 | 内部测量：3 月至 10 月，编码 Agent 独立完成「约 2–4 小时」任务的成功率由 23% 升至 46%，4–8 小时任务由 13% 升至 35%；分任务则呈锯齿状（监控训练 79%、发起训练 35%、写推理/服务栈代码 25%）。10 月研究者 API 日耗中位数约 \$2,400，P90 约 \$23,000；问卷中位数愿用 30% 团队算力或 40% 编制换 3 个月前沿编码 Agent。Safety and Alignment 记录工时 1–9 月增加 77%。 |
+| 芯片设计 | [Advancing chip design with OpenAI models](https://openai.com/index/advancing-chip-design-with-our-models/) | 2026-11-18 | 官方发布 | 补充 Jalapeño 定制推理芯片的设计改进细节，并说明把同一方法用到 AMD 第三方硬件；与 Synopsys 合作，把模型接入工程师已有的 EDA 工具链。适合关注「模型如何进入真实芯片设计闭环」的团队。 |
+| 安全治理 | [Managing frontier AI risk: From training to deployment](https://openai.com/index/managing-frontier-ai-risk/) | 2026-11-18 | 官方发布 | 说明从沙箱训练到 Codex 部署的分层安全评审与 safety case；称会在需要时暂停内部训练或扣住如 GPT-6.1 Astra 的发布，以换取对齐证据。可对照「能力加速」文中的安全投入变化。 |
+| 资本市场 | [Anthropic prices initial public offering](https://www.anthropic.com/news/anthropic-prices-initial-public-offering) | 2026-11-18 | 官方发布 | Class A 定价 \$83 / 股，拟发行 9.80 亿股（公司出售 9.5635 亿股）；预计 11 月 19 日以代码 ANT 在纳斯达克上市，11 月 20 日交割（需满足常规条件）。注册声明于 11 月 18 日生效。这是治理与资本结构事件，不是模型发版。 |
+| 编程助手 | [Gemini 4 Neon in GitHub Copilot](https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot/) | 2026-11-18 | 官方发布 | Neon 在 Copilot Pro+ / Max / Business / Enterprise 一般可用，覆盖 VS Code、Visual Studio、Copilot CLI、coding agent、github.com、移动端与 JetBrains / Xcode / Eclipse 等；按提供方标价计入按量计费，企业需通过模型策略管理访问，滚动发布。 |
+| Copilot 连接器 | [Connect Supabase, Box, Calendly, and more to Copilot](https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/) | 2026-11-18 | 官方发布 | 公共预览再增加 8 个 GitHub 验证 MCP 连接器：Box、Buildkite、Calendly、ClickUp、Mixpanel、Supabase、Webflow、Wix。Business/Enterprise 需打开 Editor preview features 策略。适合观察「一次连接、多客户端复用」的 MCP 分发。 |
+| 团队定制 | [Customize GitHub Copilot for your team](https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team/) | 2026-11-18 | 官方发布 | 组织内团队可把已批准的 Agent Plugins 设为默认，在 VS Code、Copilot app 和 CLI 对直接成员生效；子团队不继承，企业/组织策略优先。这是 skills/插件分发的团队层，而非新的 Skills 规范。 |
+| 安全评估 | [Security risk assessments run automatically on GitHub Team](https://github.blog/changelog/2026-11-18-security-risk-assessments-run-automatically-on-github-team/) | 2026-11-18 | 官方发布 | GitHub Team 组织开始自动跑免费安全风险评估，管理员与安全经理可查看凭据暴露与代码漏洞，作为后续加固优先级输入。 |
+| 编码 Agent | [Codex CLI 0.170.0](https://github.com/openai/codex/releases/tag/rust-v0.170.0) | 2026-11-18 | 开源发布 | 新增 TUI 内 WebRTC 实时语音协商、OpenTelemetry HTTP exporter 自动刷新认证头、跨环境使用同名 MCP server 的实验支持；并修复超大 WebSocket 回退 HTTP、MCP OAuth 竞态、Cloud 会话重连，以及 Windows 文件替换与 sandbox 权限保留。 |
+| 开源运行时 | [openclaw 2026.10.33](https://github.com/openclaw/openclaw/releases/tag/v2026.10.33) | 2026-11-18 | 开源发布 | 网关扩展稳定版（约等于当前 LTS）：在 10 月底代码基线上叠加关键安全与可靠性修复。强调长会话导出/恢复有界化以降低 OOM，更新执行器异常退出后可恢复而不是让 Gateway 掉线，并加强共享会话隐私、自动化对轮询/MCP 事件的响应，以及按需检索已安装 skills。发行覆盖 npm 核心包、官方插件和 Gateway Docker，不含原生应用。 |
+| 本地 AI 硬件 | [NVIDIA RTX Spark Compact Desktops Out Now](https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/) | 2026-11-18 | 官方发布 | ASUS、Dell、MSI 的 RTX Spark 紧凑桌面上市（Acer、GIGABYTE、HP、Microsoft 后续跟进），最高 128GB 统一内存，面向本地 Agent、图像/视频生成与微调；并提到 Adobe 原生 Windows on Arm、Blender DLSS Ray Reconstruction 与 ComfyUI 本地生成。 |
+| Agent 记忆 | [Introducing Amazon OpenSearch Memory](https://aws.amazon.com/blogs/big-data/introducing-amazon-opensearch-memory-persistent-memory-for-ai-agents/) | 2026-11-18 | 官方发布 | 基于 OpenSearch Serverless 的 Agent 持久记忆正式可用：把交互存成可检索事件，派生有用记忆，并在会话间取回上下文，而不用自建提取、索引、合并与检索栈。适合评估托管记忆相对「把整段历史塞回模型」的成本与隔离/留存策略。 |
+| 周报（非新发版） | [This Week in Spring - November 18th, 2026](https://spring.io/blog/2026/11/18/this-week-in-spring-november-18th-2026/) | 2026-11-18 | 官方周报 | 提醒更新 JVM 以应对 Java4Shell CVE，并汇总当周已发布内容（含 Spring AI 2.1.0-RC2、Spring Boot 4.2.0-RC2、Spring Cloud 2026.0.0-RC1 及 Pulsar 项目归属变更）。这些发版日期早于本日，仅作周报索引。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Claude Code 运行时 | [Claude Code changelog 2.1.327](https://code.claude.com/docs/en/changelog) | 安装 GitHub App 前确认；从 stdin 添加 MCP，避免 token 出现在命令行；\`/status\` 汇总损坏 skill/agent 文件与永不匹配的 hook；\`ExitWorktree\` 对可能未保存的 worktree 先询问 | 用 Claude Code 做隔夜/多 worktree 任务、需要收紧 MCP 与权限的人 |
+| Codex 可观测性与 MCP | [Codex 0.170.0](https://github.com/openai/codex/releases/tag/rust-v0.170.0) | OTel exporter 自动刷新认证头；同名 MCP 跨环境实验；Windows 替换与 sandbox 权限保留 | 在多环境跑 Codex、并已接 OpenTelemetry 的团队 |
+| LangSmith CLI | [langsmith-cli v0.5.0](https://github.com/langchain-ai/langsmith-cli/releases/tag/v0.5.0) | \`langsmith setup\` 向编码 Agent 安装 LangSmith skills 与 MCP；sandbox 访问委托改为显式权限（破坏性变更）；密钥可写入系统钥匙串；新增 investigate/verify 工作流命令 | LangChain/LangSmith 用户，以及要把观测/评测能力接进编码 Agent 的人 |
+| Agent 记忆架构 | [Amazon OpenSearch Memory](https://aws.amazon.com/blogs/big-data/introducing-amazon-opensearch-memory-persistent-memory-for-ai-agents/) | 事件存储、记忆派生、跨会话检索、隔离与留存，避免把完整对话史一次性送进模型 | 要给客服/编码/个人助手加长期记忆、又不想自建向量流水线的人 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：当日工程信号集中在「把模型接到已有工具链，并补上记忆、权限和恢复」，而不是框架核心发版；LangChain 生态最具体的更新是时间窗口内的 LangSmith CLI v0.5.0。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 提效是锯齿状的 | OpenAI 报告显示监控类任务 Agent 成功率已高，但发起训练和写服务代码仍低，重用户用量显著高于中位 | 不要用「平均提效」规划人力；按任务类型分别设人和 Agent 的交接面，并把高风险步骤留在人审。 |
+| 记忆与上下文 | OpenSearch Memory 把「存事件 → 抽记忆 → 检索」做成托管能力 | 生产 Agent 应默认按相关性取回，而不是回放全部历史；同时要先定义隔离、删除和保留策略。 |
+| MCP 分发 | GitHub Copilot 一次连接、多客户端复用 8 个新连接器；Claude Code 支持从 stdin 添加 MCP JSON | 密钥不要进 argv；企业侧仍要靠 allowlist / preview 策略控制哪些连接器可启用。 |
+| 可观测性与评测入口 | LangSmith CLI 把 skills/MCP 安装进编码 Agent，并把 sandbox 委托改成显式权限 | 观测工具进入 Agent 工作区时，权限模型和破坏性变更要先看 changelog，再在 CI/开发机铺开。 |
+| 开源运行时恢复 | OpenClaw 扩展稳定版强调有界导出、更新中断恢复、按需读 skills | 自托管 Gateway 更适合跟踪 LTS 线；skills 全量塞进提示词既贵也不稳，应按需检索。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Research acceleration: The jagged frontier](https://openai.com/index/research-acceleration-jagged-frontier/) | 少有的、带任务类型拆分和用量分位数的一线研发提效数据，适合校正「Agent 已经能独立做研究」的判断。 |
+| 必读 | [Introducing Gemini 4 Neon](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) | 给出价格、上下文和多项外部评测位置，是当天最需要核对的模型规格来源。 |
+| 推荐 | [Managing frontier AI risk: From training to deployment](https://openai.com/index/managing-frontier-ai-risk/) | 把发布节奏、safety case 和部署分层写清楚，可与同一天的提效报告对照阅读。 |
+| 推荐 | [Codex CLI 0.170.0](https://github.com/openai/codex/releases/tag/rust-v0.170.0) 与 [Claude Code 2.1.327 changelog](https://code.claude.com/docs/en/changelog) | 直接关系到本周可升级的 CLI 行为、MCP 安全与隔夜任务权限。 |
+| 延伸 | [Amazon OpenSearch Memory](https://aws.amazon.com/blogs/big-data/introducing-amazon-opensearch-memory-persistent-memory-for-ai-agents/) | 若正在自建 Agent 记忆层，可用来对比「托管事件+派生记忆」是否够用。 |
+| 延伸 | Hugging Face Papers 日刊收录：[RepoFactory / Environment Evolution Loop](https://arxiv.org/abs/2611.21152)、[Do LLM Agents Still Need to Be Told How to Self-Improve?](https://arxiv.org/abs/2611.23219) | 2026-11-18 日刊列出的长程编程环境合成与自主自改进实验；本次未能在 arXiv 摘要页直接核验 Submitted 字段，按日刊传播收录，引用前请核对 Submitted/Revised 日期。 |
+
+### 来源清单
+
+- 检索范围：2026-11-18 00:00:00 到 2026-11-18 23:59:59（Asia/Shanghai）
+- 引用域名：blog.google, openai.com, anthropic.com, github.blog, github.com, code.claude.com, blogs.nvidia.com, aws.amazon.com, spring.io, langfuse.com, changelog.langchain.com, arxiv.org, huggingface.co
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Introducing Gemini 4 Neon | 2026-11-18 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/ |
+| 官方发布 | Genie 4 is now available | 2026-11-18 | https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/ |
+| 官方发布 | Research acceleration: The jagged frontier | 2026-11-18 | https://openai.com/index/research-acceleration-jagged-frontier/ |
+| 官方发布 | Advancing chip design with OpenAI models | 2026-11-18 | https://openai.com/index/advancing-chip-design-with-our-models/ |
+| 官方发布 | Managing frontier AI risk: From training to deployment | 2026-11-18 | https://openai.com/index/managing-frontier-ai-risk/ |
+| 官方发布 | Anthropic prices initial public offering | 2026-11-18 | https://www.anthropic.com/news/anthropic-prices-initial-public-offering |
+| 官方发布 | Gemini 4 Neon in GitHub Copilot | 2026-11-18 | https://github.blog/changelog/2026-11-18-gemini-4-neon-in-github-copilot/ |
+| 官方发布 | Connect Supabase, Box, Calendly, and more to Copilot | 2026-11-18 | https://github.blog/changelog/2026-11-18-connect-supabase-box-calendly-and-more-to-copilot/ |
+| 官方发布 | Customize GitHub Copilot for your team | 2026-11-18 | https://github.blog/changelog/2026-11-18-customize-github-copilot-for-your-team/ |
+| 官方发布 | Security risk assessments run automatically on GitHub Team | 2026-11-18 | https://github.blog/changelog/2026-11-18-security-risk-assessments-run-automatically-on-github-team/ |
+| 开源发布 | Codex CLI rust-v0.170.0 | 2026-11-18 | https://github.com/openai/codex/releases/tag/rust-v0.170.0 |
+| 开源发布 | openclaw 2026.10.33 | 2026-11-18 | https://github.com/openclaw/openclaw/releases/tag/v2026.10.33 |
+| 开源发布 | Claude Code 2.1.327 changelog | 2026-11-18（GitHub 发布 11-17 23:17 UTC，上海时间窗口） | https://code.claude.com/docs/en/changelog |
+| 开源发布 | LangSmith CLI v0.5.0 | 2026-11-18（GitHub 发布 11-17 19:52 UTC，上海时间窗口） | https://github.com/langchain-ai/langsmith-cli/releases/tag/v0.5.0 |
+| 官方发布 | NVIDIA RTX Spark Compact Desktops Out Now | 2026-11-18 | https://blogs.nvidia.com/blog/rtx-spark-desktop-local-ai-available-now/ |
+| 官方发布 | Introducing Amazon OpenSearch Memory | 2026-11-18 | https://aws.amazon.com/blogs/big-data/introducing-amazon-opensearch-memory-persistent-memory-for-ai-agents/ |
+| 官方周报 | This Week in Spring - November 18th, 2026 | 2026-11-18 | https://spring.io/blog/2026/11/18/this-week-in-spring-november-18th-2026/ |
+| 论文原文（日刊传播，提交日未直接核验） | From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop | 2026-11-18（Hugging Face Papers 日刊） | https://arxiv.org/abs/2611.21152 |
+| 论文原文（日刊传播，提交日未直接核验） | Do LLM Agents Still Need to Be Told How to Self-Improve? | 2026-11-18（Hugging Face Papers 日刊） | https://arxiv.org/abs/2611.23219 |
+
 ## 2026-11-17
 
 ### 今日总览
@@ -1414,4 +1507,3 @@ Hugging Face 存在 [Daily Papers 2026-11-15 页面](https://huggingface.co/pape
 | 公告 | Anthropic files S-1 | 2026-10-26（相邻） | https://www.anthropic.com/news/s1-sec |
 | 周报/聚合 | Claude Code / Codex week of Nov 1 | 2026-11-01 | https://aicoding-guide.com/en/posts/weekly-2026-11-01/ |
 | 日汇总 | Epoch 0 2026-11-01 | 2026-11-01 | https://epoch0.tokyo/daily/2026-11-01/en |
-
