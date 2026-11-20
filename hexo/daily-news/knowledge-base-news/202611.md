@@ -2,6 +2,63 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-19
+
+### 今日总览
+
+**一句话结论**：当天固定来源里，可核验的增量主要来自腾讯云开发者社区：腾讯轻量云给出 LoopForge 在 Lighthouse 上的一键部署与两个可复现案例；同日还有一篇 Q3 财报资讯同步，披露 WorkBuddy 规模与 Agent Runtime「暂停—恢复」降本口径。其余八家公司维度及 Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI 四个专项，均未发现可核验的 11-19 新文。相邻日已写入既有章节的美团、京东文章不再重复展开。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 已覆盖阿里巴巴（102.alibaba.com、阿里云开发者社区、阿里中间件博客、语雀·阿里技术干货）、腾讯（腾讯技术工程/Tencent_TEG、腾讯云+社区、AlloyTeam、腾讯大讲堂）、字节跳动（字节跳动技术团队站点、掘金厂队文章）、百度（FEX、EFE、百度开发者中心）、美团技术团队、京东（京东云开发者社区、凹凸实验室）、滴滴开源平台、网易云知乎组织页、360 博客、有赞技术团队；并在上述固定来源内完成 Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering 五组专项检索。 |
+| 核心趋势 | 1）可核验信号集中在「把编程 Agent 做成可验收、可追踪的交付闭环」——LoopForge 用镜像部署、免 Key 平台验收和带人工审批的团队 SOP 把流程跑通。2）基础设施叙述强调长时 Agent 要能暂停与恢复，否则成本会耗在等待上（来自财报转载文对 Agent Runtime 的口径，需按官方财报交叉）。3）大厂知识库在 11-19 窗口整体偏静，不宜把相邻日已收录文章再写成今日更新。 |
+| 可直接关注 | [LoopForge 快速开始](https://cloud.tencent.com/developer/article/2788300) 的免 Key 验收与「分析 / 开发 / 评审 / 测试 / 脚本 / 负责人验收」SOP；财报转载文中 Agent Runtime 沙箱「暂停—恢复」将企业综合部署成本降低 70% 的表述，适合作为线索核对官方口径。 |
+| 专项检索结论 | **Loop Engineering：目标日有信号**（腾讯轻量云发布 LoopForge 在 Lighthouse 的部署指南；同日财报转载文提及 Agent Runtime「暂停—恢复」）。**Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI**：固定来源内未发现 11-19 可核验更新。LangChain/LangGraph 检索到 11-17 社区进阶文，因非目标日且非官方技术团队，不作为本日正文展开。 |
+| 未发现更新 | 102.alibaba.com 当日不可用或未见 2026-11-19 技术新文；阿里云开发者社区可见若干社区自发帖（偏营销或无法作为官方技术团队原文），不收录；阿里中间件博客 jm.taobao.org、语雀·阿里技术干货未见可核验新文；腾讯技术工程/Tencent_TEG、AlloyTeam、腾讯大讲堂未见当天可引用原文；字节跳动技术团队 techblog.toutiao.com、百度 FEX / EFE / 开发者中心、美团技术团队、京东云开发者与凹凸实验室、滴滴开源平台、网易云知乎组织页、360 博客、有赞技术团队均未见 2026-11-19 可核验技术更新。美团 11-18 EMNLP 精选、11-17 Agent 评测白皮书，以及京东 11-16「Agent 研发工作系统」已写入既有日期章节，本日不重复列出。 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 研发交付平台 / Loop Engineering | [腾讯开源 LoopForge 快速开始：在 Lighthouse 上一键部署平台并跑通两个案例](https://cloud.tencent.com/developer/article/2788300) | 2026-11-19 12:03:25（Asia/Shanghai，页面发布时间） | 腾讯云开发者社区 / 腾讯轻量云 | 把编程 Agent、SOP、脚本和人工审批串成可追踪交付流程。文中给出 Lighthouse 应用镜像部署步骤，以及两个可复现案例：免模型 Key 的平台验收（文中实测 3/3 节点结束、0 tokens），以及「审计日志需求」的团队 SOP（分析 / 开发 / 评审 / 测试 / 脚本 / 负责人验收，失败可退回）。适合要自托管编程 Agent 工作台的团队直接上手；向更多人开放前需先收紧账号与访问边界。 |
+| 腾讯云与混元应用规模 | [Q3财报：WorkBuddy日活超1000万，云收入同比增长35%](https://cloud.tencent.com/developer/article/2787911) | 2026-11-19 08:33:18（Asia/Shanghai，页面发布时间） | 腾讯云开发者社区 / 小腾资讯君（文末标明转载） | 可核验的产品与基础设施进展：WorkBuddy 日活超过 1000 万、日均 Token 超过 100 万亿；Hy4 flash 总参数 224B、激活 12B，文中称按内部评测集 WorkIndex 单任务成本约为 Hy4 preview 的 1/13、Hy4 的 1/20，上线首日 Token 调用量突破 50 万亿。在 Agent infra 方面，支撑 WorkBuddy 的 Agent Runtime 通过沙箱「暂停—恢复」减少资源闲置，将企业综合部署成本降低 70%，并已服务 Hy、Kimi、Minimax、阶跃星辰等模型。适合用来理解模型、应用与云的协同；数字来自财报转载文，宜再对官方财报原文，不宜当作算法细节来源。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 编程 Agent 交付平台落地 | [腾讯开源 LoopForge 快速开始](https://cloud.tencent.com/developer/article/2788300) | Lighthouse 应用镜像预置 LoopForge、MySQL 与 Docker，并提供 HTTPS 访问；支持按角色配置执行器、模型、规则、Skills 与 MCP；SOP 可串联 Agent、脚本与人工审批，节点状态、工具轨迹、产物和 Token 成本可回看。文中建议最低 2 GB 内存、30 GB 系统盘。 | 需要把 Coding Agent 从单人对话升级为团队可追踪流水线的工程负责人、平台工程师 |
+
+### 工程实践归纳
+
+**总体判断**：当日固定来源的工程信号集中在 Loop Engineering 方向——先验收「平台能否跑完一圈」，再把质量关口写进 SOP；长时 Agent 运行时要能暂停与恢复。Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI 未发现可核验更新。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Loop Engineering | 腾讯轻量云发布 LoopForge 在 Lighthouse 的快速开始：先用免 Key 脚本加人工审批验收平台本身，再把「分析师—工程师—评审—测试—负责人验收」做成可退回的 SOP。同日财报转载文提到，支撑 WorkBuddy 的 Agent Runtime 通过沙箱「暂停—恢复」降低闲置成本。 | 先验收「平台能否跑完一圈」（最好能做到 0 Token），再接入模型和仓库；质量关口应写进流程，而不是事后口头检查。长时 Agent 的运行时要能暂停与恢复，否则成本会耗在等待上。目标日未发现可核验的 Ralph loop、/goal 专文。 |
+| Langfuse | 在固定来源内按目标日检索，未发现可核验的新文或官方同步。 | 未发现可核验更新。 |
+| LangChain / LangGraph | 固定来源内未发现 11-19 可核验更新。 | 未发现可核验更新。 |
+| Code Graph（代码知识图谱 / Tree-sitter / codegraph） | 固定来源内未发现目标日可确认为各厂官方技术团队的更新。 | 未发现可核验更新。 |
+| Spring Alibaba AI（spring-ai-alibaba / java2ai） | 在 developer.aliyun.com 等固定来源内，未发现 2026-11-19 的可核验更新。 | 未发现可核验更新。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [LoopForge 快速开始](https://cloud.tencent.com/developer/article/2788300)（2026-11-19） | 有开源仓库与镜像路径，两个案例分层清楚（先验证平台，再验证团队 SOP），是当日最接近「可直接实践」的材料。 |
+| 推荐 | [Q3财报：WorkBuddy日活超1000万，云收入同比增长35%](https://cloud.tencent.com/developer/article/2787911)（2026-11-19） | 用转载财报口径快速了解 WorkBuddy 规模、Hy4 flash 成本叙事，以及 Agent Runtime「暂停—恢复」的降本说法；阅读时需与官方财报交叉，注意这是资讯转载而非技术实现白皮书。 |
+
+### 来源清单
+
+- 检索范围：2026-11-19 00:00:00 到 2026-11-19 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：已覆盖固定来源清单中的 10 个公司/组织维度，以及五个工程框架专项
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 腾讯 | 腾讯云开发者社区 / 腾讯轻量云 | 开源项目部署指南 | 腾讯开源 LoopForge 快速开始：在 Lighthouse 上一键部署平台并跑通两个案例 | 2026-11-19 | https://cloud.tencent.com/developer/article/2788300 |
+| 腾讯 | 腾讯云开发者社区 / 小腾资讯君 | 财报资讯转载 | Q3财报：WorkBuddy日活超1000万，云收入同比增长35% | 2026-11-19 | https://cloud.tencent.com/developer/article/2787911 |
+
 ## 2026-11-18
 
 ### 今日总览

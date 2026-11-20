@@ -2,6 +2,101 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-19
+
+### 今日总览
+
+**一句话结论**：上海时间 11 月 19 日，主线是 Google Labs 把 Stitch Loop 做成需人工合入的长时产品循环，Anthropic 在纳斯达克开盘，阿里披露 AI 云与算力收入高增；工程侧则有 Langfuse v4.83.0 的 MCP/网关预算、AWS AppConfig 对模型与 Prompt 的运行时配置，以及 OpenAI 用 Performance Factory 展示 Codex + skill 的生产回归闭环。Gemini 4 Neon 虽 datePublished 跨到上海 11-19，已于 11-18 章节按官方日历日收录，本日不再展开；美西下午的 Gemini Mac 电脑使用、Genie 4 API、Tool Retrieval、Claude Code 2.1.329 等精确时刻已落入上海 11-20，不记作 11-19 发布。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商博客/changelog、GitHub Releases、arXiv / Hugging Face Papers、可信媒体与政策原文；时间窗为 Asia/Shanghai 2026-11-19 00:00:00–23:59:59（对应 UTC 11-18 16:00:00–11-19 15:59:59）。相邻时区传播已在日期栏标注，越窗条目不写入本日正文。 |
+| 核心趋势 | 1）产品循环从「能写出 PR」推进到「上线后持续观测并必须人工合入」——Stitch Loop 给出默认安全/时延/无障碍循环。2）资本市场与产业侧，Anthropic 以 ANT 在纳斯达克开盘，阿里云 AI 与算力收入继续高增。3）工程补强集中在可观测性与运行时配置：Langfuse 升级 MCP 与网关预算，AppConfig 可在不重部署的情况下改模型与 Prompt，OpenClaw beta 把模板和 skill 纳入 trust flow。 |
+| 可直接关注 | 1）Stitch Loop 的 Suggestions → 沙箱 PR → 人工合并 → 线上 Reflect，以及默认安全循环。2）AWS AppConfig 的 AI model invocation / AI prompt 配置档案与自动回滚。3）Langfuse v4.83.0 的 MCP 2026-07-28、batchCreateScores 与按 key/用户 spend limit。4）OpenAI Performance Factory 把调查流程沉淀为 perf-forensics skill、查-修-验分离的做法。5）百炼上架 kimi-k3.1-pro-prime 的适用场景与计价边界。 |
+| 专项检索结论 | **Claude Code**：未发现可核验重大更新（官方 changelog 标注 Nov 19 的 v2.1.329，GitHub 发布时间为 2026-11-19T22:14:41Z，已是上海 11-20 06:14）。**Codex**：窗口内仅有预发布标签，Release 说明未列功能变更；与 Codex 相关的可核验材料是 OpenAI 官方 Performance Factory 博文（官方标注 November 19，精确时刻未公开）。**OpenClaw**：2026.11.10-beta.1 在窗口内；稳定版 2026.11.6 发布于 17:26 UTC，已进入上海 11-20。**Hermes**：有 canary v0.23.2+canary.20261119T064637Z（预发布）。**Spring AI / Spring Alibaba AI**：未发现可核验重大更新。**Langfuse**：发布 v4.83.0。**LangChain / LangGraph**：发布 langgraph 1.2.23 与 prebuilt 1.1.3，属修复级。**Code Graph**：未发现可核验重大更新（所见最近版本 v1.6.3 发布于 11-17）。**Loop Engineering**：未发现独立方法论/仓库更新；最接近的是 Google Labs 的 Stitch Loop（官方标注 Nov 18，datePublished 2026-11-18T17:00:00Z，上海 11-19 01:00，昨日章节未收录，按上海窗口记入本日）。**skills / Agent Skills**：无独立规范或平台级新标准；OpenClaw beta 新增 ClawHub agent templates 与捆绑 skill 目录，Hermes canary 更新了 bundled skills 文档，OpenAI 博文把调查流程沉淀为 perf-forensics skill。**论文**：未发现 submitted/revised 日期落在本窗口的可核验条目；Hugging Face Daily Papers 的 11-19 日榜主要为 11-18 投稿。**政策监管**：美国 Federal Register 于 11-19 刊出 ACUS 关于在行政裁决中使用生成式超级智能的征求意见。 |
+
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Agent / 产品循环 | [Introducing Stitch Loop: A new way to build and evolve products](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/) | 官方标注 Nov 18；`datePublished` 2026-11-18T17:00:00Z（上海 11-19 01:00） | 官方实验产品 | 高。Google Labs 将 Stitch 延伸为连接代码库与线上指标的长时产品代理：默认提供安全、时延、无障碍循环，也可自建循环。流程为 Suggestions → Solutions → 在隔离沙箱写代码并开 GitHub PR → 用线上数据 Reflect；变更必须人工审批后才合并。安全循环组合 Gemini 4 Carbon 的网络安全能力与 DeepMind CodeMender。支持 180+ 集成、自定义 MCP 与本地 CLI，并可通过 Stitch CLI/MCP 给其他编码代理提供持久产品上下文。全球候补名单开放，符合条件的 Google AI Ultra 用户优先。 |
+| 资本市场 | [Anthropic Marks its IPO at Nasdaq](https://www.nasdaq.com/newsroom/anthropic-marks-ipo-at-nasdaq) | 交易开始于美东 11-19 09:30（上海 22:30）；定价公告为 11-18 | 上市交易（事件发生在窗口内） | 中高。Anthropic 已于 11-18 将 IPO 定价为每股 $83.00，拟发行 9.80 亿股 Class A（公司出售 956,351,354 股，其余为售股股东，公司不获得该部分所得），证券代码 ANT。纳斯达克与 CNBC 均确认 11-19 开盘价为 $111.50。美东收盘数据已进入上海 11-20，本稿不把它当作 11-19 日终结果。发行交割仍预计在 11-20，需满足惯例交割条件。 |
+| 产业财报 | [Alibaba Group Announces September Quarter 2026 Results](https://www.alibabagroup.com/en-US/document-2060147792046718976) | 2026-11-19（香港电头，与上海同日） | 官方财报 | 中高。截至 2026-09-30 的季度：集团收入人民币 2,715.19 亿元，同比增长 10%；AI Cloud and Compute Services 收入人民币 609.73 亿元，同比增长 53%；外部客户收入同比增长 64%，其中经常性外部收入（不含计算设备解决方案）同比增长 67%。AI 相关产品收入人民币 179.18 亿元，连续第 13 个季度保持三位数同比增长。该分部经调整 EBITA 为人民币 88.38 亿元，同比增长 121%；CFO 称云分部 EBITA 利润率升至 14.5%。文中「recently announced」的玄武 V900 等升级不作为当日新品发布。 |
+| 开发者工具 / LLMOps | [AWS AppConfig launches support for managing native AI model and AI prompt configuration](https://aws.amazon.com/about-aws/whats-new/2026/11/aws-appconfig-native-ai-model-invocation-prompt-configurations/) | 2026-11-19T05:00:00Z（上海 13:00） | 官方云服务更新 | 高。新增「AI model invocation」与「AI prompt」两类配置档案，可在不重新部署代码的情况下改模型标识、推理参数和 Prompt，并沿用分批放量与自动回滚（可对接 CloudWatch、Datadog、New Relic 等告警）。Prompt 可独立版本化并跨应用复用。在所有已提供 AppConfig 的区域开放，无额外费用。 |
+| 可观测性 | [Langfuse v4.83.0](https://github.com/langfuse/langfuse/releases/tag/v4.83.0) | 2026-11-19T10:30:16Z（上海 18:30） | GitHub Release | 高。Topics 新 Scatter 视图；MCP 服务端升级到 2026-07-28 协议修订，并新增 `batchCreateScores` 工具；AI Gateway 支持按 key 的 spend limit 与按用户的 Budgets；Bedrock 连接支持 IAM 角色认证。适合正在把评测、网关成本控制和 MCP 工具链打通的团队直接升级评估。 |
+| Agent 框架 | [openclaw 2026.11.10-beta.1](https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.1) | 2026-11-19T15:45:29Z（上海 23:45，临近日界） | GitHub 预发布 | 中高。可从 ClawHub 包直接添加 agent templates，使用单一 `CLAW.md` 清单和捆绑 skill 目录，并走原生 trust flow；新增 ID tunnel 连节点、浏览器交接、不中断运行的 steering、自动更新日程，以及启动时 copy-and-swap 的状态迁移、macOS 上跨 Gateway 重启的后台执行。稳定版 2026.11.6 已越窗，不在此列为 11-19 发布。 |
+| 语音 API | [OpenAI API Changelog · Nov 19 · GPT-Live-1.1](https://developers.openai.com/api/docs/changelog) | 官方标注 Nov 19（精确时刻未公开） | 官方 API 更新 | 中。`gpt-live-1.1` 面向多语言语音会话，改进发音、口音一致性和转写；可在现有 Live session 中切换，并用自然语言描述何时把任务交给后端。同时为 GPT-Live-1 / 1.1 的 WebRTC 会话提供 standby，在空闲时暂停推理、检测到说话后再恢复。 |
+| 产品更新 | [ChatGPT release notes · November 19, 2026](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) | 官方标注 November 19, 2026（精确时刻未公开） | 官方产品更新 | 中。新的 ChatGPT 移动端体验开始向年满 18 岁、且 dots 可用地区的 Pro 用户滚动（明确排除欧洲经济区含欧盟、英国、瑞士和韩国），可将 Codex、Projects、Images 等固定到标签栏。Health 扩展到 Android（支持 Health Connect）、桌面、dots 与 sites，面向美国的 Free / Go / Plus / Pro 用户逐步放出。 |
+| 工程实践 | [How OpenAI’s Performance Factory keeps ChatGPT fast](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/) | 官方标注 November 19, 2026（精确时刻未公开） | 官方工程博文 | 高。介绍由 Codex 驱动的 Performance Factory：告警触发后由代理调查、记录、提出修复，部署后再由另一代理验收是否回到基线。官方称第一个 Regression Workflow 在三个月出头跟踪了 1,700 多次调查，并完成 600 多例根因定位，约合每天 17 次自动调查。文中把调查流程沉淀为共享 skill `perf-forensics`，是少有的「生产级 agent loop + skill」案例。因页面未给出精确时间戳，若实际发布时间在美西下午，则对应上海 11-20，使用时请交叉最新抓取。 |
+| 语音模型 | [HUMAIN Launches HUMAIN Voice](https://www.humain.com/news/humain-launches-humain-voice) | 官方电头 19 November 2026（利雅得，精确时刻未公开） | 官方产品与开源权重 | 中。阿拉伯语优先的语音平台，覆盖 ASR、TTS 与 Voice Agents，并强调沙特方言、海湾及其他阿拉伯方言以及阿英自然混码。同步以 Apache 2.0 开源 8,000 万参数的 `HUMAIN-Voice-Lite-80M` transducer ASR，面向 CPU/GPU 与端侧部署。若发布于利雅得晚间，可能已进入上海 11-20，日期栏需保留时区提醒。 |
+| 中文平台 | [阿里云百炼：模型上架与更新（2026-11-19）](https://help.aliyun.com/zh/model-studio/newly-released-models) | 2026-11-19（官方文档日） | 平台模型上架 | 中。百炼上架 `kimi-k3.1-pro-prime`，文档写明其能力与使用限制与 Kimi-K3.1-Pro 原版相同，面向对输出速度敏感的编程助手、多步 Agent 与实时对话。这是平台侧 Prime 模式上架，不是新基座模型首发（K3.1 Pro 本身官方介绍更新于 10-24，原版在百炼的上架记录为 11-05）。 |
+| 政策监管 | [Policies on the Use of Generative Super Intelligence in Agency Adjudication; Request for Comments](https://www.federalregister.gov/documents/2026/11/19/2026-23539/policies-on-the-use-of-generative-super-intelligence-in-agency-adjudication-request-for-comments) | 发布日期 2026-11-19（91 FR 74534） | 美国政府征求意见 | 中。美国行政会议（ACUS）就联邦机构裁决中，裁决者、其他公务人员、当事人与代理人使用「generative super intelligence」（文件称此前称为 generative AI）征求意见，评论截止 2027-01-19 10:00 ET，可能形成后续最佳实践建议。 |
+| 政策与国际治理 | [习近平会见美国总统特朗普](https://www.news.cn/politics/leaders/20261119/e473c3cafcb84d719c57348547f8d31e/c.html) | 2026-11-19 下午（深圳，新华社稿 16:13:53） | 官方/通讯社报道 | 中。新华社报道，习近平在深圳会见特朗普时提出：中美应当加强沟通和协调，防范人工智能安全风险，确保人工智能始终处于人类控制之下。韩联社报道，特朗普同日在 APEC 领导人全体会议上说，美国“反对任何形式的全球主义监管，或任何控制、压制超级智能（SI）的做法”，并称仍须谨慎管理其“不好的部分”。Euronews 对同一表态有交叉报道。这是政策信号，不是技术规范落地。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 持续优化型 Agent | [Stitch Loop 官方介绍](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/) | 证据驱动的建议—方案—沙箱 PR—线上复盘；默认安全/时延/无障碍循环；MCP/CLI 作为其他编码代理的产品上下文层；人工合入门禁 | 关注 Loop 范式、希望把上线后维护交给代理但仍保留审批的产品与平台负责人 |
+| 运行时配置与 Prompt 治理 | [AWS AppConfig 更新说明](https://aws.amazon.com/about-aws/whats-new/2026/11/aws-appconfig-native-ai-model-invocation-prompt-configurations/) 及文内文档 [Creating an AI model invocation configuration profile](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-ai-model-configuration.html)、[Creating an AI prompt configuration profile](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-creating-ai-prompt-configuration.html) | 把模型标识、推理参数和 Prompt 从代码发布中拆出；分批放量、指标观察、告警自动回滚；Prompt 独立版本与跨应用复用 | Java/云原生与平台工程，尤其已在用 AppConfig 或需要安全变更 token 经济学的团队 |
+| 生产级 Agent 工作流 | [How OpenAI’s Performance Factory keeps ChatGPT fast](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/) | 告警→调查→修复提案→人工审查→部署后回归验证；把专家流程写成 `perf-forensics` skill；工作流与一次性对话的差别 | 正在把 Codex/编码代理引入 on-call、性能和平台治理的工程团队 |
+| LLM 可观测性与 MCP | [Langfuse v4.83.0 Release Notes](https://github.com/langfuse/langfuse/releases/tag/v4.83.0) | MCP 2026-07-28、批量打分工具、网关按 key/用户预算、Bedrock IAM 角色 | 已自建或准备接入 Langfuse / AI Gateway 的观测与评测负责人 |
+| Agent 运行时与 Skills | [OpenClaw 2026.11.10-beta.1](https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.1) | ClawHub 模板、`CLAW.md`、捆绑 skill 的 trust flow、会话转向、状态 copy-and-swap、跨重启的后台执行 | 自托管 Agent、准备试用模板化 skills 的开发者（注意这是 beta） |
+| 实时语音 | [OpenAI API Changelog · GPT-Live-1.1](https://developers.openai.com/api/docs/changelog) | 在现有 Live session 中切换 `gpt-live-1.1`；WebRTC standby 以降低空闲推理成本 | 做实时语音、呼叫或多语言 Live 会话的客户端与后端工程师 |
+| 政策合规 | [ACUS 征求意见原文](https://www.federalregister.gov/documents/2026/11/19/2026-23539/policies-on-the-use-of-generative-super-intelligence-in-agency-adjudication-request-for-comments) | 行政裁决场景下的披露、人类审查、证据与代理使用边界；评论截止 2027-01-19 10:00 ET | 关注公共部门、司法/行政程序与 AI 治理的政策与合规同事 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：当天没有 LangChain 核心框架的重大版本叙事，工程信号更集中在「工具/状态是否传对、MCP 协议是否跟上、skill 如何被信任地打包，以及生产环境如何把 agent loop 写成可审计工作流」。LangGraph 是修复级发布；Langfuse、OpenClaw beta 和 OpenAI Performance Factory 对工程实践的参考价值更高。Google 的 Stitch Loop（上海时区属当日）则把 Loop Engineering 从方法论推进到可试用的产品形态，但当日内没有独立的「Loop Engineering」论文或标准更新。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| LangGraph 工具调用状态 | 官方发布 [langgraph 1.2.23](https://github.com/langchain-ai/langgraph/releases/tag/1.2.23)（2026-11-19T05:33:06Z，上海 13:33），并同时发布 prebuilt 1.1.3。变更包括：经 `Send` 分发的工具调用获得与边（edge）相同的 state；避免动态 schema 中的 warning 竞态；依赖 `opentelemetry-api` 从 1.45.1 升至 1.45.2。 | 在图中用 `Send` 做并行/分发时，不要假设工具侧一定能看到与边相同的状态；这类 bug 会在多工具、多子图场景下表现为「偶发用到旧状态」。适合跟进小版本，不必当成架构升级。 |
+| Langfuse：MCP + 网关治理 | v4.83.0 让 MCP 服务端跟进 2026-07-28 协议修订，新增批量打分工具，并把 AI Gateway 的花费限制做到 key 与用户两级，同时支持 Bedrock IAM 角色。 | 可观测性产品正在从「记 traces」转向「协议兼容 + 成本护栏」。若已用 Langfuse 做评测或网关，可优先验证 MCP 工具与预算默认值，避免升级后协议或鉴权不兼容。 |
+| Skills 与模板化 Agent | OpenClaw `2026.11.10-beta.1` 把 ClawHub 包、`CLAW.md` 和捆绑 skill 目录纳入原生 trust flow；Hermes canary 更新了 bundled skills 的文件工具说明；OpenAI 则把性能调查写成 `perf-forensics` skill。当日没有新的跨工具 Agent Skills 规范或 Cursor/Claude/Codex Skills 平台级发布。 | 短期更务实的路径是：把可复用流程写成 skill，并明确信任/权限边界，而不是等待新标准。生产环境仍应区分稳定版与 canary/beta。 |
+| 生产级 Agent Loop | OpenAI Performance Factory 展示完整回归闭环；Stitch Loop 把「目标—证据—沙箱变更—人工合并—线上复盘」做成默认产品循环。 | 可复用的设计是：触发条件、可验证成功标准、与代理隔离的校验、硬停止与人工门禁。不要让同一个代理既改代码又宣布「已修好」。 |
+| 工具规模化 | Gemini API Tool Retrieval 官方博文的 `datePublished` 为 2026-11-19T18:00:00Z（上海 11-20 02:00），本稿不记为 11-19 发布，但方向值得跟踪：按需加载工具 schema、可与远程 MCP 及前缀缓存配合，以避免把完整工具库塞进每次请求。 | 若工具数量已到几十、上百，应提前规划 deferred loading / 工具检索，不必等到该文进入上海日历日后再设计。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [How OpenAI’s Performance Factory keeps ChatGPT fast](https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/) | 少有的官方、带规模数据的生产级 agent 工作流复盘：如何把重复调查写成 skill，如何把「查—修—验」拆成可交接的工作流，以及人工审查仍是当前瓶颈。 |
+| 必读 | [Introducing Stitch Loop](https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/) | 把 Loop Engineering 从概念落到「默认循环 + 沙箱 PR + 人工合入 + 线上复盘」的产品形态，对设计长时产品代理很有参考价值。 |
+| 推荐 | [Langfuse v4.83.0](https://github.com/langfuse/langfuse/releases/tag/v4.83.0) | 直接关系 MCP 协议修订、评测打分和网关预算，属于可落地的工程变更，而不是概念文章。 |
+| 推荐 | [AWS AppConfig：原生 AI 模型与 Prompt 配置](https://aws.amazon.com/about-aws/whats-new/2026/11/aws-appconfig-native-ai-model-invocation-prompt-configurations/) | 提供一条不改代码、带渐进发布和自动回滚的 Prompt/模型配置治理路径，适合对照自建配置中心。 |
+| 延伸 | [Federal Register：行政裁决中使用生成式超级智能的征求意见](https://www.federalregister.gov/documents/2026/11/19/2026-23539/policies-on-the-use-of-generative-super-intelligence-in-agency-adjudication-request-for-comments) | 公共部门落地生成式系统时，披露、审查与证据规则会如何被正式讨论，原文不长但口径清楚。 |
+| 延伸 | [Alibaba 2026 年 9 月季度业绩新闻稿 PDF](https://www.alibabagroup.com/en-US/document-2060147792046718976) | 用官方数字而不是二手转述理解「AI + Cloud」商业化进度，避免把「recently announced」的芯片升级误写成当天发布。 |
+
+### 来源清单
+
+- 检索范围：2026-11-19 00:00:00 到 2026-11-19 23:59:59（Asia/Shanghai）
+- 覆盖说明：Google / DeepMind / OpenAI / Anthropic / AWS / Microsoft / Nasdaq / 阿里巴巴 / 阿里云百炼 / HUMAIN 等官方页面；Langfuse、LangGraph、OpenClaw、Hermes、Claude Code、Codex、Spring AI、Spring AI Alibaba、CodeGraph 等 GitHub Releases；arXiv API 与 Hugging Face Daily Papers；Federal Register、新华社、韩联社、Euronews、CNBC、TechCrunch、The Verge 等。所有收录条目均核验了发布或事件时间，并按 Asia/Shanghai 窗口取舍。
+- 引用域名：blog.google、deepmind.google、openai.com、developers.openai.com、help.openai.com、anthropic.com、nasdaq.com、cnbc.com、aws.amazon.com、docs.aws.amazon.com、alibabagroup.com、help.aliyun.com、humain.com、github.com、code.claude.com、federalregister.gov、news.cn、en.yna.co.kr、euronews.com、arxiv.org、huggingface.co。
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方博客 | Introducing Stitch Loop | 官方 Nov 18；发布 2026-11-18T17:00:00Z（上海 11-19 01:00） | https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/ |
+| 官方工程博文 | How OpenAI’s Performance Factory keeps ChatGPT fast | 官方标注 November 19, 2026（时刻未公开） | https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast/ |
+| 官方 Changelog | OpenAI API Changelog（GPT-Live-1.1） | 官方标注 Nov 19（时刻未公开） | https://developers.openai.com/api/docs/changelog |
+| 官方产品说明 | ChatGPT release notes | 官方标注 November 19, 2026（时刻未公开） | https://help.openai.com/en/articles/6825453-chatgpt-release-notes |
+| 官方新闻 | Anthropic prices initial public offering | 2026-11-18（定价；交易日为 11-19） | https://www.anthropic.com/news/anthropic-prices-initial-public-offering |
+| 交易所新闻 | Anthropic Marks its IPO at Nasdaq | 开盘事件：美东 11-19 09:30（上海 22:30） | https://www.nasdaq.com/newsroom/anthropic-marks-ipo-at-nasdaq |
+| 媒体直播报道 | Anthropic IPO live updates（CNBC） | 直播页起始 2026-11-19T11:00:02Z（上海 19:00） | https://www.cnbc.com/2026/11/19/anthropic-ipo-ant-live-updates.html |
+| 官方 What's New | AWS AppConfig native AI model and prompt configuration | 2026-11-19T05:00:00Z（上海 13:00） | https://aws.amazon.com/about-aws/whats-new/2026/11/aws-appconfig-native-ai-model-invocation-prompt-configurations/ |
+| 官方财报 | Alibaba Group Announces September Quarter 2026 Results | 2026-11-19（香港电头） | https://www.alibabagroup.com/en-US/document-2060147792046718976 |
+| 官方文档 | 阿里云百炼：模型上架与更新 | 2026-11-19 | https://help.aliyun.com/zh/model-studio/newly-released-models |
+| 官方新闻 | HUMAIN Launches HUMAIN Voice | 官方电头 19 November 2026 | https://www.humain.com/news/humain-launches-humain-voice |
+| GitHub Release | Langfuse v4.83.0 | 2026-11-19T10:30:16Z（上海 18:30） | https://github.com/langfuse/langfuse/releases/tag/v4.83.0 |
+| GitHub Release | langgraph 1.2.23 | 2026-11-19T05:33:06Z（上海 13:33） | https://github.com/langchain-ai/langgraph/releases/tag/1.2.23 |
+| GitHub 预发布 | openclaw 2026.11.10-beta.1 | 2026-11-19T15:45:29Z（上海 23:45） | https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.1 |
+| GitHub 预发布 | Hermes Agent canary v0.23.2+canary.20261119T064637Z | 2026-11-19T07:54:29Z（上海 15:54） | https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.2%2Bcanary.20261119T064637Z |
+| 政府公报 | Policies on the Use of Generative Super Intelligence in Agency Adjudication | 2026-11-19 | https://www.federalregister.gov/documents/2026/11/19/2026-23539/policies-on-the-use-of-generative-super-intelligence-in-agency-adjudication-request-for-comments |
+| 官方通讯社 | 习近平会见美国总统特朗普 | 2026-11-19 16:13:53（北京时间） | https://www.news.cn/politics/leaders/20261119/e473c3cafcb84d719c57348547f8d31e/c.html |
+| 通讯社 | Trump stresses caution in managing AI risks at APEC summit | 2026-11-19 12:13（韩联社，KST=UTC+9） | https://en.yna.co.kr/view/AEN20261119004900315 |
+| 媒体 | US President Trump rejects global AI regulation as China's Xi calls for cooperation on safety | 2026-11-19 12:02 GMT+1（上海 19:02） | https://www.euronews.com/2026/11/19/us-president-trump-rejects-global-ai-regulation-as-chinas-xi-calls-for-cooperation-on-safe |
+
 ## 2026-11-18
 
 ### 今日总览
