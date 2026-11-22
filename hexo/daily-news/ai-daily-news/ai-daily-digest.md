@@ -2,6 +2,81 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-21
+
+### 今日总览
+
+**一句话结论**：上海时间 11 月 21 日，主线有两条并行：Lean 与 Mathlib 社区发布联合声明，核验 Anthropic 数学家 Levent Alpöge 在前一日公开的、由 Claude 协助完成的黎曼猜想 Lean 形式化证明；工程侧则把前一日越窗的发布补进本日，核心是 Claude Code 2.1.330 把企业登录、图表模组、自托管 runner 与 `/loop` 周期一起推进，以及 AWS HyperPod Global Inference Gateway 与 Microsoft Copilot 接入 GPT-6.2。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商博客/changelog、GitHub Releases、Lean/Mathlib 社区声明、arXiv / Hugging Face Papers、可信媒体与政策原文；时间窗为 Asia/Shanghai 2026-11-21 00:00:00–23:59:59（对应 UTC 11-20 16:00:00–11-21 15:59:59）。相邻时区传播已在日期栏标注。昨日已写入的条目（Gemini Mac 电脑使用、Tool Retrieval、Genie 4 API、MedChemBench、对抗蒸馏防护、Anthropic IPO 交割、Spring AI 2.1.0、CodeGraph v1.6.4、Claude Code 2.1.329、Codex 0.171.0 等）本日不重复当作新首发。 |
+| 核心趋势 | 1）形式化验证成为 AI 辅助数学突破的公开验收标准：社区按既定四条标准核验「命题正确、库可编译、证的是 Mathlib 原陈述、导出证明可被多内核接受」，同时仍把可读性解释和 Clay 奖审放在后续。2）编码代理继续补企业接入、可视化与长周期任务：Claude Code 2.1.330 把 `/loop` 与定时任务上限扩到 30 天，并修了压缩会话卡死、WebFetch 挂起、worktree 误删等高频稳定性问题。3）推理基础设施和产品入口在窗口早段落地：HyperPod 用一个托管网关跨集群/区域分流，Copilot 把 Sol/Astra 推进到 Chat、Cowork、Studio 与 Office。4）OpenAI 在开发者文档中给出 GPT-6.2 的提示词模板，指向「默认更短、少问确认、最终答复自包含」，以及 Responses API 在改写对话前缀时会丢弃先前推理项。 |
+| 可直接关注 | 1）Lean 社区声明与核验标准，以及 MIT 汇总页上的独立 checker 说明。2）Claude Code 2.1.330 的企业 Admin Console 登录、easel 图表、`/loop` 30 天，以及自托管 runner 的 `--start-dir` 与新 metrics。3）HyperPod Global Inference Gateway 的单端点跨区域路由与自动故障转移。4）GPT-6.2 官方 prompting 指南中关于 prefix 不被改写、以及 `temperature`/`top_p` 不再支持的迁移项。5）Copilot 中 Sol 与 Astra 的分产品开通范围。 |
+| 专项检索结论 | **Claude Code**：官方 changelog 将 2.1.330 标为 November 20，但 GitHub 发布时间为 2026-11-20T22:32:56Z（上海 11-21 06:32），按窗口记入本日；至检索时未见 v2.1.331 及更高稳定版。**Codex**：未见新的稳定版；窗口内可见预发布 `rust-v0.173.0-alpha.4`，不以预发布说明替代 11-20 已记录的稳定版 0.171.0。**OpenClaw**：未见比 2026.11.6 更新的稳定版；有 2026.11.7 发行说明草稿，但未形成已发布版本。**Hermes**：未见比 v0.23.3 更新的稳定版。**Spring AI**：v2.1.0 / v2.0.3 已写入 11-20 章节，本日无新版本。**Spring Alibaba AI**：`alibaba/spring-ai-alibaba` 未见窗口内可核验重大更新。**Langfuse**：未见 11-21 的 changelog 新条目；11-20 有 Redesigned trace view，属相邻日期，昨日章节未展开，本日仅在专项中补记，不当作 11-21 首发。**LangChain / LangGraph**：未见窗口内可核验的新正式版。**Code Graph**：`colbymchenry/codegraph` 最近可见版本仍为 11-20 的 v1.6.4，本日无新 release。**Loop Engineering**：独立方法论仓库未见窗口内正式 release；最接近的可核验变化是 Claude Code 2.1.330 把 recurring scheduled tasks 与 `/loop` 的运行上限从 7 天调整为 30 天。**skills / Agent Skills**：未见独立规范或平台级新标准。**论文**：未发现 submitted/revised 日期精确落在本窗口的可核验条目。**政策监管**：未发现 2026-11-21 可核验的重大新规或征求意见。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 形式化证明核验 | [Lean verification of the Riemann Hypothesis](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/) | 社区声明标注 2026-11-21 13:55；Alpöge 于 11-20 发布 Lean 库 | 社区正式声明 / 核验 | 高。Lean 与 Mathlib 社区（由 Lean FRO 与 Mathlib Initiative 背书）声明：对 Alpöge 发布的约 1700 万行 Lean 库有充分信心，并核验四条标准——命题是 Mathlib 中已审定的 `RiemannHypothesis`、库可复现编译、所证定理与 Mathlib 陈述经 `comparator` 与 `con-leche --compare` 比对一致、导出证明被 Lean 官方内核及多个独立 checker（含相对集合论给出可靠性证明的 `con-leche`/`con-ron`）接受。这应读成「形式化核验通过」，不是 Clay 研究所已经颁奖，也不是一篇人类可读的短论文已经完成同行评议；声明本身也期待后续把新想法讲清楚。媒体另报意大利数学家 Alessandro Masullo 在相近窗口给出未完成的全人工证明草稿，二者不要混为一谈。 |
+| 编码代理 | [Claude Code v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330) | GitHub 2026-11-20T22:32:56Z（上海 11-21 06:32）；changelog 条目标注 November 20 | 开源发布 | 高。企业侧可在 `claude auth login` 后接入 Enterprise Admin Console 管理的组织设置与云提供商/网关；新增 easel 图表模组（Pro/Max，以及可用的 Team/Enterprise，macOS/Linux，可在 `/config` 关闭自动图表）；自托管 runner 增加 `--start-dir` / `SELF_HOSTED_RUNNER_START_DIR` 与两项从工单到注册/首会话的 metrics。行为变化里最影响 loop 设计的是：recurring scheduled tasks 与 `/loop` 在会话持续期间可运行至 30 天（旧任务仍按 7 天结束）。同时修了长会话 compact 后卡死数分钟、部分页面 WebFetch 挂起或空结果、退出 worktree 误删其他会话目录、多进程写设置丢失、MCP 工具 schema 导致会话文件膨胀等稳定性问题。VS Code 侧新增 `/fork`、`/workflows` 及若干显示/快捷键设置。 |
+| 推理基础设施 | [Introducing Amazon SageMaker HyperPod Global Inference Gateway](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/) | `datePublished` 2026-11-20T14:35:24-08:00（上海 11-21 06:35） | 官方博客 | 高。在单集群 Inference Gateway 之上增加第二层：一个 SageMaker 托管网关可在最多多集群、跨区域的已注册 HyperPod 之间路由 OpenAI 兼容请求，依据 KV cache 余量、队列深度、区域邻近和错误率选集群，并在集群故障时自动切走流量；鉴权走 SigV4/IAM，流量走 AWS 骨干与 PrivateLink。适合已经把容量拆到多个集群/区域、不想自己维护跨区域负载均衡和 DNS 的团队。文档写明目前在 13 个区域可用。11-20 章节因该时间戳越窗未写入，本日补录。 |
+| 产品接入 | [Available today: OpenAI's GPT-6.2 Sol and GPT-6.2 Astra in Microsoft Copilot](https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-2-sol-and-gpt-6-2-astra-in-microsoft-copilot/4574229) | 页面 `datePublished` 2026-11-20T10:40:04-08:00（上海 11-21 02:40）；可见更新时间 2026-11-20T12:07:04-08:00（上海 04:07） | 官方产品 | 中高。Sol 向符合条件的用户在 Copilot Chat、Cowork、Studio 以及 Excel/PowerPoint/Word 中推送；Astra 先在 Cowork 与 Studio，Frontier 用户还可在 Chat 与上述 Office 应用中使用。文中强调 Work IQ 按既有权限用文件、会议和聊天做接地。可用性因地区和组织而异，由 Microsoft 365 管理中心控制。11-20 章节因发布时间越窗未写入，本日补录。不要与 11-17 的 Foundry 上架公告混为同一条。 |
+| 开发者文档 / 提示词 | [Using GPT-6.2](https://developers.openai.com/api/docs/guides/latest-model) | 媒体报道日期 2026-11-21（The Decoder）；以官方文档为原文 | 官方文档 | 高。文档给出可复制的系统提示，用来纠正 GPT-6.2 Astra/Sol 的几类默认行为：文风更短，迁移时要重新审视 “be concise”；意图不清时不要停下来等确认，应在授权范围内做可逆假设并继续；最终答复必须自包含，不把推理过程里的缩写带给用户；写代码时复用仓库已有逻辑，除非被要求、仓库规范要求或要抓住现有测试盖不住的回归，否则不要默认补新测试。API 侧从 GPT-6.2 起，Responses 在改写对话前缀、部分换模型或变更终端用户/组织时会丢弃先前 reasoning items，可能让质量下降并重复耗 token；新集成建议 `reasoning.effort` 从 `medium` 起，且不再支持 `temperature`/`top_p`。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 形式化核验标准 | [Lean 社区声明](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)；核验材料汇总 [math.mit.edu/~drew/grh/](https://math.mit.edu/~drew/grh/) | 四条验收：命题、编译、陈述比对、多 checker；在惰性导出上检查，避免源码侧恶意代码干扰 | 关注 AI 辅助定理证明、需要判断「机器核验通过」与「数学界接受」差别的研究与工程人员 |
+| GPT-6.2 迁移与提示词 | [Using GPT-6.2](https://developers.openai.com/api/docs/guides/latest-model) | 保持 prefix 不被中途改写以保留 reasoning 与缓存；把稳定说明放进 `input` 开头的 developer message；工具调用需用 Responses API | 正在把应用或 Agent 迁到 Astra/Sol 的开发者 |
+| 跨集群推理入口 | [HyperPod Global Inference Gateway](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/) | 单端点、跨区域溢出与自动故障转移；集群内仍由原 Inference Gateway 选 pod | 已在多集群/多区域部署 HyperPod 推理的平台工程 |
+| Claude Code 2.1.330 变更 | [GitHub Release](https://github.com/anthropics/claude-code/releases/tag/v2.1.330) 与 [官方 changelog](https://code.claude.com/docs/en/changelog) | 企业登录与网关、easel、runner 启动目录、`/loop` 30 天、针对 compact/WebFetch/worktree/MCP schema 的修复 | 在企业网关或自托管 runner 上跑 Claude Code，或依赖 `/loop` 的团队 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日没有新的 LangChain/LangGraph 正式版，工程信号主要来自编码 Agent 的 loop 周期与稳定性修复，以及大模型 API 对「不要改写前缀、最终答复自包含」的约束。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 形式化验收进入公开流程 | Lean/Mathlib 用事先写明的四条标准，在约一天内核验大规模 Lean 库，并强调比对的是 Mathlib 原陈述。 | 把「证明了什么」从「生成了一堆代码」里拆出来：先固定命题，再谈编译与独立 checker。媒体报道可作为传播线索，结论仍应回到社区声明。 |
+| Claude Code loop 与稳定性 | 2.1.330 将 `/loop` 与定时任务上限扩到 30 天，并修复 compact/WebFetch 卡死、worktree 互踩、多进程写设置丢失等。 | 长周期 loop 可以按月跑，但旧任务不会自动改期；共享机器上要特别注意 worktree 退出与设置文件并发写入。 |
+| GPT-6.2 提示与 API 约束 | 官方模板要求少问确认、最终答复自包含；改写对话前缀会丢掉 reasoning。 | 不要把旧的「务必简洁、先问再做」系统提示原样搬过去；集成上把稳定指令放在可缓存前缀里，避免中途改写历史。 |
+| Langfuse | 本日无新 changelog。11-20 的 Redesigned trace view 把 Timeline/图视图与观察项的输入输出作为主界面，属相邻日期补记。 | 调试大型 Agent trace 时可先看结构再进入单步；不把它记成 11-21 的新发布。 |
+| LangChain / LangGraph | 未见窗口内新正式版。 | 未发现可核验更新。 |
+| Spring AI / Spring Alibaba AI | Spring AI 2.1.0 已在 11-20 写入；Spring Alibaba AI 本日无新版本。 | 未发现 11-21 可核验更新。 |
+| Code Graph / Loop Engineering | CodeGraph 无新 release；Loop Engineering 方法论仓库无新正式版，相关变化见 Claude Code `/loop` 30 天。 | 把「循环还在跑多久」写成显式策略，而不是默认一周后结束。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Lean verification of the Riemann Hypothesis](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/)（2026-11-21） | 这是当日最接近「第一手验收结论」的文本，四条标准写得很清楚，便于把它和媒体标题分开看。 |
+| 必读 | [Claude Code v2.1.330](https://github.com/anthropics/claude-code/releases/tag/v2.1.330) 与 [changelog](https://code.claude.com/docs/en/changelog) | 企业登录、`/loop` 周期和一批高优先级稳定性修复都在这里，适合对照当前正在跑的版本。 |
+| 推荐 | [Using GPT-6.2](https://developers.openai.com/api/docs/guides/latest-model) | 提示词和 API 迁移项可直接改系统提示与集成，不必经过二手报道转述。 |
+| 推荐 | [HyperPod Global Inference Gateway](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/) | 把「单集群选 pod」和「跨集群选集群」分成两层，对多区域推理架构有直接参考。 |
+| 延伸 | [Copilot 接入 GPT-6.2 Sol / Astra](https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-2-sol-and-gpt-6-2-astra-in-microsoft-copilot/4574229) | 主要用于确认各 Copilot 产品里的开通范围和权限边界，而不是模型能力本身。 |
+
+### 来源清单
+
+- 检索范围：2026-11-21 00:00:00 到 2026-11-21 23:59:59（Asia/Shanghai）
+- 引用域名：leanprover-community.github.io, math.mit.edu, github.com, code.claude.com, aws.amazon.com, techcommunity.microsoft.com, developers.openai.com, the-decoder.com, langfuse.com, theguardian.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 社区正式声明 | Lean verification of the Riemann Hypothesis | 2026-11-21 13:55 | https://leanprover-community.github.io/blog/posts/riemann-hypothesis/ |
+| 核验材料汇总 | RH Lean proof: verification files | 与 11-21 核验同期整理 | https://math.mit.edu/~drew/grh/ |
+| GitHub Release | Claude Code v2.1.330 | 2026-11-20T22:32:56Z（上海 11-21 06:32） | https://github.com/anthropics/claude-code/releases/tag/v2.1.330 |
+| 官方 Changelog | Claude Code changelog（2.1.330 条目标注 November 20） | 发布时刻落入本日窗口 | https://code.claude.com/docs/en/changelog |
+| 官方博客 | Introducing Amazon SageMaker HyperPod Global Inference Gateway | 2026-11-20T14:35:24-08:00（上海 11-21 06:35） | https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/ |
+| 官方产品 | GPT-6.2 Sol and Astra in Microsoft Copilot | 2026-11-20T10:40:04-08:00（上海 11-21 02:40） | https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-2-sol-and-gpt-6-2-astra-in-microsoft-copilot/4574229 |
+| 官方文档 | Using GPT-6.2 | 官方文档；The Decoder 报道于 2026-11-21 | https://developers.openai.com/api/docs/guides/latest-model |
+| 技术媒体 | OpenAI shares new prompting tips for GPT-6.2 Astra and Sol… | 2026-11-21 | https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/ |
+| 官方 Changelog（相邻日期补记） | Redesigned trace view | 2026-11-20 | https://langfuse.com/changelog/2026-11-20-redesigned-trace-view |
+| 技术媒体（背景，非首要依据） | Two groups verify mathematician’s claim that Claude helped prove mathematics problem | 2026-11-21 11.39 EST（后更新 15.15 EST） | https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai |
+
 ## 2026-11-20
 
 ### 今日总览
