@@ -1,6 +1,6 @@
 ---
 title: GitHub 今日热榜
-date: 2026-11-22 09:18:39
+date: 2026-11-23 08:10:06
 categories: GitHub
 tags:
   - 快照
@@ -8,7 +8,7 @@ tags:
 timeline: GitHub
 ---
 
-2026-11-22 抓取的 GitHub Trending 今日榜。仓库下的 Star 与 Fork 是累计值，「今日」一列才是当天新增。
+2026-11-23 抓取的 GitHub Trending 今日榜。仓库下的 Star 与 Fork 是累计值，「今日」一列才是当天新增。
 
 <!-- more -->
 
@@ -16,21 +16,21 @@ timeline: GitHub
 
 | # | 仓库 | 今日 | 简介 |
 | ---: | --- | ---: | --- |
-| 1 | [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter)<small>Python<br>16092 stars · 1830 forks</small>| 1,803 | 一个用于漏洞挖掘和外部红队工作的Claude Code技能包——82项技能、15个斜杠命令、681个披露报告模式（涵盖24个核心漏洞类别），以及企业身份+基础设施攻击矩阵。 |
-| 2 | [`obra/superpowers`](https://github.com/obra/superpowers)<small>Shell<br>323738 stars · 28715 forks</small>| 883 | 行之有效的代理技能框架和软件开发方法。 |
-| 3 | [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything)<small>Python<br>62085 stars · 5633 forks</small>| 769 | “CLI-Anything：让所有软件都具备原生代理功能” -- CLI-Hub：https://clianything.cc/ |
-| 4 | [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind)<small>Python<br>68160 stars · 8909 forks</small>| 488 | 🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours. |
-| 5 | [`cursor/plugins`](https://github.com/cursor/plugins)<small>TypeScript<br>18115 stars · 1977 forks</small>| 260 | Cursor 插件规范和官方插件 |
-| 6 | [`firecrawl/firecrawl`](https://github.com/firecrawl/firecrawl)<small>TypeScript<br>206222 stars · 10782 forks</small>| 1,006 | 让您的客服代表更聪明的知识基础设施。通过一个 API 搜索、抓取和访问 550 多个数据提供商。 |
-| 7 | [`nginx/nginx`](https://github.com/nginx/nginx)<small>C<br>32736 stars · 8374 forks</small>| 189 | 官方 NGINX 开源代码仓库。 |
-| 8 | [`openvinotoolkit/openvino`](https://github.com/openvinotoolkit/openvino)<small>C++<br>11937 stars · 3651 forks</small>| 200 | OpenVINO™ 是一款用于优化和部署 AI 推理的开源工具包 |
-| 9 | [`cathrynlavery/diagram-design`](https://github.com/cathrynlavery/diagram-design)<small>HTML<br>69819 stars · 4686 forks</small>| 583 | 适用于 Claude Code、Codex、GitHub Copilot、Cursor、Factory Droid、Qoder 和 Pi 的编辑图表设计。45 种图表类型。独立的 HTML + SVG。无阴影。无Mermaid杂乱。 |
-| 10 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill)<small>Python<br>72014 stars · 6375 forks</small>| 560 | AI 代理技能，可在 Reddit、X、YouTube、HN、Polymarket 和网络上研究任何主题，然后综合生成有事实依据的摘要 |
-| 11 | [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills)<small>TypeScript<br>11450 stars · 1440 forks</small>| 326 | 一个专为与 Stitch MCP 服务器配合使用而设计的 Agent Skill 库。每项技能均遵循 Agent Skills 开放标准，以兼容 Antigravity、Gemini CLI、Claude Code、Cursor 等编码代理。 |
-| 12 | [`mjmirza/app-store-compliance`](https://github.com/mjmirza/app-store-compliance)<small>Shell<br>3410 stars · 214 forks</small>| 720 | 避免常见的 App Store 和 Google Play 拒绝情况。开放式手册和提交前防护，包含 124 种有案可查的被拒模式和解决方案、隐私清单和数据安全检查、111 项受跟踪的截止日期（欧盟《人工智能法案》、DSA、《儿童在线隐私保护法案》（COPPA）、年龄相关法律）以及一项适用于人工智能编码代理的技能。 |
-| 13 | [`Tracer-Cloud/opensre`](https://github.com/Tracer-Cloud/opensre)<small>Python<br>13993 stars · 1943 forks</small>| 450 | 用于实现 CI/CD 可靠性的开源代理。 |
-| 14 | [`toeverything/AFFiNE`](https://github.com/toeverything/AFFiNE)<small>TypeScript<br>76316 stars · 5595 forks</small>| 574 | 除了 Notion 和 Miro，还有更多选择。AFFiNE（发音为 [ə‘fain]）是一款新一代知识库，将规划、整理和创作融为一体。隐私至上、开源、可定制且开箱即用。 |
-| 15 | [`XiaoYouChR/Ghost-Downloader-3`](https://github.com/XiaoYouChR/Ghost-Downloader-3)<small>Python<br>14461 stars · 876 forks</small>| 779 | The only downloader you need. 下载器的集大成者。 |
-| 16 | [`zhouxiaoka/autoclip`](https://github.com/zhouxiaoka/autoclip)<small>Python<br>12869 stars · 2075 forks</small>| 683 | AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing. |
+| 1 | [`elementalsouls/Claude-BugHunter`](https://github.com/elementalsouls/Claude-BugHunter)<small>Python<br>17766 stars · 1967 forks</small>| 1,716 | 一个用于漏洞挖掘和外部红队工作的Claude Code技能包——82项技能、15个斜杠命令、681个披露报告模式（涵盖24个核心漏洞类别），以及企业身份+基础设施攻击矩阵。 |
+| 2 | [`obra/superpowers`](https://github.com/obra/superpowers)<small>Shell<br>324151 stars · 28758 forks</small>| 788 | 行之有效的代理技能框架和软件开发方法。 |
+| 3 | [`HKUDS/CLI-Anything`](https://github.com/HKUDS/CLI-Anything)<small>Python<br>62771 stars · 5695 forks</small>| 699 | “CLI-Anything：让所有软件都具备原生代理功能” -- CLI-Hub：https://clianything.cc/ |
+| 4 | [`jingyaogong/minimind`](https://github.com/jingyaogong/minimind)<small>Python<br>68633 stars · 8974 forks</small>| 473 | 🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours. |
+| 5 | [`cursor/plugins`](https://github.com/cursor/plugins)<small>TypeScript<br>18434 stars · 2005 forks</small>| 294 | Cursor 插件规范和官方插件 |
+| 6 | [`firecrawl/firecrawl`](https://github.com/firecrawl/firecrawl)<small>TypeScript<br>207013 stars · 10816 forks</small>| 915 | 让您的客服代表更聪明的知识基础设施。通过一个 API 搜索、抓取和访问 550 多个数据提供商。 |
+| 7 | [`nginx/nginx`](https://github.com/nginx/nginx)<small>C<br>32881 stars · 8381 forks</small>| 163 | 官方 NGINX 开源代码仓库。 |
+| 8 | [`openvinotoolkit/openvino`](https://github.com/openvinotoolkit/openvino)<small>C++<br>12089 stars · 3657 forks</small>| 158 | OpenVINO™ 是一款用于优化和部署 AI 推理的开源工具包 |
+| 9 | [`cathrynlavery/diagram-design`](https://github.com/cathrynlavery/diagram-design)<small>HTML<br>70286 stars · 4715 forks</small>| 518 | 适用于 Claude Code、Codex、GitHub Copilot、Cursor、Factory Droid、Qoder 和 Pi 的编辑图表设计。45 种图表类型。独立的 HTML + SVG。无阴影。无Mermaid杂乱。 |
+| 10 | [`mvanhorn/last30days-skill`](https://github.com/mvanhorn/last30days-skill)<small>Python<br>72699 stars · 6424 forks</small>| 668 | AI 代理技能，可在 Reddit、X、YouTube、HN、Polymarket 和网络上研究任何主题，然后综合生成有事实依据的摘要 |
+| 11 | [`google-labs-code/stitch-skills`](https://github.com/google-labs-code/stitch-skills)<small>TypeScript<br>11910 stars · 1474 forks</small>| 494 | 一个专为与 Stitch MCP 服务器配合使用的 Agent Skills 库。每项技能均遵循 Agent Skills 开放标准，以兼容 Antigravity、Gemini CLI、Claude Code、Cursor 等编码代理。 |
+| 12 | [`mjmirza/app-store-compliance`](https://github.com/mjmirza/app-store-compliance)<small>Shell<br>3965 stars · 236 forks</small>| 621 | 避免常见的 App Store 和 Google Play 拒绝情况。开放式手册和提交前保障机制，包含 124 种有案可查的被拒模式及解决方案、隐私清单和数据安全检查、112 项受跟踪的截止日期（欧盟《人工智能法案》、DSA、COPPA、年龄相关法律）以及一项适用于人工智能编码代理的技能。 |
+| 13 | [`Tracer-Cloud/opensre`](https://github.com/Tracer-Cloud/opensre)<small>Python<br>14404 stars · 1965 forks</small>| 399 | 用于实现 CI/CD 可靠性的开源代理。 |
+| 14 | [`toeverything/AFFiNE`](https://github.com/toeverything/AFFiNE)<small>TypeScript<br>76811 stars · 5622 forks</small>| 542 | 除了 Notion 和 Miro，还有更多选择。AFFiNE（发音为 [ə‘fain]）是一款新一代知识库，将规划、整理和创作融为一体。隐私至上，开源，可定制，开箱即用。 |
+| 15 | [`XiaoYouChR/Ghost-Downloader-3`](https://github.com/XiaoYouChR/Ghost-Downloader-3)<small>Python<br>15119 stars · 909 forks</small>| 701 | The only downloader you need. 下载器的集大成者。 |
+| 16 | [`zhouxiaoka/autoclip`](https://github.com/zhouxiaoka/autoclip)<small>Python<br>13415 stars · 2124 forks</small>| 641 | AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing. |
 
-同日还有 [全局 Star 榜](/2026/11/22/github/stars-snapshot/)、[本周热榜](/2026/11/22/github/trending-weekly/) 和 [本月热榜](/2026/11/22/github/trending-monthly/)。
+同日还有 [全局 Star 榜](/2026/11/23/github/stars-snapshot/)、[本周热榜](/2026/11/23/github/trending-weekly/) 和 [本月热榜](/2026/11/23/github/trending-monthly/)。

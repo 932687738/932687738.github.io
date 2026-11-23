@@ -2,6 +2,69 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-22
+
+### 今日总览
+
+**一句话结论**：上海时间 11 月 22 日的主线是 OpenAI 首席科学家 Jakub Pachocki 发表官方长文，主张用困惑度（等价于交叉熵损失）作为可比的预训练进度指标，并据此讨论行业共同的能力上限与安全审计门槛；工程侧则有可核验的编码工具稳定版与预发布补丁，专项框架与论文窗口整体偏静。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商博客/changelog、GitHub Releases、arXiv / Hugging Face Papers、可信媒体与政策原文；时间窗为 Asia/Shanghai 2026-11-22 00:00:00–23:59:59（对应 UTC 11-21 16:00:00–11-22 15:59:59）。相邻时区传播已在日期栏标注。昨日及更早已写入的条目（Claude Code 2.1.330、Codex 0.171.0、Spring AI 2.1.0、CodeGraph v1.6.4、Hermes v0.23.3、Langfuse Redesigned trace view、对抗蒸馏防护等）本日不重复当作新首发。 |
+| 核心趋势 | 1）安全治理讨论从「要不要设限」推进到「用什么尺子设限」：Pachocki 公开内部困惑度轨迹，并提出在监控能力（例如 CoT monitor 的后继方案）达到具体里程碑前，实验室共同承诺不越过某一阈值。2）编码代理工具链继续补交互与稳定性：Qwen Code 稳定版加强 Web Shell 产物库与托管会话，GitHub Copilot CLI 预发布只修了会话附着与残留进程。3）Claude Code / Codex / Langfuse / LangChain / Spring AI / Code Graph 等专项在窗口内未见新的正式版；Hugging Face 当日 Daily Papers 有聚合列表，但抽查条目的 arXiv submitted/revised 日期并不落在本窗口。 |
+| 可直接关注 | 1）OpenAI 原文里关于 log-perplexity 阈值与「共享上限」的论证，以及作者自己列出的跨实验室不可比、与下游任务脱节、未覆盖 CoT 等限制。2）Qwen Code v0.28.4 的 Web Shell artifact library、本地 Runtime 目录权限，以及 Gemini 4 推理默认值。3）若使用 Copilot CLI 的 `--ui-server` 或 npm 安装方式，可核对预发布 1.0.115-7 的两处修复，但不要把它当成正式稳定版。 |
+| 专项检索结论 | **Claude Code**：未见比 2.1.330 更新的稳定版；该版本已写入 11-21 章节。**Codex**：未见新的稳定版；窗口内可见预发布 `rust-v0.173.0-alpha.4`，不以预发布说明替代 11-20 已记录的稳定版 0.171.0。**OpenClaw**：未见比 2026.11.6 更新的稳定版。**Hermes**：未见比 v0.23.3 更新的稳定版。**Spring AI**：v2.1.0 / v2.0.3 已写入 11-20 章节，本日无新版本。**Spring Alibaba AI**：`alibaba/spring-ai-alibaba` 未见窗口内可核验重大更新。**Langfuse**：未见 11-22 的 changelog 新条目；最近可见条目仍为 11-20 的 Redesigned trace view。**LangChain / LangGraph**：未见窗口内可核验的新正式版（最近可见版本约在 11-19/11-20）。**Code Graph**：`colbymchenry/codegraph` 最近可见版本仍为 11-20 的 v1.6.4。**Loop Engineering**：独立方法论仓库未见窗口内正式 release；与「闭环设限」最接近的可核验文本是 OpenAI 这篇困惑度/节奏治理长文，它讨论的是实验室共同上限，而不是 `/loop`、verifier 或 worktree 工具链。**skills / Agent Skills**：未见独立规范或平台级新标准。**论文**：Hugging Face Papers 有 2026-11-22 日榜，但抽查「Language Models Can Rewrite Their Own Weights」（arXiv 2611.21885，约 11-18）、System 1 agents（2611.21053，16 Nov 2026）、Embeddings vs. Grep（2611.20455，约 11-15）等条目，submitted/revised 日期均不在本窗口，故不把日榜聚合当作当天新论文。**政策监管**：未发现 2026-11-22 可核验的 NIST/欧盟等官方新规；媒体对 CAISI 人事的转述缺少可回对的官方原文，不写入主表。**相邻日期补记**：Google Antigravity CLI 1.5.14 发布于 2026-11-21T07:57:06Z（上海 11-21 15:57），落入昨日窗口，昨日章节未展开，本日仅在专项中补记，不当作 11-22 首发；该版本新增 `/thinking`、远程 `plan` 模式，并修复 Windows UNC/设备路径可能触发凭证查找的问题。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 模型进度度量与安全治理 | [Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence/) | 2026-11-22（官方页面日期；精确到分钟的发布时间未公开） | 官方研究博文 | 高。OpenAI 首席科学家 Jakub Pachocki 主张把困惑度（文中等同交叉熵损失）作为比较预训练进度、并讨论行业共享安全标准的尺子。文中给出该实验室主评估集上的内部轨迹：GPT-3.5 约 0.99、GPT-4 约 0.91，损失低于 0.8 后出现网络安全和数学方向的「变革性」能力，并外推进入约 0.68–0.7 窗口时可能再出现未预先测试的能力，同时对齐审计和评估觉察会继续变难。作者建议实验室在监控能力达到具体里程碑（例如 CoT monitor 的后继方案）前，共同承诺不越过某一基于困惑度等测量的上限。文中也写明难点：跨实验室数据集不可直接比、困惑度不对应具体任务、CoT 不降低困惑度、以及损失地板未知。适合关注评测、治理和预训练进度口径的人读原文，不要把内部数据集上的数字当成跨厂排行榜。 |
+| 编码代理 CLI | [Qwen Code v0.28.4](https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4) | 2026-11-22T12:04:21Z（上海 20:04:21） | GitHub Release（稳定版） | 中高。正式版增强 Web Shell：本地 daemon 模式新增工作区产物库页面（渐进扫描与流式更新），会话区补了共享 ChatSurface、Continue 标记和移动端布局。核心侧加入内置 Gemini 4 推理默认值，Local Runtime 在进程启动时以属主私有权限创建状态目录，命令迁移只写 Markdown 目标并在冲突时保留原 TOML，扩展可加载带 UTF-8 BOM 的清单。发行说明写明无已知破坏性变更。适合已经在用 Qwen Code / Web Shell 的团队按 changelog 升级核对。 |
+| 编码代理 CLI | [GitHub Copilot CLI v1.0.115-7](https://github.com/github/copilot-cli/releases/tag/v1.0.115-7) | 2026-11-22T11:40:49Z（上海 19:40:49） | GitHub Release（预发布） | 中低。预发布只包含两处修复：使用 `--ui-server` 的客户端可在服务器开始监听后立刻附着到已恢复会话；npm 安装的 Copilot CLI 在启动阶段被停止时，不再把进程留在后台。不要把它当成新的稳定功能版本，生产环境仍应等待非 prerelease 标签。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 用困惑度讨论研发节奏 | [Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence/) | 压缩器/预测器视角；内部 log-perplexity 轨迹；共享上限与监控里程碑；作者自列的度量局限 | 做评测、安全治理或预训练进度对齐的研究与平台团队 |
+| Qwen Code Web Shell 与权限 | [v0.28.4 发行说明](https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4) | 产物库页面、ChatSurface、Runtime 目录权限、UTF-8 BOM 清单 | 正在部署 Qwen Code 本地/托管会话的工程团队 |
+| 媒体解读（相邻时区传播） | [OpenAI’s chief scientist has thoughts on how to limit AI development](https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/) | 把原文主张概括为「先约定尺子再设限」；引用 Altman 对该文的评价 | 需要短导读的人；事实与数字仍以 OpenAI 原文为准 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：窗口内没有可核验的 LangChain / LangGraph / Langfuse / Spring AI / Code Graph 新正式版；真正落到工程仓库的，是 Qwen Code 稳定版对 Web Shell 与本地运行时权限的修补，以及 Copilot CLI 预发布的会话附着修复。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 进度度量与设限 | OpenAI 公开内部困惑度轨迹，并提议用可跟踪指标约定「先达到监控里程碑再跨越上限」。 | 若要讨论「能力上限」或发布门禁，先写清评估集、时区和不可比之处，避免把单一实验室曲线直接当成行业榜。 |
+| 编码代理界面与运行时 | Qwen Code v0.28.4 把产物浏览、会话续跑和状态目录权限写进稳定版；Copilot CLI 预发布只修附着与残留进程。 | 多会话、远程 UI 和 npm 安装路径要单独测启动/停止/恢复，不要只测主对话。 |
+| 专项框架 | Langfuse、LangChain/LangGraph、Spring AI、Spring Alibaba AI、Code Graph、Loop Engineering 工具链本日无新正式 release。 | 无新版本不等于可跳过检索；沿用已记录版本，不把日榜或预发布当成正式升级依据。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Perplexity and Intelligence](https://openai.com/index/perplexity-and-intelligence/) | 当天最重要的官方文本，同时给出主张和反例，适合直接引用而不是转述。 |
+| 推荐 | [Qwen Code v0.28.4](https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4) | 窗口内少有的编码代理稳定版，变更列表具体，可按项核对。 |
+| 延伸 | [TechCrunch 报道](https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/) | 1:14 PM PST（上海已是 11-23 05:14）对原文的媒体解读，属相邻时区传播，细节以官方页为准。 |
+
+### 来源清单
+
+- 检索范围：2026-11-22 00:00:00 到 2026-11-22 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, techcrunch.com, github.com, huggingface.co, arxiv.org, langfuse.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方研究博文 | Perplexity and Intelligence | 2026-11-22（官方页面日期） | https://openai.com/index/perplexity-and-intelligence/ |
+| 技术媒体（相邻时区传播） | OpenAI’s chief scientist has thoughts on how to limit AI development | 2026-11-22 1:14 PM PST（上海 11-23 05:14） | https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/ |
+| GitHub Release | Qwen Code v0.28.4 | 2026-11-22T12:04:21Z（上海 20:04:21） | https://github.com/QwenLM/qwen-code/releases/tag/v0.28.4 |
+| GitHub Release（预发布） | GitHub Copilot CLI v1.0.115-7 | 2026-11-22T11:40:49Z（上海 19:40:49） | https://github.com/github/copilot-cli/releases/tag/v1.0.115-7 |
+| GitHub Release（相邻日期补记） | Antigravity CLI 1.5.14 | 2026-11-21T07:57:06Z（上海 11-21 15:57） | https://github.com/google-antigravity/antigravity-cli/releases/tag/1.5.14 |
+| 官方 Changelog（已记录，仅核验） | Langfuse Redesigned trace view | 2026-11-20 | https://langfuse.com/changelog/2026-11-20-redesigned-trace-view |
+| 论文日榜（未作为当天新投稿收录） | Hugging Face Daily Papers | 页面日期 2026-11-22 | https://huggingface.co/papers/date/2026-11-22 |
+
 ## 2026-11-21
 
 ### 今日总览

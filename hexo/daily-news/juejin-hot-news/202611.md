@@ -2,6 +2,108 @@
 
 按 Asia/Shanghai 时区汇总掘金文章热榜与收藏热榜（后端 / 前端 / 人工智能 / 开发工具），按文章链接去重并归纳正文。
 
+## 2026-11-23
+
+### 今日总览
+
+**一句话结论**：四标签×双榜共扫描 120 条，去重后新 URL 15 条全部来自文章热榜；四个收藏热榜槽位均为已见链接。新文主线是生产级 Agent 工程（实时交易、评审流水线、多 Harness 控制面）、Vue 3.6 底层重写与升级边界，以及档案知识图谱、Java Agent 生态盘点等可对照的实践文；同时也夹杂标题夸张的模型评测转述和工具推广。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 文章热榜 + 收藏热榜 × 后端/前端/人工智能/开发工具 |
+| 榜单规模 | 每槽最多 15 条；列表总条数 120；去重后新 URL 15；跳过已见 105；详情失败 0 |
+| 核心趋势 | 1）后端最值得看的是货拉拉把 Agent 写进实时交易系统的四层模型，以及把多官方 CLI 收成统一控制面的 T3 Code；一篇 Gemini 4 Neon 转述标题夸张，产品发布本身在相邻日。2）前端新文集中在 Vue 3.6 仍处 RC、生产默认继续停在 3.5 的升级地图，以及把 AI 生成页面去「塑料感」、把 LLM 评审嵌进 CI 的实作。3）人工智能与开发工具侧可关注知识图谱档案、Java Agent 选型，以及 VS Code Local harness 退役其实只换协调层的澄清；收藏热榜本轮无新增。 |
+| 可直接关注 | [货拉拉的 Agent 生产化四层模型](https://juejin.cn/post/7710060982517432356)；[Vue 3.6 分层地图与升级边界](https://juejin.cn/post/7710140388782424102)；[ai-code-review 全链路](https://juejin.cn/post/7709320811032100874)；[JitArchives 电子档案](https://juejin.cn/post/7708708448351240207)；[Java AI Agent 生态盘点](https://juejin.cn/post/7709344829042163747)。 |
+
+### 后端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 9 | [不得了，Google 造反了，Opus 5.5 又被干了](https://juejin.cn/post/7710170786309226511) | cxuanAI | 赞 6 / 藏 2 / 阅 313 / 热度 180 | 标题夸张。正文主要转述 Google 官方对 Gemini 4 Neon 的定位（夹在偏重的 Carbon 与偏快的 Hydrogen 之间），并引用官方评测表和 Artificial Analysis Coding Agent 榜单，把 Neon 与 Claude Opus 5.5、GPT-6.2 Sol 等做对比。Neon 官方发布本身在 11-18，本文是社区评测转述，跑分和开通范围应回对 [Google 官方博客](https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/) 与评测页，不能把个人口吻写成首发结论。 | https://juejin.cn/post/7710170786309226511 |
+| 14 | [AI Agent 如何进入实时交易系统：货拉拉的三个实践与一套工程方法论](https://juejin.cn/post/7710060982517432356) | 货拉拉技术 | 赞 0 / 藏 2 / 阅 317 / 热度 135 | 货拉拉技术总监亓隆基基于已上线的三个场景——意图交易（AI 下单）、持续撮合（司机 Agent / AI 撮合）和策略执行（AI 运营）——讨论 Agent 不应重做已有的机器学习、运筹和交易系统，而要拓展人原来必须亲自完成的理解、规划和临场调整。文中给出三个引入标准（新增能力、新增结果、成本可覆盖），以及生产化四层模型：模型决定起点，Harness 决定下限，Dual Loop 决定方向，业务知识决定上限。适合把 Agent 接入核心业务链路的后端和架构，关注点从「能否回答」转到「能否可靠改业务状态」。 | https://juejin.cn/post/7710060982517432356 |
+| 15 | [自从吸上了 T3 Code ，爽感堪比 GTA-6](https://juejin.cn/post/7710577867138367551) | cxuanAI | 赞 8 / 藏 1 / 阅 135 / 评 1 / 热度 126 | 标题偏体验向。作者从「各家官方 Harness 和模型更配对、但桌面客户端过多」出发，介绍 Ping Labs 开源的 T3 Code：定位是 Agent Harness Control Surface，本身不转卖 Token（BYOS），直接接管本机已登录的官方 CLI，并兼容 ACP / ACP Registry；同时支持 Git Worktree 隔离、跨 Agent 委派，以及通过局域网、Tailscale 或 T3 Connect 远程看进度和批权限。适合已经同时使用多家编码代理、想要统一入口的人试用，注意这是个人体验文，不是官方评测。 | https://juejin.cn/post/7710577867138367551 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 前端
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 9 | [2026 Vue 生态分析：底层重写了一遍，升级却几乎零成本](https://juejin.cn/post/7710140388782424102) | 用户451419429322 | 赞 7 / 藏 6 / 阅 504 / 评 1 / 热度 288 | 以 2026-11-20 的版本线为核对点：Vue 3.6 仍停在 `v3.6.0-rc.15`，但渲染（Vapor，按组件 opt-in）、响应式（基于 alien-signals 重写，升级默认生效）和构建（Vite 8 / Rolldown）三层已被替换，Composition / Options API 没有变。作者强调「升级接近零成本」不等于零风险，真正的坑是高估 Vapor 的即期收益和误读流传的性能数字，并给出本机可复实测与「生产默认仍走 3.5.x，等 3.6 正式版」的路线。适合前端团队做升级决策，数字和插件兼容性仍需在自己的仓库里复测。 | https://juejin.cn/post/7710140388782424102 |
+| 11 | [用 unslop 拯救 AI 生成网页的塑料感，7 分钟重构落地实测](https://juejin.cn/post/7709697282351120426) | 孟健AI编程 | 赞 3 / 藏 2 / 阅 507 / 评 2 / 热度 270 | 实测开源工具 unslop：先对 AI 生成页做结构审计，再多轮微调，作者记录全量修改约 6 分 56 秒、消耗 21.49 积分，并要求另存 `after.html`、不覆盖原文件。审计清单包括千篇一律的信任背书行、高饱和蓝紫渐变与光斑、混用圆角和胶囊按钮、FAQ 后台模板风等 15 项，随后把基调收到「克制、纸感、文本优先」。适合要去 AI 生成页套模板感的前端，把它当检查清单，而不是通用设计系统。 | https://juejin.cn/post/7709697282351120426 |
+| 12 | [ai-code-review 全链路：让 AI 来审 AI 的代码](https://juejin.cn/post/7709320811032100874) | 工程小白菜 | 赞 2 / 藏 5 / 阅 485 / 热度 234 | 把 LLM 语义评审嵌进 CI：引擎复用阿里开源 Open Code Review，模型走内网便宜档，规则用 JSON 进 git，按 path 分成 `background`（含豁免，用来降误报）、`redline` 和 `team_standard`，团队底线规则与仓库内 `.opencodereview/rule.json` 分层合并。作业收敛成共享 CI 模板，结果分发到评论、飞书和看板，评审意见再交回 AI 修改。作者判断质量瓶颈更多在规则而不是旗舰模型。适合已经让 AI 大量写代码、评审跟不上的前端/全栈团队对照落地。 | https://juejin.cn/post/7709320811032100874 |
+| 15 | [GitHub Actions 快速入门+场景实践案例](https://juejin.cn/post/7708760087800709155) | bysking | 赞 2 / 藏 4 / 阅 422 / 评 1 / 热度 216 | 面向没写过 YAML 的入门笔记，依据 GitHub 官方文档，用事件、工作流、作业、步骤、运行器五词建立心智模型，再带第一个工作流、逐行读 YAML、常见坑和一批可改的场景配置。适合 CI/CD 零基础的前端或全栈，深度有限，正式行为仍应回对官方文档。 | https://juejin.cn/post/7708760087800709155 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 人工智能
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 10 | [我扒了 GitHub Trending 前 20，8 个在做同一件事：给 Coding Agent 造基础设施](https://juejin.cn/post/7709495049776709670) | 雨夜寻晴天 | 赞 3 / 藏 2 / 阅 467 / 评 3 / 热度 261 | 作者在 2026-11-19 用 GitHub REST API 自行拉 Star，从当时看到的 Trending 前 20 里筛出 8 个「只提升代理能力、不直接产出业务价值」的项目，并声明数字是时点快照。文中把它们归到方法论框架、Harness 性能与并行 worktree、以及远程/移动控制等层，例如 `obra/superpowers`、`affaan-m/ECC`、`stablyai/orca`、`pingdotgg/t3code`。适合用来观察编码代理基础设施的分层，Star 数不要当长期排行引用，项目归属和功能仍需打开仓库核对。 | https://juejin.cn/post/7709495049776709670 |
+| 12 | [开源！我们用知识图谱重构了电子档案，AI 驱动全文智能关联](https://juejin.cn/post/7708708448351240207) | 徐小夕 | 赞 4 / 藏 6 / 阅 391 / 热度 207 | 介绍开源电子档案系统 JitArchives：针对凭证场景，不把通用向量 RAG 直接套到档案上，因为溯源、密级、借阅时效和幻觉在合规场景里代价更高。系统覆盖著录、分类、归档审核、借阅审批和审计，并把 AI 限制在只读查询、回答必须绑定原始档案证据；检索和图谱关联基于 SQLite FTS5 与 TF-IDF，避免额外部署向量库或图数据库。适合做政务/企事业单位档案或强溯源知识库的人看取舍，需自行评估开源项目成熟度。 | https://juejin.cn/post/7708708448351240207 |
+| 13 | [Gemini 4 系列与 Antigravity 使用心得：Carbon、Argon 与 Hydrogen 实测与提速方法](https://juejin.cn/post/7709402258643582976) | oil欧哟 | 赞 2 / 藏 0 / 阅 413 / 热度 198 | 作者在 Antigravity 中高强度使用约一个多月后的体感文，先引用官方 API 标价（并注明 Carbon/Argon 在 12 月 1 日前后的半价变化），再比较 Carbon、Argon、Hydrogen 的定位差距，以及和 Claude、GPT 的长短板、控风格与读代码提速技巧。这是个人使用报告，价格和开通范围应回对 Google 官方定价页，不宜当成评测基准。 | https://juejin.cn/post/7709402258643582976 |
+| 14 | [【揭秘】深度拆解 WorkBuddy 产品能力的实现逻辑](https://juejin.cn/post/7709381318991757366) | 华洛 | 赞 4 / 藏 4 / 阅 364 / 热度 198 | 从 Agent 基座、系统提示词、客户端/Web 端和服务端拆 WorkBuddy。作者强调系统提示词用 XML 标签加英文、与产品运行逻辑绑定；并提到对话里可用 ToolSearch 查询延迟工具的说明书，信息来自接口而非模型编造。文中还解释任务记录随设备不随账号的原因。这是个人拆解，不是官方文档，细节可能变化或被删改，适合做 Agent 产品设计时当参考，不要当成实现规范。 | https://juejin.cn/post/7709381318991757366 |
+| 15 | [2026 年 Java AI Agent 生态全景盘点：50+ Java 开源项目的分类、实测与选型判断](https://juejin.cn/post/7709344829042163747) | Cosolar | 赞 4 / 藏 4 / 阅 368 / 热度 198 | 作者写明 2026-11-18 实测 61 个 Java/JVM AI 开源项目，按七层分类比较 Spring AI、LangChain4j、AgentScope 等路线，并认为最能代表生态现状的是可移植运行时 Atmosphere：一个 `@Agent` 类可跑在 12 个运行时之上。判断是「框架已经多到需要适配层」，选型要为 API 变化留退路。适合 Java 团队做框架对比，具体版本和短板以文中实测日期为准，需打开对应仓库复核。 | https://juejin.cn/post/7709344829042163747 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 开发工具
+
+#### 文章热榜
+
+| 排名 | 标题 | 作者 | 热度/互动 | 内容摘要 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 13 | [Local harness 将退役，VS Code 本地开发要不要搬到云端？](https://juejin.cn/post/7709326059737579561) | ServBay | 赞 1 / 藏 2 / 阅 215 / 热度 99 | 针对 GitHub 在 2026-11-16（北京时间 11-17 凌晨）宣布 VS Code 1.146 弃用 Local harness、计划 2027 年 2 月移除的消息，文章把架构拆成模型、Harness、执行机器和项目环境四层，说明退役的是 AI Agent 的执行协调层，由内置 Copilot harness 接替，并不等于本机构建、测试、数据库必须搬到云端。过渡期内企业临时默认配置也会在同一时间点失效。对正在用 VS Code 本地开发的人有澄清价值；官方时间表应回对 GitHub/VS Code 公告，文中也带有作者产品链接，需与迁移事实分开看。 | https://juejin.cn/post/7709326059737579561 |
+| 14 | [一款运行在 DSH（DeepSeek Harness）中的类 Postman HTTP 接口调试插件](https://juejin.cn/post/7710170786309685263) | 程序员Oak | 赞 2 / 藏 3 / 阅 168 / 热度 90 | 介绍 DSH 插件 `@oakzhong/dsh-tree-new-bee-api-client` 1.0.3：Host 侧用 Node 内置 `fetch` 和超时控制发请求，Client 侧在面板里构造七种 HTTP 方法、查看状态/耗时/大小，并用 localStorage 管理集合、环境、历史；响应有 4MB 截断保护，UI 跟随 DSH 主题。适合已经在 DeepSeek Harness 里调试接口的人，它是插件说明而不是通用 API 平台评测。 | https://juejin.cn/post/7710170786309685263 |
+| 15 | [从硬解基座到字幕与滤镜链：ffmpeg-for-HarmonyOS v0.3.2](https://juejin.cn/post/7709380677695389739) | Sirius_Ji | 赞 2 / 藏 1 / 阅 146 / 评 1 / 热度 90 | 开源库 [ffmpeg-for-HarmonyOS](https://github.com/Sirius-Ji/ffmpeg-for-HarmonyOS) 从 v0.2.2 的「能编译、能硬解」推进到 v0.3.2，补的是转码链里的裁剪、调色、变速、SRT/ASS/WebVTT 烧录和按时间段出现的画中画，并让字幕与 PiP 时间轴跟随变速后的输出。字幕文件或字体缺失时打日志并继续转码，避免整条链路崩溃。定位仍是 HarmonyOS NEXT / OpenHarmony 基础库，不是成品播放器。适合鸿蒙音视频开发者按版本核对能力边界。 | https://juejin.cn/post/7709380677695389739 |
+
+#### 收藏热榜
+
+本槽无新增。
+
+### 跨榜重复与去重说明
+
+- 本轮新摘要 URL 数：15
+- 因 `seen_urls` 跳过：105（只给数量；已见文不再展开成表行）
+- 同文多标签/双榜出现：无。15 条新 URL 均只出现在各自标签的文章热榜，未同时进入收藏热榜或其他标签。
+
+### 来源清单
+
+- 快照日：2026-11-23（Asia/Shanghai）
+- 页面：https://juejin.cn/hot/articles 、 https://juejin.cn/hot/collected-articles
+- 抓取：`tools/juejin_hot_fetch.py` → `_staging_latest.json`（列表总条数 120；新 URL 15；跳过已见 105；详情失败 0）
+
+| 标签 | 榜单 | 标题 | 链接 |
+| --- | --- | --- | --- |
+| 后端 | 文章热榜 | 不得了，Google 造反了，Opus 5.5 又被干了 | https://juejin.cn/post/7710170786309226511 |
+| 后端 | 文章热榜 | AI Agent 如何进入实时交易系统：货拉拉的三个实践与一套工程方法论 | https://juejin.cn/post/7710060982517432356 |
+| 后端 | 文章热榜 | 自从吸上了 T3 Code ，爽感堪比 GTA-6 | https://juejin.cn/post/7710577867138367551 |
+| 前端 | 文章热榜 | 2026 Vue 生态分析：底层重写了一遍，升级却几乎零成本 | https://juejin.cn/post/7710140388782424102 |
+| 前端 | 文章热榜 | 用 unslop 拯救 AI 生成网页的塑料感，7 分钟重构落地实测 | https://juejin.cn/post/7709697282351120426 |
+| 前端 | 文章热榜 | ai-code-review 全链路：让 AI 来审 AI 的代码 | https://juejin.cn/post/7709320811032100874 |
+| 前端 | 文章热榜 | GitHub Actions 快速入门+场景实践案例 | https://juejin.cn/post/7708760087800709155 |
+| 人工智能 | 文章热榜 | 我扒了 GitHub Trending 前 20，8 个在做同一件事：给 Coding Agent 造基础设施 | https://juejin.cn/post/7709495049776709670 |
+| 人工智能 | 文章热榜 | 开源！我们用知识图谱重构了电子档案，AI 驱动全文智能关联 | https://juejin.cn/post/7708708448351240207 |
+| 人工智能 | 文章热榜 | Gemini 4 系列与 Antigravity 使用心得：Carbon、Argon 与 Hydrogen 实测与提速方法 | https://juejin.cn/post/7709402258643582976 |
+| 人工智能 | 文章热榜 | 【揭秘】深度拆解 WorkBuddy 产品能力的实现逻辑 | https://juejin.cn/post/7709381318991757366 |
+| 人工智能 | 文章热榜 | 2026 年 Java AI Agent 生态全景盘点：50+ Java 开源项目的分类、实测与选型判断 | https://juejin.cn/post/7709344829042163747 |
+| 开发工具 | 文章热榜 | Local harness 将退役，VS Code 本地开发要不要搬到云端？ | https://juejin.cn/post/7709326059737579561 |
+| 开发工具 | 文章热榜 | 一款运行在 DSH（DeepSeek Harness）中的类 Postman HTTP 接口调试插件 | https://juejin.cn/post/7710170786309685263 |
+| 开发工具 | 文章热榜 | 从硬解基座到字幕与滤镜链：ffmpeg-for-HarmonyOS v0.3.2 | https://juejin.cn/post/7709380677695389739 |
+
 ## 2026-11-22
 
 ### 今日总览
