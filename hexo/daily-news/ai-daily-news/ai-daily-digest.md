@@ -2,6 +2,117 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-23
+
+### 今日总览
+
+**一句话结论**：11 月 23 日的主线，是编码 Agent 从「写代码」延伸到「评审、修复、按策略批准」以及「运行中防护」，同时 Chat 侧模型、企业零数据保留安全监控，以及决策模型与服务端文件切片等工程基础设施同步落地。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商；模型/产品；开发者工具；Agent 框架；RAG/MCP/向量数据库；Spring AI / Java AI；Spring Alibaba AI；Langfuse / LLM 可观测性；LangChain / LangGraph；Code Graph；Loop Engineering / Agent loop 范式；Claude Code / Codex / OpenClaw / Hermes；skills / Agent Skills；论文；GitHub releases；技术媒体；政策监管；中文补充来源 |
+| 核心趋势 | 1）Anthropic 用 Claude Ship 把 PR 评审、修复与策略化批准连成闭环，Claude Code 同步提供 `/ship`。2）OpenAI 将面向对话优化的 GPT-6.2 Sol 推到 Chat 页，并与 Cisco 开源 eBPF 运行时 Shirudo，探索补丁落地前的热防护。3）Google 侧同时给出 Gemini API 服务端文件切片，以及用 Gemini 4 Agent 团队加 Lean 形式化验证改进量子算法。4）工程层出现「系统一决策模型」与可观测性更新：AWS Strands Decider v2、Hugging Face 文档决策模型 IVE，以及 Langfuse v4.84.0 的组织级网关预算与 MCP 标注工具。 |
+| 可直接关注 | Claude Ship 的观察模式与仓库级批准策略；Gemini Files API 按页/单元格/时间段切片以降 token；Shirudo 的签名 eBPF shield 与人工审批；企业场景用 EFS 在客户自有存储上做跨请求安全监控；用决策模型（Decider / IVE）承接路由、护栏和文档判别，而不是事事调用大模型。 |
+| 专项检索结论 | **Claude Code**：官方 changelog 发布 v2.1.331，终端 Code Mode 扩展到 Amazon Bedrock、Google Cloud Agent Platform、Microsoft Foundry 与 Claude Platform on AWS，并随 Claude Ship 提供 `/ship`。**Codex**：窗口内无稳定版 CLI 发布；ChatGPT 当日更新明确不改动 Work 与 Codex 所用模型；Shirudo 受控测试中用 Codex 生成 shield。**OpenClaw**：预发布 `2026.11.10-beta.2`（2026-11-23 12:48:59Z，中国时间 20:48），聚焦更新恢复、子 agent 结果保留与技能密钥 `SecretRef`。**Hermes**：仅有 canary `canary.20261123T065600Z-v0.23.3`（08:05:01Z，中国时间 16:05），无稳定版，主要内容为插件目录增量。**Spring AI**：无当日新 release（最近为 11-20 的 2.1.0 / 2.0.3）。**Spring Alibaba AI**：无当日可核验 release。**Langfuse**：发布 v4.84.0（12:22:31Z，中国时间 20:22），含 MCP 批量创建标注队列、组织级 AI Gateway 预算与组织级模型定义。**LangChain / LangGraph**：`langchain-skills` v0.4.0 落入窗口（11-22 23:23:36Z，中国时间 11-23 07:23），恢复 MDA skill；LangGraph 无当日新 release。**Code Graph**：无当日可核验更新。**Loop Engineering**：无 Ralph loop / Loop Engineering 范式专项发布。**skills**：无 Codex Skills / Cursor Skills 官方新规范；当日相关进展为 Claude `/ship`、`langchain-skills` v0.4.0，以及 OpenClaw Skills 页对 `SecretRef` 的修复。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 编码 Agent / Claude Code | [Introducing Claude Ship](https://claude.com/resources/articles/introducing-claude-ship) | 2026-11-23 | 官方发布（beta） | 将 Code Review（已 GA）与 PR Steward、Claude Approvals（beta）串成「评审—修复—按仓库策略批准」闭环；开发者可在 Claude Code 用 `/ship` 推送并跟进 PR。面向 Team / Enterprise 的 GitHub 仓库；ZDR、HIPAA 与客户托管密钥组织暂不可用。建议先观察模式再接入分支保护。 |
+| 模型与产品 | [ChatGPT release notes：GPT-6.2 进入 Chat 页](https://help.openai.com/en/articles/6825453-chatgpt-release-notes) | 2026-11-23 | 官方发布 | 面向日常对话优化的 GPT-6.2 Sol 开始向 Plus / Pro / Business / Enterprise 的 Chat 页推送；官方给出图像理解 71.7%（GPT-6 为 47.4%）、困难指令遵循 78.1%（62.5%）、BrowseComp Extra high 64.5%（54.4%）等内部评测。Work 与 Codex 所用模型本次不变。 |
+| 模型安全 | [GPT-6.2 in ChatGPT System Card](https://deploymentsafety.openai.com/gpt-6-2-chatgpt) | 2026-11-23 | 官方安全卡 | 将该版本称为 GPT-6.2（November 23）。按 Preparedness Framework，网络安全达 Critical、生化达 High、自我提升达 High；官方称这是其已部署 chat 模型中整体安全表现最强的一版，并沿用 Astra / Sol 同类护栏。 |
+| 运行时安全 | [OpenAI and Cisco introduce Shirudo](https://openai.com/index/introducing-shirudo) | 2026-11-23 | 官方开源发布 | 开源 eBPF 运行时，用于在永久补丁落地前对运行中的 Linux 系统加载临时、可签名校验的 shield；TPM 记录加载/卸载。受控测试中，Codex 生成的 shield 在不重启的情况下阻断了针对 Elasticsearch 的 Java4Shell 利用尝试。许可证为 BSD 2-Clause，BPF 程序双许可 BSD 与 GPL。 |
+| 开发者工具 | [Introducing file slicing controls in the Gemini API](https://blog.google/innovation-and-ai/technology/developers-tools/file-slicing-controls/) | 2026-11-23 | 官方 API 发布 | 全 Gemini 4 系列支持服务端切片：PDF / Office / OpenDocument 按页与图层，表格按 sheet 与单元格，音视频按时间段；只对模型实际检视的部分计 token。可一次上传、多轮复用 Files API URI，并在 `function_result` 里让 Agent 指定切片，避免本地 LibreOffice / ffmpeg 膨胀。同期支持原生上传 Microsoft Office 与 OpenDocument。 |
+| 研究 / Agent | [Finding faster quantum algorithms with agents and formal verification](https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/) | 2026-11-23 | 官方研究博客 | DeepMind 与 Google Quantum AI 用 Gemini 4 Agent 团队在 Lean 中提出并证明量子电路改进：惯性约束聚变相关代价约 11.8×、光化学模拟约 8×、Cytochrome P450 约 2.5×，Grover 特定实现 2.57×，arcsin 例程 290×。官方同时开源 Lean 库、问题规格与已验证解。对应论文 arXiv 页面日期为 2026-11-16，当日是博客与开源公布，不视为当日新投稿。 |
+| 企业安全 | [Zero data retention with Enterprise Frontier Safeguards is now in beta](https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards) | 2026-11-23 | 官方发布（public beta） | EFS 在客户自有存储上做跨请求自动安全监控，兼容零数据保留：Anthropic 与云厂商不保留输入输出，Safety Case 不含原文。可用于 Claude Platform、Claude Platform on AWS、Amazon Bedrock 与 Claude on Google Cloud；Microsoft Foundry 即将支持。 |
+| 企业调研 | [Working with AI](https://www.anthropic.com/research/working-with-ai) | 2026-11-23 | 官方研究 | 对 58 家企业客户做 66 场访谈：价值多来自增产而非降本；国内因 AI 裁员案例很少，但多数减少招聘，并削减尤其是离岸承包；编码加速后，评审、销售与决策成为新瓶颈；高价值用法通常伴随岗位与工作流重组。 |
+| 可观测性 | [Langfuse v4.84.0](https://github.com/langfuse/langfuse/releases/tag/v4.84.0) | 2026-11-23 | GitHub release | MCP 新增 `batchCreateAnnotationQueueItems`；AI Gateway 支持组织级支出预算与告警；新增组织级模型定义；Topics、RBAC 与可选原生 OpenTelemetry 处理亦有更新。发布时间 12:22:31Z，落在当日中国时间窗口内。 |
+| Agent 决策模型 | [Introducing Strands Decider v2](https://strandsagents.com/blog/introducing-strands-decider-v2/) | 2026-11-23 | 官方开源发布 | 基于 Gemma 4 的 5 个 Apache-2.0「系统一」决策模型（E2B 至 31B），一次前向传播对给定选项打概率，适合路由、工具选择与护栏。官方称 31B 在 6 项公开文本基准上均分 82.1（v1 26B-A4B 为 70.0），ECE 从 0.062 降至 0.027；训练约 1750 万条决策样本。 |
+| 开源模型 | [Meet IVE, the handyman of your document pipeline](https://huggingface.co/blog/QuentinJG/ive-release) | 2026-11-23 | 开源发布 | Illuin 发布 Apache-2.0 文档决策模型 IVE-4B 与 Ivonnet-0.8B：输入页面/问题/最多 255 个选项，一次前向传播返回校准概率，覆盖重排、页面相关性、抽取与图表阅读，无需先做 OCR。 |
+| 云安全 / MCP | [AWS WAF announces automated discovery and protection for LLM, MCP, and A2A endpoints](https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/) | 2026-11-23 | 官方 GA | 在 API Gateway / ALB / CloudFront 上发现 LLM、MCP、A2A 端点（含未文档化的影子 MCP），并用 WAF AI Security 托管规则组做协议校验；开启内容检查时调用 Bedrock Guardrails，检测提示注入、越狱、有害请求与敏感响应。 |
+| 基础设施 | [Announcing metal size for Amazon EC2 G7 instances](https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-g7-metal-size/) | 2026-11-23 | 官方 GA | G7 metal 在美东（弗吉尼亚）上市：8 张 NVIDIA RTX PRO 4500 Blackwell（每卡 32 GB）、192 vCPU、768 GiB 内存、700 Gbps EFA，面向物理 AI 仿真、Agent 沙箱与需要裸金属的图形负载；官方称相对 G6 推理最高约 4.6×。 |
+| 芯片与推理 | [Amazon to purchase Decart's AI optimization technology](https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization) | 2026-11-23 | 官方公司公告 | Amazon 签署协议购买 Decart Optimization Stack 专有技术，并引进联合创始人团队，目标是优化 Trainium 与推理性能；交易仍取决于惯常交割条件与监管批准。 |
+| 消费级产品 | [A more tailored Google Search that’s uniquely yours](https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/) | 2026-11-23 | 官方产品更新 | Search AI Mode 的 Personal Intelligence 开始支持选择接入 Google Wallet；Drive 与 Gemini 应用将在随后数周接入。官方强调只读钱包信息、可随时关闭，且不能挪动或投资资金。 |
+| 产业治理 | [NVIDIA Board Reinstates Jensen Huang as President, CEO and Board Director](https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/) | 2026-11-23 | 官方新闻稿 | 董事会即日起恢复黄仁勋总裁、CEO 与董事职务；独立委员会调查继续，并新设国家安全与出口管制委员会、启动首席合规官招聘。属公司治理与合规动态，不是产品发布。 |
+| 基础设施 | [Microsoft Running Workload Validation with AMD Helios Rackscale Solution](https://newsroom.amd.com/news/microsoft-running-workload-validation-amd-helios-rackscale-solution/) | 2026-11-23 | 官方新闻稿 | AMD 称 Microsoft 已在 Azure 实验室点亮首套 Helios 机架级系统并开展早期工作负载验证，规划用于推理；配置包括 Instinct MI455X、第 6 代 EPYC、Pensando 网络与 ROCm。尚属验证，不是大规模商用上线声明。 |
+| Claude Code | [Claude Code changelog v2.1.331](https://code.claude.com/docs/en/changelog) | 2026-11-23 | 官方 changelog | 终端 Code Mode 扩展到多家云平台；增加 `claude doctor` API 连通性检查、网关 OIDC groups、追踪字段与 VS Code 工作流项；并预告 11 月 30 日起托管插件市场将默认自动更新。 |
+| OpenClaw | [openclaw 2026.11.10-beta.2](https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.2) | 2026-11-23 | GitHub 预发布 | 强化中断更新后的可恢复性、Gateway 重启后子 agent 结果投递，以及 Skills 页编辑时保留密钥 `SecretRef`、避免写成明文。不是稳定版。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 编码 Agent 安全治理 | [The enterprise guide to securing coding agents](https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents) | 用拒绝能力、模型外检查、沙箱/出口白名单、中央不可覆盖策略给 Agent 风险设界；建议从低敏感仓库试点，打开 OTel 与沙箱日志后再扩面。 | 安全负责人、平台工程、准备规模化 Claude Code 的团队 |
+| 多模态 Agent 上下文 | [Gemini API 文件切片](https://blog.google/innovation-and-ai/technology/developers-tools/file-slicing-controls/) | 先低成本文本/低分辨率预览定位，再对目标页或片段做高分辨率检视；切片可写在 function response 里。 | 做文档/表格/音视频 Agent 或控制 token 成本的开发者 |
+| 形式化验证 + Agent 科研 | [DeepMind：用 Agent 与 Lean 改进量子算法](https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/) | 独立 Agent 团队提出方案，Lean 验证后再写入共享笔记，并定期「会议」交换想法；用证明代替无法经典仿真的电路测试。 | 科研与对 Agent 科学发现、形式化验证感兴趣的工程师 |
+| 企业采用 | [Working with AI](https://www.anthropic.com/research/working-with-ai) | 编码 Agent 向非技术岗位扩散；瓶颈从「写代码」转移到评审与决策；单纯自上而下或自下而上都不够，需要重组工作流。 | 工程负责人和组织设计相关读者 |
+| 可解释性与安全 | [Returning to the Neuron Basis for Interpretability, Part 2](https://alignment.anthropic.com/2026/neuron-basis-applications/) | 用开源权重模型中的神经元做无标签检测与转向；多数受测 unlearning 方法更像隐藏而非删除危险知识，神经元可帮助揭示这一点。 | 对齐、安全与解释性研究读者 |
+| 决策模型接入 Agent | [Strands Decider v2](https://strandsagents.com/blog/introducing-strands-decider-v2/) | 前缀双向注意力与选项 token 直接打分；用校准后的置信度决定何时升级到更大模型，或在 `before_tool_call` 处拦截。 | Agent 框架与成本优化工程 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：当日工程重心不在新的通用编排框架，而在把 Agent 循环中的「评审批准、文件检视、路由/护栏、观测与预算、运行时防护」做成可策略化、可验证的基础设施。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Claude Ship / 合入闭环 | PR Steward 负责让 PR 变绿但不批准、不合入；Claude Approvals 读取仓库内策略文件，可结合 Code Review 或自定义分类器；官方建议先观察模式。Claude Code 团队称 6–9 月合并 PR 数量翻倍以上，回退比例下降超过 40%。 | 把「谁能批准什么」写成仓库内策略，而不是只靠聊天约定；人审应集中在策略不允许自动放行的变更。 |
+| Gemini 文件切片 | 服务端按范围/图层/分辨率切片，避免在 harness 里维护本地渲染与沙箱。 | 大文件 Agent 应「先粗后细」；切片参数适合作为工具返回，而不是预先灌入全文。 |
+| Shirudo 与运行时防护 | eBPF shield 需人工批准后加载，签名校验，并用 TPM 留下可审计记录；目标是在永久补丁完成前保护正在跑的服务。 | Agent 可以加速生成缓解措施，但部署权应留在安全团队；适合作为漏洞披露同时提供临时防护的工作流。 |
+| 决策模型 | Strands Decider v2 与 IVE 都把「已知选项上的判断」做成单次前向传播，而不是再生成一段文本再解析。 | 路由、票据分类、页面相关性、工具前检查等应优先考虑决策模型；大模型留给不确定或开放生成任务。 |
+| Langfuse | v4.84.0 把 MCP 标注队列、组织级网关预算和组织级模型定义放进同一版本。 | 多项目/多模型代理场景需要组织级预算与模型目录，而不是只在项目里分散配置。 |
+| LangChain skills | [`langchain-skills` v0.4.0](https://github.com/langchain-ai/langchain-skills/releases/tag/v0.4.0) 恢复 MDA skill 并重定向已退役 skill 名称。同日稍晚的 v0.4.1 / v0.4.2 与 `langsmith-python` v0.16.1 发布时间已进入 11-24 中国时区，不计入本日。 | Skill 名称要保持可安装与可重定向，避免旧名称直接断裂。 |
+| AWS 对 MCP / A2A 的防护 | WAF 能发现影子 MCP，并做协议合规与 Guardrails 内容检查。 | 把 MCP / A2A 端点纳入 API 资产盘点；不要假设内部或未文档化的 Agent 端点已经在 WAF 后面。 |
+| OpenClaw / Hermes | OpenClaw 仅为 beta：强调中断恢复与技能密钥引用不被写成明文。Hermes 当日只发 canary，无稳定版。 | 自托管 Agent 网关要把「重启后继续投递」和「密钥引用不被明文替换」当成发布检查项。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Introducing Claude Ship](https://claude.com/resources/articles/introducing-claude-ship) | 当日最完整的编码 Agent 合入方案：组件分工、`/ship`、适用范围与计费边界都写在官方原文里。TechCrunch 有同日报道可作补充，但以官方页为准。 |
+| 必读 | [The enterprise guide to securing coding agents](https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents) | 把规模化编码 Agent 的安全问题拆成可执行的控制层和试点清单，适合直接对照现有托管配置查缺口。 |
+| 推荐 | [GPT-6.2 in ChatGPT System Card](https://deploymentsafety.openai.com/gpt-6-2-chatgpt) | 补充 Chat 页模型升级的能力阈值与安全主张，避免只看发布说明中的便捷性指标。 |
+| 推荐 | [OpenAI and Cisco introduce Shirudo](https://openai.com/index/introducing-shirudo) | 展示「Agent 生成缓解 + 人工批准 + eBPF 热加载」这一防御工作流，对安全与基础设施团队有直接参考价值。 |
+| 推荐 | [Gemini API 文件切片](https://blog.google/innovation-and-ai/technology/developers-tools/file-slicing-controls/) | 含可运行的「先文本浏览、再高清单页」示例，是控制多模态 token 成本的实用起点。 |
+| 推荐 | [DeepMind 量子算法与形式化验证](https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/) | 把多 Agent 协作和 Lean 证明写成可复用的科研循环；论文原文见 [arXiv:2611.09822](https://arxiv.org/abs/2611.09822)（投稿日期为 11-16）。 |
+| 延伸 | [Working with AI](https://www.anthropic.com/research/working-with-ai) | 用企业访谈解释「编码变快之后，组织该把人放到哪些瓶颈上」。 |
+| 延伸 | [Neuron Basis for Interpretability, Part 2](https://alignment.anthropic.com/2026/neuron-basis-applications/) | 对 unlearning 是否真正删除知识给出可检验的实验观察。 |
+| 延伸 | [Strands Decider v2](https://strandsagents.com/blog/introducing-strands-decider-v2/) | 适合评估是否把 Agent 循环里的高频判断从 LLM 换成校准过的决策模型。 |
+
+### 来源清单
+
+- 检索范围：2026-11-23 00:00:00 到 2026-11-23 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, help.openai.com, deploymentsafety.openai.com, claude.com, anthropic.com, alignment.anthropic.com, code.claude.com, blog.google, deepmind.google, arxiv.org, aws.amazon.com, aboutamazon.com, strandsagents.com, github.com, huggingface.co, investor.nvidia.com, newsroom.amd.com, techcrunch.com
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | Introducing Claude Ship | 2026-11-23 | https://claude.com/resources/articles/introducing-claude-ship |
+| 官方发布 | Zero data retention with Enterprise Frontier Safeguards is now in beta | 2026-11-23 | https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards |
+| 官方文档 | The enterprise guide to securing coding agents | 2026-11-23 | https://claude.com/resources/articles/enterprise-guide-to-securing-coding-agents |
+| 官方研究 | Working with AI | 2026-11-23 | https://www.anthropic.com/research/working-with-ai |
+| 官方研究 | Returning to the Neuron Basis for Interpretability, Part 2 | 2026-11-23 | https://alignment.anthropic.com/2026/neuron-basis-applications/ |
+| 官方 changelog | Claude Code changelog v2.1.331 | 2026-11-23 | https://code.claude.com/docs/en/changelog |
+| 官方发布 | ChatGPT release notes：GPT-6.2, now in the chat tab | 2026-11-23 | https://help.openai.com/en/articles/6825453-chatgpt-release-notes |
+| 官方安全卡 | GPT-6.2 in ChatGPT System Card | 2026-11-23 | https://deploymentsafety.openai.com/gpt-6-2-chatgpt |
+| 官方开源发布 | OpenAI and Cisco introduce Shirudo | 2026-11-23 | https://openai.com/index/introducing-shirudo |
+| 官方发布 | Introducing file slicing controls in the Gemini API | 2026-11-23 | https://blog.google/innovation-and-ai/technology/developers-tools/file-slicing-controls/ |
+| 官方研究博客 | Finding faster quantum algorithms with agents and formal verification | 2026-11-23 | https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/ |
+| 论文原文（非当日投稿） | Discovering formally verified quantum programs with AI | 2026-11-16（arXiv 页面日期；博客于 11-23 发布） | https://arxiv.org/abs/2611.09822 |
+| 官方产品更新 | A more tailored Google Search that’s uniquely yours | 2026-11-23 | https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/ |
+| 官方 GA | AWS WAF automated discovery and protection for LLM, MCP, and A2A endpoints | 2026-11-23 | https://aws.amazon.com/about-aws/whats-new/2026/11/waf-ai-endpoint-discovery-protection/ |
+| 官方 GA | Announcing metal size for Amazon EC2 G7 instances | 2026-11-23 | https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-g7-metal-size/ |
+| 官方公司公告 | Amazon to purchase Decart's AI optimization technology | 2026-11-23 | https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization |
+| 官方开源发布 | Introducing Strands Decider v2 | 2026-11-23 | https://strandsagents.com/blog/introducing-strands-decider-v2/ |
+| 开源发布 | Langfuse v4.84.0 | 2026-11-23 | https://github.com/langfuse/langfuse/releases/tag/v4.84.0 |
+| 开源发布 | langchain-skills v0.4.0 | 2026-11-23（11-22 23:23:36Z，中国时间 07:23） | https://github.com/langchain-ai/langchain-skills/releases/tag/v0.4.0 |
+| 开源预发布 | openclaw 2026.11.10-beta.2 | 2026-11-23 | https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.2 |
+| 开源预发布 | Hermes Agent canary.20261123T065600Z-v0.23.3 | 2026-11-23 | https://github.com/NousResearch/hermes-agent/releases/tag/canary.20261123T065600Z-v0.23.3 |
+| 开源发布 | Meet IVE, the handyman of your document pipeline | 2026-11-23 | https://huggingface.co/blog/QuentinJG/ive-release |
+| 官方新闻稿 | NVIDIA Board Reinstates Jensen Huang as President, CEO and Board Director | 2026-11-23 | https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Board-Reinstates-Jensen-Huang-as-President-CEO-and-Board-Director/ |
+| 官方新闻稿 | Microsoft Running Workload Validation with AMD Helios Rackscale Solution | 2026-11-23 | https://newsroom.amd.com/news/microsoft-running-workload-validation-amd-helios-rackscale-solution/ |
+| 技术媒体 | Anthropic launches Claude Ship（交叉验证，以官方博客为准） | 2026-11-23 14:05 PST（已进入 11-24 中国时间，仅作交叉验证） | https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/ |
+
 ## 2026-11-22
 
 ### 今日总览

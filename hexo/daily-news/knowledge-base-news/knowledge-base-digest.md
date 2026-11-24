@@ -2,6 +2,101 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-23
+
+### 今日总览
+
+**一句话结论**：当天可核验新文主要集中在阿里云、腾讯云开发者社区和掘金，主线有三条——阿里云云原生在掘金发布开源多 Agent 协作系统 AgentTeams 1.2.8，把六种 Harness 与 Loop 推进放进同一工作台；社区继续消化混元 Hy4 / Hy4 flash（权重分别于 11-20、11-18 开放）的量化部署与许可条款；另有一篇讨论 spec 腐烂与「从代码现算现状」的长文，以及针对腾讯 11-17 开源 LoopForge 的掘金解读。其余八家官方技术博客未见可核验新文；Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI 四个专项无命中，Loop Engineering 有明确信号。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 已覆盖阿里巴巴（102.alibaba.com、阿里云开发者社区、阿里中间件博客 jm.taobao.org、语雀·阿里技术干货）、腾讯（腾讯技术工程/Tencent_TEG、腾讯云+社区、AlloyTeam、腾讯大讲堂）、字节跳动（字节跳动技术团队站点、掘金厂队/社区文章）、百度（FEX、EFE、百度开发者中心）、美团技术团队、京东（京东云开发者社区、凹凸实验室）、滴滴开源平台、网易云知乎组织页、360 博客、有赞技术团队；并在上述固定来源内完成 Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering 五组专项检索。 |
+| 核心趋势 | 1）官方/厂队更新很少，但阿里云云原生把「多 Harness 编进同一支团队、看清执行过程、降低上下文消耗」写成了可安装的开源工作台。2）混元权重开源已过数日，11-23 的社区文重点转向 8 卡/量化档位、许可证第 10 节，以及「能跑」和「跑得舒服」的差别，而不是重复发布会口径。3）工程讨论从单模型能力转到协作秩序与信任边界：LoopForge 解读强调把交付 SOP 变成可执行循环；子智能体安全文提醒工具参数要标来源；spec 长文则反对把手写现状文档当成唯一真相。 |
+| 可直接关注 | [AgentTeams 1.2.8](https://juejin.cn/post/7711253113009258522) 的六种 Harness、Loop 暂停/恢复和任务验收流程；[LoopForge 解读](https://juejin.cn/post/7710761549636665379)（开源自 11-17，须回对腾讯原文与仓库）；[Spec 必然腐烂](https://cloud.tencent.com/developer/article/2791004) 里「手写现状会腐烂、业务约束应另账保存」的区分；[Hy4 flash 量化部署](https://cloud.tencent.com/developer/article/2791652) 的 Strata 三档与 8GB 起步误区；[TencentDB Agent × WorkBuddy](https://cloud.tencent.com/developer/article/2791589) 的四级操作分权。前两篇对 Loop Engineering 最直接，后几篇分别适合做知识治理、本地部署和数据库 Agent 权限设计的人。 |
+| 专项检索结论 | **Loop Engineering**：固定来源内有可核验信号。阿里云云原生 11-23 官方文写明 TeamHarness 对 Loop 推进的暂停/恢复，以及 OpenClaw、QwenPaw、Hermes、DeepSeek Harness、OpenHuman、Codex 六种运行时编入同一团队；掘金另有一篇 11-23 社区长文解读腾讯 LoopForge（原发 11-17）。**Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI**：按目标日在固定来源内检索，均未发现可核验的官方或厂队新文。腾讯云一篇 spec 长文提到从代码机械重建现状、aider Repository map，只是相邻概念，不能记成 Code Graph 工具更新。 |
+| 未发现更新 | 102.alibaba.com 当日检索无命中且首页抓取返回 500；阿里中间件博客 jm.taobao.org、语雀·阿里技术干货未见可核验新文。腾讯技术工程/Tencent_TEG、AlloyTeam、腾讯大讲堂未见当天可引用原文。字节跳动技术团队 techblog.toutiao.com 检索无命中、站点抓取为 404。百度 FEX / EFE / 开发者中心、美团技术团队（站内最新可核验为 11-18 EMNLP 精选）、京东云开发者与凹凸实验室、滴滴开源平台、网易云知乎组织页、360 博客、有赞技术团队（站内可见文章仍为 2022 年及更早）均未见 2026-11-23 可核验技术更新。已排除：Qoder CN 19.9 元促销、万小智套餐/建站系列、云服务器价格文等营销内容；七牛「周一上线」周报（同文见于腾讯云与掘金，属一周汇编而非原发技术文）；页面正文无法核验的《上下文 Lab》与正文在页面上截断的 Hy4 flash 私有化讨论文。 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 多 Agent 协作与 Harness | [AgentTeams 1.2.8：全新工作台与新官网，一键开启团队协作](https://juejin.cn/post/7711253113009258522) | 2026-11-23 | 掘金 / 阿里云云原生（作者柳遵飞/翼严） | 高。这是当天固定来源里少数可确认的厂队发文：AgentTeams 被写成开源多 Agent 协作系统，Manager 协调、Leader 拆解与验收、Worker 执行，消息走 Matrix 房间，模型与 MCP 由 Higress AI 网关管理。1.2.6 增加语音输入、可选的 Worker 原生会话追踪（文中写明可关联 QwenPaw、Hermes）以及 TeamHarness 对任务派发和 Loop 推进的暂停/恢复；1.2.7 把 OpenClaw、QwenPaw、Hermes、DeepSeek Harness、OpenHuman、Codex 六种运行时统一到共享镜像（文称 1.2.8 时六种均已支持）；1.2.8 则更新工作台，并称围绕派发、验收和共享文件降低协作耗时与上下文消耗，但未给出可核对的量化数字。官网与安装入口为 agentteams.cloud。适合做多 Agent 工作台和 Harness 接入的人对照自己的分工与可观测性，它是产品更新说明，不是评测报告。 |
+| Loop 工程 / 团队交付资产 | [LoopForge：把团队的交付经验变成可执行的工程资产](https://juejin.cn/post/7710761549636665379) | 2026-11-23（页面日期；所评述的腾讯开源发文为 2026-11-17） | 掘金（作者 Cosolar，社区解读，非腾讯厂队原文） | 中高。文章从腾讯开源的 LoopForge 出发，把问题从「单机 Agent 写得快」改写成团队现场的断流、上下文搬运、质量门禁、盯单和重复踩坑。文中转述腾讯原文的内部口径：已服务 20+ 业务、单月自动完成 200+ 需求与日常单据，这些数字须回对 11-17 公众号原文和 GitHub 仓库，不能当成独立核验结果。作者把演进写成五步：云端 7×24 工作区、共享会话、工程级 SOP 与硬门禁、定时调度与 Issue 自动化、以及工程级 RSI 自进化；并引用官网口号「把团队的交付方式，变成 Agent 能跑的循环」。这是目标日对相邻日开源项目的长文解读，不是当天官方新发布。 |
+| 规格与知识治理 | [Spec 必然腐烂？两阵营之争与知识光谱的第三条路](https://cloud.tencent.com/developer/article/2791004) | 2026-11-23 09:48:41（Asia/Shanghai） | 腾讯云开发者社区（作者闵锐，英湃科技/原 Thoughtworks） | 高。长文把 2026 年围绕 spec 的争论拆成两派：一派主张 spec 是唯一权威、代码可随时从规格重建；另一派主张手写现状不可信，真相只能从代码库机械重建。作者的判断是：手写的技术现状必然腐烂，业务资产并不必然，机制对了就不必然。文中提醒过时 spec 比没有 spec 更危险，因为 Agent 会「自信地用错前提」；同时也指出纯仓库地图保得住结构，保不住「为什么这样设计」和业务红线。这是社区架构讨论文，不是某一家大厂的官方框架发布，也不等于 Code Graph 产品更新。 |
+| 开源模型本地部署 | [8GB 显存跑 220B 大模型？Hy4 flash 量化部署与云端方案对比](https://cloud.tencent.com/developer/article/2791652) | 2026-11-23 18:25:04（Asia/Shanghai；Hy4 flash 权重开放为 11-18） | 腾讯云开发者社区（作者 gavin1024） | 中高。整理混元 Hy4 flash 的部署门槛：文称总参数约 220B、含 64B Engram、每 token 激活 12B、上下文 1M，并强调显存按总参估算、不能按 12B 激活去估。社区推理框架 Strata 0.2.18 给出 SQ-64/SQ-96/SQ-128 三档量化，最低口径为 8GB 显存加 64GB 内存，磁盘占用分别约 129.61、157.16、181.23 GB；文中的速度表来自 Strata/官方参考峰值（如 RTX PRO 6000 最高 240 tok/s），需在自有硬件上复测。作者明确写「8GB 起步不等于流畅」，低档靠系统内存兜底，长上下文容易卡顿。后半部分转向腾讯云 HAI 云端方案，带有产品推荐色彩，主价值仍在量化档位与许可提醒。 |
+| 数据库 Agent 权限设计 | [TencentDB Agent × WorkBuddy ：召唤你的AI DBA专家团](https://cloud.tencent.com/developer/article/2791589) | 2026-11-23 17:37:54（Asia/Shanghai） | 腾讯云开发者社区 / 腾讯云 NoSQL 技术 | 中高。腾讯云数据库团队的产品实践文，把 TencentDB Agent 写成首个数据库 Agent 平台：感知→分析→决策→执行，底层用 DBbrain 的指标与慢日志，并称覆盖 1600+ OpenAPI、14 款腾讯云数据库。工程上更值得看的是权限模型：Agent 跑在客户 VPC 内，业务数据不出域，只有脱敏后的推理请求出网；操作分四级，L1/L2 只读与分析可自动执行，L3 变更需二次确认，L4 的 DDL、DROP 等不代执行；权限与 CAM 对齐并全程留痕。文中「故障定位从小时级缩短到分钟级」是产品口径，没有给出可复核的评测集。适合设计运维 Agent 的人看分权，而不是把它当成已验证的效果报告。 |
+| 模型上架与调用成本 | [阿里云最新 DeepSeek-V4.1-Flash 剖析：定位、特征、实际能力、落地场景与计费深度解析](https://developer.aliyun.com/article/1787779) | 2026-11-23 | 阿里云开发者社区 | 中。社区对百炼上架模型 `deepseek-v4.1-flash` 的拆解，不是 DeepSeek 官方技术报告。文中转述：552B MoE、非对称 Causal Encoder-Decoder（输入激活 8B、输出激活 16B）、1M 上下文与 384K 最大输出、原生视觉；并给出一组官方对比基准，称其在编程、终端和自动化类任务上优于 V4-Pro，知识问答略弱。对工程最有用的是计费细节：缓存命中与未命中可差约 50 倍；百炼闲时是东八区 22:00–次日 8:00，与 DeepSeek 官方「工作日上午、下午两段高峰」不是同一套口径，排产脚本必须按调用入口分开配置。文内夹有云产品推广链接，读取时以模型能力与计费表为准。 |
+| 知识库双层维护 | [个人知识库 Wiki 接云平台：bl text chat 编译本地互链层，bl knowledge 自动生成检索与问答服务](https://developer.aliyun.com/article/1787890) | 2026-11-23 | 阿里云开发者社区 | 中。实践文用阿里云百炼 CLI 把「给人读的互链 Wiki」和「给机器查的检索服务」分成两层：`raw/` 只读、`wiki/` 由模型维护，规则写在可移植的 `AGENTS.md`。作者用二十五份虚构骑行笔记做对照：加不加规则文件，质量指标接近，差的是链接写法、日志和健康页是否稳定；还记录了一个静默失败——规则同时要求英文文件名和中文双括号链接，结果 129 条互链按文件名解析命中为零。另一条可复用的规矩是：页面上的手改如果只留在编译产物里，从源重编后会无痕迹消失，必须写回原始资料。这是个人规模实验，作者自己划清不适合数千份文档。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 多运行时 Agent 工作台 | [AgentTeams 1.2.8](https://juejin.cn/post/7711253113009258522) | 六种 Harness 统一镜像；Loop 暂停/恢复；执行瀑布图与人工收件箱；任务验收与上下文精简 | 要在同一套系统里编排不同编码 Agent、并保留人工审批的团队 |
+| 团队级 Loop 交付系统 | [LoopForge 解读](https://juejin.cn/post/7710761549636665379) | 云端工作区、共享上下文、SOP 门禁、定时调度、RSI 自进化；须回对 11-17 原文和仓库 | 关心「把交付方式变成可执行循环」而不是只提高单次写码速度的人 |
+| 开源权重部署与许可 | [Hy4 flash 量化部署](https://cloud.tencent.com/developer/article/2791652)、[Hy4 正式版下载与商用注意](https://cloud.tencent.com/developer/article/2791524) | 激活参数≠显存占用；Strata 三档与 8GB 误区；Tencent Hy License 1.0 对超门槛 MaaS 的书面许可要求（Hy4 正式版开源自 11-20） | 评估自托管还是调 API、以及商用合规的人 |
+| 图像生成工作流 | [Qwen-Image-2.1 模型手册](https://developer.aliyun.com/article/1787782) | 7B 模型同时做生成、编辑、抠图；原生透明与 2K；Turbo 0.1 元/张、Pro 0.25 元/张（华北2/全球原价）；RPM 120 | 做电商主图、批量改稿或评估图像 API 成本的人 |
+| 企业知识库维护 | [百炼 CLI 双层知识库](https://developer.aliyun.com/article/1787890) | 人读编译层与机查检索层分离；规则文件买的是可预期；互链契约与手改回源 | 用 AI 维护内部 Wiki、又要挂检索问答的人 |
+| 语音实时 API | [GPT-Live-1.1 上线 API，支持低价待机](https://cloud.tencent.com/developer/article/2790761) | 全双工语音；WebRTC 5–60 秒空闲阈值；活跃/待机每分钟 0.05/0.02 美元（官方口径，事件本身为 11-20） | 做语音客服接入、需要把插话与账单分开验收的人 |
+
+### 工程实践归纳
+
+**总体判断**：Loop Engineering 在固定来源内有两处可核验信号（阿里云 AgentTeams 的 Harness/Loop 控制，以及掘金对腾讯 LoopForge 的 11-23 解读）；Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI 未发现可核验更新。其余有工程启发的，是数据库 Agent 的四级分权、子智能体工具参数的来源标记，以及把 SSH 私钥当资产来盘点，而不是把社区转述的安全事件本身当成完整复盘。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Loop Engineering / Harness | AgentTeams 1.2.8 把六种 Harness 放进同一团队，并支持 Loop 推进的暂停、恢复和人工事项收件箱；LoopForge 解读则把云端工作区、SOP 门禁和自进化写成交付资产。后者评述的是 11-17 的开源，须回对原文。 | 先把「运行时不一样」和「交付秩序要统一」分开设计：模型/CLI 可以换，任务状态、验收门禁和人工接管点应该是系统能力。RSI 或自动改 SOP 时，审阅权仍要留在人手里。 |
+| Langfuse | 固定来源内未发现 11-23 可核验新文。 | 无当日可复用更新。 |
+| LangChain / LangGraph | 固定来源内未发现 11-23 可核验新文。前一日阿里云社区的培训 RAG 教程不重复列入。 | 无当日可复用更新。 |
+| Code Graph | 固定来源内未发现以代码知识图谱、Tree-sitter 或 Code Graph 工具为主题的 11-23 新文。spec 长文提到从代码机械重建现状和 repo map，只是相邻讨论。 | 不要把「仓库地图/从代码现算接口与调用链」直接记成 Code Graph 产品动态；若要做现状对账，先明确对的是结构还是业务意图。 |
+| Spring Alibaba AI | 在阿里云开发者社区、102.alibaba.com、语雀与掘金按目标日检索，未发现 spring-ai-alibaba / java2ai 的可核验新文。 | 无当日可复用更新。 |
+| 运维 Agent 分权 | TencentDB Agent 把只读分析、变更确认和高危不代执行写成四级策略，并与 CAM、VPC、审计对齐。 | 先列出工具能不能写、能不能出网、失败要不要人确认，再谈「Agent 会不会修库」；高危 DDL 只出方案、不代执行，是可直接抄的默认策略。 |
+| 子智能体信任链 | 腾讯云社区 11-23 文以 11-22 的 Show HN 游戏为引子，讨论子智能体往往只拿到被裁剪的摘要，工具参数缺少来源标记。作者写明未读该游戏源码，分析来自同类框架的通用观察。 | 对写操作、出站和命令执行做最小权限；给参数打上 user/tool/model 来源，不要让工具返回值无隔离地再进入下一轮指令。 |
+| 密钥与运行时 | 同日社区文讨论把 SSH 私钥当资产盘点（事件据该文称由安全客在 11-23 披露，入侵路径等公开信息不足，不能当成完整事故复盘）；另一篇讨论 JDK 24 消除 synchronized pinning 后，ThreadLocal、锁竞争和监控盲区仍在（由头是当日 InfoQ 中文报道）。 | 私钥要有台账、轮换和最小存放面，盘点结果不等于入侵检测。虚拟线程可以上，但应先审计 ThreadLocal 和锁，再换监控，不要以为 pinning 消失就等于生产无事。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [AgentTeams 1.2.8](https://juejin.cn/post/7711253113009258522) | 当天唯一可确认的阿里云云原生厂队更新，直接对应 Loop / Harness 工程实践，且给出了可安装入口。 |
+| 推荐 | [LoopForge 解读](https://juejin.cn/post/7710761549636665379) | 把团队交付里的脏活写成可执行循环，是 Loop Engineering 专项在固定来源内最完整的中文长文；须标注原发于 11-17。 |
+| 推荐 | [Spec 必然腐烂](https://cloud.tencent.com/developer/article/2791004) | 对「规格驱动」和「从代码重建」两派都有硬观点，适合做 Agent 知识治理的人先分清资产类型。 |
+| 推荐 | [Hy4 flash 量化部署](https://cloud.tencent.com/developer/article/2791652) | 把「8GB 能跑」拆成档位、内存和速度预期，比重复开源新闻更有动手价值。 |
+| 延伸 | [TencentDB Agent × WorkBuddy](https://cloud.tencent.com/developer/article/2791589) | 看数据库 Agent 如何把自动执行和人工确认分成四级，不必接受文中的效果宣传数字。 |
+| 延伸 | [一个让你当 LLM 子智能体的游戏](https://cloud.tencent.com/developer/article/2791240) | 对工具调用链上「只信上游摘要」写得清楚，且作者标明了推断边界。 |
+| 延伸 | [从 Super-agent 与 Octop 看多 Agent 架构的收敛](https://juejin.cn/post/7710853195053350947) | 11-23 刊出的社区解读，原述对象为 11-16 的腾讯程序员文章和 10-31 的 DeepSeek Super-agent 探索，适合对照 AgentTeams / LoopForge，不能当成当日官方新发布。 |
+
+### 来源清单
+
+- 检索范围：2026-11-23 00:00:00 到 2026-11-23 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里巴巴、腾讯、字节跳动、百度、美团、京东、滴滴、网易、360、有赞，以及五组工程框架专项
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 阿里巴巴 | 掘金 / 阿里云云原生 | 技术文章 | AgentTeams 1.2.8：全新工作台与新官网，一键开启团队协作 | 2026-11-23 | https://juejin.cn/post/7711253113009258522 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 阿里云最新 DeepSeek-V4.1-Flash 剖析 | 2026-11-23 | https://developer.aliyun.com/article/1787779 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 阿里云最新 Qwen-Image-2.1 模型手册 | 2026-11-23 | https://developer.aliyun.com/article/1787782 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | 个人知识库 Wiki 接云平台：bl text chat 与 bl knowledge | 2026-11-23 | https://developer.aliyun.com/article/1787890 |
+| 腾讯 | 腾讯云开发者社区 / 腾讯云 NoSQL 技术 | 技术文章 | TencentDB Agent × WorkBuddy ：召唤你的AI DBA专家团 | 2026-11-23 17:37:54 | https://cloud.tencent.com/developer/article/2791589 |
+| 腾讯 | 腾讯云开发者社区 | 技术文章 | 8GB 显存跑 220B 大模型？Hy4 flash 量化部署与云端方案对比 | 2026-11-23 18:25:04（Hy4 flash 开源自 11-18） | https://cloud.tencent.com/developer/article/2791652 |
+| 腾讯 | 腾讯云开发者社区 | 技术文章 | 腾讯混元 Hy4 正式开源：770B 权重怎么下载部署、商用要注意什么 | 2026-11-23 16:55:52（正式版开源自 11-20） | https://cloud.tencent.com/developer/article/2791524 |
+| 腾讯 | 腾讯云开发者社区 | 技术文章 | Spec 必然腐烂？两阵营之争与知识光谱的第三条路 | 2026-11-23 09:48:41 | https://cloud.tencent.com/developer/article/2791004 |
+| 腾讯 | 腾讯云开发者社区 | 技术文章 | GPT-Live-1.1 上线 API，支持低价待机 | 2026-11-23 00:13:59（API 公告为 11-20） | https://cloud.tencent.com/developer/article/2790761 |
+| 腾讯 | 腾讯云开发者社区 | 技术文章 | 一个让你当 LLM 子智能体的游戏，戳破了 Agent 安全的哪层窗户纸 | 2026-11-23 13:49:22（所议 Show HN 为 11-22） | https://cloud.tencent.com/developer/article/2791240 |
+| 腾讯 | 腾讯云开发者社区 | 技术文章 | 4224 把 SSH 私钥被拿走，问题不在防火墙，在没人把密钥当资产 | 2026-11-23 15:50:22（文称事件由安全客当日披露） | https://cloud.tencent.com/developer/article/2791448 |
+| 腾讯 | 腾讯云开发者社区 | 技术文章 | 虚拟线程不是免费的，JDK 24 之后生产环境先栽在这三处 | 2026-11-23 16:50:54（由头为当日 InfoQ 中文报道） | https://cloud.tencent.com/developer/article/2791516 |
+| 腾讯 | 掘金 | 技术文章 | LoopForge：把团队的交付经验变成可执行的工程资产 | 2026-11-23（原开源发文 2026-11-17） | https://juejin.cn/post/7710761549636665379 |
+| 腾讯 | 掘金 | 技术文章 | 概率性计算的系统工程：从 Super-agent 与 Octop 看多 Agent 架构的收敛 | 2026-11-23（所评述原文为 11-16 / 10-31） | https://juejin.cn/post/7710853195053350947 |
+| 字节跳动 | 字节跳动技术团队 / 掘金厂队同步 | 无新增 | 官方博客无检索命中，未见字节厂队当日可核验新文 | - | - |
+| 百度 | FEX / EFE / 百度开发者中心 | 无新增 | 未见 2026-11-23 可核验技术更新 | - | - |
+| 美团 | 美团技术团队 | 无新增 | 站内最新可核验文章为 11-18 EMNLP 精选，本日不重复列出 | - | https://tech.meituan.com/2026/11/18/Papers-EMNLP-2026.html |
+| 京东 | 京东云开发者 / 凹凸实验室 | 无新增 | 未见 2026-11-23 可核验技术更新 | - | - |
+| 滴滴 | 滴滴开源平台 | 无新增 | 首页为既有开源项目介绍，未见当日新文 | - | https://didi.github.io/ |
+| 网易 | 网易传媒技术团队知乎组织页 | 无新增 | 未见 2026-11-23 可核验技术更新 | - | - |
+| 360 | 360 核心安全技术博客 | 无新增 | 未见 2026-11-23 可核验技术更新 | - | - |
+| 有赞 | 有赞技术团队 | 无新增 | 站内可见文章仍为 2022 年及更早 | - | https://tech.youzan.com/ |
+
 ## 2026-11-22
 
 ### 今日总览
