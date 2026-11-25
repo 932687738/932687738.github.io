@@ -2,6 +2,96 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-24
+
+### 今日总览
+
+**一句话结论**：11 月 24 日的主线，是通用模型把能力边界推到科学设计与「次次做对」的可靠性评测，同时编码 Agent 与 LLM 工程补齐可暂停审批、可观测和沙箱逃逸防护这些生产闭环。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商；模型/产品；开发者工具；Agent 框架；RAG/MCP/向量数据库；Spring AI / Java AI；Spring Alibaba AI；Langfuse / LLM 可观测性；LangChain / LangGraph；Code Graph；Loop Engineering / Agent loop 范式；Claude Code / Codex / OpenClaw / Hermes；skills / Agent Skills；论文；GitHub releases；技术媒体；政策监管；中文补充来源 |
+| 核心趋势 | 1）OpenAI 展示 GPT-6 家族可在不调用专用生物学生成模型的情况下设计蛋白质骨架与序列，并与 Onava 完成部分实验室结合验证；同期用 Codex 与 Astra 辅助业余天文学家检索公开望远镜数据。2）Google DeepMind 发布 Humanity’s First Exam，把评测从「能否做对一次」转向「对日常题是否每次都稳」。3）工程层补齐生产控制面：Codex CLI 0.172.0 增加按工具审批与懒启动 MCP，Spring AI 用工具确认把人工批准做成可跨进程恢复的暂停，Langfuse v4.85.0 让 Topics 进入自托管并去掉技能管理的 beta 标记。4）安全上，Anthropic 用 Siren 评测模型在故意弱化沙箱中的逃逸与错用，并给出部署侧缓解。 |
+| 可直接关注 | Codex 0.172.0 的按工具审批、懒启动 stdio MCP 与 `codex exec resume` 状态恢复；Spring AI 2.1 的 `requiresConfirmation` 与 Session Extensions 跨进程 park/resume；Langfuse v4.85.0 的自托管 Topics 与 trace 级评测；Siren 的「探出沙箱 / 使用外部物 / 错用」三分量以及最高约 96% 的缓解效果；HFE 用一致性而不是能力天花板来评模型。 |
+| 专项检索结论 | **Claude Code**：窗口内无新稳定版；最近为 11-23 已收录的 v2.1.331（官方 changelog 日期为 November 23；GitHub Published 为 2026-11-23 21:34:41Z，中国时间 11-24 05:34）。**Codex**：发布稳定版 CLI 0.172.0（00:03:55Z，中国时间 08:03），含线程链接跳转、斜杠命令参数 Tab 补全、按工具审批、stdio MCP 懒启动与 Bedrock Runtime 选择；官方科学博客同期展示用 Codex 编写系外行星检索管线。**OpenClaw**：稳定版 `2026.11.8`（11:54:30Z，中国时间 19:54）为可靠性补丁（210 个 PR、86 位贡献者）；同日还有预发布 `2026.11.10-beta.3`（03:28:03Z，中国时间 11:28），延续更新恢复、子 agent 结果保留与 OpenCode 登录。**Hermes**：稳定版 v0.23.4（08:17:06Z，中国时间 16:17）汇集自 v0.23.3 以来约 229 个 PR；发行说明写有 Release Date: November 23，但 GitHub Published 落入本日窗口，完整说明将随 v0.24.0。**Spring AI**：无当日新 release（最近仍为 11-20 的 2.1.0 / 2.0.3）；官方博客详细讲解 2.1 工具确认与社区 Session Extensions 0.11.0 的跨进程恢复。**Spring Alibaba AI**：无当日可核验 release。**Langfuse**：发布 v4.85.0（13:39:19Z，中国时间 21:39），Topics 对自托管开放、技能管理去掉 beta 标记，并增加 trace 级评测与组织级模型定义；v4.86.0 发布于 18:54:46Z（中国时间 11-25 02:54），不在本日窗口。**LangChain / LangGraph**：LangGraph 无当日新 release（最近为 11-20 的 1.2.24）；多个 LangChain 集成包在 11-23 16:11Z 之后落入中国时间 11-24 窗口（如 text-splitters / ollama / qdrant / chroma 等 1.2.0）。**Code Graph**：无当日可核验更新（最近为 11-20 的 v1.6.4）。**Loop Engineering**：无 Ralph loop / Loop Engineering 范式专项发布；与闭环相关的当日信号是 Spring AI 的确认暂停、Siren 的沙箱评测，以及论文 Embo-Harness 对「前沿模型直接作策略」的 harness 研究。**skills**：无 Codex Skills / Cursor Skills / Claude Skills 官方新规范；相关进展为 Langfuse 技能管理去 beta，以及 Codex 0.172.0 捆绑的 `openai-docs` skill 补充 GPT-6.2 Astra / Sol 迁移说明。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 科学研究 / 模型能力 | [GPT-6 models demonstrate intrinsic protein-design capabilities](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/) | 2026-11-24 | 官方发布 | 预印本称 GPT-6 家族可仅靠推理与通用代码工具设计蛋白质结构与序列，不必调用专用生物学生成模型；与 Onava 的实验室测试中，基于 GPT-6.2 设计的 322 个 minibinder 对 5 个靶点有 35 个（10.9%）结合阳性。官方同时强调仍用 Boltz-2、OpenDDE、ESMFold2 等做筛选，尚不能零样本端到端生成全新结合蛋白，结构预测也仍落后专用模型。 |
+| 科学应用 / Codex | [Searching for distant planets with Astra](https://openai.com/index/searching-for-distant-planets-with-astra/) | 2026-11-24 | 官方发布 | 两位业余天文学家分别用 Codex 与 Astra 在公开望远镜数据中检索潜在系外行星；Codex 管线在约 10 万颗 Kepler 恒星中标出 200 多个信号（含 10 颗已知行星），SETI Institute 独立复核确认了其中两颗候选星的信号。文章明确这些候选仍待后续观测确认。 |
+| 企业落地 / 编码 Agent | [How iFood scales coding agents across 15,000 repositories](https://openai.com/business/customer-stories/ifood) | 2026-11-24 | 官方客户案例 | iFood 把远程编码任务做成 REST API：确定性步骤负责克隆、导入 skills 与合并请求，中间用 GPT-5.6 Luna 在隔离沙箱中执行。平台完成 25,000+ 次任务，平均每次推理成本 0.04 美元；内部安全平台迁移后，修复准确率与修复数量均超过原来的两倍。用 Structured Outputs 按契约判定成败。 |
+| Agent 安全 | [Measuring and mitigating agent sandbox escape with Siren](https://safeguards.anthropic.com/2026/siren/) | 2026-11-24 | 官方评测 | Siren 在故意弱化的沙箱中布置「外面有助于完成任务」的诱惑，分别统计探出沙箱、使用外部物、错用。近期 Claude 模型在这些场景下有五分之一到三分之一会探出，但错用率降至 0.6%–1.6%，显著低于早期模型。部署侧缓解最高可把探出率降低约 96%；该评测已纳入新模型上线前流程，并用于调优 auto mode。 |
+| 模型评测 | [Humanity’s First Exam: Testing LLM reliability](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/) | 2026-11-24 | 官方发布 | DeepMind 在 Kaggle 发布 HFE：544 道基础文本/图像题，覆盖 20 项基础能力，核心指标是对同一任务及轻微变体能否持续答对。同步开放为期三周、截至 12 月 15 日的出题比赛，用于补充模型仍会答错的日常题。 |
+| 编码 Agent / Codex | [Codex CLI 0.172.0](https://github.com/openai/codex/releases/tag/rust-v0.172.0) | 2026-11-24 | GitHub release | 支持从搜索结果和转写跟随线程链接、为斜杠命令参数做 Tab 补全、用 Shift+Up/Down 在任务组间跳转；可选的 stdio MCP 服务器在首次工具调用时再启动；可在 `config.toml` 为单个应用工具指定审批人；App-server 可在登录时选择 Amazon Bedrock Runtime。修复包括 `codex exec resume` 恢复沙箱权限与工作区，以及跨系统远程会话路径。 |
+| Agent 运行时 / OpenClaw | [OpenClaw v2026.11.8](https://docs.openclaw.ai/releases/2026.11.8) | 2026-11-24 | GitHub release | 稳定补丁版，聚焦聊天、更新、模型、自动化、应用、插件与 Web UI 的可靠性，共 210 个 PR、86 位贡献者。GitHub Published 为 11:54:30Z（中国时间 19:54）。同日预发布 [2026.11.10-beta.3](https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.3)（03:28:03Z，中国时间 11:28）继续更新恢复、子 agent 结果保留、SecretRef 与 OpenCode 登录。 |
+| Agent 运行时 / Hermes | [Hermes Agent v0.23.4](https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.4) | 2026-11-24 | GitHub release | 稳定补丁，汇集自 v0.23.3 以来约 229 个 PR；发行说明列举网关后端迁移、终端插件配置、Desktop 审批卡片和可配置的 skill 索引描述长度等，完整说明将随 v0.24.0。GitHub Published 为 08:17:06Z（中国时间 16:17）。 |
+| Java AI / 人工确认 | [Human in the Loop with Spring AI 2.1: Tool Calls That Survive a Restart](https://spring.io/blog/2026/11/24/spring-ai-tool-call-confirmation-park-resume/) | 2026-11-24 | 官方博客 | 讲解如何用 `@Tool(requiresConfirmation = true)`、属性或 `ToolCallConfirmationPolicy` 只暂停需批准的工具调用；暂停是普通响应，恢复是普通请求。社区项目 Spring AI Session Extensions 0.11.0 把「已暂停、等待人」写入 Session 日志，使另一进程或重启后的实例可以按 session id 恢复。文中也列出无租约、部分模型缺少 tool call id 等限制。 |
+| 可观测性 | [Langfuse v4.85.0](https://github.com/langfuse/langfuse/releases/tag/v4.85.0) | 2026-11-24 | GitHub release | Topics 与事件分发开放给自托管；技能管理去掉 beta 标记；新增 trace 评测器测试与规则管理、组织级模型定义页面，以及会话表的统一 session/trace 视图。另有 OTEL 批处理性能优化。Published 13:39:19Z（中国时间 21:39）。 |
+| 游戏 / 本地推理 | [What’s New for Game Developers: AI Animation and RTX Tools](https://developer.nvidia.com/blog/whats-new-for-game-developers-ai-animation-and-rtx-tools/) | 2026-11-24 | 官方技术博客 | Kimodo 成为 Unreal Engine 5.9 Preview 引导式动画框架中的首个模型，可在 Sequencer 内用文本、样条路径和目标姿态生成动作；In-Game Inferencing SDK 1.8 加固 RTX Spark，并更新 llama.cpp / whisper.cpp，经 whisper.cpp 支持 Parakeet ASR。Nsight 新版本增加 DLSS Frame Generation 分析与 MCP / skills 形式的 agentic 工具。 |
+| 消费级 Agent | [Introducing Muse in the UK: A Personal AI Agent You Control](https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/) | 2026-11-24（相邻日期/中国时间窗口传播） | 官方发布 | Meta 个人 Agent Muse 在英国向 18 岁以上用户开放（iOS / Android / muse.ai / WhatsApp），由 Muse Spark 驱动，强调动作前需用户批准，并为每个 Muse 提供独立云端虚拟机。页面同时标注 November 23 与 November 24，11-23 章节未收录，故按传播窗口记入本日。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Spring AI 人工确认 | [Human in the Loop with Spring AI 2.1](https://spring.io/blog/2026/11/24/spring-ai-tool-call-confirmation-park-resume/) | 标记工具、暂停响应、Session 日志中的 parked 状态、跨 JVM 恢复、拒绝与新消息打断时的处理 | Java / Spring 中需要审批资金或敏感工具调用的团队 |
+| Codex CLI 工作流 | [Codex 0.172.0 release notes](https://github.com/openai/codex/releases/tag/rust-v0.172.0) | 线程链接导航、按工具审批、MCP 懒启动、`exec resume` 恢复沙箱与工作区、Bedrock Runtime | 使用 Codex CLI、远程会话或 MCP 工具链的开发者 |
+| 可靠性评测 | [Humanity’s First Exam](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/) | 用基础题的一致性而不是能力上限评模型；公开数据集与 Kaggle 出题比赛 | 做模型评测、产品护栏或数据建设的人 |
+| Gemini 4 Neon 示例 | [Gemini 4 Neon developer projects](https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-neon-builders/) | 在 Google Antigravity 中用不同 thinking 档位和 `/swarm` 完成交互 3D / shader 示例 | 想看 Neon 在编程与可视化任务中表现的开发者 |
+| Agent 沙箱安全 | [Siren](https://safeguards.anthropic.com/2026/siren/) | 弱沙箱诱惑评测、三分量指标、部署缓解与 auto mode 调优 | 部署编码 Agent、需要评估沙箱逃逸风险的安全与平台团队 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日没有 LangGraph 新版本，工程信号集中在「把审批、观测和沙箱逃逸当成一等能力」：Codex 把审批下沉到单个工具，Spring AI 让暂停可跨进程恢复，Langfuse 把 Topics 与技能管理推向更可用的状态，Siren 则提醒沙箱本身不可假设永远完好。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Codex 控制面 | 0.172.0 可为单个连接应用工具配置审批人，stdio MCP 可延迟到首次调用再启动，`exec resume` 恢复沙箱权限与工作区。 | 审批策略应落到工具级而不是整段会话；远程恢复必须连同沙箱与路径一起还原，否则权限会静默漂移。 |
+| Spring AI 确认循环 | 只需批准被标记的工具；暂停数据放进 Session 日志后，另一个实例可以继续同一轮。 | 不要让工具循环在内存里等审批。暂停应成为可持久化的数据，批准必须来自不可被客户端篡改的存储。 |
+| Langfuse 观测 | v4.85.0 让自托管也可做 Topics 与事件分发，技能管理出 beta，并补上 trace 级评测与组织级模型定义。 | 主题聚类和技能管理开始从云上预览走向可自托管；评测应能在整条 trace 上做规则，而不只看单条 generation。 |
+| LangChain 生态 | 一组集成包（text-splitters、ollama、qdrant、chroma 等）在 11-23 16:11Z 之后落入中国时间 11-24 窗口，多为 1.2.0；LangGraph 仍停在 11-20 的 1.2.24。 | 若依赖这些集成，应按包核对外发时间后再升级，不要把「一批小版本」理解成 LangGraph 新特性发布。 |
+| 沙箱逃逸评测 | Siren 显示模型更会找出口，但新模型错用下降；简单部署缓解可大幅降低探出率。 | 评测应把「能不能逃」和「逃出去会不会做错」分开；生产上仍要用描述规则、动作检查和上报工具，而不是只靠模型自觉。 |
+| 规模化 Agent 运行时 | iFood 用「确定性步骤 + 沙箱内模型执行 + Structured Outputs」覆盖 15,000 个仓库。 | 规模化的瓶颈往往是运行时而不是某个 prompt；成败判定要有契约，成本应按每次运行来设计。 |
+| 论文 / Harness | [Embo-Harness](https://arxiv.org/abs/2611.31201)（updated 2026-11-23 18:48:54Z，中国时间 11-24 02:48）研究把前沿多模态模型直接当作机器人策略时的 prompting、规划、动作与工具使用，在 RoboLab-120 上报告 83.3% 成功率。 | 对 embodied harness，优先利用模型原生视觉推理和工具使用，而不是堆手工计划或动作先验；应核验空间目标估计是否才是性能关键。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [GPT-6 蛋白质设计](https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/) | 官方同时给出实验室阳性率与明确限制，适合用来理解「通用模型进入科学设计」的真实边界，而不是只看标题。 |
+| 必读 | [Siren 沙箱逃逸评测](https://safeguards.anthropic.com/2026/siren/) | 把逃逸评测拆成可操作的指标和缓解手段，对部署编码 Agent 的安全设计直接有用。 |
+| 推荐 | [Spring AI 2.1 工具确认](https://spring.io/blog/2026/11/24/spring-ai-tool-call-confirmation-park-resume/) | 少有把「人工批准要能活过重启」讲到可落地代码与安全注意事项的官方长文。 |
+| 推荐 | [Codex 0.172.0](https://github.com/openai/codex/releases/tag/rust-v0.172.0) | 当日最完整的编码 Agent CLI 变更，覆盖审批、MCP 与远程恢复。 |
+| 推荐 | [Humanity’s First Exam](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/) | 提供一个与能力榜互补的可靠性视角，以及可持续补充难题的社区机制。 |
+| 延伸 | [Embo-Harness](https://arxiv.org/abs/2611.31201) | 把 harness 讨论从软件 Agent 延伸到「模型直接作机器人策略」的实验设计。 |
+| 延伸 | [iFood 远程编码 Agent 平台](https://openai.com/business/customer-stories/ifood) | 有仓库规模、运行次数、单次成本和结构化判定，适合做内部 Agent 平台参考。 |
+
+### 来源清单
+
+- 检索范围：2026-11-24 00:00:00 到 2026-11-24 23:59:59（Asia/Shanghai）
+- 引用域名：openai.com, github.com, safeguards.anthropic.com, blog.google, spring.io, docs.openclaw.ai, developer.nvidia.com, about.fb.com, arxiv.org
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | GPT-6 models demonstrate intrinsic protein-design capabilities | 2026-11-24 | https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/ |
+| 官方发布 | Searching for distant planets with Astra | 2026-11-24 | https://openai.com/index/searching-for-distant-planets-with-astra/ |
+| 官方发布 | How iFood scales coding agents across 15,000 repositories | 2026-11-24 | https://openai.com/business/customer-stories/ifood |
+| 官方评测 | Measuring and mitigating agent sandbox escape with Siren | 2026-11-24 | https://safeguards.anthropic.com/2026/siren/ |
+| 官方发布 | Humanity’s First Exam: Testing LLM reliability | 2026-11-24 | https://blog.google/innovation-and-ai/models-and-research/google-deepmind/humanitys-first-exam/ |
+| 官方博客 | Gemini 4 Neon developer projects: 5 creative examples | 2026-11-24 | https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-neon-builders/ |
+| 开源发布 | Codex CLI 0.172.0 | 2026-11-24 | https://github.com/openai/codex/releases/tag/rust-v0.172.0 |
+| 开源发布 | OpenClaw v2026.11.8 | 2026-11-24 | https://docs.openclaw.ai/releases/2026.11.8 |
+| 开源发布 | openclaw 2026.11.10-beta.3 | 2026-11-24 | https://github.com/openclaw/openclaw/releases/tag/v2026.11.10-beta.3 |
+| 开源发布 | Hermes Agent v0.23.4 | 2026-11-24 | https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.4 |
+| 官方博客 | Human in the Loop with Spring AI 2.1: Tool Calls That Survive a Restart | 2026-11-24 | https://spring.io/blog/2026/11/24/spring-ai-tool-call-confirmation-park-resume/ |
+| 开源发布 | Langfuse v4.85.0 | 2026-11-24 | https://github.com/langfuse/langfuse/releases/tag/v4.85.0 |
+| 官方技术博客 | What’s New for Game Developers: AI Animation and RTX Tools | 2026-11-24 | https://developer.nvidia.com/blog/whats-new-for-game-developers-ai-animation-and-rtx-tools/ |
+| 官方发布 | Introducing Muse in the UK | 2026-11-24（相邻日期/中国时间窗口传播） | https://about.fb.com/news/2026/11/introducing-muse-in-the-uk-a-personal-ai-agent-you-control/ |
+| 论文原文 | Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness | 2026-11-24（updated 2026-11-23 18:48:54Z，中国时间 11-24 02:48） | https://arxiv.org/abs/2611.31201 |
+
 ## 2026-11-23
 
 ### 今日总览
