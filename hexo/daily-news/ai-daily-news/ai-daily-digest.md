@@ -2,6 +2,85 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-25
+
+### 今日总览
+
+**一句话结论**：11 月 25 日的主线，是科学与基础设施两边同时把「生成」交给模型、把「核验」交给工具或生产流量：Google 用 Mass Spec Skills 让轻量模型追上前沿检索精度，Anthropic 把 Messages API 迁到 Rust 时用线上影子流量当 verifier，编码 Agent 则补上 MCP skills 与可观测性。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商；模型/产品；开发者工具；Agent 框架；RAG/MCP/向量数据库；Spring AI / Java AI；Spring Alibaba AI；Langfuse / LLM 可观测性；LangChain / LangGraph；Code Graph；Loop Engineering / Agent loop 范式；Claude Code / Codex / OpenClaw / Hermes；skills / Agent Skills；论文；GitHub releases；技术媒体；政策监管；中文补充来源 |
+| 核心趋势 | 1）Google DeepMind 发布面向 Antigravity 的 Mass Spec Skills：无工具时从谱图直接推结构准确率低于 4%，加上领域技能与公共库查询后，轻量 Gemini 3.8 Flash 与前沿模型都达到约 97% 的精确鉴定。2）Anthropic 公开 Messages API 从 Python 迁到 Rust 的工程：Claude 约一周写出核心请求路径，但信任来自把生产 API 本身做成 verifier，最终 CPU 每请求约降 70%、中位首 token 时延约降 20%。3）Claude Code 2.1.332 让 MCP 服务器可以附带 skills，OpenClaw 2026.11.10 补上 Deep Research、本地 Knowledge 与浏览器人工接管，Langfuse v4.86.0 把交互式 MCP 图表和 trace 级评测带进自托管窗口。4）评测上，Google Research 用多智能体仿真给「用户转述后的社会推理」提供可核验标签，并开源框架与 2 万余条样本。 |
+| 可直接关注 | Mass Spec Skills 的「领域 skill + 既有化学工具」组合，而不是让模型直接读峰列表；Anthropic 迁移中的影子对比、非确定性回复回放，以及把人放到 outer loop 写判定规则；Claude Code 的 `server:skill` 与 `PreSkillShellCommand`；Langfuse v4.86.0 的 MCP App 内联图和 trace 级 transcript 评测；OpenClaw Deep Research / Browser handoff。 |
+| 专项检索结论 | **Claude Code**：发布稳定版 v2.1.332（Published 2026-11-25T01:32:14Z，中国时间 09:32）。新增 MCP 服务器 skills（beta，`/` 菜单显示为 `server:skill`）、可在加载时拒绝 skill/命令内联 shell 的 `PreSkillShellCommand` hook，以及大量压缩、挂起、本地/SSE MCP 与 VS Code 稳定性修复。**Codex**：窗口内无新稳定版（最近仍为 11-24 的 CLI 0.172.0）。有预发布 `rust-v0.174.0-alpha.5`（Published 2026-11-25T01:11:35Z，中国时间 09:11），发行说明只有版本号、无公开变更列表，不作为生产升级依据。**OpenClaw**：同日发布稳定版 `2026.11.9`（00:47:32Z，中国时间 08:47；13 commits / 15 PRs）和 `2026.11.10`（05:42:47Z，中国时间 13:42）。11.10 发行说明重点为默认可用的 Deep Research、opt-in 的本地 Markdown Knowledge，以及遇到登录/2FA/验证码时由人接管浏览器标签页的 Browser handoff。**Hermes**：窗口内无新稳定版（最近仍为 11-24 的 v0.23.4）；有 canary `canary.20261125T064800Z-v0.23.4`，不作为稳定升级。**Spring AI**：无当日新 release 或新官方博客（最近仍为 11-20 的 2.1.0 / 2.0.3）。**Spring Alibaba AI**：无当日可核验 release。**Langfuse**：v4.86.0 Published 2026-11-24T18:54:46Z（中国时间 11-25 02:54），落入本日窗口；新增交互式 MCP App 内联图表、trace 级 transcript 评测 UI，Topics 在 Langfuse Cloud 进入公开 beta。**LangChain / LangGraph**：LangGraph 核心库无本日窗口内新 release（最近仍为 11-20 的 1.2.24）。`langchain-core==1.8.5`、`langchain-anthropic==1.7.13`、`langgraph-cli==0.4.44` 的 GitHub Published 分别为 21:52:39Z / 21:41:59Z / 20:52:34Z，对应中国时间 11-26 05:52 / 05:41 / 04:52，不在本日窗口。**Code Graph**：无当日可核验更新。**Loop Engineering**：无 Ralph loop / `loop-init` 等范式工具链专项发布。最接近的官方信号是 Anthropic 将生产 Messages API 做成 verifier、自动派发 agent 修影子差异，并逐步把工程师移到 outer loop。Mass Spec Skills 则是「触发 → 专用工具 → 证据摆出给人审」的领域闭环示例。**skills / Agent Skills**：Claude Code 2.1.332 将 MCP 服务器 skills 以 beta 接入 `/` 菜单；Google 同日在 Antigravity 上提供 Mass Spec Skills 插件。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 科学 Agent / Skills | [From spectrum to structure: Identifying molecules with Mass Spec Skills for Google Antigravity](https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/) | 2026-11-25 | 官方发布 | 用既有质谱工具和公共化学库补上模型算不准的精确质量与碎裂模拟。评测 100 个已建档化合物时，无网络/无技能准确率低于 4%，加上 Mass Spec Skills 后 Gemini 3.8 Flash 与 Gemini 4 Argon/Carbon 都达到约 97%。对未入数据库的新分子，系统只能给出公式与被碎片支持的结构线索，仍需化学家完成鉴定。 |
+| 生产迁移 / Verifier | [Migrating our Messages API to Rust](https://www.anthropic.com/research/migrating-api-to-rust) | 2026-11-25 | 官方发布 | 流量约增 1,800 倍后把 Messages API 从 Python 迁到 Rust。测试集约 98% 通过时，生产影子流量一度只有约四分之一输入对齐。做法是只跑一次模型并把输出回放到 Rust、精确对比模型调用前后各阶段，再自动派 agent 修差异。最终在不停机、不冻结功能开发的前提下，每请求 CPU 约降 70%，中位首 token 时延约降 20%。 |
+| 社会推理评测 | [Verifiable Social Reasoning for LLM Assistants](https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/) | 2026-11-25 | 官方发布 | 用多智能体仿真给隐藏动机提供可核验标签，再让被测助手只通过用户的主观转述做推断。12 个模型上的主要发现是：助手视角明显弱于「旁观完整事件」；容易跟着用户的偏见走；多轮对话不一定更准，因为会锚定先前表述。框架与 2 万余条样本已开源。 |
+| AI 编程 | [Claude Code v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332) | 2026-11-25 | 开源发布 | MCP 服务器可随工具分发 skills（`server:skill`）；`PreSkillShellCommand` 可在 skill 加载时拒绝内联 shell。同时修复命名管道挂起、自动压缩失败、hook/MCP 刷屏导致的冻结，以及 Remote Control 状态误报等生产问题。 |
+| Agent 平台 | [OpenClaw v2026.11.10](https://docs.openclaw.ai/releases/2026.11.10) | 2026-11-25 | 开源发布 | Deep Research 默认可在对话中做多源或本地文档调研，并在来源冲突时并排引用、标出未决问题；Knowledge 把会话/会议/文件变成可浏览的本地 Markdown 库（需把 memory 槽位切到 `knowledge`）；Browser handoff 允许在登录墙或验证码处暂停自动点击、由人接管后继续。同日更早的 `2026.11.9` 规模较小。 |
+| LLM 可观测性 | [Langfuse v4.86.0](https://github.com/langfuse/langfuse/releases/tag/v4.86.0) | 2026-11-25（Published 2026-11-24T18:54:46Z，中国时间 02:54） | 开源发布 | MCP 图表改为可交互的 MCP App（由 Next.js 提供）；新增 trace 级 transcript 评测界面；Topics 在 Langfuse Cloud 进入公开 beta。11-24 日报已预先指出该发布时间不在前一日窗口。 |
+| 开发者工具 | [Copilot code review billing will default to the organization](https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization/) | 2026-11-25 | 官方发布 | 自 2026-12-30 起，未保存计费选择、且成员已有 Copilot 许可的 code review，将默认记到仓库所属组织（需已启用 AI Credits 付费用量）。已显式选择 Member 或 Organization 的设置不变；想维持成员额度需在此日期前选 Member。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 领域 Skills | [Mass Spec Skills for Google Antigravity](https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/) | 技能负责跑既有工具和库检索，模型负责综合证据；新分子只能给部分结构线索 | 做科学/专业 Agent、准备把领域工作流做成 skill 而不是纯提示词的人 |
+| 生产 Verifier | [Migrating our Messages API to Rust](https://www.anthropic.com/research/migrating-api-to-rust) | 影子流量、非确定性输出回放、测试通过率与线上对齐率的差距、outer loop | 要把编码 Agent 用在存活服务迁移、需要设计可自动判定对错的人 |
+| MCP Skills | [Claude Code v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332) | `server:skill`、`PreSkillShellCommand`、技能加载时的 shell 拦截 | 给 MCP 服务器附带操作手册、并担心技能脚本被执行的团队 |
+| 可观测性 | [Langfuse v4.86.0](https://github.com/langfuse/langfuse/releases/tag/v4.86.0) | 交互式 MCP 图表、trace 级 transcript eval、Topics 公开 beta | 自托管 Langfuse、需要在 MCP 客户端里看图或做整段对话评测的人 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日工程信号不在 LangChain 核心库，而在「把核验做成系统」：生产影子对比、领域工具闭环、MCP skills 的加载期拦截，以及 trace 级评测。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Loop / Verifier | Anthropic 发现测试集高通过率不能代表生产对齐，于是用线上流量当 verifier，并让 agent 自动修差异。 | 存活系统迁移要先解决「何为正确」；非确定性模型输出必须固定后再比协议层，否则差异无法归因。 |
+| 领域 Skills | Mass Spec Skills 证明轻量模型配上可靠工具后，鉴定准确率可以追平前沿模型；只开放上网写临时脚本则明显更脆。 | 专业任务优先封装经过验证的工具链，而不是给模型一个浏览器让它现场写分析代码。 |
+| MCP / Skills | Claude Code 允许 MCP 服务器随工具分发 skills，同时用 hook 在加载阶段否决内联 shell。 | 技能更新应跟服务器走，但加载时必须有拒绝通道，不能把「会做事」当成「允许执行」。 |
+| 可观测性 | Langfuse v4.86.0 把图表送进 MCP App，并提供 trace 级 transcript 评测。 | 评测要从单条生成扩展到整段对话/轨迹；图表最好直接出现在 Agent 工作面里，而不是只在独立控制台。 |
+| 社会推理 | Google 的评测表明，助手若只听用户转述，会放大偏见，多轮也不一定纠正。 | 做咨询/支持类助手时，要允许并鼓励澄清提问，避免把用户的怀疑直接写成结论。 |
+| LangChain / LangGraph | 核心库在本日 00:00–23:59（Asia/Shanghai）窗口内无新 release；若干集成包发布时间已进入 11-26 凌晨。 | 不要按 UTC 日历日直接收录 GitHub release；跨时区时以 Published 时刻换算后再写入对应日期。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Migrating our Messages API to Rust](https://www.anthropic.com/research/migrating-api-to-rust) | 把 generator–verifier 缺口、影子流量和 outer loop 写得很清楚，是把编码 Agent 用于生产迁移的完整案例，而不只是「模型写得很快」。 |
+| 必读 | [Mass Spec Skills for Google Antigravity](https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/) | 有对照实验：无工具、只上网、加上领域技能三条路线，能直接用来讨论何时该写 skill。 |
+| 推荐 | [Claude Code v2.1.332](https://github.com/anthropics/claude-code/releases/tag/v2.1.332) | MCP skills 与加载期 hook 会改变技能分发方式；稳定性修复也覆盖常见的压缩和 MCP 挂起问题。 |
+| 推荐 | [Langfuse v4.86.0](https://github.com/langfuse/langfuse/releases/tag/v4.86.0) | 自托管和 MCP 工作流可直接评估是否升级；Topics 与 transcript eval 都已落到产品界面。 |
+| 延伸 | [Verifiable Social Reasoning for LLM Assistants](https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/) | 为「听用户讲故事」这类难评任务提供可复用的仿真思路，并开源数据和框架。 |
+| 延伸 | [RECAP: Training Long-horizon LLM Agents with Context Compaction](https://arxiv.org/abs/2611.31258) | 用行为畸变目标联合训练摘要与后续动作；在 Qwen3.5-4B 上相对仅用任务奖励的 RL，BrowseComp-plus / SWE-bench Verified 绝对提升 4.6% / 4.3%。论文出现在 Hugging Face Daily Papers 2026-11-25。 |
+| 延伸 | [Lazy Agents Answer Against Their Own Beliefs](https://arxiv.org/abs/2611.32884) | 提出 RLVB：用模拟器可计算后验奖励「证据不足就继续、足够再提交」。九个设定平均提升 17.1%。文内日期为 November 24，属相邻日期/中国时间窗口传播。 |
+
+### 来源清单
+
+- 检索范围：2026-11-25 00:00:00 到 2026-11-25 23:59:59（Asia/Shanghai）
+- 引用域名：deepmind.google, research.google, anthropic.com, github.com, docs.openclaw.ai, github.blog, arxiv.org, huggingface.co
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方发布 | From spectrum to structure: Identifying molecules with Mass Spec Skills for Google Antigravity | 2026-11-25 | https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/ |
+| 官方发布 | Migrating our Messages API to Rust | 2026-11-25 | https://www.anthropic.com/research/migrating-api-to-rust |
+| 官方发布 | Verifiable Social Reasoning for LLM Assistants | 2026-11-25 | https://research.google/blog/verifiable-social-reasoning-for-llm-assistants/ |
+| 开源发布 | Claude Code v2.1.332 | 2026-11-25 | https://github.com/anthropics/claude-code/releases/tag/v2.1.332 |
+| 开源发布 | OpenClaw v2026.11.10 | 2026-11-25 | https://docs.openclaw.ai/releases/2026.11.10 |
+| 开源发布 | OpenClaw v2026.11.9 | 2026-11-25 | https://github.com/openclaw/openclaw/releases/tag/v2026.11.9 |
+| 开源发布 | Langfuse v4.86.0 | 2026-11-25（Published 2026-11-24T18:54:46Z，中国时间 02:54） | https://github.com/langfuse/langfuse/releases/tag/v4.86.0 |
+| 官方发布 | Copilot code review billing will default to the organization | 2026-11-25 | https://github.blog/changelog/2026-11-25-copilot-code-review-billing-will-default-to-the-organization/ |
+| 开源发布 | Codex CLI 0.174.0-alpha.5（预发布，无公开变更列表） | 2026-11-25 | https://github.com/openai/codex/releases/tag/rust-v0.174.0-alpha.5 |
+| 论文原文 | RECAP: Training Long-horizon LLM Agents with Context Compaction | 2026-11-25（Hugging Face Daily Papers；相邻日期/中国时间窗口传播） | https://arxiv.org/abs/2611.31258 |
+| 论文原文 | Lazy Agents Answer Against Their Own Beliefs | 2026-11-24（相邻日期/中国时间窗口传播） | https://arxiv.org/abs/2611.32884 |
+
 ## 2026-11-24
 
 ### 今日总览
