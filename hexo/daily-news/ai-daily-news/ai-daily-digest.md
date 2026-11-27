@@ -2,6 +2,91 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-26
+
+### 今日总览
+
+**一句话结论**：11 月 26 日的主线，是把类型化判定、企业授权和可运维接口补进 Agent 生产闭环：Spring AI 把是否/选型/打分做成带概率的 `DecisionModel`，AWS 用企业 IdP 为 MCP 签发短时令牌，NVIDIA 用寄存器回收加速 RTX Blackwell 上的 NVFP4 attention，同时 LangChain / LangGraph 与 Langfuse 继续补齐流式一致性、自定义客户端、部署 URL 和网关护栏。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商；模型/产品；开发者工具；Agent 框架；RAG/MCP/向量数据库；Spring AI / Java AI；Spring Alibaba AI；Langfuse / LLM 可观测性；LangChain / LangGraph；Code Graph；Loop Engineering / Agent loop 范式；Claude Code / Codex / OpenClaw / Hermes；skills / Agent Skills；论文；GitHub releases；技术媒体；政策监管；中文补充来源 |
+| 核心趋势 | 1）工程控制面继续产品化：Spring AI 2.1 用 `DecisionModel` 给出带概率的是/否、选项和分数，可直接做护栏与评判；AWS 用 Enterprise-Managed Authorization（ID-JAG）让企业 IdP 授权 Agent 访问 AWS MCP Server，再换成绑定 IAM 角色的短时 OAuth token。2）推理侧，NVIDIA 介绍在 RTX Blackwell（SM120）上用寄存器回收优化 NVFP4 attention，内核延迟最高约 1.64×，世界模型端到端推理延迟最高降 15.34%，并称核心优化已合入 FlashInfer 主分支。3）开源工程以补丁和可运维接口为主：langchain-core 修复流式 message id 不一致，langchain-anthropic 接受自定义 HTTP/SDK 客户端，langgraph-cli 在部署列表 JSON 中给出 URL，Langfuse v4.87.0 为 AI Gateway 增加护栏管理与预算重置。 |
+| 可直接关注 | Spring AI `DecisionModel` 与 `d1-omni:600m`、OpenAI Decisions API、System One/Jev 三条提供方；AWS EMA 与现有 IAM 最小权限的组合方式；langchain-core 1.8.5 对 OpenAI Responses 流式 id 的修复；langgraph-cli 0.4.44 的 `deploy list --json` `url` 字段与仅用 API key 部署 BYOC；Langfuse v4.87.0 的网关护栏、预算重置和组织级模型 Public API；NVFP4 attention 在 RTX PRO 6000 Blackwell 上的内核与端到端数字。 |
+| 专项检索结论 | **Claude Code**：窗口内无新稳定版；最近为已属 11-25 窗口的 v2.1.332（GitHub Published 2026-11-25T01:32:14Z，中国时间 11-25 09:32）。**Codex**：窗口内无新稳定版（最近稳定版仍为 11-24 已收录的 0.172.0）；预发布 `rust-v0.174.0-alpha.7` Published 2026-11-26T04:36:47Z（中国时间 12:36），发行说明几乎只有版本号，不作为稳定更新收录。**OpenClaw**：发布 extended-stable / LTS 线 `2026.10.34`（Published 2026-11-26T01:37:32Z，中国时间 09:37），从 10 月底代码回端口关键安全与可靠性修复，并支持选择 GPT-6.2 Astra / Sol；发行说明写明当时最新版是已在 11-25 窗口发布的 `2026.11.10`（Published 2026-11-25T05:42:47Z，中国时间 13:42），本日不重记。**Hermes**：窗口内无新稳定版或 canary；最近 canary 为 11-25 窗口的 `canary.20261125T064800Z-v0.23.4`（Published 2026-11-25T08:02:20Z，中国时间 16:02），最近稳定版仍为 11-24 的 v0.23.4。**Spring AI**：无当日新 GitHub release（最近仍为 11-20 的 2.1.0 / 2.0.3）；官方博客发布 DecisionModel 长文（官方日期 November 26, 2026；RSS pubDate 为 2026-11-26 00:00:00 GMT，属日期精度而非精确到秒的 Published 时刻）。**Spring Alibaba AI**：未发现可核验的新 release 或官方长文。**Langfuse**：发布 v4.87.0（Published 2026-11-26T11:22:05Z，中国时间 19:22）；v4.86.0 已计入 11-25，v4.88.0 Published 2026-11-26T16:50:41Z（中国时间 11-27 00:50）不在本日窗口。**LangChain / LangGraph**：langchain-core==1.8.5、langchain-anthropic==1.7.13、langgraph-cli==0.4.44 的 GitHub Published 均落在 11-25 16:00Z 之后，按中国时间计入 11-26。**Code Graph**：未发现可核验重大更新（最近仍为 11-20 的 v1.6.4）。**Loop Engineering**：addyosmani.com、cobusgreyling/loop-engineering、Hermes loop 文档等固定来源未发现可核验新发布；与闭环相关的当日信号是 Spring AI 的类型化护栏/评判、Langfuse AI Gateway 护栏，以及 AWS 把企业授权嵌入 MCP 调用链。Hugging Face Papers 把 *Letting Models Manage Their Own Context*（arXiv:2611.34147）列在 11-26，但 arXiv published/submitted 为 2026-11-25T10:44:04Z（中国时间 11-25 18:44），属 11-25 窗口，本日不重记。**skills**：无 Codex Skills / Claude Skills / Cursor Skills 官方新规范。DeepMind Mass Spec Skills 官方页面日期为 November 25, 2026，已写入 11-25 日报，本日不重记。政策监管方面，未发现可核验且发布时间落在本日窗口的重大官方文本。中文补充来源中，量子位等对 MAGI-2 等产品的报道需回溯官方：Sand.ai 官方介绍将 MAGI-2 发布日写在 11-24，不升格为本日事件。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 基础设施 | [How to Optimize NVFP4 Attention on NVIDIA RTX Blackwell Through Register Recycling](https://developer.nvidia.com/blog/how-to-optimize-nvfp4-attention-on-nvidia-rtx-blackwell-through-register-recycling/) | 2026-11-26（Published 2026-11-25T19:30:00Z，中国时间 11-26 03:30；updated 2026-11-25T19:55:58Z，中国时间 03:55） | 官方技术博客 | 针对 RTX PRO 6000 Blackwell（SM120）上 NVFP4 attention 的寄存器回收调度：softmax 量化后复用 score 寄存器，使下一 tile 的 QK 计算与当前 tile 剩余工作重叠，无需第二份完整 score buffer。文称内核延迟最高约 1.64×；Reactor 将其接入世界模型生产服务后，端到端推理延迟最高降 15.34%（OmniDreams moving、2,045 frames / 256 chunks，BF16 155.92 → NVFP4 132.00，按未四舍五入测量值计算）。核心优化已合入 FlashInfer 主分支。 |
+| RAG / MCP | [Secure agentic access to AWS with Enterprise-Managed Authorization](https://aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization/) | 2026-11-26（Published 2026-11-25T14:00:37-07:00，合 2026-11-25T21:00:37Z，中国时间 11-26 05:00） | 官方技术博客 | AWS Sign-In 支持用 ID-JAG 做 Enterprise-Managed Authorization：员工先在企业 IdP（文中以 Okta 为例）登录 AI 应用，IdP 按策略签发短时断言，应用再向 AWS Sign-In 换成绑定 IAM 角色的 OAuth access token，从而访问 AWS MCP Server，不必再让用户管理长期凭证或走一遍单独同意流。权限仍由该角色的 IAM 策略约束。适合把「登录了 Claude 不等于能访问 AWS」拆成两个信任域来管。 |
+| Spring AI | [Decision Models in Spring AI 2.1: Yes, No, and How Sure](https://spring.io/blog/2026/11/26/spring-ai-decision-models-guardrails-judges/) | 2026-11-26（官方标注 November 26, 2026；RSS pubDate 为 2026-11-26 00:00:00 GMT，日期精度） | 官方博客 | Spring AI 2.1 把 `DecisionModel` 做成不同于 Chat Model 的抽象：输入是带预定义结果的 `YesNoQuestion` / `ChoiceQuestion` / `ScoreQuestion`，输出是带概率的类型化答案，可直接进入控制流、护栏 Advisor 和评判重试。提供方包括 Ollama（默认 `d1-omni:600m`）、OpenAI Decisions API 和 System One/TypeSafe Jev。文章转述一项独立研究称 Jev 在此类任务上距前沿聊天模型不到 3 个点，中位延迟 0.15 秒、成本不到 1%，但在数学、代码和逻辑推导上落后；文中演示的本地跑数是三问中位 29 ms、单问 16 ms。明确提醒决策模型会错，自残等高风险场景要以实际模型校准阈值（示例里本地模型将一条自残消息标为 `REVIEW`、概率 0.68）。无当日新 release。 |
+| Langfuse | [Langfuse v4.87.0](https://github.com/langfuse/langfuse/releases/tag/v4.87.0) | 2026-11-26（Published 2026-11-26T11:22:05Z，中国时间 19:22） | 开源发布 | 相对 v4.86.0：AI Gateway 可按最后一轮是否命中护栏选择阻断或记录，并增加护栏管理界面、用户/API key 预算重置；新增组织级模型 Public API，项目级模型 API 将组织模型视为只读；MCP 观察工具接受数值型 metadata 过滤，工具 schema 改为 JSON Schema draft 2020-12，并停止宣称 list-changed 以免监听流不结束。Topics、评测和 trace 视图也有多处稳定性修复。v4.88.0 已在窗口结束后发布，不计入本日。 |
+| OpenClaw | [openclaw 2026.10.34](https://github.com/openclaw/openclaw/releases/tag/v2026.10.34) | 2026-11-26（Published 2026-11-26T01:37:32Z，中国时间 09:37） | 开源发布 | 面向 Gateway 的 extended-stable（当前 LTS 等价线）：以 2026.10.33 为底回端口关键安全、可靠性和性能修复，并补上 GPT-6.2 Astra / Sol 选择与系统提示缓存。高亮还包括更新失败后的 Gateway 恢复、子任务结果提前交付、Telegram / Discord 通道恢复，以及频道 token 改写入 secret store 而非明文配置。明确这是 Gateway / npm 插件补丁，不附带原生应用，也不发布到 ClawHub；若配置仍指定已退役的 MiniMax M2，需改到受支持模型。当日最新功能线仍是 11-25 已发布的 `2026.11.10`。 |
+| LangChain | [langchain-core==1.8.5](https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.8.5) | 2026-11-26（Published 2026-11-25T21:52:39Z，中国时间 11-26 05:52） | 开源发布 | 相对 1.8.4：后续流式 chunk（含合成的最后一块）复用提供方在首个 chunk 给出的 message id，避免 OpenAI Responses API 上后期 chunk 与最终消息 id 不一致、转录里同一条消息出现两次。同时澄清了 v3 runtime 警告和受支持的 streaming event API。v2 protocol 路径未改。 |
+| LangChain | [langchain-anthropic==1.7.13](https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.13) | 2026-11-26（Published 2026-11-25T21:41:59Z，中国时间 11-26 05:41） | 开源发布 | 相对 1.7.12：`ChatAnthropic` 可接受自定义 `http_client` / `http_async_client` 或完整 `client` / `async_client`。只换 HTTP 客户端时，仍由集成层用 API key、base URL、超时、重试和头信息构造 SDK 客户端；传入完整 SDK 客户端时则直接使用该对象，上述连接配置以及代理、LangSmith gateway headers 不再走集成层。文档示例涵盖 Bedrock、Vertex、Foundry 等平台客户端变体。依赖 `langchain-core>=1.8.4`。 |
+| LangGraph | [langgraph-cli==0.4.44](https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.44) | 2026-11-26（Published 2026-11-25T20:52:34Z，中国时间 11-26 04:52） | 开源发布 | 相对 0.4.43：`langgraph deploy list --json` 的每条记录增加 `url`（无 URL 时为 `null`），脚本可直接读取 Agent Server 地址；支持仅用 API key 部署到 BYOC 数据面；更新部署时不再发送空的 secrets 列表。官方 CLI 文档已同步该字段，要求 `langgraph-cli>=0.4.44`。 |
+| 论文 | [Maco-RL: Scaling Agent Capabilities with Mixed-Task Reinforcement Learning](https://arxiv.org/abs/2611.34703) | 2026-11-26（arXiv published/submitted 2026-11-25T16:59:27Z，中国时间 11-26 00:59） | 论文原文 | 用额度调度和 Tri-Buffer Sampling 做混合任务 RL，避免为每个域单独训练再蒸馏。文称 Qwen3.5-27B 总分从 43.6 升到 54.2，持续扩展后再到 60.1，达到 Qwen3.8-27B 的前沿水平，并再把后者向外推 5.7；评测覆盖 SWE-bench Verified、Terminal-Bench 2.1、Claw-Anything、FeatureBench 1.1、Claw-Eval。附录也记录了 Claw 任务上多次崩溃后靠格式惩罚和更严的工具调用终止才稳住训练，适合当作混合任务 RL 的工程对照，而不是只看总分。 |
+| 论文 | [ZeroHero: Training Small Language Agents from Scratch](https://arxiv.org/abs/2611.34635) | 2026-11-26（arXiv published/submitted 2026-11-25T16:20:13Z，中国时间 11-26 00:20） | 论文原文 | 用大模型成功轨迹预训练不到 5,000 万参数的小语言 Agent，再用 PPO 和推理对齐做后训练。评测环境为 Crafter、WebShop 和 Alfworld-Dialogue：WebShop 上接近专家，Crafter 训练 rollout 和 Alfworld-Dialogue 留出任务上超过各自的示范专家。对「专用 Agent 是否必须先有一个通用大模型」给出一个可核对的小模型基线，但范围仍是受控的多步语言环境。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Java / 护栏与评判 | [Decision Models in Spring AI 2.1](https://spring.io/blog/2026/11/26/spring-ai-decision-models-guardrails-judges/) | `DecisionPrompt` 一次提出多个命名问题；结果用 `getYesNo` / `getChoice` / `getScore` 读取；护栏 Advisor 按概率走 `PASS` / `BLOCK` / `REVIEW` / `SUPPORT`；不确定样本再交给聊天模型评判。官方文也指向更早的 Thomas Vitale 配套文章，后者不是本日新发。 | Spring AI 2.1 用户，以及要把分类/路由/评判做成类型化 API 的 Java 团队 |
+| MCP 企业授权 | [AWS EMA for AWS MCP Server](https://aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization/) | 企业 IdP 签发 ID-JAG → AWS Sign-In 验断言并经 STS 建角色会话 → 短时 OAuth token；强调最小权限 IAM，以及认证与授权分属不同信任域。文中有 Okta 配置步骤。 | 要把编码/办公 Agent 接入 AWS MCP、又必须走现有 SSO 的安全与平台团队 |
+| 推理优化 | [NVFP4 attention register recycling](https://developer.nvidia.com/blog/how-to-optimize-nvfp4-attention-on-nvidia-rtx-blackwell-through-register-recycling/) | 解释 SM120 不能直接套用数据中心 FlashAttention 流水线，以及如何在寄存器层重叠 QK 与 softmax；给出内核和端到端两套数字，并指向 FlashInfer 主分支。 | 在 RTX Blackwell 上部署世界模型或长序列推理的工程团队 |
+| LangGraph 部署脚本 | [LangGraph CLI 文档（deploy list）](https://docs.langchain.com/langsmith/cli) | `deploy list --json` 在 `>=0.4.44` 后输出 `{id, name, url}`，无 URL 时为 `null`，便于脚本判断 Agent Server 是否已有访问地址。 | 用 LangGraph CLI 做 BYOC / 自动化部署的团队 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日不是新框架日，而是把已有 Agent 栈往「可脚本化、可替换传输层、可企业授权、可类型化判定」推进：流式 id 不再把一条消息写成两条，部署列表能直接给出 URL，Anthropic 集成允许自带客户端，判定和护栏开始脱离自由文本解析。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| LangChain 流式一致性 | langchain-core 1.8.5 让后续 chunk 复用提供方首次给出的 message id，修复 Responses API 上转录重复。 | 对流水线日志和会话回放，message id 应以提供方首块为准，不要在合成尾块上再生成新 id。 |
+| 自定义运输层 | langchain-anthropic 1.7.13 区分「只换 HTTP 客户端」和「注入完整 SDK 客户端」：后者会接管 API key、base URL、超时、重试、代理和网关头。 | 走私有代理、Bedrock / Vertex / Foundry 时优先注入平台客户端，并避免同时配置两套连接参数。 |
+| LangGraph 部署面 | langgraph-cli 0.4.44 为 `deploy list --json` 增加 `url`，并支持仅用 API key 部署 BYOC；更新部署时不再提交空 secrets。 | 自动化发布应以 JSON 中的 URL 为准；更新接口不要用空列表覆盖已有密钥。 |
+| 类型化决策 vs 聊天评判 | Spring AI 用 DecisionModel 处理结果集合已知的分类、路由和打分，把需要推理或书面说明的案例留给 Chat Model。 | 护栏和例行评判应输出带阈值的概率，而不是再解析一段模型文本；换模型后要在自己的数据上重标定，尤其是自残等安全路径。 |
+| MCP 企业授权 | AWS 用 EMA / ID-JAG 把「AI 应用登录」和「AWS 资源访问」拆开，短时 token 绑定 IAM 角色。 | Agent 接入云资源时，不要把用户在聊天应用里的登录直接当成云端授权；授权策略放在 IdP，执行权限留在 IAM。 |
+| 可观测与网关 | Langfuse v4.87.0 把护栏阻断/记录、预算重置和组织级模型 API 放到 AI Gateway，MCP 工具 schema 与过滤也更规整。 | 网关层适合做统一护栏和预算，而不是把这些规则散落在每个 Agent 里；对 MCP 客户端要检查 list-changed 能力宣告，以免监听流挂住。 |
+| OpenClaw LTS | `2026.10.34` 把更新恢复、通道重连、token 密钥存储和停用 M2 等修复回灌到 10 月功能线。 | 生产上若钉在 extended-stable，需要单独跟踪 LTS 补丁，不能只看最新 `2026.11.x` 发行说明。 |
+| 混合任务 RL | Maco-RL 用额度调度和分级采样扩展通用 Agent，同时在附录里暴露了格式崩溃与工具调用约束。 | 混合训练要把各域 rollout 和梯度贡献显式配额；对工具调用格式失败应尽早终止并给零奖励，否则分数好看、训练不稳。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Spring AI 2.1 Decision Models](https://spring.io/blog/2026/11/26/spring-ai-decision-models-guardrails-judges/) | 把护栏和评判从「再写一个 prompt」提升为类型化 API，并给出可运行示例和安全注意事项。 |
+| 必读 | [AWS Enterprise-Managed Authorization](https://aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization/) | 把 MCP 授权放到企业 IdP 和 IAM 的交界处，是目前少见的可落地官方安全设计。 |
+| 推荐 | [NVFP4 attention on RTX Blackwell](https://developer.nvidia.com/blog/how-to-optimize-nvfp4-attention-on-nvidia-rtx-blackwell-through-register-recycling/) | 同时给出内核加速和生产世界模型的端到端数字，并指向可复用的 FlashInfer 实现。 |
+| 推荐 | [Langfuse v4.87.0](https://github.com/langfuse/langfuse/releases/tag/v4.87.0) | 自托管观测栈里，网关护栏、预算和组织级模型 API 是可直接评估是否升级的变更。 |
+| 推荐 | [langchain-core 1.8.5](https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.8.5) | 修复虽小，但对流式会话和审计日志是高杠杆的正确性补丁。 |
+| 延伸 | [Maco-RL](https://arxiv.org/abs/2611.34703) | 关心通用 Agent 后训练的人，可同时看总分提升和附录里的崩溃修复过程。 |
+| 延伸 | [ZeroHero](https://arxiv.org/abs/2611.34635) | 提供一个「小于 5,000 万参数、从专家轨迹训起」的小 Agent 参照，适合与大模型 Agent 方案对照。 |
+| 延伸 | [OpenClaw 2026.10.34](https://github.com/openclaw/openclaw/releases/tag/v2026.10.34) | 看 LTS 线如何回端口模型支持和更新恢复，避免只跟踪最新月度版本。 |
+
+### 来源清单
+
+- 检索范围：2026-11-26 00:00:00 到 2026-11-26 23:59:59（Asia/Shanghai），对应 UTC 2026-11-25 16:00:00Z 至 2026-11-26 15:59:59Z
+- 引用域名：developer.nvidia.com, aws.amazon.com, spring.io, github.com, docs.langchain.com, arxiv.org
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 官方技术博客 | How to Optimize NVFP4 Attention on NVIDIA RTX Blackwell Through Register Recycling | 2026-11-26（Published 2026-11-25T19:30:00Z，中国时间 11-26 03:30） | https://developer.nvidia.com/blog/how-to-optimize-nvfp4-attention-on-nvidia-rtx-blackwell-through-register-recycling/ |
+| 官方技术博客 | Secure agentic access to AWS with Enterprise-Managed Authorization | 2026-11-26（Published 2026-11-25T14:00:37-07:00，合 2026-11-25T21:00:37Z，中国时间 11-26 05:00） | https://aws.amazon.com/blogs/security/secure-agentic-access-to-aws-with-enterprise-managed-authorization/ |
+| 官方博客 | Decision Models in Spring AI 2.1: Yes, No, and How Sure | 2026-11-26（官方日期 November 26, 2026；RSS pubDate 2026-11-26 00:00:00 GMT，日期精度） | https://spring.io/blog/2026/11/26/spring-ai-decision-models-guardrails-judges/ |
+| 开源发布 | Langfuse v4.87.0 | 2026-11-26（Published 2026-11-26T11:22:05Z，中国时间 19:22） | https://github.com/langfuse/langfuse/releases/tag/v4.87.0 |
+| 开源发布 | openclaw 2026.10.34 | 2026-11-26（Published 2026-11-26T01:37:32Z，中国时间 09:37） | https://github.com/openclaw/openclaw/releases/tag/v2026.10.34 |
+| 开源发布 | langchain-core==1.8.5 | 2026-11-26（Published 2026-11-25T21:52:39Z，中国时间 11-26 05:52） | https://github.com/langchain-ai/langchain/releases/tag/langchain-core%3D%3D1.8.5 |
+| 开源发布 | langchain-anthropic==1.7.13 | 2026-11-26（Published 2026-11-25T21:41:59Z，中国时间 11-26 05:41） | https://github.com/langchain-ai/langchain/releases/tag/langchain-anthropic%3D%3D1.7.13 |
+| 开源发布 | langgraph-cli==0.4.44 | 2026-11-26（Published 2026-11-25T20:52:34Z，中国时间 11-26 04:52） | https://github.com/langchain-ai/langgraph/releases/tag/cli%3D%3D0.4.44 |
+| 官方文档 | LangGraph CLI（deploy list --json url 字段） | 随 0.4.44 同步 | https://docs.langchain.com/langsmith/cli |
+| 论文原文 | Maco-RL: Scaling Agent Capabilities with Mixed-Task Reinforcement Learning | 2026-11-26（arXiv published/submitted 2026-11-25T16:59:27Z，中国时间 11-26 00:59） | https://arxiv.org/abs/2611.34703 |
+| 论文原文 | ZeroHero: Training Small Language Agents from Scratch | 2026-11-26（arXiv published/submitted 2026-11-25T16:20:13Z，中国时间 11-26 00:20） | https://arxiv.org/abs/2611.34635 |
+
 ## 2026-11-25
 
 ### 今日总览

@@ -2,6 +2,90 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-26
+
+### 今日总览
+
+**一句话结论**：11 月 26 日固定来源里最值得看的，是美团 Keeta 把客服 Agent 的递归自我改进写成可上线闭环（CARE），以及阿里云两篇 Qoder 工程文——Cloud Agents 用「手脑分离 + RocketMQ LiteTopic」跑长程任务，Auto 档位把单任务消耗和耗时算清楚；另有一篇 11-26 发表的 Meetup 纪要，把 11-21 现场的 Agent 强化学习调度数据写了进来。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里巴巴（阿里技术、阿里云开发者社区、阿里中间件、语雀·阿里技术干货）；腾讯（腾讯技术工程、腾讯云+社区、AlloyTeam、腾讯大讲堂）；字节跳动（技术团队博客、掘金）；百度（FEX、EFE、百度开发者中心）；美团技术团队；京东（京东科技开发者、凹凸实验室）；滴滴开源平台；网易传媒技术；360 核心安全；有赞技术团队 |
+| 核心趋势 | 1）生产级客服 Agent 的 RSI，难点被写成「判」而不是「学」：独立巡检和归因只让模型学自己的错，修复按事发时 SOP 构造。2）云端长程 Agent 把会话状态与计算实例拆开，用细粒度消息通道做步骤交接，等待时释放执行容量。3）编码助手的耐用度优化落在缓存复用、工具精简、上下文压缩和按需加载，且各项实验效果不能简单相加。4）Agent 强化学习训练里，调度和算子优化可能比加机器更重要：10 台计算节点的单步耗时反超 16 台。 |
+| 可直接关注 | CARE 的冷启动反例（模拟通过率升、线上 Bad Case 反而差）与五轮后的 1.97% / 成本数字；LiteTopic 的 Suspend、共享正文与按分支/Endpoint 建通道；Qoder Auto 从 4.43 到 2.6 Credits、118 秒到 86 秒，以及「分项实验不可加总」的表述；AReaL 纪要里 Prefill/Decode 分机和 MegaMoE 传输块从 4KB 扩到 64KB 的验证规矩。 |
+| 专项检索结论 | **Langfuse**：固定来源内未发现可核验的当日新文；Langfuse v4.86.0（Published 2026-11-24T18:54:46Z）已计入 11-25 日报，本日不重复。**LangChain / LangGraph**：固定来源内未发现框架更新或官方对齐长文。核验 PyPI 上传时间确认 `langchain-core==1.8.5` 为 2026-11-25T21:52:24Z（中国时间 11-26 05:52）、`langchain-anthropic==1.7.13` 为 2026-11-25T21:41:44Z（05:41）、`langgraph-cli==0.4.44` 为 2026-11-25T20:52:20Z（04:52），均落在本日窗口，但上述发布未出现在固定中文来源中，按规则不写入正文条目，留给 AI 日报。**Code Graph**：未发现代码知识图谱 / Tree-sitter / MCP code graph 的可核验新文。**Spring Alibaba AI**：阿里云开发者社区、阿里技术与掘金均未发现 `spring-ai-alibaba` / java2ai 的当日可核验更新。**Loop Engineering**：无 `/goal`、`/loop` 或 Ralph loop 的官方中文专文；相邻信号是 Qoder 文中的 Harness 层优化、LiteTopic 的长程步骤交接，以及 AgentCore 上海站回顾里把 AgentLoop 定位为观测与优化平台（活动回顾，不作为主文收录）。 |
+| 未发现更新 | 字节跳动技术团队官方博客、百度 FEX / EFE / 百度开发者中心、京东科技开发者、凹凸实验室、滴滴开源平台、网易传媒技术、360 核心安全技术博客、有赞技术团队、阿里技术（102.alibaba.com）、阿里中间件团队博客、语雀·阿里技术干货、腾讯 AlloyTeam、腾讯大讲堂、Tencent_TEG 公众号等维度，未发现可确认属于该日期的重大技术更新。阿里云开发者社区当日另有大量 Token Plan / 服务器优惠 / PAI-DSW 免费额度文，按「过滤纯营销」未收录；掘金可见多篇 11-26 资讯速递，无足够技术细节，未单列。 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 生产级 RSI / 客服 Agent | [从模仿到自我纠错：Keeta客服模型的RSI实践](https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html) | 2026-11-26（博客仅标注日期，未给出时分；掘金厂队同步同日） | 美团技术团队（Keeta技术） | CARE（Customer-service Agent Retrospective and Evolve）把闭环写成：上线 → 巡检找错 → 归因定责 → 构造修复 → 在线自蒸馏（OPSD）→ 评估上线。冷启动后模拟通过率从 79.0% 升到 93.0%，但巡检 Bad Case 率 6.42%，反而高于未训练基座 5.59% 和线上强模型 4.60%，满意度低 4.57 个百分点。五轮后，31B 模型 Bad Case 率降到 1.97%；部分地区分流实验中满意度追到持平（文首综述写「小幅超过」）；全量替换时单均服务成本降 70.5%，其中模型服务部分降 92.8%，切一半流量时已降 35.8%（只计服务成本，不含研发、存储、网络流量和额外运维人力）。归因只让模型学自己的错；修复按事发时 SOP 构造，训练集混合多版本规则。对应技术报告：[CARE: Grounded Recursive Self-Improvement for Production Customer-Service Agents](https://arxiv.org/pdf/2611.02839)。 |
+| 长程 Agent 运行时 | [Qoder Cloud Agents 手脑分离实践：RocketMQ LiteTopic 如何支撑规模化长程 Agent 任务](https://developer.aliyun.com/article/1790267) | Published 2026-11-26 17:46:26（中国时间，与 last-modified 相同） | 阿里云云原生 | 官方实践文。QCA 于 9 月 16 日发布 1.0，文中称月调用量超千万。核心是把会话生命周期和计算生命周期拆开：Runtime、模型执行池、工具执行端通过 RocketMQ 接力，工具结果直接回 Runtime；LiteTopic 按分支或 Webhook Endpoint 建细粒度通道，正文只写一份 CommitLog，消费索引走 RocksDB；配额不足时 Suspend 只暂停该通道。文中明确：这套拆分解决的是持续推进和容量，不自动缩短单次推理或工具调用；Sandbox 按需使用，文件保留不等于进程现场可原样恢复。 |
+| 编码助手成本 / Harness | [Qoder 耐用了！这次我们把账算清楚了：Auto 单任务消耗直降 41%](https://developer.aliyun.com/article/1790274) | Published 2026-11-26 18:01:12（中国时间，与 last-modified 相同）；文中称倍率调整于 11-18 在 Qoder 全系生效 | Noah_Qoder | Auto Credits 倍率从 0.5x 降到 0.3x（降 40%），Fast 从 0.8x 降到 0.6x（降 25%）。单任务 Credits 从 4.43 降到 2.6，约 41.3%，文中按此换算任务量约为原来的 1.7 倍；单轮耗时从 118 秒降到 86 秒，降 27.1%；纠正率保持较低水位。分项实验：共享提示词缓存使支持显式缓存的模型耐用度提升 6%，缓存有效期亲和路由使部分长缓存模型提升 4%；文本平均累计读回量约降 26%，网页重复抓取率下降超过一半；压缩交接内部评测耗时约降两成；CodeMode 在适合集中编排的内部评测中，模型调用次数和 Token 约降三成；工具按需加载灰度中每轮 Credits 约降 19%。文中写明这些是单独实验、存在重叠，不能简单相加，总体以单任务实测为准。 |
+| Agent RL 训练系统 | [从RSI加速到Agent落地，AReaL与昇腾的后训练新解法](https://developer.aliyun.com/article/1789917) | Published 2026-11-26 10:48:27（中国时间，与 last-modified 相同）；数据来自 11-21「AReaL×昇腾 Meetup」 | 阿里云开发者社区（Alter聊科技 对 Meetup 的整理） | 训练 Qwen3.5-397B-A17B 代码 Agent 时，16 台计算节点单步 41 分 51 秒；改为 10 台并调整调度后，第 5–12 步对比每步省 297 秒，单步耗时 36 分 54 秒，缩短 11.8%，折合节点时间少 44.9%；251 道验证题上第 12 步 pass@4 为 71.3%，超过 69% 目标。文中称此前 16 机方案把参数更新缩短 45.6%，整步却只少 3.5%，因为等推理交轨迹占整步 85.2%，每会话平均调模型 30.6 次。新分工是 4 台做 Prefill、6 台两两成组做 Decode，样本收齐后再 10 台切到训练。MegaMoE 上将单次传输从 4KB 扩到 64KB、split 从 128 调到 512，单层前向从 9.88 毫秒降到 5.78 毫秒（约 41%），整网单步从 36.77 秒降到 33.01 秒（约 10.2%）；并用数值一致性、「老版—新版—老版」交替和连续十步取稳态，应对 5%–8% 的环境波动。AReaL 2.0 将 Agent、推理、训练拆成微服务，并推进 AReaL-RSI 与 AReaL-Harness。数字来自 Meetup 转述，落地前宜对照现场材料。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 生产级 RSI 闭环 | [Keeta 客服模型的 RSI 实践](https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html) | 巡检与归因独立于自研模型；只训练模型自身错误；按事发 SOP 构造修复；OPSD 的特权信息是巡检归因；评估通过后再上线 | 要用自研模型替换线上强模型、且业务规则会变的客服 / 售后 Agent 团队 |
+| 长程 Agent 调度 | [QCA × RocketMQ LiteTopic](https://developer.aliyun.com/article/1790267) | 状态与计算解耦、通道内有序 / 通道间并行、Suspend、Mailbox 协作与取消、Sandbox 按需 | 正在把单机会话 Agent 做成云端托管、需要处理等待和在途并发的人 |
+| 编码 Agent 成本治理 | [Qoder Auto 消耗优化](https://developer.aliyun.com/article/1790274) | 共享缓存与亲和路由、按需读文件、压缩时保留已读文件和已完成修改、CodeMode、MCP 工具按需展开 | 关注 Credits / Token 账单，或在做 Agent Harness 的工程团队 |
+| RAG 索引治理 | [AI网关下的RAG索引治理：文档变更、删除回调与检索过滤](https://developer.aliyun.com/article/1790306) | 删除事件要有 doc_id、版本、事件 ID 和签名；更新校验内容哈希与 embedding 版本；检索前补齐租户/权限/删除标记；按源库、账本、索引对账孤儿分片 | 维护售后或企知识库、已经遇到「删了还能搜到」的人。作者为社区账号，方案来自售后知识库复盘。Published 2026-11-26 18:48:16（中国时间） |
+| 企业 MCP 控制面 | [从本周谷歌的企业智能体安全更新看：MCP 接进办公和业务系统，关键不是工具多，而是谁在以谁的身份做事](https://cloud.tencent.com/developer/article/2794197) | 先设计身份、是否代表当前用户、策略和人工确认是否在请求路径上、撤销后访问能否马上停止 | 把 MCP 接进邮箱、文档或业务系统的安全与平台团队。本文是 11-26 社区解读，所评述的谷歌云《Deploying agents safely in your enterprise》发布于 2026-11-24。Published 2026-11-26 11:11:58（中国时间，对应 03:11:58Z） |
+| 消费级出图部署 | [在 GPUWorks 上部署 SenseNova-U1.6-8B-MoT](https://developer.aliyun.com/article/1790180) | 模型于 11-24 开源；文中实测 RTX 4090 FP8 生成 1024×1024 约 8.3 秒、显存峰值约 21.1 GiB，3090 约 27.5 秒；预量化 FP8 权重约 18.9 GB，本次测试与 BF16 逐像素一致；统一 50 steps | 要在 24 GB 消费级卡上跑开源文生图的人。社区实测，Published 2026-11-26 16:07:24，last-modified 16:07:31（中国时间） |
+
+### 工程实践归纳
+
+**总体判断**：固定来源当日没有 Langfuse、LangChain/LangGraph、Code Graph 或 Spring Alibaba AI 的可核验新文；有信号的方向是把「模型自己上线后才会出现的错」和「长程任务等待时不要占着执行实例」写成程序与训练闭环，而不是只靠一次蒸馏或加机器。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| 生产级 RSI | 美团 CARE 用独立巡检和归因给自研 31B 客服模型做五轮迭代，Bad Case 率从 6.42% 降到 1.97%，全量替换后单均服务成本降 70.5%。 | 模拟通过率上升不能当作可以上线；要单独看巡检确认的缺陷率和线上满意度。工具和 SOP 的问题不要写进模型权重，修复样本应带事发时的规则版本。 |
+| 长程 Agent 运行时 | 阿里云云原生把 QCA 的模型推理和工具执行拆开，用 LiteTopic 做细粒度有序交接，等待时 Suspend 通道并保留任务事实。 | 容量不能只按入口 QPS 估：还要看任务时长、在途会话和任务内部事件。持久状态放在数据库/对象存储，取消信号和过程预览不要当主存。 |
+| Harness / 成本 | Qoder 把 Auto 的单任务消耗和耗时写成可对比的起止值，并分开报告缓存、工具、压缩、CodeMode、按需加载的实验。 | 优化项要单独测、声明重叠，不要把分项百分比加总当总收益。压缩交接时要留下已读文件和已完成修改，否则模型会重做。 |
+| 训练系统调度 | AReaL×昇腾 Meetup 纪要显示，等推理交轨迹一旦占掉整步的大部分时间，只加速训练更新收益很小；Prefill/Decode 分机后 10 机反超 16 机。 | 先量等待占比，再决定加卡还是改调度。底层算子优化要有数值一致性和抗波动的复测，避免把偶发加快当成改对了。 |
+| Loop Engineering | 无 Claude Code / Codex loop 命令专文；相邻实践是 Qoder Harness、LiteTopic 步骤交接，以及沙龙回顾中的 AgentLoop 观测平台。 | 编码 loop 和训练 RSI 不要混为一谈：前者管执行—验证—停止，后者管权重是否该更新。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [从模仿到自我纠错：Keeta客服模型的RSI实践](https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html) | 有冷启动失败的反例、五轮后的线上数字，以及「判错、定责、按哪一版规则算错」的方法边界；厂队原文，可直接对照自己的巡检和评估门禁。 |
+| 必读 | [Qoder Cloud Agents 手脑分离实践](https://developer.aliyun.com/article/1790267) | 把长程 Agent 的状态、交接和容量写成可讨论的架构选择，并说明了不适用时会增加的分布式复杂度。 |
+| 推荐 | [Qoder Auto 消耗优化](https://developer.aliyun.com/article/1790274) | 同时给出总体实测和分项实验，适合作为 Credits / Harness 优化的对照清单；需注意倍率调整已于 11-18 生效，本文是 11-26 的方法说明。 |
+| 推荐 | [AReaL 与昇腾的后训练新解法](https://developer.aliyun.com/article/1789917) | 有可对照的步时、等待占比和算子耗时；须记住这是 11-21 Meetup 的 11-26 整理稿，不是当日首次实验发布。 |
+| 延伸 | [CARE 技术报告 PDF](https://arxiv.org/pdf/2611.02839) | 由美团正文给出的对应论文，方法细节和实验以报告为准；不在固定来源站点内，仅作为官方博文回链。 |
+| 延伸 | [RAG 索引治理](https://developer.aliyun.com/article/1790306) | 删除回调、幂等和对账的检查清单很实用，但是社区复盘，落地时要按自己的源系统和向量库改。 |
+| 延伸 | [MCP 身份与控制面解读](https://cloud.tencent.com/developer/article/2794197) | 帮助建立「先问身份和撤销，再接工具」的问题清单；原政策发布于 11-24，本文为 11-26 社区转写。 |
+
+### 来源清单
+
+- 检索范围：2026-11-26 00:00:00 到 2026-11-26 23:59:59（Asia/Shanghai）；对应 UTC 为 2026-11-25 16:00:00Z 至 2026-11-26 15:59:59Z
+- 固定来源覆盖：已覆盖固定来源清单中的公司/组织维度；专项主题 Langfuse、LangChain/LangGraph、Code Graph、Spring Alibaba AI、Loop Engineering 均已在固定来源内检索
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 美团 | 美团技术团队 | 技术文章 | 从模仿到自我纠错：Keeta客服模型的RSI实践 | 2026-11-26（博客仅标注日期） | https://tech.meituan.com/2026/11/26/Agent-RSI-practice-in-meituan.html |
+| 字节跳动 / 社区 | 掘金（美团技术团队同步） | 技术文章 | 从模仿到自我纠错：Keeta客服模型的RSI实践 | 2026-11-26（与官方博文合并，以美团站点为权威来源） | https://juejin.cn/post/7712359514976157737 |
+| 阿里巴巴 | 阿里云开发者社区 / 阿里云云原生 | 技术文章 | Qoder Cloud Agents 手脑分离实践：RocketMQ LiteTopic 如何支撑规模化长程 Agent 任务 | Published 2026-11-26 17:46:26（中国时间） | https://developer.aliyun.com/article/1790267 |
+| 阿里巴巴 | 阿里云开发者社区 / Noah_Qoder | 技术文章 | Qoder 耐用了！这次我们把账算清楚了：Auto 单任务消耗直降 41% | Published 2026-11-26 18:01:12（中国时间；文中称调整 11-18 生效） | https://developer.aliyun.com/article/1790274 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章（Meetup 整理） | 从RSI加速到Agent落地，AReaL与昇腾的后训练新解法 | Published 2026-11-26 10:48:27（中国时间；所报数据来自 11-21 Meetup） | https://developer.aliyun.com/article/1789917 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | AI网关下的RAG索引治理：文档变更、删除回调与检索过滤 | Published 2026-11-26 18:48:16（中国时间） | https://developer.aliyun.com/article/1790306 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章（社区实测） | 在 GPUWorks 上部署 SenseNova-U1.6-8B-MoT：一张 24 GB 的 4090 就能出图 | Published 2026-11-26 16:07:24（中国时间；模型开源于 11-24） | https://developer.aliyun.com/article/1790180 |
+| 腾讯 | 腾讯云+社区 | 技术文章（社区解读） | 从本周谷歌的企业智能体安全更新看：MCP 接进办公和业务系统，关键不是工具多，而是谁在以谁的身份做事 | Published 2026-11-26 11:11:58（中国时间；评述对象为 11-24 谷歌云原文） | https://cloud.tencent.com/developer/article/2794197 |
+| 阿里巴巴 | 阿里技术 / 阿里中间件 / 语雀·阿里技术干货 | 无新增 | 站内检索与页面核验未见 2026-11-26 可确认的重大技术更新；102.alibaba.com、jm.taobao.org 首页抓取失败，已用检索补查 | - | https://102.alibaba.com/tech/index/ |
+| 腾讯 | Tencent_TEG / AlloyTeam / 腾讯大讲堂 | 无新增 | 未见可确认属于该日期的官方技术更新；AlloyTeam、大讲堂站点首页抓取失败，已用检索补查 | - | http://www.alloyteam.com/ |
+| 字节跳动 | 字节跳动技术团队博客 | 无新增 | techblog.toutiao.com 返回 404，检索未见 2026-11-26 官方新文 | - | https://techblog.toutiao.com/ |
+| 百度 | FEX / EFE / 百度开发者中心 | 无新增 | 未见 2026-11-26 可核验技术更新；FEX / EFE 首页抓取失败，已用检索补查 | - | https://developer.baidu.com/ |
+| 京东 | 京东云开发者 / 凹凸实验室 | 无新增 | 未见 2026-11-26 可核验技术更新；aotu.io 为前端渲染站点，检索亦无当日新文 | - | https://developer.jdcloud.com/ |
+| 滴滴 | 滴滴开源平台 | 无新增 | 首页为既有开源项目介绍，未见当日新文 | - | https://didi.github.io/ |
+| 网易 | 网易传媒技术团队知乎组织页 | 无新增 | 组织页抓取返回 403，检索未见 2026-11-26 可核验技术更新 | - | https://www.zhihu.com/org/wang-yi-yun-54-1/posts |
+| 360 | 360 核心安全技术博客 | 无新增 | 首页抓取失败，检索未见 2026-11-26 可核验技术更新 | - | http://blogs.360.cn/ |
+| 有赞 | 有赞技术团队 | 无新增 | 站内可见文章仍为 2022 年及更早 | - | https://tech.youzan.com/ |
+
 ## 2026-11-25
 
 ### 今日总览
