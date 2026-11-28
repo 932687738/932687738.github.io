@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        知识库 2026-11-27 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">知识库 2026-11-27</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/knowledge-base-news/">知识库</a>
+          <a class="post-tag" href="/Daily-News/knowledge-base-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-27</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：固定来源在 11 月 27 日的增量，主要来自腾讯云和阿里云开发者社区：混元 Hy3D 3.6 把生成资产的面数和贴图规格上调，阿里云侧则出现 LangChain 人机协同实践文，以及针对前一日 GPUWorks 发版与混元 DFly2 开源的传播解读。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>阿里（阿里技术 &#x2F; 阿里云开发者 &#x2F; 中间件团队博客 &#x2F; 语雀）、腾讯（腾讯云+社区 &#x2F; 技术工程 &#x2F; AlloyTeam &#x2F; 大讲堂）、字节（技术团队博客 &#x2F; 掘金）、百度（FEX &#x2F; EFE &#x2F; 开发者中心）、美团、京东、滴滴、网易、360、有赞，以及五个工程框架专项</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）腾讯云+社区发布混元 Hy3D 3.6 说明：最高面数到 200 万、贴图到 8K，并可输出 PBR 与多格式，面向生产级 3D 资产。2）阿里云开发者社区出现可直接复用的 LangChain Human-in-the-loop 实践文，把 <code>interrupt</code> &#x2F; <code>Command(resume=...)</code>、中间件与生产检查点讲清楚。3）同日还有 GPUWorks 26.12.0、混元 DFly2 的中文解读，但对应上游发布&#x2F;论文落在相邻窗口，需按传播关系标注，不能当成 11-27 才首次开源。</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>Hy3D 3.6 的 <code>face_count</code> &#x2F; <code>tex_res</code> &#x2F; <code>enable_pbr</code> 与后处理流水线；LangChain HITL 的 <code>HumanInTheLoopMiddleware</code>、<code>when</code> 谓词与 <code>per_call</code> 恢复；若要评估 GPUWorks 或 DFly2，应回溯 11-26 窗口的 GitHub &#x2F; arXiv 原文。</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Langfuse</strong>：固定来源内未发现可核验的新实践文或版本解读。<strong>LangChain &#x2F; LangGraph</strong>：阿里云开发者社区发布《LangChain 之 Agent 人机协同 Human-in-the-loop》，详见「重要文章与更新」。<strong>Code Graph</strong>：固定来源内未发现可核验新文。<strong>Spring Alibaba AI</strong>：固定来源内未发现针对当日 GitHub 发布的 v2.1.0.0 的中文官方解读（该发版详见 AI 日报）；java2ai.com、阿里技术与语雀未发现可核验新文。<strong>Loop Engineering</strong>：固定来源内未发现以 loop 范式 &#x2F; Ralph loop &#x2F; harness 为主题的新文；当日最接近的信号是 LangChain HITL 实践文中的审批暂停与恢复。</td>
+</tr>
+<tr>
+<td>未发现更新</td>
+<td>阿里技术（102.alibaba.com）、阿里中间件团队博客、语雀·阿里技术干货、腾讯技术工程（Tencent_TEG）、腾讯 AlloyTeam、腾讯大讲堂、字节跳动技术团队博客、百度 FEX &#x2F; EFE &#x2F; 开发者中心、美团技术团队（最近一篇为 11-26 的 Keeta RSI，不计入本日新发）、京东科技开发者、凹凸实验室、滴滴技术博客、网易传媒技术团队、360 核心安全技术博客、有赞技术团队</td>
+</tr>
+</tbody></table>
+<h3 id="重要文章与更新"><a href="#重要文章与更新" class="headerlink" title="重要文章与更新"></a>重要文章与更新</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>来源</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>3D 生成</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2795594">腾讯混元3D 升级 3.6：面数 200 万、8K 贴图，新功能一文看懂</a></td>
+<td>2026-11-27（发布于 2026-11-27 15:05:33）</td>
+<td>腾讯云+社区</td>
+<td>将 Hy3D 最高面数从 150 万提到 200 万（可设 1,000～200 万，默认 200 万），贴图最高从 4K 提到 8K（可选 2K&#x2F;4K&#x2F;8K，默认 4K），并支持水密网格与 PBR。生成参数包括 <code>generate_type</code>、<code>face_strict_mode</code>、<code>seam_less</code>、<code>bake_lighting</code> 等，后续还可独立调用拓扑、组件拆分、纹理、UV、绑骨、文生动作和格式转换。文中附带限时折扣，技术参数本身可作选型参考。</td>
+</tr>
+<tr>
+<td>Agent 工程</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790741">LangChain 之 Agent 人机协同 Human-in-the-loop</a></td>
+<td>2026-11-27</td>
+<td>阿里云开发者社区</td>
+<td>以 <code>interrupt</code> 暂停危险工具、以 <code>Command(resume=...)</code> 恢复为两条原语，介绍官方 <code>HumanInTheLoopMiddleware</code>（<code>interrupt_on</code> 按工具配置）、条件拦截 <code>when</code>、逐调用恢复 <code>per_call</code>，以及生产环境中的数据库检查点与审计留痕。适合把「模型可以提议、执行权留给人」落到可复用代码。</td>
+</tr>
+<tr>
+<td>推理平台</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790899">GPUWorks 26.12.0 发布：接入 Kubernetes 与 Slurm，解锁更多 GPU 资源接入</a></td>
+<td>2026-11-27（文章日期；GitHub Published 2026-11-26T13:11:54Z，中国时间 11-26 21:11，相邻日期&#x2F;中国时间窗口传播）</td>
+<td>阿里云开发者社区</td>
+<td>中文解读 26.12.0：可在不改原集群、不额外部署 operator 的前提下接入 Kubernetes 与 Slurm；补齐 AMD、昆仑芯 P800、昇腾 910B 等推理档位，并提到 PD 分离、请求优先级、LMCache 与 System One 决策模型。升级须先看发行说明：<code>/v1</code> 网关默认需要 API key，数据库迁移只向前。官方发版本身属于 11-26 窗口。</td>
+</tr>
+<tr>
+<td>推理加速</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2795760">腾讯混元 DFly2 草稿模型开源：零额外显存加速长文本推理</a></td>
+<td>2026-11-27（文章发布于 2026-11-27 17:08:20；技术报告 arXiv:2611.34776 submitted 2026-11-25T17:37:49Z，中国时间 11-26 01:37，相邻日期&#x2F;中国时间窗口传播）</td>
+<td>腾讯云+社区</td>
+<td>固定来源在本日传播混元草稿模型 DFly2：标题强调通过零额外显存的方式加速长文本推理。可回溯的官方原文是论文 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.34776">arXiv:2611.34776</a> 与仓库 <a target="_blank" rel="noopener" href="https://github.com/Tencent/AngelSpec">Tencent&#x2F;AngelSpec</a>，二者不属于本日首次提交&#x2F;发版，本日只记传播。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与实践"><a href="#技术文档与实践" class="headerlink" title="技术文档与实践"></a>技术文档与实践</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>人机协同</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790741">LangChain Human-in-the-loop 实践</a></td>
+<td>中间件开箱配置、手动 <code>interrupt</code> &#x2F; resume、条件审批、检查点与审计</td>
+<td>要把退款、改表、推送等危险工具接到人工审批的 Agent 工程团队</td>
+</tr>
+<tr>
+<td>3D 资产生产</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2795594">混元 Hy3D 3.6 说明</a></td>
+<td>面数&#x2F;贴图上限、PBR、分步后处理与导出格式</td>
+<td>需要把图生 3D 接到游戏、电商或文创流水线的图形&#x2F;内容团队</td>
+</tr>
+<tr>
+<td>云上接入</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790606">DeepSeek-V4 云上接入指南：1M 上下文成标配，API 与私有化两条路径</a></td>
+<td>百炼 API 与 ECS 私有化两条路径；文中同时包含免费 Token 等运营说明</td>
+<td>已决定使用该模型、需要在阿里云落地调用的团队。本文是 11-27 的接入指南，不把它写成模型首发日</td>
+</tr>
+</tbody></table>
+<h3 id="工程实践归纳"><a href="#工程实践归纳" class="headerlink" title="工程实践归纳"></a>工程实践归纳</h3><p><strong>总体判断</strong>：固定来源里最有复用价值的是 LangChain HITL 的审批&#x2F;恢复写法；3D 与推理加速内容以产品规格和传播解读为主，Spring Alibaba AI &#x2F; Langfuse &#x2F; Code Graph &#x2F; Loop Engineering 在固定来源内没有可核验的新框架发版解读。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LangChain HITL</td>
+<td>阿里云开发者社区把官方中间件和手动原语拆成可套用的生产写法。</td>
+<td>审批要按工具和政策配置，而不是只靠提示词约定；恢复路径需要检查点，否则进程一重启，暂停态就丢了。</td>
+</tr>
+<tr>
+<td>混元 3D 生产规格</td>
+<td>Hy3D 3.6 把面数、贴图和后处理拆成可独立调用的步骤。</td>
+<td>生成与拓扑&#x2F;UV&#x2F;绑骨解耦后，可以把「生成」和「进管线」分成两个质量门。</td>
+</tr>
+<tr>
+<td>GPUWorks &#x2F; DFly2</td>
+<td>本日固定来源是对相邻窗口上游发布的中文传播。</td>
+<td>选型或升级应以后退到 GitHub Published 与 arXiv submitted 时间为准，避免把传播日当成发版日。</td>
+</tr>
+<tr>
+<td>Langfuse &#x2F; Code Graph &#x2F; Spring Alibaba AI &#x2F; Loop Engineering</td>
+<td>固定来源内未发现可核验新文（Alibaba 2.1.0.0 发在 GitHub，见 AI 日报）。</td>
+<td>知识库侧不要把 GitHub 发版误写成固定中文站点原文。</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790741">LangChain 之 Agent 人机协同 Human-in-the-loop</a></td>
+<td>本日固定来源里对 Agent 工程最有落地价值的一篇，可直接对照官方原语。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2795594">腾讯混元3D 升级 3.6</a></td>
+<td>参数和后处理能力写得具体，便于判断能否进入生产资产流水线。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790899">GPUWorks 26.12.0 中文解读</a></td>
+<td>适合了解集群接入与异构推理档位，但需对照 11-26 的 GitHub 发行说明后再升级。</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-27 00:00:00 到 2026-11-27 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>固定来源覆盖：阿里云开发者社区、腾讯云+社区；其余清单内公司&#x2F;组织已检索但未发现可核验新文</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>公司&#x2F;组织</th>
+<th>来源</th>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>腾讯混元3D 升级 3.6：面数 200 万、8K 贴图，新功能一文看懂</td>
+<td>2026-11-27（发布于 15:05:33）</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2795594">https://cloud.tencent.com/developer/article/2795594</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>技术文章</td>
+<td>LangChain 之 Agent 人机协同 Human-in-the-loop</td>
+<td>2026-11-27</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790741">https://developer.aliyun.com/article/1790741</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>技术文章</td>
+<td>GPUWorks 26.12.0 发布：接入 Kubernetes 与 Slurm，解锁更多 GPU 资源接入</td>
+<td>2026-11-27（相邻日期&#x2F;中国时间窗口传播；GitHub Published 2026-11-26T13:11:54Z）</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790899">https://developer.aliyun.com/article/1790899</a></td>
+</tr>
+<tr>
+<td>腾讯</td>
+<td>腾讯云+社区</td>
+<td>技术文章</td>
+<td>腾讯混元 DFly2 草稿模型开源：零额外显存加速长文本推理</td>
+<td>2026-11-27（相邻日期&#x2F;中国时间窗口传播；arXiv submitted 2026-11-25T17:37:49Z）</td>
+<td><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2795760">https://cloud.tencent.com/developer/article/2795760</a></td>
+</tr>
+<tr>
+<td>阿里巴巴</td>
+<td>阿里云开发者社区</td>
+<td>文档&#x2F;实践</td>
+<td>DeepSeek-V4 云上接入指南：1M 上下文成标配，API 与私有化两条路径</td>
+<td>2026-11-27</td>
+<td><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/1790606">https://developer.aliyun.com/article/1790606</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

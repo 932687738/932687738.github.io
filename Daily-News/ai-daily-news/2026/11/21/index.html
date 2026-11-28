@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-21 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-21</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-21</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：上海时间 11 月 21 日，主线有两条并行：Lean 与 Mathlib 社区发布联合声明，核验 Anthropic 数学家 Levent Alpöge 在前一日公开的、由 Claude 协助完成的黎曼猜想 Lean 形式化证明；工程侧则把前一日越窗的发布补进本日，核心是 Claude Code 2.1.330 把企业登录、图表模组、自托管 runner 与 <code>/loop</code> 周期一起推进，以及 AWS HyperPod Global Inference Gateway 与 Microsoft Copilot 接入 GPT-6.2。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商博客&#x2F;changelog、GitHub Releases、Lean&#x2F;Mathlib 社区声明、arXiv &#x2F; Hugging Face Papers、可信媒体与政策原文；时间窗为 Asia&#x2F;Shanghai 2026-11-21 00:00:00–23:59:59（对应 UTC 11-20 16:00:00–11-21 15:59:59）。相邻时区传播已在日期栏标注。昨日已写入的条目（Gemini Mac 电脑使用、Tool Retrieval、Genie 4 API、MedChemBench、对抗蒸馏防护、Anthropic IPO 交割、Spring AI 2.1.0、CodeGraph v1.6.4、Claude Code 2.1.329、Codex 0.171.0 等）本日不重复当作新首发。</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）形式化验证成为 AI 辅助数学突破的公开验收标准：社区按既定四条标准核验「命题正确、库可编译、证的是 Mathlib 原陈述、导出证明可被多内核接受」，同时仍把可读性解释和 Clay 奖审放在后续。2）编码代理继续补企业接入、可视化与长周期任务：Claude Code 2.1.330 把 <code>/loop</code> 与定时任务上限扩到 30 天，并修了压缩会话卡死、WebFetch 挂起、worktree 误删等高频稳定性问题。3）推理基础设施和产品入口在窗口早段落地：HyperPod 用一个托管网关跨集群&#x2F;区域分流，Copilot 把 Sol&#x2F;Astra 推进到 Chat、Cowork、Studio 与 Office。4）OpenAI 在开发者文档中给出 GPT-6.2 的提示词模板，指向「默认更短、少问确认、最终答复自包含」，以及 Responses API 在改写对话前缀时会丢弃先前推理项。</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>1）Lean 社区声明与核验标准，以及 MIT 汇总页上的独立 checker 说明。2）Claude Code 2.1.330 的企业 Admin Console 登录、easel 图表、<code>/loop</code> 30 天，以及自托管 runner 的 <code>--start-dir</code> 与新 metrics。3）HyperPod Global Inference Gateway 的单端点跨区域路由与自动故障转移。4）GPT-6.2 官方 prompting 指南中关于 prefix 不被改写、以及 <code>temperature</code>&#x2F;<code>top_p</code> 不再支持的迁移项。5）Copilot 中 Sol 与 Astra 的分产品开通范围。</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：官方 changelog 将 2.1.330 标为 November 20，但 GitHub 发布时间为 2026-11-20T22:32:56Z（上海 11-21 06:32），按窗口记入本日；至检索时未见 v2.1.331 及更高稳定版。<strong>Codex</strong>：未见新的稳定版；窗口内可见预发布 <code>rust-v0.173.0-alpha.4</code>，不以预发布说明替代 11-20 已记录的稳定版 0.171.0。<strong>OpenClaw</strong>：未见比 2026.11.6 更新的稳定版；有 2026.11.7 发行说明草稿，但未形成已发布版本。<strong>Hermes</strong>：未见比 v0.23.3 更新的稳定版。<strong>Spring AI</strong>：v2.1.0 &#x2F; v2.0.3 已写入 11-20 章节，本日无新版本。<strong>Spring Alibaba AI</strong>：<code>alibaba/spring-ai-alibaba</code> 未见窗口内可核验重大更新。<strong>Langfuse</strong>：未见 11-21 的 changelog 新条目；11-20 有 Redesigned trace view，属相邻日期，昨日章节未展开，本日仅在专项中补记，不当作 11-21 首发。<strong>LangChain &#x2F; LangGraph</strong>：未见窗口内可核验的新正式版。<strong>Code Graph</strong>：<code>colbymchenry/codegraph</code> 最近可见版本仍为 11-20 的 v1.6.4，本日无新 release。<strong>Loop Engineering</strong>：独立方法论仓库未见窗口内正式 release；最接近的可核验变化是 Claude Code 2.1.330 把 recurring scheduled tasks 与 <code>/loop</code> 的运行上限从 7 天调整为 30 天。<strong>skills &#x2F; Agent Skills</strong>：未见独立规范或平台级新标准。<strong>论文</strong>：未发现 submitted&#x2F;revised 日期精确落在本窗口的可核验条目。<strong>政策监管</strong>：未发现 2026-11-21 可核验的重大新规或征求意见。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>形式化证明核验</td>
+<td><a target="_blank" rel="noopener" href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">Lean verification of the Riemann Hypothesis</a></td>
+<td>社区声明标注 2026-11-21 13:55；Alpöge 于 11-20 发布 Lean 库</td>
+<td>社区正式声明 &#x2F; 核验</td>
+<td>高。Lean 与 Mathlib 社区（由 Lean FRO 与 Mathlib Initiative 背书）声明：对 Alpöge 发布的约 1700 万行 Lean 库有充分信心，并核验四条标准——命题是 Mathlib 中已审定的 <code>RiemannHypothesis</code>、库可复现编译、所证定理与 Mathlib 陈述经 <code>comparator</code> 与 <code>con-leche --compare</code> 比对一致、导出证明被 Lean 官方内核及多个独立 checker（含相对集合论给出可靠性证明的 <code>con-leche</code>&#x2F;<code>con-ron</code>）接受。这应读成「形式化核验通过」，不是 Clay 研究所已经颁奖，也不是一篇人类可读的短论文已经完成同行评议；声明本身也期待后续把新想法讲清楚。媒体另报意大利数学家 Alessandro Masullo 在相近窗口给出未完成的全人工证明草稿，二者不要混为一谈。</td>
+</tr>
+<tr>
+<td>编码代理</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.330">Claude Code v2.1.330</a></td>
+<td>GitHub 2026-11-20T22:32:56Z（上海 11-21 06:32）；changelog 条目标注 November 20</td>
+<td>开源发布</td>
+<td>高。企业侧可在 <code>claude auth login</code> 后接入 Enterprise Admin Console 管理的组织设置与云提供商&#x2F;网关；新增 easel 图表模组（Pro&#x2F;Max，以及可用的 Team&#x2F;Enterprise，macOS&#x2F;Linux，可在 <code>/config</code> 关闭自动图表）；自托管 runner 增加 <code>--start-dir</code> &#x2F; <code>SELF_HOSTED_RUNNER_START_DIR</code> 与两项从工单到注册&#x2F;首会话的 metrics。行为变化里最影响 loop 设计的是：recurring scheduled tasks 与 <code>/loop</code> 在会话持续期间可运行至 30 天（旧任务仍按 7 天结束）。同时修了长会话 compact 后卡死数分钟、部分页面 WebFetch 挂起或空结果、退出 worktree 误删其他会话目录、多进程写设置丢失、MCP 工具 schema 导致会话文件膨胀等稳定性问题。VS Code 侧新增 <code>/fork</code>、<code>/workflows</code> 及若干显示&#x2F;快捷键设置。</td>
+</tr>
+<tr>
+<td>推理基础设施</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/">Introducing Amazon SageMaker HyperPod Global Inference Gateway</a></td>
+<td><code>datePublished</code> 2026-11-20T14:35:24-08:00（上海 11-21 06:35）</td>
+<td>官方博客</td>
+<td>高。在单集群 Inference Gateway 之上增加第二层：一个 SageMaker 托管网关可在最多多集群、跨区域的已注册 HyperPod 之间路由 OpenAI 兼容请求，依据 KV cache 余量、队列深度、区域邻近和错误率选集群，并在集群故障时自动切走流量；鉴权走 SigV4&#x2F;IAM，流量走 AWS 骨干与 PrivateLink。适合已经把容量拆到多个集群&#x2F;区域、不想自己维护跨区域负载均衡和 DNS 的团队。文档写明目前在 13 个区域可用。11-20 章节因该时间戳越窗未写入，本日补录。</td>
+</tr>
+<tr>
+<td>产品接入</td>
+<td><a target="_blank" rel="noopener" href="https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-2-sol-and-gpt-6-2-astra-in-microsoft-copilot/4574229">Available today: OpenAI’s GPT-6.2 Sol and GPT-6.2 Astra in Microsoft Copilot</a></td>
+<td>页面 <code>datePublished</code> 2026-11-20T10:40:04-08:00（上海 11-21 02:40）；可见更新时间 2026-11-20T12:07:04-08:00（上海 04:07）</td>
+<td>官方产品</td>
+<td>中高。Sol 向符合条件的用户在 Copilot Chat、Cowork、Studio 以及 Excel&#x2F;PowerPoint&#x2F;Word 中推送；Astra 先在 Cowork 与 Studio，Frontier 用户还可在 Chat 与上述 Office 应用中使用。文中强调 Work IQ 按既有权限用文件、会议和聊天做接地。可用性因地区和组织而异，由 Microsoft 365 管理中心控制。11-20 章节因发布时间越窗未写入，本日补录。不要与 11-17 的 Foundry 上架公告混为同一条。</td>
+</tr>
+<tr>
+<td>开发者文档 &#x2F; 提示词</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/latest-model">Using GPT-6.2</a></td>
+<td>媒体报道日期 2026-11-21（The Decoder）；以官方文档为原文</td>
+<td>官方文档</td>
+<td>高。文档给出可复制的系统提示，用来纠正 GPT-6.2 Astra&#x2F;Sol 的几类默认行为：文风更短，迁移时要重新审视 “be concise”；意图不清时不要停下来等确认，应在授权范围内做可逆假设并继续；最终答复必须自包含，不把推理过程里的缩写带给用户；写代码时复用仓库已有逻辑，除非被要求、仓库规范要求或要抓住现有测试盖不住的回归，否则不要默认补新测试。API 侧从 GPT-6.2 起，Responses 在改写对话前缀、部分换模型或变更终端用户&#x2F;组织时会丢弃先前 reasoning items，可能让质量下降并重复耗 token；新集成建议 <code>reasoning.effort</code> 从 <code>medium</code> 起，且不再支持 <code>temperature</code>&#x2F;<code>top_p</code>。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>形式化核验标准</td>
+<td><a target="_blank" rel="noopener" href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">Lean 社区声明</a>；核验材料汇总 <a target="_blank" rel="noopener" href="https://math.mit.edu/~drew/grh/">math.mit.edu&#x2F;~drew&#x2F;grh&#x2F;</a></td>
+<td>四条验收：命题、编译、陈述比对、多 checker；在惰性导出上检查，避免源码侧恶意代码干扰</td>
+<td>关注 AI 辅助定理证明、需要判断「机器核验通过」与「数学界接受」差别的研究与工程人员</td>
+</tr>
+<tr>
+<td>GPT-6.2 迁移与提示词</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/latest-model">Using GPT-6.2</a></td>
+<td>保持 prefix 不被中途改写以保留 reasoning 与缓存；把稳定说明放进 <code>input</code> 开头的 developer message；工具调用需用 Responses API</td>
+<td>正在把应用或 Agent 迁到 Astra&#x2F;Sol 的开发者</td>
+</tr>
+<tr>
+<td>跨集群推理入口</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/">HyperPod Global Inference Gateway</a></td>
+<td>单端点、跨区域溢出与自动故障转移；集群内仍由原 Inference Gateway 选 pod</td>
+<td>已在多集群&#x2F;多区域部署 HyperPod 推理的平台工程</td>
+</tr>
+<tr>
+<td>Claude Code 2.1.330 变更</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.330">GitHub Release</a> 与 <a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">官方 changelog</a></td>
+<td>企业登录与网关、easel、runner 启动目录、<code>/loop</code> 30 天、针对 compact&#x2F;WebFetch&#x2F;worktree&#x2F;MCP schema 的修复</td>
+<td>在企业网关或自托管 runner 上跑 Claude Code，或依赖 <code>/loop</code> 的团队</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：本日没有新的 LangChain&#x2F;LangGraph 正式版，工程信号主要来自编码 Agent 的 loop 周期与稳定性修复，以及大模型 API 对「不要改写前缀、最终答复自包含」的约束。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>形式化验收进入公开流程</td>
+<td>Lean&#x2F;Mathlib 用事先写明的四条标准，在约一天内核验大规模 Lean 库，并强调比对的是 Mathlib 原陈述。</td>
+<td>把「证明了什么」从「生成了一堆代码」里拆出来：先固定命题，再谈编译与独立 checker。媒体报道可作为传播线索，结论仍应回到社区声明。</td>
+</tr>
+<tr>
+<td>Claude Code loop 与稳定性</td>
+<td>2.1.330 将 <code>/loop</code> 与定时任务上限扩到 30 天，并修复 compact&#x2F;WebFetch 卡死、worktree 互踩、多进程写设置丢失等。</td>
+<td>长周期 loop 可以按月跑，但旧任务不会自动改期；共享机器上要特别注意 worktree 退出与设置文件并发写入。</td>
+</tr>
+<tr>
+<td>GPT-6.2 提示与 API 约束</td>
+<td>官方模板要求少问确认、最终答复自包含；改写对话前缀会丢掉 reasoning。</td>
+<td>不要把旧的「务必简洁、先问再做」系统提示原样搬过去；集成上把稳定指令放在可缓存前缀里，避免中途改写历史。</td>
+</tr>
+<tr>
+<td>Langfuse</td>
+<td>本日无新 changelog。11-20 的 Redesigned trace view 把 Timeline&#x2F;图视图与观察项的输入输出作为主界面，属相邻日期补记。</td>
+<td>调试大型 Agent trace 时可先看结构再进入单步；不把它记成 11-21 的新发布。</td>
+</tr>
+<tr>
+<td>LangChain &#x2F; LangGraph</td>
+<td>未见窗口内新正式版。</td>
+<td>未发现可核验更新。</td>
+</tr>
+<tr>
+<td>Spring AI &#x2F; Spring Alibaba AI</td>
+<td>Spring AI 2.1.0 已在 11-20 写入；Spring Alibaba AI 本日无新版本。</td>
+<td>未发现 11-21 可核验更新。</td>
+</tr>
+<tr>
+<td>Code Graph &#x2F; Loop Engineering</td>
+<td>CodeGraph 无新 release；Loop Engineering 方法论仓库无新正式版，相关变化见 Claude Code <code>/loop</code> 30 天。</td>
+<td>把「循环还在跑多久」写成显式策略，而不是默认一周后结束。</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">Lean verification of the Riemann Hypothesis</a>（2026-11-21）</td>
+<td>这是当日最接近「第一手验收结论」的文本，四条标准写得很清楚，便于把它和媒体标题分开看。</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.330">Claude Code v2.1.330</a> 与 <a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">changelog</a></td>
+<td>企业登录、<code>/loop</code> 周期和一批高优先级稳定性修复都在这里，适合对照当前正在跑的版本。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/latest-model">Using GPT-6.2</a></td>
+<td>提示词和 API 迁移项可直接改系统提示与集成，不必经过二手报道转述。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/">HyperPod Global Inference Gateway</a></td>
+<td>把「单集群选 pod」和「跨集群选集群」分成两层，对多区域推理架构有直接参考。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-2-sol-and-gpt-6-2-astra-in-microsoft-copilot/4574229">Copilot 接入 GPT-6.2 Sol &#x2F; Astra</a></td>
+<td>主要用于确认各 Copilot 产品里的开通范围和权限边界，而不是模型能力本身。</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-21 00:00:00 到 2026-11-21 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>引用域名：leanprover-community.github.io, math.mit.edu, github.com, code.claude.com, aws.amazon.com, techcommunity.microsoft.com, developers.openai.com, the-decoder.com, langfuse.com, theguardian.com</li>
+<li>来源清单表格：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>社区正式声明</td>
+<td>Lean verification of the Riemann Hypothesis</td>
+<td>2026-11-21 13:55</td>
+<td><a target="_blank" rel="noopener" href="https://leanprover-community.github.io/blog/posts/riemann-hypothesis/">https://leanprover-community.github.io/blog/posts/riemann-hypothesis/</a></td>
+</tr>
+<tr>
+<td>核验材料汇总</td>
+<td>RH Lean proof: verification files</td>
+<td>与 11-21 核验同期整理</td>
+<td><a target="_blank" rel="noopener" href="https://math.mit.edu/~drew/grh/">https://math.mit.edu/~drew/grh/</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>Claude Code v2.1.330</td>
+<td>2026-11-20T22:32:56Z（上海 11-21 06:32）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.330">https://github.com/anthropics/claude-code/releases/tag/v2.1.330</a></td>
+</tr>
+<tr>
+<td>官方 Changelog</td>
+<td>Claude Code changelog（2.1.330 条目标注 November 20）</td>
+<td>发布时刻落入本日窗口</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">https://code.claude.com/docs/en/changelog</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>Introducing Amazon SageMaker HyperPod Global Inference Gateway</td>
+<td>2026-11-20T14:35:24-08:00（上海 11-21 06:35）</td>
+<td><a target="_blank" rel="noopener" href="https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/">https://aws.amazon.com/blogs/machine-learning/introducing-amazon-sagemaker-hyperpod-global-inference-gateway-one-endpoint-across-regions-and-clusters/</a></td>
+</tr>
+<tr>
+<td>官方产品</td>
+<td>GPT-6.2 Sol and Astra in Microsoft Copilot</td>
+<td>2026-11-20T10:40:04-08:00（上海 11-21 02:40）</td>
+<td><a target="_blank" rel="noopener" href="https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-2-sol-and-gpt-6-2-astra-in-microsoft-copilot/4574229">https://techcommunity.microsoft.com/blog/microsoft-copilot-blog/available-today-openais-gpt-6-2-sol-and-gpt-6-2-astra-in-microsoft-copilot/4574229</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>Using GPT-6.2</td>
+<td>官方文档；The Decoder 报道于 2026-11-21</td>
+<td><a target="_blank" rel="noopener" href="https://developers.openai.com/api/docs/guides/latest-model">https://developers.openai.com/api/docs/guides/latest-model</a></td>
+</tr>
+<tr>
+<td>技术媒体</td>
+<td>OpenAI shares new prompting tips for GPT-6.2 Astra and Sol…</td>
+<td>2026-11-21</td>
+<td><a target="_blank" rel="noopener" href="https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/">https://the-decoder.com/openai-shares-new-prompting-tips-for-gpt-6-2-astra-and-sol-to-fix-brief-answers-and-unnecessary-questions/</a></td>
+</tr>
+<tr>
+<td>官方 Changelog（相邻日期补记）</td>
+<td>Redesigned trace view</td>
+<td>2026-11-20</td>
+<td><a target="_blank" rel="noopener" href="https://langfuse.com/changelog/2026-11-20-redesigned-trace-view">https://langfuse.com/changelog/2026-11-20-redesigned-trace-view</a></td>
+</tr>
+<tr>
+<td>技术媒体（背景，非首要依据）</td>
+<td>Two groups verify mathematician’s claim that Claude helped prove mathematics problem</td>
+<td>2026-11-21 11.39 EST（后更新 15.15 EST）</td>
+<td><a target="_blank" rel="noopener" href="https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai">https://www.theguardian.com/technology/2026/nov/21/anthropic-riemann-hypothesis-solved-claude-ai</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>

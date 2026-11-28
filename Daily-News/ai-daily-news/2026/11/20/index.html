@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf8"/>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
+    <title>
+      
+        AI 日报 2026-11-20 | 烟火与诗
+      
+    </title>
+    <meta name="description" content="生命不息，运动不止"/>
+    <meta name="keywords" content=""/>
+    
+      <link rel="apple-touch-icon"
+            sizes="180x180"
+            href="/images/apple-touch-icon.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/images/favicon-32x32.png"/>
+    
+    
+      <link rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/images/favicon-16x16.png"/>
+    
+    
+    
+    
+      
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/regular.ttf);
+        font-weight: regular;
+    }
+  </style>
+
+  <style>
+    @font-face {
+        font-family:sourceHanSerif;
+        src: url(/font/bold.ttf);
+        font-weight: bold;
+    }
+  </style>
+
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href='/css/layout.css'/>
+    
+    
+  <link rel="stylesheet" type="text/css" href="/css/post.css" />
+
+  <meta name="generator" content="Hexo 6.3.0"></head>
+  <body>
+    <div class="head">
+      <div class="nav">
+        <a href='/' class="nav-logo">
+          <img alt="logo" src="/images/logo.png"/>
+        </a>
+        <input id="navBtn" type="checkbox"/>
+        <div class="nav-menu">
+          
+            
+              <a class="nav-menu-item" href="/Jottings">随笔</a>
+            
+              <a class="nav-menu-item" href="/Stories">故事</a>
+            
+              <a class="nav-menu-item" href="/Daily-News">每日新闻</a>
+            
+              <a class="nav-menu-item" href="/GitHub">GitHub</a>
+            
+              <a class="nav-menu-item" href="/Java">Java</a>
+            
+              <a class="nav-menu-item" href="/React">React</a>
+            
+              <a class="nav-menu-item" href="/Vue">Vue</a>
+            
+              <a class="nav-menu-item" href="/AI">AI</a>
+            
+              <a class="nav-menu-item" href="/AI-Agent">AI Agent</a>
+            
+          
+          
+            <a class="nav-menu-item" href='/cv/'>简历</a>
+          
+        </div>
+        <label class="nav-btn" for="navBtn"></label>
+      </div>
+    </div>
+    <div class="body">
+      
+  <article class="post-content post-content--digest">
+    <div class="post-inner">
+      <div class="post-content__head">
+        <div class="post-title">AI 日报 2026-11-20</div>
+        <div class="post-info">
+          <a class="post-tag" href="/Daily-News/">每日新闻</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/">AI 日报</a>
+          <a class="post-tag" href="/Daily-News/ai-daily-news/2026/11/">2026-11</a>
+          <span class="post-date">2026-11-20</span>
+        </div>
+      </div>
+      <div class="post-content__body">
+        <h3 id="今日总览"><a href="#今日总览" class="headerlink" title="今日总览"></a>今日总览</h3><p><strong>一句话结论</strong>：上海时间 11 月 20 日，主线是编码与 Agent 运行时的一轮集中升级——Claude Code 2.1.329、Codex 0.171.0、OpenClaw 2026.11.6、Hermes 0.23.3 与 Spring AI 2.1.0 都在窗口内落地，CodeGraph v1.6.4 收紧探索成本与共享机器安全；产品侧则有 Gemini Mac 电脑使用、Genie 4 API 与 Tool Retrieval 按精确时刻进入本日，OpenAI 同时给出 MedChemBench 与对抗蒸馏防护，Anthropic 宣布 IPO 交割完成。Hugging Face 的 harness adapters 则把「在目标 harness 内做 RL」写成可复现配方。</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>本日结论</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>检索范围</td>
+<td>官方厂商博客&#x2F;changelog、GitHub Releases、arXiv &#x2F; Hugging Face Papers 与博客、可信媒体与政策原文；时间窗为 Asia&#x2F;Shanghai 2026-11-20 00:00:00–23:59:59（对应 UTC 11-19 16:00:00–11-20 15:59:59）。相邻时区传播已在日期栏标注；越窗条目（如 Claude Code v2.1.330 发布于 2026-11-20T22:32:56Z &#x2F; 上海 11-21 06:32，Microsoft Copilot 引入 GPT-6.2 的博文时间、AWS HyperPod Global Inference Gateway 的 <code>datePublished</code> 2026-11-20T14:35:24-08:00）不写入本日正文。</td>
+</tr>
+<tr>
+<td>核心趋势</td>
+<td>1）编码代理继续补「任务面板、远程执行、信任与安全边界」：Claude Code 把 <code>/loop</code> 唤醒和目标放进 <code>/tasks</code>，Codex 默认打开 TUI workspace 并支持 <code>codex exec --remote</code>。2）Gemini 把电脑使用、世界模型和按需工具检索同时推向开发者与 Mac 用户，方向是减少全量工具 schema、并在隔离窗口里完成多步操作。3）工程栈在窗口末段放出可落地版本：Spring AI 2.1.0 强化现代 MCP 与会话检索，CodeGraph 1.6.4 降低小问题探索成本并校验后台服务身份。4）安全与科学评测并行：OpenAI 用内部红队数据说明受保护推理更难被抽走，并用 99 题 MedChemBench 衡量药物化学推理。</td>
+</tr>
+<tr>
+<td>可直接关注</td>
+<td>1）Claude Code 2.1.329 的 <code>/tasks</code> 对 scheduled tasks、<code>/loop</code> 与 forks 的统一管理，以及 hook 信任提示。2）Codex 0.171.0 的默认 TUI workspace、撤销&#x2F;重做与远程 exec。3）Gemini Tool Retrieval 的 <code>tool_search</code> + <code>defer_loading</code>（含远程 MCP）。4）Spring AI 2.1.0 的现代 MCP 客户端&#x2F;服务端与 <code>conversation_search</code>。5）Hugging Face harness adapters：在 Pi &#x2F; Hermes Agent &#x2F; OpenCode 内用 RL 训练 LoRA，以及可合并的 super adapter。</td>
+</tr>
+<tr>
+<td>专项检索结论</td>
+<td><strong>Claude Code</strong>：官方 changelog 标注 November 19 的 v2.1.329，GitHub 发布时间为 2026-11-19T22:14:41Z（上海 11-20 06:14），记入本日。随后的 v2.1.330 发布于 2026-11-20T22:32:56Z，已越出本窗口，不展开。<strong>Codex</strong>：稳定版 rust-v0.171.0 于 2026-11-20T00:44:47Z（上海 08:44）发布；窗口内另有预发布 rust-v0.173.0-alpha.1（2026-11-20T02:50:37Z），不以预发布说明替代稳定版功能。<strong>OpenClaw</strong>：稳定版 2026.11.6 发布于 2026-11-19T17:26:46Z（上海 11-20 01:26）。前一日窗口末的 2026.11.10-beta.1 已写入 11-19 章节，本日不重复展开。<strong>Hermes</strong>：稳定版 v0.23.3 发布于 2026-11-20T00:34:38Z（上海 08:34）；同日 canary v0.23.3+canary.20261120T064609Z 发布于 2026-11-20T07:49:17Z（上海 15:49）。官方称完整整理说明将放到 v0.24.0。<strong>Spring AI</strong>：v2.1.0 与维护版 v2.0.3 分别发布于 2026-11-20T15:46:59Z、2026-11-20T15:47:36Z（上海 23:46–23:47），刚落入窗口。<strong>Spring Alibaba AI</strong>：未发现可核验重大更新（<code>alibaba/spring-ai-alibaba</code> 最近可见版本仍为更早的 milestone）。<strong>Langfuse</strong>：未发现可核验重大更新（最近正式版仍为 11-19 的 v4.83.0；changelog 未见 11-20 新条目）。<strong>LangChain &#x2F; LangGraph</strong>：langgraph 1.2.24 为修复级；langchain-core 1.8.4、langchain-openai 1.8.5、langchain-anthropic 1.7.12 在窗口内发布。<strong>Code Graph</strong>：<code>colbymchenry/codegraph</code> v1.6.4 发布于 2026-11-20T15:08:40Z（上海 23:08）；<code>codegraph-ai/codegraph</code> 未见窗口内新 release。<strong>Loop Engineering</strong>：独立方法论仓库 <code>cobusgreyling/loop-engineering</code> 未见窗口内正式 release；最接近的可核验材料是 Hugging Face 的 harness adapters 博文，以及 Claude Code 2.1.329 把 <code>/loop</code> 唤醒纳入 <code>/tasks</code>。<strong>skills &#x2F; Agent Skills</strong>：未发现独立规范或平台级新标准。Hermes 0.23.3 提到插件目录有一批更新，但完整整理说明延至 v0.24.0；Claude Code 2.1.329 未给出新的 Skills 规范。<strong>论文</strong>：未发现 submitted&#x2F;revised 日期精确落在本窗口的可核验条目。Hugging Face Daily Papers 的 11-20 日榜可见 AutoMaster 等，但该文 arXiv 页标注 Submitted on 19 Nov 2026，不作为本日新投稿展开。<strong>政策监管</strong>：未发现 2026-11-20 可核验的重大新规或征求意见（11-19 的 Federal Register 条目已写入昨日章节）。</td>
+</tr>
+</tbody></table>
+<h3 id="重要事件与发布"><a href="#重要事件与发布" class="headerlink" title="重要事件与发布"></a>重要事件与发布</h3><table>
+<thead>
+<tr>
+<th>主题</th>
+<th>标题</th>
+<th>日期</th>
+<th>类型</th>
+<th>研发&#x2F;学习价值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>产品 &#x2F; 电脑使用</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/">Let Gemini tackle repetitive chores on your Mac</a></td>
+<td>官方标注 Nov 19；<code>datePublished</code> 2026-11-19T17:00:00+00:00（上海 11-20 01:00）</td>
+<td>官方产品</td>
+<td>高。Gemini Mac 应用可在隔离后台窗口中操作本地文件、桌面应用和网页，聊天里提供实时预览；用户选择应用权限，并在关键动作前审批。当前在美国以英语向 18+ 个人账号的 Google AI Plus &#x2F; Pro &#x2F; Ultra 用户推送，需 Apple Silicon 与 macOS Sequoia 15.0+。适合对照「桌面 computer use」的权限与隔离设计，而不是把它写成全平台通用能力。</td>
+</tr>
+<tr>
+<td>世界模型 API</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/">Genie 4 is now available on the Gemini API</a></td>
+<td>官方标注 Nov 19；<code>datePublished</code> 2026-11-19T17:00:00+00:00（上海 11-20 01:00）</td>
+<td>官方 API</td>
+<td>高。继 Genie 4 发布后，开发者可通过 Gemini API 的 Interactions API 与 Google AI Studio 使用：从文本、参考图或二者生成持续 720p &#x2F; 24fps 世界，并带同步原生音频；可用键盘与中途文本提示转向。输出带 SynthID 水印。适合做交互原型、空间概念可视化或智能体&#x2F;机器人训练环境，需同时核对定价与配额文档。</td>
+</tr>
+<tr>
+<td>Agent &#x2F; 工具检索</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/">Introducing Tool Retrieval in the Gemini API</a></td>
+<td>官方标注 Nov 19；<code>datePublished</code> 2026-11-19T18:00:00+00:00（上海 11-20 02:00）</td>
+<td>官方 API（Preview）</td>
+<td>高。Interactions API 增加 <code>tool_search</code>，并对工具设置 <code>defer_loading: true</code>：模型仍看到名称与描述，参数 schema 按需加载，可在同一次请求内完成检索与调用。也支持远程 MCP 的 <code>defer_loading</code>，以及 <code>execution: &quot;client&quot;</code> 的自建检索。无单独加价，加载到的 schema 按该模型普通输入计费。适用于 Gemini 3.6 及以后（含 Gemini 4）。工具库到几十、上百个时，这是减少每次请求全量 schema 的官方路径。</td>
+</tr>
+<tr>
+<td>AI 编程</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.329">Claude Code v2.1.329</a></td>
+<td>GitHub 发布 2026-11-19T22:14:41Z（上海 11-20 06:14）；官方 changelog 标注 November 19, 2026</td>
+<td>GitHub Release</td>
+<td>高。新增 hook 声明位置的信任提示，以及托管 hook 加载失败时的会话警告；<code>/tasks</code> 可看到本会话的定时任务、<code>/loop</code> 唤醒、目标和 forks，并可用 x 停止。<code>/mcp</code> 会显示远程 HTTP MCP 拒绝连接时的 JSON-RPC 错误；<code>/status</code> 说明哪些托管 marketplace 不会自动更新。Code Mode 可在开启 OpenTelemetry 事件与指标时使用。macOS computer use 安全规则更新；无目标的 <code>/code-review</code> 在多数模型上改为对照默认分支审整支。适合已在用 <code>/loop</code>、MCP 和 Code Mode 的团队立即评估。</td>
+</tr>
+<tr>
+<td>AI 编程</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.171.0">Codex 0.171.0</a></td>
+<td>2026-11-20T00:44:47Z（上海 08:44）</td>
+<td>GitHub Release</td>
+<td>高。模型目录加入 GPT-6.2 Sol 与 Astra，Sol 为默认目录选项；TUI workspace 默认开启，可预览文档、图片和子代理转录。非 Vim 提示区支持可配置撤销&#x2F;重做（含附件与大段粘贴）；新增 <code>codex exec --remote &lt;ADDR&gt;</code>，以及 <code>/rc</code>、<code>/remote</code> 管理本机远程控制与配对码。在打开 <code>tui_extensions_statusline</code> 时，可用 <code>/statusline</code> 选择或编写 MCP 状态行。修复了会话切换时草稿&#x2F;排队消息丢失、工作目录变更时权限配置被冲掉等问题。</td>
+</tr>
+<tr>
+<td>Agent 运行时</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.11.6">openclaw 2026.11.6</a></td>
+<td>2026-11-19T17:26:46Z（上海 11-20 01:26）</td>
+<td>GitHub Release</td>
+<td>高。官方称这是覆盖安装、更新、消息、模型提供方、插件和原生应用的补丁版，规模为 386 个 PR、48 次直接提交、157 位贡献者。发布说明强调更顺畅的升级与 Windows 插件依赖校验、Gateway 重启后仍能送达最终答复、长工具轮次的历史与参数字节保持，以及命令审批被收紧：先前可能自动执行的命令，在现有策略下可能改为提示或拒绝。适合已部署 Gateway 的团队在升级后重审 exec 策略，而不是只看版本号。</td>
+</tr>
+<tr>
+<td>Agent 运行时</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3">Hermes Agent v0.23.3</a></td>
+<td>GitHub 发布 2026-11-20T00:34:38Z（上海 08:34）；页面写有 Release Date: November 19, 2026</td>
+<td>GitHub Release</td>
+<td>中高。稳定补丁，汇总自 v0.23.2 以来的变更，供 GitHub 发行版（CLI&#x2F;安装包）、Microsoft Store、Docker 与 Hermes Cloud 使用。页面列出窗口内已合入但「有意不在此完整展开」的能力，包括 prompt cache 生命周期、默认开启的工具结果修剪、GPT-6.2 Astra&#x2F;Sol（及 Pro）接入 OpenRouter 与 Nous Portal、存储层拆到持久化接口，以及一批插件目录条目。完整整理说明将随 v0.24.0 发布。升级路径因安装方式而异：Store 自动更新，CLI 可用 <code>hermes update</code>。</td>
+</tr>
+<tr>
+<td>Java AI 框架</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0">Spring AI v2.1.0</a></td>
+<td>2026-11-20T15:46:59Z（上海 23:46）</td>
+<td>GitHub Release</td>
+<td>高。新特性包括现代 MCP 客户端连接与异步客户端类型、MCP 服务端异步 API、会话回忆（日志关键字搜索与 <code>conversation_search</code> 工具）、Couchbase 的 upsert&#x2F;查询向量检索、MongoDB Atlas 可选批量 upsert、SQL Server 方言的 JDBC 会话库，以及提供方无关的 <code>FinishReasonCategory</code>。修复包括补齐上一轮未返回的工具调用、按 id 删除过期会话以避免死锁、MCP 服务端处理器注册不受 bean 顺序影响等。同分钟还发布了维护版 <a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.0.3">v2.0.3</a>（图像 Micrometer 指标、PgVectorStore 在维度未设置时跳过校验、把缓存 token 计入 Anthropic&#x2F;Bedrock 的 prompt tokens）。适合 Spring 体系里要上 MCP 和会话记忆的团队评估 2.1.0，2.0.x 用户可先看 2.0.3。</td>
+</tr>
+<tr>
+<td>Code Graph</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.4">CodeGraph v1.6.4</a></td>
+<td>2026-11-20T15:08:40Z（上海 23:08）；changelog 标注 2026-11-20</td>
+<td>GitHub Release</td>
+<td>高。<code>codegraph_explore</code> 对「函数&#x2F;常量是什么、谁在调用」改为直接给出定义与全部使用行，而不是长篇相关文件。Claude Code 的 prompt hook 改为询问已在运行的项目服务器，避免每次加载索引；<code>codegraph impact</code> 恢复到 1.6.2 的速度。共享电脑上，代理会话会校验后台服务是否以当前用户运行，否则自行提供会话，避免被冒充。还扩展了 Elysia（Bun）路由、PHP 文档根 include、Dart 3.13 主构造与更新的 Kotlin&#x2F;Swift 语法，并修正多语言调用边。升级后需 <code>codegraph index</code> 重新索引。</td>
+</tr>
+<tr>
+<td>资本市场</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/ipo-close">Anthropic announces closing of initial public offering…</a></td>
+<td>官方标注 Nov 20, 2026；<code>datePublished</code> 2026-11-20T00:00:00.000Z</td>
+<td>官方交割公告</td>
+<td>中高。Anthropic 宣布完成 IPO：共 1,127,000,000 股 Class A，定价每股 83.00 美元，含承销商全额行使的 147,000,000 股期权；其中公司出售 1,103,351,354 股，售股股东出售 23,648,646 股。发行总规模约 935 亿美元（扣除费用前），公司获得约 916 亿美元，不获得售股股东部分。Class A 已于 2026-11-19 在纳斯达克以 ANT 开始交易。同时完成向 AMD、Broadcom、Google、Micron、Microsoft、NVIDIA 和 TSMC Partners 定向出售 313,253,007 股 Class N，价格同为 83.00 美元，私募约 260 亿美元；IPO（含售股股东）与私募合计约 1,195 亿美元（扣除费用前）。美东 11-20 收盘价已进入上海 11-21，本稿不把它当作本日日终行情。</td>
+</tr>
+<tr>
+<td>科学评测</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-medchembench/">Can AI help scientists identify promising drug candidates?</a></td>
+<td>官方标注 November 20, 2026；OpenAI RSS <code>pubDate</code> Fri, 20 Nov 2026 00:00:00 GMT（上海 08:00）</td>
+<td>官方研究</td>
+<td>中高。MedChemBench 用 99 道来自已发表研究的题目，测试模型能否把分子结构与实验证据联系起来，以解释结果、比较化合物并预测性质。数据来自 117 篇论文&#x2F;专利、761 个不同分子结构。官方给出 xhigh 推理设置下的分数：GPT-6.2 Astra 获得 84.5% 可用分，GPT-6 Astra 83.3%，GPT-6.1 Sol 82.0%，GPT-5.6 Sol 58.2%。结构重建是 Astra 的强项，化合物选择与数值预测仍较弱。官方明确：这不能证明模型能发现新药或改善实验室决策，也不能排除对公开来源的先验接触。</td>
+</tr>
+<tr>
+<td>AI 安全</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/combatting-adversarial-distillation/">Combatting adversarial distillation</a></td>
+<td>官方标注 November 20, 2026；OpenAI RSS <code>pubDate</code> Fri, 20 Nov 2026 10:00:00 GMT（上海 18:00）</td>
+<td>官方安全</td>
+<td>高。讨论未授权蒸馏如何让攻击者复制前沿能力却不继承原模型防护，尤其是受保护推理（chain-of-thought）被当作训练数据。OpenAI 称在内部自适应红队评估中，从先前提示中恢复受保护推理的平均攻击成功率，由 GPT-6 Astra（原防护）的 54.0% 降至 GPT-6.2 Astra（更新防护）的 0.2%。文中建议在完整交互中检查助手消息与工具参数泄漏，并把成功攻击样本保留为回归测试。适合做模型网关、日志留存和合作方安全基线的团队阅读原文口径，不要把内部评测直接外推为公开攻击面结论。</td>
+</tr>
+<tr>
+<td>Harness &#x2F; Loop Engineering</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/harness-adapters-at-scale">Introducing harness adapters</a></td>
+<td>官方标注 November 20, 2026；<code>datePublished</code> 2026-11-20T00:00:00.774Z（上海 08:00）</td>
+<td>官方博客（Hugging Face）</td>
+<td>高。在目标 agent harness 内用 RL 为 Qwen3.8-27B 分别训练 Pi、Hermes Agent、OpenCode 的 LoRA adapter。文中举例：该模型在 pi harness 的 Terminal-Bench 2.1 上为 39%、平均每任务约 2.9K tokens；加上为该 harness 训练的 adapter 后为 55% pass@1、平均约 1.5K tokens。三个 LoRA 还可合并为一个在三种 harness 下使用的 super adapter。训练与数据在 Hugging Face Jobs 上，用 TRL <code>AsyncGRPOTrainer</code>、OpenEnv 与 Harbor，并公开配方与产物。这是当日最接近「harness engineering」的可复现材料：在真实部署 harness 里学，而不是在框架自建的 agent loop 里学。</td>
+</tr>
+</tbody></table>
+<h3 id="技术文档与教程"><a href="#技术文档与教程" class="headerlink" title="技术文档与教程"></a>技术文档与教程</h3><table>
+<thead>
+<tr>
+<th>方向</th>
+<th>推荐资料</th>
+<th>核心技术点</th>
+<th>适合谁看</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>大规模工具调用</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/">Gemini API Tool Retrieval</a></td>
+<td><code>tool_search</code> + <code>defer_loading</code>；同请求内检索并调用；远程 MCP 可整体延迟加载；也可把检索放到客户端。前缀缓存可因 deferred schema 不进提示词开头而保持稳定。</td>
+<td>工具数量已经膨胀、正在接 MCP 或自建工具注册表的 Agent 工程师</td>
+</tr>
+<tr>
+<td>编码代理任务管理</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.329">Claude Code v2.1.329</a> 与 <a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">官方 changelog</a></td>
+<td><code>/tasks</code> 汇总定时任务、<code>/loop</code> 与 forks；hook 信任与托管 hook 失败可见；MCP 连接错误可在 <code>/mcp</code> 查看。</td>
+<td>已把 Claude Code 用于定时循环、MCP 或多会话协作的开发者</td>
+</tr>
+<tr>
+<td>Java Agent &#x2F; MCP</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0">Spring AI v2.1.0 Release Notes</a></td>
+<td>现代 MCP 客户端&#x2F;服务端、会话检索工具、向量库 upsert、提供方无关的 finish reason。</td>
+<td>Spring Boot 上集成 MCP、需要会话记忆或向量检索的 Java 团队</td>
+</tr>
+<tr>
+<td>代码知识图谱</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.4">CodeGraph v1.6.4</a></td>
+<td>小问题走精确定位；Claude Code hook 复用已运行服务器；共享机器上校验服务身份；升级后必须重新索引。</td>
+<td>把 Code Graph 接到编码代理、关心索引成本与多用户安全的团队</td>
+</tr>
+<tr>
+<td>Harness 特化训练</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/harness-adapters-at-scale">Hugging Face harness adapters</a></td>
+<td>在真实 harness 内做 GRPO；按 harness 训练 LoRA 再合并；公开 Jobs&#x2F;TRL&#x2F;OpenEnv 配方。</td>
+<td>要为自有编码 harness 做模型特化，或评估「换 harness 是否掉点」的研究与平台工程师</td>
+</tr>
+</tbody></table>
+<h3 id="LangChain-Agent-LLM-工程相关进展"><a href="#LangChain-Agent-LLM-工程相关进展" class="headerlink" title="LangChain &#x2F; Agent &#x2F; LLM 工程相关进展"></a>LangChain &#x2F; Agent &#x2F; LLM 工程相关进展</h3><p><strong>总体判断</strong>：当天没有 LangChain 核心框架的重大版本叙事，工程信号分布在三条线上——LangGraph&#x2F;LangChain 包的修复与消息完成原因标准化、Gemini 的按需工具检索，以及「把 agent loop 跑在真实 harness 里」的 RL 适配；Claude Code &#x2F; Codex &#x2F; OpenClaw &#x2F; Spring AI 则在任务控制、远程执行和 MCP 会话上补齐运行时。</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>进展</th>
+<th>工程启发</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LangGraph 修复</td>
+<td>官方发布 <a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.24">langgraph 1.2.24</a>（2026-11-20T01:10:26Z，上海 09:10）。变更是在 <code>_messages_delta_reducer</code> 中处理 <code>REMOVE_ALL_MESSAGES</code>，并在 <code>DeltaChannel</code> 中处理 <code>None</code> checkpoint。</td>
+<td>属于状态归约边界修复。若生产图会清空消息或遇到空 checkpoint，值得跟进小版本，不必当成架构升级。</td>
+</tr>
+<tr>
+<td>LangChain 消息完成原因</td>
+<td>窗口内发布 <a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core==1.8.4">langchain-core 1.8.4</a>（2026-11-19T22:35:57Z，上海 11-20 06:35），将 message-finish 事件上的 finish reason 标准化；<a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai==1.8.5">langchain-openai 1.8.5</a>（2026-11-19T23:16:20Z，上海 07:16）保留流式 Responses 工具调用参数。另有 langchain-anthropic 1.7.12（2026-11-19T23:00:20Z）。</td>
+<td>流式工具调用和 finish reason 不一致，会让追踪、计费和「模型为何停」的判断失真。升级这些补丁包前，先对一下自己是否依赖旧字段语义。</td>
+</tr>
+<tr>
+<td>工具检索与 MCP</td>
+<td>Gemini Tool Retrieval 把「名称&#x2F;描述常驻、schema 按需加载」做成官方 Preview，并覆盖远程 MCP。Spring AI 2.1.0 则从 Java 侧补现代 MCP 连接与会话检索。</td>
+<td>工具规模上来后，优先减少每回合全量 schema；Java 与 Python 栈都在把 MCP 当成一等连接，而不是临时包装。</td>
+</tr>
+<tr>
+<td>Harness &#x2F; Loop</td>
+<td>Hugging Face 证明：在 Pi、Hermes Agent、OpenCode 这些真实 harness 里做 RL，比只追通用分数更能同时提升正确率与 token 效率。Claude Code 2.1.329 把 <code>/loop</code> 唤醒纳入 <code>/tasks</code>，让循环任务可被看见和停止。</td>
+<td>评估模型时要固定 harness；生产循环要有统一的任务面板、终止条件和人工&#x2F;策略门禁。不要让同一个代理既改结果又宣布「已完成」。</td>
+</tr>
+<tr>
+<td>可观测性</td>
+<td>Langfuse 在本窗口无新正式版。可对照昨日 v4.83.0 的 MCP&#x2F;网关预算，不必把旧 changelog 再写成今日更新。</td>
+<td>未发现可核验的当日重大更新。</td>
+</tr>
+</tbody></table>
+<h3 id="值得深入阅读的资料"><a href="#值得深入阅读的资料" class="headerlink" title="值得深入阅读的资料"></a>值得深入阅读的资料</h3><table>
+<thead>
+<tr>
+<th>推荐级别</th>
+<th>资料</th>
+<th>为什么值得读</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/">Introducing Tool Retrieval in the Gemini API</a></td>
+<td>官方把大规模工具库的延迟加载写成可运行示例，并说明与 MCP、前缀缓存和计费的关系，是设计 Agent 工具层的直接参考。</td>
+</tr>
+<tr>
+<td>必读</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/harness-adapters-at-scale">Introducing harness adapters</a></td>
+<td>少有的、带公开配方和对比数字的 harness 特化训练复盘：为什么要在真实循环里学，以及如何把多个 harness 的 adapter 合并。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0">Spring AI v2.1.0</a></td>
+<td>Java 侧一次把现代 MCP、会话检索和向量 upsert 放到正式版，适合对照现有 Spring AI 集成清单。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.329">Claude Code v2.1.329</a></td>
+<td>直接关系 <code>/tasks</code>、<code>/loop</code>、hook 信任和 MCP 报错可见性，属于可立即验证的行为变化。</td>
+</tr>
+<tr>
+<td>推荐</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/combatting-adversarial-distillation/">Combatting adversarial distillation</a></td>
+<td>用官方口径讨论受保护推理被蒸馏的风险，以及他们给出的攻击成功率变化；对日志、网关和合作方安全基线有参考价值。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.4">CodeGraph v1.6.4</a></td>
+<td>把「小问题少耗 token」和「共享机器防冒充服务」写进 release，对把代码图谱接到代理里的团队很具体。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-medchembench/">MedChemBench 介绍</a></td>
+<td>适合看科学评测如何拆结构重建、推理、选择与数值预测，并注意官方自己写下的局限。</td>
+</tr>
+<tr>
+<td>延伸</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/ipo-close">Anthropic IPO 交割公告</a></td>
+<td>用官方数字理解发行与私募规模，避免把次日股价行情或二手估值写进本日。</td>
+</tr>
+</tbody></table>
+<h3 id="来源清单"><a href="#来源清单" class="headerlink" title="来源清单"></a>来源清单</h3><ul>
+<li>检索范围：2026-11-20 00:00:00 到 2026-11-20 23:59:59（Asia&#x2F;Shanghai）</li>
+<li>覆盖说明：Google &#x2F; OpenAI &#x2F; Anthropic &#x2F; Hugging Face 等官方页面；Claude Code、Codex、OpenClaw、Hermes、Spring AI、LangGraph、LangChain、CodeGraph、Langfuse、Spring AI Alibaba、loop-engineering 等 GitHub Releases 与 changelog；arXiv 与 Hugging Face Daily Papers；Federal Register 等政策检索。所有收录条目均核验了发布或事件时间，并按 Asia&#x2F;Shanghai 窗口取舍。</li>
+<li>引用域名：blog.google、openai.com、anthropic.com、huggingface.co、github.com、code.claude.com、arxiv.org。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>标题</th>
+<th>日期</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>官方博客</td>
+<td>Let Gemini tackle repetitive chores on your Mac</td>
+<td>官方 Nov 19；<code>datePublished</code> 2026-11-19T17:00:00+00:00（上海 11-20 01:00）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/">https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>Genie 4 is now available on the Gemini API</td>
+<td>官方 Nov 19；<code>datePublished</code> 2026-11-19T17:00:00+00:00（上海 11-20 01:00）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/">https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>Introducing Tool Retrieval in the Gemini API</td>
+<td>官方 Nov 19；<code>datePublished</code> 2026-11-19T18:00:00+00:00（上海 11-20 02:00）</td>
+<td><a target="_blank" rel="noopener" href="https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/">https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>Claude Code v2.1.329</td>
+<td>2026-11-19T22:14:41Z（上海 11-20 06:14）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/anthropics/claude-code/releases/tag/v2.1.329">https://github.com/anthropics/claude-code/releases/tag/v2.1.329</a></td>
+</tr>
+<tr>
+<td>官方 Changelog</td>
+<td>Claude Code changelog</td>
+<td>条目标注 November 19, 2026（2.1.329）；2.1.330 条目标注 November 20，但 GitHub 发布时刻已越窗</td>
+<td><a target="_blank" rel="noopener" href="https://code.claude.com/docs/en/changelog">https://code.claude.com/docs/en/changelog</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>Codex 0.171.0（rust-v0.171.0）</td>
+<td>2026-11-20T00:44:47Z（上海 08:44）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openai/codex/releases/tag/rust-v0.171.0">https://github.com/openai/codex/releases/tag/rust-v0.171.0</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>openclaw 2026.11.6</td>
+<td>2026-11-19T17:26:46Z（上海 11-20 01:26）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/openclaw/openclaw/releases/tag/v2026.11.6">https://github.com/openclaw/openclaw/releases/tag/v2026.11.6</a></td>
+</tr>
+<tr>
+<td>官方文档</td>
+<td>OpenClaw v2026.11.6</td>
+<td>与 GitHub 稳定版对应</td>
+<td><a target="_blank" rel="noopener" href="https://docs.openclaw.ai/releases/2026.11.6">https://docs.openclaw.ai/releases/2026.11.6</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>Hermes Agent v0.23.3</td>
+<td>2026-11-20T00:34:38Z（上海 08:34）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3">https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3</a></td>
+</tr>
+<tr>
+<td>GitHub 预发布</td>
+<td>Hermes Agent canary v0.23.3+canary.20261120T064609Z</td>
+<td>2026-11-20T07:49:17Z（上海 15:49）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3%2Bcanary.20261120T064609Z">https://github.com/NousResearch/hermes-agent/releases/tag/v0.23.3%2Bcanary.20261120T064609Z</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>Spring AI v2.1.0</td>
+<td>2026-11-20T15:46:59Z（上海 23:46）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0">https://github.com/spring-projects/spring-ai/releases/tag/v2.1.0</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>Spring AI v2.0.3</td>
+<td>2026-11-20T15:47:36Z（上海 23:47）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/spring-projects/spring-ai/releases/tag/v2.0.3">https://github.com/spring-projects/spring-ai/releases/tag/v2.0.3</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>CodeGraph v1.6.4</td>
+<td>2026-11-20T15:08:40Z（上海 23:08）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/colbymchenry/codegraph/releases/tag/v1.6.4">https://github.com/colbymchenry/codegraph/releases/tag/v1.6.4</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>langgraph 1.2.24</td>
+<td>2026-11-20T01:10:26Z（上海 09:10）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langgraph/releases/tag/1.2.24">https://github.com/langchain-ai/langgraph/releases/tag/1.2.24</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>langchain-core 1.8.4</td>
+<td>2026-11-19T22:35:57Z（上海 11-20 06:35）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-core==1.8.4">https://github.com/langchain-ai/langchain/releases/tag/langchain-core==1.8.4</a></td>
+</tr>
+<tr>
+<td>GitHub Release</td>
+<td>langchain-openai 1.8.5</td>
+<td>2026-11-19T23:16:20Z（上海 11-20 07:16）</td>
+<td><a target="_blank" rel="noopener" href="https://github.com/langchain-ai/langchain/releases/tag/langchain-openai==1.8.5">https://github.com/langchain-ai/langchain/releases/tag/langchain-openai==1.8.5</a></td>
+</tr>
+<tr>
+<td>官方新闻</td>
+<td>Anthropic announces closing of initial public offering</td>
+<td>官方 Nov 20；<code>datePublished</code> 2026-11-20T00:00:00.000Z</td>
+<td><a target="_blank" rel="noopener" href="https://www.anthropic.com/news/ipo-close">https://www.anthropic.com/news/ipo-close</a></td>
+</tr>
+<tr>
+<td>官方研究</td>
+<td>Introducing MedChemBench</td>
+<td>RSS pubDate 2026-11-20 00:00:00 GMT（上海 08:00）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/introducing-medchembench/">https://openai.com/index/introducing-medchembench/</a></td>
+</tr>
+<tr>
+<td>官方安全</td>
+<td>Combatting adversarial distillation</td>
+<td>RSS pubDate 2026-11-20 10:00:00 GMT（上海 18:00）</td>
+<td><a target="_blank" rel="noopener" href="https://openai.com/index/combatting-adversarial-distillation/">https://openai.com/index/combatting-adversarial-distillation/</a></td>
+</tr>
+<tr>
+<td>官方博客</td>
+<td>Introducing harness adapters</td>
+<td><code>datePublished</code> 2026-11-20T00:00:00.774Z（上海 08:00）</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/blog/harness-adapters-at-scale">https://huggingface.co/blog/harness-adapters-at-scale</a></td>
+</tr>
+<tr>
+<td>arXiv（日榜可见，投稿日为 19 Nov，不作为本日新投稿展开）</td>
+<td>AutoMaster: Autonomous Post-Training by Making the Same Model a Better Teacher</td>
+<td>Submitted on 19 Nov 2026</td>
+<td><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2611.26510">https://arxiv.org/abs/2611.26510</a></td>
+</tr>
+<tr>
+<td>Daily Papers 日榜</td>
+<td>Hugging Face Daily Papers 2026-11-20</td>
+<td>日榜日期 2026-11-20（不代表投稿日）</td>
+<td><a target="_blank" rel="noopener" href="https://huggingface.co/papers/date/2026-11-20">https://huggingface.co/papers/date/2026-11-20</a></td>
+</tr>
+</tbody></table>
+
+      </div>
+    </div>
+  </article>
+
+    </div>
+    <div class="foot">
+      <div class="foot-inner">
+        
+          <p class="foot-verse">长相知　不相疑</p>
+        
+        <div class="foot-meta">
+          
+            
+              
+                <a class="foot-link" target="_blank" rel="noopener" href="https://github.com/932687738">
+                  <img alt="" height="16" width="16" src="/images/logo-github.svg"/>
+                  GitHub
+                </a>
+              
+            
+          
+          
+            <a class="foot-link" href="mailto:932687738@qq.com">
+              <img alt="" height="16" width="16" src="/images/icon/icon-email.svg"/>
+              932687738@qq.com
+            </a>
+          
+        </div>
+        <div class="copyright">
+          <a href="https://932687738.github.io">烟火与诗</a>
+        </div>
+      </div>
+    </div>
+    
+    
+  </body>
+</html>
