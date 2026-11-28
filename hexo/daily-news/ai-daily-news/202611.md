@@ -2,6 +2,64 @@
 
 按 Asia/Shanghai 时区增量汇总 AI/人工智能相关每日资讯。
 
+## 2026-11-27
+
+### 今日总览
+
+**一句话结论**：11 月 27 日的主线，是 Java Agent 栈把 Spring AI 2.1 的类型化判定、会话记忆和工具审批落到可上线的阿里云集成：Spring AI Alibaba 发布 2.1.0.0，同时 Langfuse v4.88.0 把组织级分享开关和网关脱敏护栏补进可观测控制面。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 官方厂商；模型/产品；开发者工具；Agent 框架；RAG/MCP/向量数据库；Spring AI / Java AI；Spring Alibaba AI；Langfuse / LLM 可观测性；LangChain / LangGraph；Code Graph；Loop Engineering / Agent loop 范式；Claude Code / Codex / OpenClaw / Hermes；skills / Agent Skills；论文；GitHub releases；技术媒体；政策监管；中文补充来源 |
+| 核心趋势 | 1）Spring AI Alibaba 2.1.0.0（Published 2026-11-27T01:31:10Z，中国时间 09:31）对齐 Spring AI 2.1.0 与 Spring Boot 4.2.0，把 `DecisionModel`、Message Parts、Session Memory、工具确认与每轮限额、Modern MCP 接到 ReactAgent / Graph / Studio，并在 Extensions 2.1.0.0 中更新百炼/DashScope 的 RAG、多模态与预计算向量写入。2）Langfuse v4.88.0（Published 2026-11-26T16:50:41Z，中国时间 11-27 00:50）允许组织/实例关闭公开 trace 与 session 分享，AI Gateway 增加 redact 护栏动作，MCP span 会记录客户端能力，并支持 ClickHouse Cloud JWT 认证。3）开发者工具窗口内没有新的稳定版：Codex 仅有发行说明几乎只有版本号的预发布 `rust-v0.174.0-alpha.8`；Claude Code、OpenClaw、Hermes、LangChain / LangGraph 与 Code Graph 均无新稳定发布。 |
+| 可直接关注 | `com.alibaba.cloud.ai:spring-ai-alibaba-bom:2.1.0.0`（及 extensions BOM）需与 Spring Boot 4.2、Spring AI 2.1 一并升级；ReactAgent `toolCallLimits(perTool, total)` 默认 40/150，以及 Graph 的工具确认与 checkpoint 恢复；`QuestionClassifierNode.decisionModel` 与 `LlmNode.sessionMemory`；DashScope 对 Message Parts 与工具确认的透传、百炼 RAG API、预计算 embedding 的 `upsert` / `similaritySearch`；Langfuse 组织级关闭公开分享、redact 护栏、ClickHouse Cloud JWT。 |
+| 专项检索结论 | **Claude Code**：窗口内无新稳定版；最近仍为已属 11-25 窗口的 v2.1.332（Published 2026-11-25T01:32:14Z，中国时间 09:32）。**Codex**：窗口内无新稳定版（最近稳定版仍为 11-24 已收录的 0.172.0）；预发布 `rust-v0.174.0-alpha.8` Published 2026-11-26T21:56:07Z（中国时间 11-27 05:56），发行说明几乎只有版本号，不作为稳定更新收录。更晚的 `rust-v0.174.0-alpha.9` Published 2026-11-27T16:56:00Z（中国时间 11-28 00:56）已超出本日窗口。**OpenClaw**：窗口内无新稳定版；最近功能线仍为 11-25 的 `2026.11.10`，extended-stable / LTS 线 `2026.10.34` 已计入 11-26。**Hermes**：窗口内无新稳定版或 canary；最近稳定版仍为 11-23/24 窗口的 v0.23.4，最近 canary 仍为 11-25 的 `canary.20261125T064800Z-v0.23.4`。**Spring AI**：无当日新 GitHub release（最近仍为 11-20 的 2.1.0 / 2.0.3）；11-26 的 DecisionModel 官方博客已写入 11-26 日报，本日不重记。**Spring Alibaba AI**：发布 v2.1.0.0，见「重要事件与发布」。**Langfuse**：发布 v4.88.0，见「重要事件与发布」；其后至检索时尚未出现 v4.89。**LangChain / LangGraph**：langchain-core 最近仍为已计入 11-26 的 1.8.5（Published 2026-11-25T21:52:39Z）；langgraph-cli 最近仍为已计入 11-26 的 0.4.44（Published 2026-11-25T20:52:34Z）；langgraph 库最近仍为 11-20 的 1.2.24。**Code Graph**：未发现可核验重大更新（最近仍为 11-20 的 v1.6.4）。**Loop Engineering**：addyosmani.com、cobusgreyling/loop-engineering、Hermes loop 文档、Claude / Codex 官方 loop 命令等固定来源未发现可核验新发布；与闭环相关的当日信号是 Spring AI Alibaba Graph 的工具确认 / 人机审批与 checkpoint 恢复，以及 Langfuse AI Gateway 的 redact 护栏和组织级分享开关。**skills**：无 Codex Skills / Claude Skills / Cursor Skills 官方新规范；Claude Code changelog 在窗口内无新稳定条目。政策监管方面，未发现可核验且发布时间落在本日窗口的重大官方文本。论文方面，Hugging Face Papers / arXiv 未发现可确认 submitted 落在本日窗口且需新开条目的重大 LLM / Agent / RAG 论文；腾讯混元 DFly2 技术报告 arXiv:2611.34776 的 submitted 为 2026-11-25T17:37:49Z（中国时间 11-26 01:37），属 11-26 窗口，本日不重记。 |
+
+### 重要事件与发布
+
+| 主题 | 标题 | 日期 | 类型 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| Spring Alibaba AI | [Spring AI Alibaba v2.1.0.0](https://github.com/alibaba/spring-ai-alibaba/releases/tag/v2.1.0.0) | 2026-11-27（Published 2026-11-27T01:31:10Z，中国时间 09:31） | 开源发布 | 将 Spring AI 2.1.0 与 Spring Boot 4.2.0 接到 ReactAgent、Graph、Studio 以及阿里云集成，并配套 Extensions 2.1.0.0、MCP Java SDK 2.2.0、Nacos 3.3.0。Agent/Graph 侧：ReactAgent 在 advisors 之后按最终请求做 request-scoped 工具分发，默认每工具 40 次、每轮合计 150 次；Graph 支持工具确认与显式 HITL，一批调用可混合批准/编辑/拒绝，恢复时会再检查已注册回调；Message Parts、推理内容和 provider 载荷可在流式聚合、checkpoint 与 Studio DTO 中往返。工作流节点可用 `DecisionModel` 做 `QuestionClassifierNode` 路由，`LlmNode` 可按图状态中的 session ID 接入 Session Memory。Extensions：DashScope HTTP/SDK 适配器保留 Message Parts 与流式工具调用，Qwen / GLM / Kimi 走原生百炼端点；补齐图像/视频/语音与 CosyVoice；`DashScopeRagApi` / `DashScopeRagDocumentRetriever` 接入百炼知识库；AnalyticDB、OceanBase、OpenSearch、Tablestore、Tair 支持直接写入/检索预计算向量。升级需同时引入 `spring-ai-alibaba-bom:2.1.0.0`（及 extensions BOM），并把 Spring Boot 升到 4.2、Spring AI 升到 2.1；启用 Session Memory 时为每段对话使用独立 session ID。 |
+| Langfuse | [Langfuse v4.88.0](https://github.com/langfuse/langfuse/releases/tag/v4.88.0) | 2026-11-27（Published 2026-11-26T16:50:41Z，中国时间 11-27 00:50） | 开源发布 | 相对 v4.87.0：组织和实例可关闭公开 trace / session 分享；AI Gateway 增加 redact 护栏动作，未计价用量告警可关联到组织模型，护栏 7 日标记计数可跳转到过滤后的 traces；MCP span 会记录客户端能力与扩展；ClickHouse Cloud 增加 JWT 认证模式；新建的 onboarding API key 会做成具名 Developer key。另有 worker 在关闭时重新入队 blob 导出、避免 OpenRouter Broadcast 递归追踪，以及 MCP 相关稳定性修复。v4.87.0 已计入 11-26，不重记。 |
+
+### 技术文档与教程
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| Java Agent 升级 | [Spring AI Alibaba v2.1.0.0 发行说明](https://github.com/alibaba/spring-ai-alibaba/releases/tag/v2.1.0.0) | BOM 对齐、ReactAgent 分发限额、Graph 工具确认与 checkpoint 恢复、DecisionModel 路由、Session Memory、DashScope / 百炼 RAG 与预计算向量 | 正在把 Spring Boot 4.2 / Spring AI 2.1 落到阿里云或 Java Agent 生产线的团队 |
+| LLM 可观测性 | [Langfuse v4.88.0 发行说明](https://github.com/langfuse/langfuse/releases/tag/v4.88.0) | 组织级分享开关、AI Gateway redact、MCP 客户端能力记录、ClickHouse Cloud JWT | 自托管或企业租户需要收紧 trace 分享与网关脱敏的平台团队 |
+
+### LangChain / Agent / LLM 工程相关进展
+
+**总体判断**：本日工程增量集中在 Java 与可观测控制面，而不是 Python LangChain / LangGraph 的新包版本——阿里把 Spring AI 2.1 的判定、记忆和审批语义接进 Graph，Langfuse 则把分享范围和脱敏做成可管理的护栏。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| Spring AI Alibaba Graph / ReactAgent | 2.1.0.0 让工具分发归属 ReactAgent，并在 Graph 中保留确认、编辑、拒绝与恢复后再校验。 | 迁移时不要继续把工具审批只挂在 ChatClient advisor 上；限额、确认和 checkpoint 应视为同一控制面。被拒绝或不可用的调用不消耗 per-turn budget，适合把「模型想调用」和「系统允许调用」分开记账。 |
+| Session Memory 与 DecisionModel | 上游 `ChatMemory` 已弃用，Alibaba 工作流可用 `LlmNode.sessionMemory` 与 `QuestionClassifierNode.decisionModel`。 | 会话 ID 必须按对话隔离；分类/路由优先走类型化 DecisionModel，而不是再把自然语言回复当成路由协议。 |
+| Langfuse 控制面 | v4.88.0 让分享成为组织/实例策略，并把 redact 放进 AI Gateway。 | 生产租户应默认关闭公开分享；脱敏是网关动作，而不是只靠事后改 trace。 |
+| LangChain / LangGraph | 窗口内无新稳定 release。 | 继续沿用 11-26 已收录的 langchain-core 1.8.5 与 langgraph-cli 0.4.44，不必为了「赶上今天」升级。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [Spring AI Alibaba v2.1.0.0](https://github.com/alibaba/spring-ai-alibaba/releases/tag/v2.1.0.0) | 这是本日最完整的官方变更说明，覆盖升级约束和 Graph / 百炼集成细节。 |
+| 推荐 | [Langfuse v4.88.0](https://github.com/langfuse/langfuse/releases/tag/v4.88.0) | 直接关系到生产 trace 是否可被公开访问，以及网关能否做 redact。 |
+| 延伸 | [Decision Models in Spring AI 2.1](https://spring.io/blog/2026/11/26/spring-ai-decision-models-guardrails-judges/) | 上游 DecisionModel 设计已在 11-26 日报收录；读它有助于理解本日 Alibaba 2.1.0.0 为何把分类节点接到 DecisionModel。日期为相邻日期，不作为本日新发布。 |
+
+### 来源清单
+
+- 检索范围：2026-11-27 00:00:00 到 2026-11-27 23:59:59（Asia/Shanghai）
+- 引用域名：github.com, langfuse.com, spring.io
+- 来源清单表格：
+
+| 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- |
+| 开源发布 | Spring AI Alibaba v2.1.0.0 | 2026-11-27（Published 2026-11-27T01:31:10Z，中国时间 09:31） | https://github.com/alibaba/spring-ai-alibaba/releases/tag/v2.1.0.0 |
+| 开源发布 | Langfuse v4.88.0 | 2026-11-27（Published 2026-11-26T16:50:41Z，中国时间 11-27 00:50） | https://github.com/langfuse/langfuse/releases/tag/v4.88.0 |
+| 官方博客 | Decision Models in Spring AI 2.1: Yes, No, and How Sure（延伸阅读，已计入 11-26） | 2026-11-26（相邻日期） | https://spring.io/blog/2026/11/26/spring-ai-decision-models-guardrails-judges/ |
+
 ## 2026-11-26
 
 ### 今日总览

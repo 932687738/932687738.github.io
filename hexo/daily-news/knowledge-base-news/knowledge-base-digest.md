@@ -2,6 +2,70 @@
 
 按 Asia/Shanghai 时区增量汇总固定中文技术知识库来源。
 
+## 2026-11-27
+
+### 今日总览
+
+**一句话结论**：固定来源在 11 月 27 日的增量，主要来自腾讯云和阿里云开发者社区：混元 Hy3D 3.6 把生成资产的面数和贴图规格上调，阿里云侧则出现 LangChain 人机协同实践文，以及针对前一日 GPUWorks 发版与混元 DFly2 开源的传播解读。
+
+| 维度 | 本日结论 |
+| --- | --- |
+| 检索范围 | 阿里（阿里技术 / 阿里云开发者 / 中间件团队博客 / 语雀）、腾讯（腾讯云+社区 / 技术工程 / AlloyTeam / 大讲堂）、字节（技术团队博客 / 掘金）、百度（FEX / EFE / 开发者中心）、美团、京东、滴滴、网易、360、有赞，以及五个工程框架专项 |
+| 核心趋势 | 1）腾讯云+社区发布混元 Hy3D 3.6 说明：最高面数到 200 万、贴图到 8K，并可输出 PBR 与多格式，面向生产级 3D 资产。2）阿里云开发者社区出现可直接复用的 LangChain Human-in-the-loop 实践文，把 `interrupt` / `Command(resume=...)`、中间件与生产检查点讲清楚。3）同日还有 GPUWorks 26.12.0、混元 DFly2 的中文解读，但对应上游发布/论文落在相邻窗口，需按传播关系标注，不能当成 11-27 才首次开源。 |
+| 可直接关注 | Hy3D 3.6 的 `face_count` / `tex_res` / `enable_pbr` 与后处理流水线；LangChain HITL 的 `HumanInTheLoopMiddleware`、`when` 谓词与 `per_call` 恢复；若要评估 GPUWorks 或 DFly2，应回溯 11-26 窗口的 GitHub / arXiv 原文。 |
+| 专项检索结论 | **Langfuse**：固定来源内未发现可核验的新实践文或版本解读。**LangChain / LangGraph**：阿里云开发者社区发布《LangChain 之 Agent 人机协同 Human-in-the-loop》，详见「重要文章与更新」。**Code Graph**：固定来源内未发现可核验新文。**Spring Alibaba AI**：固定来源内未发现针对当日 GitHub 发布的 v2.1.0.0 的中文官方解读（该发版详见 AI 日报）；java2ai.com、阿里技术与语雀未发现可核验新文。**Loop Engineering**：固定来源内未发现以 loop 范式 / Ralph loop / harness 为主题的新文；当日最接近的信号是 LangChain HITL 实践文中的审批暂停与恢复。 |
+| 未发现更新 | 阿里技术（102.alibaba.com）、阿里中间件团队博客、语雀·阿里技术干货、腾讯技术工程（Tencent_TEG）、腾讯 AlloyTeam、腾讯大讲堂、字节跳动技术团队博客、百度 FEX / EFE / 开发者中心、美团技术团队（最近一篇为 11-26 的 Keeta RSI，不计入本日新发）、京东科技开发者、凹凸实验室、滴滴技术博客、网易传媒技术团队、360 核心安全技术博客、有赞技术团队 |
+
+### 重要文章与更新
+
+| 主题 | 标题 | 日期 | 来源 | 研发/学习价值 |
+| --- | --- | --- | --- | --- |
+| 3D 生成 | [腾讯混元3D 升级 3.6：面数 200 万、8K 贴图，新功能一文看懂](https://cloud.tencent.com/developer/article/2795594) | 2026-11-27（发布于 2026-11-27 15:05:33） | 腾讯云+社区 | 将 Hy3D 最高面数从 150 万提到 200 万（可设 1,000～200 万，默认 200 万），贴图最高从 4K 提到 8K（可选 2K/4K/8K，默认 4K），并支持水密网格与 PBR。生成参数包括 `generate_type`、`face_strict_mode`、`seam_less`、`bake_lighting` 等，后续还可独立调用拓扑、组件拆分、纹理、UV、绑骨、文生动作和格式转换。文中附带限时折扣，技术参数本身可作选型参考。 |
+| Agent 工程 | [LangChain 之 Agent 人机协同 Human-in-the-loop](https://developer.aliyun.com/article/1790741) | 2026-11-27 | 阿里云开发者社区 | 以 `interrupt` 暂停危险工具、以 `Command(resume=...)` 恢复为两条原语，介绍官方 `HumanInTheLoopMiddleware`（`interrupt_on` 按工具配置）、条件拦截 `when`、逐调用恢复 `per_call`，以及生产环境中的数据库检查点与审计留痕。适合把「模型可以提议、执行权留给人」落到可复用代码。 |
+| 推理平台 | [GPUWorks 26.12.0 发布：接入 Kubernetes 与 Slurm，解锁更多 GPU 资源接入](https://developer.aliyun.com/article/1790899) | 2026-11-27（文章日期；GitHub Published 2026-11-26T13:11:54Z，中国时间 11-26 21:11，相邻日期/中国时间窗口传播） | 阿里云开发者社区 | 中文解读 26.12.0：可在不改原集群、不额外部署 operator 的前提下接入 Kubernetes 与 Slurm；补齐 AMD、昆仑芯 P800、昇腾 910B 等推理档位，并提到 PD 分离、请求优先级、LMCache 与 System One 决策模型。升级须先看发行说明：`/v1` 网关默认需要 API key，数据库迁移只向前。官方发版本身属于 11-26 窗口。 |
+| 推理加速 | [腾讯混元 DFly2 草稿模型开源：零额外显存加速长文本推理](https://cloud.tencent.com/developer/article/2795760) | 2026-11-27（文章发布于 2026-11-27 17:08:20；技术报告 arXiv:2611.34776 submitted 2026-11-25T17:37:49Z，中国时间 11-26 01:37，相邻日期/中国时间窗口传播） | 腾讯云+社区 | 固定来源在本日传播混元草稿模型 DFly2：标题强调通过零额外显存的方式加速长文本推理。可回溯的官方原文是论文 [arXiv:2611.34776](https://arxiv.org/abs/2611.34776) 与仓库 [Tencent/AngelSpec](https://github.com/Tencent/AngelSpec)，二者不属于本日首次提交/发版，本日只记传播。 |
+
+### 技术文档与实践
+
+| 方向 | 推荐资料 | 核心技术点 | 适合谁看 |
+| --- | --- | --- | --- |
+| 人机协同 | [LangChain Human-in-the-loop 实践](https://developer.aliyun.com/article/1790741) | 中间件开箱配置、手动 `interrupt` / resume、条件审批、检查点与审计 | 要把退款、改表、推送等危险工具接到人工审批的 Agent 工程团队 |
+| 3D 资产生产 | [混元 Hy3D 3.6 说明](https://cloud.tencent.com/developer/article/2795594) | 面数/贴图上限、PBR、分步后处理与导出格式 | 需要把图生 3D 接到游戏、电商或文创流水线的图形/内容团队 |
+| 云上接入 | [DeepSeek-V4 云上接入指南：1M 上下文成标配，API 与私有化两条路径](https://developer.aliyun.com/article/1790606) | 百炼 API 与 ECS 私有化两条路径；文中同时包含免费 Token 等运营说明 | 已决定使用该模型、需要在阿里云落地调用的团队。本文是 11-27 的接入指南，不把它写成模型首发日 |
+
+### 工程实践归纳
+
+**总体判断**：固定来源里最有复用价值的是 LangChain HITL 的审批/恢复写法；3D 与推理加速内容以产品规格和传播解读为主，Spring Alibaba AI / Langfuse / Code Graph / Loop Engineering 在固定来源内没有可核验的新框架发版解读。
+
+| 主题 | 进展 | 工程启发 |
+| --- | --- | --- |
+| LangChain HITL | 阿里云开发者社区把官方中间件和手动原语拆成可套用的生产写法。 | 审批要按工具和政策配置，而不是只靠提示词约定；恢复路径需要检查点，否则进程一重启，暂停态就丢了。 |
+| 混元 3D 生产规格 | Hy3D 3.6 把面数、贴图和后处理拆成可独立调用的步骤。 | 生成与拓扑/UV/绑骨解耦后，可以把「生成」和「进管线」分成两个质量门。 |
+| GPUWorks / DFly2 | 本日固定来源是对相邻窗口上游发布的中文传播。 | 选型或升级应以后退到 GitHub Published 与 arXiv submitted 时间为准，避免把传播日当成发版日。 |
+| Langfuse / Code Graph / Spring Alibaba AI / Loop Engineering | 固定来源内未发现可核验新文（Alibaba 2.1.0.0 发在 GitHub，见 AI 日报）。 | 知识库侧不要把 GitHub 发版误写成固定中文站点原文。 |
+
+### 值得深入阅读的资料
+
+| 推荐级别 | 资料 | 为什么值得读 |
+| --- | --- | --- |
+| 必读 | [LangChain 之 Agent 人机协同 Human-in-the-loop](https://developer.aliyun.com/article/1790741) | 本日固定来源里对 Agent 工程最有落地价值的一篇，可直接对照官方原语。 |
+| 推荐 | [腾讯混元3D 升级 3.6](https://cloud.tencent.com/developer/article/2795594) | 参数和后处理能力写得具体，便于判断能否进入生产资产流水线。 |
+| 延伸 | [GPUWorks 26.12.0 中文解读](https://developer.aliyun.com/article/1790899) | 适合了解集群接入与异构推理档位，但需对照 11-26 的 GitHub 发行说明后再升级。 |
+
+### 来源清单
+
+- 检索范围：2026-11-27 00:00:00 到 2026-11-27 23:59:59（Asia/Shanghai）
+- 固定来源覆盖：阿里云开发者社区、腾讯云+社区；其余清单内公司/组织已检索但未发现可核验新文
+- 来源清单表格：
+
+| 公司/组织 | 来源 | 类型 | 标题 | 日期 | 链接 |
+| --- | --- | --- | --- | --- | --- |
+| 腾讯 | 腾讯云+社区 | 技术文章 | 腾讯混元3D 升级 3.6：面数 200 万、8K 贴图，新功能一文看懂 | 2026-11-27（发布于 15:05:33） | https://cloud.tencent.com/developer/article/2795594 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | LangChain 之 Agent 人机协同 Human-in-the-loop | 2026-11-27 | https://developer.aliyun.com/article/1790741 |
+| 阿里巴巴 | 阿里云开发者社区 | 技术文章 | GPUWorks 26.12.0 发布：接入 Kubernetes 与 Slurm，解锁更多 GPU 资源接入 | 2026-11-27（相邻日期/中国时间窗口传播；GitHub Published 2026-11-26T13:11:54Z） | https://developer.aliyun.com/article/1790899 |
+| 腾讯 | 腾讯云+社区 | 技术文章 | 腾讯混元 DFly2 草稿模型开源：零额外显存加速长文本推理 | 2026-11-27（相邻日期/中国时间窗口传播；arXiv submitted 2026-11-25T17:37:49Z） | https://cloud.tencent.com/developer/article/2795760 |
+| 阿里巴巴 | 阿里云开发者社区 | 文档/实践 | DeepSeek-V4 云上接入指南：1M 上下文成标配，API 与私有化两条路径 | 2026-11-27 | https://developer.aliyun.com/article/1790606 |
+
 ## 2026-11-26
 
 ### 今日总览
